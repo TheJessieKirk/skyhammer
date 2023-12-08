@@ -30,6 +30,7 @@ Copyright © 2023 Jessie Kirk.
 * make: [GNU.org](https://ftp.gnu.org/gnu/make)
 * mpc: [GNU.org](https://ftp.gnu.org/gnu/mpc)
 * mpfr: [GNU.org](https://ftp.gnu.org/gnu/mpfr)
+* openssl: [OpenSSL@github.com](https://github.com/openssl/openssl/releases)
 * pkg-config: [freedesktop.org](https://pkgconfig.freedesktop.org/releases/)
 * sed: [GNU.org](https://ftp.gnu.org/gnu/sed)
 * tar: [GNU.org](https://ftp.gnu.org/gnu/tar)
