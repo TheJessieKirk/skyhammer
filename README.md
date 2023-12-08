@@ -28,3 +28,4 @@ Copyright © 2023 Jessie Kirk.
 * make: [GNU](https://ftp.gnu.org/gnu/make)
 * mpc: [GNU](https://ftp.gnu.org/gnu/mpc)
 * mpfr: [GNU](https://ftp.gnu.org/gnu/mpfr)
+* sed: [GNU](https://ftp.gnu.org/gnu/sed)
