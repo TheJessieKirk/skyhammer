@@ -24,3 +24,7 @@ Copyright © 2023 Jessie Kirk.
 * libiconv: [GNU](https://ftp.gnu.org/gnu/libiconv)
 * libtool: [GNU](https://ftp.gnu.org/gnu/libtool)
 * libunistring: [GNU](https://ftp.gnu.org/gnu/libunistring)
+* m4: [GNU](https://ftp.gnu.org/gnu/m4)
+* make: [GNU](https://ftp.gnu.org/gnu/make)
+* mpc: [GNU](https://ftp.gnu.org/gnu/mpc)
+* mpfr: [GNU](https://ftp.gnu.org/gnu/mpfr)
