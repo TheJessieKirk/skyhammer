@@ -18,3 +18,6 @@ Copyright © 2023 Jessie Kirk.
 * gmp: [GNU](https://ftp.gnu.org/gnu/gmp)
 * gperf: [GNU](https://ftp.gnu.org/gnu/gperf)
 * grep: [GNU](https://ftp.gnu.org/gnu/grep)
+* guile: [GNU](https://ftp.gnu.org/gnu/guile)
+* gzip: [GNU](https://ftp.gnu.org/gnu/gzip)
+* help2man: [GNU](https://ftp.gnu.org/gnu/help2man)
