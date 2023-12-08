@@ -7,4 +7,6 @@ Copyright © 2023 Jessie Kirk.
 * autoconf: [GNU](https://ftp.gnu.org/gnu/autoconf)
 * automake: [GNU](https://ftp.gnu.org/gnu/automake)
 * bash: [GNU](https://ftp.gnu.org/gnu/bash)
+* binutils: [GNU](https://ftp.gnu.org/gnu/binutils)
+* bison: [GNU](https://ftp.gnu.org/gnu/bison)
 * gcc: [GNU](https://ftp.gnu.org/gnu/gcc)
