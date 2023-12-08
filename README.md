@@ -21,3 +21,6 @@ Copyright © 2023 Jessie Kirk.
 * guile: [GNU](https://ftp.gnu.org/gnu/guile)
 * gzip: [GNU](https://ftp.gnu.org/gnu/gzip)
 * help2man: [GNU](https://ftp.gnu.org/gnu/help2man)
+* libiconv: [GNU](https://ftp.gnu.org/gnu/libiconv)
+* libtool: [GNU](https://ftp.gnu.org/gnu/libtool)
+* libunistring: [GNU](https://ftp.gnu.org/gnu/libunistring)
