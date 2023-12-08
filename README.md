@@ -29,6 +29,7 @@ Copyright © 2023 Jessie Kirk.
 * make: [GNU](https://ftp.gnu.org/gnu/make)
 * mpc: [GNU](https://ftp.gnu.org/gnu/mpc)
 * mpfr: [GNU](https://ftp.gnu.org/gnu/mpfr)
+* pkg-config: [freedesktop](https://pkgconfig.freedesktop.org/releases/)
 * sed: [GNU](https://ftp.gnu.org/gnu/sed)
 * tar: [GNU](https://ftp.gnu.org/gnu/tar)
 * termcap [GNU](https://ftp.gnu.org/gnu/termcap)
