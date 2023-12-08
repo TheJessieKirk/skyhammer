@@ -11,4 +11,6 @@ Copyright © 2023 Jessie Kirk.
 * bison: [GNU](https://ftp.gnu.org/gnu/bison)
 * coreutils: [GNU](https://ftp.gnu.org/gnu/coreutils)
 * diffutils: [GNU](https://ftp.gnu.org/gnu/diffutils)
+* find: [GNU](https://ftp.gnu.org/gnu/find)
+* gawk: [GNU](https://ftp.gnu.org/gnu/gawk)
 * gcc: [GNU](https://ftp.gnu.org/gnu/gcc)
