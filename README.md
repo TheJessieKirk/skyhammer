@@ -31,4 +31,4 @@ Copyright © 2023 Jessie Kirk.
 * sed: [GNU](https://ftp.gnu.org/gnu/sed)
 * tar: [GNU](https://ftp.gnu.org/gnu/tar)
 * termcap [GNU](https://ftp.gnu.org/gnu/termcap)
-* texinfo [GNU](https://ftp.gnu.org/gnu/texinfo
+* texinfo [GNU](https://ftp.gnu.org/gnu/texinfo)
