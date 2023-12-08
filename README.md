@@ -5,4 +5,5 @@ Copyright © 2023 Jessie Kirk.
 
 ## Sources
 * autoconf: [GNU](https://ftp.gnu.org/gnu/autoconf)
+* automake: [GNU](https://ftp.gnu.org/gnu/automake)
 * gcc: [GNU](https://ftp.gnu.org/gnu/gcc)
