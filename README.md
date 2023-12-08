@@ -13,6 +13,7 @@ Copyright © 2023 Jessie Kirk.
 * coreutils: [GNU.org](https://ftp.gnu.org/gnu/coreutils)
 * diffutils: [GNU.org](https://ftp.gnu.org/gnu/diffutils)
 * find: [GNU.org](https://ftp.gnu.org/gnu/find)
+* meson: [Meson@github.com](https://github.com/mesonbuild/meson/releases)
 * gawk: [GNU.org](https://ftp.gnu.org/gnu/gawk)
 * gcc: [GNU.org](https://ftp.gnu.org/gnu/gcc)
 * gettext: [GNU.org](https://ftp.gnu.org/gnu/gettext)
