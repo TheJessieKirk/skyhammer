@@ -15,6 +15,7 @@ Copyright © 2023 Jessie Kirk.
 * gawk: [GNU](https://ftp.gnu.org/gnu/gawk)
 * gcc: [GNU](https://ftp.gnu.org/gnu/gcc)
 * gettext: [GNU](https://ftp.gnu.org/gnu/gettext)
+* glib: [GNOME](https://download.gnome.org/sources/glib/)
 * gmp: [GNU](https://ftp.gnu.org/gnu/gmp)
 * gperf: [GNU](https://ftp.gnu.org/gnu/gperf)
 * grep: [GNU](https://ftp.gnu.org/gnu/grep)
