@@ -9,4 +9,5 @@ Copyright © 2023 Jessie Kirk.
 * bash: [GNU](https://ftp.gnu.org/gnu/bash)
 * binutils: [GNU](https://ftp.gnu.org/gnu/binutils)
 * bison: [GNU](https://ftp.gnu.org/gnu/bison)
+* binutils: [GNU](https://ftp.gnu.org/gnu/binutils)
 * gcc: [GNU](https://ftp.gnu.org/gnu/gcc)
