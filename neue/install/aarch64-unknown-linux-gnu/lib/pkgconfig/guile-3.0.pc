@@ -1,0 +1,30 @@
+prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu
+exec_prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu
+bindir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin
+libdir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib
+includedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include
+datarootdir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/share
+datadir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/share
+pkgdatadir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/share/guile
+pkgincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include/guile
+
+sitedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/share/guile/site/3.0
+extensiondir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/guile/3.0/extensions
+siteccachedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/guile/3.0/site-ccache
+libguileinterface=7:0:6
+
+# Actual name of the 'guile' and 'guild' programs.  This is
+# particularly useful when '--program-transform-name' or similar has
+# been used.
+guild=${bindir}/aarch64-unknown-linux-gnu-guild
+guile=${bindir}/aarch64-unknown-linux-gnu-guile
+
+Name: GNU Guile
+Description: GNU's Ubiquitous Intelligent Language for Extension
+Version: 3.0.9
+Libs: -L${libdir} -lguile-3.0 -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -latomic_ops -lgc -lpthread -ldl 
+Libs.private:  /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libgmp.so -Wl,-rpath -Wl,/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib  -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/../lib64 -lffi 	\
+  /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libunistring.so -Wl,-rpath -Wl,/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -lcrypt  -lm   		\
+     		\
+  
+Cflags: -I${pkgincludedir}/3.0 -I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu -I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include  -I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include 

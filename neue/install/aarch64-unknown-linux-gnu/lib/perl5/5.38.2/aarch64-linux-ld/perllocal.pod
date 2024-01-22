@@ -1,0 +1,22 @@
+=head2 Sat Jan 20 14:59:05 2024: C<Module> L<Locale::gettext|Locale::gettext>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/perl5/site_perl/5.38.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.07>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
