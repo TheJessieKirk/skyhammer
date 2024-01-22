@@ -1,0 +1,545 @@
+This is help2man-ro.info.tmp, produced by makeinfo version 6.8 from
+help2man-ro.texi.
+
+Acest fișier documentează comanda GNU ‘help2man’ care produce pagini de
+manual simple din ieșirea ‘--help’ și ‘--version’ ale altor comenzi.
+
+   Drepturi de autor © 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2009,
+2010, 2011, 2012, 2013, 2014, 2015, 2020, 2021 Free Software Foundation,
+Inc.
+
+   Se acordă permisiunea de a face și de a distribui copii textuale ale
+acestui manual, cu condiția ca notificarea privind drepturile de autor
+și această notificare de permisiune să fie păstrate pe toate copiile.
+
+   Se acordă permisiunea de a copia și distribui versiunile modificate
+ale acestui manual în condițiile copierii textuale, cu condiția ca
+întreaga lucrare derivată rezultată să fie distribuită în condițiile
+unei notificări de permisiune identice cu aceasta.
+
+   Se acordă permisiunea de a copia și distribui traduceri ale acestui
+manual într-o altă limbă, în condițiile de mai sus pentru versiunile
+modificate, cu excepția faptului că această notificare de permisiune
+poate fi menționată într-o traducere aprobată de Fundație.
+INFO-DIR-SECTION Dezvoltare de software
+START-INFO-DIR-ENTRY
+* help2man-ro: (help2man-ro).  Generare automată a paginii de manual.
+END-INFO-DIR-ENTRY
+
+
+File: help2man-ro.info.tmp,  Node: Top,  Next: Prezentare generală,  Up: (dir)
+
+‘help2man’
+**********
+
+‘help2man’ produce pagini de manual simple din ieșirea ‘--help’ și
+‘--version’ ale altor comenzi.
+
+* Menu:
+
+* Prezentare generală:: 		  Prezentare generală
+					    ‘help2man’.
+* Invocarea help2man::			  Cum să rulați ‘help2man’.
+* Recomandări pentru opțiunea „--help”::  Recommended formatting
+					    for‘--help’ output.
+* Includere de text::			  Includerea unui text
+					    suplimentar în rezultat.
+* Utilizarea fișierului „Makefile”::	  Utilizarea lui ‘help2man’cu
+					    ‘make’.
+* Pagini de manual traduse::		  Producerea paginilor de
+					    manual în limbamaternă.
+* Exemplu::				  Exemplu de ieșire al
+					    ‘help2man’.
+* Rapoarte::				  Raportare erori sau sugestii.
+* Disponibilitate::			  Obținere ‘help2man’.
+
+
+File: help2man-ro.info.tmp,  Node: Prezentare generală,  Next: Invocarea help2man,  Prev: Top,  Up: Top
+
+1 Prezentare generală a ‘help2man’
+**********************************
+
+‘help2man’ este un instrument pentru generarea automată a paginilor de
+manual simple din ieșirea programului.
+
+   Deși paginile de manual sunt opționale pentru programele GNU, alte
+proiecte, cum ar fi Debian, le solicită (*note (standarde)Pagini de
+manual::)
+
+   Acest program este menit să ofere o modalitate ușoară pentru autorii
+de software de a include o pagină de manual în distribuția lor fără a fi
+nevoiți să mențină acel document.
+
+   Având în vedere un program care produce ieșiri ‘--help’ și
+‘--version’ destul de standard, ‘help2man’ poate rearanja acea ieșire în
+ceva care seamănă cu o pagină de manual.
+
+
+File: help2man-ro.info.tmp,  Node: Invocarea help2man,  Next: Recomandări pentru opțiunea „--help”,  Prev: Prezentare generală,  Up: Top
+
+2 Cum să rulați ‘help2man’
+**************************
+
+Formatul pentru rularea programului ‘help2man’ este:
+
+     help2man [OPȚIUNE]... EXECUTABIL
+
+   ‘help2man’ suportă următoarele opțiuni:
+
+‘-n ȘIR’
+‘--name=ȘIR’
+     Utilizează ȘIR ca descriere pentru paragraful ‘NUME’ din pagina
+     manualului.
+
+     În mod implicit (în lipsă de ceva mai bun), acest paragraf conține
+     ‘pagina de manual pentru PROGRAM VERSIUNEA’.
+
+     Această opțiune suprascrie o secțiune a fișierului de includere
+     ‘[nume]’ (*note Includere de text::).
+
+‘-s SECȚIUNE’
+‘--section SECȚIUNE’
+     Utilizează SECȚIUNE ca secțiune pentru pagina de manual.  Secțiunea
+     implicită este 1.
+
+‘-m MANUAL’
+‘--manual=MANUAL’
+     Stabilește numele secțiunii de manual la SECȚIUNE, folosit ca titlu
+     centrat pentru pagina de manual.  În mod implicit, ‘Comenzile
+     utilizatorului’ este utilizat pentru paginile din secțiunea 1,
+     ‘Jocuri’ pentru secțiunea 6 și ‘Utilități de administrare a
+     sistemului’ pentru secțiunile 8 și 1M.
+
+‘-S SURSĂ’
+‘--source=SURSĂ’
+     Sursa programului este folosită ca subsol de pagină și adesea
+     conține numele organizației sau o suită din care programul face
+     parte.  În mod implicit, valoarea este numele și versiunea
+     pachetului.
+
+‘-L LOCALIZARE’
+‘--locale=LOCALIZARE’
+     Selectează localizarea de ieșire (implicit ‘C’).  Atât programul,
+     cât și ‘help2man’ trebuie să accepte LOCALIZARE (*note Pagini de
+     manual traduse::).
+
+‘-i FIȘIER’
+‘--include=FIȘIER’
+     Include material din FIȘIER (*note Includere de text::).
+
+‘-I FIȘIER’
+‘--opt-include=FIȘIER’
+     O variantă a ‘--include’ pentru utilizare în regulile de model
+     Makefile care nu necesită ca FIȘIER să existe.
+
+‘-o FIȘIER’
+‘--output=FIȘIER’
+     Trimite ieșirea la FIȘIER și nu la ‘ieșirea_standard’.
+
+‘-p TEXT’
+‘--info-page=TEXT’
+     Numele manualului Texinfo.
+
+‘-N’
+‘--no-info’
+     Suprimă includerea unui paragraf ‘CONSULTAȚI DE ASEMENEA’ care
+     direcționează cititorul către documentația Texinfo.
+
+‘-l’
+‘--libtool’
+     Elimină prefixul ‘lt-’ din instanțe ale numelui programului din
+     rezumat (‘libtool’ creează scripturi de shell în directorul de
+     compilare care invocă ‘foo’ ca ‘.libs/lt-foo’).
+
+‘--help’
+‘--version’
+     Afișează informații despre ajutor sau despre versiune.
+
+   În mod implicit, ‘help2man’ pasează opțiunile standard ‘--help’ și
+‘--version’ executabilului, dar se pot specifica opțiuni alternative
+folosind:
+
+‘-h OPȚIUNE’
+‘--help-option=OPȚIUNE’
+     Șir pentru opțiunea de ajutor.
+
+‘-v OPȚIUNE’
+‘--version-option=OPȚIUNE’
+     Șir pentru opțiunea de versiune.
+
+‘--version-string=ȘIR’
+     Șir pentru versiune.
+
+‘--no-discard-stderr’
+     Include ieșirea de eroare standard atunci când analizează
+     rezultatul opțiunii.
+
+
+File: help2man-ro.info.tmp,  Node: Recomandări pentru opțiunea „--help”,  Next: Includere de text,  Prev: Invocarea help2man,  Up: Top
+
+3 Recomandări pentru „‘--help’”
+*******************************
+
+Iată câteva recomandări despre ce să includeți în rezultatul dvs.
+„‘--help’”.  Includerea acestora îi oferă lui ‘help2man’ cea mai bună
+șansă de a genera o pagină de manual respectabilă, precum și de a
+beneficia direct utilizatorii.
+
+   Consultați *note (standarde)Interfețe de linie de comandă:: și *note
+(standarde)Pagini de manual::, pentru standardele oficiale GNU
+referitoare la ‘--help’ și paginile de manual .
+
+   • Un rezumat al modului de invocare a programului.  Dacă utilizări
+     diferite ale programului au invocări diferite, atunci enumerați-le
+     pe toate.  De exemplu (editat pentru concizie):
+
+          Utilizare: cp [OPȚIUNE]... SURSA DESTINAȚIE
+            sau:  cp [OPȚIUNE]... SURSĂ... DIRECTOR
+          ...
+
+     Utilizați ‘argv[0]’ pentru numele programului din aceste rezumate,
+     așa cum este, fără eliminarea directorului.  Acest lucru este în
+     contrast cu numele canonic (constant) al programului care este
+     folosit în „‘--version’”.
+
+   • O explicație foarte scurtă despre ceea ce face programul, inclusiv
+     comportamentul implicit și/sau tipic.  De exemplu, aici este ‘cp’:
+
+          Copiază SURSĂ în DESTINAȚIE sau mai multe SURSE în DIRECTOR.
+
+   • O listă de opțiuni, indentată în coloana 2.  Dacă programul acceptă
+     opțiuni cu un singur caracter, puneți-le primele, apoi opțiunile
+     lungi echivalente (dacă există).  Dacă opțiunea preia un argument,
+     includeți-l și pe acesta, dându-i un nume semnificativ.  Aliniați
+     descrierile într-o coloană convenabilă, dacă doriți.  Rețineți că
+     pentru a fi recunoscută corect de ‘help2man’ descrierea trebuie să
+     fie separată de opțiuni cu cel puțin două spații, iar descrierile
+     continuate pe rândurile următoare trebuie să înceapă în aceeași
+     coloană.
+
+     Iată din nou un extras (editat) din ‘cp’, care arată o opțiune
+     scurtă cu o opțiune lungă echivalentă, doar o opțiune lungă și doar
+     o opțiune scurtă:
+
+            -a, --archive                la fel ca -d, -p, -R
+                --backup[=CONTROL]       face o copie de rezervă pentru fiecare ...
+            -b                           precum --backup dar ...
+
+     Pentru programele care au multe opțiuni, poate fi de dorit să
+     împărțiți lista de opțiuni în secțiuni precum ‘Global’, ‘Controlul
+     ieșirii’ sau orice are sens în cazul particular.  De obicei, cel
+     mai bine este să alfabetizați (întâi după numele scurt al opțiunii,
+     apoi lung) în fiecare secțiune sau întreaga listă dacă nu există
+     secțiuni.
+
+   • Orice informații suplimentare utile despre comportamentul
+     programului, cum ar fi variabilele de mediu influente, explicațiile
+     suplimentare ale opțiunilor etc.  De exemplu, pentru ‘cp’, puteți
+     introduce date pentru variabila de mediu ‘VERSION_CONTROL’ și
+     fișiere rare.
+
+   • Câteva exemple de utilizare tipică, la discreția dumneavoastră.  Un
+     exemplu bun merită, de obicei, mai mult de o mie de cuvinte de
+     descriere, așa că acesta este foarte recomandat.
+
+   • În încheiere, o linie care indică cum să trimiți prin e-mail
+     rapoartele de eroare.  De obicei, ADRESA DE EMAIL va fi
+     ‘bug-PROGRAM@gnu.org’; utilizați acest format pentru programele GNU
+     ori de câte ori este posibil.  De asemenea, este bine să menționați
+     pagina principală a programului, alte liste de corespondență etc.
+
+   Interfețele de programare ‘argp’ și ‘popt’ vă permit să specificați
+descrieri ale opțiunilor pentru ‘--help’ în aceeași structură ca și
+restul definiției opțiunii; poate doriți să luați în considerare
+utilizarea acestor rutine pentru analizarea opțiunilor în loc de
+‘getopt’.
+
+   În mod implicit, ‘help2man’ are unele euristici pentru identificarea
+secțiunilor de pagină de manual: o linie constând din ‘Opțiuni:’, de
+exemplu, va face ca următorul text să apară în secțiunea ‘OPȚIUNI’ și o
+linie care începe cu ‘Copyright’ va apărea în secțiunea ‘COPYRIGHT’.  În
+afara acestor euristici, o linie constând din ‘*Cuvinte*’ va începe o
+nouă secțiune, iar ‘Cuvinte:’ o nouă sub-secțiune.
+
+
+File: help2man-ro.info.tmp,  Node: Includere de text,  Next: Utilizarea fișierului „Makefile”,  Prev: Recomandări pentru opțiunea „--help”,  Up: Top
+
+4 Includerea textului suplimentar în ieșire
+*******************************************
+
+Text static suplimentar poate fi inclus în pagina de manual generată
+utilizând opțiunile ‘--include’ și ‘--opt-include’ (*note Invocarea
+help2man::).  Deși aceste fișiere pot fi „botezate” cu orice nume,
+pentru coerență vă sugerăm să utilizați extensia ‘.h2m’ pentru fișierele
+de includere ‘help2man’.
+
+   Formatul pentru fișierele incluse în această opțiune este simplu:
+
+     [secțiune]
+     text
+
+     /model/
+     text
+
+   Blocurile de text *roff textual sunt inserate în ieșire fie la
+începutul ‘[secțiune]’ date (fără să facă distincție între majuscule și
+minuscule), fie după un paragraf ce corespunde cu un ‘/model/’.
+
+   Modelele folosesc sintaxa expresiei regulate Perl și pot fi urmate de
+modificatorii ‘i’, ‘s’ sau ‘m’ (*note perlre(1): (*manpages*)perlre.)
+
+   Liniile dinaintea primei secțiuni sau model care încep cu ‘-’ sunt
+procesate ca opțiuni.  Orice altceva este ignorat în tăcere și poate fi
+folosit pentru comentarii, cuvinte cheie RCS și altele asemenea.
+
+   Ordinea de ieșire a secțiunii (pentru cele incluse) este:
+
+     NUME
+     REZUMAT
+     DESCRIERE
+     OPȚIUNI
+     _altele_
+     MEDIU
+     FIȘIERE
+     EXEMPLE
+     AUTOR
+     RAPORTAREA ERORILOR
+     COPYRIGHT
+     CONSULTAȚI DE ASEMENEA
+
+   Orice secțiune ‘[nume]’ sau ‘[rezumat’ care apare în fișierul de
+includere va înlocui ceea ce ar fi fost produs automat (dar puteți
+suprascrie pe prima dintre aceste secțiuni cu opțiunea ‘--name’ dacă
+doriți).
+
+   Alte secțiuni sunt adăugate la ieșirea produsă automat pentru
+secțiunile standard prezentate mai sus sau incluse la _altele_ (mai sus)
+în ordinea în care au fost întâlnite în fișierul include.
+
+   Plasarea textului în secțiune poate fi solicitată în mod explicit
+utilizând sintaxa ‘[<section]’, ‘[=section]’ sau ‘[>section]’ pentru a
+plasa textul suplimentar înainte de, în loc de sau după ieșirea
+implicită.
+
+
+File: help2man-ro.info.tmp,  Node: Utilizarea fișierului „Makefile”,  Next: Pagini de manual traduse,  Prev: Includere de text,  Up: Top
+
+5 Utilizarea ‘help2man’ cu ‘make’
+*********************************
+
+O utilizare sugerată a ‘help2man’ în Makefiles este ca pagina de manual
+să nu depindă de binar, ci de fișierul(ele) sursă în care ieșirile
+‘--help’ și ‘--version’ sunt definite.
+
+   Această utilizare permite ca o pagină de manual să fie generată de
+întreținător și inclusă în distribuție fără a fi necesar ca utilizatorul
+final să aibă ‘help2man’ instalat.
+
+   Un exemplu de regulă pentru programul ‘prog’ ar putea fi:
+
+     prog.1: $(srcdir)/main.c
+             -$(HELP2MAN) --output=$@ --name='un program de exemplu' ./prog
+
+   Valoarea ‘HELP2MAN’ poate fi stabilită în ‘configure.in’ utilizând
+oricare dintre următoarele:
+
+     AM_MISSING_PROG(HELP2MAN, help2man)
+
+   pentru ‘automake’ sau ceva de tipul:
+
+     AC_PATH_PROG(HELP2MAN, help2man, false // No help2man //)
+
+   pentru ‘autoconf’ doar.
+
+
+File: help2man-ro.info.tmp,  Node: Pagini de manual traduse,  Next: Exemplu,  Prev: Utilizarea fișierului „Makefile”,  Up: Top
+
+6 Producerea paginilor de manual în limba maternă
+*************************************************
+
+Paginile de manual pot fi produse pentru orice localizare suportată atât
+de program, cât și de ‘help2man’ cu opțiunea ‘--locale’ (‘-L’).
+
+     help2man -L fr_FR@euro -o cp.fr.1 cp
+
+   Consultați <http://translationproject.org/domain/help2man.html>
+pentru limbile acceptate în prezent de ‘help2man’ și *note Rapoarte::
+pentru cum să trimiteți alte traduceri.
+
+6.1 Modificarea locației cataloagelor de mesaje
+===============================================
+
+Când se creează pagini de manual traduse din directorul de compilare al
+unui program, este puțin probabil ca traducerile instalate în locația
+standard (dacă programul este instalat) să fie corecte pentru versiunea
+programului care este construit.
+
+   O bibliotecă preîncărcabilă este furnizată cu ‘help2man’ care va
+intercepta apelurile ‘bindtextdomain’ care configurează locația
+cataloagelor de mesaje pentru domeniul dat de ‘$TEXTDOMAIN’ și va
+suprascrie locația către calea dată de ‘$LOCALEDIR’.
+
+   Așa, de exemplu:
+
+     mkdir -p tmp/fr/LC_MESSAGES
+     cp po/fr.gmo tmp/fr/LC_MESSAGES/PROG.mo
+     LD_PRELOAD="/usr/lib/help2man/bindtextdomain.so" \
+       LOCALEDIR=tmp \
+       TEXTDOMAIN=PROG \
+       help2man -L fr_FR@euro -i PROG.fr.h2m -o PROG.fr.1 PROG
+     rm -rf tmp
+
+   va face ca PROG să încarce catalogul de mesaje din ‘tmp’, mai degrabă
+decât din ‘/usr/share/locale’.
+
+   Note:
+   • Generalizarea lui ‘fr_FR@euro’ la ‘fr’ în exemplul de mai sus este
+     realizată de ‘gettext’, dacă ar fi fost disponibilă o potrivire mai
+     specifică, ar fi fost utilizată, de asemenea.
+
+   • Această preîncărcare a fost testată numai pentru ‘eglibc’ 2.11.2 și
+     ‘gettext’ 0.18.1.1 pe un sistem GNU/Linux; anunțați-mă dacă
+     funcționează (sau nu) pentru dumneavoastră (*note Rapoarte::).
+
+
+File: help2man-ro.info.tmp,  Node: Exemplu,  Next: Rapoarte,  Prev: Pagini de manual traduse,  Up: Top
+
+7 Exemplu de ieșire ‘help2man’
+******************************
+
+Având un program ipotetic ‘foo’ care produce următoarea ieșire:
+
+     $ foo --version
+     GNU foo 1.1
+
+     Copyright (C) 2011 Free Software Foundation, Inc.
+     Acesta este software liber; consultați codul sursă pentru condițiile de copiere.  NU există
+     nicio garanție; nici măcar pentru VANDABILITATE sau de POTRIVIRE PENTRU UN SCOP ANUME.
+
+     Scris de Un Programator.
+     $ foo --help
+     GNU `foo' nu face nimic interesant decât să servească drept exemplu pentru
+     «help2man».
+
+     Utilizare: foo [OPȚIUNE]...
+
+     Opțiuni:
+       -a, --option      o opțiune
+       -b, --another-option[=VALOARE]
+                         altă opțiune
+
+           --help        afișează acest ajutor și iese
+           --version     afișează informații despre versiune și iese
+
+     Exemple:
+       foo               nu face nimic
+       foo --option      același lucru, specificând „--option”
+
+     Raportați erorile la <bug-gnu-utils@gnu.org>.
+
+   ‘help2man’ va produce intrare pentru ‘nroff’ pentru a crea o pagină
+de manual care va fi formatată cam așa:
+
+     FOO(1)                   Comenzile utilizatorului                   FOO(1)
+
+     NUME
+            foo - pagina de manual pentru foo 1.1
+
+     REZUMAT
+            foo [OPȚIUNE]...
+
+     DESCRIERE
+            GNU «foo»  nu face nimic interesant decât să servească drept exemplu pentru
+            «help2man».
+
+     OPȚIUNI
+            -a, --option
+                   o opțiune
+
+            -b, --another-option[=VALOARE]
+                   altă opțiune
+
+            --help afișează acest ajutor și iese
+
+            --version
+                   afișează informații despre versiune și iese
+
+     EXEMPLE
+            foo    nu face nimic
+
+            foo --option
+                   același lucru, specificând „--option”
+
+     AUTOR
+            Scris de Un Programator.
+
+     RAPORTAREA ERORILOR
+            Raportați erorile la <bug-gnu-utils@gnu.org>.
+
+     COPYRIGHT
+            Copyright © 2011 Free Software Foundation, Inc.
+            Acesta este software liber; consultați codul sursă pentru condițiile de copiere.
+            NU există nicio garanție; nici măcar pentru VANDABILITATE sau de POTRIVIRE
+            PENTRU UN SCOP ANUME.
+
+     CONSULTAȚI DE ASEMENEA
+            Documentația completă pentru foo este menținută ca un manual Texinfo.
+            Dacă programele info și foo sunt instalate corect pe sistemul dumneavoastră,
+            comanda
+
+                   info foo
+
+            ar trebui să vă ofere acces la manualul complet.
+
+     foo 1.1                          Mar 2022                           FOO(1)
+
+
+File: help2man-ro.info.tmp,  Node: Rapoarte,  Next: Disponibilitate,  Prev: Exemplu,  Up: Top
+
+8 Raportare erori sau sugestii
+******************************
+
+Dacă găsiți probleme sau aveți sugestii despre acest program sau manual,
+raportați-le la <bug-help2man@gnu.org>.
+
+   Notă pentru traducători: Traducerile sunt gestionate prin Translation
+Project (http://translationproject.org/), consultați
+<http://translationproject.org/html/translators.html> pentru detalii.
+
+
+File: help2man-ro.info.tmp,  Node: Disponibilitate,  Prev: Rapoarte,  Up: Top
+
+9 Obținere ‘help2man’
+*********************
+
+Cea mai recentă versiune a acestei distribuții este disponibilă în
+internet, din oglinzile GNU:
+
+     <http://ftpmirror.gnu.org/help2man/>
+
+   Dacă redirecționarea automată eșuează, lista oglinzilor este la:
+
+     <http://www.gnu.org/order/ftp.html>
+
+   Sau, dacă este necesar, puteți utiliza serverul principal GNU ftp:
+     <http://ftp.gnu.org/gnu/help2man/>
+
+
+Tag Table:
+Node: Top1322
+Node: Prezentare generală2331
+Node: Invocarea help2man3174
+Node: Recomandări pentru opțiunea „--help”6394
+Node: Includere de text10959
+Node: Utilizarea fișierului „Makefile”13205
+Node: Pagini de manual traduse14293
+Node: Exemplu16404
+Node: Rapoarte19270
+Node: Disponibilitate19749
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:
