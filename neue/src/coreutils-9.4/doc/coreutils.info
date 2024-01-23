@@ -1,17 +1,17 @@
-This is coreutils.info, produced by makeinfo version 7.0.3 from
+This is coreutils.info, produced by makeinfo version 7.1 from
 coreutils.texi.
 
 This manual documents version 9.4 of the GNU core utilities, including
 the standard programs for text and file manipulation.
 
-   Copyright © 1994–2023 Free Software Foundation, Inc.
+   Copyright © 1994-2023 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
      Version 1.3 or any later version published by the Free Software
      Foundation; with no Invariant Sections, with no Front-Cover Texts,
      and with no Back-Cover Texts.  A copy of the license is included in
-     the section entitled “GNU Free Documentation License”.
+     the section entitled "GNU Free Documentation License".
 INFO-DIR-SECTION Basics
 START-INFO-DIR-ENTRY
 * Coreutils: (coreutils).       Core GNU (file, text, shell) utilities.
@@ -136,14 +136,14 @@ GNU Coreutils
 This manual documents version 9.4 of the GNU core utilities, including
 the standard programs for text and file manipulation.
 
-   Copyright © 1994–2023 Free Software Foundation, Inc.
+   Copyright © 1994-2023 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
      Version 1.3 or any later version published by the Free Software
      Foundation; with no Invariant Sections, with no Front-Cover Texts,
      and with no Back-Cover Texts.  A copy of the license is included in
-     the section entitled “GNU Free Documentation License”.
+     the section entitled "GNU Free Documentation License".
 
 * Menu:
 
@@ -181,7 +181,7 @@ the standard programs for text and file manipulation.
 * GNU Free Documentation License:: Copying and sharing this manual
 * Concept index::                General index
 
- — The Detailed Node Listing —
+ -- The Detailed Node Listing --
 
 Common Options
 
@@ -542,7 +542,7 @@ specified for a particular command.
    A few programs can usefully have trailing operands with leading ‘-’.
 With such a program, options must precede operands even if
 ‘POSIXLY_CORRECT’ is not set, and this fact is noted in the program
-description.  For example, the ‘env’ command’s options must appear
+description.  For example, the ‘env’ command's options must appear
 before its operands, since in some cases the operands specify a command
 that itself contains options.
 
@@ -658,7 +658,7 @@ File: coreutils.info,  Node: Block size,  Next: Signal specifications,  Prev: Ba
 ==============
 
 Some GNU programs (at least ‘df’, ‘du’, and ‘ls’) display sizes in
-“blocks”.  You can adjust the block size and method of display to make
+"blocks".  You can adjust the block size and method of display to make
 sizes easier to read.  The block size used for display is independent of
 any file system block size.  Fractional block counts are rounded up to
 the nearest integer.
@@ -888,7 +888,7 @@ resolve the specified string as a name, and only once that fails, then
 try to interpret it as an ID.  This is troublesome when you want to
 specify a numeric ID, say 42, and it must work even in a pathological
 situation where ‘42’ is a user name that maps to some other user ID, say
-1000.  Simply invoking ‘chown 42 F’, will set ‘F’s owner ID to 1000 –
+1000.  Simply invoking ‘chown 42 F’, will set ‘F’s owner ID to 1000 -
 not what you intended.
 
    GNU ‘chown’, ‘chgrp’, ‘chroot’, and ‘id’ provide a way to work around
@@ -993,9 +993,9 @@ to allow more fine-grained control:
      The commands in the ‘mv’-family are unusual in that they take a
      variable number of arguments with a special case at the _end_
      (namely, the target directory).  This makes it nontrivial to
-     perform some operations, e.g., “move all files from here to ../d/”,
+     perform some operations, e.g., "move all files from here to ../d/",
      because ‘mv * ../d/’ might exhaust the argument space, and ‘ls |
-     xargs ...’ doesn’t have a clean way to specify an extra final
+     xargs ...’ doesn't have a clean way to specify an extra final
      argument for each invocation of the subject command.  (It can be
      done by going through a shell command, but that requires more human
      labor and brain power than it should.)
@@ -1007,7 +1007,7 @@ to allow more fine-grained control:
 
           ls | xargs mv -t ../d --
 
-     However, this doesn’t move files whose names begin with ‘.’.  If
+     However, this doesn't move files whose names begin with ‘.’.  If
      you use the GNU ‘find’ program, you can move those files too, with
      this command:
 
@@ -1040,7 +1040,7 @@ trailing slashes from each SOURCE argument before operating on it.  The
 specify a symbolic link to a directory.  This scenario is in fact rather
 common because some shells can automatically append a trailing slash
 when performing file name completion on such symbolic links.  Without
-this option, ‘mv’, for example, (via the system’s rename function) must
+this option, ‘mv’, for example, (via the system's rename function) must
 interpret a trailing slash as a request to dereference the symbolic link
 and so must rename the indirectly referenced _directory_ and not the
 symbolic link.  Although it may seem surprising that such behavior be
@@ -1093,7 +1093,7 @@ the ‘--preserve-root’ option, is safer for most purposes.
 
    The commands ‘chgrp’, ‘chmod’ and ‘chown’ can also operate
 destructively on entire hierarchies, so they too support these options.
-Although, unlike ‘rm’, they don’t actually unlink files, these commands
+Although, unlike ‘rm’, they don't actually unlink files, these commands
 are arguably more dangerous when operating recursively on ‘/’, since
 they often work much more quickly, and hence damage more files before an
 alert user can interrupt them.  Tradition and POSIX require these
@@ -1143,7 +1143,7 @@ File: coreutils.info,  Node: Exit status,  Next: Floating point,  Prev: Special 
 Nearly every command invocation yields an integral “exit status” that
 can be used to change how other commands work.  For the vast majority of
 commands, an exit status of zero indicates success.  Failure is
-indicated by a nonzero value – typically ‘1’, though it may differ on
+indicated by a nonzero value - typically ‘1’, though it may differ on
 unusual platforms as POSIX requires only that it be nonzero.
 
    However, some of the programs documented here do produce other exit
@@ -1166,7 +1166,7 @@ to assume IEEE-754 behavior these days.  IEEE-754 has positive and
 negative infinity, distinguishes positive from negative zero, and uses
 special values called NaNs to represent invalid computations such as
 dividing zero by itself.  For more information, please see David
-Goldberg’s paper What Every Computer Scientist Should Know About
+Goldberg's paper What Every Computer Scientist Should Know About
 Floating-Point Arithmetic
 (https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 
@@ -1182,7 +1182,7 @@ stands for −14/16 times 2^-3, which equals −0.109375.  *Note
 (libc)Parsing of Floats::.
 
    Normally the ‘LC_NUMERIC’ locale determines the decimal-point
-character.  However, some commands’ descriptions specify that they
+character.  However, some commands' descriptions specify that they
 accept numbers in either the current or the C locale; for example, they
 treat ‘3.14’ like ‘3,14’ if the current locale uses comma as a decimal
 point.
@@ -1193,7 +1193,7 @@ File: coreutils.info,  Node: Standards conformance,  Next: Multi-call invocation
 2.13 Standards conformance
 ==========================
 
-In a few cases, the GNU utilities’ default behavior is incompatible with
+In a few cases, the GNU utilities' default behavior is incompatible with
 the POSIX standard.  To suppress these incompatibilities, define the
 ‘POSIXLY_CORRECT’ environment variable.  Unless you are checking for
 POSIX conformance, you probably do not need to define ‘POSIXLY_CORRECT’.
@@ -1510,7 +1510,7 @@ standard input), or standard input if none are given.  Synopses:
 
    Each line of output consists of the offset in the input, followed by
 groups of data from the file.  By default, ‘od’ prints the offset in
-octal, and each group of file data is a C ‘short int’’s worth of input
+octal, and each group of file data is a C ‘short int’'s worth of input
 printed as a single octal number.
 
    If OFFSET is given, it specifies how many input bytes to skip before
@@ -1592,7 +1592,7 @@ options::.
      each output line using each of the data types that you specified,
      in the order that you specified.
 
-     Adding a trailing “z” to any type specification appends a display
+     Adding a trailing "z" to any type specification appends a display
      of the single byte character representation of the printable
      characters to the output line generated by the type specification.
 
@@ -1620,7 +1620,7 @@ options::.
      Except for types ‘a’ and ‘c’, you can specify the number of bytes
      to use in interpreting each number in the given data type by
      following the type indicator character with a decimal integer.
-     Alternately, you can specify the size of one of the C compiler’s
+     Alternately, you can specify the size of one of the C compiler's
      built-in data types by following the type indicator character with
      one of the following characters.  For integers (‘d’, ‘o’, ‘u’,
      ‘x’):
@@ -1909,10 +1909,10 @@ avoid line breaks after the first word of a sentence or before the last
 word of a sentence.  A “sentence break” is defined as either the end of
 a paragraph or a word ending in any of ‘.?!’, followed by two spaces or
 end of line, ignoring any intervening parentheses or quotes.  Like TeX,
-‘fmt’ reads entire “paragraphs” before choosing line breaks; the
+‘fmt’ reads entire "paragraphs" before choosing line breaks; the
 algorithm is a variant of that given by Donald E. Knuth and Michael F.
-Plass in “Breaking Paragraphs Into Lines”, ‘Software: Practice &
-Experience’ 11, 11 (November 1981), 1119–1184.
+Plass in "Breaking Paragraphs Into Lines", ‘Software: Practice &
+Experience’ 11, 11 (November 1981), 1119-1184.
 
    The program accepts the following options.  Also see *note Common
 options::.
@@ -1933,7 +1933,7 @@ options::.
 ‘-s’
 ‘--split-only’
      Split lines only.  Do not join short lines to form longer ones.
-     This prevents sample lines of code, and other such “formatted” text
+     This prevents sample lines of code, and other such "formatted" text
      from being unduly combined.
 
 ‘-u’
@@ -2063,7 +2063,7 @@ options::.
 ‘--expand-tabs[=IN-TABCHAR[IN-TABWIDTH]]’
      Expand TABs to spaces on input.  Optional argument IN-TABCHAR is
      the input tab character (default is the TAB character).  Second
-     optional argument IN-TABWIDTH is the input tab character’s width
+     optional argument IN-TABWIDTH is the input tab character's width
      (default is 8).
 
 ‘-f’
@@ -2082,7 +2082,7 @@ options::.
 ‘--output-tabs[=OUT-TABCHAR[OUT-TABWIDTH]]’
      Replace spaces with TABs on output.  Optional argument OUT-TABCHAR
      is the output tab character (default is the TAB character).  Second
-     optional argument OUT-TABWIDTH is the output tab character’s width
+     optional argument OUT-TABWIDTH is the output tab character's width
      (default is 8).
 
 ‘-J’
@@ -2164,7 +2164,7 @@ options::.
 
 ‘-S[STRING]’
 ‘--sep-string[=STRING]’
-     Use STRING to separate output columns.  The ‘-S’ option doesn’t
+     Use STRING to separate output columns.  The ‘-S’ option doesn't
      affect the ‘-W/-w’ option, unlike the ‘-s’ option which does.  It
      does not affect line truncation or column alignment.  Without ‘-S’,
      and with ‘-J’, ‘pr’ uses the default output separator, TAB.
@@ -2178,7 +2178,7 @@ options::.
      page structure is produced, but form feeds set in the input files
      are retained.  The predefined pagination is not changed.  ‘-t’ or
      ‘-T’ may be useful together with other options; e.g.: ‘-t -e4’,
-     expand TAB characters in the input file to 4 spaces but don’t make
+     expand TAB characters in the input file to 4 spaces but don't make
      any other changes.  Use of ‘-t’ overrides ‘-h’.
 
 ‘-T’
@@ -2207,11 +2207,11 @@ options::.
      PAGE_WIDTH is rounded down so that columns have equal width.  Text
      lines are truncated, unless ‘-J’ is used.  Together with one of the
      three column options (‘-COLUMN’, ‘-a -COLUMN’ or ‘-m’) column
-     alignment is always used.  The separator options ‘-S’ or ‘-s’ don’t
+     alignment is always used.  The separator options ‘-S’ or ‘-s’ don't
      disable the ‘-W’ option.  Default is 72 characters.  Without ‘-W
      PAGE_WIDTH’ and without any of the column options NO line
      truncation is used (defined to keep downward compatibility and to
-     meet most frequent tasks).  That’s equivalent to ‘-W 72 -J’.  The
+     meet most frequent tasks).  That's equivalent to ‘-W 72 -J’.  The
      header line is never truncated.
 
    An exit status of zero indicates success, and a nonzero value
@@ -2411,12 +2411,12 @@ options::.
      given, ‘tail’ prints a header whenever it gets output from a
      different file, to indicate which file that output is from.
 
-     There are two ways to specify how you’d like to track files with
+     There are two ways to specify how you'd like to track files with
      this option, but that difference is noticeable only when a followed
-     file is removed or renamed.  If you’d like to continue to track the
+     file is removed or renamed.  If you'd like to continue to track the
      end of a growing file even after it has been unlinked, use
      ‘--follow=descriptor’.  This is the default behavior, but it is not
-     useful if you’re tracking a log file that may be rotated (removed
+     useful if you're tracking a log file that may be rotated (removed
      or renamed, then reopened).  In that case, use ‘--follow=name’ to
      track the named file, perhaps by reopening it periodically to see
      if it has been removed and recreated by some other program.  Note
@@ -2429,7 +2429,7 @@ options::.
      it has been truncated to 0, which is the usual truncation operation
      for log files.
 
-     When a file is removed, ‘tail’’s behavior depends on whether it is
+     When a file is removed, ‘tail’'s behavior depends on whether it is
      following the name or the descriptor.  When following by name, tail
      can detect that a file has been removed and gives a message to that
      effect, and if ‘--retry’ has been specified it will continue
@@ -2449,8 +2449,8 @@ options::.
 
      With kernel inotify support, output is triggered by file changes
      and is generally very prompt.  Otherwise, ‘tail’ sleeps for one
-     second between checks – use ‘--sleep-interval=N’ to change that
-     default – which can make the output appear slightly less responsive
+     second between checks - use ‘--sleep-interval=N’ to change that
+     default - which can make the output appear slightly less responsive
      or bursty.  When using tail without inotify support, you can make
      it more responsive by using a sub-second sleep interval, e.g., via
      an alias like this:
@@ -2518,7 +2518,7 @@ options::.
      When following by name (i.e., with ‘--follow=name’), ‘tail’
      infinitely retries to re-open the given files until killed.
 
-     Without this option, when ‘tail’ encounters a file that doesn’t
+     Without this option, when ‘tail’ encounters a file that doesn't
      exist or is otherwise inaccessible, it reports that fact and never
      checks it again.
 
@@ -2565,7 +2565,7 @@ environment variable (*note Standards conformance::).
 syntax and should use ‘-c NUM[b]’, ‘-n NUM’, and/or ‘-f’ instead.  If
 your script must also run on hosts that support only the traditional
 syntax, you can often rewrite it to avoid problematic usages, e.g., by
-using ‘sed -n '$p'’ rather than ‘tail -1’.  If that’s not possible, the
+using ‘sed -n '$p'’ rather than ‘tail -1’.  If that's not possible, the
 script can use a test like ‘if tail -c +1 </dev/null >/dev/null 2>&1;
 then ...’ to decide which syntax to use.
 
@@ -2594,7 +2594,7 @@ Synopsis:
    By default, ‘split’ puts 1000 lines of INPUT (or whatever is left
 over for the last section), into each output file.
 
-   The output files’ names consist of PREFIX (‘x’ by default) followed
+   The output files' names consist of PREFIX (‘x’ by default) followed
 by a group of characters (‘aa’, ‘ab’, ... by default), such that
 concatenating the output files in traditional sorted order by file name
 produces the original input file (except ‘-nr/N’).  By default split
@@ -2848,7 +2848,7 @@ output file after it has been created.
      meaning repeat as many times as necessary until the input is
      exhausted.
 
-   The output files’ names consist of a prefix (‘xx’ by default)
+   The output files' names consist of a prefix (‘xx’ by default)
 followed by a suffix.  By default, the suffix is an ascending sequence
 of two-digit decimal numbers from ‘00’ to ‘99’.  In any case,
 concatenating the output files in sorted order by file name produces the
@@ -3054,8 +3054,8 @@ options::.
           FILE is specified.
         • always - Always output a total line, irrespective of the
           number of files processed.
-        • only - Only output total counts.  I.e., don’t print individual
-          file counts, suppress any leading spaces, and don’t print the
+        • only - Only output total counts.  I.e., don't print individual
+          file counts, suppress any leading spaces, and don't print the
           ‘total’ word itself, to simplify subsequent processing.
         • never - Never output a total line.
 
@@ -3110,7 +3110,7 @@ options::.
 ‘-s’
 ‘--sysv’
      Compute checksums using an algorithm compatible with System V
-     ‘sum’’s default, and print file sizes in units of 512-byte blocks.
+     ‘sum’'s default, and print file sizes in units of 512-byte blocks.
 
    ‘sum’ is provided for compatibility; the ‘cksum’ program (see next
 section) is preferable in new applications.
@@ -3172,7 +3172,7 @@ Untagged output format
      utilities.  For each FILE, we print the checksum, a space, a flag
      indicating binary or text input mode, and the file name.  Binary
      mode is indicated with ‘*’, text mode with ‘ ’ (space).  Binary
-     mode is the default on systems where it’s significant, otherwise
+     mode is the default on systems where it's significant, otherwise
      text mode is the default.
 
    Note without ‘--zero’, and with non legacy output formats, if FILE
@@ -3269,7 +3269,7 @@ File: coreutils.info,  Node: cksum common options,  Prev: cksum general options,
      Three input formats are supported.  Either the default output
      format described above, the ‘--tag’ output format, or the BSD
      reversed mode format which is similar to the default mode, but
-     doesn’t use a character to distinguish binary and text modes.
+     doesn't use a character to distinguish binary and text modes.
 
      For the ‘cksum’ command, the ‘--check’ option supports
      auto-detecting the digest algorithm to use, when presented with
@@ -3292,19 +3292,19 @@ File: coreutils.info,  Node: cksum common options,  Prev: cksum general options,
      that output.  If any listed file cannot be opened or read, if any
      valid line has a checksum inconsistent with the associated file, or
      if no valid line is found, ‘cksum’ exits with nonzero status.
-     Otherwise, it exits successfully.  Note the ‘cksum’ command doesn’t
+     Otherwise, it exits successfully.  Note the ‘cksum’ command doesn't
      support ‘--check’ with the older ‘sysv’, ‘bsd’, or ‘crc’
      algorithms.
 
 ‘--ignore-missing’
      This option is useful only when verifying checksums.  When
-     verifying checksums, don’t fail or report any status for missing
+     verifying checksums, don't fail or report any status for missing
      files.  This is useful when verifying a subset of downloaded files
      given a larger list of checksums.
 
 ‘--quiet’
      This option is useful only when verifying checksums.  When
-     verifying checksums, don’t generate an ’OK’ message per
+     verifying checksums, don't generate an 'OK' message per
      successfully checked file.  Files that fail the verification are
      reported in the default one-line-per-file format.  If there is any
      checksum mismatch, print a warning summarizing the failures to
@@ -3312,8 +3312,8 @@ File: coreutils.info,  Node: cksum common options,  Prev: cksum general options,
 
 ‘--status’
      This option is useful only when verifying checksums.  When
-     verifying checksums, don’t generate the default one-line-per-file
-     diagnostic and don’t output the warning summarizing any failures.
+     verifying checksums, don't generate the default one-line-per-file
+     diagnostic and don't output the warning summarizing any failures.
      Failures to open or read a file still evoke individual diagnostics
      to standard error.  If all listed files are readable and are
      consistent with the associated checksums, exit successfully.
@@ -3517,7 +3517,7 @@ compare equal are left in their original relative order.  The ‘--unique’
 (‘-u’) option also disables the last-resort comparison.
 
    Unless otherwise specified, all comparisons use the character
-collating sequence specified by the ‘LC_COLLATE’ locale.(1)  A line’s
+collating sequence specified by the ‘LC_COLLATE’ locale.(1)  A line's
 trailing newline is not part of the line for comparison purposes.  If
 the final byte of an input file is not a newline, GNU ‘sort’ silently
 supplies one.  GNU ‘sort’ (as specified for all GNU utilities) has no
@@ -3572,7 +3572,7 @@ scripts should specify global options first.
 ‘--ignore-leading-blanks’
      Ignore leading blanks when finding sort keys in each line.  By
      default a blank is a space or a tab, but the ‘LC_CTYPE’ locale can
-     change this.  Note blanks may be ignored by your locale’s collating
+     change this.  Note blanks may be ignored by your locale's collating
      rules, but without this option they will be significant for
      character positions specified in keys with the ‘-k’ option.
 
@@ -3603,7 +3603,7 @@ scripts should specify global options first.
 
         • Lines that do not start with numbers (all considered to be
           equal).
-        • NaNs (“Not a Number” values, in IEEE floating point
+        • NaNs ("Not a Number" values, in IEEE floating point
           arithmetic) in a consistent but machine-dependent order.
         • Minus infinity.
         • Finite numbers in ascending numeric order (with -0 and +0
@@ -3742,7 +3742,7 @@ scripts should specify global options first.
      number of the field to use, and C is the number of the first
      character from the beginning of the field.  Fields and character
      positions are numbered starting with 1; a character position of
-     zero in POS2 indicates the field’s last character.  If ‘.C’ is
+     zero in POS2 indicates the field's last character.  If ‘.C’ is
      omitted from POS1, it defaults to 1 (the beginning of the field);
      if omitted from POS2, it defaults to 0 (the end of the field).
      OPTS are ordering options, allowing individual keys to be sorted
@@ -3976,7 +3976,7 @@ it can use a test like ‘if sort -k 1 </dev/null >/dev/null 2>&1; then
           sort -t : -b -k 5,5 -k 3,3n /etc/passwd
 
      These three commands have equivalent effect.  The first specifies
-     that the first key’s start position ignores leading blanks and the
+     that the first key's start position ignores leading blanks and the
      second key is sorted numerically.  The other two commands rely on
      global options being inherited by sort keys that lack modifiers.
      The inheritance works in this case because ‘-k 5b,5b’ and ‘-k 5b,5’
@@ -3985,7 +3985,7 @@ it can use a test like ‘if sort -k 1 </dev/null >/dev/null 2>&1; then
      skipped.
 
    • Sort a set of log files, primarily by IPv4 address and secondarily
-     by timestamp.  If two lines’ primary and secondary keys are
+     by timestamp.  If two lines' primary and secondary keys are
      identical, output the lines in the same order that they were input.
      The log files contain lines that look like this:
 
@@ -4005,7 +4005,7 @@ it can use a test like ‘if sort -k 1 </dev/null >/dev/null 2>&1; then
      ‘sort’: the first sorts by timestamp and the second by IPv4
      address.  The timestamp is sorted by year, then month, then day,
      and finally by hour-minute-second field, using ‘-k’ to isolate each
-     field.  Except for hour-minute-second there’s no need to specify
+     field.  Except for hour-minute-second there's no need to specify
      the end of each key field, since the ‘n’ and ‘M’ modifiers sort
      based on leading prefixes that cannot cross field boundaries.  The
      IPv4 addresses are sorted lexicographically.  The second sort uses
@@ -4042,7 +4042,7 @@ it can use a test like ‘if sort -k 1 </dev/null >/dev/null 2>&1; then
 
    (1) If you use a non-POSIX locale (e.g., by setting ‘LC_ALL’ to
 ‘en_US’), then ‘sort’ may produce output that is sorted differently than
-you’re accustomed to.  In that case, set the ‘LC_ALL’ environment
+you're accustomed to.  In that case, set the ‘LC_ALL’ environment
 variable to ‘C’.  Note that setting only ‘LC_COLLATE’ has two problems.
 First, it is ineffective if ‘LC_ALL’ is also set.  Second, it has
 undefined behavior if ‘LC_CTYPE’ (or ‘LANG’, if ‘LC_CTYPE’ is unset) is
@@ -4075,7 +4075,7 @@ following options change the operation mode:
      Act as if input came from a file containing the range of unsigned
      decimal integers LO...HI, one per line.
 
-   ‘shuf’’s other options can affect its behavior in all operation
+   ‘shuf’'s other options can affect its behavior in all operation
 modes:
 
 ‘-n COUNT’
@@ -4422,7 +4422,7 @@ each keyword in its context.  The calling sketch is either one of:
 
    The ‘-G’ (or its equivalent: ‘--traditional’) option disables all GNU
 extensions and reverts to traditional mode, thus introducing some
-limitations and changing several of the program’s default option values.
+limitations and changing several of the program's default option values.
 When ‘-G’ is not specified, GNU extensions are always enabled.  GNU
 extensions to ‘ptx’ are documented wherever appropriate in this
 document.  *Note Compatibility in ptx::, for the full list.
@@ -4497,8 +4497,8 @@ single-byte locale, the default regular expression for a keyword allows
 foreign or diacriticized letters.  Keyword sorting, however, is still
 crude; it obeys the underlying character set ordering quite blindly.
 
-   The output of ‘ptx’ assumes the locale’s character encoding.  For
-example, with ‘ptx’’s ‘-T’ option, if the locale uses the Latin-1
+   The output of ‘ptx’ assumes the locale's character encoding.  For
+example, with ‘ptx’'s ‘-T’ option, if the locale uses the Latin-1
 encoding you may need a LaTeX directive like
 ‘\usepackage[latin1]{inputenc}’ to render non-ASCII characters
 correctly.
@@ -4873,7 +4873,7 @@ will produce the output
 all in one file, and they may all be declared static except one.
 Currently that one (say ‘main’) is the first function defined in the
 file, and the ones it calls directly follow it, followed by those they
-call, etc.  Let’s say that you are determined to take advantage of
+call, etc.  Let's say that you are determined to take advantage of
 prototypes, so you have to choose between declaring all of those
 functions (which means duplicating a lot of information from the
 definitions) and rearranging the functions so that as many as possible
@@ -4967,7 +4967,7 @@ but not ‘read’ might end up with an unexpected unresolved reference to
 
    The way to address this problem was to first generate a set of
 dependencies of one object file on another.  This was done by a shell
-script called ‘lorder’.  The GNU tools don’t provide a version of
+script called ‘lorder’.  The GNU tools don't provide a version of
 lorder, as far as I know, but you can still find it in BSD
 distributions.
 
@@ -4980,7 +4980,7 @@ archives now contain a symbol table (traditionally built by ‘ranlib’,
 now generally built by ‘ar’ itself), and the Unix linker uses the symbol
 table to effectively make multiple passes over an archive file.
 
-   Anyhow, that’s where tsort came from.  To solve an old problem with
+   Anyhow, that's where tsort came from.  To solve an old problem with
 the way the linker handled archive files, which has since been solved in
 different ways.
 
@@ -5210,7 +5210,7 @@ input.  FILE1 and FILE2 should be sorted on the join fields.
      a 1 X
      e 5 Y
 
-‘join’’s default behavior (when no options are given):
+‘join’'s default behavior (when no options are given):
    • the join field is the first field in each line;
    • fields in the input are separated by one or more blanks, with
      leading blanks on the line ignored;
@@ -5223,7 +5223,7 @@ input.  FILE1 and FILE2 should be sorted on the join fields.
 * General options in join::      Options which affect general program behavior.
 * Sorting files for join::       Using ‘sort’ before ‘join’.
 * Working with fields::          Joining on different fields.
-* Paired and unpaired lines::    Controlling ‘join’’s field matching.
+* Paired and unpaired lines::    Controlling ‘join’'s field matching.
 * Header lines::                 Working with header lines in files.
 * Set operations::               Union, Intersection and Difference of files.
 
@@ -5302,8 +5302,8 @@ options::.
      example, the commands ‘join -o 1.2,2.2’ and ‘join -o '1.2 2.2'’ are
      equivalent.
 
-     All output lines – including those printed because of any ‘-a’ or
-     ‘-v’ option – are subject to the specified FIELD-LIST.
+     All output lines - including those printed because of any ‘-a’ or
+     ‘-v’ option - are subject to the specified FIELD-LIST.
 
 ‘-t CHAR’
      Use character CHAR as the input and output field separator.  Treat
@@ -5434,13 +5434,13 @@ shells, use a literal tab.
 
 File: coreutils.info,  Node: Paired and unpaired lines,  Next: Header lines,  Prev: Working with fields,  Up: join invocation
 
-8.3.4 Controlling ‘join’’s field matching
+8.3.4 Controlling ‘join’'s field matching
 -----------------------------------------
 
 In this section the ‘sort’ commands are omitted for brevity.  Sorting
 the files before joining is still required.
 
-   ‘join’’s default behavior is to print only lines common to both input
+   ‘join’'s default behavior is to print only lines common to both input
 files.  Use ‘-a’ and ‘-v’ to print unpairable lines from one or both
 files.
 
@@ -5753,7 +5753,7 @@ Character classes
      if the corresponding character class (‘upper’ and ‘lower’,
      respectively) is specified in the same relative position in
      STRING1.  Doing this specifies case conversion.  Except for case
-     conversion, a class’s characters appear in no particular order.
+     conversion, a class's characters appear in no particular order.
      The class names are given below; an error results when an invalid
      class name is given.
 
@@ -5792,7 +5792,7 @@ Equivalence classes
      Although equivalence classes are intended to support non-English
      alphabets, there seems to be no standard way to define them or
      determine their contents.  Therefore, they are not fully
-     implemented in GNU ‘tr’; each character’s equivalence class
+     implemented in GNU ‘tr’; each character's equivalence class
      consists only of that character, which is of no particular use.
 
 
@@ -5890,10 +5890,10 @@ any remaining characters using ARRAY2.
           tr -s '\n'
 
    • Find doubled occurrences of words in a document.  For example,
-     people often write “the the” with the repeated words separated by a
+     people often write "the the" with the repeated words separated by a
      newline.  The Bourne shell script below works first by converting
      each sequence of punctuation and blank characters to a single
-     newline.  That puts each “word” on a line by itself.  Next it maps
+     newline.  That puts each "word" on a line by itself.  Next it maps
      all uppercase characters to lower case, and finally it runs ‘uniq’
      with the ‘-d’ option to print out only the words that were
      repeated.
@@ -5914,7 +5914,7 @@ any remaining characters using ARRAY2.
      above but also removing all ‘-’ characters, we might try ‘tr -d
      -axM’, but that would fail because ‘tr’ would try to interpret ‘-a’
      as a command-line option.  Alternatively, we could try putting the
-     hyphen inside the string, ‘tr -d a-xM’, but that wouldn’t work
+     hyphen inside the string, ‘tr -d a-xM’, but that wouldn't work
      either because it would make ‘tr’ interpret ‘a-x’ as the range of
      characters ‘a’...‘x’ rather than the three.  One way to solve the
      problem is to put the hyphen at the end of the list of characters:
@@ -6077,7 +6077,7 @@ and control characters are output as-is.
 options over the years.  They are described in the subsections below;
 within each section, options are listed alphabetically (ignoring case).
 The division of options into the subsections is not absolute, since some
-options affect more than one aspect of ‘ls’’s operation.
+options affect more than one aspect of ‘ls’'s operation.
 
    Exit status:
 
@@ -6104,7 +6104,7 @@ options affect more than one aspect of ‘ls’’s operation.
 
    (1) If you use a non-POSIX locale (e.g., by setting ‘LC_ALL’ to
 ‘en_US’), then ‘ls’ may produce output that is sorted differently than
-you’re accustomed to.  In that case, set the ‘LC_ALL’ environment
+you're accustomed to.  In that case, set the ‘LC_ALL’ environment
 variable to ‘C’.
 
 
@@ -6210,7 +6210,7 @@ These options affect the information that ‘ls’ displays.  By default,
 only file names are shown.
 
 ‘--author’
-     In long format, list each file’s author.  In GNU/Hurd, file authors
+     In long format, list each file's author.  In GNU/Hurd, file authors
      can differ from their owners, but in other operating systems the
      two are the same.
 
@@ -6364,7 +6364,7 @@ only file names are shown.
      ‘c’
           character special file
      ‘C’
-          high performance (“contiguous data”) file
+          high performance ("contiguous data") file
      ‘d’
           directory
      ‘D’
@@ -6372,7 +6372,7 @@ only file names are shown.
      ‘l’
           symbolic link
      ‘M’
-          off-line (“migrated”) file (Cray DMF)
+          off-line ("migrated") file (Cray DMF)
      ‘n’
           network special file (HP-UX)
      ‘p’
@@ -6438,7 +6438,7 @@ only file names are shown.
 ‘--size’
      Print the file system allocation of each file to the left of the
      file name.  This is the amount of file system space used by the
-     file, which is usually a bit more than the file’s size, but it can
+     file, which is usually a bit more than the file's size, but it can
      be less if the file has holes.
 
      Normally the allocation is printed in units of 1024 bytes, but this
@@ -6488,7 +6488,7 @@ order).
 
 ‘-r’
 ‘--reverse’
-     Reverse whatever the sorting method is – e.g., list files in
+     Reverse whatever the sorting method is - e.g., list files in
      reverse alphabetical order, youngest first, smallest first, or
      whatever.  This option has no effect when ‘--sort=none’ (‘-U’) is
      in effect.
@@ -6585,7 +6585,7 @@ These options affect the appearance of the overall output.
         • always - Always use color.
      Specifying ‘--color’ and no WHEN is equivalent to ‘--color=always’.
      If piping a colored listing through a pager like ‘less’, use the
-     pager’s ‘-R’ option to pass the color codes to the terminal.
+     pager's ‘-R’ option to pass the color codes to the terminal.
 
      Using the ‘--color’ option may incur a noticeable performance
      penalty when run in a large directory, because the default settings
@@ -6688,7 +6688,7 @@ These options affect the appearance of the overall output.
      issue by using the ‘-T0’ option or put ‘TABSIZE=0’ in your
      environment, to tell ‘ls’ to align using spaces, not tabs.
 
-     If you set a terminal’s hardware tabs to anything other than the
+     If you set a terminal's hardware tabs to anything other than the
      default, you should also use a ‘--tabsize’ option or ‘TABSIZE’
      environment variable either to match the hardware tabs, or to
      disable the use of hardware tabs.  Otherwise, the output of ‘ls’
@@ -6746,7 +6746,7 @@ not set.  *Note Specifying the Time Zone with ‘TZ’: (libc)TZ Variable.
           the format argument of ‘date’ (*note date invocation::).  For
           example, ‘--time-style="+%Y-%m-%d %H:%M:%S"’ causes ‘ls’ to
           list timestamps like ‘2020-03-30 23:45:56’.  As with ‘date’,
-          FORMAT’s interpretation is affected by the ‘LC_TIME’ locale
+          FORMAT's interpretation is affected by the ‘LC_TIME’ locale
           category.
 
           If FORMAT contains two format strings separated by a newline,
@@ -6762,7 +6762,7 @@ not set.  *Note Specifying the Time Zone with ‘TZ’: (libc)TZ Variable.
 
           This is useful because the time output includes all the
           information that is available from the operating system.  For
-          example, this can help explain ‘make’’s behavior, since GNU
+          example, this can help explain ‘make’'s behavior, since GNU
           ‘make’ uses the full timestamp to determine whether a file is
           out of date.
 
@@ -7026,7 +7026,7 @@ or copy arbitrarily many files to a destination directory.  Synopses:
    • If the ‘--target-directory’ (‘-t’) option is given, or failing that
      if the last file is a directory and the ‘--no-target-directory’
      (‘-T’) option is not given, ‘cp’ copies each SOURCE file to the
-     specified directory, using the SOURCEs’ names.
+     specified directory, using the SOURCEs' names.
 
    Generally, files are written just as they are read.  For exceptions,
 see the ‘--sparse’ option below.
@@ -7217,7 +7217,7 @@ options::.
           number.  Then the ‘--preserve=links’ option also implied by
           ‘-a’ will preserve the perceived hard link.
 
-          Here is a similar example that exercises ‘cp’’s ‘-L’ option:
+          Here is a similar example that exercises ‘cp’'s ‘-L’ option:
                $ mkdir b c; (cd b; : > a; ln -s a b); cp -aL b c; ls -i1 c/b
                74163295 a
                74163295 b
@@ -7236,7 +7236,7 @@ options::.
           Preserve all file attributes.  Equivalent to specifying all of
           the above, but with the difference that failure to preserve
           SELinux security context or extended attributes does not
-          change ‘cp’’s exit status.  In contrast to ‘-a’, all but
+          change ‘cp’'s exit status.  In contrast to ‘-a’, all but
           ‘Operation not supported’ warnings are output.
 
      Using ‘--preserve’ with no ATTRIBUTE_LIST is equivalent to
@@ -7312,7 +7312,7 @@ options::.
      (contrast with ‘-f’ above).
 
 ‘--sparse=WHEN’
-     A “sparse file” contains “holes” – a sequence of zero bytes that
+     A “sparse file” contains “holes” - a sequence of zero bytes that
      does not occupy any file system blocks; the ‘read’ system call
      reads these as zeros.  This can both save considerable space and
      increase speed, since many binary files contain lots of consecutive
@@ -7408,7 +7408,7 @@ options::.
 
      ‘older’
           This is the default operation when ‘--update’ is specified,
-          and results in files being replaced if they’re older than the
+          and results in files being replaced if they're older than the
           corresponding source file.
 
 ‘-v’
@@ -7498,7 +7498,7 @@ DD (data definition) statement of OS/360 JCL.
      Set both input and output block sizes to BYTES.  This makes ‘dd’
      read and write BYTES per block, overriding any ‘ibs’ and ‘obs’
      settings.  In addition, if no data-transforming ‘conv’ operand is
-     specified, input is copied to the output as soon as it’s read, even
+     specified, input is copied to the output as soon as it's read, even
      if it is smaller than the block size.
 
 ‘cbs=BYTES’
@@ -7637,7 +7637,7 @@ DD (data definition) statement of OS/360 JCL.
           bytes.  When used with ‘block’ or ‘unblock’, pad with spaces
           instead of zero bytes.
 
-     The following “conversions” are really file flags and don’t affect
+     The following "conversions" are really file flags and don't affect
      internal processing:
 
      ‘excl’
@@ -7759,7 +7759,7 @@ DD (data definition) statement of OS/360 JCL.
           Use non-blocking I/O.
 
      ‘noatime’
-          Do not update the file’s access timestamp.  *Note File
+          Do not update the file's access timestamp.  *Note File
           timestamps::.  Some older file systems silently ignore this
           flag, so it is a good idea to test it on your files before
           relying on it.
@@ -7813,7 +7813,7 @@ can be used more than once in a number.  Block sizes (i.e., specified by
 BYTES strings) must be nonzero.
 
    Any block size you specify via ‘bs=’, ‘ibs=’, ‘obs=’, ‘cbs=’ should
-not be too large – values larger than a few megabytes are generally
+not be too large - values larger than a few megabytes are generally
 wasteful or (as in the gigabyte..exabyte case) downright
 counterproductive or error-inducing.
 
@@ -7903,7 +7903,7 @@ possible, their owner and group.  Synopses:
    • If the ‘--target-directory’ (‘-t’) option is given, or failing that
      if the last file is a directory and the ‘--no-target-directory’
      (‘-T’) option is not given, ‘install’ copies each SOURCE file to
-     the specified directory, using the SOURCEs’ names.
+     the specified directory, using the SOURCEs' names.
 
    • If the ‘--directory’ (‘-d’) option is given, ‘install’ creates each
      DIRECTORY and any missing parent directories.  Parent directories
@@ -7935,7 +7935,7 @@ options::.
      all.  Note this option is best used in conjunction with ‘--user’,
      ‘--group’ and ‘--mode’ options, lest ‘install’ incorrectly
      determines the default attributes that installed files would have
-     (as it doesn’t consider setgid directories and POSIX default ACLs
+     (as it doesn't consider setgid directories and POSIX default ACLs
      for example).  This could result in redundant copies or attributes
      that are not reset to the correct defaults.
 
@@ -7961,7 +7961,7 @@ options::.
 ‘-g GROUP’
 ‘--group=GROUP’
      Set the group ownership of installed files or directories to GROUP.
-     The default is the process’s current group.  GROUP may be either a
+     The default is the process's current group.  GROUP may be either a
      group name or a numeric group ID.
 
 ‘-m MODE’
@@ -7970,7 +7970,7 @@ options::.
      which can be either an octal number, or a symbolic mode as in
      ‘chmod’, with ‘a=’ (no access allowed to anyone) as the point of
      departure (*note File permissions::).  The default mode is
-     ‘u=rwx,go=rx,a-s’ – read, write, and execute for the owner, read
+     ‘u=rwx,go=rx,a-s’ - read, write, and execute for the owner, read
      and execute for group and other, and with set-user-ID and
      set-group-ID disabled.  This default is not quite the same as
      ‘755’, since it disables instead of preserving set-user-ID and
@@ -8055,15 +8055,15 @@ File: coreutils.info,  Node: mv invocation,  Next: rm invocation,  Prev: install
    • If the ‘--target-directory’ (‘-t’) option is given, or failing that
      if the last file is a directory and the ‘--no-target-directory’
      (‘-T’) option is not given, ‘mv’ moves each SOURCE file to the
-     specified directory, using the SOURCEs’ names.
+     specified directory, using the SOURCEs' names.
 
    To move a file, ‘mv’ ordinarily simply renames it.  However, if
-renaming does not work because the destination’s file system differs,
+renaming does not work because the destination's file system differs,
 ‘mv’ falls back on copying as if by ‘cp -a’, then (assuming the copy
 succeeded) it removes the original.  If the copy fails, then ‘mv’
 removes any partially created copy in the destination.  If you were to
 copy three directories from one file system to another and the copy of
-the first directory succeeded, but the second didn’t, the first would be
+the first directory succeeded, but the second didn't, the first would be
 left on the destination file system and the second and third would be
 left on the original file system.
 
@@ -8154,7 +8154,7 @@ options::.
 
      ‘older’
           This is the default operation when ‘--update’ is specified,
-          and results in files being replaced if they’re older than the
+          and results in files being replaced if they're older than the
           corresponding source file.
 
 ‘-v’
@@ -8257,10 +8257,10 @@ options::.
      When removing a hierarchy recursively, do not remove any directory
      that is on a file system different from that of the corresponding
      command line argument.  This option is useful when removing a build
-     “chroot” hierarchy, which normally contains no valuable data.
+     "chroot" hierarchy, which normally contains no valuable data.
      However, it is not uncommon to bind-mount ‘/home’ into such a
-     hierarchy, to make it easier to use one’s start-up file.  The catch
-     is that it’s easy to forget to unmount ‘/home’.  Then, when you use
+     hierarchy, to make it easier to use one's start-up file.  The catch
+     is that it's easy to forget to unmount ‘/home’.  Then, when you use
      ‘rm -rf’ to remove your normally throw-away chroot, that command
      will remove everything under ‘/home’, too.  Use the
      ‘--one-file-system’ option, and it will diagnose and skip
@@ -8302,7 +8302,7 @@ or:
 
      rm ./-f
 
-   The Unix ‘rm’ program’s use of a single ‘-’ for this purpose predates
+   The Unix ‘rm’ program's use of a single ‘-’ for this purpose predates
 the development of the ‘getopt’ standard syntax.
 
    An exit status of zero indicates success, and a nonzero value
@@ -8318,10 +8318,10 @@ File: coreutils.info,  Node: shred invocation,  Prev: rm invocation,  Up: Basic 
 forensics from recovering the data.
 
    Ordinarily when you remove a file (*note rm invocation::), its data
-and metadata are not actually destroyed.  Only the file’s directory
-entry is removed, and the file’s storage is reclaimed only when no
+and metadata are not actually destroyed.  Only the file's directory
+entry is removed, and the file's storage is reclaimed only when no
 process has the file open and no other directory entry links to the
-file.  And even if file’s data and metadata’s storage space is freed for
+file.  And even if file's data and metadata's storage space is freed for
 further reuse, there are undelete utilities that will attempt to
 reconstruct the file from the data in freed storage, and that can bring
 the file back if the storage was not rewritten.
@@ -8335,7 +8335,7 @@ device.  So if you have sensitive data, you may want to be sure that
 recovery is not possible by plausible attacks like these.
 
    The best way to remove something irretrievably is to destroy the
-media it’s on with acid, melt it down, or the like.  For cheap removable
+media it's on with acid, melt it down, or the like.  For cheap removable
 media this is often the preferred method.  However, some storage devices
 are expensive or are harder to destroy, so the ‘shred’ utility tries to
 achieve a similar effect non-destructively, by overwriting the file with
@@ -8354,7 +8354,7 @@ designs do not satisfy this assumption.  Exceptions include:
    • File systems that write redundant data and carry on even if some
      writes fail, such as RAID-based file systems.
 
-   • File systems that make snapshots, such as Network Appliance’s NFS
+   • File systems that make snapshots, such as Network Appliance's NFS
      server.
 
    • File systems that cache in temporary locations, such as NFS version
@@ -8384,20 +8384,20 @@ the following:
 
    • Solid-state storage devices (SSDs) typically do wear leveling to
      prolong service life, and this means writes are distributed to
-     other blocks by the hardware, so “overwritten” data blocks are
+     other blocks by the hardware, so "overwritten" data blocks are
      still present in the underlying device.
 
    • Most storage devices map out bad blocks invisibly to the
      application; if the bad blocks contain sensitive data, ‘shred’
-     won’t be able to destroy it.
+     won't be able to destroy it.
 
    • With some obsolete storage technologies, it may be possible to take
      (say) a floppy disk back to a laboratory and use a lot of sensitive
-     (and expensive) equipment to look for the faint “echoes” of the
+     (and expensive) equipment to look for the faint "echoes" of the
      original data underneath the overwritten data.  With these older
-     technologies, if the file has been overwritten only once, it’s
+     technologies, if the file has been overwritten only once, it's
      reputedly not even that hard.  Luckily, this kind of data recovery
-     has become difficult, and there is no public evidence that today’s
+     has become difficult, and there is no public evidence that today's
      higher-density storage devices can be analyzed in this way.
 
      The ‘shred’ command can use many overwrite passes, with data
@@ -8405,11 +8405,11 @@ the following:
      default the patterns are designed for best effect on hard drives
      using now-obsolete technology; for newer devices, a single pass
      should suffice.  For more details, see the source code and Peter
-     Gutmann’s paper ‘Secure Deletion of Data from Magnetic and
+     Gutmann's paper ‘Secure Deletion of Data from Magnetic and
      Solid-State Memory’
      (https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html), from
      the proceedings of the Sixth USENIX Security Symposium (San Jose,
-     California, July 22–25, 1996).
+     California, July 22-25, 1996).
 
    ‘shred’ makes no attempt to detect or report these problems, just as
 it makes no attempt to do anything about backups.  However, since it is
@@ -8436,7 +8436,7 @@ options::.
 ‘-n NUMBER’
 ‘--iterations=NUMBER’
      By default, ‘shred’ uses 3 passes of overwrite.  You can reduce
-     this to save time, or increase it if you think it’s appropriate.
+     this to save time, or increase it if you think it's appropriate.
      After 25 passes all of the internal overwrite patterns will have
      been used at least once.
 
@@ -8486,13 +8486,13 @@ options::.
      Normally, the last pass that ‘shred’ writes is made up of random
      data.  If this would be conspicuous on your storage device (for
      example, because it looks like encrypted data), or you just think
-     it’s tidier, the ‘--zero’ option adds an additional overwrite pass
+     it's tidier, the ‘--zero’ option adds an additional overwrite pass
      with all zero bits.  This is in addition to the number of passes
      specified by the ‘--iterations’ option.
 
    You might use the following command to erase the file system you
 created on a USB flash drive.  This command typically takes several
-minutes, depending on the drive’s size and write speed.  On modern
+minutes, depending on the drive's size and write speed.  On modern
 storage devices a single pass should be adequate, and will take one
 third the time of the default three-pass approach.
 
@@ -8505,7 +8505,7 @@ you could give a command like the following.
      shred -v -n1 /dev/sda5
 
    To be on the safe side, use at least one pass that overwrites using
-pseudo-random data.  I.e., don’t be tempted to use ‘-n0 --zero’, in case
+pseudo-random data.  I.e., don't be tempted to use ‘-n0 --zero’, in case
 some device controller optimizes the process of writing blocks of all
 zeros, and thereby does not clear all bytes in a block.  Some SSDs may
 do just that.
@@ -8541,10 +8541,10 @@ This chapter describes commands which create special types of files (and
 types than others, not _everything_ can be treated only as the
 undifferentiated byte stream of “normal files”.  For example, when a
 file is created or removed, the system must record this information,
-which it does in a “directory” – a special type of file.  Although you
-can read directories as normal files, if you’re curious, in order for
+which it does in a “directory” - a special type of file.  Although you
+can read directories as normal files, if you're curious, in order for
 the system to do its job it must impose a structure, a certain order, on
-the bytes of the file.  Thus it is a “special” type of file.
+the bytes of the file.  Thus it is a "special" type of file.
 
    Besides directories, other special file types include named pipes
 (FIFOs), symbolic links, sockets, and so-called “special files”.
@@ -8613,7 +8613,7 @@ the ‘-s’ option, it makes symbolic (or “soft”) links.  Synopses:
    • If the ‘--target-directory’ (‘-t’) option is given, or failing that
      if the last file is a directory and the ‘--no-target-directory’
      (‘-T’) option is not given, ‘ln’ creates a link to each TARGET file
-     in the specified directory, using the TARGETs’ names.
+     in the specified directory, using the TARGETs' names.
 
    Normally ‘ln’ does not replace existing files.  Use the ‘--force’
 (‘-f’) option to replace them unconditionally, the ‘--interactive’
@@ -8624,7 +8624,7 @@ extension to POSIX.
 
    A “hard link” is another name for an existing file; the link and the
 original are indistinguishable.  Technically speaking, they share the
-same inode, and the inode contains all the information about a file –
+same inode, and the inode contains all the information about a file -
 indeed, it is not incorrect to say that the inode _is_ the file.  Most
 systems prohibit making a hard link to a directory; on those where it is
 allowed, only the super-user can do so (and with caution, since creating
@@ -8705,10 +8705,10 @@ options::.
      When the destination is an actual directory (not a symlink to one),
      there is no ambiguity.  The link is created in that directory.  But
      when the specified destination is a symlink to a directory, there
-     are two ways to treat the user’s request.  ‘ln’ can treat the
+     are two ways to treat the user's request.  ‘ln’ can treat the
      destination just as it would a normal directory and create the link
      in it.  On the other hand, the destination can be viewed as a
-     non-directory – as the symlink itself.  In that case, ‘ln’ must
+     non-directory - as the symlink itself.  In that case, ‘ln’ must
      delete or backup that symlink before creating the new link.  The
      default is to treat a destination that is a symlink to a directory
      just like a directory.
@@ -8854,9 +8854,9 @@ options::.
      permission bits of any newly-created parent directories.  To
      control these bits, set the umask before invoking ‘mkdir’.  For
      example, if the shell command ‘(umask u=rwx,go=rx; mkdir -p P/Q)’
-     creates the parent ‘P’ it sets the parent’s file permission bits to
+     creates the parent ‘P’ it sets the parent's file permission bits to
      ‘u=rwx,go=rx’.  (The umask must include ‘u=wx’ for this method to
-     work.)  To set a parent’s special mode bits as well, you can invoke
+     work.)  To set a parent's special mode bits as well, you can invoke
      ‘chmod’ after ‘mkdir’.  *Note Directory Setuid and Setgid::, for
      how the set-user-ID and set-group-ID bits of newly-created parent
      directories are inherited.
@@ -8927,13 +8927,13 @@ with the specified name.  Synopsis:
 
      mknod [OPTION]... NAME TYPE [MAJOR MINOR]
 
-   Unlike the phrase “special file type” above, the term “special file”
+   Unlike the phrase "special file type" above, the term “special file”
 has a technical meaning on Unix: something that can generate or receive
 data.  Usually this corresponds to a physical piece of hardware, e.g., a
 printer or a flash drive.  (These files are typically created at
 system-configuration time.)  The ‘mknod’ command is what creates files
 of this type.  Such devices can be read either a character at a time or
-a “block” (many characters) at a time, hence we say there are “block
+a "block" (many characters) at a time, hence we say there are “block
 special” files and “character special” files.
 
    Due to shell aliases and built-in ‘mknod’ functions, using an
@@ -9140,7 +9140,7 @@ A file is not merely its contents, a name, and a file type (*note
 Special file types::).  A file also has an owner (a user ID), a group (a
 group ID), permissions (what the owner can do with the file, what people
 in the group can do, and what everyone else can do), various timestamps,
-and other information.  Collectively, we call these a file’s
+and other information.  Collectively, we call these a file's
 “attributes”.
 
    These commands change file attributes.
@@ -9173,7 +9173,7 @@ Synopsis:
 
 OWNER
      If only an OWNER (a user name or numeric user ID) is given, that
-     user is made the owner of each given file, and the files’ group is
+     user is made the owner of each given file, and the files' group is
      not changed.
 
 OWNER‘:’GROUP
@@ -9183,7 +9183,7 @@ OWNER‘:’GROUP
 
 OWNER‘:’
      If a colon but no group name follows OWNER, that user is made the
-     owner of the files and the group of the files is changed to OWNER’s
+     owner of the files and the group of the files is changed to OWNER's
      login group.
 
 ‘:’GROUP
@@ -9236,17 +9236,17 @@ options::.
      changed.
 
 ‘--from=OLD-OWNER’
-     Change a FILE’s ownership only if it has current attributes
+     Change a FILE's ownership only if it has current attributes
      specified by OLD-OWNER.  OLD-OWNER has the same form as NEW-OWNER
      described above.  This option is useful primarily from a security
      standpoint in that it narrows considerably the window of potential
      abuse.  For example, to reflect a user ID numbering change for one
-     user’s files without an option like this, ‘root’ might run
+     user's files without an option like this, ‘root’ might run
 
           find / -owner OLDUSER -print0 | xargs -0 chown -h NEWUSER
 
      But that is dangerous because the interval between when the ‘find’
-     tests the existing file’s owner and when the ‘chown’ is actually
+     tests the existing file's owner and when the ‘chown’ is actually
      run may be quite large.  One way to narrow the gap would be to
      invoke chown for each file as it is found:
 
@@ -9477,8 +9477,8 @@ file, or a process with appropriate privileges, is permitted to change
 the file mode bits of a file.
 
    A successful use of ‘chmod’ clears the set-group-ID bit of a regular
-file if the file’s group ID does not match the user’s effective group ID
-or one of the user’s supplementary group IDs, unless the user has
+file if the file's group ID does not match the user's effective group ID
+or one of the user's supplementary group IDs, unless the user has
 appropriate privileges.  Additional restrictions may cause the
 set-user-ID and set-group-ID bits of MODE or REF_FILE to be ignored.
 This behavior depends on the policy and functionality of the underlying
@@ -9576,11 +9576,11 @@ systems have a further restriction: the user must own the files unless
 both the access and modification timestamps are being set to the current
 time.
 
-   The ‘touch’ command cannot set a file’s status change timestamp to a
-user-specified value, and cannot change the file’s birth time (if
+   The ‘touch’ command cannot set a file's status change timestamp to a
+user-specified value, and cannot change the file's birth time (if
 supported) at all.  Also, ‘touch’ has issues similar to those affecting
 all programs that update file timestamps.  For example, ‘touch’ may set
-a file’s timestamp to a value that differs slightly from the requested
+a file's timestamp to a value that differs slightly from the requested
 time.  *Note File timestamps::.
 
    Timestamps assume the time zone rules specified by the ‘TZ’
@@ -9639,7 +9639,7 @@ options::.
 ‘--reference=FILE’
      Use the times of the reference FILE instead of the current time.
      If this option is combined with the ‘--date=TIME’ (‘-d TIME’)
-     option, the reference FILE’s time is the origin for any relative
+     option, the reference FILE's time is the origin for any relative
      TIMEs given, but is otherwise ignored.  For example, ‘-r foo -d '-5
      seconds'’ specifies a timestamp equal to five seconds before the
      corresponding timestamp for ‘foo’.  If FILE is a symbolic link, the
@@ -9660,7 +9660,7 @@ syntax, as follows.  If no timestamp is given with any of the ‘-d’,
 ‘-r’, or ‘-t’ options, and if there are two or more FILEs and the first
 FILE is of the form ‘MMDDHHMM[YY]’ and this would be a valid argument to
 the ‘-t’ option (if the YY, if any, were moved to the front), and if the
-represented year is in the range 1969–1999, that argument is interpreted
+represented year is in the range 1969-1999, that argument is interpreted
 as the time for the other files instead of as a file name.  Although
 this obsolete behavior can be controlled with the ‘_POSIX2_VERSION’
 environment variable (*note Standards conformance::), portable scripts
@@ -9789,7 +9789,7 @@ options::.
      ‘-P’, and ‘-T’ is mutually exclusive.
 
      FIELD_LIST is a comma-separated list of columns to be included in
-     ‘df’’s output and therefore effectively controls the order of
+     ‘df’'s output and therefore effectively controls the order of
      output columns.  Each field can thus be used at the place of
      choice, but yet must only be used once.
 
@@ -9890,7 +9890,7 @@ options::.
 
 ‘-T’
 ‘--print-type’
-     Print each file system’s type.  The types printed here are the same
+     Print each file system's type.  The types printed here are the same
      ones you can include or exclude with ‘-t’ and ‘-x’.  The particular
      types printed are whatever is supported by the system.  Here are
      some of the common names (this list is certainly not exhaustive):
@@ -10104,25 +10104,25 @@ options::.
      smaller than or equal to that.
 
      Although GNU ‘find’ can be used to find files of a certain size,
-     ‘du’’s ‘--threshold’ option can be used to also filter directories
+     ‘du’'s ‘--threshold’ option can be used to also filter directories
      based on a given size.
 
      When combined with the ‘--apparent-size’ option, the ‘--threshold’
      option elides entries based on apparent size.  When combined with
      the ‘--inodes’ option, it elides entries based on inode counts.
 
-     Here’s how you would use ‘--threshold’ to find directories with a
+     Here's how you would use ‘--threshold’ to find directories with a
      size greater than or equal to 200 megabytes:
 
           du --threshold=200MB
 
-     Here’s how you would use ‘--threshold’ to find directories and
-     files – note the ‘-a’ – with an apparent size smaller than or equal
+     Here's how you would use ‘--threshold’ to find directories and
+     files - note the ‘-a’ - with an apparent size smaller than or equal
      to 500 bytes:
 
           du -a -t -500 --apparent-size
 
-     Here’s how you would use ‘--threshold’ to find directories on the
+     Here's how you would use ‘--threshold’ to find directories on the
      root file system with more than 20000 inodes used in the directory
      tree below:
 
@@ -10155,7 +10155,7 @@ options::.
           the format argument of ‘date’ (*note date invocation::).  For
           example, ‘--time-style="+%Y-%m-%d %H:%M:%S"’ causes ‘du’ to
           list timestamps like ‘2020-07-21 23:45:56’.  As with ‘date’,
-          FORMAT’s interpretation is affected by the ‘LC_TIME’ locale
+          FORMAT's interpretation is affected by the ‘LC_TIME’ locale
           category.
 
      ‘full-iso’
@@ -10208,7 +10208,7 @@ devices.  For example;
 
    • In file systems that use copy-on-write, if two distinct files share
      space the output of ‘du’ typically counts the space that would be
-     consumed if all files’ non-holes were rewritten, not the space
+     consumed if all files' non-holes were rewritten, not the space
      currently consumed.
 
    • In file systems that use compression, the operating system might
@@ -10289,7 +10289,7 @@ stat ...’) to avoid interference from the shell.
      Use FORMAT rather than the default format.  Like ‘--format’, but
      interpret backslash escapes, and do not output a mandatory trailing
      newline.  If you want a newline, include ‘\n’ in the FORMAT.
-     Here’s how you would use ‘--printf’ to print the device and inode
+     Here's how you would use ‘--printf’ to print the device and inode
      numbers of ‘/’ and ‘/usr’:
           $ stat --printf='%d:%i\n' / /usr
           2050:2
@@ -10314,42 +10314,42 @@ stat ...’) to avoid interference from the shell.
    The valid FORMAT directives for files with ‘--format’ and ‘--printf’
 are:
 
-   • %a – Permission bits in octal (note ‘#’ and ‘0’ printf flags)
-   • %A – Permission bits in symbolic form (similar to ‘ls -ld’)
-   • %b – Number of blocks allocated (see ‘%B’)
-   • %B – The size in bytes of each block reported by ‘%b’
-   • %C – The SELinux security context of a file, if available
-   • %d – Device number in decimal (st_dev)
-   • %D – Device number in hex (st_dev)
-   • %Hd – Major device number in decimal
-   • %Ld – Minor device number in decimal
-   • %f – Raw mode in hex
-   • %F – File type
-   • %g – Group ID of owner
-   • %G – Group name of owner
-   • %h – Number of hard links
-   • %i – Inode number
-   • %m – Mount point (See note below)
-   • %n – File name
-   • %N – Quoted file name with dereference if symbolic link (see below)
-   • %o – Optimal I/O transfer size hint
-   • %s – Total size, in bytes
-   • %r – Device type in decimal (st_rdev)
-   • %R – Device type in hex (st_rdev)
-   • %Hr – Major device type in decimal (see below)
-   • %Lr – Minor device type in decimal (see below)
-   • %t – Major device type in hex (see below)
-   • %T – Minor device type in hex (see below)
-   • %u – User ID of owner
-   • %U – User name of owner
-   • %w – Time of file birth, or ‘-’ if unknown
-   • %W – Time of file birth as seconds since Epoch, or ‘0’
-   • %x – Time of last access
-   • %X – Time of last access as seconds since Epoch
-   • %y – Time of last data modification
-   • %Y – Time of last data modification as seconds since Epoch
-   • %z – Time of last status change
-   • %Z – Time of last status change as seconds since Epoch
+   • %a - Permission bits in octal (note ‘#’ and ‘0’ printf flags)
+   • %A - Permission bits in symbolic form (similar to ‘ls -ld’)
+   • %b - Number of blocks allocated (see ‘%B’)
+   • %B - The size in bytes of each block reported by ‘%b’
+   • %C - The SELinux security context of a file, if available
+   • %d - Device number in decimal (st_dev)
+   • %D - Device number in hex (st_dev)
+   • %Hd - Major device number in decimal
+   • %Ld - Minor device number in decimal
+   • %f - Raw mode in hex
+   • %F - File type
+   • %g - Group ID of owner
+   • %G - Group name of owner
+   • %h - Number of hard links
+   • %i - Inode number
+   • %m - Mount point (See note below)
+   • %n - File name
+   • %N - Quoted file name with dereference if symbolic link (see below)
+   • %o - Optimal I/O transfer size hint
+   • %s - Total size, in bytes
+   • %r - Device type in decimal (st_rdev)
+   • %R - Device type in hex (st_rdev)
+   • %Hr - Major device type in decimal (see below)
+   • %Lr - Minor device type in decimal (see below)
+   • %t - Major device type in hex (see below)
+   • %T - Minor device type in hex (see below)
+   • %u - User ID of owner
+   • %U - User name of owner
+   • %w - Time of file birth, or ‘-’ if unknown
+   • %W - Time of file birth as seconds since Epoch, or ‘0’
+   • %x - Time of last access
+   • %X - Time of last access as seconds since Epoch
+   • %y - Time of last data modification
+   • %Y - Time of last data modification as seconds since Epoch
+   • %z - Time of last status change
+   • %Z - Time of last status change as seconds since Epoch
 
    The ‘%a’ format prints the octal mode, and so it is useful to control
 the zero padding of the output with the ‘#’ and ‘0’ printf flags.  For
@@ -10434,18 +10434,18 @@ except that:
    When listing file system information (‘--file-system’ (‘-f’)), you
 must use a different set of FORMAT directives:
 
-   • %a – Free blocks available to non-super-user
-   • %b – Total data blocks in file system
-   • %c – Total file nodes in file system
-   • %d – Free file nodes in file system
-   • %f – Free blocks in file system
-   • %i – File System ID in hex
-   • %l – Maximum length of file names
-   • %n – File name
-   • %s – Block size (for faster transfers)
-   • %S – Fundamental block size (for block counts)
-   • %t – Type in hex
-   • %T – Type in human readable form
+   • %a - Free blocks available to non-super-user
+   • %b - Total data blocks in file system
+   • %c - Total file nodes in file system
+   • %d - Free file nodes in file system
+   • %f - Free blocks in file system
+   • %i - File System ID in hex
+   • %l - Maximum length of file names
+   • %n - File name
+   • %s - Block size (for faster transfers)
+   • %S - Fundamental block size (for block counts)
+   • %t - Type in hex
+   • %T - Type in human readable form
 
    Timestamps are listed according to the time zone rules specified by
 the ‘TZ’ environment variable, or by the system default rules if ‘TZ’ is
@@ -10650,7 +10650,7 @@ STRING.
      given takes effect.
 
    If the ‘POSIXLY_CORRECT’ environment variable is set, then when
-‘echo’’s first argument is not ‘-n’ it outputs option-like arguments
+‘echo’'s first argument is not ‘-n’ it outputs option-like arguments
 instead of treating them as options.  For example, ‘echo -ne hello’
 outputs ‘-ne hello’ instead of plain ‘hello’.  Also backslash escapes
 are always enabled.  Note to echo the string ‘-n’, one of the characters
@@ -10768,10 +10768,10 @@ will be output correctly in all Chinese locales (GB2312, BIG5, UTF-8,
 etc).
 
    Note that in these examples, the ‘printf’ command has been invoked
-via ‘env’ to ensure that we run the program found via your shell’s
+via ‘env’ to ensure that we run the program found via your shell's
 search path, and not a shell alias or a built-in function.
 
-   For larger strings, you don’t need to look up the hexadecimal code
+   For larger strings, you don't need to look up the hexadecimal code
 values of each character one by one.  ASCII characters mixed with \u
 escape sequences is also known as the JAVA source file encoding.  You
 can use GNU recode 3.5c (or newer) to convert strings to this encoding.
@@ -10833,7 +10833,7 @@ File: coreutils.info,  Node: false invocation,  Next: true invocation,  Up: Cond
 ‘false’ does nothing except return an exit status of 1, meaning
 “failure”.  It can be used as a place holder in shell scripts where an
 unsuccessful command is needed.  In most modern shells, ‘false’ is a
-built-in command, so when you use ‘false’ in a script, you’re probably
+built-in command, so when you use ‘false’ in a script, you're probably
 using the built-in command, not the one documented here.
 
    ‘false’ honors the ‘--help’ and ‘--version’ options.
@@ -10858,7 +10858,7 @@ File: coreutils.info,  Node: true invocation,  Next: test invocation,  Prev: fal
 “success”.  It can be used as a place holder in shell scripts where a
 successful command is needed, although the shell built-in command ‘:’
 (colon) may do the same thing faster.  In most modern shells, ‘true’ is
-a built-in command, so when you use ‘true’ in a script, you’re probably
+a built-in command, so when you use ‘true’ in a script, you're probably
 using the built-in command, not the one documented here.
 
    ‘true’ honors the ‘--help’ and ‘--version’ options.
@@ -10939,7 +10939,7 @@ File: coreutils.info,  Node: File type tests,  Next: Access permission tests,  U
 16.3.1 File type tests
 ----------------------
 
-These options test for particular types of files.  (Everything’s a file,
+These options test for particular types of files.  (Everything's a file,
 but not all files are the same!)
 
 ‘-b FILE’
@@ -11098,7 +11098,7 @@ File: coreutils.info,  Node: Connectives for test,  Prev: Numeric tests,  Up: te
 16.3.6 Connectives for ‘test’
 -----------------------------
 
-Note it’s preferred to use shell logical primitives rather than these
+Note it's preferred to use shell logical primitives rather than these
 logical connectives internal to ‘test’, because an expression may become
 ambiguous depending on the expansion of its parameters.
 
@@ -11144,7 +11144,7 @@ depending on the operation being applied to it.
    Strings are not quoted for ‘expr’ itself, though you may need to
 quote them to protect characters with special meaning to the shell,
 e.g., spaces.  However, regardless of whether it is quoted, a string
-operand should not be a parenthesis or any of ‘expr’’s operators like
+operand should not be a parenthesis or any of ‘expr’'s operators like
 ‘+’, so you cannot safely pass an arbitrary string ‘$str’ to expr merely
 by quoting it to the shell.  One way to work around this is to use the
 GNU extension ‘+’, (e.g., ‘+ "$str" = foo’); a more portable way is to
@@ -11152,7 +11152,7 @@ use ‘" $str"’ and to adjust the rest of the expression to take the
 leading space into account (e.g., ‘" $str" = " foo"’).
 
    You should not pass a negative integer or a string with leading ‘-’
-as ‘expr’’s first argument, as it might be misinterpreted as an option;
+as ‘expr’'s first argument, as it might be misinterpreted as an option;
 this can be avoided by parenthesization.  Also, portable scripts should
 not use a string operand that happens to take the form of an integer;
 this can be worked around by inserting leading spaces as mentioned
@@ -11329,10 +11329,10 @@ File: coreutils.info,  Node: Redirection,  Next: File name manipulation,  Prev: 
 17 Redirection
 **************
 
-Unix shells commonly provide several forms of “redirection” – ways to
+Unix shells commonly provide several forms of “redirection” - ways to
 change the input source or output destination of a command.  But one
 useful redirection is performed by a separate command, not by the shell;
-it’s described here.
+it's described here.
 
 * Menu:
 
@@ -11354,7 +11354,7 @@ send some data down a pipe, but also to save a copy.  Synopsis:
 a file being written to already exists, the data it previously contained
 is overwritten unless the ‘-a’ option is used.
 
-   In previous versions of GNU Coreutils (5.3.0–8.23), a FILE of ‘-’
+   In previous versions of GNU Coreutils (5.3.0-8.23), a FILE of ‘-’
 caused ‘tee’ to send another copy of input to standard output.  However,
 as the interleaved output was not very useful, ‘tee’ now conforms to
 POSIX and treats ‘-’ as a file name.
@@ -11416,7 +11416,7 @@ Perhaps even more importantly, the above requires reading the DVD image
 a second time (the first was from the network).
 
    The efficient way to do it is to interleave the download and SHA1
-computation.  Then, you’ll get the checksum for free, because the entire
+computation.  Then, you'll get the checksum for free, because the entire
 process parallelizes so well:
 
      # slightly contrived, to demonstrate process substitution
@@ -11458,11 +11458,11 @@ substitution is required:
 copy of the contents of a pipe.  Consider a tool to graphically
 summarize file system usage data from ‘du -ak’.  For a large hierarchy,
 ‘du -ak’ can run for a long time, and can easily produce terabytes of
-data, so you won’t want to rerun the command unnecessarily.  Nor will
+data, so you won't want to rerun the command unnecessarily.  Nor will
 you want to save the uncompressed output.
 
-   Doing it the inefficient way, you can’t even start the GUI until
-after you’ve compressed all of the ‘du’ output:
+   Doing it the inefficient way, you can't even start the GUI until
+after you've compressed all of the ‘du’ output:
 
      du -ak | gzip -9 > /tmp/du.gz
      gzip -d /tmp/du.gz | checkspace -a
@@ -11495,8 +11495,8 @@ compression programs in parallel:
        | bzip2 -9 -c > your-pkg-M.N.tar.bz2
 
    If you want to further process the output from process substitutions,
-and those processes write atomically (i.e., write less than the system’s
-PIPE_BUF size at a time), that’s possible with a construct like:
+and those processes write atomically (i.e., write less than the system's
+PIPE_BUF size at a time), that's possible with a construct like:
 
      tardir=your-pkg-M.N
      tar chof - "$tardir" \
@@ -11653,7 +11653,7 @@ conditions is true:
   2. The length of NAME is larger than the maximum supported by the
      operating system.
   3. The length of one component of NAME is longer than its file
-     system’s maximum.
+     system's maximum.
 
    A nonexistent NAME is not an error, so long as a file with that name
 could be created under the above conditions.
@@ -11739,7 +11739,7 @@ will most likely get different file names):
           $ mktemp file-XXXX-XXXX.txt
           file-XXXX-eI9L.txt
 
-   • Create a secure fifo relative to the user’s choice of ‘TMPDIR’, but
+   • Create a secure fifo relative to the user's choice of ‘TMPDIR’, but
      falling back to the current directory rather than ‘/tmp’.  Note
      that ‘mktemp’ does not create fifos, but can create a secure
      directory in which the fifo can live.  Exit the shell if the
@@ -11834,7 +11834,7 @@ of the specified files must exist.  Synopsis:
 
    The file name canonicalization functionality overlaps with that of
 the ‘readlink’ command.  This is the preferred command for
-canonicalization as it’s a more suitable and standard name.  In addition
+canonicalization as it's a more suitable and standard name.  In addition
 this command supports relative file name processing functionality.
 
    The program accepts the following options.  Also see *note Common
@@ -11997,7 +11997,7 @@ options::.
 ‘-P’
 ‘--physical’
      Print a fully resolved name for the current directory.  That is,
-     all components of the printed name will be actual directory names –
+     all components of the printed name will be actual directory names -
      none will be symbolic links.
 
    If ‘-L’ and ‘-P’ are both given, the last one takes precedence.  If
@@ -12058,14 +12058,14 @@ options::.
      This option may not be used in combination with any line settings.
 
    Many settings can be turned off by preceding them with a ‘-’.  Such
-arguments are marked below with “May be negated” in their description.
+arguments are marked below with "May be negated" in their description.
 The descriptions themselves refer to the positive case, that is, when
 _not_ negated (unless stated otherwise, of course).
 
    Some settings are not available on all POSIX systems, since they use
-extensions.  Such arguments are marked below with “Non-POSIX” in their
+extensions.  Such arguments are marked below with "Non-POSIX" in their
 description.  On non-POSIX systems, those or other settings also may not
-be available, but it’s not feasible to document all the variations: just
+be available, but it's not feasible to document all the variations: just
 try it and see.
 
    ‘stty’ is installed only on platforms with the POSIX terminal
@@ -12414,7 +12414,7 @@ File: coreutils.info,  Node: Characters,  Next: Special,  Prev: Combination,  Up
 19.2.6 Special characters
 -------------------------
 
-The special characters’ default values vary from system to system.  They
+The special characters' default values vary from system to system.  They
 are set with the syntax ‘name value’, where the names are listed below
 and the value can be given either literally, in hat notation (‘^C’), or
 as an integer which may start with ‘0x’ to indicate hexadecimal, ‘0’ to
@@ -12520,7 +12520,7 @@ File: coreutils.info,  Node: Special,  Prev: Characters,  Up: stty invocation
 
 ‘size’
      Print the number of rows and columns that the kernel thinks the
-     terminal has.  (Systems that don’t support rows and columns in the
+     terminal has.  (Systems that don't support rows and columns in the
      kernel typically use the environment variables ‘LINES’ and
      ‘COLUMNS’ instead; however, GNU ‘stty’ does not know anything about
      them.)  Non-POSIX.
@@ -12667,7 +12667,7 @@ Also see *note Common options::.
 ‘-Z’
 ‘--context’
      Print only the security context of the process, which is generally
-     the user’s security context inherited from the parent process.  If
+     the user's security context inherited from the parent process.  If
      neither SELinux or SMACK is enabled then print a warning and set
      the exit status to 1.
 
@@ -12699,7 +12699,7 @@ File: coreutils.info,  Node: logname invocation,  Next: whoami invocation,  Prev
 20.2 ‘logname’: Print current login name
 ========================================
 
-‘logname’ prints the calling user’s name, as found in a
+‘logname’ prints the calling user's name, as found in a
 system-maintained file (often ‘/var/run/utmp’ or ‘/etc/utmp’), and exits
 with a status of 0.  If there is no entry for the calling process,
 ‘logname’ prints an error message and exits with a status of 1.
@@ -12734,7 +12734,7 @@ File: coreutils.info,  Node: groups invocation,  Next: users invocation,  Prev: 
 ‘groups’ prints the names of the primary and any supplementary groups
 for each given USERNAME, or the current process if no names are given.
 If more than one name is given, the name of each user is printed before
-the list of that user’s groups and the user name is separated from the
+the list of that user's groups and the user name is separated from the
 group list by a colon.  Synopsis:
 
      groups [USERNAME]...
@@ -12763,7 +12763,7 @@ File: coreutils.info,  Node: users invocation,  Next: who invocation,  Prev: gro
 ‘users’ prints on a single line a blank-separated list of user names of
 users currently logged in to the current host.  Each user name
 corresponds to a login session, so if a user has more than one login
-session, that user’s name will appear the same number of times in the
+session, that user's name will appear the same number of times in the
 output.  Synopsis:
 
      users [FILE]
@@ -12877,7 +12877,7 @@ options::.
 ‘--mesg’
 ‘--message’
 ‘--writable’
-     After each login name print a character indicating the user’s
+     After each login name print a character indicating the user's
      message status:
 
           ‘+’ allowing ‘write’ messages
@@ -12988,12 +12988,12 @@ File: coreutils.info,  Node: Time conversion specifiers,  Next: Date conversion 
 ‘%N’
      nanoseconds (‘000000000’...‘999999999’).  This is a GNU extension.
 ‘%p’
-     locale’s equivalent of either ‘AM’ or ‘PM’; blank in many locales.
+     locale's equivalent of either ‘AM’ or ‘PM’; blank in many locales.
      Noon is treated as ‘PM’ and midnight as ‘AM’.
 ‘%P’
      like ‘%p’, except lower case.  This is a GNU extension.
 ‘%r’
-     locale’s 12-hour clock time (e.g., ‘11:11:04 PM’)
+     locale's 12-hour clock time (e.g., ‘11:11:04 PM’)
 ‘%R’
      24-hour hour and minute.  Same as ‘%H:%M’.
 ‘%s’
@@ -13006,7 +13006,7 @@ File: coreutils.info,  Node: Time conversion specifiers,  Next: Date conversion 
 ‘%T’
      24-hour hour, minute, and second.  Same as ‘%H:%M:%S’.
 ‘%X’
-     locale’s time representation (e.g., ‘23:13:48’)
+     locale's time representation (e.g., ‘23:13:48’)
 ‘%z’
      Four-digit numeric time zone, e.g., ‘-0600’ or ‘+0530’, or ‘-0000’
      if no time zone is determinable.  This value reflects the numeric
@@ -13039,15 +13039,15 @@ File: coreutils.info,  Node: Date conversion specifiers,  Next: Literal conversi
 ‘date’ conversion specifiers related to dates.
 
 ‘%a’
-     locale’s abbreviated weekday name (e.g., ‘Sun’)
+     locale's abbreviated weekday name (e.g., ‘Sun’)
 ‘%A’
-     locale’s full weekday name, variable length (e.g., ‘Sunday’)
+     locale's full weekday name, variable length (e.g., ‘Sunday’)
 ‘%b’
-     locale’s abbreviated month name (e.g., ‘Jan’)
+     locale's abbreviated month name (e.g., ‘Jan’)
 ‘%B’
-     locale’s full month name, variable length (e.g., ‘January’)
+     locale's full month name, variable length (e.g., ‘January’)
 ‘%c’
-     locale’s date and time (e.g., ‘Thu Mar  3 23:05:25 2020’)
+     locale's date and time (e.g., ‘Thu Mar  3 23:05:25 2020’)
 ‘%C’
      century.  This is like ‘%Y’, except the last two digits are
      omitted.  For example, it is ‘20’ if ‘%Y’ is ‘2019’, and is ‘-0’ if
@@ -13105,7 +13105,7 @@ File: coreutils.info,  Node: Date conversion specifiers,  Next: Literal conversi
      (‘00’...‘53’).  Days in a new year preceding the first Monday are
      in week zero.
 ‘%x’
-     locale’s date representation (e.g., ‘12/31/99’)
+     locale's date representation (e.g., ‘12/31/99’)
 ‘%y’
      last two digits of year (‘00’...‘99’)
 ‘%Y’
@@ -13147,7 +13147,7 @@ are not padded since there is no natural width for them.
      (hyphen) Do not pad the field; useful if the output is intended for
      human consumption.  This is a GNU extension.  As a special case,
      ‘%-N’ outputs only enough trailing digits to not lose information,
-     assuming that the timestamp’s resolution is the same as the current
+     assuming that the timestamp's resolution is the same as the current
      hardware clock.  For example, if the hardware clock resolution is 1
      microsecond, ‘%s.%-N’ outputs something like ‘1640890100.395710’.
 
@@ -13193,13 +13193,13 @@ field width.
 specification.  The modifiers are:
 
 ‘E’
-     Use the locale’s alternate representation for date and time.  This
+     Use the locale's alternate representation for date and time.  This
      modifier applies to the ‘%c’, ‘%C’, ‘%x’, ‘%X’, ‘%y’ and ‘%Y’
      conversion specifiers.  In a Japanese locale, for example, ‘%Ex’
-     might yield a date format based on the Japanese Emperors’ reigns.
+     might yield a date format based on the Japanese Emperors' reigns.
 
 ‘O’
-     Use the locale’s alternate numeric symbols for numbers.  This
+     Use the locale's alternate numeric symbols for numbers.  This
      modifier applies only to numeric conversion specifiers.
 
    If the format supports the modifier but no alternate representation
@@ -13385,7 +13385,7 @@ I.e.: ‘--date’, ‘--file’, ‘--reference’, ‘--resolution’.
      Use Universal Time by operating as if the ‘TZ’ environment variable
      were set to the string ‘UTC0’.  UTC stands for Coordinated
      Universal Time, established in 1960.  Universal Time is often
-     called “Greenwich Mean Time” (GMT) for historical reasons.
+     called "Greenwich Mean Time" (GMT) for historical reasons.
      Typically, systems ignore leap seconds and thus implement an
      approximation to UTC rather than true UTC.
 
@@ -13456,8 +13456,8 @@ in the previous section.
           Mon May  8 01:23:00 JST 2023
 
      If you do not specify time zone information in the date string,
-     ‘date’ uses your computer’s idea of the time zone when interpreting
-     the string.  For example, if your computer’s time zone is that of
+     ‘date’ uses your computer's idea of the time zone when interpreting
+     the string.  For example, if your computer's time zone is that of
      Cambridge, Massachusetts, which was then 5 hours (i.e., 18,000
      seconds) behind UTC:
 
@@ -13465,10 +13465,10 @@ in the previous section.
           date --date='1970-01-01 00:02:00' +%s
           18120
 
-   • If you’re sorting or graphing dated data, your raw date values may
+   • If you're sorting or graphing dated data, your raw date values may
      be represented as seconds since the Epoch.  But few people can look
-     at the date ‘1577836800’ and casually note “Oh, that’s the first
-     second of the year 2020 in Greenwich, England.”
+     at the date ‘1577836800’ and casually note "Oh, that's the first
+     second of the year 2020 in Greenwich, England."
 
           date --date='2020-01-01 UTC' +%s
           1577836800
@@ -13635,9 +13635,9 @@ options::.
 ‘-s’
 ‘--kernel-name’
      Print the kernel name.  POSIX 1003.1-2001 (*note Standards
-     conformance::) calls this “the implementation of the operating
-     system”, because the POSIX specification itself has no notion of
-     “kernel”.  The kernel name might be the same as the operating
+     conformance::) calls this "the implementation of the operating
+     system", because the POSIX specification itself has no notion of
+     "kernel".  The kernel name might be the same as the operating
      system name printed by the ‘-o’ or ‘--operating-system’ option, but
      it might differ.  Some operating systems (e.g., FreeBSD, HP-UX)
      have the same name as their underlying kernels; others (e.g.,
@@ -13683,13 +13683,13 @@ File: coreutils.info,  Node: hostid invocation,  Next: uptime invocation,  Prev:
 hexadecimal.  This command accepts no arguments.  The only options are
 ‘--help’ and ‘--version’.  *Note Common options::.
 
-   For example, here’s what it prints on one system I use:
+   For example, here's what it prints on one system I use:
 
      $ hostid
      1bac013d
 
    On that system, the 32-bit quantity happens to be closely related to
-the system’s Internet address, but that isn’t always the case.
+the system's Internet address, but that isn't always the case.
 
    ‘hostid’ is installed only on systems that have the ‘gethostid’
 function, so portable scripts should not rely on its existence.
@@ -13703,7 +13703,7 @@ File: coreutils.info,  Node: uptime invocation,  Prev: hostid invocation,  Up: S
 21.7 ‘uptime’: Print system uptime and load
 ===========================================
 
-‘uptime’ prints the current time, the system’s uptime, the number of
+‘uptime’ prints the current time, the system's uptime, the number of
 logged-in users and the current load average.
 
    If an argument is specified, it is used as the file to be read to
@@ -13713,7 +13713,7 @@ system default is used (‘uptime --help’ indicates the default setting).
    The only options are ‘--help’ and ‘--version’.  *Note Common
 options::.
 
-   For example, here’s what it prints right now on one system I use:
+   For example, here's what it prints right now on one system I use:
 
      $ uptime
       14:07  up   3:35,  3 users,  load average: 1.39, 1.15, 1.04
@@ -13776,7 +13776,7 @@ options::.
      file.
 
 ‘--reference=RFILE’
-     Use RFILE’s security context rather than specifying a CONTEXT
+     Use RFILE's security context rather than specifying a CONTEXT
      value.
 
 ‘-R’
@@ -13958,7 +13958,7 @@ then a name to ID resolving step is avoided by specifying a leading ‘+’.
    Here are a few tips to help avoid common problems in using chroot.
 To start with a simple example, make COMMAND refer to a statically
 linked binary.  If you were to use a dynamically linked executable, then
-you’d have to arrange to have the shared libraries in the right place
+you'd have to arrange to have the shared libraries in the right place
 under your new root directory.
 
    For example, if you create a statically linked ‘ls’ executable, and
@@ -13966,7 +13966,7 @@ put it in ‘/tmp/empty’, you can run this command as root:
 
      $ chroot /tmp/empty /ls -Rl /
 
-   Then you’ll see output like this:
+   Then you'll see output like this:
 
      /:
      total 1023
@@ -14108,7 +14108,7 @@ options::.  Options must precede operands.
 ‘--chdir=DIR’
      Change the working directory to DIR before invoking COMMAND.  This
      differs from the shell built-in ‘cd’ in that it starts COMMAND as a
-     subprocess rather than altering the shell’s own working directory;
+     subprocess rather than altering the shell's own working directory;
      this allows it to be chained with other commands that run commands
      in a different context.  For example:
 
@@ -14133,7 +14133,7 @@ options::.  Options must precede operands.
      with traditional shells.  Here the first trap command sets SIGPIPE
      to ignore.  The second trap command ostensibly sets it back to its
      default, but POSIX mandates that the shell must not change
-     inherited state of the signal – so it is a no-op.
+     inherited state of the signal - so it is a no-op.
 
           trap '' PIPE && sh -c 'trap - PIPE ; seq inf | head -n1'
 
@@ -14146,13 +14146,13 @@ options::.  Options must precede operands.
      Ignore signal SIG when running a program.  Without SIG all known
      signals are set to ignore.  Multiple signals can be
      comma-separated.  An empty SIG argument is a no-op.  The following
-     command runs ‘seq’ with SIGINT set to be ignored – pressing
+     command runs ‘seq’ with SIGINT set to be ignored - pressing
      ‘Ctrl-C’ will not terminate it:
 
           env --ignore-signal=INT seq inf > /dev/null
 
      ‘SIGCHLD’ is special, in that ‘--ignore-signal=CHLD’ might have no
-     effect (POSIX says it’s unspecified).
+     effect (POSIX says it's unspecified).
 
      Most operating systems do not allow ignoring ‘SIGKILL’, ‘SIGSTOP’
      (and possibly other signals).  Attempting to ignore these signals
@@ -14192,7 +14192,7 @@ options::.  Options must precede operands.
 ‘-S STRING’
 ‘--split-string=STRING’
      process and split STRING into separate arguments used to pass
-     multiple arguments on shebang lines.  ‘env’ supports FreeBSD’s
+     multiple arguments on shebang lines.  ‘env’ supports FreeBSD's
      syntax of several escape sequences and environment variable
      expansions.  See below for details and examples.
 
@@ -14210,7 +14210,7 @@ options::.  Options must precede operands.
 The ‘-S’/‘--split-string’ option enables use of multiple arguments on
 the first line of scripts (the shebang line, ‘#!’).
 
-   When a script’s interpreter is in a known location, scripts typically
+   When a script's interpreter is in a known location, scripts typically
 contain the absolute file name in their first line:
 
 Shell script:         #!/bin/sh
@@ -14223,7 +14223,7 @@ Python script:        #!/usr/bin/python3
                       print("hello")
                  
 
-   When a script’s interpreter is in a non-standard location in the
+   When a script's interpreter is in a non-standard location in the
 ‘PATH’ environment variable, it is recommended to use ‘env’ on the first
 line of the script to find the executable and run it:
 
@@ -14246,7 +14246,7 @@ is thus not possible to specify multiple arguments.
      print "hello\n";
 
    The operating system treats ‘perl -T -w’ as one argument (the
-program’s name), and executing the script fails with:
+program's name), and executing the script fails with:
 
      /usr/bin/env: 'perl -T -w': No such file or directory
 
@@ -14361,11 +14361,11 @@ quotes disable escape sequences except ‘\'’ and ‘\\’.
 ‘\v’    vertical tab character (ASCII 0x0B)
         
 ‘\#’    A hash ‘#’ character.  Used when a ‘#’ character is needed as
-        the first character of an argument (see ’comments’ section
+        the first character of an argument (see 'comments' section
         below).
         
 ‘\$’    A dollar-sign character ‘$’.  Unescaped ‘$’ characters are used
-        to expand environment variables (see ’variables’ section
+        to expand environment variables (see 'variables' section
         below).
         
 ‘\_’    Inside double-quotes, replaced with a single space character.
@@ -14483,7 +14483,7 @@ File: coreutils.info,  Node: nice invocation,  Next: nohup invocation,  Prev: en
 23.3 ‘nice’: Run a command with modified niceness
 =================================================
 
-‘nice’ prints a process’s “niceness”, or runs a command with modified
+‘nice’ prints a process's “niceness”, or runs a command with modified
 niceness.  “niceness” affects how favorably the process is scheduled in
 the system.  Synopsis:
 
@@ -14509,7 +14509,7 @@ which the scheduler is free to ignore.  Also, as a point of terminology,
 POSIX defines the behavior of ‘nice’ in terms of a “nice value”, which
 is the non-negative difference between a niceness and the minimum
 niceness.  Though ‘nice’ conforms to POSIX, its documentation and
-diagnostics use the term “niceness” for compatibility with historical
+diagnostics use the term "niceness" for compatibility with historical
 practice.
 
    COMMAND must not be a special built-in utility (*note Special
@@ -14528,7 +14528,7 @@ options::.  Options must precede operands.
 
 ‘-n ADJUSTMENT’
 ‘--adjustment=ADJUSTMENT’
-     Add ADJUSTMENT instead of 10 to the command’s niceness.  If
+     Add ADJUSTMENT instead of 10 to the command's niceness.  If
      ADJUSTMENT is negative and you lack appropriate privileges, ‘nice’
      issues a warning but otherwise acts as if you specified a zero
      adjustment.
@@ -14606,7 +14606,7 @@ an error.  This redirection is a GNU extension; programs intended to be
 portable to non-GNU hosts can use ‘nohup COMMAND [ARG]... 0>/dev/null’
 instead.
 
-   If standard output is a terminal, the command’s standard output is
+   If standard output is a terminal, the command's standard output is
 appended to the file ‘nohup.out’; if that cannot be written to, it is
 appended to the file ‘$HOME/nohup.out’; and if that cannot be written
 to, the command is not run.  Any ‘nohup.out’ or ‘$HOME/nohup.out’ file
@@ -14618,7 +14618,7 @@ same file descriptor as the (possibly-redirected) standard output.
 However, if standard output is closed, standard error terminal output is
 instead appended to the file ‘nohup.out’ or ‘$HOME/nohup.out’ as above.
 
-   To capture the command’s output to a file other than ‘nohup.out’ you
+   To capture the command's output to a file other than ‘nohup.out’ you
 can redirect it.  For example, to capture the output of ‘make’:
 
      nohup make > make.log
@@ -14657,7 +14657,7 @@ standard I/O streams associated with a program.  Synopsis:
 
    COMMAND must start with the name of a program that
   1. uses the ISO C ‘FILE’ streams for input/output (note the programs
-     ‘dd’ and ‘cat’ don’t do that),
+     ‘dd’ and ‘cat’ don't do that),
 
   2. does not adjust the buffering of its standard streams (note the
      program ‘tee’ is not in this category).
@@ -14745,7 +14745,7 @@ options::.  Options must precede operands.
      of time.
 
 ‘--foreground’
-     Don’t create a separate background program group, so that the
+     Don't create a separate background program group, so that the
      managed COMMAND can use the foreground TTY normally.  This is
      needed to support two situations when timing out commands, when not
      invoking ‘timeout’ from an interactive shell.
@@ -14755,7 +14755,7 @@ options::.  Options must precede operands.
           from the terminal (like Ctrl-C for example)
 
      Note in this mode of operation, any children of COMMAND will not be
-     timed out.  Also SIGCONT will not be sent to COMMAND, as it’s
+     timed out.  Also SIGCONT will not be sent to COMMAND, as it's
      generally not needed with foreground processes, and can cause
      intermittent signal delivery issues with programs that are monitors
      themselves (like GDB for example).
@@ -15106,7 +15106,7 @@ options::.
      ‘--from-unit=512’).  Suffixes are handled as with ‘--from=auto’.
 
 ‘--grouping’
-     Group digits in output numbers according to the current locale’s
+     Group digits in output numbers according to the current locale's
      grouping rules (e.g _Thousands Separator_ character, commonly ‘.’
      (dot) or ‘,’ comma).  This option has no effect in ‘POSIX/C’
      locale.
@@ -15126,7 +15126,7 @@ options::.
      Pad the output numbers to N characters, by adding spaces.  If N is
      a positive number, numbers will be right-aligned.  If N is a
      negative number, numbers will be left-aligned.  By default, numbers
-     are automatically aligned based on the input line’s width (only
+     are automatically aligned based on the input line's width (only
      with the default delimiter).
 
 ‘--round=METHOD’
@@ -15207,7 +15207,7 @@ IEC
 
      The ‘iec’ option uses a single letter suffix (e.g.  ‘G’), which is
      not fully standard, as the _iec_ standard recommends a two-letter
-     symbol (e.g ‘Gi’) – but in practice, this method is common.
+     symbol (e.g ‘Gi’) - but in practice, this method is common.
      Compare with the ‘iec-i’ option.
 
 IEC-I
@@ -15262,8 +15262,8 @@ Converting a single number from/to _human_ representation:
      $ numfmt --from=auto 1Mi
      1048576
 
-   Converting from ‘SI’ to ‘IEC’ scales (e.g.  when a drive’s capacity
-is advertised as ‘1TB’, while checking the drive’s capacity gives lower
+   Converting from ‘SI’ to ‘IEC’ scales (e.g.  when a drive's capacity
+is advertised as ‘1TB’, while checking the drive's capacity gives lower
 values):
 
      $ numfmt --from=si --to=iec 1T
@@ -15497,8 +15497,8 @@ affect only some files.
    There are three categories of users who may have different
 permissions to perform any of the above operations on a file:
 
-  1. the file’s owner;
-  2. other users who are in the file’s group;
+  1. the file's owner;
+  2. other users who are in the file's group;
   3. everyone else.
 
    Files are given an owner and group when they are created.  Usually
@@ -15513,13 +15513,13 @@ file mode bits have three special components, which affect only
 executable files (programs) and, on most systems, directories:
 
 The “set-user-ID bit” (“setuid bit”).
-     On execution, set the process’s effective user ID to that of the
+     On execution, set the process's effective user ID to that of the
      file.  For directories on a few systems, give files created in the
      directory the same owner as the directory, no matter who creates
      them, and set the set-user-ID bit of newly-created subdirectories.
 
 The “set-group-ID bit” (“setgid bit”).
-     On execution, set the process’s effective group ID to that of the
+     On execution, set the process's effective group ID to that of the
      file.  For directories on most systems, give files created in the
      directory the same group as the directory, no matter what group the
      user who creates them is in, and set the set-group-ID bit of
@@ -15529,9 +15529,9 @@ The “restricted deletion flag” or “sticky bit”.
      Prevent unprivileged users from removing or renaming a file in a
      directory unless they own the file or the directory; this is
      commonly found on world-writable directories like ‘/tmp’.  For
-     regular files on some older systems, save the program’s text image
+     regular files on some older systems, save the program's text image
      on the swap device so it will load more quickly when run, so that
-     the image is “sticky”.
+     the image is "sticky".
 
    In addition to the file mode bits listed above, there may be file
 attributes specific to the file system, e.g., access control lists
@@ -15547,7 +15547,7 @@ FFS
      On FreeBSD the file flags specific to the FFS file system are set
      using ‘chflags’.
 
-   Even if a file’s mode bits allow an operation on that file, that
+   Even if a file's mode bits allow an operation on that file, that
 operation may still fail, because:
 
    • the file-system-specific attributes or flags do not permit it; or
@@ -15564,9 +15564,9 @@ File: coreutils.info,  Node: Symbolic Modes,  Next: Numeric Modes,  Prev: Mode S
 27.2 Symbolic Modes
 ===================
 
-“Symbolic modes” represent changes to files’ mode bits as operations on
+“Symbolic modes” represent changes to files' mode bits as operations on
 single-character symbols.  They allow you to modify either all or
-selected parts of files’ mode bits, optionally based on their previous
+selected parts of files' mode bits, optionally based on their previous
 values, and perhaps on the current ‘umask’ as well (*note Umask and
 Protection::).
 
@@ -15595,7 +15595,7 @@ File: coreutils.info,  Node: Setting Permissions,  Next: Copying Permissions,  U
 27.2.1 Setting Permissions
 --------------------------
 
-The basic symbolic operations on a file’s permissions are adding,
+The basic symbolic operations on a file's permissions are adding,
 removing, and setting the permission that certain users have to read,
 write, and execute or search the file.  These operations have the
 following format:
@@ -15605,7 +15605,7 @@ following format:
 The spaces between the three parts above are shown for readability only;
 symbolic modes cannot contain spaces.
 
-   The USERS part tells which users’ access to the file is changed.  It
+   The USERS part tells which users' access to the file is changed.  It
 consists of one or more of the following letters (or it can be empty;
 *note Umask and Protection::, for a description of what happens then).
 When more than one of these letters is given, the order that they are in
@@ -15614,13 +15614,13 @@ does not matter.
 ‘u’
      the user who owns the file;
 ‘g’
-     other users who are in the file’s group;
+     other users who are in the file's group;
 ‘o’
      all other users;
 ‘a’
      all users; the same as ‘ugo’.
 
-   The OPERATION part tells how to change the affected users’ access to
+   The OPERATION part tells how to change the affected users' access to
 the file, and is one of the following symbols:
 
 ‘+’
@@ -15653,7 +15653,7 @@ file, but not to execute it, use:
 
      a=rw
 
-   To remove write permission for all users other than the file’s owner,
+   To remove write permission for all users other than the file's owner,
 use:
 
      go-w
@@ -15662,7 +15662,7 @@ The above command does not affect the access that the owner of the file
 has to it, nor does it affect whether other users can read or execute
 the file.
 
-   To give everyone except a file’s owner no permission to do anything
+   To give everyone except a file's owner no permission to do anything
 with that file, use the mode below.  Other users could still remove the
 file, if they have write permission on the directory it is in.
 
@@ -15678,13 +15678,13 @@ File: coreutils.info,  Node: Copying Permissions,  Next: Changing Special Mode B
 27.2.2 Copying Existing Permissions
 -----------------------------------
 
-You can base a file’s permissions on its existing permissions.  To do
+You can base a file's permissions on its existing permissions.  To do
 this, instead of using a series of ‘r’, ‘w’, or ‘x’ letters after the
 operator, you use the letter ‘u’, ‘g’, or ‘o’.  For example, the mode
 
      o+g
 
-adds the permissions for users who are in a file’s group to the
+adds the permissions for users who are in a file's group to the
 permissions that other users have for the file.  Thus, if the file
 started out as mode 664 (‘rw-rw-r--’), the above mode would change it to
 mode 666 (‘rw-rw-rw-’).  If the file had started out as mode 741
@@ -15697,7 +15697,7 @@ File: coreutils.info,  Node: Changing Special Mode Bits,  Next: Conditional Exec
 27.2.3 Changing Special Mode Bits
 ---------------------------------
 
-In addition to changing a file’s read, write, and execute/search
+In addition to changing a file's read, write, and execute/search
 permissions, you can change its special mode bits.  *Note Mode
 Structure::, for a summary of these special mode bits.
 
@@ -15740,7 +15740,7 @@ example, the mode:
 
 does set the restricted deletion flag or sticky bit, but it also removes
 all read, write, and execute/search permissions that users not in the
-file’s group might have had for it.
+file's group might have had for it.
 
    *Note Directory Setuid and Setgid::, for additional rules concerning
 set-user-ID and set-group-ID bits and directories.
@@ -15770,7 +15770,7 @@ File: coreutils.info,  Node: Multiple Changes,  Next: Umask and Protection,  Pre
 
 The format of symbolic modes is actually more complex than described
 above (*note Setting Permissions::).  It provides two ways to make
-multiple changes to files’ mode bits.
+multiple changes to files' mode bits.
 
    The first way is to specify multiple OPERATION and PERMISSIONS parts
 after a USERS part in the symbolic mode.
@@ -15799,14 +15799,14 @@ on it for all users except its owner.  Another example:
      u=rwx,g=rx,o=
 
 sets all of the permission bits for the file explicitly.  (It gives
-users who are not in the file’s group no permission at all for it.)
+users who are not in the file's group no permission at all for it.)
 
    The two methods can be combined.  The mode:
 
      a+r,g+x-w
 
 gives all users permission to read the file, and gives users who are in
-the file’s group permission to execute/search it as well, but not
+the file's group permission to execute/search it as well, but not
 permission to write to it.  The above mode could be written in several
 different ways; another is:
 
@@ -15830,12 +15830,12 @@ you to use ‘umask’ as an easily customizable protection against giving
 away more permission to files than you intended to.
 
    As an example, if ‘umask’ has the value 2, which removes write
-permission for users who are not in the file’s group, then the mode:
+permission for users who are not in the file's group, then the mode:
 
      +w
 
 adds permission to write to the file to its owner and to other users who
-are in the file’s group, but _not_ to other users.  In contrast, the
+are in the file's group, but _not_ to other users.  In contrast, the
 mode:
 
      a+w
@@ -15852,8 +15852,8 @@ File: coreutils.info,  Node: Numeric Modes,  Next: Operator Numeric Modes,  Prev
 As an alternative to giving a symbolic mode, you can give an octal (base
 8) number that represents the mode.
 
-   The permissions granted to the user, to other users in the file’s
-group, and to other users not in the file’s group each require three
+   The permissions granted to the user, to other users in the file's
+group, and to other users not in the file's group each require three
 bits: one bit for read, one for write, and one for execute/search
 permission.  These three bits are represented as one octal digit; for
 example, if all three are present, the resulting 111 (in binary) is
@@ -15910,15 +15910,15 @@ File: coreutils.info,  Node: Operator Numeric Modes,  Next: Directory Setuid and
 
 An operator numeric mode is a numeric mode that is prefixed by a ‘-’,
 ‘+’, or ‘=’ operator, which has the same interpretation as in symbolic
-modes.  For example, ‘+440’ enables read permission for the file’s owner
+modes.  For example, ‘+440’ enables read permission for the file's owner
 and group, ‘-1’ disables execute permission for other users, and ‘=600’
 clears all permissions except for enabling read-write permissions for
-the file’s owner.  Operator numeric modes can be combined with symbolic
+the file's owner.  Operator numeric modes can be combined with symbolic
 modes by separating them with a comma; for example, ‘=0,u+r’ clears all
-permissions except for enabling read permission for the file’s owner.
+permissions except for enabling read permission for the file's owner.
 
    The commands ‘chmod =755 DIR’ and ‘chmod 755 DIR’ differ in that the
-former clears the directory DIR’s setuid and setgid bits, whereas the
+former clears the directory DIR's setuid and setgid bits, whereas the
 latter preserves them.  *Note Directory Setuid and Setgid::.
 
    Operator numeric modes are a GNU extension.
@@ -15929,10 +15929,10 @@ File: coreutils.info,  Node: Directory Setuid and Setgid,  Prev: Operator Numeri
 27.5 Directories and the Set-User-ID and Set-Group-ID Bits
 ==========================================================
 
-On most systems, if a directory’s set-group-ID bit is set, newly created
+On most systems, if a directory's set-group-ID bit is set, newly created
 subfiles inherit the same group as the directory, and newly created
 subdirectories inherit the set-group-ID bit of the parent directory.  On
-a few systems, a directory’s set-user-ID bit has a similar effect on the
+a few systems, a directory's set-user-ID bit has a similar effect on the
 ownership of new subfiles and the set-user-ID bits of new
 subdirectories.  These mechanisms let users share files more easily, by
 lessening the need to use ‘chmod’ or ‘chown’ to share new files.
@@ -15999,30 +15999,30 @@ File: coreutils.info,  Node: File timestamps,  Next: Date input formats,  Prev: 
 
 Standard POSIX files have three timestamps: the access timestamp (atime)
 of the last read, the modification timestamp (mtime) of the last write,
-and the status change timestamp (ctime) of the last change to the file’s
+and the status change timestamp (ctime) of the last change to the file's
 meta-information.  Some file systems support a fourth time: the birth
 timestamp (birthtime) of when the file was created; by definition,
 birthtime never changes.
 
    One common example of a ctime change is when the permissions of a
-file change.  Changing the permissions doesn’t access the file, so atime
-doesn’t change, nor does it modify the file, so the mtime doesn’t
+file change.  Changing the permissions doesn't access the file, so atime
+doesn't change, nor does it modify the file, so the mtime doesn't
 change.  Yet, something about the file itself has changed, and this must
 be noted somewhere.  This is the job of the ctime field.  This is
 necessary, so that, for example, a backup program can make a fresh copy
 of the file, including the new permissions value.  Another operation
-that modifies a file’s ctime without affecting the others is renaming.
+that modifies a file's ctime without affecting the others is renaming.
 
-   Naively, a file’s atime, mtime, and ctime are set to the current time
+   Naively, a file's atime, mtime, and ctime are set to the current time
 whenever you read, write, or change the attributes of the file
-respectively, and searching a directory counts as reading it.  A file’s
+respectively, and searching a directory counts as reading it.  A file's
 atime and mtime can also be set directly, via the ‘touch’ command (*note
 touch invocation::).  In practice, though, timestamps are not updated
 quite that way.
 
    For efficiency reasons, many systems are lazy about updating atimes:
-when a program accesses a file, they may delay updating the file’s
-atime, or may not update the file’s atime if the file has been accessed
+when a program accesses a file, they may delay updating the file's
+atime, or may not update the file's atime if the file has been accessed
 recently, or may not update the atime at all.  Similar laziness, though
 typically not quite so extreme, applies to mtimes and ctimes.
 
@@ -16030,15 +16030,15 @@ typically not quite so extreme, applies to mtimes and ctimes.
 and these emulations may disagree with the naive interpretation.  For
 example, a system may fake an atime or ctime by using the mtime.
 
-   The determination of what time is “current” depends on the platform.
+   The determination of what time is "current" depends on the platform.
 Platforms with network file systems often use different clocks for the
 operating system and for file systems; because updates typically uses
-file systems’ clocks by default, clock skew can cause the resulting file
-timestamps to appear to be in a program’s “future” or “past”.
+file systems' clocks by default, clock skew can cause the resulting file
+timestamps to appear to be in a program's "future" or "past".
 
    When the system updates a file timestamp to a desired time T (which
 is either the current time, or a time specified via the ‘touch’
-command), there are several reasons the file’s timestamp may be set to a
+command), there are several reasons the file's timestamp may be set to a
 value that differs from T.  First, T may have a higher resolution than
 supported.  Second, a file system may use different resolutions for
 different types of times.  Third, file timestamps may use a different
@@ -16048,7 +16048,7 @@ resolution.  For example, in theory a file system might use
 10-microsecond resolution for access timestamp and 100-nanosecond
 resolution for modification timestamp, and the operating system might
 use nanosecond resolution for the current time and microsecond
-resolution for the primitive that ‘touch’ uses to set a file’s timestamp
+resolution for the primitive that ‘touch’ uses to set a file's timestamp
 to an arbitrary value.
 
 
@@ -16081,7 +16081,7 @@ First, a quote:
      Tuesday or a week from Sunday, with feelings of helpless confusion.
      ...
 
-     —Robert Grudin, ‘Time and the Art of Living’.
+     --Robert Grudin, ‘Time and the Art of Living’.
 
    This section describes the textual date representations that GNU
 programs accept.  These are the strings you, as a user, can supply as
@@ -16135,7 +16135,7 @@ there is no way to write the ordinal number 2, but for convenience
 ‘eleventh’ for 11 and ‘twelfth’ for 12.
 
    When a month is written this way, it is still considered to be
-written numerically, instead of being “spelled in full”; this changes
+written numerically, instead of being "spelled in full"; this changes
 the allowed strings.
 
    In the current implementation, only English is supported for words
@@ -16291,7 +16291,7 @@ normally done only for ‘UTC’; for example, ‘UTC+05:30’ is equivalent to
 recommended, because they are ambiguous; for example, ‘EST’ has a
 different meaning in Australia than in the United States, and ‘A’ has
 different meaning as a military time zone than as an obsolete RFC 822
-time zone.  Instead, it’s better to use unambiguous numeric time zone
+time zone.  Instead, it's better to use unambiguous numeric time zone
 corrections like ‘-0500’, as described in the previous section.
 
    If neither a time zone item nor a time zone correction is supplied,
@@ -16443,16 +16443,16 @@ be combined with any other date item, as it specifies a complete
 timestamp.
 
    Internally, computer times are represented as a count of seconds
-since an Epoch—a well-defined point of time.  On GNU and POSIX systems,
+since an Epoch--a well-defined point of time.  On GNU and POSIX systems,
 the Epoch is 1970-01-01 00:00:00 UTC, so ‘@0’ represents this time, ‘@1’
 represents 1970-01-01 00:00:01 UTC, and so forth.  GNU and most other
 POSIX-compliant systems support such times as an extension to POSIX,
 using negative counts, so that ‘@-1’ represents 1969-12-31 23:59:59 UTC.
 
-   Most modern systems count seconds with 64-bit two’s-complement
+   Most modern systems count seconds with 64-bit two's-complement
 integers of seconds with nanosecond subcounts, which is a range that
 includes the known lifetime of the universe with nanosecond resolution.
-Some obsolescent systems count seconds with 32-bit two’s-complement
+Some obsolescent systems count seconds with 32-bit two's-complement
 integers and can represent times from 1901-12-13 20:45:52 through
 2038-01-19 03:14:07 UTC.  A few systems sport other time ranges.
 
@@ -16476,8 +16476,8 @@ be present in the date, and any quotes or backslashes within RULE must
 be escaped by a backslash.
 
    For example, with the GNU ‘date’ command you can answer the question
-“What time is it in New York when a Paris clock shows 6:30am on October
-31, 2022?” by using a date beginning with ‘TZ="Europe/Paris"’ as shown
+"What time is it in New York when a Paris clock shows 6:30am on October
+31, 2022?"  by using a date beginning with ‘TZ="Europe/Paris"’ as shown
 in the following shell transcript:
 
      $ export TZ="America/New_York"
@@ -16507,9 +16507,9 @@ The previously-mentioned POSIX rule ‘UTC0’ says that the time zone
 abbreviation is ‘UTC’, the zone is zero hours away from Greenwich, and
 there is no daylight saving time.  POSIX rules can also specify nonzero
 Greenwich offsets.  For example, the following shell transcript answers
-the question “What time is it five and a half hours east of Greenwich
+the question "What time is it five and a half hours east of Greenwich
 when a clock seven hours west of Greenwich shows 9:50pm on July 12,
-2022?”
+2022?"
 
      $ TZ="<+0530>-5:30" date --date='TZ="<-07>+7" 2022-07-12 21:50'
      Wed Jul 13 10:20:00 +0530 2022
@@ -16520,7 +16520,7 @@ time zone is 7 hours west of Greenwich, and ‘TZ="<+0530>-5:30"’ says
 that the time zone abbreviation is ‘+0530’ and the time zone is 5 hours
 30 minutes east of Greenwich.  (One should never use a setting like
 ‘TZ="UTC-5"’, since this would incorrectly imply that local time is five
-hours east of Greenwich and the time zone is called “UTC”.)  Although
+hours east of Greenwich and the time zone is called "UTC".) Although
 trickier POSIX ‘TZ’ settings like ‘TZ="<-05>+5<-04>,M3.2.0/2,M11.1.0/2"’
 can specify some daylight saving regimes, location-based settings like
 ‘TZ="America/New_York"’ are typically simpler and more accurate
@@ -16655,10 +16655,10 @@ File: coreutils.info,  Node: Version sort and natural sort,  Next: Variations in
 ------------------------------------
 
 In GNU Coreutils, the name “version sort” was chosen because it is based
-on Debian GNU/Linux’s algorithm of sorting packages’ versions.
+on Debian GNU/Linux's algorithm of sorting packages' versions.
 
-   Its goal is to answer questions like “Which package is newer,
-‘firefox-60.7.2’ or ‘firefox-60.12.3’?”
+   Its goal is to answer questions like "Which package is newer,
+‘firefox-60.7.2’ or ‘firefox-60.12.3’?"
 
    In Coreutils this algorithm was slightly modified to work on more
 general input such as textual strings and file names (see *note
@@ -16678,7 +16678,7 @@ Currently there is no standard for version sort.
 
    That is: there is no one correct way or universally agreed-upon way
 to order items.  Each program and each programming language can decide
-its own ordering algorithm and call it “version sort”, “natural sort”,
+its own ordering algorithm and call it "version sort", "natural sort",
 or other names.
 
    See *note Other version/natural sort implementations:: for many
@@ -16694,8 +16694,8 @@ File: coreutils.info,  Node: Version sort implementation,  Next: Differences fro
 30.2 Version sort implementation
 ================================
 
-GNU Coreutils version sort is based on the “upstream version” part of
-Debian’s versioning scheme
+GNU Coreutils version sort is based on the "upstream version" part of
+Debian's versioning scheme
 (https://www.debian.org/doc/debian-policy/ch-controlfields.html#version).
 
    This section describes the GNU Coreutils sort ordering rules.
@@ -16833,16 +16833,16 @@ in *note Version-sort ordering rules::).
    Comparing the string ‘8.1’ to ‘8.01’, first the ‘8’s are compared
 (and are identical), then the dots (‘.’) are compared and are identical,
 and lastly the remaining digits are compared numerically (‘1’ and ‘01’)
-– which are numerically equal.  Hence, ‘8.01’ and ‘8.1’ are grouped
+- which are numerically equal.  Hence, ‘8.01’ and ‘8.1’ are grouped
 together.
 
-   Similarly, comparing ‘8.5’ to ‘8.49’ – the ‘8’ and ‘.’ parts are
+   Similarly, comparing ‘8.5’ to ‘8.49’ - the ‘8’ and ‘.’ parts are
 identical, then the numeric values ‘5’ and ‘49’ are compared.  The
 resulting ‘5’ appears before ‘49’.
 
    This sorting order (where ‘8.5’ comes before ‘8.49’) is common when
 assigning versions to computer programs (while perhaps not intuitive or
-“natural” for people).
+"natural" for people).
 
 
 File: coreutils.info,  Node: Version sort punctuation,  Next: Punctuation vs letters,  Prev: Version sort is not the same as numeric sort,  Up: Version sort implementation
@@ -16871,12 +16871,12 @@ into the following parts:
 
    The fourth parts (‘.’ and ‘_src.tar.gz’) are compared lexically by
 ASCII order.  The ‘.’ (ASCII value 46) is less than ‘_’ (ASCII value 95)
-– and should be listed before it.
+- and should be listed before it.
 
    Hence, ‘1.0.5_src.tar.gz’ is listed first.
 
    If a different byte appears instead of the underscore (for example,
-percent sign ‘%’ ASCII value 37, which is less than dot’s ASCII value of
+percent sign ‘%’ ASCII value 37, which is less than dot's ASCII value of
 46), that file will be listed first:
 
      $ touch   1.0.5_src.tar.gz     1.0%zzzzz.gz
@@ -16916,7 +16916,7 @@ above algorithm have only one part, all non-digits (‘a%’ vs ‘az’).
 identically in both strings.
 
    Rule 2.B.a says a letter like ‘z’ sorts before a non-letter like ‘%’
-– hence ‘az’ appears first (despite ‘z’ having ASCII value of 122, much
+- hence ‘az’ appears first (despite ‘z’ having ASCII value of 122, much
 larger than ‘%’ with ASCII value 37).
 
 
@@ -16946,10 +16946,10 @@ non-digit (rule 2) and digit parts (rule 3).
 
    In the above input file, only the last line in the input file starts
 with a non-digit (‘~’).  This is the first part.  All other lines in the
-input file start with a digit – their first non-digit part is empty.
+input file start with a digit - their first non-digit part is empty.
 
    Based on rule 2.B.b, tilde ‘~’ sorts before other bytes and before
-the empty string – hence it comes before all other strings, and is
+the empty string - hence it comes before all other strings, and is
 listed first in the sorted output.
 
    The remaining lines (‘1’, ‘1%’, ‘1.2’, ‘1~’) follow similar logic:
@@ -17016,7 +17016,7 @@ File: coreutils.info,  Node: Hyphen-minus and colon,  Next: Special priority in 
 30.3.1 Hyphen-minus ‘-’ and colon ‘:’
 -------------------------------------
 
-In Debian’s version string syntax the version consists of three parts:
+In Debian's version string syntax the version consists of three parts:
      [epoch:]upstream_version[-debian_revision]
    The ‘epoch’ and ‘debian_revision’ parts are optional.
 
@@ -17189,10 +17189,10 @@ to the following parts:
      empty   vs  .txt
 
    The comparison of the third parts (‘.’ vs ‘.txt’) will determine that
-the shorter string comes first – resulting in ‘hello-8.2.txt’ appearing
+the shorter string comes first - resulting in ‘hello-8.2.txt’ appearing
 first.
 
-   Indeed this is the order in which Debian’s ‘dpkg’ compares the
+   Indeed this is the order in which Debian's ‘dpkg’ compares the
 strings.
 
    A more natural result is that ‘hello-8.txt’ should come before
@@ -17210,7 +17210,7 @@ broken down into the following parts:
 ‘hello-8’ being first.
 
    A real-world example would be listing files such as:
-‘gcc_10.fc9.tar.gz’ and ‘gcc_10.8.12.7rc2.fc9.tar.bz2’: Debian’s
+‘gcc_10.fc9.tar.gz’ and ‘gcc_10.8.12.7rc2.fc9.tar.bz2’: Debian's
 algorithm would list ‘gcc_10.8.12.7rc2.fc9.tar.bz2’ first, while ‘ls -v’
 will list ‘gcc_10.fc9.tar.gz’ first.
 
@@ -17224,7 +17224,7 @@ the ordering rules are the same.
 
 File: coreutils.info,  Node: Comparing two strings using Debian's algorithm,  Prev: Special handling of file extensions,  Up: Differences from Debian version sort
 
-30.3.4 Comparing two strings using Debian’s algorithm
+30.3.4 Comparing two strings using Debian's algorithm
 -----------------------------------------------------
 
 The Debian program ‘dpkg’ (available on all Debian and Ubuntu
@@ -17300,13 +17300,13 @@ File: coreutils.info,  Node: Reporting version sort bugs,  Next: Other version/n
 If you suspect a bug in GNU Coreutils version sort (i.e., in the output
 of ‘ls -v’ or ‘sort -V’), please first check the following:
 
-  1. Is the result consistent with Debian’s own ordering (using ‘dpkg’,
+  1. Is the result consistent with Debian's own ordering (using ‘dpkg’,
      see *note Comparing two strings using Debian's algorithm::)?  If it
-     is, then this is not a bug – please do not report it.
+     is, then this is not a bug - please do not report it.
 
-  2. If the result differs from Debian’s, is it explained by one of the
+  2. If the result differs from Debian's, is it explained by one of the
      sections in *note Differences from Debian version sort::?  If it
-     is, then this is not a bug – please do not report it.
+     is, then this is not a bug - please do not report it.
 
   3. If you have a question about specific ordering which is not
      explained here, please write to <coreutils@gnu.org>, and provide a
@@ -17329,12 +17329,12 @@ version/natural sort, each with its own rules.  Some examples are:
    • Natural Sorting variants in Rosetta Code
      (https://rosettacode.org/wiki/Natural_sorting).
 
-   • Python’s natsort package (https://pypi.org/project/natsort/)
-     (includes detailed description of their sorting rules: natsort –
+   • Python's natsort package (https://pypi.org/project/natsort/)
+     (includes detailed description of their sorting rules: natsort -
      how it works
      (https://natsort.readthedocs.io/en/master/howitworks.html)).
 
-   • Ruby’s version_sorter (https://github.com/github/version_sorter).
+   • Ruby's version_sorter (https://github.com/github/version_sorter).
 
    • Perl has multiple packages for natural and version sorts (each
      likely with its own rules and nuances): Sort::Naturally
@@ -17345,7 +17345,7 @@ version/natural sort, each with its own rules.  Some examples are:
    • PHP has a built-in function natsort
      (https://www.php.net/manual/en/function.natsort.php).
 
-   • NodeJS’s natural-sort package
+   • NodeJS's natural-sort package
      (https://www.npmjs.com/package/natural-sort).
 
    • In zsh, the glob modifier
@@ -17360,7 +17360,7 @@ version/natural sort, each with its own rules.  Some examples are:
      to compare two directory entries (despite the names, they are not
      identical to GNU Coreutils version sort ordering).
 
-   • Using Debian’s sorting algorithm in:
+   • Using Debian's sorting algorithm in:
 
         • python: Stack Overflow Example #4957741
           (https://stackoverflow.com/a/4957741).
@@ -17374,12 +17374,12 @@ File: coreutils.info,  Node: Related source code,  Prev: Other version/natural s
 30.4.3 Related source code
 --------------------------
 
-   • Debian’s code which splits a version string into
+   • Debian's code which splits a version string into
      ‘epoch/upstream_version/debian_revision’ parts:
      parsehelp.c:parseversion()
      (https://git.dpkg.org/cgit/dpkg/dpkg.git/tree/lib/dpkg/parsehelp.c#n191).
 
-   • Debian’s code which performs the ‘upstream_version’ comparison:
+   • Debian's code which performs the ‘upstream_version’ comparison:
      version.c
      (https://git.dpkg.org/cgit/dpkg/dpkg.git/tree/lib/dpkg/version.c#n140).
 
@@ -17393,7 +17393,7 @@ File: coreutils.info,  Node: Opening the software toolbox,  Next: GNU Free Docum
 31 Opening the Software Toolbox
 *******************************
 
-An earlier version of this chapter appeared in the ‘What’s GNU?’  column
+An earlier version of this chapter appeared in the ‘What's GNU?’  column
 of the June 1994 ‘Linux Journal’
 (https://www.linuxjournal.com/article.php?sid=2762).  It was written by
 Arnold Robbins.
@@ -17414,9 +17414,9 @@ File: coreutils.info,  Node: Toolbox introduction,  Next: I/O redirection,  Up: 
 Toolbox Introduction
 ====================
 
-This month’s column is only peripherally related to the GNU Project, in
+This month's column is only peripherally related to the GNU Project, in
 that it describes a number of the GNU tools on your GNU/Linux system and
-how they might be used.  What it’s really about is the “Software Tools”
+how they might be used.  What it's really about is the "Software Tools"
 philosophy of program development and usage.
 
    The software tools philosophy was an important and integral concept
@@ -17430,18 +17430,18 @@ many kinds of problems.
 (or purse).  A Swiss Army knife is a handy tool to have: it has several
 knife blades, a screwdriver, tweezers, toothpick, nail file, corkscrew,
 and perhaps a number of other things on it.  For the everyday, small
-miscellaneous jobs where you need a simple, general purpose tool, it’s
+miscellaneous jobs where you need a simple, general purpose tool, it's
 just the thing.
 
-   On the other hand, an experienced carpenter doesn’t build a house
+   On the other hand, an experienced carpenter doesn't build a house
 using a Swiss Army knife.  Instead, he has a toolbox chock full of
-specialized tools – a saw, a hammer, a screwdriver, a plane, and so on.
-And he knows exactly when and where to use each tool; you won’t catch
+specialized tools - a saw, a hammer, a screwdriver, a plane, and so on.
+And he knows exactly when and where to use each tool; you won't catch
 him hammering nails with the handle of his screwdriver.
 
    The Unix developers at Bell Labs were all professional programmers
 and trained computer scientists.  They had found that while a
-one-size-fits-all program might appeal to a user because there’s only
+one-size-fits-all program might appeal to a user because there's only
 one program to use, in practice such programs are
 
   a. difficult to write,
@@ -17451,8 +17451,8 @@ one program to use, in practice such programs are
   c. difficult to extend to meet new situations.
 
    Instead, they felt that programs should be specialized tools.  In
-short, each program “should do one thing well.” No more and no less.
-Such programs are simpler to design, write, and get right – they only do
+short, each program "should do one thing well."  No more and no less.
+Such programs are simpler to design, write, and get right - they only do
 one thing.
 
    Furthermore, they found that with the right machinery for hooking
@@ -17463,7 +17463,7 @@ it much more quickly and easily than if you had to write a special
 purpose program.  We will see some (classic) examples of this further on
 in the column.  (An important additional point was that, if necessary,
 take a detour and build any software tools you may need first, if you
-don’t already have something appropriate in the toolbox.)
+don't already have something appropriate in the toolbox.)
 
 
 File: coreutils.info,  Node: I/O redirection,  Next: The who command,  Prev: Toolbox introduction,  Up: Opening the software toolbox
@@ -17472,17 +17472,17 @@ I/O Redirection
 ===============
 
 Hopefully, you are familiar with the basics of I/O redirection in the
-shell, in particular the concepts of “standard input,” “standard
-output,” and “standard error”.  Briefly, “standard input” is a data
+shell, in particular the concepts of "standard input," "standard
+output," and "standard error".  Briefly, "standard input" is a data
 source, where data comes from.  A program should not need to either know
 or care if the data source is a regular file, a keyboard, a magnetic
-tape, or even a punched card reader.  Similarly, “standard output” is a
+tape, or even a punched card reader.  Similarly, "standard output" is a
 data sink, where data goes to.  The program should neither know nor care
 where this might be.  Programs that only read their standard input, do
 something to the data, and then send it on, are called “filters”, by
 analogy to filters in a water pipeline.
 
-   With the Unix shell, it’s very easy to set up data pipelines:
+   With the Unix shell, it's very easy to set up data pipelines:
 
      program_to_create_data | filter1 | ... | filterN > final.pretty.data
 
@@ -17494,7 +17494,7 @@ the pipeline, it is in the desired form.
 does the standard error come in to play?  Well, think about ‘filter1’ in
 the pipeline above.  What happens if it encounters an error in the data
 it sees?  If it writes an error message to standard output, it will just
-disappear down the pipeline into ‘filter2’’s input, and the user will
+disappear down the pipeline into ‘filter2’'s input, and the user will
 probably never see it.  So programs need a place where they can send
 error messages so that the user will notice them.  This is standard
 error, and it is usually connected to your console or window, even if
@@ -17505,16 +17505,16 @@ screen.
 be agreed upon.  The most straightforward and easiest format to use is
 simply lines of text.  Unix data files are generally just streams of
 bytes, with lines delimited by the ASCII LF (Line Feed) character,
-conventionally called a “newline” in the Unix literature.  (This is
-‘'\n'’ if you’re a C programmer.)  This is the format used by all the
+conventionally called a "newline" in the Unix literature.  (This is
+‘'\n'’ if you're a C programmer.)  This is the format used by all the
 traditional filtering programs.  (Many earlier operating systems had
 elaborate facilities and special purpose programs for managing binary
 data.  Unix has always shied away from such things, under the philosophy
-that it’s easiest to simply be able to view and edit your data with a
+that it's easiest to simply be able to view and edit your data with a
 text editor.)
 
-   OK, enough introduction.  Let’s take a look at some of the tools, and
-then we’ll see how to hook them together in interesting ways.  In the
+   OK, enough introduction.  Let's take a look at some of the tools, and
+then we'll see how to hook them together in interesting ways.  In the
 following discussion, we will only present those command line options
 that interest us.  As you should always do, double check your system
 documentation for the full story.
@@ -17526,8 +17526,8 @@ The ‘who’ Command
 =================
 
 The first program is the ‘who’ command.  By itself, it generates a list
-of the users who are currently logged in.  Although I’m writing this on
-a single-user system, we’ll pretend that several people are logged in:
+of the users who are currently logged in.  Although I'm writing this on
+a single-user system, we'll pretend that several people are logged in:
 
      $ who
      ⊣ arnold   console Jan 22 19:57
@@ -17547,7 +17547,7 @@ File: coreutils.info,  Node: The cut command,  Next: The sort command,  Prev: Th
 The ‘cut’ Command
 =================
 
-The next program we’ll look at is the ‘cut’ command.  This program cuts
+The next program we'll look at is the ‘cut’ command.  This program cuts
 out columns or fields of input data.  For example, we can tell it to
 print just the login name and full name from the ‘/etc/passwd’ file.
 The ‘/etc/passwd’ file has seven fields, separated by colons:
@@ -17582,7 +17582,7 @@ File: coreutils.info,  Node: The sort command,  Next: The uniq command,  Prev: T
 The ‘sort’ Command
 ==================
 
-Next we’ll look at the ‘sort’ command.  This is one of the most powerful
+Next we'll look at the ‘sort’ command.  This is one of the most powerful
 commands on a Unix-style system; one that you will often find yourself
 using when setting up fancy data plumbing.
 
@@ -17598,12 +17598,12 @@ File: coreutils.info,  Node: The uniq command,  Next: Putting the tools together
 The ‘uniq’ Command
 ==================
 
-Finally (at least for now), we’ll look at the ‘uniq’ program.  When
+Finally (at least for now), we'll look at the ‘uniq’ program.  When
 sorting data, you will often end up with duplicate lines, lines that are
 identical.  Usually, all you need is one instance of each line.  This is
 where ‘uniq’ comes in.  The ‘uniq’ program reads its standard input.  It
 prints only one copy of each repeated line.  It does have several
-options.  Later on, we’ll use the ‘-c’ option, which prints each unique
+options.  Later on, we'll use the ‘-c’ option, which prints each unique
 line, preceded by a count of the number of times that line occurred in
 the input.
 
@@ -17613,7 +17613,7 @@ File: coreutils.info,  Node: Putting the tools together,  Prev: The uniq command
 Putting the Tools Together
 ==========================
 
-Now, let’s suppose this is a large ISP server system with dozens of
+Now, let's suppose this is a large ISP server system with dozens of
 users logged in.  The management wants the system administrator to write
 a program that will generate a sorted list of logged in users.
 Furthermore, even if a user is logged in multiple times, his or her name
@@ -17664,8 +17664,8 @@ programs, on one command line, the administrator was able to save about
 two hours worth of work.  Furthermore, the shell pipeline is just about
 as efficient as the C program would be, and it is much more efficient in
 terms of programmer time.  People time is much more expensive than
-computer time, and in our modern “there’s never enough time to do
-everything” society, saving two hours of programmer time is no mean
+computer time, and in our modern "there's never enough time to do
+everything" society, saving two hours of programmer time is no mean
 feat.
 
    Second, it is also important to emphasize that with the _combination_
@@ -17682,11 +17682,11 @@ use your command, without having to remember the fancy plumbing you set
 up for them.  In terms of how you run them, shell scripts and compiled
 programs are indistinguishable.
 
-   After the previous warm-up exercise, we’ll look at two additional,
+   After the previous warm-up exercise, we'll look at two additional,
 more complicated pipelines.  For them, we need to introduce two more
 tools.
 
-   The first is the ‘tr’ command, which stands for “transliterate.” The
+   The first is the ‘tr’ command, which stands for "transliterate."  The
 ‘tr’ command works on a character-by-character basis, changing
 characters.  Normally it is used for things like mapping upper case to
 lower case:
@@ -17708,8 +17708,8 @@ lower case:
 
    We will be using all three options in a moment.
 
-   The other command we’ll look at is ‘comm’.  The ‘comm’ command takes
-two sorted input files as input data, and prints out the files’ lines in
+   The other command we'll look at is ‘comm’.  The ‘comm’ command takes
+two sorted input files as input data, and prints out the files' lines in
 three columns.  The output columns are the data lines unique to the
 first file, the data lines unique to the second file, and the data lines
 that are common to both.  The ‘-1’, ‘-2’, and ‘-3’ command line options
@@ -17737,18 +17737,18 @@ little getting used to.)  For example:
    The file name ‘-’ tells ‘comm’ to read standard input instead of a
 regular file.
 
-   Now we’re ready to build a fancy pipeline.  The first application is
+   Now we're ready to build a fancy pipeline.  The first application is
 a word frequency counter.  This helps an author determine if he or she
 is over-using certain words.
 
    The first step is to change the case of all the letters in our input
-file to one case.  “The” and “the” are the same word when doing
+file to one case.  "The" and "the" are the same word when doing
 counting.
 
      $ tr '[:upper:]' '[:lower:]' < whats.gnu | ...
 
    The next step is to get rid of punctuation.  Quoted words and
-unquoted words should be treated identically; it’s easiest to just get
+unquoted words should be treated identically; it's easiest to just get
 the punctuation out of the way.
 
      $ tr '[:upper:]' '[:lower:]' < whats.gnu | tr -cd '[:alnum:]_ \n' | ...
@@ -17770,12 +17770,12 @@ will see shortly.
 
    This command turns blanks into newlines.  The ‘-s’ option squeezes
 multiple newline characters in the output into just one, removing blank
-lines.  (The ‘>’ is the shell’s “secondary prompt.” This is what the
-shell prints when it notices you haven’t finished typing in all of a
+lines.  (The ‘>’ is the shell's "secondary prompt."  This is what the
+shell prints when it notices you haven't finished typing in all of a
 command.)
 
    We now have data consisting of one word per line, no punctuation, all
-one case.  We’re ready to count each word:
+one case.  We're ready to count each word:
 
      $ tr '[:upper:]' '[:lower:]' < whats.gnu | tr -cd '[:alnum:]_ \n' |
      > tr -s ' ' '\n' | sort | uniq -c | ...
@@ -17812,14 +17812,14 @@ with the help of two more ‘sort’ options:
      ⊣     51 and
      ...
 
-   Whew!  That’s a lot to digest.  Yet, the same principles apply.  With
+   Whew!  That's a lot to digest.  Yet, the same principles apply.  With
 six commands, on two lines (really one long one split for convenience),
-we’ve created a program that does something interesting and useful, in
+we've created a program that does something interesting and useful, in
 much less time than we could have written a C program to do the same
 thing.
 
    A minor modification to the above pipeline can give us a simple
-spelling checker!  To determine if you’ve spelled a word correctly, all
+spelling checker!  To determine if you've spelled a word correctly, all
 you have to do is look it up in a dictionary.  If it is not there, then
 chances are that your spelling is incorrect.  So, we need a dictionary.
 The conventional location for a dictionary is ‘/usr/share/dict/words’.
@@ -17868,9 +17868,9 @@ spelling checker on Unix.
      a data manipulation language, another advanced tool
 
    The software tools philosophy also espoused the following bit of
-advice: “Let someone else do the hard part.” This means, take something
+advice: "Let someone else do the hard part."  This means, take something
 that gives you most of what you need, and then massage it the rest of
-the way until it’s in the form that you want.
+the way until it's in the form that you want.
 
    To summarize:
 
@@ -17881,12 +17881,12 @@ the way until it’s in the form that you want.
      novel uses of programs that the authors might never have imagined.
 
   3. Programs should never print extraneous header or trailer data,
-     since these could get sent on down a pipeline.  (A point we didn’t
+     since these could get sent on down a pipeline.  (A point we didn't
      mention earlier.)
 
   4. Let someone else do the hard part.
 
-  5. Know your toolbox!  Use each program appropriately.  If you don’t
+  5. Know your toolbox!  Use each program appropriately.  If you don't
      have an appropriate tool, build one.
 
    All the programs discussed are available as described in GNU core
@@ -17900,14 +17900,14 @@ This book showed how to write and use software tools.  It was written in
 FORtran).  At the time, C was not as ubiquitous as it is now; FORTRAN
 was.  The last chapter presented a ‘ratfor’ to FORTRAN processor,
 written in ‘ratfor’.  ‘ratfor’ looks an awful lot like C; if you know C,
-you won’t have any problem following the code.
+you won't have any problem following the code.
 
    In 1981, the book was updated and made available as ‘Software Tools
 in Pascal’ (Addison-Wesley, ISBN 0-201-10342-7).  Both books are still
-in print and are well worth reading if you’re a programmer.  They
+in print and are well worth reading if you're a programmer.  They
 certainly made a major change in how I view programming.
 
-   The programs in both books are available from Brian Kernighan’s home
+   The programs in both books are available from Brian Kernighan's home
 page (https://www.cs.princeton.edu/~bwk/).  For a number of years, there
 was an active Software Tools Users Group, whose members had ported the
 original ‘ratfor’ programs to essentially every computer system with a
@@ -17949,7 +17949,7 @@ Appendix A GNU Free Documentation License
      author and publisher a way to get credit for their work, while not
      being considered responsible for modifications made by others.
 
-     This License is a kind of “copyleft”, which means that derivative
+     This License is a kind of "copyleft", which means that derivative
      works of the document must themselves be free in the same sense.
      It complements the GNU General Public License, which is a copyleft
      license designed for free software.
@@ -17970,18 +17970,18 @@ Appendix A GNU Free Documentation License
      be distributed under the terms of this License.  Such a notice
      grants a world-wide, royalty-free license, unlimited in duration,
      to use that work under the conditions stated herein.  The
-     “Document”, below, refers to any such manual or work.  Any member
-     of the public is a licensee, and is addressed as “you”.  You accept
+     "Document", below, refers to any such manual or work.  Any member
+     of the public is a licensee, and is addressed as "you".  You accept
      the license if you copy, modify or distribute the work in a way
      requiring permission under copyright law.
 
-     A “Modified Version” of the Document means any work containing the
+     A "Modified Version" of the Document means any work containing the
      Document or a portion of it, either copied verbatim, or with
      modifications and/or translated into another language.
 
-     A “Secondary Section” is a named appendix or a front-matter section
+     A "Secondary Section" is a named appendix or a front-matter section
      of the Document that deals exclusively with the relationship of the
-     publishers or authors of the Document to the Document’s overall
+     publishers or authors of the Document to the Document's overall
      subject (or to related matters) and contains nothing that could
      fall directly within that overall subject.  (Thus, if the Document
      is in part a textbook of mathematics, a Secondary Section may not
@@ -17990,7 +17990,7 @@ Appendix A GNU Free Documentation License
      of legal, commercial, philosophical, ethical or political position
      regarding them.
 
-     The “Invariant Sections” are certain Secondary Sections whose
+     The "Invariant Sections" are certain Secondary Sections whose
      titles are designated, as being those of Invariant Sections, in the
      notice that says that the Document is released under this License.
      If a section does not fit the above definition of Secondary then it
@@ -17998,13 +17998,13 @@ Appendix A GNU Free Documentation License
      contain zero Invariant Sections.  If the Document does not identify
      any Invariant Sections then there are none.
 
-     The “Cover Texts” are certain short passages of text that are
+     The "Cover Texts" are certain short passages of text that are
      listed, as Front-Cover Texts or Back-Cover Texts, in the notice
      that says that the Document is released under this License.  A
      Front-Cover Text may be at most 5 words, and a Back-Cover Text may
      be at most 25 words.
 
-     A “Transparent” copy of the Document means a machine-readable copy,
+     A "Transparent" copy of the Document means a machine-readable copy,
      represented in a format whose specification is available to the
      general public, that is suitable for revising the document
      straightforwardly with generic text editors or (for images composed
@@ -18016,7 +18016,7 @@ Appendix A GNU Free Documentation License
      been arranged to thwart or discourage subsequent modification by
      readers is not Transparent.  An image format is not Transparent if
      used for any substantial amount of text.  A copy that is not
-     “Transparent” is called “Opaque”.
+     "Transparent" is called "Opaque".
 
      Examples of suitable formats for Transparent copies include plain
      ASCII without markup, Texinfo input format, LaTeX input format,
@@ -18029,23 +18029,23 @@ Appendix A GNU Free Documentation License
      the machine-generated HTML, PostScript or PDF produced by some word
      processors for output purposes only.
 
-     The “Title Page” means, for a printed book, the title page itself,
+     The "Title Page" means, for a printed book, the title page itself,
      plus such following pages as are needed to hold, legibly, the
      material this License requires to appear in the title page.  For
-     works in formats which do not have any title page as such, “Title
-     Page” means the text near the most prominent appearance of the
-     work’s title, preceding the beginning of the body of the text.
+     works in formats which do not have any title page as such, "Title
+     Page" means the text near the most prominent appearance of the
+     work's title, preceding the beginning of the body of the text.
 
-     The “publisher” means any person or entity that distributes copies
+     The "publisher" means any person or entity that distributes copies
      of the Document to the public.
 
-     A section “Entitled XYZ” means a named subunit of the Document
+     A section "Entitled XYZ" means a named subunit of the Document
      whose title either is precisely XYZ or contains XYZ in parentheses
      following text that translates XYZ in another language.  (Here XYZ
      stands for a specific section name mentioned below, such as
-     “Acknowledgements”, “Dedications”, “Endorsements”, or “History”.)
-     To “Preserve the Title” of such a section when you modify the
-     Document means that it remains a section “Entitled XYZ” according
+     "Acknowledgements", "Dedications", "Endorsements", or "History".)
+     To "Preserve the Title" of such a section when you modify the
+     Document means that it remains a section "Entitled XYZ" according
      to this definition.
 
      The Document may include Warranty Disclaimers next to the notice
@@ -18075,7 +18075,7 @@ Appendix A GNU Free Documentation License
 
      If you publish printed copies (or copies in media that commonly
      have printed covers) of the Document, numbering more than 100, and
-     the Document’s license notice requires Cover Texts, you must
+     the Document's license notice requires Cover Texts, you must
      enclose the copies in covers that carry, clearly and legibly, all
      these Cover Texts: Front-Cover Texts on the front cover, and
      Back-Cover Texts on the back cover.  Both covers must also clearly
@@ -18147,15 +18147,15 @@ Appendix A GNU Free Documentation License
           the Addendum below.
 
        G. Preserve in that license notice the full lists of Invariant
-          Sections and required Cover Texts given in the Document’s
+          Sections and required Cover Texts given in the Document's
           license notice.
 
        H. Include an unaltered copy of this License.
 
-       I. Preserve the section Entitled “History”, Preserve its Title,
+       I. Preserve the section Entitled "History", Preserve its Title,
           and add to it an item stating at least the title, year, new
           authors, and publisher of the Modified Version as given on the
-          Title Page.  If there is no section Entitled “History” in the
+          Title Page.  If there is no section Entitled "History" in the
           Document, create one stating the title, year, authors, and
           publisher of the Document as given on its Title Page, then add
           an item describing the Modified Version as stated in the
@@ -18165,12 +18165,12 @@ Appendix A GNU Free Documentation License
           for public access to a Transparent copy of the Document, and
           likewise the network locations given in the Document for
           previous versions it was based on.  These may be placed in the
-          “History” section.  You may omit a network location for a work
+          "History" section.  You may omit a network location for a work
           that was published at least four years before the Document
           itself, or if the original publisher of the version it refers
           to gives permission.
 
-       K. For any section Entitled “Acknowledgements” or “Dedications”,
+       K. For any section Entitled "Acknowledgements" or "Dedications",
           Preserve the Title of the section, and preserve in the section
           all the substance and tone of each of the contributor
           acknowledgements and/or dedications given therein.
@@ -18179,11 +18179,11 @@ Appendix A GNU Free Documentation License
           in their text and in their titles.  Section numbers or the
           equivalent are not considered part of the section titles.
 
-       M. Delete any section Entitled “Endorsements”.  Such a section
+       M. Delete any section Entitled "Endorsements".  Such a section
           may not be included in the Modified Version.
 
        N. Do not retitle any existing section to be Entitled
-          “Endorsements” or to conflict in title with any Invariant
+          "Endorsements" or to conflict in title with any Invariant
           Section.
 
        O. Preserve any Warranty Disclaimers.
@@ -18192,15 +18192,15 @@ Appendix A GNU Free Documentation License
      appendices that qualify as Secondary Sections and contain no
      material copied from the Document, you may at your option designate
      some or all of these sections as invariant.  To do this, add their
-     titles to the list of Invariant Sections in the Modified Version’s
+     titles to the list of Invariant Sections in the Modified Version's
      license notice.  These titles must be distinct from any other
      section titles.
 
-     You may add a section Entitled “Endorsements”, provided it contains
+     You may add a section Entitled "Endorsements", provided it contains
      nothing but endorsements of your Modified Version by various
-     parties—for example, statements of peer review or that the text has
-     been approved by an organization as the authoritative definition of
-     a standard.
+     parties--for example, statements of peer review or that the text
+     has been approved by an organization as the authoritative
+     definition of a standard.
 
      You may add a passage of up to five words as a Front-Cover Text,
      and a passage of up to 25 words as a Back-Cover Text, to the end of
@@ -18238,10 +18238,10 @@ Appendix A GNU Free Documentation License
      combined work.
 
      In the combination, you must combine any sections Entitled
-     “History” in the various original documents, forming one section
-     Entitled “History”; likewise combine any sections Entitled
-     “Acknowledgements”, and any sections Entitled “Dedications”.  You
-     must delete all sections Entitled “Endorsements.”
+     "History" in the various original documents, forming one section
+     Entitled "History"; likewise combine any sections Entitled
+     "Acknowledgements", and any sections Entitled "Dedications".  You
+     must delete all sections Entitled "Endorsements."
 
   6. COLLECTIONS OF DOCUMENTS
 
@@ -18262,16 +18262,16 @@ Appendix A GNU Free Documentation License
 
      A compilation of the Document or its derivatives with other
      separate and independent documents or works, in or on a volume of a
-     storage or distribution medium, is called an “aggregate” if the
+     storage or distribution medium, is called an "aggregate" if the
      copyright resulting from the compilation is not used to limit the
-     legal rights of the compilation’s users beyond what the individual
+     legal rights of the compilation's users beyond what the individual
      works permit.  When the Document is included in an aggregate, this
      License does not apply to the other works in the aggregate which
      are not themselves derivative works of the Document.
 
      If the Cover Text requirement of section 3 is applicable to these
      copies of the Document, then if the Document is less than one half
-     of the entire aggregate, the Document’s Cover Texts may be placed
+     of the entire aggregate, the Document's Cover Texts may be placed
      on covers that bracket the Document within the aggregate, or the
      electronic equivalent of covers if the Document is in electronic
      form.  Otherwise they must appear on printed covers that bracket
@@ -18293,8 +18293,8 @@ Appendix A GNU Free Documentation License
      this License or a notice or disclaimer, the original version will
      prevail.
 
-     If a section in the Document is Entitled “Acknowledgements”,
-     “Dedications”, or “History”, the requirement (section 4) to
+     If a section in the Document is Entitled "Acknowledgements",
+     "Dedications", or "History", the requirement (section 4) to
      Preserve its Title (section 1) will typically require changing the
      actual title.
 
@@ -18335,7 +18335,7 @@ Appendix A GNU Free Documentation License
 
      Each version of the License is given a distinguishing version
      number.  If the Document specifies that a particular numbered
-     version of this License “or any later version” applies to it, you
+     version of this License "or any later version" applies to it, you
      have the option of following the terms and conditions either of
      that specified version or of any later version that has been
      published (not as a draft) by the Free Software Foundation.  If the
@@ -18343,29 +18343,29 @@ Appendix A GNU Free Documentation License
      choose any version ever published (not as a draft) by the Free
      Software Foundation.  If the Document specifies that a proxy can
      decide which future versions of this License can be used, that
-     proxy’s public statement of acceptance of a version permanently
+     proxy's public statement of acceptance of a version permanently
      authorizes you to choose that version for the Document.
 
   11. RELICENSING
 
-     “Massive Multiauthor Collaboration Site” (or “MMC Site”) means any
+     "Massive Multiauthor Collaboration Site" (or "MMC Site") means any
      World Wide Web server that publishes copyrightable works and also
      provides prominent facilities for anybody to edit those works.  A
      public wiki that anybody can edit is an example of such a server.
-     A “Massive Multiauthor Collaboration” (or “MMC”) contained in the
+     A "Massive Multiauthor Collaboration" (or "MMC") contained in the
      site means any set of copyrightable works thus published on the MMC
      site.
 
-     “CC-BY-SA” means the Creative Commons Attribution-Share Alike 3.0
+     "CC-BY-SA" means the Creative Commons Attribution-Share Alike 3.0
      license published by Creative Commons Corporation, a not-for-profit
      corporation with a principal place of business in San Francisco,
      California, as well as future copyleft versions of that license
      published by that same organization.
 
-     “Incorporate” means to publish or republish a Document, in whole or
+     "Incorporate" means to publish or republish a Document, in whole or
      in part, as part of another Document.
 
-     An MMC is “eligible for relicensing” if it is licensed under this
+     An MMC is "eligible for relicensing" if it is licensed under this
      License, and if all works that were first published under this
      License somewhere other than this MMC, and subsequently
      incorporated in whole or in part into the MMC, (1) had no cover
@@ -18392,7 +18392,7 @@ notices just after the title page:
        Free Documentation License''.
 
    If you have Invariant Sections, Front-Cover Texts and Back-Cover
-Texts, replace the “with...Texts.” line with this:
+Texts, replace the "with...Texts." line with this:
 
          with the Invariant Sections being LIST THEIR TITLES, with
          the Front-Cover Texts being LIST, and with the Back-Cover Texts
@@ -18416,21 +18416,15 @@ Index
  [index ]
 * Menu:
 
-* !:                                     Connectives for test.
-                                                              (line  23)
-* !=:                                    String tests.        (line  29)
-* %:                                     Numeric expressions. (line  16)
-* %b:                                    printf invocation.   (line  37)
-* %q:                                    printf invocation.   (line  44)
-* &:                                     Relations for expr.  (line  17)
-* *:                                     Numeric expressions. (line  16)
-* +:                                     String expressions.  (line  51)
-* + <1>:                                 Numeric expressions. (line  12)
-* +PAGE_RANGE:                           pr invocation.       (line  39)
+* _POSIX2_VERSION:                       Standards conformance.
+                                                              (line  20)
+* _POSIX2_VERSION <1>:                   tail invocation.     (line 205)
+* _POSIX2_VERSION <2>:                   sort invocation.     (line 421)
+* _POSIX2_VERSION <3>:                   uniq invocation.     (line  47)
+* _POSIX2_VERSION <4>:                   touch invocation.    (line 107)
 * -:                                     Numeric expressions. (line  12)
 * - <1>:                                 env invocation.      (line 102)
 * - and Unix rm:                         rm invocation.       (line 114)
-* -, removing files beginning with:      rm invocation.       (line 102)
 * --:                                    Common options.      (line  43)
 * --across:                              pr invocation.       (line  62)
 * --additional-suffix:                   split invocation.    (line 139)
@@ -18828,8 +18822,8 @@ Index
 * --output-tabs:                         pr invocation.       (line 117)
 * --owner:                               install invocation.  (line  95)
 * --padding:                             numfmt invocation.   (line  87)
-* --pages=PAGE_RANGE:                    pr invocation.       (line  39)
 * --page_width:                          pr invocation.       (line 239)
+* --pages=PAGE_RANGE:                    pr invocation.       (line  39)
 * --parallel:                            sort invocation.     (line 366)
 * --parents:                             cp invocation.       (line 249)
 * --parents <1>:                         mkdir invocation.    (line  36)
@@ -19144,6 +19138,7 @@ Index
 * --zero-terminated <8>:                 General options in join.
                                                               (line  93)
 * --zero-terminated <9>:                 numfmt invocation.   (line 115)
+* -, removing files beginning with:      rm invocation.       (line 102)
 * -0:                                    du invocation.       (line  25)
 * -0 <1>:                                printenv invocation. (line  19)
 * -0 <2>:                                env invocation.      (line  90)
@@ -19766,7 +19761,36 @@ Index
 * -Z <7>:                                id invocation.       (line  51)
 * -z <17>:                               id invocation.       (line  58)
 * -z <18>:                               numfmt invocation.   (line 115)
+* !:                                     Connectives for test.
+                                                              (line  23)
+* !=:                                    String tests.        (line  29)
+* *:                                     Numeric expressions. (line  16)
 * /:                                     Numeric expressions. (line  16)
+* \? regexp operator:                    String expressions.  (line  27)
+* \( regexp operator:                    String expressions.  (line  23)
+* \+ regexp operator:                    String expressions.  (line  27)
+* \| regexp operator:                    String expressions.  (line  27)
+* \c:                                    printf invocation.   (line  28)
+* \OOO:                                  printf invocation.   (line  67)
+* \uhhhh:                                printf invocation.   (line  74)
+* \Uhhhhhhhh:                            printf invocation.   (line  74)
+* \xHH:                                  printf invocation.   (line  67)
+* &:                                     Relations for expr.  (line  17)
+* %:                                     Numeric expressions. (line  16)
+* %b:                                    printf invocation.   (line  37)
+* %q:                                    printf invocation.   (line  44)
+* +:                                     String expressions.  (line  51)
+* + <1>:                                 Numeric expressions. (line  12)
+* +PAGE_RANGE:                           pr invocation.       (line  39)
+* <:                                     Relations for expr.  (line  22)
+* <=:                                    Relations for expr.  (line  22)
+* =:                                     Relations for expr.  (line  22)
+* = <1>:                                 String tests.        (line  22)
+* ==:                                    Relations for expr.  (line  22)
+* == <1>:                                String tests.        (line  25)
+* >:                                     Relations for expr.  (line  22)
+* >=:                                    Relations for expr.  (line  22)
+* |:                                     Relations for expr.  (line  11)
 * 128-bit checksum:                      md5sum invocation.   (line   6)
 * 16-bit checksum:                       sum invocation.      (line   6)
 * 160-bit checksum:                      sha1sum invocation.  (line   6)
@@ -19776,30 +19800,6 @@ Index
 * 384-bit checksum:                      sha2 utilities.      (line   6)
 * 512-bit checksum:                      b2sum invocation.    (line   6)
 * 512-bit checksum <1>:                  sha2 utilities.      (line   6)
-* <:                                     Relations for expr.  (line  22)
-* <=:                                    Relations for expr.  (line  22)
-* =:                                     Relations for expr.  (line  22)
-* = <1>:                                 String tests.        (line  22)
-* ==:                                    Relations for expr.  (line  22)
-* == <1>:                                String tests.        (line  25)
-* >:                                     Relations for expr.  (line  22)
-* >=:                                    Relations for expr.  (line  22)
-* \( regexp operator:                    String expressions.  (line  23)
-* \+ regexp operator:                    String expressions.  (line  27)
-* \? regexp operator:                    String expressions.  (line  27)
-* \c:                                    printf invocation.   (line  28)
-* \OOO:                                  printf invocation.   (line  67)
-* \uhhhh:                                printf invocation.   (line  74)
-* \Uhhhhhhhh:                            printf invocation.   (line  74)
-* \xHH:                                  printf invocation.   (line  67)
-* \| regexp operator:                    String expressions.  (line  27)
-* _POSIX2_VERSION:                       Standards conformance.
-                                                              (line  20)
-* _POSIX2_VERSION <1>:                   tail invocation.     (line 205)
-* _POSIX2_VERSION <2>:                   sort invocation.     (line 421)
-* _POSIX2_VERSION <3>:                   uniq invocation.     (line  47)
-* _POSIX2_VERSION <4>:                   touch invocation.    (line 107)
-* |:                                     Relations for expr.  (line  11)
 * abbreviations for months:              Calendar date items. (line  36)
 * access control lists (ACLs):           cp invocation.       (line 178)
 * access control lists (ACLs) <1>:       cp invocation.       (line 220)
@@ -19932,8 +19932,8 @@ Index
 * block special check:                   File type tests.     (line  10)
 * block special files:                   mknod invocation.    (line  11)
 * block special files, creating:         mknod invocation.    (line   6)
-* BLOCKSIZE:                             Block size.          (line  12)
 * BLOCK_SIZE:                            Block size.          (line  12)
+* BLOCKSIZE:                             Block size.          (line  12)
 * body, numbering:                       nl invocation.       (line  17)
 * Bourne shell syntax for color setup:   dircolors invocation.
                                                               (line  34)
@@ -20604,13 +20604,6 @@ Index
 * last in date strings:                  General date syntax. (line  22)
 * last modified dates, displaying in du: du invocation.       (line 195)
 * last part of files, outputting:        tail invocation.     (line   6)
-* lcase:                                 Combination.         (line  71)
-* LCASE:                                 Combination.         (line  71)
-* lcase, converting to:                  dd invocation.       (line 172)
-* lchown:                                chown invocation.    (line 107)
-* lchown <1>:                            chown invocation.    (line 119)
-* lchown <2>:                            chgrp invocation.    (line  34)
-* lchown <3>:                            chgrp invocation.    (line  46)
 * LC_ALL:                                sort invocation.     (line  23)
 * LC_ALL <1>:                            ls invocation.       (line  17)
 * LC_COLLATE:                            sort invocation.     (line  23)
@@ -20641,6 +20634,13 @@ Index
                                                               (line  97)
 * LC_TIME <5>:                           du invocation.       (line 217)
 * LC_TIME <6>:                           date invocation.     (line  15)
+* lcase:                                 Combination.         (line  71)
+* LCASE:                                 Combination.         (line  71)
+* lcase, converting to:                  dd invocation.       (line 172)
+* lchown:                                chown invocation.    (line 107)
+* lchown <1>:                            chown invocation.    (line 119)
+* lchown <2>:                            chgrp invocation.    (line  34)
+* lchown <3>:                            chgrp invocation.    (line  46)
 * leading directories, creating missing: install invocation.  (line  67)
 * leading directory components, stripping: basename invocation.
                                                               (line   6)
@@ -20765,10 +20765,10 @@ Index
 * MS-DOS file system:                    df invocation.       (line 220)
 * MS-Windows file system:                df invocation.       (line 220)
 * mtime:                                 File timestamps.     (line   6)
-* mtime, changing:                       touch invocation.    (line  85)
-* mtime, printing or sorting files by:   Sorting the output.  (line  50)
 * mtime-greater-atime file check:        File characteristic tests.
                                                               (line  27)
+* mtime, changing:                       touch invocation.    (line  85)
+* mtime, printing or sorting files by:   Sorting the output.  (line  50)
 * multicall:                             Multi-call invocation.
                                                               (line   6)
 * multicolumn output, generating:        pr invocation.       (line   6)
@@ -20804,6 +20804,7 @@ Index
 * nl <1>:                                Combination.         (line  18)
 * nlN:                                   Output.              (line  39)
 * no dereference:                        chcon invocation.    (line  26)
+* NO_NEW_PRIVS:                          runcon invocation.   (line  22)
 * no-op:                                 true invocation.     (line   6)
 * noatime:                               dd invocation.       (line 324)
 * nocache:                               dd invocation.       (line 292)
@@ -20844,7 +20845,6 @@ Index
 * now in date strings:                   Relative items in date strings.
                                                               (line  33)
 * noxfer dd status=:                     dd invocation.       (line 105)
-* NO_NEW_PRIVS:                          runcon invocation.   (line  22)
 * nproc:                                 nproc invocation.    (line   6)
 * NTFS file system:                      df invocation.       (line 220)
 * ntfs file system file:                 df invocation.       (line 220)
@@ -21026,7 +21026,7 @@ Index
 * printing the host identifier:          hostid invocation.   (line   6)
 * printing the hostname:                 hostname invocation. (line   6)
 * printing the system uptime and load:   uptime invocation.   (line   6)
-* printing user’s login name:            logname invocation.  (line   6)
+* printing user's login name:            logname invocation.  (line   6)
 * printing, preparing files for:         pr invocation.       (line   6)
 * process zero-terminated items:         head invocation.     (line  55)
 * process zero-terminated items <1>:     tail invocation.     (line 190)
@@ -21257,8 +21257,8 @@ Index
 * sort field:                            sort invocation.     (line 237)
 * sort stability:                        sort invocation.     (line  12)
 * sort stability <1>:                    sort invocation.     (line 315)
-* sort’s last-resort comparison:         sort invocation.     (line  12)
-* sort’s last-resort comparison <1>:     sort invocation.     (line 315)
+* sort's last-resort comparison:         sort invocation.     (line  12)
+* sort's last-resort comparison <1>:     sort invocation.     (line 315)
 * sorted files, operations on:           Operating on sorted files.
                                                               (line   6)
 * sorting files:                         sort invocation.     (line   6)
@@ -21462,14 +21462,14 @@ Index
 * time zone correction:                  Time of day items.   (line  29)
 * time zone item:                        General date syntax. (line  40)
 * time zone item <1>:                    Time zone items.     (line   6)
+* TIME_STYLE:                            Formatting file timestamps.
+                                                              (line 103)
+* TIME_STYLE <1>:                        du invocation.       (line 240)
 * time, printing or setting:             date invocation.     (line   6)
 * timeout:                               timeout invocation.  (line   6)
 * timestamps of installed files, preserving: install invocation.
                                                               (line 107)
 * timestamps, changing file:             touch invocation.    (line   6)
-* TIME_STYLE:                            Formatting file timestamps.
-                                                              (line 103)
-* TIME_STYLE <1>:                        du invocation.       (line 240)
 * TMPDIR:                                sort invocation.     (line  64)
 * TMPDIR <1>:                            sort invocation.     (line 358)
 * today in date strings:                 Relative items in date strings.
@@ -21557,13 +21557,13 @@ Index
 * version number sort:                   sort invocation.     (line 183)
 * version number, finding:               Common options.      (line  40)
 * version of kernel:                     uname invocation.    (line  77)
-* version, sorting option for ls:        Sorting the output.  (line  71)
-* version-control Emacs variable:        Backup options.      (line  24)
 * VERSION_CONTROL:                       Backup options.      (line  13)
 * VERSION_CONTROL <1>:                   cp invocation.       (line  79)
 * VERSION_CONTROL <2>:                   install invocation.  (line  41)
 * VERSION_CONTROL <3>:                   mv invocation.       (line  56)
 * VERSION_CONTROL <4>:                   ln invocation.       (line  82)
+* version-control Emacs variable:        Backup options.      (line  24)
+* version, sorting option for ls:        Sorting the output.  (line  71)
 * vertical sorted files in columns:      General output formatting.
                                                               (line  21)
 * vtN:                                   Output.              (line  59)
@@ -21605,262 +21605,262 @@ Index
 
 
 Tag Table:
-Node: Top8616
-Node: Introduction23304
-Node: Common options25185
-Node: Backup options28636
-Node: Block size30662
-Node: Signal specifications36347
-Node: Disambiguating names and IDs38513
-Node: Random sources40157
-Node: Target directory42166
-Node: Trailing slashes45816
-Node: Traversing symlinks46855
-Node: Treating / specially47985
-Node: Special built-in utilities49617
-Node: Exit status50806
-Node: Floating point51681
-Node: Standards conformance53543
-Node: Multi-call invocation55277
-Node: Output of entire files55839
-Node: cat invocation56576
-Node: tac invocation58574
-Node: nl invocation60007
-Node: od invocation64287
-Node: base32 invocation72123
-Node: base64 invocation72722
-Node: basenc invocation74296
-Node: Formatting file contents77979
-Node: fmt invocation78430
-Node: pr invocation81423
-Node: fold invocation93699
-Node: Output of parts of files95214
-Node: head invocation95711
-Node: tail invocation98657
-Node: split invocation109890
-Node: csplit invocation118398
-Node: Summarizing files123884
-Node: wc invocation124595
-Node: sum invocation129058
-Node: cksum invocation130398
-Node: cksum output modes131551
-Node: cksum general options133473
-Node: cksum common options136178
-Node: md5sum invocation141927
-Node: b2sum invocation143455
-Node: sha1sum invocation144515
-Node: sha2 utilities145929
-Node: Operating on sorted files146799
-Node: sort invocation147386
-Ref: sort invocation-Footnote-1173774
-Node: shuf invocation174384
-Node: uniq invocation177585
-Node: comm invocation183726
-Node: ptx invocation187828
-Node: General options in ptx190662
-Node: Charset selection in ptx191262
-Node: Input processing in ptx192170
-Node: Output formatting in ptx197715
-Node: Compatibility in ptx204551
-Node: tsort invocation207934
-Node: tsort background211138
-Node: Operating on fields212846
-Node: cut invocation213208
-Node: paste invocation217988
-Node: join invocation220160
-Node: General options in join221624
-Node: Sorting files for join226832
-Node: Working with fields228542
-Ref: Working with fields-Footnote-1230124
-Node: Paired and unpaired lines230222
-Node: Header lines233160
-Node: Set operations234071
-Node: Operating on characters235591
-Node: tr invocation236014
-Node: Character arrays237872
-Node: Translating244093
-Node: Squeezing and deleting246250
-Node: expand invocation249240
-Node: unexpand invocation251408
-Node: Directory listing253929
-Node: ls invocation254427
-Ref: ls invocation-Footnote-1256594
-Node: Which files are listed256838
-Node: What information is listed260866
-Node: Sorting the output270742
-Node: General output formatting273930
-Node: Formatting file timestamps281563
-Node: Formatting the file names287166
-Node: dir invocation290522
-Node: vdir invocation290949
-Node: dircolors invocation291374
-Node: Basic operations293308
-Node: cp invocation293928
-Node: dd invocation313748
-Node: install invocation333088
-Node: mv invocation339574
-Node: rm invocation345819
-Node: shred invocation350736
-Node: Special file types361099
-Node: link invocation362630
-Node: ln invocation363887
-Node: mkdir invocation373043
-Node: mkfifo invocation376098
-Node: mknod invocation377573
-Node: readlink invocation380122
-Node: rmdir invocation382681
-Node: unlink invocation384301
-Node: Changing file attributes385295
-Node: chown invocation386121
-Node: chgrp invocation393591
-Node: chmod invocation397833
-Node: touch invocation401350
-Node: File space usage407061
-Node: df invocation407765
-Node: du invocation417602
-Node: stat invocation429725
-Node: sync invocation439469
-Node: truncate invocation441661
-Node: Printing text443719
-Node: echo invocation444099
-Node: printf invocation447352
-Node: yes invocation453398
-Node: Conditions454050
-Node: false invocation454645
-Node: true invocation455734
-Node: test invocation457067
-Node: File type tests459240
-Node: Access permission tests460159
-Node: File characteristic tests461073
-Node: String tests461964
-Node: Numeric tests462803
-Node: Connectives for test463638
-Node: expr invocation464892
-Node: String expressions467359
-Node: Numeric expressions470026
-Node: Relations for expr470734
-Node: Examples of expr471963
-Node: Redirection472712
-Node: tee invocation473179
-Node: File name manipulation480274
-Node: basename invocation480849
-Node: dirname invocation483068
-Node: pathchk invocation484885
-Node: mktemp invocation486699
-Node: realpath invocation492517
-Node: Realpath usage examples495580
-Node: Working context497395
-Node: pwd invocation498039
-Node: stty invocation499460
-Node: Control502445
-Node: Input503521
-Node: Output505275
-Node: Local506693
-Node: Combination508780
-Node: Characters511192
-Node: Special513027
-Node: printenv invocation515425
-Node: tty invocation516436
-Node: User information517170
-Node: id invocation517805
-Node: logname invocation520518
-Node: whoami invocation521175
-Node: groups invocation521686
-Node: users invocation522921
-Node: who invocation524101
-Node: System context527436
-Node: date invocation528101
-Node: Date format specifiers529444
-Node: Time conversion specifiers530302
-Node: Date conversion specifiers533049
-Node: Literal conversion specifiers536525
-Node: Padding and other flags536908
-Node: Setting the time540538
-Node: Options for date541701
-Node: Examples of date547351
-Ref: %s-examples548853
-Node: arch invocation552125
-Node: nproc invocation552684
-Node: uname invocation553904
-Node: hostname invocation556632
-Node: hostid invocation557462
-Node: uptime invocation558335
-Node: SELinux context559817
-Node: chcon invocation560192
-Node: runcon invocation562597
-Node: Modified command invocation564378
-Node: chroot invocation565070
-Ref: chroot invocation-Footnote-1568964
-Node: env invocation569481
-Node: nice invocation586342
-Node: nohup invocation590475
-Node: stdbuf invocation592977
-Node: timeout invocation595929
-Node: Process control600721
-Node: kill invocation600944
-Node: Delaying604138
-Node: sleep invocation604335
-Node: Numeric operations605751
-Node: factor invocation606136
-Node: numfmt invocation608104
-Node: seq invocation620199
-Node: File permissions624597
-Node: Mode Structure625290
-Node: Symbolic Modes628969
-Node: Setting Permissions630087
-Node: Copying Permissions632753
-Node: Changing Special Mode Bits633623
-Node: Conditional Executability635505
-Node: Multiple Changes636057
-Node: Umask and Protection637730
-Node: Numeric Modes638875
-Node: Operator Numeric Modes641221
-Node: Directory Setuid and Setgid642281
-Node: File timestamps645136
-Node: Date input formats648459
-Node: General date syntax650948
-Node: Calendar date items654080
-Node: Time of day items656075
-Node: Time zone items658379
-Node: Combined date and time of day items659780
-Node: Day of week items660651
-Node: Relative items in date strings661735
-Node: Pure numbers in date strings664653
-Node: Seconds since the Epoch665642
-Node: Specifying time zone rules667373
-Node: Authors of parse_datetime670988
-Ref: Authors of get_date671179
-Node: Version sort ordering672178
-Node: Version sort overview672499
-Node: Using version sort in GNU Coreutils673511
-Node: Version sort and natural sort675027
-Node: Variations in version sort order675901
-Node: Version sort implementation676681
-Node: Version-sort ordering rules677492
-Node: Version sort is not the same as numeric sort680289
-Node: Version sort punctuation682327
-Node: Punctuation vs letters683958
-Node: The tilde ~684797
-Node: Version sort ignores locale686156
-Node: Differences from Debian version sort687252
-Node: Hyphen-minus and colon687833
-Node: Special priority in GNU Coreutils version sort689464
-Node: Special handling of file extensions690640
-Node: Comparing two strings using Debian's algorithm695713
-Node: Advanced version sort topics697631
-Node: Reporting version sort bugs697921
-Node: Other version/natural sort implementations699126
-Node: Related source code701275
-Node: Opening the software toolbox702041
-Node: Toolbox introduction702839
-Node: I/O redirection705591
-Node: The who command708479
-Node: The cut command709404
-Node: The sort command710506
-Node: The uniq command711224
-Node: Putting the tools together711939
-Node: GNU Free Documentation License724276
-Node: Concept index749655
+Node: Top8608
+Node: Introduction23288
+Node: Common options25169
+Node: Backup options28618
+Node: Block size30644
+Node: Signal specifications36325
+Node: Disambiguating names and IDs38491
+Node: Random sources40133
+Node: Target directory42142
+Node: Trailing slashes45784
+Node: Traversing symlinks46821
+Node: Treating / specially47951
+Node: Special built-in utilities49581
+Node: Exit status50770
+Node: Floating point51643
+Node: Standards conformance53501
+Node: Multi-call invocation55233
+Node: Output of entire files55795
+Node: cat invocation56532
+Node: tac invocation58530
+Node: nl invocation59963
+Node: od invocation64243
+Node: base32 invocation72071
+Node: base64 invocation72670
+Node: basenc invocation74244
+Node: Formatting file contents77927
+Node: fmt invocation78378
+Node: pr invocation81357
+Node: fold invocation93621
+Node: Output of parts of files95136
+Node: head invocation95633
+Node: tail invocation98579
+Node: split invocation109796
+Node: csplit invocation118302
+Node: Summarizing files123786
+Node: wc invocation124497
+Node: sum invocation128956
+Node: cksum invocation130294
+Node: cksum output modes131447
+Node: cksum general options133367
+Node: cksum common options136072
+Node: md5sum invocation141805
+Node: b2sum invocation143333
+Node: sha1sum invocation144393
+Node: sha2 utilities145807
+Node: Operating on sorted files146677
+Node: sort invocation147264
+Ref: sort invocation-Footnote-1173636
+Node: shuf invocation174244
+Node: uniq invocation177443
+Node: comm invocation183584
+Node: ptx invocation187686
+Node: General options in ptx190518
+Node: Charset selection in ptx191118
+Node: Input processing in ptx192022
+Node: Output formatting in ptx197567
+Node: Compatibility in ptx204403
+Node: tsort invocation207786
+Node: tsort background210988
+Node: Operating on fields212692
+Node: cut invocation213054
+Node: paste invocation217834
+Node: join invocation220006
+Node: General options in join221466
+Node: Sorting files for join226670
+Node: Working with fields228380
+Ref: Working with fields-Footnote-1229962
+Node: Paired and unpaired lines230060
+Node: Header lines232994
+Node: Set operations233905
+Node: Operating on characters235425
+Node: tr invocation235848
+Node: Character arrays237706
+Node: Translating243923
+Node: Squeezing and deleting246080
+Node: expand invocation249060
+Node: unexpand invocation251228
+Node: Directory listing253749
+Node: ls invocation254247
+Ref: ls invocation-Footnote-1256412
+Node: Which files are listed256654
+Node: What information is listed260682
+Node: Sorting the output270546
+Node: General output formatting273732
+Node: Formatting file timestamps281361
+Node: Formatting the file names286960
+Node: dir invocation290316
+Node: vdir invocation290743
+Node: dircolors invocation291168
+Node: Basic operations293102
+Node: cp invocation293722
+Node: dd invocation313532
+Node: install invocation332860
+Node: mv invocation339338
+Node: rm invocation345575
+Node: shred invocation350482
+Node: Special file types360807
+Node: link invocation362330
+Node: ln invocation363587
+Node: mkdir invocation372735
+Node: mkfifo invocation375786
+Node: mknod invocation377261
+Node: readlink invocation379802
+Node: rmdir invocation382361
+Node: unlink invocation383981
+Node: Changing file attributes384975
+Node: chown invocation385799
+Node: chgrp invocation393259
+Node: chmod invocation397501
+Node: touch invocation401012
+Node: File space usage406713
+Node: df invocation407417
+Node: du invocation417250
+Node: stat invocation429357
+Node: sync invocation439003
+Node: truncate invocation441195
+Node: Printing text443253
+Node: echo invocation443633
+Node: printf invocation446884
+Node: yes invocation452926
+Node: Conditions453578
+Node: false invocation454173
+Node: true invocation455260
+Node: test invocation456591
+Node: File type tests458764
+Node: Access permission tests459681
+Node: File characteristic tests460595
+Node: String tests461486
+Node: Numeric tests462325
+Node: Connectives for test463160
+Node: expr invocation464412
+Node: String expressions466875
+Node: Numeric expressions469542
+Node: Relations for expr470250
+Node: Examples of expr471479
+Node: Redirection472228
+Node: tee invocation472691
+Node: File name manipulation479772
+Node: basename invocation480347
+Node: dirname invocation482566
+Node: pathchk invocation484383
+Node: mktemp invocation486195
+Node: realpath invocation492011
+Node: Realpath usage examples495072
+Node: Working context496887
+Node: pwd invocation497531
+Node: stty invocation498950
+Node: Control501925
+Node: Input503001
+Node: Output504755
+Node: Local506173
+Node: Combination508260
+Node: Characters510672
+Node: Special512505
+Node: printenv invocation514901
+Node: tty invocation515912
+Node: User information516646
+Node: id invocation517281
+Node: logname invocation519992
+Node: whoami invocation520647
+Node: groups invocation521158
+Node: users invocation522391
+Node: who invocation523569
+Node: System context526902
+Node: date invocation527567
+Node: Date format specifiers528910
+Node: Time conversion specifiers529768
+Node: Date conversion specifiers532509
+Node: Literal conversion specifiers535973
+Node: Padding and other flags536356
+Node: Setting the time539978
+Node: Options for date541141
+Node: Examples of date546787
+Ref: %s-examples548289
+Node: arch invocation551549
+Node: nproc invocation552108
+Node: uname invocation553328
+Node: hostname invocation556048
+Node: hostid invocation556878
+Node: uptime invocation557745
+Node: SELinux context559223
+Node: chcon invocation559598
+Node: runcon invocation562001
+Node: Modified command invocation563782
+Node: chroot invocation564474
+Ref: chroot invocation-Footnote-1568364
+Node: env invocation568881
+Node: nice invocation585718
+Node: nohup invocation589843
+Node: stdbuf invocation592341
+Node: timeout invocation595291
+Node: Process control600079
+Node: kill invocation600302
+Node: Delaying603496
+Node: sleep invocation603693
+Node: Numeric operations605109
+Node: factor invocation605494
+Node: numfmt invocation607462
+Node: seq invocation619547
+Node: File permissions623945
+Node: Mode Structure624638
+Node: Symbolic Modes628301
+Node: Setting Permissions629415
+Node: Copying Permissions632069
+Node: Changing Special Mode Bits632935
+Node: Conditional Executability634813
+Node: Multiple Changes635365
+Node: Umask and Protection637032
+Node: Numeric Modes638173
+Node: Operator Numeric Modes640515
+Node: Directory Setuid and Setgid641567
+Node: File timestamps644418
+Node: Date input formats647703
+Node: General date syntax650191
+Node: Calendar date items653319
+Node: Time of day items655314
+Node: Time zone items657618
+Node: Combined date and time of day items659017
+Node: Day of week items659888
+Node: Relative items in date strings660972
+Node: Pure numbers in date strings663890
+Node: Seconds since the Epoch664879
+Node: Specifying time zone rules666605
+Node: Authors of parse_datetime670208
+Ref: Authors of get_date670399
+Node: Version sort ordering671398
+Node: Version sort overview671719
+Node: Using version sort in GNU Coreutils672731
+Node: Version sort and natural sort674247
+Node: Variations in version sort order675113
+Node: Version sort implementation675885
+Node: Version-sort ordering rules676690
+Node: Version sort is not the same as numeric sort679487
+Node: Version sort punctuation681517
+Node: Punctuation vs letters683144
+Node: The tilde ~683981
+Node: Version sort ignores locale685336
+Node: Differences from Debian version sort686432
+Node: Hyphen-minus and colon687013
+Node: Special priority in GNU Coreutils version sort688642
+Node: Special handling of file extensions689818
+Node: Comparing two strings using Debian's algorithm694885
+Node: Advanced version sort topics696801
+Node: Reporting version sort bugs697091
+Node: Other version/natural sort implementations698288
+Node: Related source code700427
+Node: Opening the software toolbox701189
+Node: Toolbox introduction701985
+Node: I/O redirection704712
+Node: The who command707564
+Node: The cut command708485
+Node: The sort command709585
+Node: The uniq command710301
+Node: Putting the tools together711012
+Node: GNU Free Documentation License723290
+Node: Concept index748468
 
 End Tag Table
 

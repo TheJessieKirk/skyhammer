@@ -67,7 +67,7 @@ D s-exctab.ads		20240120085938 91bef6ef system.exception_table%s
 D s-intman.ads		20240120085941 aa1eb6b4 system.interrupt_management%s
 D s-linux.ads		20240120085940 34850a8c system.linux%s
 D s-multip.ads		20240120085936 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240121231455 58503582 system.os_constants%s
+D s-oscons.ads		20240123075814 58503582 system.os_constants%s
 D s-osinte.ads		20240120085939 e4f53740 system.os_interface%s
 D s-osprim.ads		20240120085935 07fd65f6 system.os_primitives%s
 D s-parame.ads		20240120085938 d494a4a6 system.parameters%s

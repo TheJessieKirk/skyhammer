@@ -44,11 +44,49 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(autoconf automake bash bdm-gc binutils bison coreutils dejagnu diffutils findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libffi libtool libunistring m4 make mingw-w64 mpc mpfr patch perl readline sed tar termcap texinfo wget2);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison coreutils dejagnu diffutils findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring m4 make mingw-w64 mpc mpfr openssl patch perl readline sed tar termcap texinfo wget2);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
       case $i in
+        acl)
+          if [ ! -f acl-2.3.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/acl-2.3.1.tar.gz does not exist. Downloading...";
+            wget -q https://git.savannah.nongnu.org/cgit/acl.git/snapshot/acl-2.3.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/acl-2.3.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/acl-*/configure ];
+          then
+            echo "$ROOT_DIR/src/acl-*/configure does not exist. Extracting package...";
+            tar -xf acl-*.tar.gz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/acl-*;
+            ./autogen.sh;
+            cd $ROOT_DIR/packages;
+          else
+            echo "$ROOT_DIR/src/acl-*/configure exists.";
+          fi;
+          ;;
+        attr)
+          if [ ! -f attr-2.5.2.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/attr-2.5.2.tar.xz does not exist. Downloading...";
+            wget -q https://download.savannah.nongnu.org/releases/attr/attr-2.5.2.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/attr-2.5.2.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/attr-*/configure ];
+          then
+            echo "$ROOT_DIR/src/attr-*/configure does not exist. Extracting package...";
+            tar -xf attr-*.tar.xz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/attr-*;
+            ./autogen.sh;
+            cd $ROOT_DIR/packages;
+          else
+            echo "$ROOT_DIR/src/acl-*/configure exists.";
+          fi;
+          ;;
         autoconf)
           if [ ! -f autoconf-2.72.tar.xz ];
           then
@@ -60,13 +98,13 @@ case $REPLY in
           if [ ! -f ../src/autoconf-*/configure ];
           then
             echo "$ROOT_DIR/src/autoconf-*/configure does not exist. Extracting package...";
-            tar -xf autoconf-2.72.tar.xz -C $ROOT_DIR/src;
+           tar -xf autoconf-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/binutils-*/configure exists.";
           fi;
           ;;
         automake)
-          if [ ! -f automake-1.16.5.tar.xz ];
+          if [ ! -f automake-*.tar.xz ];
           then
             echo "$ROOT_DIR/var/packages/automake-1.16.5.tar.xz does not exist. Downloading...";
             wget -q https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.xz;
@@ -334,6 +372,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/libatomic_ops-*/configure exists.";
           fi;
           ;;
+        libcap)
+          if [ ! -f libcap-2.69.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/libcap-2.69.tar.gz does not exist. Downloading...";
+            wget -q https://git.kernel.org/pub/scm/libs/libcap/libcap.git/snapshot/libcap-2.69.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/libcap2-69.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/libcap-*/Makefile ];
+          then
+            echo "$ROOT_DIR/src/libcap-*/Makefile does not exist. Extracting package...";
+            tar -xf libcap-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/libcap-*/configure exists.";
+          fi;
+          ;;
         libffi)
           if [ ! -f libffi-3.4.4.tar.gz ];
           then
@@ -419,6 +473,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/mingw-w64-*/configure exists.";
           fi;
           ;;
+        openssl)
+          if [ ! -f openssl-3.2.0.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/openssl-3.2.0.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/openssl/openssl/archive/refs/tags/openssl-3.2.0.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/openssl-3.2.0.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/openssl-*/Configure ];
+          then
+            echo "$ROOT_DIR/src/openssl-*/Configure does not exist. Extracting package...";
+            tar -xf openssl-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/openssl-*/Configure exists.";
+          fi;
+          ;;
         perl)
           if [ ! -f perl-5.38.2.tar.gz ];
           then
@@ -449,13 +519,13 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(coreutils perl m4 autoconf automake make libtool readline bash bdm-gc bison coreutils dejagnu diffutils finduils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison coreutils dejagnu diffutils findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi openssl patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
   for j in ${SOFTWARE_TO_BUILD[@]};
   do
-    if [ ! $j = "gcc-pass2" ];
+    if [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ];
     then
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -467,6 +537,12 @@ do
           cd $ROOT_DIR/build/$i/$j;
           rm -r *;
           case $j in
+            acl)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-year2038 --with-aix-soname=both;
+              ;;
+            attr)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --with-aix-soname=both;
+              ;;
             autoconf)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
@@ -487,7 +563,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-threads=posix;
               ;;
             coreutils)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-dependency-tracking --enable-install-program=arch,b2sum,base32,base64,baseenc,basename,cat,chgrp,chmod,chown,chroot,cksum,comm,coreutils,cp,csplit,cut,date,dd,df,dir,dircolors,dirname,du,echo,env,expand,expr,factor,false,fmt,fold,head,groups,hostid,hostname,id,install,join,kill,link,ln,logname,ls,md5sum,mkdir,mkfifo,mknod,mktemp,mv,nice,nl,nohup,nproc,numfmt,od,paste,pathchk,pr,printenv,printf,ptx,pwd,readlink,realpath,rm,rmdir,runcon,sha1sum,seq,sha224sum,sha256sum,sha384sum,sha512sum,shred,shuf,sleep,sort,split,stat,stdbuf,stty,sum,sync,tac,tail,tee,test,timeout,touch,tr,true,truncate,tsort,tty,uname,unexpand,uniq,unlink,uptime,users,vdir,wc,who,whoami,yes --enable-threads=posix;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-dependency-tracking --enable-install-program=arch,coreutils,hostname --enable-systemd --enable-threads=posix --with-linux-crypto --with-openssl=yes;
               ;;
             dejagnu)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -551,6 +627,9 @@ do
             mingw-w64-headers)
               ./../../../src/mingw-w64-*/$j/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i;
               ;;
+            openssl)
+              ./../../../src/$j-*/Configure --openssldir=$ROOT_DIR/install/$i --prefix=$ROOT_DIR/install/$i shared;
+              ;;
             patch)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
@@ -601,6 +680,12 @@ do
         elif [ $j = "bash" ];
         then
           make;
+        elif [ $j = "libcap" ];
+        then
+          rm -r $ROOT_DIR/src/libcap*;
+          tar -xf $ROOT_DIR/packages/libcap-*.tar.gz -C $ROOT_DIR/src;
+          cd $ROOT_DIR/src/libcap*;
+          make prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
         else
           make -j 4;
         fi;
@@ -618,6 +703,9 @@ do
         if [ $j = "gcc-pass2" ];
         then
           cd $ROOT_DIR/build/$i/gcc;
+        elif [ $j = "libcap" ];
+        then
+          cd $ROOT_DIR/src/libcap*;
         else
           cd $ROOT_DIR/build/$i/$j;
         fi;
@@ -631,6 +719,9 @@ do
           then
             ln -s $ROOT_DIR/install/$i/bin/bash $ROOT_DIR/install/$i/bin/sh;
           fi;
+        elif [ $j = "libcap" ];
+        then
+          make install prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
         else
           make install -j 4;
         fi;
@@ -645,7 +736,12 @@ do
     read -p "Do you want to check $j for $i? [y to proceed]: ";
     case $REPLY in
       y)
-        cd $ROOT_DIR/build/$i/$j;
+        if [ $j = "libcap" ];
+        then
+          cd $ROOT_DIR/src/libcap*;
+        else
+          cd $ROOT_DIR/build/$i/$j;
+        fi;
         make check -j 4;
         make test -j 4;
         ;;

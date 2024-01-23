@@ -60,6 +60,8 @@ GNU Gettext Utilities
                                 ISO 3166 country codes.
 * ISO639: (gettext)Language Codes.
                                 ISO 639 language codes.
+* xgettext: (gettext)xgettext Invocation.
+                                Extract strings into a PO file.
 * autopoint: (gettext)autopoint Invocation.
                                 Copy gettext infrastructure.
 * envsubst: (gettext)envsubst Invocation.
@@ -97,8 +99,6 @@ GNU Gettext Utilities
                                 Unify duplicates for PO file.
 * ngettext: (gettext)ngettext Invocation.
                                 Translate a message with plural.
-* xgettext: (gettext)xgettext Invocation.
-                                Extract strings into a PO file.
 
 GNU Libraries
 * libgomp: (libgomp).           GNU Offloading and Multi Processing Runtime 

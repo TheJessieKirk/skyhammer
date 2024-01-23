@@ -25,7 +25,7 @@ D interfac.ads		20240120085937 15f799c2 interfaces%s
 D i-c.ads		20240120085935 5c5a6c17 interfaces.c%s
 D system.ads		20240120085935 a4968d35 system%s
 D s-exctab.ads		20240120085938 91bef6ef system.exception_table%s
-D s-oscons.ads		20240121231455 58503582 system.os_constants%s
+D s-oscons.ads		20240123075814 58503582 system.os_constants%s
 D s-parame.ads		20240120085938 d494a4a6 system.parameters%s
 D s-stalib.ads		20240120085936 1c9580f6 system.standard_library%s
 G a e
