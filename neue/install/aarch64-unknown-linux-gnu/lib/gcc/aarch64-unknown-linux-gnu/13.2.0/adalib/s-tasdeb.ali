@@ -61,7 +61,7 @@ D s-imgint.ads		20240120085933 d4a52a9b system.img_int%s
 D s-imglli.ads		20240120085937 0dc8acc3 system.img_lli%s
 D s-linux.ads		20240120085940 34850a8c system.linux%s
 D s-multip.ads		20240120085936 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240123075814 58503582 system.os_constants%s
+D s-oscons.ads		20240121231455 58503582 system.os_constants%s
 D s-osinte.ads		20240120085939 e4f53740 system.os_interface%s
 D s-parame.ads		20240120085938 d494a4a6 system.parameters%s
 D s-secsta.ads		20240120085933 578279f5 system.secondary_stack%s

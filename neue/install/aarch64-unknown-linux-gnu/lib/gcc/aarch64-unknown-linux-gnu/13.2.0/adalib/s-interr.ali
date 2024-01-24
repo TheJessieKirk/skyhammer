@@ -105,7 +105,7 @@ D s-interr.adb		20240120085940 4405a1ff system.interrupts%b
 D s-io.ads		20240120085938 9e42f74f system.io%s
 D s-linux.ads		20240120085940 34850a8c system.linux%s
 D s-multip.ads		20240120085936 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240123075814 58503582 system.os_constants%s
+D s-oscons.ads		20240121231455 58503582 system.os_constants%s
 D s-osinte.ads		20240120085939 e4f53740 system.os_interface%s
 D s-parame.ads		20240120085938 d494a4a6 system.parameters%s
 D s-putima.ads		20240120085935 17291fe4 system.put_images%s
