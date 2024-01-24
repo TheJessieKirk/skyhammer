@@ -301,6 +301,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/gettext-*/configure exists.";
           fi;
           ;;
+        gmp)
+          if [ ! -f gmp-6.3.0.tar.lz ];
+          then
+            echo "$ROOT_DIR/var/packages/gmp-6.3.0.tar.lz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.lz;
+          else
+            echo "$ROOT_DIR/var/packages/gmp-6.3.0.tar.lz exists.";
+          fi;
+          if [ ! -f ../src/gmp-*/configure ];
+          then
+            echo "$ROOT_DIR/src/gmp-*/configure does not exist. Extracting package...";
+            tar -xf gmp-*.tar.lz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/gmp-*/configure exists.";
+          fi;
+          ;;
         gperf)
           if [ ! -f gperf-3.1.tar.gz ];
           then
@@ -354,6 +370,22 @@ case $REPLY in
             tar -xf help2man-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/help2man-*/configure exists.";
+          fi;
+          ;;
+        isl)
+          if [ ! -f isl-0.26.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/isl-0.26.tar.xz does not exist. Downloading...";
+            wget -q https://libisl.sourceforge.io/isl-0.26.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/isl-0.26.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/isl-*/configure ];
+          then
+            echo "$ROOT_DIR/src/isl-*/configure does not exist. Extracting package...";
+            tar -xf isl-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/isl-*/configure exists.";
           fi;
           ;;
         libatomic_ops)
@@ -473,6 +505,38 @@ case $REPLY in
             echo "$ROOT_DIR/src/mingw-w64-*/configure exists.";
           fi;
           ;;
+        mpc)
+          if [ ! -f mpc-1.3.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/mpc-1.3.1.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/mpc-1.3.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/mpc-*/configure ];
+          then
+            echo "$ROOT_DIR/src/mpc*/configure does not exist. Extracting package...";
+            tar -xf mpc-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/mpc-*/configure exists.";
+          fi;
+          ;;
+        mpfr)
+          if [ ! -f mpfr-4.2.1.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/mpfr-4.2.1.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/mpfr-4.2.1.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/mpfr-*/configure ];
+          then
+            echo "$ROOT_DIR/src/mpfr-*/configure does not exist. Extracting package...";
+            tar -xf mpfr-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/mpfr-*/configure exists.";
+          fi;
+          ;;
         openssl)
           if [ ! -f openssl-3.2.0.tar.gz ];
           then
@@ -485,6 +549,7 @@ case $REPLY in
           then
             echo "$ROOT_DIR/src/openssl-*/Configure does not exist. Extracting package...";
             tar -xf openssl-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/openssl* $ROOT_DIR/src/openssl-3.2.0;
           else
             echo "$ROOT_DIR/src/openssl-*/Configure exists.";
           fi;
@@ -519,7 +584,7 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison coreutils dejagnu diffutils findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi openssl patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(coreutils perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison coreutils dejagnu diffutils findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi openssl patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
@@ -591,6 +656,9 @@ do
             gettext)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-shared --enable-static --enable-threads=posix --enable-year2038 --with-aix-soname=both;
               ;;
+            gmp)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
             gperf)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
@@ -605,6 +673,9 @@ do
               ;;
             help2man)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-nls;
+              ;;
+            isl)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
             libatomic_ops)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-assertions --enable-dependency-tracking --enable-shared --enable-static --with-aix-soname=both;
@@ -626,6 +697,12 @@ do
               ;;
             mingw-w64-headers)
               ./../../../src/mingw-w64-*/$j/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i;
+              ;;
+            mpc)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
+            mpfr)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
             openssl)
               ./../../../src/$j-*/Configure --openssldir=$ROOT_DIR/install/$i --prefix=$ROOT_DIR/install/$i shared;
