@@ -1,6 +1,6 @@
-This is m4.info, produced by makeinfo version 7.0.3 from m4.texi.
+This is m4.info, produced by makeinfo version 6.7 from m4.texi.
 
-This manual (20 January 2024) is for GNU M4 (version 1.4.19), a package
+This manual (28 May 2021) is for GNU M4 (version 1.4.19), a package
 containing an implementation of the m4 macro language.
 
    Copyright © 1989–1994, 2004–2014, 2016–2017, 2020–2021 Free Software
@@ -23,7 +23,7 @@ File: m4.info,  Node: Top,  Next: Preliminaries,  Up: (dir)
 GNU M4
 ******
 
-This manual (20 January 2024) is for GNU M4 (version 1.4.19), a package
+This manual (28 May 2021) is for GNU M4 (version 1.4.19), a package
 containing an implementation of the m4 macro language.
 
    Copyright © 1989–1994, 2004–2014, 2016–2017, 2020–2021 Free Software
@@ -437,7 +437,7 @@ find it helpful to do this now:
 call of the macro will be shown, giving descriptive names to the
 arguments, e.g.,
 
- -- Composite: example (STRING, [COUNT = 1], [ARGUMENT]...)
+ -- Composite: example (STRING, [COUNT = ‘1’], [ARGUMENT]...)
      This is a sample prototype.  There is not really a macro named
      ‘example’, but this documents that if there were, it would be a
      Composite macro, rather than a Builtin.  It requires at least one
@@ -3498,7 +3498,7 @@ File: m4.info,  Node: Changequote,  Next: Changecom,  Prev: Dnl,  Up: Input Cont
 The default quote delimiters can be changed with the builtin
 ‘changequote’:
 
- -- Builtin: changequote ([START = `], [END = '])
+ -- Builtin: changequote ([START = ‘`’], [END = ‘'’])
      This sets START as the new begin-quote delimiter and END as the new
      end-quote delimiter.  If both arguments are missing, the default
      quotes (‘`’ and ‘'’) are used.  If START is void, then quoting is
@@ -3703,7 +3703,7 @@ File: m4.info,  Node: Changecom,  Next: Changeword,  Prev: Changequote,  Up: Inp
 The default comment delimiters can be changed with the builtin macro
 ‘changecom’:
 
- -- Builtin: changecom ([START], [END = <NL>])
+ -- Builtin: changecom ([START], [END = ‘<NL>’])
      This sets START as the new begin-comment delimiter and END as the
      new end-comment delimiter.  If both arguments are missing, or START
      is void, then comments are disabled.  Otherwise, if END is missing
@@ -4265,7 +4265,7 @@ File: m4.info,  Node: Divert,  Next: Undivert,  Up: Diversions
 
 Output is diverted using ‘divert’:
 
- -- Builtin: divert ([NUMBER = 0])
+ -- Builtin: divert ([NUMBER = ‘0’])
      The current diversion is changed to NUMBER.  If NUMBER is left out
      or empty, it is assumed to be zero.  If NUMBER cannot be parsed,
      the diversion is unchanged.
@@ -5001,7 +5001,7 @@ File: m4.info,  Node: Eval,  Prev: Incr,  Up: Arithmetic
 
 Integer expressions are evaluated with ‘eval’:
 
- -- Builtin: eval (EXPRESSION, [RADIX = 10], [WIDTH])
+ -- Builtin: eval (EXPRESSION, [RADIX = ‘10’], [WIDTH])
      Expands to the value of EXPRESSION.  The expansion is empty if a
      problem is encountered while parsing the arguments.  If specified,
      RADIX and WIDTH control the format of the output.
@@ -5738,7 +5738,7 @@ File: m4.info,  Node: M4exit,  Prev: Location,  Up: Miscellaneous
 If you need to exit from ‘m4’ before the entire input has been read, you
 can use ‘m4exit’:
 
- -- Builtin: m4exit ([CODE = 0])
+ -- Builtin: m4exit ([CODE = ‘0’])
      Causes ‘m4’ to exit, with exit status CODE.  If CODE is left out,
      the exit status is zero.  If CODE cannot be parsed, or is outside
      the range of 0 to 255, the exit status is one.  No further input is

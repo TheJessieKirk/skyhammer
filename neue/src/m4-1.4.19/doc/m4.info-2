@@ -1,6 +1,6 @@
-This is m4.info, produced by makeinfo version 7.0.3 from m4.texi.
+This is m4.info, produced by makeinfo version 6.7 from m4.texi.
 
-This manual (20 January 2024) is for GNU M4 (version 1.4.19), a package
+This manual (28 May 2021) is for GNU M4 (version 1.4.19), a package
 containing an implementation of the m4 macro language.
 
    Copyright © 1989–1994, 2004–2014, 2016–2017, 2020–2021 Free Software
@@ -638,7 +638,7 @@ C.2 Index for many concepts
 * arguments, joining:                    Shift.               (line  99)
 * arguments, more than nine:             Arguments.           (line  54)
 * arguments, more than nine <1>:         Shift.               (line 251)
-* arguments, more than nine <2>:         Improved foreach.    (line 155)
+* arguments, more than nine <2>:         Improved foreach.    (line 157)
 * arguments, quoted macro:               Quoting Arguments.   (line   6)
 * arguments, reversing:                  Shift.               (line  31)
 * arithmetic:                            Arithmetic.          (line   6)
@@ -831,13 +831,13 @@ C.2 Index for many concepts
 * messages, printing error:              Errprint.            (line   6)
 * more than nine arguments:              Arguments.           (line  54)
 * more than nine arguments <1>:          Shift.               (line 251)
-* more than nine arguments <2>:          Improved foreach.    (line 155)
+* more than nine arguments <2>:          Improved foreach.    (line 157)
 * multibranches:                         Ifelse.              (line  69)
 * names:                                 Names.               (line   6)
 * nesting limit:                         Limits control.      (line  43)
 * nine arguments, more than:             Arguments.           (line  54)
 * nine arguments, more than <1>:         Shift.               (line 251)
-* nine arguments, more than <2>:         Improved foreach.    (line 155)
+* nine arguments, more than <2>:         Improved foreach.    (line 157)
 * numbers:                               Manual.              (line  57)
 * options, command line:                 Invoking m4.         (line  10)
 * output, diverting to files:            Divert.              (line   6)

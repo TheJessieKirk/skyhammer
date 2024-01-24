@@ -1,5 +1,5 @@
-/* ANSI-C code produced by gperf version 3.1 */
-/* Command-line: gperf -m 10 .././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf  */
+/* ANSI-C code produced by gperf version 3.2 */
+/* Command-line: gperf -m 10 ./unictype/scripts_byname.gperf  */
 /* Computed positions: -k'1,3,5,8' */
 
 #if !((' ' == 32) && ('!' == 33) && ('"' == 34) && ('#' == 35) \
@@ -29,7 +29,7 @@
 #error "gperf generated tables don't work with this execution character set. Please report a bug to <bug-gperf@gnu.org>."
 #endif
 
-#line 20 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 20 "./unictype/scripts_byname.gperf"
 struct named_script { int name; unsigned int index; };
 
 #define TOTAL_KEYWORDS 163
@@ -84,15 +84,30 @@ scripts_hash (register const char *str, register size_t len)
     {
       default:
         hval += asso_values[(unsigned char)str[7]];
+#if defined __cplusplus && (__cplusplus >= 201703L || (__cplusplus >= 201103L && defined __clang_major__ && defined __clang_minor__ && __clang_major__ + (__clang_minor__ >= 9) > 3))
+      [[fallthrough]];
+#elif defined __GNUC__ && __GNUC__ >= 7
+      __attribute__ ((__fallthrough__));
+#endif
       /*FALLTHROUGH*/
       case 7:
       case 6:
       case 5:
         hval += asso_values[(unsigned char)str[4]];
+#if defined __cplusplus && (__cplusplus >= 201703L || (__cplusplus >= 201103L && defined __clang_major__ && defined __clang_minor__ && __clang_major__ + (__clang_minor__ >= 9) > 3))
+      [[fallthrough]];
+#elif defined __GNUC__ && __GNUC__ >= 7
+      __attribute__ ((__fallthrough__));
+#endif
       /*FALLTHROUGH*/
       case 4:
       case 3:
         hval += asso_values[(unsigned char)str[2]];
+#if defined __cplusplus && (__cplusplus >= 201703L || (__cplusplus >= 201103L && defined __clang_major__ && defined __clang_minor__ && __clang_major__ + (__clang_minor__ >= 9) > 3))
+      [[fallthrough]];
+#elif defined __GNUC__ && __GNUC__ >= 7
+      __attribute__ ((__fallthrough__));
+#endif
       /*FALLTHROUGH*/
       case 2:
       case 1:
@@ -439,361 +454,361 @@ static const struct script_stringpool_t script_stringpool_contents =
 static const struct named_script script_names[] =
   {
     {-1}, {-1}, {-1},
-#line 67 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 67 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str3, 36},
     {-1},
-#line 145 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 145 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str5, 114},
     {-1}, {-1}, {-1},
-#line 129 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 129 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str9, 98},
     {-1}, {-1},
-#line 107 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 107 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str12, 76},
-#line 125 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 125 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str13, 94},
-#line 31 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 31 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str14, 0},
-#line 53 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 53 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str15, 22},
-#line 62 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 62 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str16, 31},
-#line 126 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 126 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str17, 95},
-#line 49 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 49 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str18, 18},
     {-1},
-#line 105 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 105 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str20, 74},
-#line 130 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 130 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str21, 99},
-#line 38 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 38 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str22, 7},
-#line 80 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 80 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str23, 49},
-#line 50 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 50 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str24, 19},
-#line 183 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 183 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str25, 152},
-#line 93 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 93 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str26, 62},
-#line 39 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 39 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str27, 8},
-#line 112 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 112 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str28, 81},
-#line 114 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 114 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str29, 83},
-#line 41 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 41 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str30, 10},
-#line 124 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 124 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str31, 93},
-#line 190 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 190 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str32, 159},
-#line 47 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 47 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str33, 16},
-#line 144 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 144 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str34, 113},
-#line 61 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 61 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str35, 30},
-#line 51 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 51 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str36, 20},
-#line 132 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 132 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str37, 101},
-#line 139 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 139 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str38, 108},
-#line 186 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 186 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str39, 155},
-#line 81 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 81 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str40, 50},
     {-1}, {-1},
-#line 96 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 96 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str43, 65},
-#line 44 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 44 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str44, 13},
-#line 123 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 123 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str45, 92},
     {-1},
-#line 94 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 94 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str47, 63},
-#line 91 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 91 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str48, 60},
-#line 108 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 108 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str49, 77},
-#line 32 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 32 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str50, 1},
-#line 163 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 163 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str51, 132},
-#line 167 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 167 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str52, 136},
-#line 143 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 143 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str53, 112},
-#line 58 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 58 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str54, 27},
-#line 64 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 64 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str55, 33},
-#line 185 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 185 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str56, 154},
-#line 156 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 156 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str57, 125},
-#line 154 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 154 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str58, 123},
-#line 133 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 133 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str59, 102},
-#line 77 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 77 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str60, 46},
-#line 101 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 101 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str61, 70},
-#line 159 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 159 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str62, 128},
-#line 78 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 78 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str63, 47},
     {-1},
-#line 35 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 35 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str65, 4},
     {-1},
-#line 177 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 177 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str67, 146},
-#line 37 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 37 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str68, 6},
-#line 76 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 76 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str69, 45},
-#line 166 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 166 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str70, 135},
-#line 106 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 106 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str71, 75},
-#line 192 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 192 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str72, 161},
-#line 115 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 115 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str73, 84},
-#line 45 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 45 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str74, 14},
-#line 103 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 103 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str75, 72},
     {-1},
-#line 57 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 57 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str77, 26},
-#line 116 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 116 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str78, 85},
-#line 83 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 83 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str79, 52},
-#line 75 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 75 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str80, 44},
-#line 174 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 174 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str81, 143},
-#line 157 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 157 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str82, 126},
-#line 97 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 97 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str83, 66},
-#line 66 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 66 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str84, 35},
     {-1},
-#line 189 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 189 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str86, 158},
-#line 137 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 137 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str87, 106},
-#line 69 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 69 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str88, 38},
-#line 73 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 73 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str89, 42},
-#line 165 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 165 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str90, 134},
-#line 87 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 87 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str91, 56},
-#line 153 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 153 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str92, 122},
-#line 118 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 118 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str93, 87},
-#line 121 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 121 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str94, 90},
-#line 164 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 164 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str95, 133},
-#line 131 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 131 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str96, 100},
-#line 140 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 140 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str97, 109},
-#line 134 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 134 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str98, 103},
-#line 113 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 113 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str99, 82},
-#line 150 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 150 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str100, 119},
-#line 155 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 155 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str101, 124},
-#line 158 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 158 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str102, 127},
-#line 110 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 110 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str103, 79},
-#line 178 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 178 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str104, 147},
-#line 180 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 180 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str105, 149},
-#line 170 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 170 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str106, 139},
-#line 84 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 84 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str107, 53},
-#line 95 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 95 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str108, 64},
-#line 92 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 92 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str109, 61},
-#line 162 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 162 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str110, 131},
-#line 33 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 33 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str111, 2},
-#line 52 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 52 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str112, 21},
-#line 42 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 42 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str113, 11},
-#line 122 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 122 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str114, 91},
-#line 43 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 43 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str115, 12},
-#line 55 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 55 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str116, 24},
-#line 175 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 175 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str117, 144},
-#line 59 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 59 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str118, 28},
-#line 89 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 89 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str119, 58},
-#line 46 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 46 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str120, 15},
-#line 72 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 72 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str121, 41},
-#line 54 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 54 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str122, 23},
-#line 152 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 152 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str123, 121},
-#line 79 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 79 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str124, 48},
-#line 181 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 181 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str125, 150},
-#line 146 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 146 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str126, 115},
-#line 141 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 141 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str127, 110},
-#line 193 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 193 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str128, 162},
-#line 151 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 151 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str129, 120},
-#line 85 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 85 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str130, 54},
-#line 82 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 82 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str131, 51},
-#line 40 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 40 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str132, 9},
-#line 74 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 74 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str133, 43},
-#line 127 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 127 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str134, 96},
-#line 179 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 179 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str135, 148},
-#line 169 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 169 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str136, 138},
-#line 187 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 187 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str137, 156},
-#line 128 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 128 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str138, 97},
-#line 120 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 120 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str139, 89},
-#line 119 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 119 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str140, 88},
-#line 147 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 147 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str141, 116},
-#line 149 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 149 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str142, 118},
-#line 100 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 100 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str143, 69},
-#line 65 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 65 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str144, 34},
-#line 172 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 172 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str145, 141},
-#line 63 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 63 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str146, 32},
-#line 104 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 104 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str147, 73},
-#line 60 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 60 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str148, 29},
-#line 142 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 142 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str149, 111},
-#line 188 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 188 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str150, 157},
-#line 173 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 173 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str151, 142},
-#line 168 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 168 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str152, 137},
-#line 88 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 88 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str153, 57},
-#line 48 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 48 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str154, 17},
-#line 68 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 68 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str155, 37},
-#line 161 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 161 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str156, 130},
-#line 111 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 111 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str157, 80},
-#line 171 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 171 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str158, 140},
     {-1}, {-1},
-#line 90 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 90 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str161, 59},
     {-1}, {-1},
-#line 70 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 70 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str164, 39},
-#line 71 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 71 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str165, 40},
     {-1},
-#line 182 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 182 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str167, 151},
     {-1}, {-1},
-#line 191 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 191 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str170, 160},
     {-1}, {-1},
-#line 34 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 34 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str173, 3},
     {-1}, {-1},
-#line 109 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 109 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str176, 78},
     {-1}, {-1},
-#line 148 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 148 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str179, 117},
-#line 176 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 176 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str180, 145},
-#line 136 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 136 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str181, 105},
-#line 86 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 86 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str182, 55},
     {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1},
     {-1},
-#line 99 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 99 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str193, 68},
     {-1},
-#line 36 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 36 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str195, 5},
     {-1}, {-1}, {-1},
-#line 160 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 160 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str199, 129},
     {-1},
-#line 184 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 184 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str201, 153},
     {-1}, {-1}, {-1}, {-1},
-#line 102 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 102 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str206, 71},
     {-1}, {-1}, {-1}, {-1}, {-1},
-#line 135 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 135 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str212, 104},
     {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1},
     {-1},
-#line 117 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 117 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str223, 86},
     {-1}, {-1}, {-1}, {-1}, {-1},
-#line 56 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 56 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str229, 25},
     {-1}, {-1}, {-1},
-#line 98 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 98 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str233, 67},
     {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1}, {-1},
     {-1}, {-1}, {-1}, {-1}, {-1}, {-1},
-#line 138 ".././../../../src/libunistring-1.1/lib/unictype/scripts_byname.gperf"
+#line 138 "./unictype/scripts_byname.gperf"
     {(int)(size_t)&((struct script_stringpool_t *)0)->script_stringpool_str249, 107}
   };
 

@@ -1,5 +1,5 @@
 #! /usr/bin/env sh
-## DO NOT EDIT - This file generated from ./../../../src/libtool-2.4.7/build-aux/ltmain.in
+## DO NOT EDIT - This file generated from ./build-aux/ltmain.in
 ##               by inline-source v2019-02-19.15
 
 # libtool (GNU libtool) 2.4.7
@@ -2311,7 +2311,7 @@ include the following information:
        autoconf:       `($AUTOCONF --version) 2>/dev/null |$SED 1q`
 
 Report bugs to <bug-libtool@gnu.org>.
-GNU libtool home page: <https://www.gnu.org/software/libtool/>.
+GNU libtool home page: <http://www.gnu.org/software/libtool/>.
 General help using GNU software: <http://www.gnu.org/gethelp/>."
     exit 0
 }

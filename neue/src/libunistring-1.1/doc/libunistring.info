@@ -1,4 +1,4 @@
-This is libunistring.info, produced by makeinfo version 7.0.3 from
+This is libunistring.info, produced by makeinfo version 6.8 from
 libunistring.texi.
 
 INFO-DIR-SECTION Software development
@@ -6848,94 +6848,94 @@ Index
 
 
 Tag Table:
-Node: Top271
-Node: Introduction4029
-Node: Unicode6050
-Node: Unicode and i18n7939
-Node: Locale encodings9601
-Node: In-memory representation11866
-Node: char * strings13864
-Node: Unicode strings19352
-Node: Conventions20535
-Node: unitypes.h22827
-Node: unistr.h23924
-Node: Elementary string checks24489
-Node: Elementary string conversions25111
-Node: Elementary string functions26989
-Node: Iterating27394
-Node: Creating Unicode strings30224
-Node: Copying Unicode strings31160
-Node: Comparing Unicode strings32773
-Node: Searching for a character34328
-Node: Counting characters35127
-Node: Elementary string functions with memory allocation35810
-Node: Elementary string functions on NUL terminated strings36432
-Node: Iterating over a NUL terminated Unicode string37031
-Node: Length39299
-Node: Copying a NUL terminated Unicode string40357
-Node: Comparing NUL terminated Unicode strings43461
-Node: Duplicating a NUL terminated Unicode string45557
-Node: Searching for a character in a NUL terminated Unicode string46326
-Node: Searching for a substring49090
-Node: Tokenizing50613
-Node: uniconv.h51486
-Node: unistdio.h59766
-Node: uniname.h68019
-Node: unictype.h69425
-Node: General category70353
-Node: Object oriented API71408
-Node: Bit mask API81249
-Node: Canonical combining class83544
-Node: Bidi class87779
-Node: Decimal digit value91574
-Node: Digit value92131
-Node: Numeric value92692
-Node: Mirrored character93594
-Node: Arabic shaping94287
-Node: Joining type94760
-Node: Joining group96910
-Node: Properties102722
-Node: Properties as objects103413
-Node: Properties as functions110894
-Node: Scripts117411
-Node: Blocks118816
-Node: ISO C and Java syntax120159
-Node: Classifications like in ISO C121877
-Node: uniwidth.h124689
-Node: unigbrk.h126735
-Node: Grapheme cluster breaks in a string128229
-Node: Grapheme cluster break property131248
-Node: uniwbrk.h133494
-Node: Word breaks in a string134032
-Node: Word break property135124
-Node: unilbrk.h136452
-Node: uninorm.h141004
-Node: Decomposition of characters141641
-Node: Composition of characters145422
-Node: Normalization of strings146135
-Node: Normalizing comparisons148308
-Node: Normalization of streams150806
-Node: unicase.h152931
-Node: Case mappings of characters153620
-Node: Case mappings of strings155769
-Node: Case mappings of substrings159408
-Node: Case insensitive comparison166678
-Node: Case detection172371
-Node: uniregex.h175685
-Node: Using the library175912
-Node: Installation176323
-Node: Compiler options176811
-Node: Include files178451
-Node: Autoconf macro179704
-Node: Reporting problems181345
-Node: More functionality182155
-Node: The wchar_t mess182607
-Node: The char32_t problem184957
-Node: Licenses187332
-Node: GNU GPL189805
-Node: GNU LGPL227554
-Node: GNU FDL236038
-Node: Index261349
+Node: Top269
+Node: Introduction4027
+Node: Unicode6048
+Node: Unicode and i18n7937
+Node: Locale encodings9599
+Node: In-memory representation11864
+Node: char * strings13862
+Node: Unicode strings19350
+Node: Conventions20533
+Node: unitypes.h22825
+Node: unistr.h23922
+Node: Elementary string checks24487
+Node: Elementary string conversions25109
+Node: Elementary string functions26987
+Node: Iterating27392
+Node: Creating Unicode strings30222
+Node: Copying Unicode strings31158
+Node: Comparing Unicode strings32771
+Node: Searching for a character34326
+Node: Counting characters35125
+Node: Elementary string functions with memory allocation35808
+Node: Elementary string functions on NUL terminated strings36430
+Node: Iterating over a NUL terminated Unicode string37029
+Node: Length39297
+Node: Copying a NUL terminated Unicode string40355
+Node: Comparing NUL terminated Unicode strings43459
+Node: Duplicating a NUL terminated Unicode string45555
+Node: Searching for a character in a NUL terminated Unicode string46324
+Node: Searching for a substring49088
+Node: Tokenizing50611
+Node: uniconv.h51484
+Node: unistdio.h59764
+Node: uniname.h68017
+Node: unictype.h69423
+Node: General category70351
+Node: Object oriented API71406
+Node: Bit mask API81247
+Node: Canonical combining class83542
+Node: Bidi class87777
+Node: Decimal digit value91572
+Node: Digit value92129
+Node: Numeric value92690
+Node: Mirrored character93592
+Node: Arabic shaping94285
+Node: Joining type94758
+Node: Joining group96908
+Node: Properties102720
+Node: Properties as objects103411
+Node: Properties as functions110892
+Node: Scripts117409
+Node: Blocks118814
+Node: ISO C and Java syntax120157
+Node: Classifications like in ISO C121875
+Node: uniwidth.h124687
+Node: unigbrk.h126733
+Node: Grapheme cluster breaks in a string128227
+Node: Grapheme cluster break property131246
+Node: uniwbrk.h133492
+Node: Word breaks in a string134030
+Node: Word break property135122
+Node: unilbrk.h136450
+Node: uninorm.h141002
+Node: Decomposition of characters141639
+Node: Composition of characters145420
+Node: Normalization of strings146133
+Node: Normalizing comparisons148306
+Node: Normalization of streams150804
+Node: unicase.h152929
+Node: Case mappings of characters153618
+Node: Case mappings of strings155767
+Node: Case mappings of substrings159406
+Node: Case insensitive comparison166676
+Node: Case detection172369
+Node: uniregex.h175683
+Node: Using the library175910
+Node: Installation176321
+Node: Compiler options176809
+Node: Include files178449
+Node: Autoconf macro179702
+Node: Reporting problems181343
+Node: More functionality182153
+Node: The wchar_t mess182605
+Node: The char32_t problem184955
+Node: Licenses187330
+Node: GNU GPL189803
+Node: GNU LGPL227552
+Node: GNU FDL236036
+Node: Index261347
 
 End Tag Table
 

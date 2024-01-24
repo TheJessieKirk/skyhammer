@@ -74,7 +74,7 @@
 #define yychar          zzchar
 
 /* First part of user prologue.  */
-#line 28 "./../../../src/gawk-5.3.0/command.y"
+#line 28 "command.y"
 
 #include "awk.h"
 #include "cmd.h"
@@ -142,7 +142,7 @@ static void append_cmdarg(CMDARG *arg);
 static int find_argument(CMDARG *arg);
 #define YYSTYPE CMDARG *
 
-#line 146 "../../../src/gawk-5.3.0/command.c"
+#line 146 "command.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -1537,7 +1537,7 @@ yyreduce:
   switch (yyn)
     {
   case 3: /* input: input line  */
-#line 112 "./../../../src/gawk-5.3.0/command.y"
+#line 112 "command.y"
           {
 		cmd_idx = -1;
 		want_nodeval = false;
@@ -1552,11 +1552,11 @@ yyreduce:
 			arg_list = NULL;
 		}
 	  }
-#line 1556 "../../../src/gawk-5.3.0/command.c"
+#line 1556 "command.c"
     break;
 
   case 5: /* line: command nls  */
-#line 131 "./../../../src/gawk-5.3.0/command.y"
+#line 131 "command.y"
           {
 		if (dbg_errcount == 0 && cmd_idx >= 0) {
 			Func_cmd cmdfunc;
@@ -1606,25 +1606,25 @@ yyreduce:
 				YYACCEPT;
 		}
 	  }
-#line 1610 "../../../src/gawk-5.3.0/command.c"
+#line 1610 "command.c"
     break;
 
   case 6: /* line: error nls  */
-#line 181 "./../../../src/gawk-5.3.0/command.y"
+#line 181 "command.y"
           {
 		yyerrok;
 	  }
-#line 1618 "../../../src/gawk-5.3.0/command.c"
+#line 1618 "command.c"
     break;
 
   case 22: /* set_want_nodeval: %empty  */
-#line 215 "./../../../src/gawk-5.3.0/command.y"
+#line 215 "command.y"
           { want_nodeval = true; }
-#line 1624 "../../../src/gawk-5.3.0/command.c"
+#line 1624 "command.c"
     break;
 
   case 23: /* eval_prologue: D_EVAL set_want_nodeval opt_param_list nls  */
-#line 220 "./../../../src/gawk-5.3.0/command.y"
+#line 220 "command.y"
           {
 		if (dbg_errcount == 0) {
 			/* don't free arg_list;	passed on to statement_list
@@ -1640,11 +1640,11 @@ yyreduce:
 			in_eval = true;
 		}
 	  }
-#line 1644 "../../../src/gawk-5.3.0/command.c"
+#line 1644 "command.c"
     break;
 
   case 24: /* statement_list: %empty  */
-#line 239 "./../../../src/gawk-5.3.0/command.y"
+#line 239 "command.y"
           {
 		yyval = append_statement(arg_list, (char *) start_EVAL);
 		if (read_a_line == read_commands_string)	/* unserializing 'eval' in 'commands' */
@@ -1652,25 +1652,25 @@ yyreduce:
 		free_cmdarg(arg_list);
 		arg_list = NULL;
 	  }
-#line 1656 "../../../src/gawk-5.3.0/command.c"
+#line 1656 "command.c"
     break;
 
   case 25: /* @1: %empty  */
-#line 246 "./../../../src/gawk-5.3.0/command.y"
+#line 246 "command.y"
                                      { yyval = append_statement(yyvsp[-1], lexptr_begin); }
-#line 1662 "../../../src/gawk-5.3.0/command.c"
+#line 1662 "command.c"
     break;
 
   case 26: /* statement_list: statement_list D_STATEMENT @1 nls  */
-#line 247 "./../../../src/gawk-5.3.0/command.y"
+#line 247 "command.y"
           {
 		yyval = yyvsp[-1];
 	  }
-#line 1670 "../../../src/gawk-5.3.0/command.c"
+#line 1670 "command.c"
     break;
 
   case 27: /* eval_cmd: eval_prologue statement_list D_END  */
-#line 254 "./../../../src/gawk-5.3.0/command.y"
+#line 254 "command.y"
           {
 		arg_list = append_statement(yyvsp[-1], (char *) end_EVAL);
 		if (read_a_line == read_commands_string) {	/* unserializing 'eval' in 'commands' */
@@ -1686,11 +1686,11 @@ yyreduce:
 		cmd_idx = find_command("eval", 4);
 		in_eval = false;
 	  }
-#line 1690 "../../../src/gawk-5.3.0/command.c"
+#line 1690 "command.c"
     break;
 
   case 28: /* eval_cmd: D_EVAL set_want_nodeval string_node  */
-#line 270 "./../../../src/gawk-5.3.0/command.y"
+#line 270 "command.y"
           {
 		NODE *n;
 		CMDARG *arg;
@@ -1701,21 +1701,21 @@ yyreduce:
 		free_cmdarg(arg_list);
 		arg_list = arg;
 	  }
-#line 1705 "../../../src/gawk-5.3.0/command.c"
+#line 1705 "command.c"
     break;
 
   case 34: /* command: frame_cmd opt_integer  */
-#line 289 "./../../../src/gawk-5.3.0/command.y"
+#line 289 "command.y"
           {
 		if (cmdtab[cmd_idx].lex_class == D_FRAME
 				&& yyvsp[0] != NULL && yyvsp[0]->a_int < 0)
 			yyerror(_("invalid frame number: %d"), yyvsp[0]->a_int);
 	  }
-#line 1715 "../../../src/gawk-5.3.0/command.c"
+#line 1715 "command.c"
     break;
 
   case 35: /* command: D_INFO D_STRING  */
-#line 295 "./../../../src/gawk-5.3.0/command.y"
+#line 295 "command.y"
           {
 		int idx = find_argument(yyvsp[0]);
 		if (idx < 0)
@@ -1727,65 +1727,65 @@ yyreduce:
 			yyvsp[0]->a_argument = argtab[idx].value;
 		}
 	  }
-#line 1731 "../../../src/gawk-5.3.0/command.c"
+#line 1731 "command.c"
     break;
 
   case 38: /* $@2: %empty  */
-#line 308 "./../../../src/gawk-5.3.0/command.y"
+#line 308 "command.y"
                   { want_nodeval = true; }
-#line 1737 "../../../src/gawk-5.3.0/command.c"
+#line 1737 "command.c"
     break;
 
   case 40: /* $@3: %empty  */
-#line 309 "./../../../src/gawk-5.3.0/command.y"
+#line 309 "command.y"
                    { want_nodeval = true; }
-#line 1743 "../../../src/gawk-5.3.0/command.c"
+#line 1743 "command.c"
     break;
 
   case 46: /* $@4: %empty  */
-#line 314 "./../../../src/gawk-5.3.0/command.y"
+#line 314 "command.y"
                 { want_nodeval = true; }
-#line 1749 "../../../src/gawk-5.3.0/command.c"
+#line 1749 "command.c"
     break;
 
   case 49: /* $@5: %empty  */
-#line 316 "./../../../src/gawk-5.3.0/command.y"
+#line 316 "command.y"
                    { want_nodeval = true; }
-#line 1755 "../../../src/gawk-5.3.0/command.c"
+#line 1755 "command.c"
     break;
 
   case 51: /* $@6: %empty  */
-#line 317 "./../../../src/gawk-5.3.0/command.y"
+#line 317 "command.y"
                     { want_nodeval = true; }
-#line 1761 "../../../src/gawk-5.3.0/command.c"
+#line 1761 "command.c"
     break;
 
   case 53: /* $@7: %empty  */
-#line 318 "./../../../src/gawk-5.3.0/command.y"
+#line 318 "command.y"
                   { want_nodeval = true; }
-#line 1767 "../../../src/gawk-5.3.0/command.c"
+#line 1767 "command.c"
     break;
 
   case 57: /* command: D_SOURCE D_STRING  */
-#line 322 "./../../../src/gawk-5.3.0/command.y"
+#line 322 "command.y"
           {
 		if (in_cmd_src(yyvsp[0]->a_string))
 			yyerror(_("source: `%s': already sourced"), yyvsp[0]->a_string);
 	  }
-#line 1776 "../../../src/gawk-5.3.0/command.c"
+#line 1776 "command.c"
     break;
 
   case 58: /* command: D_SAVE D_STRING  */
-#line 327 "./../../../src/gawk-5.3.0/command.y"
+#line 327 "command.y"
           {
 		if (! input_from_tty)
 			yyerror(_("save: `%s': command not permitted"), yyvsp[0]->a_string);
 	  }
-#line 1785 "../../../src/gawk-5.3.0/command.c"
+#line 1785 "command.c"
     break;
 
   case 59: /* command: D_COMMANDS commands_arg  */
-#line 332 "./../../../src/gawk-5.3.0/command.y"
+#line 332 "command.y"
           {
 		int type = 0;
 		int num;
@@ -1811,11 +1811,11 @@ yyreduce:
 			}
 		}
 	  }
-#line 1815 "../../../src/gawk-5.3.0/command.c"
+#line 1815 "command.c"
     break;
 
   case 60: /* command: D_END  */
-#line 358 "./../../../src/gawk-5.3.0/command.y"
+#line 358 "command.y"
           {
 		if (! in_commands)
 			yyerror(_("`end' valid only in command `commands' or `eval'"));
@@ -1825,20 +1825,20 @@ yyreduce:
 			in_commands = false;
 		}
 	  }
-#line 1829 "../../../src/gawk-5.3.0/command.c"
+#line 1829 "command.c"
     break;
 
   case 61: /* command: D_SILENT  */
-#line 368 "./../../../src/gawk-5.3.0/command.y"
+#line 368 "command.y"
           {
 		if (! in_commands)
 			yyerror(_("`silent' valid only in command `commands'"));
 	  }
-#line 1838 "../../../src/gawk-5.3.0/command.c"
+#line 1838 "command.c"
     break;
 
   case 62: /* command: D_TRACE D_STRING  */
-#line 373 "./../../../src/gawk-5.3.0/command.y"
+#line 373 "command.y"
           {
 		int idx = find_argument(yyvsp[0]);
 		if (idx < 0)
@@ -1850,17 +1850,17 @@ yyreduce:
 			yyvsp[0]->a_argument = argtab[idx].value;
 		}
 	  }
-#line 1854 "../../../src/gawk-5.3.0/command.c"
+#line 1854 "command.c"
     break;
 
   case 63: /* $@8: %empty  */
-#line 384 "./../../../src/gawk-5.3.0/command.y"
+#line 384 "command.y"
                                    { want_nodeval = true; }
-#line 1860 "../../../src/gawk-5.3.0/command.c"
+#line 1860 "command.c"
     break;
 
   case 64: /* command: D_CONDITION plus_integer $@8 condition_exp  */
-#line 385 "./../../../src/gawk-5.3.0/command.y"
+#line 385 "command.y"
           {
 		int type;
 		int num = yyvsp[-2]->a_int;
@@ -1868,11 +1868,11 @@ yyreduce:
 		if (! type)
 			yyerror(_("condition: invalid breakpoint/watchpoint number"));
 	  }
-#line 1872 "../../../src/gawk-5.3.0/command.c"
+#line 1872 "command.c"
     break;
 
   case 65: /* command: eval_cmd  */
-#line 393 "./../../../src/gawk-5.3.0/command.y"
+#line 393 "command.y"
           {
 		if (in_commands) {
 			/* Prepend command 'eval' to argument list */
@@ -1883,11 +1883,11 @@ yyreduce:
 			arg_list = arg;
 		}
 	  }
-#line 1887 "../../../src/gawk-5.3.0/command.c"
+#line 1887 "command.c"
     break;
 
   case 66: /* condition_exp: opt_string_node  */
-#line 407 "./../../../src/gawk-5.3.0/command.y"
+#line 407 "command.y"
           {
 		if (yyvsp[0] != NULL) {
 			NODE *n = yyvsp[0]->a_node;
@@ -1897,76 +1897,76 @@ yyreduce:
 		}
 		yyval = yyvsp[0];
 	  }
-#line 1901 "../../../src/gawk-5.3.0/command.c"
+#line 1901 "command.c"
     break;
 
   case 68: /* commands_arg: error  */
-#line 421 "./../../../src/gawk-5.3.0/command.y"
+#line 421 "command.y"
           {	yyval = NULL; }
-#line 1907 "../../../src/gawk-5.3.0/command.c"
+#line 1907 "command.c"
     break;
 
   case 69: /* opt_param_list: %empty  */
-#line 426 "./../../../src/gawk-5.3.0/command.y"
+#line 426 "command.y"
           { yyval = NULL; }
-#line 1913 "../../../src/gawk-5.3.0/command.c"
+#line 1913 "command.c"
     break;
 
   case 74: /* param_list: error  */
-#line 435 "./../../../src/gawk-5.3.0/command.y"
+#line 435 "command.y"
           { yyval = NULL; }
-#line 1919 "../../../src/gawk-5.3.0/command.c"
+#line 1919 "command.c"
     break;
 
   case 75: /* opt_string_node: %empty  */
-#line 440 "./../../../src/gawk-5.3.0/command.y"
+#line 440 "command.y"
           { yyval = NULL; }
-#line 1925 "../../../src/gawk-5.3.0/command.c"
+#line 1925 "command.c"
     break;
 
   case 77: /* opt_string_node: error  */
-#line 443 "./../../../src/gawk-5.3.0/command.y"
+#line 443 "command.y"
           { yyval = NULL; }
-#line 1931 "../../../src/gawk-5.3.0/command.c"
+#line 1931 "command.c"
     break;
 
   case 78: /* string_node: D_NODE  */
-#line 448 "./../../../src/gawk-5.3.0/command.y"
+#line 448 "command.y"
           {
 		NODE *n;
 		n = yyvsp[0]->a_node;
 		if ((n->flags & STRING) == 0)
 			yyerror(_("argument not a string"));
 	  }
-#line 1942 "../../../src/gawk-5.3.0/command.c"
+#line 1942 "command.c"
     break;
 
   case 79: /* option_args: %empty  */
-#line 458 "./../../../src/gawk-5.3.0/command.y"
+#line 458 "command.y"
           { yyval = NULL; }
-#line 1948 "../../../src/gawk-5.3.0/command.c"
+#line 1948 "command.c"
     break;
 
   case 80: /* option_args: D_STRING  */
-#line 460 "./../../../src/gawk-5.3.0/command.y"
+#line 460 "command.y"
           {
 		if (find_option(yyvsp[0]->a_string) < 0)
 			yyerror(_("option: invalid parameter - `%s'"), yyvsp[0]->a_string);
  	  }
-#line 1957 "../../../src/gawk-5.3.0/command.c"
+#line 1957 "command.c"
     break;
 
   case 81: /* option_args: D_STRING '=' D_STRING  */
-#line 465 "./../../../src/gawk-5.3.0/command.y"
+#line 465 "command.y"
           {
 		if (find_option(yyvsp[-2]->a_string) < 0)
 			yyerror(_("option: invalid parameter - `%s'"), yyvsp[-2]->a_string);
  	  }
-#line 1966 "../../../src/gawk-5.3.0/command.c"
+#line 1966 "command.c"
     break;
 
   case 82: /* func_name: D_STRING  */
-#line 473 "./../../../src/gawk-5.3.0/command.y"
+#line 473 "command.y"
           {
 		NODE *n;
 		n = lookup(yyvsp[0]->a_string);
@@ -1979,53 +1979,53 @@ yyreduce:
 			yyvsp[0]->a_node = n;
 		}
 	  }
-#line 1983 "../../../src/gawk-5.3.0/command.c"
+#line 1983 "command.c"
     break;
 
   case 83: /* location: %empty  */
-#line 489 "./../../../src/gawk-5.3.0/command.y"
+#line 489 "command.y"
           { yyval = NULL; }
-#line 1989 "../../../src/gawk-5.3.0/command.c"
+#line 1989 "command.c"
     break;
 
   case 88: /* break_args: %empty  */
-#line 498 "./../../../src/gawk-5.3.0/command.y"
+#line 498 "command.y"
           { yyval = NULL; }
-#line 1995 "../../../src/gawk-5.3.0/command.c"
+#line 1995 "command.c"
     break;
 
   case 89: /* $@9: %empty  */
-#line 499 "./../../../src/gawk-5.3.0/command.y"
+#line 499 "command.y"
                        { want_nodeval = true; }
-#line 2001 "../../../src/gawk-5.3.0/command.c"
+#line 2001 "command.c"
     break;
 
   case 92: /* $@10: %empty  */
-#line 501 "./../../../src/gawk-5.3.0/command.y"
+#line 501 "command.y"
                                     { want_nodeval = true; }
-#line 2007 "../../../src/gawk-5.3.0/command.c"
+#line 2007 "command.c"
     break;
 
   case 95: /* opt_variable: %empty  */
-#line 507 "./../../../src/gawk-5.3.0/command.y"
+#line 507 "command.y"
           { yyval = NULL; }
-#line 2013 "../../../src/gawk-5.3.0/command.c"
+#line 2013 "command.c"
     break;
 
   case 97: /* opt_string: %empty  */
-#line 513 "./../../../src/gawk-5.3.0/command.y"
+#line 513 "command.y"
           { yyval = NULL; }
-#line 2019 "../../../src/gawk-5.3.0/command.c"
+#line 2019 "command.c"
     break;
 
   case 99: /* opt_node: %empty  */
-#line 519 "./../../../src/gawk-5.3.0/command.y"
+#line 519 "command.y"
           { yyval = NULL; }
-#line 2025 "../../../src/gawk-5.3.0/command.c"
+#line 2025 "command.c"
     break;
 
   case 104: /* enable_args: D_STRING opt_integer_list  */
-#line 531 "./../../../src/gawk-5.3.0/command.y"
+#line 531 "command.y"
           {
 		int idx = find_argument(yyvsp[-1]);
 		if (idx < 0)
@@ -2037,52 +2037,52 @@ yyreduce:
 			yyvsp[-1]->a_argument = argtab[idx].value;
 		}
 	  }
-#line 2041 "../../../src/gawk-5.3.0/command.c"
+#line 2041 "command.c"
     break;
 
   case 106: /* print_exp: '@' D_VARIABLE  */
-#line 547 "./../../../src/gawk-5.3.0/command.y"
+#line 547 "command.y"
           {
 		yyvsp[0]->type = D_array;	/* dump all items */
 		yyvsp[0]->a_count = 0;
 	  }
-#line 2050 "../../../src/gawk-5.3.0/command.c"
+#line 2050 "command.c"
     break;
 
   case 107: /* print_exp: '@' D_VARIABLE subscript_list  */
-#line 552 "./../../../src/gawk-5.3.0/command.y"
+#line 552 "command.y"
           {
 		yyvsp[-1]->type = D_array;
 		yyvsp[-1]->a_count = num_dim;
 	  }
-#line 2059 "../../../src/gawk-5.3.0/command.c"
+#line 2059 "command.c"
     break;
 
   case 117: /* list_args: %empty  */
-#line 578 "./../../../src/gawk-5.3.0/command.y"
+#line 578 "command.y"
           { yyval = NULL; }
-#line 2065 "../../../src/gawk-5.3.0/command.c"
+#line 2065 "command.c"
     break;
 
   case 118: /* list_args: '+'  */
-#line 580 "./../../../src/gawk-5.3.0/command.y"
+#line 580 "command.y"
           { yyval = NULL; }
-#line 2071 "../../../src/gawk-5.3.0/command.c"
+#line 2071 "command.c"
     break;
 
   case 119: /* list_args: '-'  */
-#line 582 "./../../../src/gawk-5.3.0/command.y"
+#line 582 "command.y"
           {
 		CMDARG *a;
 		a = mk_cmdarg(D_int);
 		a->a_int = -1;
 		append_cmdarg(a);
 	  }
-#line 2082 "../../../src/gawk-5.3.0/command.c"
+#line 2082 "command.c"
     break;
 
   case 126: /* integer_range: plus_integer '-' plus_integer  */
-#line 598 "./../../../src/gawk-5.3.0/command.y"
+#line 598 "command.y"
           {
 		if (yyvsp[-2]->a_int > yyvsp[0]->a_int)
 			yyerror(_("invalid range specification: %d - %d"),
@@ -2091,29 +2091,29 @@ yyreduce:
 			yyvsp[-2]->type = D_range;
 		yyval = yyvsp[-2];
 	  }
-#line 2095 "../../../src/gawk-5.3.0/command.c"
+#line 2095 "command.c"
     break;
 
   case 127: /* opt_integer_list: %empty  */
-#line 610 "./../../../src/gawk-5.3.0/command.y"
+#line 610 "command.y"
           { yyval = NULL; }
-#line 2101 "../../../src/gawk-5.3.0/command.c"
+#line 2101 "command.c"
     break;
 
   case 134: /* exp_list: node  */
-#line 624 "./../../../src/gawk-5.3.0/command.y"
+#line 624 "command.y"
           { yyval = yyvsp[0]; }
-#line 2107 "../../../src/gawk-5.3.0/command.c"
+#line 2107 "command.c"
     break;
 
   case 135: /* exp_list: exp_list ',' node  */
-#line 626 "./../../../src/gawk-5.3.0/command.y"
+#line 626 "command.y"
           { yyval = yyvsp[-2]; }
-#line 2113 "../../../src/gawk-5.3.0/command.c"
+#line 2113 "command.c"
     break;
 
   case 137: /* subscript: '[' exp_list ']'  */
-#line 632 "./../../../src/gawk-5.3.0/command.y"
+#line 632 "command.y"
           {
 		CMDARG *a;
 		NODE *subs;
@@ -2128,23 +2128,23 @@ yyreduce:
 		yyvsp[-1]->a_node = subs;
 		yyval = yyvsp[-1];
 	  }
-#line 2132 "../../../src/gawk-5.3.0/command.c"
+#line 2132 "command.c"
     break;
 
   case 139: /* subscript_list: subscript  */
-#line 651 "./../../../src/gawk-5.3.0/command.y"
+#line 651 "command.y"
           { yyval = yyvsp[0]; num_dim = 1; }
-#line 2138 "../../../src/gawk-5.3.0/command.c"
+#line 2138 "command.c"
     break;
 
   case 140: /* subscript_list: subscript_list subscript  */
-#line 653 "./../../../src/gawk-5.3.0/command.y"
+#line 653 "command.y"
           {	yyval = yyvsp[-1]; num_dim++; }
-#line 2144 "../../../src/gawk-5.3.0/command.c"
+#line 2144 "command.c"
     break;
 
   case 142: /* variable: '$' D_NODE  */
-#line 659 "./../../../src/gawk-5.3.0/command.y"
+#line 659 "command.y"
           {
 		NODE *n = yyvsp[0]->a_node;
 		if ((n->flags & NUMBER) == 0)
@@ -2153,39 +2153,39 @@ yyreduce:
 			yyvsp[0]->type = D_field;
 		yyval = yyvsp[0];
 	  }
-#line 2157 "../../../src/gawk-5.3.0/command.c"
+#line 2157 "command.c"
     break;
 
   case 143: /* variable: D_VARIABLE subscript_list  */
-#line 668 "./../../../src/gawk-5.3.0/command.y"
+#line 668 "command.y"
           {
 		/* a_string is array name, a_count is dimension count */
 		yyvsp[-1]->type = D_subscript;
 		yyvsp[-1]->a_count = num_dim;
 		yyval = yyvsp[-1];
 	  }
-#line 2168 "../../../src/gawk-5.3.0/command.c"
+#line 2168 "command.c"
     break;
 
   case 144: /* node: D_NODE  */
-#line 678 "./../../../src/gawk-5.3.0/command.y"
+#line 678 "command.y"
           { yyval = yyvsp[0]; }
-#line 2174 "../../../src/gawk-5.3.0/command.c"
+#line 2174 "command.c"
     break;
 
   case 145: /* node: '+' D_NODE  */
-#line 680 "./../../../src/gawk-5.3.0/command.y"
+#line 680 "command.y"
           {
 		NODE *n = yyvsp[0]->a_node;
 		if ((n->flags & NUMBER) == 0)
 			yyerror(_("non-numeric value found, numeric expected"));
 		yyval = yyvsp[0];
 	  }
-#line 2185 "../../../src/gawk-5.3.0/command.c"
+#line 2185 "command.c"
     break;
 
   case 146: /* node: '-' D_NODE  */
-#line 687 "./../../../src/gawk-5.3.0/command.y"
+#line 687 "command.y"
           {
 		NODE *n = yyvsp[0]->a_node;
 		if ((n->flags & NUMBER) == 0)
@@ -2194,76 +2194,76 @@ yyreduce:
 			negate_num(n);
 		yyval = yyvsp[0];
 	  }
-#line 2198 "../../../src/gawk-5.3.0/command.c"
+#line 2198 "command.c"
     break;
 
   case 147: /* opt_plus_integer: %empty  */
-#line 699 "./../../../src/gawk-5.3.0/command.y"
+#line 699 "command.y"
           { yyval = NULL; }
-#line 2204 "../../../src/gawk-5.3.0/command.c"
+#line 2204 "command.c"
     break;
 
   case 148: /* opt_plus_integer: plus_integer  */
-#line 701 "./../../../src/gawk-5.3.0/command.y"
+#line 701 "command.y"
           { yyval = yyvsp[0]; }
-#line 2210 "../../../src/gawk-5.3.0/command.c"
+#line 2210 "command.c"
     break;
 
   case 149: /* opt_integer: %empty  */
-#line 706 "./../../../src/gawk-5.3.0/command.y"
+#line 706 "command.y"
           { yyval = NULL; }
-#line 2216 "../../../src/gawk-5.3.0/command.c"
+#line 2216 "command.c"
     break;
 
   case 150: /* opt_integer: integer  */
-#line 708 "./../../../src/gawk-5.3.0/command.y"
+#line 708 "command.y"
           { yyval = yyvsp[0]; }
-#line 2222 "../../../src/gawk-5.3.0/command.c"
+#line 2222 "command.c"
     break;
 
   case 151: /* plus_integer: D_INT  */
-#line 713 "./../../../src/gawk-5.3.0/command.y"
+#line 713 "command.y"
           {
 		if (yyvsp[0]->a_int == 0)
 			yyerror(_("non-zero integer value"));
 		yyval = yyvsp[0];
 	  }
-#line 2232 "../../../src/gawk-5.3.0/command.c"
+#line 2232 "command.c"
     break;
 
   case 152: /* plus_integer: '+' D_INT  */
-#line 719 "./../../../src/gawk-5.3.0/command.y"
+#line 719 "command.y"
           {
 		if (yyvsp[0]->a_int == 0)
 			yyerror(_("non-zero integer value"));
 		yyval = yyvsp[0];
 	  }
-#line 2242 "../../../src/gawk-5.3.0/command.c"
+#line 2242 "command.c"
     break;
 
   case 153: /* integer: D_INT  */
-#line 728 "./../../../src/gawk-5.3.0/command.y"
+#line 728 "command.y"
           { yyval = yyvsp[0]; }
-#line 2248 "../../../src/gawk-5.3.0/command.c"
+#line 2248 "command.c"
     break;
 
   case 154: /* integer: '+' D_INT  */
-#line 730 "./../../../src/gawk-5.3.0/command.y"
+#line 730 "command.y"
           { yyval = yyvsp[0]; }
-#line 2254 "../../../src/gawk-5.3.0/command.c"
+#line 2254 "command.c"
     break;
 
   case 155: /* integer: '-' D_INT  */
-#line 732 "./../../../src/gawk-5.3.0/command.y"
+#line 732 "command.y"
           {
 		yyvsp[0]->a_int = - yyvsp[0]->a_int;
 		yyval = yyvsp[0];
 	  }
-#line 2263 "../../../src/gawk-5.3.0/command.c"
+#line 2263 "command.c"
     break;
 
   case 156: /* nls: '\n'  */
-#line 740 "./../../../src/gawk-5.3.0/command.y"
+#line 740 "command.y"
           {
 		if (lexptr_begin != NULL) {
 			if (input_from_tty && lexptr_begin[0] != '\0')
@@ -2272,11 +2272,11 @@ yyreduce:
 			lexptr_begin = NULL;
 		}
 	  }
-#line 2276 "../../../src/gawk-5.3.0/command.c"
+#line 2276 "command.c"
     break;
 
 
-#line 2280 "../../../src/gawk-5.3.0/command.c"
+#line 2280 "command.c"
 
       default: break;
     }
@@ -2469,7 +2469,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 750 "./../../../src/gawk-5.3.0/command.y"
+#line 750 "command.y"
 
 
 
