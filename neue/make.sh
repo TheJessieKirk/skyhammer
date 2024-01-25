@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison coreutils dejagnu diffutils findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring m4 make mingw-w64 mpc mpfr openssl patch perl readline sed tar termcap texinfo wget2);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison coreutils dejagnu diffutils dmalloc findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring m4 make mingw-w64 mpc mpfr openssl patch perl readline sed tar termcap texinfo wget2);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -215,6 +215,22 @@ case $REPLY in
             tar -xf diffutils-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/diffutils-*/configure exists.";
+          fi;
+          ;;
+        dmalloc)
+          if [ ! -f dmalloc-5.6.5.tgz ];
+          then
+            echo "$ROOT_DIR/var/packages/dmalloc-5.6.5.tgz does not exist. Downloading...";
+            wget -q https://dmalloc.com/releases/dmalloc-5.6.5.tgz;
+          else
+            echo "$ROOT_DIR/var/packages/dmaloc-5.6.5.tgz exists.";
+          fi;
+          if [ ! -f ../src/dmalloc-*/configure ];
+          then
+            echo "$ROOT_DIR/src/dmalloc-*/configure does not exist. Extracting package...";
+            tar -xf dmalloc-*.tgz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/dmalloc-*/configure exists.";
           fi;
           ;;
         findutils)
@@ -584,7 +600,7 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(coreutils perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison coreutils dejagnu diffutils findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi openssl patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(coreutils perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison coreutils dejagnu diffutils dmalloc findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi openssl patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
@@ -635,6 +651,9 @@ do
               ;;
             diffutils)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-dependency-tracking --enable-threads=posix;
+              ;;
+            dmalloc)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-threads=posix CXX=g++;
               ;;
             findutils)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-d_type-optimization --enable-dependency-tracking --enable-leaf-optimisation --enable-threads=posix;
@@ -690,7 +709,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-threads=posix;
               ;;
             m4)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-c++ --enable-changeword --enable-dependency-tracking --enable-threads=posix;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-c++ --enable-changeword --enable-dependency-tracking --enable-threads=posix --with-dmalloc;
               ;;
             mingw-w64)
               ./../../../src/mingw-w64-*/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i --with-libraries=winpthreads CXXFLAGS="-std=c++14";
@@ -757,6 +776,11 @@ do
         elif [ $j = "bash" ];
         then
           make;
+        elif [ $j = "dmalloc" ];
+        then
+          make -j 4;
+          make threads -j 4;
+          make threadscxx -j 4;
         elif [ $j = "libcap" ];
         then
           rm -r $ROOT_DIR/src/libcap*;
@@ -796,6 +820,11 @@ do
           then
             ln -s $ROOT_DIR/install/$i/bin/bash $ROOT_DIR/install/$i/bin/sh;
           fi;
+        elif [ $j = "dmalloc" ];
+        then
+          make install -j 4;
+          make installth -j 4;
+          make installthcxx -j 4;
         elif [ $j = "libcap" ];
         then
           make install prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
