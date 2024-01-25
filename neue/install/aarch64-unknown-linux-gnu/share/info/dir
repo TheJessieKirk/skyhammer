@@ -31,6 +31,7 @@ C++ libraries
 
 Compression
 * Gzip: (gzip).                 General (de)compression of files (lzw).
+* Lzip: (lzip).                 LZMA lossless data compressor
 
 Desarrollo de software
 * help2man-es: (help2man-es).   Generación automática de la página del 

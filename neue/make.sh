@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison coreutils dejagnu diffutils dmalloc findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring m4 make mingw-w64 mpc mpfr openssl patch perl readline sed tar termcap texinfo wget2);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress openssl patch perl readline sed tar termcap texinfo wget2 xz zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -98,7 +98,7 @@ case $REPLY in
           if [ ! -f ../src/autoconf-*/configure ];
           then
             echo "$ROOT_DIR/src/autoconf-*/configure does not exist. Extracting package...";
-           tar -xf autoconf-*.tar.xz -C $ROOT_DIR/src;
+            tar -xf autoconf-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/binutils-*/configure exists.";
           fi;
@@ -183,6 +183,22 @@ case $REPLY in
             tar -xf bison-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/bison-*/configure exists.";
+          fi;
+          ;;
+        bzip2)
+          if [ ! -f bzip2-1.0.8.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/bzip2-1.0.8.tar.gz does not exist. Downloading...";
+            wget -q https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/bzip2-1.0.8.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/bzip2-*/Makefile ];
+          then
+            echo "$ROOT_DIR/src/bzip2-*/Makefile does not exist. Extracting package...";
+            tar -xf bzip2-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/bzip2-*/Makefile exists.";
           fi;
           ;;
         coreutils)
@@ -375,6 +391,20 @@ case $REPLY in
             echo "$ROOT_DIR/src/guile-*/configure exists.";
           fi;
           ;;
+        gzip)
+          if [ ! -f gzip-1.13.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/gzip-1.13.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.xz;
+          fi;
+          if [ ! -f ../src/gzip-*/configure ];
+          then
+            echo "$ROOT_DIR/src/gzip-*/configure does not exist. Extracting package...";
+            tar -xf gzip-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/gzip-*/configure exists.";
+          fi;
+          ;;
         help2man)
           if [ ! -f help2man-1.49.3.tar.xz ];
           then
@@ -488,6 +518,54 @@ case $REPLY in
             echo "$ROOT_DIR/src/libunistring-*/configure exists.";
           fi;
           ;;
+        lzip)
+          if [ ! -f lzip-1.24-rc2.tar.lz ];
+          then
+            echo "$ROOT_DIR/var/packages/lzip-1.24-rc2.tar.lz does not exist. Downloading...";
+            wget -q https://download.savannah.gnu.org/releases/lzip/lzip-1.24-rc2.tar.lz;
+          else
+            echo "$ROOT_DIR/var/packages/lzip-1.24-rc2 exists.";
+          fi;
+          if [ ! -f ../src/lzip-*/configure ];
+          then
+            echo "$ROOT_DIR/src/lzip-*/configure does not exist. Extracting package...";
+            tar -xf lzip-*.tar.lz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/lzip-*/configure exists.";
+          fi;
+          ;;
+        lzo)
+          if [ ! -f lzo-2.10.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/lzo-2.10.tar.gz does not exist. Downloading...";
+            wget -q https://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/lzo-2.10.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/lzo-*/configure ];
+          then
+           echo "$ROOT_DIR/src/lzo-*/configure does not exist. Extracting package...";
+           tar -xf lzo-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/lzo-*/configure exists.";
+          fi;
+          ;;
+        lzop)
+          if [ ! -f lzop-1.04.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/lzop-1.04.tar.gz does not exist. Downloading...";
+            wget -q https://www.lzop.org/download/lzop-1.04.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/lzop-1.04.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/lzop-*/configure ];
+          then
+           echo "$ROOT_DIR/src/lzop-*/configure does not exist. Extracting package...";
+           tar -xf lzop-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/lzop-*/configure exists.";
+          fi;
+          ;;
         m4)
           if [ ! -f m4-1.4.19.tar.xz ];
           then
@@ -553,6 +631,21 @@ case $REPLY in
             echo "$ROOT_DIR/src/mpfr-*/configure exists.";
           fi;
           ;;
+        ncompress)
+          if [ ! -f ncompress-5.0.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/ncompress-5.0.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/vapier/ncompress/archive/refs/tags/v5.0.tar.gz;
+          fi;
+          if [ ! -f ../src/ncompress-*/GNUmakefile ];
+          then
+            echo "$ROOT_DIR/src/ncompress-*/GNUmakefile does not exist. Extracting package...";
+            tar -xf v5.0.tar.gz -C $ROOT_DIR/src;
+            mv v5.0.tar.gz ncompress-5.0.tar.gz;
+          else
+            echo "$ROOT_DIR/src/ncompress-*/GNUmakefile exists.";
+          fi;
+          ;;
         openssl)
           if [ ! -f openssl-3.2.0.tar.gz ];
           then
@@ -586,6 +679,53 @@ case $REPLY in
             echo "$ROOT_DIR/src/perl-*/Configure exists.";
           fi;
           ;;
+        tar)
+          if [ ! -f tar-1.35.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/tar-1.35.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz;
+          fi;
+          if [ ! -f ../src/tar-*/configure ];
+          then
+            echo "$ROOT_DIR/src/tar-*/configure does not exist. Extracting package...";
+            tar -xf tar-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/tar-*/configure exists.";
+          fi;
+          ;;
+        xz)
+          if [ ! -f xz-5.4.5.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/xz-5.4.5.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/tukaani-project/xz/archive/refs/tags/v5.4.5.tar.gz;
+            mv v5.4.5.tar.gz xz-5.4.5.tar.gz;
+          fi;
+          if [ ! -f ../src/xz-*/configure ];
+          then
+            echo "$ROOT_DIR/src/xz-*/configure does not exist. Extracting package...";
+            tar -xf xz-*.tar.gz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/xz-*;
+            ./autogen.sh;
+            cd $ROOT_DIR/packages;
+          else
+            echo "$ROOT_DIR/src/tar-*/configure exists.";
+          fi;
+          ;;
+        zstd)
+          if [ ! -f zstd-1.5.5.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/zstd-1.5.5.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/facebook/zstd/archive/refs/tags/v1.5.5.tar.gz;
+            mv v1.5.5.tar.gz zstd-1.5.5.tar.gz;
+          fi;
+          if [ ! -f ../src/zstd-*/Makefile ];
+          then
+            echo "$ROOT_DIR/src/zstd-*/Makefile does not exist. Extracting package...";
+            tar -xf zstd-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/zstd-*/Makefile exists.";
+          fi;
+          ;;
       esac;
     done;
     ;;
@@ -600,23 +740,26 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(coreutils perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison coreutils dejagnu diffutils dmalloc findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi openssl patch sed tar termcap texinfo wget2 gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(tar perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress openssl patch sed tar termcap texinfo wget2 zstd gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
   for j in ${SOFTWARE_TO_BUILD[@]};
   do
-    if [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ];
+    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "zstd" ];
     then
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
         y)
-          if [ ! -d $ROOT_DIR/build/$i/$j ];
+          if [ ! $j = "ncompress" ];
           then
-            mkdir $ROOT_DIR/build/$i/$j;
+            if [ ! -d $ROOT_DIR/build/$i/$j ];
+            then
+              mkdir $ROOT_DIR/build/$i/$j;
+            fi;
+            cd $ROOT_DIR/build/$i/$j;
+            rm -r *;
           fi;
-          cd $ROOT_DIR/build/$i/$j;
-          rm -r *;
           case $j in
             acl)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-year2038 --with-aix-soname=both;
@@ -688,7 +831,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-lto --enable-shared --enable-static --enable-year2038 --with-aix-soname=both --with-threads;
               ;;
             gzip)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking;
               ;;
             help2man)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-nls;
@@ -708,6 +851,15 @@ do
             libunistring)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-threads=posix;
               ;;
+            lzip)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i;
+              ;;
+            lzo)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-shared;
+              ;;
+            lzop)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking;
+              ;;
             m4)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-c++ --enable-changeword --enable-dependency-tracking --enable-threads=posix --with-dmalloc;
               ;;
@@ -722,6 +874,12 @@ do
               ;;
             mpfr)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
+            ncompress)
+              cd $ROOT_DIR/src/$j-*;
+              ln -s $ROOT_DIR/install/$i/bin/gcc $ROOT_DIR/install/$i/bin/cc;
+              ./build CC=gcc;
+              rm $ROOT_DIR/install/$i/bin/cc;
               ;;
             openssl)
               ./../../../src/$j-*/Configure --openssldir=$ROOT_DIR/install/$i --prefix=$ROOT_DIR/install/$i shared;
@@ -740,7 +898,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
             tar)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-backup-scripts --enable-dependency-tracking --with-bzip2=bzip2 --with-compress=compress --with-gzip=gzip --with-lzip=lzip --with-lzma=lzma --with-xz=xz --with-zstd=zstd;
               ;;
             termcap)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -750,6 +908,9 @@ do
               ;;
             wget2)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
+            xz)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-threads=posix --enable-year2038 --with-aix-soname=both;
               ;;
           esac;
           ;;
@@ -761,102 +922,128 @@ do
       esac;
     fi;
 
-    read -p "Do you want to build $j for $i? [y to proceed]: ";
-    case $REPLY in
-      y)
-        if [ $j = "gcc-pass2" ];
-        then
-          cd $ROOT_DIR/build/$i/gcc*;
-        else
-          cd $ROOT_DIR/build/$i/$j;
-        fi;
-        if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
-        then
-          make all-gcc -j 4;
-        elif [ $j = "bash" ];
-        then
-          make;
-        elif [ $j = "dmalloc" ];
-        then
-          make -j 4;
-          make threads -j 4;
-          make threadscxx -j 4;
-        elif [ $j = "libcap" ];
-        then
-          rm -r $ROOT_DIR/src/libcap*;
-          tar -xf $ROOT_DIR/packages/libcap-*.tar.gz -C $ROOT_DIR/src;
-          cd $ROOT_DIR/src/libcap*;
-          make prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
-        else
-          make -j 4;
-        fi;
-        ;;
-      stop)
-        exit;
-        ;;
-      *)
-        ;;
-    esac;
-
-    read -p "Do you want to install $j for $i? [y to proceed]: ";
-    case $REPLY in
-      y)
-        if [ $j = "gcc-pass2" ];
-        then
-          cd $ROOT_DIR/build/$i/gcc;
-        elif [ $j = "libcap" ];
-        then
-          cd $ROOT_DIR/src/libcap*;
-        else
-          cd $ROOT_DIR/build/$i/$j;
-        fi;
-        if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
-        then
-          make install-gcc -j 4;
-        elif [ $j = "bash" ];
-        then
-          make install;
-          if [ -L $ROOT_DIR/install/$i/bin/bash ];
+    if [ ! $j = "ncompress" ];
+    then
+      read -p "Do you want to build $j for $i? [y to proceed]: ";
+      case $REPLY in
+        y)
+          if [ $j = "gcc-pass2" ];
           then
-            ln -s $ROOT_DIR/install/$i/bin/bash $ROOT_DIR/install/$i/bin/sh;
+            cd $ROOT_DIR/build/$i/gcc*;
+          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "zstd" ];
+          then
+            cd $ROOT_DIR/build/$i/$j;
           fi;
-        elif [ $j = "dmalloc" ];
-        then
-          make install -j 4;
-          make installth -j 4;
-          make installthcxx -j 4;
-        elif [ $j = "libcap" ];
-        then
-          make install prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
-        else
-          make install -j 4;
-        fi;
-        ;;
-      stop)
-        exit;
-        ;;
-      *)
-        ;;
-    esac;
+          if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
+          then
+            make all-gcc -j 4;
+          elif [ $j = "bash" ];
+          then
+            make;
+          elif [ $j = "bzip2" ];
+          then
+            rm -r $ROOT_DIR/src/bzip2*;
+            tar -xf $ROOT_DIR/packages/bzip2-*.tar.gz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/bzip2*;
+            make PREFIX=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "dmalloc" ];
+          then
+            make -j 4;
+            make threads -j 4;
+            make threadscxx -j 4;
+          elif [ $j = "libcap" ];
+          then
+            rm -r $ROOT_DIR/src/libcap*;
+            tar -xf $ROOT_DIR/packages/libcap-*.tar.gz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/libcap*;
+            make prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
+          elif [ $j = "zstd" ];
+          then
+            rm -r $ROOT_DIR/src/zstd*;
+            tar -xf $ROOT_DIR/packages/zstd-*.tar.gz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/zstd*;
+            make CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
+          else
+            make -j 4;
+          fi;
+          ;;
+        stop)
+          exit;
+          ;;
+        *)
+          ;;
+      esac;
+    fi;
 
-    read -p "Do you want to check $j for $i? [y to proceed]: ";
-    case $REPLY in
-      y)
-        if [ $j = "libcap" ];
-        then
-          cd $ROOT_DIR/src/libcap*;
-        else
-          cd $ROOT_DIR/build/$i/$j;
-        fi;
-        make check -j 4;
-        make test -j 4;
-        ;;
-      stop)
-        exit;
-        ;;
-      *)
-        ;;
-    esac;
+    if [ ! $j = "ncompress" ];
+    then
+      read -p "Do you want to install $j for $i? [y to proceed]: ";
+      case $REPLY in
+        y)
+          if [ $j = "gcc-pass2" ];
+          then
+            cd $ROOT_DIR/build/$i/gcc;
+          elif [ $j = "libcap" ];
+          then
+            cd $ROOT_DIR/src/libcap*;
+          else
+            cd $ROOT_DIR/build/$i/$j;
+          fi;
+          if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
+          then
+            make install-gcc -j 4;
+          elif [ $j = "bash" ];
+          then
+            make install;
+            if [ -L $ROOT_DIR/install/$i/bin/bash ];
+            then
+              ln -s $ROOT_DIR/install/$i/bin/bash $ROOT_DIR/install/$i/bin/sh;
+            fi;
+          elif [ $j = "bzip2" ];
+          then
+            make install PREFIX=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "dmalloc" ];
+          then
+            make install -j 4;
+            make installth -j 4;
+            make installthcxx -j 4;
+          elif [ $j = "libcap" ];
+          then
+            make install prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
+          elif [ $j = "zstd" ];
+          then
+            make install CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
+          else
+            make install -j 4;
+          fi;
+          ;;
+        stop)
+          exit;
+          ;;
+        *)
+          ;;
+      esac;
+
+      read -p "Do you want to check $j for $i? [y to proceed]: ";
+      case $REPLY in
+        y)
+          if [ $j = "libcap" ];
+          then
+            cd $ROOT_DIR/src/libcap*;
+          else
+            cd $ROOT_DIR/build/$i/$j;
+          fi;
+          make check -j 4;
+          make test -j 4;
+          ;;
+        stop)
+          exit;
+          ;;
+        *)
+          ;;
+      esac;
+    fi;
+
   done;
 done;
 
