@@ -50,6 +50,9 @@ Dezvoltare de software
 Développement du logiciel
 * help2man-fr: (help2man-fr).   Création automatique de page de manuel.
 
+Encryption
+* Nettle: (nettle).             A low-level cryptographic library.
+
 GNU Ada Tools
 * gnat-style: (gnat-style.info).
                                 gnat-style

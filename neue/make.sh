@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress openssl patch perl readline sed tar termcap texinfo wget2 xz zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch perl readline sed tar termcap texinfo wget2 xz zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -646,6 +646,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/ncompress-*/GNUmakefile exists.";
           fi;
           ;;
+        nettle)
+          if [ ! -f nettle-3.9.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/nettle-3.9.1.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/nettle/nettle-3.9.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/nettle-3.9.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/nettle-*/configure ];
+          then
+            echo "$ROOT_DIR/src/nettle-*/configure does not exist. Extracting package...";
+            tar -xf nettle-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/nettle-*/configure exists.";
+          fi;
+          ;;
         openssl)
           if [ ! -f openssl-3.2.0.tar.gz ];
           then
@@ -691,6 +707,20 @@ case $REPLY in
             tar -xf tar-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/tar-*/configure exists.";
+          fi;
+          ;;
+        wget2)
+          if [ ! -f wget2-2.1.0.tar.lz ];
+          then
+            echo "$ROOT_DIR/var/packages/wget2-2.1.0.tar.lz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/wget/wget2-1.35.tar.lz;
+          fi;
+          if [ ! -f ../src/wget2-*/configure ];
+          then
+            echo "$ROOT_DIR/src/wget2-*/configure does not exist. Extracting package...";
+            tar -xf wget2-*.tar.lz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/wget2-*/configure exists.";
           fi;
           ;;
         xz)
@@ -740,7 +770,7 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(tar perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress openssl patch sed tar termcap texinfo wget2 zstd gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch sed tar termcap texinfo wget2 zstd gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
@@ -881,6 +911,9 @@ do
               ./build CC=gcc;
               rm $ROOT_DIR/install/$i/bin/cc;
               ;;
+            nettle)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-gcov;
+              ;;
             openssl)
               ./../../../src/$j-*/Configure --openssldir=$ROOT_DIR/install/$i --prefix=$ROOT_DIR/install/$i shared;
               ;;
@@ -907,7 +940,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
             wget2)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --with-linux-crypto=yes --with-openssl=yes;
               ;;
             xz)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-threads=posix --enable-year2038 --with-aix-soname=both;
