@@ -20,12 +20,12 @@ Z system%s		system.ads		system.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20240120085935 76789da1 ada%s
-D a-contai.ads		20240120085938 61e5e089 ada.containers%s
-D a-unccon.ads		20240120085939 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240120085935 a4968d35 system%s
-D s-exctab.ads		20240120085938 91bef6ef system.exception_table%s
-D s-stalib.ads		20240120085936 1c9580f6 system.standard_library%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-contai.ads		20230727081304 61e5e089 ada.containers%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 2|16r9 28r5

@@ -10,8 +10,8 @@ use strict;
 
 use Config;
 "$Config{'archname'}-$Config{'osvers'}" eq
-"aarch64-linux-thread-multi-ld-6.5.0-1008-raspi" or
-	die "Errno architecture (aarch64-linux-thread-multi-ld-6.5.0-1008-raspi) does not match executable architecture ($Config{'archname'}-$Config{'osvers'})";
+"aarch64-linux-thread-multi-ld-6.5.0-1009-raspi" or
+	die "Errno architecture (aarch64-linux-thread-multi-ld-6.5.0-1009-raspi) does not match executable architecture ($Config{'archname'}-$Config{'osvers'})";
 
 our $VERSION = "1.37";
 $VERSION = eval $VERSION;

@@ -67,3 +67,15 @@ neue/packages/libtool-2.4.7.tar.xz filter=lfs diff=lfs merge=lfs -text
 neue/packages/mingw-w64-6.0.2.zip filter=lfs diff=lfs merge=lfs -text
 neue/packages/gmp-6.3.0.tar.xz.1 filter=lfs diff=lfs merge=lfs -text
 neue/packages/libffi-3.4.4.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/dmalloc-5.6.5.tgz filter=lfs diff=lfs merge=lfs -text
+neue/packages/lzip-1.24-rc2.tar.lz filter=lfs diff=lfs merge=lfs -text
+neue/packages/lzo-2.10.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/lzop-1.04.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/ncompress-5.0.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/xz-5.4.5.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/zstd-1.5.5.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/bzip2-1.0.8.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/nettle-3.9.1.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/cpython-3.12.1.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/glibc-2.38.tar.xz filter=lfs diff=lfs merge=lfs -text
+neue/packages/pcre2-10.42.tar.gz filter=lfs diff=lfs merge=lfs -text

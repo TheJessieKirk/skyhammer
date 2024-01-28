@@ -19,9 +19,9 @@ W system%s		system.ads		system.ali
 U system.program_info%s	s-proinf.ads		b3dfb60b NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-proinf.ads		20240120085940 17493b3e system.program_info%s
-D s-proinf.adb		20240120085940 92439ac7 system.program_info%b
+D system.ads		20230727081304 a4968d35 system%s
+D s-proinf.ads		20230727081303 17493b3e system.program_info%s
+D s-proinf.adb		20230727081303 92439ac7 system.program_info%b
 G a e
 G c Z s b [default_task_stack system__program_info 38 13 none]
 X 1 system.ads

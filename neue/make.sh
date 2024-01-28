@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gcc gettext gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch perl readline sed tar termcap texinfo wget2 xz zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 coreutils cpython dejagnu diffutils dmalloc findutils flex gawk gcc gettext glibc gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch pcre2 perl readline sed tar termcap texinfo wget2 xz zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -104,7 +104,7 @@ case $REPLY in
           fi;
           ;;
         automake)
-          if [ ! -f automake-*.tar.xz ];
+          if [ ! -f automake-1.16.5.tar.xz ];
           then
             echo "$ROOT_DIR/var/packages/automake-1.16.5.tar.xz does not exist. Downloading...";
             wget -q https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.xz;
@@ -138,7 +138,7 @@ case $REPLY in
         bdm-gc)
           if [ ! -f bdm-gc-8.2.4.tar.gz ];
           then
-            echo "$ROOT_DIR/var/packages/bdm-gc-8.2.4tar.gz does not exist. Downloading...";
+            echo "$ROOT_DIR/var/packages/bdm-gc-8.2.4.tar.gz does not exist. Downloading...";
             wget -q https://www.hboehm.info/gc/gc_source/gc-8.2.4.tar.gz;
             mv gc-8.2.4.tar.gz bdm-gc-8.2.4.tar.gz;
           else
@@ -215,6 +215,39 @@ case $REPLY in
             tar -xf coreutils-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/coreutils-*/configure exists.";
+          fi;
+          ;;
+        cpython)
+          if [ ! -f cpython-3.12.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/cpython-3.12.1.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/python/cpython/archive/refs/tags/v3.12.1.tar.gz;
+            mv v3.12.1.tar.gz cpython-3.12.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/cpython-3.12.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/cpython-*/configure ];
+          then
+            echo "$ROOT_DIR/src/cpython-*/configure does not exist. Extracting package...";
+            tar -xf cpython-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/cpython-*/configure exists.";
+          fi;
+          ;;
+        dejagnu)
+          if [ ! -f dejagnu-1.6.3.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/dejagnu-1.6.3.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/dejagnu.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/dejagnu-*/configure ];
+          then
+            echo "$ROOT_DIR/src/dejagnu-*/configure does not exist. Extracting package...";
+            tar -xf dejagnu-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/dejagnu-*/configure exists.";
           fi;
           ;;
         diffutils)
@@ -331,6 +364,22 @@ case $REPLY in
             tar -xf gettext-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/gettext-*/configure exists.";
+          fi;
+          ;;
+        glibc)
+          if [ ! -f glibc-2.38.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/glibc-2.38.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/glibc/glibc-2.38.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/glibc-2.38.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/glibc-*/configure ];
+          then
+            echo "$ROOT_DIR/src/glibc-*/configure does not exist. Extracting package...";
+            tar -xf glibc-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/glibc-*/configure exists.";
           fi;
           ;;
         gmp)
@@ -486,6 +535,38 @@ case $REPLY in
             echo "$ROOT_DIR/src/libffi-*/configure exists.";
           fi;
           ;;
+        #libselinux)
+        #  if [ ! -f libselinux-3.6.tar.gz ];
+        #  then
+        #    echo "$ROOT_DIR/var/packages/libselinux-3.6.tar.gz does not exist. Downloading...";
+        #    wget -q https://github.com/SELinuxProject/selinux/releases/download/3.6/libselinux-3.6.tar.gz;
+        #  else
+        #    echo "$ROOT_DIR/var/packages/libselinux-3.6.tar.gz exists.";
+        #  fi;
+        #  if [ ! -f ../src/libselinux-*/configure ];
+        #  then
+        #    echo "$ROOT_DIR/src/libselinux-*/configure does not exist. Extracting package...";
+        #    tar -xf libselinux-*.tar.gz -C $ROOT_DIR/src;
+        #  else
+        #    echo "$ROOT_DIR/src/libselinux-*/configure exists.";
+        #  fi;
+        #  ;;
+        #libsepol)
+        #  if [ ! -f libsepol-3.6.tar.gz ];
+        #  then
+        #    echo "$ROOT_DIR/var/packages/libsepol-3.6.tar.gz does not exist. Downloading...";
+        #    wget -q https://github.com/SELinuxProject/selinux/releases/download/3.6/libsepol-3.6.tar.gz;
+        #  else
+        #    echo "$ROOT_DIR/var/packages/libsepol-3.6.tar.gz exists.";
+        #  fi;
+        #  if [ ! -f ../src/libsepol-*/configure ];
+        #  then
+        #    echo "$ROOT_DIR/src/libsepol-*/configure does not exist. Extracting package...";
+        #    tar -xf libsepol-*.tar.gz -C $ROOT_DIR/src;
+        #  else
+        #    echo "$ROOT_DIR/src/libsepol-*/configure exists.";
+        #  fi;
+        #  ;;
         libtool)
           if [ ! -f libtool-2.4.7.tar.xz ];
           then
@@ -679,6 +760,38 @@ case $REPLY in
             echo "$ROOT_DIR/src/openssl-*/Configure exists.";
           fi;
           ;;
+        patch)
+          if [ ! -f patch-2.7.6.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/patch-2.7.6.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/patch-2.7.6.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/patch-*/configure ];
+          then
+            echo "$ROOT_DIR/src/patch-*/configure does not exist. Extracting package...";
+            tar -xf patch-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/patch-*/configure exists.";
+          fi;
+          ;;
+        pcre2)
+          if [ ! -f pcre2-10.42.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/pcre2-10.42.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/pcre2-10.42.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/pcre2-*/configure ];
+          then
+            echo "$ROOT_DIR/src/pcre2-*/configure does not exist. Extracting package...";
+            tar -xf pcre2-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/pcre2-*/Configure exists.";
+          fi;
+          ;;
         perl)
           if [ ! -f perl-5.38.2.tar.gz ];
           then
@@ -695,6 +808,34 @@ case $REPLY in
             echo "$ROOT_DIR/src/perl-*/Configure exists.";
           fi;
           ;;
+        readline)
+          if [ ! -f readline-8.2.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/readline-8.2.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/readline/readline-8.2.tar.lz;
+          fi;
+          if [ ! -f ../src/readline-*/configure ];
+          then
+            echo "$ROOT_DIR/src/readline-*/configure does not exist. Extracting package...";
+            tar -xf readline-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/readline-*/configure exists.";
+          fi;
+          ;;
+        sed)
+          if [ ! -f sed-4.9.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/sed-4.9.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz;
+          fi;
+          if [ ! -f ../src/sed-*/configure ];
+          then
+            echo "$ROOT_DIR/src/sed-*/configure does not exist. Extracting package...";
+            tar -xf sed-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/sed-*/configure exists.";
+          fi;
+          ;;
         tar)
           if [ ! -f tar-1.35.tar.xz ];
           then
@@ -707,6 +848,34 @@ case $REPLY in
             tar -xf tar-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/tar-*/configure exists.";
+          fi;
+          ;;
+        termcap)
+          if [ ! -f termcap-1.3.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/termcap-1.3.1.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/termcap/termcap-1.3.1.tar.gz;
+          fi;
+          if [ ! -f ../src/termcap-*/configure ];
+          then
+            echo "$ROOT_DIR/src/termcap-*/configure does not exist. Extracting package...";
+            tar -xf termcap-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/termcap-*/configure exists.";
+          fi;
+          ;;
+        texinfo)
+          if [ ! -f texinfo-7.1.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/texinfo-7.1.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/texinfo/texinfo-7.1.tar.xz;
+          fi;
+          if [ ! -f ../src/texinfo-*/configure ];
+          then
+            echo "$ROOT_DIR/src/texinfo-*/configure does not exist. Extracting package...";
+            tar -xf texinfo-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/texinfo-*/configure exists.";
           fi;
           ;;
         wget2)
@@ -770,13 +939,13 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gettext gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch sed tar termcap texinfo wget2 zstd gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(cpython perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo wget2 zstd gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
   for j in ${SOFTWARE_TO_BUILD[@]};
   do
-    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "zstd" ];
+    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "zstd" ];
     then
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -819,6 +988,9 @@ do
             coreutils)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-dependency-tracking --enable-install-program=arch,coreutils,hostname --enable-systemd --enable-threads=posix --with-linux-crypto --with-openssl=yes;
               ;;
+            cpython)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
             dejagnu)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
@@ -848,8 +1020,12 @@ do
             gettext)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-shared --enable-static --enable-threads=posix --enable-year2038 --with-aix-soname=both;
               ;;
+            glibc)
+            #--with-selinux
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-crypt --enable-pt_chown --enable-stack-protector=strong;
+              ;;
             gmp)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include;
               ;;
             gperf)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -920,9 +1096,12 @@ do
             patch)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
+            pcre2)
+              #--enable-coverage --enable-valgrind
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-fuzz-support --enable-jit --enable-pcre2-16 --enable-pcre2-32 --with-aix-soname=both;
+              ;;
             perl)
-            #-Dusesocks
-              ./../../../src/$j-*/Configure -Dprefix=$ROOT_DIR/install/$i -Dcc=gcc -Duselongdouble -Dmksymlinks -Duseshrplib -O;
+              ./../../../src/$j-*/Configure -Dprefix=$ROOT_DIR/install/$i -Dcc=gcc -Dlocincpth=$ROOT_DIR/install/$i/include -Dloclibpth=$ROOT_DIR/install/$i/lib -Aldflags=-L$ROOT_DIR/install/$i/lib -Dmksymlinks -Duseshrplib -Dusethreads -O;
               ;;
             readline)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -934,7 +1113,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-backup-scripts --enable-dependency-tracking --with-bzip2=bzip2 --with-compress=compress --with-gzip=gzip --with-lzip=lzip --with-lzma=lzma --with-xz=xz --with-zstd=zstd;
               ;;
             termcap)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --target=$i;
               ;;
             texinfo)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -963,7 +1142,7 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc*;
-          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "zstd" ];
+          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "zstd" ];
           then
             cd $ROOT_DIR/build/$i/$j;
           fi;
@@ -990,6 +1169,18 @@ do
             tar -xf $ROOT_DIR/packages/libcap-*.tar.gz -C $ROOT_DIR/src;
             cd $ROOT_DIR/src/libcap*;
             make prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
+          #elif [ $j = "libselinux" ];
+          #then
+          #  rm -r $ROOT_DIR/src/libselinux*;
+          #  tar -xf $ROOT_DIR/packages/libselinux-*.tar.gz -C $ROOT_DIR/src;
+          #  cd $ROOT_DIR/src/libselinux*;
+          #  make CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
+          #elif [ $j = "libsepol" ];
+          #then
+          #  rm -r $ROOT_DIR/src/libsepol*;
+          #  tar -xf $ROOT_DIR/packages/libsepol-*.tar.gz -C $ROOT_DIR/src;
+          #  cd $ROOT_DIR/src/libsepol*;
+          #  make CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
           elif [ $j = "zstd" ];
           then
             rm -r $ROOT_DIR/src/zstd*;
@@ -1016,9 +1207,9 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc;
-          elif [ $j = "libcap" ];
+          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ];
           then
-            cd $ROOT_DIR/src/libcap*;
+            cd $ROOT_DIR/src/$j-*;
           else
             cd $ROOT_DIR/build/$i/$j;
           fi;
@@ -1043,6 +1234,12 @@ do
           elif [ $j = "libcap" ];
           then
             make install prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
+          #elif [ $j = "libselinux" ];
+          #then
+          #  make install PREFIX=$ROOT_DIR/install/$i -j 4;
+          #elif [ $j = "libsepol" ];
+          #then
+          #  make install PREFIX=$ROOT_DIR/install/$i lib=$ROOT_DIR/install/$i/lib -j 4;
           elif [ $j = "zstd" ];
           then
             make install CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;

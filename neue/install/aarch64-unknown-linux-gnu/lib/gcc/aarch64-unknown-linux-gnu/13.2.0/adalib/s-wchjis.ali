@@ -20,9 +20,9 @@ W system%s		system.ads		system.ali
 U system.wch_jis%s	s-wchjis.ads		cee2060c NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-wchjis.ads		20240120085933 6a748b39 system.wch_jis%s
-D s-wchjis.adb		20240120085936 8f4c557a system.wch_jis%b
+D system.ads		20230727081304 a4968d35 system%s
+D s-wchjis.ads		20230727081304 6a748b39 system.wch_jis%s
+D s-wchjis.adb		20230727081304 8f4c557a system.wch_jis%b
 G a e
 G c Z s b [euc_to_jis system__wch_jis 38 13 none]
 G c Z s b [jis_to_euc system__wch_jis 43 14 none]

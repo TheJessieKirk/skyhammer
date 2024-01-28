@@ -23,10 +23,10 @@ Z system.img_char%s	s-imgcha.adb		s-imgcha.ali
 U system.wid_char%s	s-widcha.ads		4c70b6a0 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-imgcha.ads		20240120085937 9c3458e7 system.img_char%s
-D s-widcha.ads		20240120085937 e8e63b95 system.wid_char%s
-D s-widcha.adb		20240120085936 67ac9543 system.wid_char%b
+D system.ads		20230727081304 a4968d35 system%s
+D s-imgcha.ads		20230727081304 9c3458e7 system.img_char%s
+D s-widcha.ads		20230727081304 e8e63b95 system.wid_char%s
+D s-widcha.adb		20230727081304 67ac9543 system.wid_char%b
 G a e
 G c Z s b [width_character system__wid_char 37 13 none]
 X 1 system.ads

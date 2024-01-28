@@ -19,9 +19,9 @@ U system.crtl%s		s-crtl.ads		fa04bb6b NE OL PR PK
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-crtl.ads		20240120085936 8a0692f8 system.crtl%s
-D s-parame.ads		20240120085938 d494a4a6 system.parameters%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-crtl.ads		20230727081304 8a0692f8 system.crtl%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
 G a e
 G c Z s s [strlen system__crtl 83 13 none]
 G c Z s s [strncpy system__crtl 86 14 none]

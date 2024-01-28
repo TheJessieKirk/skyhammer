@@ -21,11 +21,11 @@ W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W system.dim%s		s-dim.ads		s-dim.ali
 
-D ada.ads		20240120085935 76789da1 ada%s
-D a-numeri.ads		20240120085933 84bea7a3 ada.numerics%s
-D system.ads		20240120085935 a4968d35 system%s
-D s-dim.ads		20240120085936 ec3077cc system.dim%s
-D s-digemk.ads		20240120085937 d6ab2b3c system.dim.generic_mks%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-numeri.ads		20230727081304 84bea7a3 ada.numerics%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-dim.ads		20230727081304 ec3077cc system.dim%s
+D s-digemk.ads		20230727081304 d6ab2b3c system.dim.generic_mks%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 5|40r6 47r21 48r21

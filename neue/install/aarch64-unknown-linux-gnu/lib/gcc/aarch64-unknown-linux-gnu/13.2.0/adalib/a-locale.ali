@@ -21,10 +21,10 @@ W system%s		system.ads		system.ali
 U ada.locales%s		a-locale.ads		ff4d3823 NE OL PR RT PK
 W ada%s			ada.ads			ada.ali
 
-D ada.ads		20240120085935 76789da1 ada%s
-D a-locale.ads		20240120085937 8935a582 ada.locales%s
-D a-locale.adb		20240120085933 89c5c1f9 ada.locales%b
-D system.ads		20240120085935 a4968d35 system%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-locale.ads		20230727081304 8935a582 ada.locales%s
+D a-locale.adb		20230727081304 89c5c1f9 ada.locales%b
+D system.ads		20230727081304 a4968d35 system%s
 G a e
 G c Z s b [language ada__locales 42 13 none]
 G c Z s b [country ada__locales 47 13 none]

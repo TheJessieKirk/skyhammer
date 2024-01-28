@@ -9,9 +9,9 @@
 
 /* Package name      : perl5
  * Source directory  : /usr/skyhammer/neue/src/perl-5.38.2
- * Configuration time: Fri Jan 12 23:16:05 UTC 2024
+ * Configuration time: Sat Jan 27 13:33:13 UTC 2024
  * Configured by     : sdk_keyholder
- * Target system     : linux raspberry-pi-4-8gb 6.5.0-1008-raspi #11-ubuntu smp preempt_dynamic wed nov 22 19:08:26 utc 2023 aarch64 aarch64 aarch64 gnulinux 
+ * Target system     : linux raspberry-pi-4-8gb 6.5.0-1009-raspi #12-ubuntu smp preempt_dynamic wed jan 17 11:45:08 utc 2024 aarch64 gnulinux 
  */
 
 #ifndef _config_h_
@@ -20,7 +20,7 @@
 /* LOC_SED:
  *	This symbol holds the complete pathname to the sed program.
  */
-#define LOC_SED 	"/usr/bin/sed"	/**/
+#define LOC_SED 	"/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/sed"	/**/
 
 /* HAS_ALARM:
  *	This symbol, if defined, indicates that the alarm routine is
@@ -1369,7 +1369,7 @@
  *	feature tests from Configure are generally more reliable.
  */
 #define OSNAME "linux"		/**/
-#define OSVERS "6.5.0-1008-raspi"		/**/
+#define OSVERS "6.5.0-1009-raspi"		/**/
 
 /* CAT2:
  *	This macro concatenates 2 tokens together.
@@ -1613,7 +1613,7 @@
 #define HAS_UNAME		/**/
 /*#define HAS_PHOSTNAME	/ **/
 #ifdef HAS_PHOSTNAME
-#define PHOSTNAME "/usr/bin/hostname"	/* How to get the host name */
+#define PHOSTNAME "/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/hostname"	/* How to get the host name */
 #endif
 
 /* HAS_GETNETBYADDR:
@@ -2191,7 +2191,7 @@
 /* MYMALLOC:
  *	This symbol, if defined, indicates that we're using our own malloc.
  */
-#define MYMALLOC			/**/
+/*#define MYMALLOC			/ **/
 
 /* SH_PATH:
  *	This symbol contains the full pathname to the shell used on this

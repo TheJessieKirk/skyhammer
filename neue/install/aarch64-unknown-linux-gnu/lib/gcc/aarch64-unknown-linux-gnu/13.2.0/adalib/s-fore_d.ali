@@ -19,9 +19,9 @@ W system%s		system.ads		system.ali
 U system.fore_d%s	s-fore_d.ads		a93b4f0c BN NE OL PU PK GE
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-fore_d.ads		20240120085932 0dadc239 system.fore_d%s
-D s-fore_d.adb		20240120085938 3c30d9e3 system.fore_d%b
+D system.ads		20230727081304 a4968d35 system%s
+D s-fore_d.ads		20230727081304 0dadc239 system.fore_d%s
+D s-fore_d.adb		20230727081304 3c30d9e3 system.fore_d%b
 G a e
 G c Z s b [fore_d system 39 16 none]
 X 1 system.ads

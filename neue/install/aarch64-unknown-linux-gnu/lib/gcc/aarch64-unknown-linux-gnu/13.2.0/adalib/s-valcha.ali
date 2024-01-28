@@ -23,12 +23,12 @@ W system.val_util%s	s-valuti.adb		s-valuti.ali
 U system.val_char%s	s-valcha.ads		154175c4 NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-casuti.ads		20240120085933 cf13d755 system.case_util%s
-D s-imgcha.ads		20240120085937 9c3458e7 system.img_char%s
-D s-valcha.ads		20240120085934 b1d7f8f1 system.val_char%s
-D s-valcha.adb		20240120085933 e7d0b9ad system.val_char%b
-D s-valuti.ads		20240120085936 fcd603d8 system.val_util%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-casuti.ads		20230727081304 cf13d755 system.case_util%s
+D s-imgcha.ads		20230727081304 9c3458e7 system.img_char%s
+D s-valcha.ads		20230727081304 b1d7f8f1 system.val_char%s
+D s-valcha.adb		20230727081304 e7d0b9ad system.val_char%b
+D s-valuti.ads		20230727081304 fcd603d8 system.val_util%s
 G a e
 G c Z s b [value_character system__val_char 35 13 none]
 X 1 system.ads

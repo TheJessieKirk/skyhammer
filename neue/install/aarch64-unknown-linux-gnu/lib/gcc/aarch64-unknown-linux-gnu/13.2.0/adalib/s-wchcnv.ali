@@ -25,12 +25,12 @@ U system.wch_cnv%s	s-wchcnv.ads		7b556426 BN NE OL PU PK
 W system%s		system.ads		system.ali
 W system.wch_con%s	s-wchcon.adb		s-wchcon.ali
 
-D interfac.ads		20240120085937 15f799c2 interfaces%s
-D system.ads		20240120085935 a4968d35 system%s
-D s-wchcnv.ads		20240120085938 06c0ca70 system.wch_cnv%s
-D s-wchcnv.adb		20240120085938 5870a60e system.wch_cnv%b
-D s-wchcon.ads		20240120085939 d9032363 system.wch_con%s
-D s-wchjis.ads		20240120085933 6a748b39 system.wch_jis%s
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-wchcnv.ads		20230727081304 06c0ca70 system.wch_cnv%s
+D s-wchcnv.adb		20230727081304 5870a60e system.wch_cnv%b
+D s-wchcon.ads		20230727081304 d9032363 system.wch_con%s
+D s-wchjis.ads		20230727081304 6a748b39 system.wch_jis%s
 G a e
 G c Z s s [utf_32_stringIP system__wch_cnv 55 9 none]
 X 1 interfac.ads

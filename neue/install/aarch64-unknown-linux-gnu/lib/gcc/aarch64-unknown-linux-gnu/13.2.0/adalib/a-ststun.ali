@@ -45,33 +45,33 @@ Z system%s		system.ads		system.ali
 Z system.put_images%s	s-putima.adb		s-putima.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 
-D ada.ads		20240120085935 76789da1 ada%s
-D a-except.ads		20240120085933 2a7d8d70 ada.exceptions%s
-D a-finali.ads		20240120085937 bf4f806b ada.finalization%s
-D a-stream.ads		20240120085932 119b8fb3 ada.streams%s
-D a-strsto.ads		20240120085937 3276a52d ada.streams.storage%s
-D a-ststun.ads		20240120085933 035abf7f ada.streams.storage.unbounded%s
-D a-ststun.adb		20240120085937 c4e8b931 ada.streams.storage.unbounded%b
-D a-string.ads		20240120085937 90ac6797 ada.strings%s
-D a-sttebu.ads		20240120085937 f1ad67a2 ada.strings.text_buffers%s
-D a-stuten.ads		20240120085938 c6ced0ae ada.strings.utf_encoding%s
-D a-tags.ads		20240120085936 9eaa38c6 ada.tags%s
-D a-unccon.ads		20240120085939 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240120085937 c3a8ac65 ada.unchecked_deallocation%s
-D interfac.ads		20240120085937 15f799c2 interfaces%s
-D system.ads		20240120085935 a4968d35 system%s
-D s-exctab.ads		20240120085938 91bef6ef system.exception_table%s
-D s-finroo.ads		20240120085939 4ff27390 system.finalization_root%s
-D s-parame.ads		20240120085938 d494a4a6 system.parameters%s
-D s-putima.ads		20240120085935 17291fe4 system.put_images%s
-D s-secsta.ads		20240120085933 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240120085936 df77073e system.soft_links%s
-D s-stache.ads		20240120085935 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240120085936 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240120085938 ab5468e4 system.storage_elements%s
-D s-stoele.adb		20240120085935 8f5a9db6 system.storage_elements%b
-D s-traent.ads		20240120085937 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240120085937 fa2a7f59 system.unsigned_types%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-except.ads		20230727081304 2a7d8d70 ada.exceptions%s
+D a-finali.ads		20230727081304 bf4f806b ada.finalization%s
+D a-stream.ads		20230727081304 119b8fb3 ada.streams%s
+D a-strsto.ads		20230727081304 3276a52d ada.streams.storage%s
+D a-ststun.ads		20230727081304 035abf7f ada.streams.storage.unbounded%s
+D a-ststun.adb		20230727081304 c4e8b931 ada.streams.storage.unbounded%b
+D a-string.ads		20230727081304 90ac6797 ada.strings%s
+D a-sttebu.ads		20230727081304 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20230727081304 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20230727081304 9eaa38c6 ada.tags%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20230727081304 c3a8ac65 ada.unchecked_deallocation%s
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-finroo.ads		20230727081304 4ff27390 system.finalization_root%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-putima.ads		20230727081304 17291fe4 system.put_images%s
+D s-secsta.ads		20230727081304 578279f5 system.secondary_stack%s
+D s-soflin.ads		20230727081304 df77073e system.soft_links%s
+D s-stache.ads		20230727081304 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
+D s-stoele.ads		20230727081304 ab5468e4 system.storage_elements%s
+D s-stoele.adb		20230727081304 8f5a9db6 system.storage_elements%b
+D s-traent.ads		20230727081304 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20230727081304 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s s [stream_typePartial_DIC ada__streams__storage__unbounded 37 9 none]
 G c Z s s [stream_typeDIC ada__streams__storage__unbounded 37 9 none]

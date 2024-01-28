@@ -24,16 +24,16 @@ Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 U ada.wide_wide_characters.handling%s  a-zchhan.ads  a3feeaf1 BN NE OL PU PK
 W ada.wide_wide_characters%s  a-zchara.ads	a-zchara.ali
 
-D ada.ads		20240120085935 76789da1 ada%s
-D a-zchara.ads		20240120085937 21c8f2b2 ada.wide_wide_characters%s
-D a-zchhan.ads		20240120085937 82361843 ada.wide_wide_characters.handling%s
-D a-zchhan.adb		20240120085937 cf897083 ada.wide_wide_characters.handling%b
-D a-zchuni.ads		20240120085935 533e4cb7 ada.wide_wide_characters.unicode%s
-D system.ads		20240120085935 a4968d35 system%s
-D s-parame.ads		20240120085938 d494a4a6 system.parameters%s
-D s-secsta.ads		20240120085933 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240120085938 ab5468e4 system.storage_elements%s
-D s-utf_32.ads		20240120085936 8461d1bf system.utf_32%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-zchara.ads		20230727081304 21c8f2b2 ada.wide_wide_characters%s
+D a-zchhan.ads		20230727081304 82361843 ada.wide_wide_characters.handling%s
+D a-zchhan.adb		20230727081304 cf897083 ada.wide_wide_characters.handling%b
+D a-zchuni.ads		20230727081304 533e4cb7 ada.wide_wide_characters.unicode%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-secsta.ads		20230727081304 578279f5 system.secondary_stack%s
+D s-stoele.ads		20230727081304 ab5468e4 system.storage_elements%s
+D s-utf_32.ads		20230727081304 8461d1bf system.utf_32%s
 G a e
 G c Z s b [character_set_version ada__wide_wide_characters__handling 19 13 none]
 G c Z s b [is_control ada__wide_wide_characters__handling 25 13 none]

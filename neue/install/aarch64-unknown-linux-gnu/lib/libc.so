@@ -1,0 +1,5 @@
+/* GNU ld script
+   Use the shared library, but some functions are only in
+   the static library, so try that secondarily.  */
+OUTPUT_FORMAT(elf64-littleaarch64)
+GROUP ( /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libc.so.6 /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libc_nonshared.a  AS_NEEDED ( /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/ld-linux-aarch64.so.1 ) )

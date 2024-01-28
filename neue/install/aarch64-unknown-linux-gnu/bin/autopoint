@@ -209,7 +209,7 @@ func_version ()
 {
   echo "$progname (GNU $package) $version"
   if $1; then
-    echo "This binary is configured to use a versions archive in dirgz format."
+    echo "This binary is configured to use a versions archive in dirxz format."
     echo
   fi
   echo "Copyright (C) 2002-2023 Free Software Foundation, Inc.
@@ -495,11 +495,11 @@ mkdir "$work_dir" || {
 #  git   |             484             |         git        |
 # -------+-----------------------------+--------------------+
 
-case "dirgz" in
+case "dirxz" in
   dir*)
     # The archive of different versions is very large (unless xz compression is
     # used), but using it does not require special tools.
-    case "dirgz" in
+    case "dirxz" in
       dirgz) gzip -d -c < "$gettext_datadir/archive.dir.tar.gz" ;;
       dirbz2) bzip2 -d -c < "$gettext_datadir/archive.dir.tar.bz2" ;;
       dirxz) xz -d -c < "$gettext_datadir/archive.dir.tar.xz" ;;

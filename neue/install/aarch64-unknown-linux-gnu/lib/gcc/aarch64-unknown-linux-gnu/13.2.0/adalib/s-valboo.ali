@@ -23,11 +23,11 @@ U system.val_bool%s	s-valboo.ads		3d1307cf NE OL PR PK
 W system%s		system.ads		system.ali
 W system.val_util%s	s-valuti.adb		s-valuti.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-casuti.ads		20240120085933 cf13d755 system.case_util%s
-D s-valboo.ads		20240120085937 65538922 system.val_bool%s
-D s-valboo.adb		20240120085937 2359cf2d system.val_bool%b
-D s-valuti.ads		20240120085936 fcd603d8 system.val_util%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-casuti.ads		20230727081304 cf13d755 system.case_util%s
+D s-valboo.ads		20230727081304 65538922 system.val_bool%s
+D s-valboo.adb		20230727081304 2359cf2d system.val_bool%b
+D s-valuti.ads		20230727081304 fcd603d8 system.val_util%s
 G a e
 G c Z s s [is_boolean_image_ghost system__val_bool 50 13 none]
 G c Z s b [value_boolean system__val_bool 81 13 none]

@@ -22,9 +22,9 @@ W system%s		system.ads		system.ali
 U system.wch_con%s	s-wchcon.ads		7d95ae56 BN NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-wchcon.ads		20240120085939 d9032363 system.wch_con%s
-D s-wchcon.adb		20240120085938 2416a954 system.wch_con%b
+D system.ads		20230727081304 a4968d35 system%s
+D s-wchcon.ads		20230727081304 d9032363 system.wch_con%s
+D s-wchcon.adb		20230727081304 2416a954 system.wch_con%b
 G a e
 G c Z s b [get_wc_encoding_method system__wch_con 201 13 none]
 G c Z s b [get_wc_encoding_method system__wch_con 205 13 none]

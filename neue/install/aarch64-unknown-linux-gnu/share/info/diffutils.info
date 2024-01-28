@@ -1,12 +1,12 @@
-This is diffutils.info, produced by makeinfo version 7.0.3 from
+This is diffutils.info, produced by makeinfo version 7.0dev from
 diffutils.texi.
 
-This manual is for GNU Diffutils (version 3.10, 20 January 2024), and
+This manual is for GNU Diffutils (version 3.10, 2 January 2023), and
 documents the GNU ‘diff’, ‘diff3’, ‘sdiff’, and ‘cmp’ commands for
 showing the differences between files and the GNU ‘patch’ command for
 using their output to update files.
 
-   Copyright © 1992–1994, 1998, 2001–2002, 2004, 2006, 2009–2023 Free
+   Copyright © 1992-1994, 1998, 2001-2002, 2004, 2006, 2009-2023 Free
 Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
@@ -14,7 +14,7 @@ Software Foundation, Inc.
      Version 1.3 or any later version published by the Free Software
      Foundation; with no Invariant Sections, no Front-Cover Texts, and
      no Back-Cover Texts.  A copy of the license is included in the
-     section entitled “GNU Free Documentation License.”
+     section entitled "GNU Free Documentation License."
 INFO-DIR-SECTION Individual utilities
 START-INFO-DIR-ENTRY
 * cmp: (diffutils)Invoking cmp.                 Compare 2 files byte by byte.
@@ -35,12 +35,12 @@ File: diffutils.info,  Node: Top,  Next: Overview,  Up: (dir)
 Comparing and Merging Files
 ***************************
 
-This manual is for GNU Diffutils (version 3.10, 20 January 2024), and
+This manual is for GNU Diffutils (version 3.10, 2 January 2023), and
 documents the GNU ‘diff’, ‘diff3’, ‘sdiff’, and ‘cmp’ commands for
 showing the differences between files and the GNU ‘patch’ command for
 using their output to update files.
 
-   Copyright © 1992–1994, 1998, 2001–2002, 2004, 2006, 2009–2023 Free
+   Copyright © 1992-1994, 1998, 2001-2002, 2004, 2006, 2009-2023 Free
 Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
@@ -48,7 +48,7 @@ Software Foundation, Inc.
      Version 1.3 or any later version published by the Free Software
      Foundation; with no Invariant Sections, no Front-Cover Texts, and
      no Back-Cover Texts.  A copy of the license is included in the
-     section entitled “GNU Free Documentation License.”
+     section entitled "GNU Free Documentation License."
 
 * Menu:
 
@@ -76,7 +76,7 @@ Software Foundation, Inc.
 * Invoking sdiff::        Side-by-side merge of file differences.
 
 * Standards conformance:: Conformance to the POSIX standard.
-* Projects::              If you’ve found a bug or other shortcoming.
+* Projects::              If you've found a bug or other shortcoming.
 
 * Copying This Manual::   How to make copies of this manual.
 * Translations::          Available translations of this manual.
@@ -110,7 +110,7 @@ Window: (emacs)Other Window, for more information on that command.
 files.  When two people have made independent changes to a common
 original, ‘diff3’ can report the differences between the original and
 the two changed versions, and can produce a merged file that contains
-both persons’ changes together with warnings about conflicts.
+both persons' changes together with warnings about conflicts.
 
    You can use the ‘sdiff’ command to merge two files interactively.
 
@@ -129,22 +129,22 @@ to use diffs to update files.
    GNU ‘diff’ was written by Paul Eggert, Mike Haertel, David Hayes,
 Richard Stallman, and Len Tower.  Wayne Davison designed and implemented
 the unified output format.  The basic algorithm is described by Eugene
-W. Myers in “An O(ND) Difference Algorithm and its Variations”,
-‘Algorithmica’ Vol. 1, 1986, pp. 251–266,
-<http://dx.doi.org/10.1007/BF01840446>; and in “A File Comparison
-Program”, Webb Miller and Eugene W. Myers, ‘Software—Practice and
-Experience’ Vol. 15, 1985, pp. 1025–1040,
+W. Myers in "An O(ND) Difference Algorithm and its Variations",
+‘Algorithmica’ Vol. 1, 1986, pp. 251-266,
+<http://dx.doi.org/10.1007/BF01840446>; and in "A File Comparison
+Program", Webb Miller and Eugene W. Myers, ‘Software--Practice and
+Experience’ Vol. 15, 1985, pp. 1025-1040,
 <http://dx.doi.org/10.1002/spe.4380151102>.  The algorithm was
-independently discovered as described by Esko Ukkonen in “Algorithms for
-Approximate String Matching”, ‘Information and Control’ Vol. 64, 1985,
-pp. 100–118, <http://dx.doi.org/10.1016/S0019-9958(85)80046-2>.  Unless
+independently discovered as described by Esko Ukkonen in "Algorithms for
+Approximate String Matching", ‘Information and Control’ Vol. 64, 1985,
+pp. 100-118, <http://dx.doi.org/10.1016/S0019-9958(85)80046-2>.  Unless
 the ‘--minimal’ option is used, ‘diff’ uses a heuristic by Paul Eggert
 that limits the cost to O(N^1.5 log N) at the price of producing
 suboptimal output for large inputs with many differences.  Related
-algorithms are surveyed by Alfred V. Aho in section 6.3 of “Algorithms
-for Finding Patterns in Strings”, ‘Handbook of Theoretical Computer
+algorithms are surveyed by Alfred V. Aho in section 6.3 of "Algorithms
+for Finding Patterns in Strings", ‘Handbook of Theoretical Computer
 Science’ (Jan Van Leeuwen, ed.), Vol. A, ‘Algorithms and Complexity’,
-Elsevier/MIT Press, 1990, pp. 255–300.
+Elsevier/MIT Press, 1990, pp. 255-300.
 
    GNU ‘diff3’ was written by Randy Smith.  GNU ‘sdiff’ was written by
 Thomas Lord.  GNU ‘cmp’ was written by Torbjörn Granlund and David
@@ -337,8 +337,8 @@ example, ‘diff -I '^[[:digit:]]'’ ignores all changes to lines beginning
 with a digit.
 
    However, ‘-I’ only ignores the insertion or deletion of lines that
-contain the regular expression if every changed line in the hunk—every
-insertion and every deletion—matches the regular expression.  In other
+contain the regular expression if every changed line in the hunk--every
+insertion and every deletion--matches the regular expression.  In other
 words, for each nonignorable change, ‘diff’ prints the complete set of
 changes in its vicinity, including the ignorable ones.
 
@@ -364,7 +364,7 @@ File: diffutils.info,  Node: Brief,  Next: Binary,  Prev: Case Folding,  Up: Com
 ==================================
 
 When you only want to find out whether files are different, and you
-don’t care what the differences are, you can use the summary output
+don't care what the differences are, you can use the summary output
 format.  In this format, instead of showing the differences between the
 files, ‘diff’ simply reports whether files differ.  The ‘--brief’ (‘-q’)
 option selects this output format.
@@ -656,14 +656,15 @@ like this:
      *** FROM-FILE FROM-FILE-MODIFICATION-TIME
      --- TO-FILE TO-FILE-MODIFICATION TIME
 
-The timestamp normally looks like ‘2002-02-21 23:30:39.942229878 -0800’
-to indicate the date, time with fractional seconds, and time zone in
-Internet RFC 2822 format (ftp://ftp.isi.edu/in-notes/rfc2822.txt).  (The
-fractional seconds are omitted on hosts that do not support fractional
-timestamps.)  However, a traditional timestamp like ‘Thu Feb 21 23:30:39
-2002’ is used if the ‘LC_TIME’ locale category is either ‘C’ or ‘POSIX’.
+   The timestamp normally looks like ‘2002-02-21 23:30:39.942229878
+-0800’ to indicate the date, time with fractional seconds, and time zone
+in Internet RFC 2822 format (ftp://ftp.isi.edu/in-notes/rfc2822.txt).
+(The fractional seconds are omitted on hosts that do not support
+fractional timestamps.)  However, a traditional timestamp like ‘Thu Feb
+21 23:30:39 2002’ is used if the ‘LC_TIME’ locale category is either ‘C’
+or ‘POSIX’.
 
-   You can change the header’s content with the ‘--label=LABEL’ option;
+   You can change the header's content with the ‘--label=LABEL’ option;
 see *note Alternate Names::.
 
    Next come one or more hunks of differences; each hunk shows one area
@@ -692,11 +693,11 @@ character:
      marked with ‘!’ in the part of this hunk for the other file.
 
 ‘+’
-     An “inserted” line in the second file that corresponds to nothing
+     An "inserted" line in the second file that corresponds to nothing
      in the first file.
 
 ‘-’
-     A “deleted” line in the first file that corresponds to nothing in
+     A "deleted" line in the first file that corresponds to nothing in
      the second file.
 
    If all of the changes in a hunk are insertions, the lines of
@@ -766,12 +767,12 @@ like this:
      --- FROM-FILE FROM-FILE-MODIFICATION-TIME
      +++ TO-FILE TO-FILE-MODIFICATION-TIME
 
-The timestamp looks like ‘2002-02-21 23:30:39.942229878 -0800’ to
+   The timestamp looks like ‘2002-02-21 23:30:39.942229878 -0800’ to
 indicate the date, time with fractional seconds, and time zone.  The
 fractional seconds are omitted on hosts that do not support fractional
 timestamps.
 
-   You can change the header’s content with the ‘--label=LABEL’ option.
+   You can change the header's content with the ‘--label=LABEL’ option.
 *Note Alternate Names::.
 
    Next come one or more hunks of differences; each hunk shows one area
@@ -810,7 +811,7 @@ falls in.  If the files are source code, this could mean which function
 was changed.  If the files are documents, it could mean which chapter or
 appendix was changed.  GNU ‘diff’ can show this by displaying the
 nearest section heading line that precedes the differing lines.  Which
-lines are “section headings” is determined by a regular expression.
+lines are "section headings" is determined by a regular expression.
 
 * Menu:
 
@@ -1008,7 +1009,7 @@ File: diffutils.info,  Node: Normal,  Next: Scripts,  Prev: Side by Side,  Up: O
 2.4 Showing Differences Without Context
 =======================================
 
-The “normal” ‘diff’ output format shows each hunk of differences without
+The "normal" ‘diff’ output format shows each hunk of differences without
 any surrounding context.  Sometimes such output is the clearest way to
 see how lines have changed, without the clutter of nearby unchanged
 lines (although you can get similar results with the context or unified
@@ -1073,22 +1074,22 @@ are:
 
 ‘LaR’
      Add the lines in range R of the second file after line L of the
-     first file.  For example, ‘8a12,15’ means append lines 12–15 of
+     first file.  For example, ‘8a12,15’ means append lines 12-15 of
      file 2 after line 8 of file 1; or, if changing file 2 into file 1,
-     delete lines 12–15 of file 2.
+     delete lines 12-15 of file 2.
 
 ‘FcT’
      Replace the lines in range F of the first file with lines in range
      T of the second file.  This is like a combined add and delete, but
-     more compact.  For example, ‘5,7c8,10’ means change lines 5–7 of
-     file 1 to read as lines 8–10 of file 2; or, if changing file 2 into
-     file 1, change lines 8–10 of file 2 to read as lines 5–7 of file 1.
+     more compact.  For example, ‘5,7c8,10’ means change lines 5-7 of
+     file 1 to read as lines 8-10 of file 2; or, if changing file 2 into
+     file 1, change lines 8-10 of file 2 to read as lines 5-7 of file 1.
 
 ‘RdL’
      Delete the lines in range R from the first file; line L is where
      they would have appeared in the second file had they not been
-     deleted.  For example, ‘5,7d3’ means delete lines 5–7 of file 1;
-     or, if changing file 2 into file 1, append lines 5–7 of file 1
+     deleted.  For example, ‘5,7d3’ means delete lines 5-7 of file 1;
+     or, if changing file 2 into file 1, append lines 5-7 of file 1
      after line 3 of file 2.
 
 
@@ -1193,12 +1194,12 @@ are:
 ‘Rc’
      Replace the lines in range R in the first file with the following
      lines.  Like a combined add and delete, but more compact.  For
-     example, ‘5,7c’ means change lines 5–7 of file 1 to read as the
+     example, ‘5,7c’ means change lines 5-7 of file 1 to read as the
      text file 2.
 
 ‘Rd’
      Delete the lines in range R from the first file.  For example,
-     ‘5,7d’ means delete lines 5–7 of file 1.
+     ‘5,7d’ means delete lines 5-7 of file 1.
 
 
 File: diffutils.info,  Node: Forward ed,  Next: RCS,  Prev: ed Scripts,  Up: Scripts
@@ -1229,7 +1230,7 @@ Control System, which is a set of free programs used for organizing
 different versions and systems of files.  Use the ‘--rcs’ (‘-n’) option
 to select this output format.  It is like the forward ‘ed’ format (*note
 Forward ed::), but it can represent arbitrary changes to the contents of
-a file because it avoids the forward ‘ed’ format’s problems with lines
+a file because it avoids the forward ‘ed’ format's problems with lines
 consisting of a single period and with incomplete lines.  Instead of
 ending text sections with a line consisting of a single period, each
 command specifies the number of lines it affects; a combination of the
@@ -1337,7 +1338,7 @@ formats.
         old new
 
    Here is a more advanced example, which outputs a diff listing with
-headers containing line numbers in a “plain English” style.
+headers containing line numbers in a "plain English" style.
 
      diff \
         --unchanged-group-format='' \
@@ -1411,7 +1412,7 @@ forms.
 
 ‘FN’
      where F is a ‘printf’ conversion specification and N is one of the
-     following letters, stands for N’s value formatted with F.
+     following letters, stands for N's value formatted with F.
 
      ‘e’
           The line number of the line just before the group in the old
@@ -1450,7 +1451,7 @@ forms.
 ‘(A=B?T:E)’
      If A equals B then T else E.  A and B are each either a decimal
      constant or a single letter interpreted as above.  This format spec
-     is equivalent to T if A’s value equals B’s; otherwise it is
+     is equivalent to T if A's value equals B's; otherwise it is
      equivalent to E.
 
      For example, ‘%(N=0?no:%dN) line%(N=1?:s)’ is equivalent to ‘no
@@ -1626,7 +1627,7 @@ options using shell syntax:
 example, when using the ‘-D NAME’ or ‘--ifdef=NAME’ option, you should
 check that if the differing lines contain any of the C preprocessor
 directives ‘#ifdef’, ‘#ifndef’, ‘#else’, ‘#elif’, or ‘#endif’, they are
-nested properly and match.  If they don’t, you must make corrections
+nested properly and match.  If they don't, you must make corrections
 manually.  It is a good idea to carefully check the resulting code
 anyway to make sure that it really does what you want it to; depending
 on how the input files were produced, the output might contain duplicate
@@ -1654,7 +1655,7 @@ line by a following line that starts with ‘\’.  However, the RCS format
 newline or following line.  The side by side format normally represents
 incomplete lines as-is, but in some cases uses a ‘\’ or ‘/’ gutter
 marker.  *Note Side by Side::.  The if-then-else line format preserves a
-line’s incompleteness with ‘%L’, and discards the newline with ‘%l’.
+line's incompleteness with ‘%L’, and discards the newline with ‘%l’.
 *Note Line Formats::.  Finally, with the ‘ed’ and forward ‘ed’ output
 formats (*note Output Formats::) ‘diff’ cannot represent an incomplete
 line, so it pretends there was a newline and reports an error.
@@ -1696,7 +1697,7 @@ category.  Normally ‘diff’ is silent about pairs of files that contain
 no differences, but if you use the ‘--report-identical-files’ (‘-s’)
 option, it reports pairs of identical files.  Normally ‘diff’ reports
 subdirectories common to both directories without comparing
-subdirectories’ files, but if you use the ‘-r’ or ‘--recursive’ option,
+subdirectories' files, but if you use the ‘-r’ or ‘--recursive’ option,
 it compares every corresponding pair of files in the directory trees, as
 many levels deep as they go.
 
@@ -1899,8 +1900,8 @@ minimal output.
    Suppose a run of changed lines includes a sequence of lines at one
 end and there is an identical sequence of lines just outside the other
 end.  The ‘diff’ command is free to choose which identical sequence is
-included in the hunk.  In this case, ‘diff’ normally shifts the hunk’s
-boundaries when this merges adjacent hunks, or shifts a hunk’s lines
+included in the hunk.  In this case, ‘diff’ normally shifts the hunk's
+boundaries when this merges adjacent hunks, or shifts a hunk's lines
 towards the end of the file.  Merging hunks can make the output look
 nicer in some cases.
 
@@ -1913,7 +1914,7 @@ File: diffutils.info,  Node: Comparing Three Files,  Next: diff3 Merging,  Prev:
 Use the program ‘diff3’ to compare three files and show any differences
 among them.  (‘diff3’ can also merge files; see *note diff3 Merging::).
 
-   The “normal” ‘diff3’ output format shows each hunk of differences
+   The "normal" ‘diff3’ output format shows each hunk of differences
 without surrounding context.  Hunks are labeled depending on whether
 they are two-way or three-way, and lines are annotated by their location
 in the input files.
@@ -2534,7 +2535,7 @@ intervention or testing.
 
 * Menu:
 
-* Changed White Space:: When tabs and spaces don’t match exactly.
+* Changed White Space:: When tabs and spaces don't match exactly.
 * Reversed Patches::    Applying reversed patches correctly.
 * Inexact::             Helping ‘patch’ find close matches.
 * Dry Runs::            Predicting what ‘patch’ will do.
@@ -2562,7 +2563,7 @@ File: diffutils.info,  Node: Reversed Patches,  Next: Inexact,  Prev: Changed Wh
 --------------------------------
 
 Sometimes people run ‘diff’ with the new file first instead of second.
-This creates a diff that is “reversed”.  To apply such patches, give
+This creates a diff that is "reversed".  To apply such patches, give
 ‘patch’ the ‘--reverse’ (‘-R’) option.  ‘patch’ then attempts to swap
 each hunk around before applying it.  Rejects come out in the swapped
 format.
@@ -2570,7 +2571,7 @@ format.
    Often ‘patch’ can guess that the patch is reversed.  If the first
 hunk of a patch fails, ‘patch’ reverses the hunk to see if it can apply
 it that way.  If it can, ‘patch’ asks you if you want to have the ‘-R’
-option set; if it can’t, ‘patch’ continues to apply the patch normally.
+option set; if it can't, ‘patch’ continues to apply the patch normally.
 This method cannot detect a reversed patch if it is a normal diff and
 the first command is an append (which should have been a delete) since
 appends always succeed, because a null context matches anywhere.  But
@@ -2580,9 +2581,9 @@ notices.
 
    If you apply a patch that you have already applied, ‘patch’ thinks it
 is a reversed patch and offers to un-apply the patch.  This could be
-construed as a feature.  If you did this inadvertently and you don’t
+construed as a feature.  If you did this inadvertently and you don't
 want to un-apply the patch, just answer ‘n’ to this offer and to the
-subsequent “apply anyway” question—or type ‘C-c’ to kill the ‘patch’
+subsequent "apply anyway" question--or type ‘C-c’ to kill the ‘patch’
 process.
 
 
@@ -2695,7 +2696,7 @@ File: diffutils.info,  Node: Patching Timestamps,  Next: Multiple Patches,  Prev
 10.5 Updating Timestamps on Patched Files
 =========================================
 
-When ‘patch’ updates a file, it normally sets the file’s last-modified
+When ‘patch’ updates a file, it normally sets the file's last-modified
 timestamp to the current time of day.  If you are using ‘patch’ to track
 a software distribution, this can cause ‘make’ to incorrectly conclude
 that a patched file is out of date.  For example, if ‘syntax.c’ depends
@@ -2703,23 +2704,23 @@ on ‘syntax.y’, and ‘patch’ updates ‘syntax.c’ and then ‘syntax.y�
 ‘syntax.c’ will normally appear to be out of date with respect to
 ‘syntax.y’ even though its contents are actually up to date.
 
-   The ‘--set-utc’ (‘-Z’) option causes ‘patch’ to set a patched file’s
+   The ‘--set-utc’ (‘-Z’) option causes ‘patch’ to set a patched file's
 modification and access times to the timestamps given in context diff
 headers.  If the context diff headers do not specify a time zone, they
 are assumed to use Coordinated Universal Time (UTC, often known as GMT).
 
    The ‘--set-time’ (‘-T’) option acts like ‘-Z’ or ‘--set-utc’, except
-that it assumes that the context diff headers’ timestamps use local time
+that it assumes that the context diff headers' timestamps use local time
 instead of UTC. This option is not recommended, because patches using
 local time cannot easily be used by people in other time zones, and
 because local timestamps are ambiguous when local clocks move backwards
 during daylight-saving time adjustments.  If the context diff headers
 specify a time zone, this option is equivalent to ‘--set-utc’ (‘-Z’).
 
-   ‘patch’ normally refrains from setting a file’s timestamps if the
-file’s original last-modified timestamp does not match the time given in
-the diff header, of if the file’s contents do not exactly match the
-patch.  However, if the ‘--force’ (‘-f’) option is given, the file’s
+   ‘patch’ normally refrains from setting a file's timestamps if the
+file's original last-modified timestamp does not match the time given in
+the diff header, of if the file's contents do not exactly match the
+patch.  However, if the ‘--force’ (‘-f’) option is given, the file's
 timestamps are set regardless.
 
    Due to the limitations of the current ‘diff’ format, ‘patch’ cannot
@@ -2727,7 +2728,7 @@ update the times of files whose contents have not changed.  Also, if you
 set file timestamps to values other than the current time of day, you
 should also remove (e.g., with ‘make clean’) all files that depend on
 the patched files, so that later invocations of ‘make’ do not get
-confused by the patched files’ times.
+confused by the patched files' times.
 
 
 File: diffutils.info,  Node: Multiple Patches,  Next: patch Directories,  Prev: Patching Timestamps,  Up: Merging with patch
@@ -2938,7 +2939,7 @@ File: diffutils.info,  Node: patch Messages,  Next: patch and POSIX,  Prev: Reje
 =========================================
 
 ‘patch’ can produce a variety of messages, especially if it has trouble
-decoding its input.  In a few situations where it’s not sure how to
+decoding its input.  In a few situations where it's not sure how to
 proceed, ‘patch’ normally prompts you for more information from the
 keyboard.  There are options to produce more or fewer messages, to have
 it not ask for keyboard input, and to affect the way that file names are
@@ -2953,7 +2954,7 @@ quoted in messages.
    ‘patch’ exits with status 0 if all hunks are applied successfully, 1
 if some hunks cannot be applied, and 2 if there is more serious trouble.
 When applying a set of patches in a loop, you should check the exit
-status, so you don’t apply a later patch to a partially patched file.
+status, so you don't apply a later patch to a partially patched file.
 
 
 File: diffutils.info,  Node: More or Fewer Messages,  Next: patch and Keyboard Input,  Up: patch Messages
@@ -3068,7 +3069,7 @@ important ways.  You should be aware of the following differences if you
 must interoperate with traditional ‘patch’, or with GNU ‘patch’ version
 2.1 and earlier.
 
-   • In traditional ‘patch’, the ‘-p’ option’s operand was optional, and
+   • In traditional ‘patch’, the ‘-p’ option's operand was optional, and
      a bare ‘-p’ was equivalent to ‘-p0’.  The ‘-p’ option now requires
      an operand, and ‘-p 0’ is now equivalent to ‘-p0’.  For maximum
      compatibility, use options like ‘-p0’ and ‘-p1’.
@@ -3097,7 +3098,7 @@ must interoperate with traditional ‘patch’, or with GNU ‘patch’ version
      POSIX-conforming; we hope it has fewer gotchas.  The two methods
      are compatible if the file names in the context diff header and the
      ‘Index:’ line are all identical after prefix-stripping.  Your patch
-     is normally compatible if each header’s file names all contain the
+     is normally compatible if each header's file names all contain the
      same number of slashes.
 
    • When traditional ‘patch’ asked the user a question, it sent the
@@ -3137,7 +3138,7 @@ File: diffutils.info,  Node: Making Patches,  Next: Invoking cmp,  Prev: Merging
 ************************************
 
 Use some common sense when making and using patches.  For example, when
-sending bug fixes to a program’s maintainer, send several small patches,
+sending bug fixes to a program's maintainer, send several small patches,
 one per independent subject, instead of one large, harder-to-digest
 patch that covers all the subjects.
 
@@ -3261,14 +3262,14 @@ versions, make a list of ‘rm’ and ‘mv’ commands for the user to execute
 in the old version directory before applying the patch.  Then run those
 commands yourself in the scratch directory.
 
-   If there are any files that you don’t need to include in the patch
+   If there are any files that you don't need to include in the patch
 because they can easily be rebuilt from other files (for example, ‘TAGS’
 and output from ‘yacc’ and ‘makeinfo’), exclude them from the patch by
 giving ‘diff’ the ‘-x PATTERN’ option (*note Comparing Directories::).
 If you want your patch to modify a derived file because your recipients
 lack tools to build it, make sure that the patch for the derived file
 follows any patches for files that it depends on, so that the
-recipients’ timestamps will not confuse ‘make’.
+recipients' timestamps will not confuse ‘make’.
 
    Now you can create the patch using ‘diff -Naur’.  Make sure to
 specify the scratch directory first and the newer directory second.
@@ -3305,14 +3306,14 @@ location of the first difference to standard output:
 
      FROM-FILE TO-FILE differ: char BYTE-NUMBER, line LINE-NUMBER
 
-If one file is a prefix of the other, ‘cmp’ reports the shorter file’s
+If one file is a prefix of the other, ‘cmp’ reports the shorter file's
 name to standard error, followed by a blank and extra information about
 the shorter file:
 
      cmp: EOF on SHORTER-FILE EXTRA-INFO
 
    The message formats can differ outside the POSIX locale.  POSIX
-allows but does not require the EOF diagnostic’s file name to be
+allows but does not require the EOF diagnostic's file name to be
 followed by a blank and additional information.
 
    An exit status of 0 means no differences were found, 1 means some
@@ -3339,7 +3340,7 @@ combined into a single command line word: ‘-bl’ is equivalent to ‘-b
 ‘--print-bytes’
      Print the differing bytes.  Display control bytes as a ‘^’ followed
      by a letter of the alphabet and precede bytes that have the high
-     bit set with ‘M-’ (which stands for “meta”).
+     bit set with ‘M-’ (which stands for "meta").
 
 ‘--help’
      Output a summary of usage and then exit.
@@ -3356,7 +3357,7 @@ combined into a single command line word: ‘-bl’ is equivalent to ‘-b
 ‘--verbose’
      Output the (decimal) byte numbers and (octal) values of all
      differing bytes, instead of the default standard output.  Each
-     output line contains a differing byte’s number relative to the
+     output line contains a differing byte's number relative to the
      start of the input, followed by the differing byte values.  Byte
      numbers start at 1.  Also, output the EOF message if one file is
      shorter than the other.
@@ -3461,8 +3462,8 @@ corresponding files in both directories, in alphabetical order; this
 comparison is not recursive unless the ‘--recursive’ (‘-r’) option is
 given.  ‘diff’ never compares the actual contents of a directory as if
 it were a file.  The file that is fully specified may not be standard
-input, because standard input is nameless and the notion of “file with
-the same name” does not apply.
+input, because standard input is nameless and the notion of "file with
+the same name" does not apply.
 
    If the ‘--from-file=FILE’ option is given, the number of file names
 is arbitrary, and FILE is compared to each named file.  Similarly, if
@@ -3520,10 +3521,13 @@ optional argument.
      Specify whether to use color for distinguishing different contexts,
      like header, added or removed lines.  WHEN may be omitted, or one
      of:
-        • none Do not use color at all.  This is the default when no
-          –color option is specified.
-        • auto Use color only if standard output is a terminal.
-        • always Always use color.
+        • none
+          Do not use color at all.  This is the default when no -color
+          option is specified.
+        • auto
+          Use color only if standard output is a terminal.
+        • always
+          Always use color.
      Specifying ‘--color’ and no WHEN is equivalent to ‘--color=auto’.
 
 ‘-C LINES’
@@ -3846,7 +3850,7 @@ combined into a single command line argument.
 
 ‘-E’
 ‘--show-overlap’
-     Like ‘-e’, except bracket lines from overlapping changes’ first and
+     Like ‘-e’, except bracket lines from overlapping changes' first and
      third files.  *Note Marking Conflicts::.  With ‘-E’, an overlapping
      change looks like this:
 
@@ -4270,7 +4274,7 @@ File: diffutils.info,  Node: Standards conformance,  Next: Projects,  Prev: Invo
 17 Standards conformance
 ************************
 
-In a few cases, the GNU utilities’ default behavior is incompatible with
+In a few cases, the GNU utilities' default behavior is incompatible with
 the POSIX standard.  To suppress these incompatibilities, define the
 ‘POSIXLY_CORRECT’ environment variable.  Unless you are checking for
 POSIX conformance, you probably do not need to define ‘POSIXLY_CORRECT’.
@@ -4383,7 +4387,7 @@ transform the directory subtree into the file.
 having to include its entire contents in the patch file.  There should
 also be a way to tell ‘patch’ that a file was renamed, even if there is
 no way for ‘diff’ to generate such information.  There should be a way
-to tell ‘patch’ that a file’s timestamp has changed, even if its
+to tell ‘patch’ that a file's timestamp has changed, even if its
 contents have not changed.
 
    These problems can be fixed by extending the ‘diff’ output format to
@@ -4486,7 +4490,7 @@ report mailing list (http://mail.gnu.org/mailman/listinfo/bug-diffutils)
 you can, including the output of the ‘--version’ option and sample input
 files that produce the bug, if applicable.  If you have a nontrivial fix
 for the bug, please send it as well.  If you have a patch, please send
-it too.  It may simplify the maintainer’s job if the patch is relative
+it too.  It may simplify the maintainer's job if the patch is relative
 to a recent test release, which you can find in the directory
 <ftp://alpha.gnu.org/gnu/diffutils/>.
 
@@ -4498,7 +4502,7 @@ Appendix A Copying This Manual
 
                      Version 1.3, 3 November 2008
 
-     Copyright © 2000–2002, 2007–2008, 2022–2023 Free Software
+     Copyright © 2000-2002, 2007-2008, 2022-2023 Free Software
      Foundation, Inc.
      <https://fsf.org/>
 
@@ -4515,7 +4519,7 @@ Appendix A Copying This Manual
      author and publisher a way to get credit for their work, while not
      being considered responsible for modifications made by others.
 
-     This License is a kind of “copyleft”, which means that derivative
+     This License is a kind of "copyleft", which means that derivative
      works of the document must themselves be free in the same sense.
      It complements the GNU General Public License, which is a copyleft
      license designed for free software.
@@ -4536,18 +4540,18 @@ Appendix A Copying This Manual
      be distributed under the terms of this License.  Such a notice
      grants a world-wide, royalty-free license, unlimited in duration,
      to use that work under the conditions stated herein.  The
-     “Document”, below, refers to any such manual or work.  Any member
-     of the public is a licensee, and is addressed as “you”.  You accept
+     "Document", below, refers to any such manual or work.  Any member
+     of the public is a licensee, and is addressed as "you".  You accept
      the license if you copy, modify or distribute the work in a way
      requiring permission under copyright law.
 
-     A “Modified Version” of the Document means any work containing the
+     A "Modified Version" of the Document means any work containing the
      Document or a portion of it, either copied verbatim, or with
      modifications and/or translated into another language.
 
-     A “Secondary Section” is a named appendix or a front-matter section
+     A "Secondary Section" is a named appendix or a front-matter section
      of the Document that deals exclusively with the relationship of the
-     publishers or authors of the Document to the Document’s overall
+     publishers or authors of the Document to the Document's overall
      subject (or to related matters) and contains nothing that could
      fall directly within that overall subject.  (Thus, if the Document
      is in part a textbook of mathematics, a Secondary Section may not
@@ -4556,7 +4560,7 @@ Appendix A Copying This Manual
      of legal, commercial, philosophical, ethical or political position
      regarding them.
 
-     The “Invariant Sections” are certain Secondary Sections whose
+     The "Invariant Sections" are certain Secondary Sections whose
      titles are designated, as being those of Invariant Sections, in the
      notice that says that the Document is released under this License.
      If a section does not fit the above definition of Secondary then it
@@ -4564,13 +4568,13 @@ Appendix A Copying This Manual
      contain zero Invariant Sections.  If the Document does not identify
      any Invariant Sections then there are none.
 
-     The “Cover Texts” are certain short passages of text that are
+     The "Cover Texts" are certain short passages of text that are
      listed, as Front-Cover Texts or Back-Cover Texts, in the notice
      that says that the Document is released under this License.  A
      Front-Cover Text may be at most 5 words, and a Back-Cover Text may
      be at most 25 words.
 
-     A “Transparent” copy of the Document means a machine-readable copy,
+     A "Transparent" copy of the Document means a machine-readable copy,
      represented in a format whose specification is available to the
      general public, that is suitable for revising the document
      straightforwardly with generic text editors or (for images composed
@@ -4582,7 +4586,7 @@ Appendix A Copying This Manual
      been arranged to thwart or discourage subsequent modification by
      readers is not Transparent.  An image format is not Transparent if
      used for any substantial amount of text.  A copy that is not
-     “Transparent” is called “Opaque”.
+     "Transparent" is called "Opaque".
 
      Examples of suitable formats for Transparent copies include plain
      ASCII without markup, Texinfo input format, LaTeX input format,
@@ -4595,23 +4599,23 @@ Appendix A Copying This Manual
      the machine-generated HTML, PostScript or PDF produced by some word
      processors for output purposes only.
 
-     The “Title Page” means, for a printed book, the title page itself,
+     The "Title Page" means, for a printed book, the title page itself,
      plus such following pages as are needed to hold, legibly, the
      material this License requires to appear in the title page.  For
-     works in formats which do not have any title page as such, “Title
-     Page” means the text near the most prominent appearance of the
-     work’s title, preceding the beginning of the body of the text.
+     works in formats which do not have any title page as such, "Title
+     Page" means the text near the most prominent appearance of the
+     work's title, preceding the beginning of the body of the text.
 
-     The “publisher” means any person or entity that distributes copies
+     The "publisher" means any person or entity that distributes copies
      of the Document to the public.
 
-     A section “Entitled XYZ” means a named subunit of the Document
+     A section "Entitled XYZ" means a named subunit of the Document
      whose title either is precisely XYZ or contains XYZ in parentheses
      following text that translates XYZ in another language.  (Here XYZ
      stands for a specific section name mentioned below, such as
-     “Acknowledgements”, “Dedications”, “Endorsements”, or “History”.)
-     To “Preserve the Title” of such a section when you modify the
-     Document means that it remains a section “Entitled XYZ” according
+     "Acknowledgements", "Dedications", "Endorsements", or "History".)
+     To "Preserve the Title" of such a section when you modify the
+     Document means that it remains a section "Entitled XYZ" according
      to this definition.
 
      The Document may include Warranty Disclaimers next to the notice
@@ -4641,7 +4645,7 @@ Appendix A Copying This Manual
 
      If you publish printed copies (or copies in media that commonly
      have printed covers) of the Document, numbering more than 100, and
-     the Document’s license notice requires Cover Texts, you must
+     the Document's license notice requires Cover Texts, you must
      enclose the copies in covers that carry, clearly and legibly, all
      these Cover Texts: Front-Cover Texts on the front cover, and
      Back-Cover Texts on the back cover.  Both covers must also clearly
@@ -4713,15 +4717,15 @@ Appendix A Copying This Manual
           the Addendum below.
 
        G. Preserve in that license notice the full lists of Invariant
-          Sections and required Cover Texts given in the Document’s
+          Sections and required Cover Texts given in the Document's
           license notice.
 
        H. Include an unaltered copy of this License.
 
-       I. Preserve the section Entitled “History”, Preserve its Title,
+       I. Preserve the section Entitled "History", Preserve its Title,
           and add to it an item stating at least the title, year, new
           authors, and publisher of the Modified Version as given on the
-          Title Page.  If there is no section Entitled “History” in the
+          Title Page.  If there is no section Entitled "History" in the
           Document, create one stating the title, year, authors, and
           publisher of the Document as given on its Title Page, then add
           an item describing the Modified Version as stated in the
@@ -4731,12 +4735,12 @@ Appendix A Copying This Manual
           for public access to a Transparent copy of the Document, and
           likewise the network locations given in the Document for
           previous versions it was based on.  These may be placed in the
-          “History” section.  You may omit a network location for a work
+          "History" section.  You may omit a network location for a work
           that was published at least four years before the Document
           itself, or if the original publisher of the version it refers
           to gives permission.
 
-       K. For any section Entitled “Acknowledgements” or “Dedications”,
+       K. For any section Entitled "Acknowledgements" or "Dedications",
           Preserve the Title of the section, and preserve in the section
           all the substance and tone of each of the contributor
           acknowledgements and/or dedications given therein.
@@ -4745,11 +4749,11 @@ Appendix A Copying This Manual
           in their text and in their titles.  Section numbers or the
           equivalent are not considered part of the section titles.
 
-       M. Delete any section Entitled “Endorsements”.  Such a section
+       M. Delete any section Entitled "Endorsements".  Such a section
           may not be included in the Modified Version.
 
        N. Do not retitle any existing section to be Entitled
-          “Endorsements” or to conflict in title with any Invariant
+          "Endorsements" or to conflict in title with any Invariant
           Section.
 
        O. Preserve any Warranty Disclaimers.
@@ -4758,15 +4762,15 @@ Appendix A Copying This Manual
      appendices that qualify as Secondary Sections and contain no
      material copied from the Document, you may at your option designate
      some or all of these sections as invariant.  To do this, add their
-     titles to the list of Invariant Sections in the Modified Version’s
+     titles to the list of Invariant Sections in the Modified Version's
      license notice.  These titles must be distinct from any other
      section titles.
 
-     You may add a section Entitled “Endorsements”, provided it contains
+     You may add a section Entitled "Endorsements", provided it contains
      nothing but endorsements of your Modified Version by various
-     parties—for example, statements of peer review or that the text has
-     been approved by an organization as the authoritative definition of
-     a standard.
+     parties--for example, statements of peer review or that the text
+     has been approved by an organization as the authoritative
+     definition of a standard.
 
      You may add a passage of up to five words as a Front-Cover Text,
      and a passage of up to 25 words as a Back-Cover Text, to the end of
@@ -4804,10 +4808,10 @@ Appendix A Copying This Manual
      combined work.
 
      In the combination, you must combine any sections Entitled
-     “History” in the various original documents, forming one section
-     Entitled “History”; likewise combine any sections Entitled
-     “Acknowledgements”, and any sections Entitled “Dedications”.  You
-     must delete all sections Entitled “Endorsements.”
+     "History" in the various original documents, forming one section
+     Entitled "History"; likewise combine any sections Entitled
+     "Acknowledgements", and any sections Entitled "Dedications".  You
+     must delete all sections Entitled "Endorsements."
 
   6. COLLECTIONS OF DOCUMENTS
 
@@ -4828,16 +4832,16 @@ Appendix A Copying This Manual
 
      A compilation of the Document or its derivatives with other
      separate and independent documents or works, in or on a volume of a
-     storage or distribution medium, is called an “aggregate” if the
+     storage or distribution medium, is called an "aggregate" if the
      copyright resulting from the compilation is not used to limit the
-     legal rights of the compilation’s users beyond what the individual
+     legal rights of the compilation's users beyond what the individual
      works permit.  When the Document is included in an aggregate, this
      License does not apply to the other works in the aggregate which
      are not themselves derivative works of the Document.
 
      If the Cover Text requirement of section 3 is applicable to these
      copies of the Document, then if the Document is less than one half
-     of the entire aggregate, the Document’s Cover Texts may be placed
+     of the entire aggregate, the Document's Cover Texts may be placed
      on covers that bracket the Document within the aggregate, or the
      electronic equivalent of covers if the Document is in electronic
      form.  Otherwise they must appear on printed covers that bracket
@@ -4859,8 +4863,8 @@ Appendix A Copying This Manual
      this License or a notice or disclaimer, the original version will
      prevail.
 
-     If a section in the Document is Entitled “Acknowledgements”,
-     “Dedications”, or “History”, the requirement (section 4) to
+     If a section in the Document is Entitled "Acknowledgements",
+     "Dedications", or "History", the requirement (section 4) to
      Preserve its Title (section 1) will typically require changing the
      actual title.
 
@@ -4901,7 +4905,7 @@ Appendix A Copying This Manual
 
      Each version of the License is given a distinguishing version
      number.  If the Document specifies that a particular numbered
-     version of this License “or any later version” applies to it, you
+     version of this License "or any later version" applies to it, you
      have the option of following the terms and conditions either of
      that specified version or of any later version that has been
      published (not as a draft) by the Free Software Foundation.  If the
@@ -4909,29 +4913,29 @@ Appendix A Copying This Manual
      choose any version ever published (not as a draft) by the Free
      Software Foundation.  If the Document specifies that a proxy can
      decide which future versions of this License can be used, that
-     proxy’s public statement of acceptance of a version permanently
+     proxy's public statement of acceptance of a version permanently
      authorizes you to choose that version for the Document.
 
   11. RELICENSING
 
-     “Massive Multiauthor Collaboration Site” (or “MMC Site”) means any
+     "Massive Multiauthor Collaboration Site" (or "MMC Site") means any
      World Wide Web server that publishes copyrightable works and also
      provides prominent facilities for anybody to edit those works.  A
      public wiki that anybody can edit is an example of such a server.
-     A “Massive Multiauthor Collaboration” (or “MMC”) contained in the
+     A "Massive Multiauthor Collaboration" (or "MMC") contained in the
      site means any set of copyrightable works thus published on the MMC
      site.
 
-     “CC-BY-SA” means the Creative Commons Attribution-Share Alike 3.0
+     "CC-BY-SA" means the Creative Commons Attribution-Share Alike 3.0
      license published by Creative Commons Corporation, a not-for-profit
      corporation with a principal place of business in San Francisco,
      California, as well as future copyleft versions of that license
      published by that same organization.
 
-     “Incorporate” means to publish or republish a Document, in whole or
+     "Incorporate" means to publish or republish a Document, in whole or
      in part, as part of another Document.
 
-     An MMC is “eligible for relicensing” if it is licensed under this
+     An MMC is "eligible for relicensing" if it is licensed under this
      License, and if all works that were first published under this
      License somewhere other than this MMC, and subsequently
      incorporated in whole or in part into the MMC, (1) had no cover
@@ -4958,7 +4962,7 @@ notices just after the title page:
        Free Documentation License''.
 
    If you have Invariant Sections, Front-Cover Texts and Back-Cover
-Texts, replace the “with...Texts.” line with this:
+Texts, replace the "with...Texts." line with this:
 
          with the Invariant Sections being LIST THEIR TITLES, with
          the Front-Cover Texts being LIST, and with the Back-Cover Texts
@@ -4992,17 +4996,17 @@ Appendix C Index
  [index ]
 * Menu:
 
+* _POSIX2_VERSION:                       Standards conformance.
+                                                              (line  23)
 * ! output format:                       Context.             (line   6)
 * +- output format:                      Unified Format.      (line   6)
 * < output format:                       Normal.              (line   6)
 * <<<<<<< for marking conflicts:         Marking Conflicts.   (line   6)
-* _POSIX2_VERSION:                       Standards conformance.
-                                                              (line  23)
-* ad capability:                         diff Options.        (line 179)
+* ad capability:                         diff Options.        (line 182)
 * aligning tab stops:                    Tabs.                (line   6)
 * alternate file names:                  Alternate Names.     (line   6)
-* always color option:                   diff Options.        (line  43)
-* auto color option:                     diff Options.        (line  42)
+* always color option:                   diff Options.        (line  46)
+* auto color option:                     diff Options.        (line  44)
 * backup file names:                     Backup Names.        (line   6)
 * backup file strategy:                  Backups.             (line   6)
 * binary file diff:                      Binary.              (line   6)
@@ -5027,7 +5031,7 @@ Appendix C Index
 * context output format:                 Context.             (line   6)
 * creating files:                        Creating and Removing.
                                                               (line   6)
-* de capability:                         diff Options.        (line 184)
+* de capability:                         diff Options.        (line 187)
 * diagnostics from patch:                patch Messages.      (line   6)
 * diff invocation:                       Invoking diff.       (line   6)
 * diff merging:                          Interactive Merging. (line   6)
@@ -5058,7 +5062,7 @@ Appendix C Index
 * fuzz factor when patching:             Inexact.             (line   6)
 * gibibyte, definition of:               cmp Options.         (line  87)
 * gigabyte, definition of:               cmp Options.         (line  84)
-* hd capability:                         diff Options.        (line 189)
+* hd capability:                         diff Options.        (line 192)
 * headings:                              Sections.            (line   6)
 * hunks:                                 Hunks.               (line   6)
 * hunks for diff3:                       diff3 Hunks.         (line   6)
@@ -5089,7 +5093,7 @@ Appendix C Index
 * LC_TIME:                               Detailed Context.    (line  12)
 * line formats:                          Line Formats.        (line   6)
 * line group formats:                    Line Group Formats.  (line   6)
-* ln capability:                         diff Options.        (line 194)
+* ln capability:                         diff Options.        (line 197)
 * mebibyte, definition of:               cmp Options.         (line  82)
 * megabyte, definition of:               cmp Options.         (line  79)
 * merge commands:                        Merge Commands.      (line   6)
@@ -5102,7 +5106,7 @@ Appendix C Index
                                                               (line   6)
 * multiple patches:                      Multiple Patches.    (line   6)
 * newline treatment by diff:             Incomplete Lines.    (line   6)
-* none color option:                     diff Options.        (line  40)
+* none color option:                     diff Options.        (line  41)
 * normal output format:                  Normal.              (line   6)
 * options for cmp:                       cmp Options.         (line   6)
 * options for diff:                      diff Options.        (line   6)
@@ -5122,13 +5126,13 @@ Appendix C Index
 * patch options:                         patch Options.       (line   6)
 * patch producer tips:                   Tips for Patch Producers.
                                                               (line   6)
+* PATCH_GET:                             Revision Control.    (line  13)
+* PATCH_VERSION_CONTROL:                 Backup Names.        (line  21)
 * patch, common mistakes:                Avoiding Common Mistakes.
                                                               (line   6)
 * patches, shrinking:                    Generating Smaller Patches.
                                                               (line   6)
 * patching directories:                  patch Directories.   (line   6)
-* PATCH_GET:                             Revision Control.    (line  13)
-* PATCH_VERSION_CONTROL:                 Backup Names.        (line  21)
 * pebibyte, definition of:               cmp Options.         (line  97)
 * performance of diff:                   diff Performance.    (line   6)
 * petabyte, definition of:               cmp Options.         (line  94)
@@ -5172,7 +5176,7 @@ Appendix C Index
 * tab stop alignment:                    Tabs.                (line   6)
 * tebibyte, definition of:               cmp Options.         (line  92)
 * terabyte, definition of:               cmp Options.         (line  89)
-* terminal, using color iff:             diff Options.        (line  42)
+* terminal, using color iff:             diff Options.        (line  44)
 * testing patch:                         Dry Runs.            (line   6)
 * text versus binary diff:               Binary.              (line   6)
 * timestamp format, context diffs:       Detailed Context.    (line  12)
@@ -5197,119 +5201,119 @@ Appendix C Index
 
 
 Tag Table:
-Node: Top1464
-Node: Overview3726
-Node: Comparison7627
-Node: Hunks10609
-Node: White Space12130
-Node: Blank Lines14045
-Node: Specified Lines15066
-Node: Case Folding16226
-Node: Brief16667
-Node: Binary18044
-Node: Output Formats21973
-Node: Sample diff Input22714
-Node: Context24241
-Node: Context Format25850
-Node: Example Context26658
-Node: Less Context28169
-Node: Detailed Context29362
-Node: Unified Format31611
-Node: Example Unified32444
-Node: Detailed Unified33486
-Node: Sections35152
-Node: Specified Headings35919
-Node: C Function Headings37520
-Node: Alternate Names38402
-Node: Side by Side39347
-Node: Side by Side Format41545
-Node: Example Side by Side42471
-Node: Normal43815
-Node: Example Normal44832
-Node: Detailed Normal45572
-Node: Scripts47351
-Node: ed Scripts47772
-Node: Example ed49066
-Node: Detailed ed49524
-Node: Forward ed51347
-Node: RCS52167
-Node: If-then-else53417
-Node: Line Group Formats55151
-Node: Line Formats61230
-Node: Example If-then-else64615
-Node: Detailed If-then-else65698
-Node: Incomplete Lines67653
-Node: Comparing Directories69359
-Node: Adjusting Output73746
-Node: Tabs74265
-Node: Trailing Blanks75931
-Node: Pagination77180
-Node: diff Performance77672
-Node: Comparing Three Files80861
-Node: Sample diff3 Input81763
-Node: Example diff3 Normal82723
-Node: Detailed diff3 Normal83791
-Node: diff3 Hunks85635
-Node: diff3 Merging87021
-Node: Which Changes89326
-Node: Marking Conflicts90802
-Node: Bypassing ed93369
-Node: Merging Incomplete Lines94748
-Node: Saving the Changed File95506
-Node: Interactive Merging96182
-Node: sdiff Option Summary96923
-Node: Merge Commands98218
-Node: Merging with patch99579
-Node: patch Input102022
-Node: Revision Control102760
-Node: Imperfect103974
-Node: Changed White Space105161
-Node: Reversed Patches105974
-Node: Inexact107511
-Node: Dry Runs111139
-Node: Creating and Removing112039
-Node: Patching Timestamps113132
-Node: Multiple Patches115439
-Node: patch Directories118198
-Node: Backups119902
-Node: Backup Names121006
-Ref: Backup Names-Footnote-1124117
-Node: Reject Names124252
-Node: patch Messages124869
-Node: More or Fewer Messages125953
-Node: patch and Keyboard Input126620
-Node: patch Quoting Style127701
-Node: patch and POSIX128899
-Node: patch and Tradition129764
-Node: Making Patches133365
-Node: Tips for Patch Producers134197
-Node: Tips for Patch Consumers135484
-Node: Avoiding Common Mistakes136133
-Node: Generating Smaller Patches138722
-Node: Invoking cmp140537
-Node: cmp Options142131
-Node: Invoking diff146041
-Node: diff Options147736
-Node: Invoking diff3158101
-Node: diff3 Options158763
-Node: Invoking patch162014
-Node: patch Options163286
-Node: Invoking sdiff168818
-Node: sdiff Options170024
-Node: Standards conformance173192
-Node: Projects175008
-Node: Shortcomings175728
-Node: Internationalization176848
-Node: Changing Structure178054
-Node: Special Files179203
-Node: Unusual File Names180346
-Node: Timestamp Order181008
-Node: Ignoring Changes181656
-Node: Speedups182441
-Node: Bugs182911
-Node: Copying This Manual183790
-Node: Translations209129
-Node: Index209501
+Node: Top1454
+Node: Overview3703
+Node: Comparison7577
+Node: Hunks10559
+Node: White Space12080
+Node: Blank Lines13995
+Node: Specified Lines15016
+Node: Case Folding16174
+Node: Brief16615
+Node: Binary17990
+Node: Output Formats21919
+Node: Sample diff Input22660
+Node: Context24187
+Node: Context Format25796
+Node: Example Context26604
+Node: Less Context28115
+Node: Detailed Context29308
+Node: Unified Format31549
+Node: Example Unified32382
+Node: Detailed Unified33424
+Node: Sections35091
+Node: Specified Headings35854
+Node: C Function Headings37455
+Node: Alternate Names38337
+Node: Side by Side39282
+Node: Side by Side Format41480
+Node: Example Side by Side42406
+Node: Normal43750
+Node: Example Normal44763
+Node: Detailed Normal45503
+Node: Scripts47266
+Node: ed Scripts47687
+Node: Example ed48981
+Node: Detailed ed49439
+Node: Forward ed51258
+Node: RCS52078
+Node: If-then-else53326
+Node: Line Group Formats55060
+Node: Line Formats61129
+Node: Example If-then-else64514
+Node: Detailed If-then-else65597
+Node: Incomplete Lines67550
+Node: Comparing Directories69254
+Node: Adjusting Output73639
+Node: Tabs74158
+Node: Trailing Blanks75824
+Node: Pagination77073
+Node: diff Performance77565
+Node: Comparing Three Files80750
+Node: Sample diff3 Input81648
+Node: Example diff3 Normal82608
+Node: Detailed diff3 Normal83676
+Node: diff3 Hunks85520
+Node: diff3 Merging86906
+Node: Which Changes89211
+Node: Marking Conflicts90687
+Node: Bypassing ed93254
+Node: Merging Incomplete Lines94633
+Node: Saving the Changed File95391
+Node: Interactive Merging96067
+Node: sdiff Option Summary96808
+Node: Merge Commands98103
+Node: Merging with patch99464
+Node: patch Input101907
+Node: Revision Control102645
+Node: Imperfect103859
+Node: Changed White Space105044
+Node: Reversed Patches105857
+Node: Inexact107381
+Node: Dry Runs111009
+Node: Creating and Removing111909
+Node: Patching Timestamps113002
+Node: Multiple Patches115293
+Node: patch Directories118052
+Node: Backups119756
+Node: Backup Names120860
+Ref: Backup Names-Footnote-1123971
+Node: Reject Names124106
+Node: patch Messages124723
+Node: More or Fewer Messages125803
+Node: patch and Keyboard Input126470
+Node: patch Quoting Style127551
+Node: patch and POSIX128749
+Node: patch and Tradition129614
+Node: Making Patches133211
+Node: Tips for Patch Producers134041
+Node: Tips for Patch Consumers135328
+Node: Avoiding Common Mistakes135977
+Node: Generating Smaller Patches138566
+Node: Invoking cmp140377
+Node: cmp Options141967
+Node: Invoking diff145871
+Node: diff Options147562
+Node: Invoking diff3157955
+Node: diff3 Options158617
+Node: Invoking patch161866
+Node: patch Options163138
+Node: Invoking sdiff168670
+Node: sdiff Options169876
+Node: Standards conformance173044
+Node: Projects174858
+Node: Shortcomings175578
+Node: Internationalization176698
+Node: Changing Structure177904
+Node: Special Files179051
+Node: Unusual File Names180194
+Node: Timestamp Order180856
+Node: Ignoring Changes181504
+Node: Speedups182289
+Node: Bugs182759
+Node: Copying This Manual183636
+Node: Translations208768
+Node: Index209140
 
 End Tag Table
 

@@ -16,8 +16,8 @@ RN
 U system.pure_exceptions%s  s-purexc.ads	25f3cd66 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-purexc.ads		20240120085935 81654053 system.pure_exceptions%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-purexc.ads		20230727081304 81654053 system.pure_exceptions%s
 G a e
 G c Z s s [raise_exception system__pure_exceptions 63 14 none]
 G c Z s s [exception_typeIP system__pure_exceptions 39 9 none]

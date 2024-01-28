@@ -17,9 +17,9 @@ U system.return_stack%s	s-retsta.ads		00a9e31a NE OL PR PK
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
-D system.ads		20240120085935 a4968d35 system%s
-D s-retsta.ads		20240120085938 0f6b06cb system.return_stack%s
-D s-stoele.ads		20240120085938 ab5468e4 system.storage_elements%s
+D system.ads		20230727081304 a4968d35 system%s
+D s-retsta.ads		20230727081304 0f6b06cb system.return_stack%s
+D s-stoele.ads		20230727081304 ab5468e4 system.storage_elements%s
 G a e
 G c Z s s [rs_allocate system__return_stack 44 14 none]
 X 1 system.ads
