@@ -79,3 +79,8 @@ neue/packages/nettle-3.9.1.tar.gz filter=lfs diff=lfs merge=lfs -text
 neue/packages/cpython-3.12.1.tar.gz filter=lfs diff=lfs merge=lfs -text
 neue/packages/glibc-2.38.tar.xz filter=lfs diff=lfs merge=lfs -text
 neue/packages/pcre2-10.42.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/cmake-3.28.1.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/file-5.45.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/jdk-21-ga.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/unzip-6.0.tar.gz filter=lfs diff=lfs merge=lfs -text
+neue/packages/zip-3.0.tar.gz filter=lfs diff=lfs merge=lfs -text

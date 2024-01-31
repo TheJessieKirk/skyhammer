@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 coreutils cpython dejagnu diffutils dmalloc findutils flex gawk gcc gettext glibc gmp gperf grep guile gzip help2man isl libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch pcre2 perl readline sed tar termcap texinfo wget2 xz zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch pcre2 perl readline sed tar termcap texinfo unzip wget2 xz zip zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -201,6 +201,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/bzip2-*/Makefile exists.";
           fi;
           ;;
+        cmake)
+          if [ ! -f cmake-3.28.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/cmake-3.28.1.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/Kitware/CMake/releases/download/v3.28.1/cmake-3.28.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/cmake-3.28.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/cmake-*/configure ];
+          then
+            echo "$ROOT_DIR/src/cmake-*/configure does not exist. Extracting package...";
+            tar -xf cmake-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/cmake-*/configure exists.";
+          fi;
+          ;;
         coreutils)
           if [ ! -f coreutils-9.4.tar.xz ];
           then
@@ -280,6 +296,22 @@ case $REPLY in
             tar -xf dmalloc-*.tgz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/dmalloc-*/configure exists.";
+          fi;
+          ;;
+        file)
+          if [ ! -f file-5.45.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/file-5.45.tar.gz does not exist. Downloading...";
+            wget -q http://ftp.astron.com/pub/file/file-5.45.tar.gz
+          else
+            echo "$ROOT_DIR/var/packages/file-5.45.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/file-*/configure ];
+          then
+            echo "$ROOT_DIR/src/file-*/configure does not exist. Extracting package...";
+            tar -xf file-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/file-*/configure exists.";
           fi;
           ;;
         findutils)
@@ -481,6 +513,24 @@ case $REPLY in
             tar -xf isl-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/isl-*/configure exists.";
+          fi;
+          ;;
+        jdk)
+          if [ ! -f jdk-21-ga.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/jdk-21-ga.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/openjdk/jdk21/archive/refs/tags/jdk-21-ga.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/jdk-21-ga.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/jdk-*/configure ];
+          then
+            echo "$ROOT_DIR/src/jdk-*/configure does not exist. Extracting package...";
+            tar -xf jdk-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/jdk21-jdk-21-ga $ROOT_DIR/src/jdk-21-ga;
+            chmod +x $ROOT_DIR/src/jdk-21-ga/configure;
+          else
+            echo "$ROOT_DIR/src/jdk-*/configure exists.";
           fi;
           ;;
         libatomic_ops)
@@ -878,6 +928,26 @@ case $REPLY in
             echo "$ROOT_DIR/src/texinfo-*/configure exists.";
           fi;
           ;;
+        unzip)
+          if [ ! -f unzip-6.0.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/unzip-6.0.tar.gz does not exist. Downloading...";
+            wget -q https://sourceforge.net/projects/infozip/files/UnZip%206.x%20%28latest%29/UnZip%206.0/unzip60.tar.gz;
+            mv unzip60.tar.gz unzip-6.0.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/unzip-6.0.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/unzip-*/unix/configure ];
+          then
+            echo "$ROOT_DIR/src/unzip-*/unix/configure does not exist. Extracting package...";
+            tar -xf unzip-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/unzip60 $ROOT_DIR/src/unzip-6.0;
+            cp -r $ROOT_DIR/src/unzip-6.0/unix/* $ROOT_DIR/src/unzip-6.0;
+            cp -r $ROOT_DIR/src/bzip2-*/* $ROOT_DIR/src/unzip-6.0/bzip2;
+          else
+            echo "$ROOT_DIR/src/unzip-*/configure exists.";
+          fi;
+          ;;
         wget2)
           if [ ! -f wget2-2.1.0.tar.lz ];
           then
@@ -910,6 +980,26 @@ case $REPLY in
             echo "$ROOT_DIR/src/tar-*/configure exists.";
           fi;
           ;;
+        zip)
+          if [ ! -f zip-3.0.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/zip-3.0.tar.gz does not exist. Downloading...";
+            wget -q https://sourceforge.net/projects/infozip/files/Zip%203.x%20%28latest%29/3.0/zip30.tar.gz;
+            mv zip30.tar.gz zip-3.0.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/zip-3.0.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/zip-*/unix/configure ];
+          then
+            echo "$ROOT_DIR/src/zip-*/unix/configure does not exist. Extracting package...";
+            tar -xf zip-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/zip30 $ROOT_DIR/src/zip-3.0;
+            cp -r $ROOT_DIR/src/zip-3.0/unix/* $ROOT_DIR/src/zip-3.0;
+            cp -r $ROOT_DIR/src/bzip2-*/* $ROOT_DIR/src/zip-3.0/bzip2;
+          else
+            echo "$ROOT_DIR/src/zip-*/configure exists.";
+          fi;
+          ;;
         zstd)
           if [ ! -f zstd-1.5.5.tar.gz ];
           then
@@ -939,13 +1029,13 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(cpython perl m4 autoconf automake make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc findutils flex gawk gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo wget2 zstd gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(cmake cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip wget2 zip zstd gmp isl mpfr mpc binutils gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
   for j in ${SOFTWARE_TO_BUILD[@]};
   do
-    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "zstd" ];
+    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
     then
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -985,11 +1075,14 @@ do
             bison)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-threads=posix;
               ;;
+            cmake)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i;
+              ;;
             coreutils)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-dependency-tracking --enable-install-program=arch,coreutils,hostname --enable-systemd --enable-threads=posix --with-linux-crypto --with-openssl=yes;
               ;;
             cpython)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-optimizations;
               ;;
             dejagnu)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -999,6 +1092,9 @@ do
               ;;
             dmalloc)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-threads=posix CXX=g++;
+              ;;
+            file)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include;
               ;;
             findutils)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-d_type-optimization --enable-dependency-tracking --enable-leaf-optimisation --enable-threads=posix;
@@ -1025,7 +1121,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-crypt --enable-pt_chown --enable-stack-protector=strong;
               ;;
             gmp)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --build=$i --enable-assert --enable-cxx --enable-fat --enable-profiling=gprof --with-aix-soname=both --with-gnu-ld --with-readline;
               ;;
             gperf)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -1043,7 +1139,10 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-nls;
               ;;
             isl)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --with-aix-soname=both;
+              ;;
+            jdk)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-headless-only;
               ;;
             libatomic_ops)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-assertions --enable-dependency-tracking --enable-shared --enable-static --with-aix-soname=both;
@@ -1076,10 +1175,10 @@ do
               ./../../../src/mingw-w64-*/$j/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i;
               ;;
             mpc)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-valgrind-tests --with-aix-soname=both;
               ;;
             mpfr)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-assert --enable-dependency-tracking --enable-shared-cache --enable-thread-safe --enable-warnings --with-aix-soname=both;
               ;;
             ncompress)
               cd $ROOT_DIR/src/$j-*;
@@ -1142,7 +1241,7 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc*;
-          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "zstd" ];
+          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
           then
             cd $ROOT_DIR/build/$i/$j;
           fi;
@@ -1163,6 +1262,9 @@ do
             make -j 4;
             make threads -j 4;
             make threadscxx -j 4;
+          elif [ $j = "jdk" ];
+          then
+            make JOBS=4;
           elif [ $j = "libcap" ];
           then
             rm -r $ROOT_DIR/src/libcap*;
@@ -1181,6 +1283,24 @@ do
           #  tar -xf $ROOT_DIR/packages/libsepol-*.tar.gz -C $ROOT_DIR/src;
           #  cd $ROOT_DIR/src/libsepol*;
           #  make CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "unzip" ];
+          then
+            rm -r $ROOT_DIR/src/unzip-*;
+            tar -xf $ROOT_DIR/packages/unzip-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/unzip60 $ROOT_DIR/src/unzip-6.0;
+            cd $ROOT_DIR/src/unzip-*;
+            cp -r $ROOT_DIR/src/unzip*/unix/* $ROOT_DIR/src/unzip*;
+            cp -r $ROOT_DIR/src/bzip2-*/* $ROOT_DIR/src/unzip-6.0/bzip2;
+            make generic CC=gcc prefix=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "zip" ];
+          then
+            rm -r $ROOT_DIR/src/zip-*;
+            tar -xf $ROOT_DIR/packages/zip-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/zip30 $ROOT_DIR/src/zip-3.0;
+            cd $ROOT_DIR/src/zip-*;
+            cp -r $ROOT_DIR/src/zip*/unix/* $ROOT_DIR/src/zip*;
+            cp -r $ROOT_DIR/src/bzip2-*/* $ROOT_DIR/src/zip-3.0/bzip2;
+            make generic CC=gcc prefix=$ROOT_DIR/install/$i -j 4;
           elif [ $j = "zstd" ];
           then
             rm -r $ROOT_DIR/src/zstd*;
@@ -1207,7 +1327,7 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc;
-          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ];
+          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ] || [ $j = "unzip" ] || [ $j = "zip" ];
           then
             cd $ROOT_DIR/src/$j-*;
           else
@@ -1231,6 +1351,9 @@ do
             make install -j 4;
             make installth -j 4;
             make installthcxx -j 4;
+          elif [ $j = "jdk" ];
+          then
+            make install JOBS=4;
           elif [ $j = "libcap" ];
           then
             make install prefix=$ROOT_DIR/install/$i bin=bin lib=lib sbin=bin -j 4;
@@ -1240,6 +1363,12 @@ do
           #elif [ $j = "libsepol" ];
           #then
           #  make install PREFIX=$ROOT_DIR/install/$i lib=$ROOT_DIR/install/$i/lib -j 4;
+          elif [ $j = "unzip" ];
+          then
+            make install CC=gcc prefix=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "zip" ];
+          then
+            make install CC=gcc prefix=$ROOT_DIR/install/$i -j 4;
           elif [ $j = "zstd" ];
           then
             make install CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
