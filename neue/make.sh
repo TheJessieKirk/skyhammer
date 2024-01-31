@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch pcre2 perl readline sed tar termcap texinfo unzip wget2 xz zip zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch pcre2 perl readline sed tar termcap texinfo unzip valgrind wget2 xz zip zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -380,6 +380,22 @@ case $REPLY in
             tar -xf gcc-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/binutils-*/configure exists.";
+          fi;
+          ;;
+        gdb)
+          if [ ! -f gdb-14.1.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/gdb-14.1.tar.xz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/gdb/gdb-14.1.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/gdb-14.1.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/gdb-*/configure ];
+          then
+            echo "$ROOT_DIR/src/gdb-*/configure does not exist. Extracting package...";
+            tar -xf gdb-*.tar.xz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/gdb-*/configure exists.";
           fi;
           ;;
         gettext)
@@ -948,6 +964,23 @@ case $REPLY in
             echo "$ROOT_DIR/src/unzip-*/configure exists.";
           fi;
           ;;
+        valgrind)
+          if [ ! -f valgrind-3.22.0.tar.bz2 ];
+          then
+            echo "$ROOT_DIR/var/packages/valgrind-3.22.0.tar.bz2 does not exist. Downloading...";
+            wget -q https://sourceware.org/pub/valgrind/valgrind-3.22.0.tar.bz2;
+          fi;
+          if [ ! -f ../src/valgrind-*/configure ];
+          then
+            echo "$ROOT_DIR/src/valgrind-*/configure does not exist. Extracting package...";
+            tar -xf valgrind-*.tar.bz2 -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/valgrind-*;
+            ./autogen.sh;
+            cd $ROOT_DIR/packages;
+          else
+            echo "$ROOT_DIR/src/valgrind-*/configure exists.";
+          fi;
+          ;;
         wget2)
           if [ ! -f wget2-2.1.0.tar.lz ];
           then
@@ -1029,7 +1062,7 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(cmake cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip wget2 zip zstd gmp isl mpfr mpc binutils gcc);
+    SOFTWARE_TO_BUILD=(gdb valgrind cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip wget2 zip zstd gmp isl mpfr mpc binutils cmake gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
@@ -1104,6 +1137,9 @@ do
               ;;
             gawk)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-builtin-intdiv0 --enable-dependency-tracking;
+              ;;
+            gdb)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
             gcc)
               if [ $i = "x86_64-w64-mingw32" ]
@@ -1216,6 +1252,9 @@ do
               ;;
             texinfo)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
+            valgrind)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-lto --enable-tls;
               ;;
             wget2)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --with-linux-crypto=yes --with-openssl=yes;

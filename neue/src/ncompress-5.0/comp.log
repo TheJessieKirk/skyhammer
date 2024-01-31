@@ -1,0 +1,568 @@
+===============================================================================
+Directory: /usr/skyhammer/neue/src/ncompress-5.0
+./compress -V
+Compress version: (N)compress 5.0
+Compile options:
+        FAST, LSTAT, 
+        IBUFSIZ=8192, OBUFSIZ=8192, BITS=16
+
+Author version 5.x (Modernization):
+Author version 4.2.4.x (Maintenance):
+     Mike Frysinger  (vapier@gmail.com)
+
+Author version 4.2 (Speed improvement & source cleanup):
+     Peter Jannesen  (peter@ncs.nl)
+
+Author version 4.1 (Added recursive directory compress):
+     Dave Mack  (csu@alembic.acs.com)
+
+Authors version 4.0 (World release in 1985):
+     Spencer W. Thomas, Jim McKie, Steve Davies,
+     Ken Turkowski, James A. Woods, Joe Orost
+/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress -V
+Compress version: (N)compress 5.0
+Compile options:
+        FAST, LSTAT, 
+        IBUFSIZ=8192, OBUFSIZ=8192, BITS=16
+
+Author version 5.x (Modernization):
+Author version 4.2.4.x (Maintenance):
+     Mike Frysinger  (vapier@gmail.com)
+
+Author version 4.2 (Speed improvement & source cleanup):
+     Peter Jannesen  (peter@ncs.nl)
+
+Author version 4.1 (Added recursive directory compress):
+     Dave Mack  (csu@alembic.acs.com)
+
+Authors version 4.0 (World release in 1985):
+     Spencer W. Thomas, Jim McKie, Steve Davies,
+     Ken Turkowski, James A. Woods, Joe Orost
+---------------- ./compress -> /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress ----------------
+342 blocks
+342 blocks
+/tmp/sh67895.fi /tmp/sh67895.foo differ: byte 1, line 1
+------ ERROR
+1,25c1,25
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   ./compress(Compression: 62.26% 0.01user 0.00system 0:00.01elapsed 92%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (1major+393minor)pagefaults 0swaps)
+decompress /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress(0.00user 0.00system 0:00.01elapsed 37%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (0major+98minor)pagefaults 0swaps)
+---------------- /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress -> ./compress ----------------
+342 blocks
+342 blocks
+/tmp/sh67895.fi /tmp/sh67895.foo differ: byte 1, line 1
+------ ERROR
+1,25c1,25
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress(Compression: 62.26% 0.00user 0.01system 0:00.01elapsed 86%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (0major+394minor)pagefaults 0swaps)
+decompress ./compress(0.00user 0.00system 0:00.01elapsed 37%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (0major+95minor)pagefaults 0swaps)
+---------------- ./compress -> ./compress ----------------
+342 blocks
+342 blocks
+/tmp/sh67895.fi /tmp/sh67895.foo differ: byte 1, line 1
+------ ERROR
+1,25c1,25
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   ./compress(Compression: 62.26% 0.00user 0.01system 0:00.01elapsed 86%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (0major+391minor)pagefaults 0swaps)
+decompress ./compress(0.00user 0.00system 0:00.01elapsed 37%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (0major+95minor)pagefaults 0swaps)
+---------------- /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress -> /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress ----------------
+342 blocks
+342 blocks
+/tmp/sh67895.fi /tmp/sh67895.foo differ: byte 1, line 1
+------ ERROR
+1,25c1,25
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 12:45
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress(Compression: 62.26% 0.00user 0.00system 0:00.01elapsed 86%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (0major+394minor)pagefaults 0swaps)
+decompress /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/compress(0.00user 0.00system 0:00.01elapsed 43%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (1major+97minor)pagefaults 0swaps)
+===============================================================================
+Directory: /usr/skyhammer/neue/src/ncompress-5.0
+./compress -V
+Compress version: (N)compress 5.0
+Compile options:
+        FAST, LSTAT, 
+        IBUFSIZ=8192, OBUFSIZ=8192, BITS=16
+
+Author version 5.x (Modernization):
+Author version 4.2.4.x (Maintenance):
+     Mike Frysinger  (vapier@gmail.com)
+
+Author version 4.2 (Speed improvement & source cleanup):
+     Peter Jannesen  (peter@ncs.nl)
+
+Author version 4.1 (Added recursive directory compress):
+     Dave Mack  (csu@alembic.acs.com)
+
+Authors version 4.0 (World release in 1985):
+     Spencer W. Thomas, Jim McKie, Steve Davies,
+     Ken Turkowski, James A. Woods, Joe Orost
+/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress -V
+Compress version: (N)compress 5.0
+Compile options:
+        FAST, LSTAT, 
+        IBUFSIZ=8192, OBUFSIZ=8192, BITS=16
+
+Author version 5.x (Modernization):
+Author version 4.2.4.x (Maintenance):
+     Mike Frysinger  (vapier@gmail.com)
+
+Author version 4.2 (Speed improvement & source cleanup):
+     Peter Jannesen  (peter@ncs.nl)
+
+Author version 4.1 (Added recursive directory compress):
+     Dave Mack  (csu@alembic.acs.com)
+
+Authors version 4.0 (World release in 1985):
+     Spencer W. Thomas, Jim McKie, Steve Davies,
+     Ken Turkowski, James A. Woods, Joe Orost
+---------------- ./compress -> /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress ----------------
+361 blocks
+361 blocks
+/tmp/sh68198.fi /tmp/sh68198.foo differ: byte 1, line 1
+------ ERROR
+1,26c1,26
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/comp.log
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 12:49
+> 2021
+> 2021
+> 12:49
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   ./compress(Compression: 62.63% 0.01user 0.00system 0:00.01elapsed 93%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (1major+393minor)pagefaults 0swaps)
+decompress /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress(0.00user 0.00system 0:00.01elapsed 37%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (0major+99minor)pagefaults 0swaps)
+---------------- /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress -> ./compress ----------------
+361 blocks
+361 blocks
+/tmp/sh68198.fi /tmp/sh68198.foo differ: byte 1, line 1
+------ ERROR
+1,26c1,26
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/comp.log
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 12:49
+> 2021
+> 2021
+> 12:49
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress(Compression: 62.63% 0.01user 0.00system 0:00.01elapsed 87%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (1major+394minor)pagefaults 0swaps)
+decompress ./compress(0.00user 0.00system 0:00.01elapsed 41%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (0major+101minor)pagefaults 0swaps)
+---------------- ./compress -> ./compress ----------------
+361 blocks
+361 blocks
+/tmp/sh68198.fi /tmp/sh68198.foo differ: byte 1, line 1
+------ ERROR
+1,26c1,26
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/comp.log
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 12:49
+> 2021
+> 2021
+> 12:49
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   ./compress(Compression: 62.63% 0.00user 0.00system 0:00.01elapsed 93%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (0major+394minor)pagefaults 0swaps)
+decompress ./compress(0.00user 0.00system 0:00.01elapsed 41%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (1major+97minor)pagefaults 0swaps)
+---------------- /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress -> /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress ----------------
+361 blocks
+361 blocks
+/tmp/sh68198.fi /tmp/sh68198.foo differ: byte 1, line 1
+------ ERROR
+1,26c1,26
+< /usr/skyhammer/neue/src/ncompress-5.0/.travis.yml
+< /usr/skyhammer/neue/src/ncompress-5.0/Acknowleds
+< /usr/skyhammer/neue/src/ncompress-5.0/Changes
+< /usr/skyhammer/neue/src/ncompress-5.0/GNUmakefile
+< /usr/skyhammer/neue/src/ncompress-5.0/LICENSE.txt
+< /usr/skyhammer/neue/src/ncompress-5.0/LZW.INFO
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile
+< /usr/skyhammer/neue/src/ncompress-5.0/Makefile.def
+< /usr/skyhammer/neue/src/ncompress-5.0/README.md
+< /usr/skyhammer/neue/src/ncompress-5.0/UNLICENSE
+< /usr/skyhammer/neue/src/ncompress-5.0/build
+< /usr/skyhammer/neue/src/ncompress-5.0/comp.log
+< /usr/skyhammer/neue/src/ncompress-5.0/compress
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.c
+< /usr/skyhammer/neue/src/ncompress-5.0/compress.def
+< /usr/skyhammer/neue/src/ncompress-5.0/patchlevel.h
+< /usr/skyhammer/neue/src/ncompress-5.0/tests/runtests.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/lib.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/travis/main.sh
+< /usr/skyhammer/neue/src/ncompress-5.0/uncompress.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp
+< /usr/skyhammer/neue/src/ncompress-5.0/zcmp.1
+< /usr/skyhammer/neue/src/ncompress-5.0/zdiff
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore
+< /usr/skyhammer/neue/src/ncompress-5.0/zmore.1
+---
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:21
+> 2021
+> 2021
+> 2021
+> 2021
+> 12:45
+> 12:49
+> 2021
+> 2021
+> 12:49
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+> 2021
+---------------
+compress   /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress(Compression: 62.63% 0.00user 0.01system 0:00.01elapsed 87%CPU (0avgtext+0avgdata 2432maxresident)k 0inputs+8outputs (0major+391minor)pagefaults 0swaps)
+decompress /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/compress(0.00user 0.00system 0:00.01elapsed 41%CPU (0avgtext+0avgdata 1024maxresident)k 0inputs+0outputs (0major+96minor)pagefaults 0swaps)

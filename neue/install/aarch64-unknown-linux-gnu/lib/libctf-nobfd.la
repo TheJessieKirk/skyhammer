@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libctf-nobfd.so.0'
+dlname=''
 
 # Names of this library.
-library_names='libctf-nobfd.so.0.0.0 libctf-nobfd.so.0 libctf-nobfd.so'
+library_names=''
 
 # The name of the static archive.
 old_library='libctf-nobfd.a'
@@ -17,7 +17,7 @@ old_library='libctf-nobfd.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/binutils/libctf/../libiberty/pic -liberty -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/binutils/zlib -lz'
+dependency_libs=' -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/gdb/libctf/../libiberty -liberty -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/gdb/zlib -lz'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
