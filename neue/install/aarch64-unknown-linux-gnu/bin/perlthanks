@@ -2,7 +2,7 @@
     eval 'exec /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/perl -S $0 ${1+"$@"}'
 	if 0; # ^ Run only under a shell
 
-my $config_tag1 = '5.38.2 - Sat Jan 27 13:33:13 UTC 2024';
+my $config_tag1 = '5.38.2 - Mon Jan 29 18:39:40 UTC 2024';
 
 my $patchlevel_date = 1701173777;
 my @patches = Config::local_patches();

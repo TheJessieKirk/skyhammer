@@ -130,7 +130,7 @@ to_host_file_cmd=func_convert_file_noop
 to_tool_file_cmd=func_convert_file_noop
 
 # A file(cmd) program that detects file types.
-FILECMD=":"
+FILECMD="file"
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
