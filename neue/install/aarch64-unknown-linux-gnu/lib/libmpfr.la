@@ -14,10 +14,10 @@ library_names='libmpfr.so.6.2.1 libmpfr.so.6 libmpfr.so'
 old_library='libmpfr.a'
 
 # Linker flags that cannot go in dependency_libs.
-inherited_linker_flags=''
+inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -lgmp'
+dependency_libs=' -lgmp -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

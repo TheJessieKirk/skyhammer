@@ -1,0 +1,11 @@
+prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libmagic
+Description: Magic number recognition library
+Version: 5.45
+Libs: -L${libdir} -lmagic
+Libs.private: -lzstd -llzma -lbz2 -lz 
+Cflags: -I${includedir}

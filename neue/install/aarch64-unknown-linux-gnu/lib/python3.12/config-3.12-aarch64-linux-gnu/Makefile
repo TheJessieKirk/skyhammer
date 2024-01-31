@@ -87,11 +87,11 @@ CONFIGURE_CFLAGS=
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
-CONFIGURE_CFLAGS_NODIST= -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden
+CONFIGURE_CFLAGS_NODIST= -fno-semantic-interposition -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden
 # LDFLAGS_NODIST is used in the same manner as CFLAGS_NODIST.
 # Use it when a linker flag should _not_ be part of the distutils LDFLAGS
 # once Python is installed (bpo-35257)
-CONFIGURE_LDFLAGS_NODIST=
+CONFIGURE_LDFLAGS_NODIST= -fno-semantic-interposition
 # LDFLAGS_NOLTO is an extra flag to disable lto. It is used to speed up building
 # of _bootstrap_python and _freeze_module tools, which don't need LTO.
 CONFIGURE_LDFLAGS_NOLTO=
@@ -353,7 +353,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' '--oldincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include' '--target=aarch64-unknown-linux-gnu' 'target_alias=aarch64-unknown-linux-gnu' 'PKG_CONFIG_PATH=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/pkgconfig'
+CONFIG_ARGS=	 '--prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' '--oldincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include' '--target=aarch64-unknown-linux-gnu' '--enable-optimizations' 'target_alias=aarch64-unknown-linux-gnu' 'PKG_CONFIG_PATH=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/pkgconfig'
 
 
 # Subdirectories with code
@@ -739,7 +739,7 @@ LIBHACL_SHA2_HEADERS= \
 # Rules
 
 # Default target
-all:		build_all
+all:		profile-opt
 
 # First target in Makefile is implicit default. So .PHONY needs to come after
 # all.
@@ -780,7 +780,7 @@ profile-gen-stamp: profile-clean-stamp
 		exit 1;\
 	fi
 	@echo "Building with support for profile generation:"
-	$(MAKE) all CFLAGS_NODIST="$(CFLAGS_NODIST) $(PGO_PROF_GEN_FLAG)" LDFLAGS_NODIST="$(LDFLAGS_NODIST) $(PGO_PROF_GEN_FLAG)" LIBS="$(LIBS)"
+	$(MAKE) build_all CFLAGS_NODIST="$(CFLAGS_NODIST) $(PGO_PROF_GEN_FLAG)" LDFLAGS_NODIST="$(LDFLAGS_NODIST) $(PGO_PROF_GEN_FLAG)" LIBS="$(LIBS)"
 	touch $@
 
 # Run task with profile generation build to create profile information.
@@ -806,7 +806,7 @@ profile-run-stamp:
 profile-opt: profile-run-stamp
 	@echo "Rebuilding with profile guided optimizations:"
 	-rm -f profile-clean-stamp
-	$(MAKE) all CFLAGS_NODIST="$(CFLAGS_NODIST) $(PGO_PROF_USE_FLAG)" LDFLAGS_NODIST="$(LDFLAGS_NODIST)"
+	$(MAKE) build_all CFLAGS_NODIST="$(CFLAGS_NODIST) $(PGO_PROF_USE_FLAG)" LDFLAGS_NODIST="$(LDFLAGS_NODIST)"
 
 # List of binaries that BOLT runs on.
 BOLT_BINARIES := $(BUILDPYTHON)
@@ -863,7 +863,7 @@ bolt-opt:
 coverage:
 	@echo "Building with support for coverage checking:"
 	$(MAKE) clean
-	$(MAKE) all CFLAGS="$(CFLAGS) -O0 -pg --coverage" LDFLAGS="$(LDFLAGS) --coverage"
+	$(MAKE) build_all CFLAGS="$(CFLAGS) -O0 -pg --coverage" LDFLAGS="$(LDFLAGS) --coverage"
 
 .PHONY: coverage-lcov
 coverage-lcov:
@@ -2808,7 +2808,7 @@ profile-removal:
 
 .PHONY: clean
 clean: clean-retain-profile clean-bolt
-	@if test build_all = profile-opt -o build_all = bolt-opt; then \
+	@if test profile-opt = profile-opt -o profile-opt = bolt-opt; then \
 		rm -f profile-gen-stamp profile-clean-stamp; \
 		$(MAKE) profile-removal; \
 	fi

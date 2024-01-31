@@ -75,7 +75,7 @@ sub header_files {
 #
 ## Package name      : perl5
 ## Source directory  : /usr/skyhammer/neue/src/perl-5.38.2
-## Configuration time: Sat Jan 27 13:33:13 UTC 2024
+## Configuration time: Mon Jan 29 18:39:40 UTC 2024
 ## Configured by     : sdk_keyholder
 ## Target system     : linux raspberry-pi-4-8gb 6.5.0-1009-raspi #12-ubuntu smp preempt_dynamic wed jan 17 11:45:08 utc 2024 aarch64 gnulinux 
 #
@@ -233,7 +233,7 @@ ccsymbols=''
 ccversion=''
 cf_by='sdk_keyholder'
 cf_email='none'
-cf_time='Sat Jan 27 13:33:13 UTC 2024'
+cf_time='Mon Jan 29 18:39:40 UTC 2024'
 charbits='8'
 charsize='1'
 chgrp=''

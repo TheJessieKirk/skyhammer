@@ -28,25 +28,25 @@ build_time_vars = {'ABIFLAGS': '',
  'CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall',
  'CFLAGSFORSHARED': '',
  'CFLAGS_ALIASING': '',
- 'CFLAGS_NODIST': '',
  'CODECS_COMMON_HEADERS': './../../../src/cpython-3.12.1/Modules/cjkcodecs/multibytecodec.h '
                           './../../../src/cpython-3.12.1/Modules/cjkcodecs/cjkcodecs.h',
  'COMPILEALL_OPTS': '-j0',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
  'CONFIGURE_CFLAGS': '',
- 'CONFIGURE_CFLAGS_NODIST': '-std=c11 -Wextra -Wno-unused-parameter '
+ 'CONFIGURE_CFLAGS_NODIST': '-fno-semantic-interposition -std=c11 -Wextra '
+                            '-Wno-unused-parameter '
                             '-Wno-missing-field-initializers '
                             '-Wstrict-prototypes '
                             '-Werror=implicit-function-declaration '
                             '-fvisibility=hidden',
  'CONFIGURE_CPPFLAGS': '',
  'CONFIGURE_LDFLAGS': '',
- 'CONFIGURE_LDFLAGS_NODIST': '',
+ 'CONFIGURE_LDFLAGS_NODIST': '-fno-semantic-interposition',
  'CONFIGURE_LDFLAGS_NOLTO': '',
  'CONFIG_ARGS': "'--prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' "
                 "'--oldincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include' "
-                "'--target=aarch64-unknown-linux-gnu' "
+                "'--target=aarch64-unknown-linux-gnu' '--enable-optimizations' "
                 "'target_alias=aarch64-unknown-linux-gnu' "
                 "'PKG_CONFIG_PATH=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/pkgconfig'",
  'CONFINCLUDEDIR': '/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include',
@@ -629,7 +629,6 @@ build_time_vars = {'ABIFLAGS': '',
  'IO_OBJS': '\\',
  'LDCXXSHARED': 'g++ -shared',
  'LDFLAGS': '',
- 'LDFLAGS_NODIST': '',
  'LDLIBRARY': 'libpython3.12.a',
  'LDLIBRARYDIR': '',
  'LDSHARED': 'gcc -shared',
@@ -640,10 +639,10 @@ build_time_vars = {'ABIFLAGS': '',
  'LIBEXPAT_A': 'Modules/expat/libexpat.a',
  'LIBEXPAT_CFLAGS': '-I./../../../src/cpython-3.12.1/Modules/expat '
                     '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall '
-                    '-std=c11 -Wextra -Wno-unused-parameter '
-                    '-Wno-missing-field-initializers -Wstrict-prototypes '
-                    '-Werror=implicit-function-declaration '
-                    '-fvisibility=hidden  '
+                    '-fno-semantic-interposition -std=c11 -Wextra '
+                    '-Wno-unused-parameter -Wno-missing-field-initializers '
+                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                    '-fvisibility=hidden -fprofile-use -fprofile-correction '
                     '-I./../../../src/cpython-3.12.1/Include/internal '
                     '-IObjects -IInclude -IPython -I. '
                     '-I./../../../src/cpython-3.12.1/Include -fPIC',
@@ -651,10 +650,11 @@ build_time_vars = {'ABIFLAGS': '',
  'LIBEXPAT_OBJS': '\\',
  'LIBHACL_CFLAGS': '-I./../../../src/cpython-3.12.1/Modules/_hacl/include '
                    '-D_BSD_SOURCE -D_DEFAULT_SOURCE -fno-strict-overflow '
-                   '-Wsign-compare -DNDEBUG -g -O3 -Wall -std=c11 -Wextra '
+                   '-Wsign-compare -DNDEBUG -g -O3 -Wall '
+                   '-fno-semantic-interposition -std=c11 -Wextra '
                    '-Wno-unused-parameter -Wno-missing-field-initializers '
                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
-                   '-fvisibility=hidden  '
+                   '-fvisibility=hidden -fprofile-use -fprofile-correction '
                    '-I./../../../src/cpython-3.12.1/Include/internal -IObjects '
                    '-IInclude -IPython -I. '
                    '-I./../../../src/cpython-3.12.1/Include -fPIC',
@@ -667,10 +667,10 @@ build_time_vars = {'ABIFLAGS': '',
  'LIBMPDEC_CFLAGS': '-I./../../../src/cpython-3.12.1/Modules/_decimal/libmpdec '
                     '-DCONFIG_64=1 -DANSI=1 -DHAVE_UINT128_T=1 '
                     '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall '
-                    '-std=c11 -Wextra -Wno-unused-parameter '
-                    '-Wno-missing-field-initializers -Wstrict-prototypes '
-                    '-Werror=implicit-function-declaration '
-                    '-fvisibility=hidden  '
+                    '-fno-semantic-interposition -std=c11 -Wextra '
+                    '-Wno-unused-parameter -Wno-missing-field-initializers '
+                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                    '-fvisibility=hidden -fprofile-use -fprofile-correction '
                     '-I./../../../src/cpython-3.12.1/Include/internal '
                     '-IObjects -IInclude -IPython -I. '
                     '-I./../../../src/cpython-3.12.1/Include -fPIC',
@@ -1032,46 +1032,52 @@ build_time_vars = {'ABIFLAGS': '',
  'PYTHON_OBJS': '\\',
  'PY_BUILTIN_HASHLIB_HASHES': '"md5,sha1,sha2,sha3,blake2"',
  'PY_BUILTIN_MODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -g '
-                             '-O3 -Wall -std=c11 -Wextra -Wno-unused-parameter '
+                             '-O3 -Wall -fno-semantic-interposition -std=c11 '
+                             '-Wextra -Wno-unused-parameter '
                              '-Wno-missing-field-initializers '
                              '-Wstrict-prototypes '
                              '-Werror=implicit-function-declaration '
-                             '-fvisibility=hidden  '
+                             '-fvisibility=hidden -fprofile-use '
+                             '-fprofile-correction '
                              '-I./../../../src/cpython-3.12.1/Include/internal '
                              '-IObjects -IInclude -IPython -I. '
                              '-I./../../../src/cpython-3.12.1/Include '
                              '-DPy_BUILD_CORE_BUILTIN',
  'PY_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall',
- 'PY_CFLAGS_NODIST': '-std=c11 -Wextra -Wno-unused-parameter '
-                     '-Wno-missing-field-initializers -Wstrict-prototypes '
+ 'PY_CFLAGS_NODIST': '-fno-semantic-interposition -std=c11 -Wextra '
+                     '-Wno-unused-parameter -Wno-missing-field-initializers '
+                     '-Wstrict-prototypes '
                      '-Werror=implicit-function-declaration '
-                     '-fvisibility=hidden  '
+                     '-fvisibility=hidden -fprofile-use -fprofile-correction '
                      '-I./../../../src/cpython-3.12.1/Include/internal',
  'PY_COERCE_C_LOCALE': 1,
  'PY_CORE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall '
-                   '-std=c11 -Wextra -Wno-unused-parameter '
-                   '-Wno-missing-field-initializers -Wstrict-prototypes '
-                   '-Werror=implicit-function-declaration -fvisibility=hidden  '
+                   '-fno-semantic-interposition -std=c11 -Wextra '
+                   '-Wno-unused-parameter -Wno-missing-field-initializers '
+                   '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                   '-fvisibility=hidden -fprofile-use -fprofile-correction '
                    '-I./../../../src/cpython-3.12.1/Include/internal -IObjects '
                    '-IInclude -IPython -I. '
                    '-I./../../../src/cpython-3.12.1/Include -DPy_BUILD_CORE',
- 'PY_CORE_LDFLAGS': '',
+ 'PY_CORE_LDFLAGS': '-fno-semantic-interposition',
  'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
                 '-I./../../../src/cpython-3.12.1/Include',
  'PY_ENABLE_SHARED': 0,
  'PY_HAVE_PERF_TRAMPOLINE': 1,
  'PY_LDFLAGS': '',
- 'PY_LDFLAGS_NODIST': '',
+ 'PY_LDFLAGS_NODIST': '-fno-semantic-interposition',
  'PY_LDFLAGS_NOLTO': '',
  'PY_SQLITE_ENABLE_LOAD_EXTENSION': 0,
  'PY_SQLITE_HAVE_SERIALIZE': 0,
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
  'PY_STDMODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 '
-                        '-Wall -std=c11 -Wextra -Wno-unused-parameter '
-                        '-Wno-missing-field-initializers -Wstrict-prototypes '
+                        '-Wall -fno-semantic-interposition -std=c11 -Wextra '
+                        '-Wno-unused-parameter -Wno-missing-field-initializers '
+                        '-Wstrict-prototypes '
                         '-Werror=implicit-function-declaration '
-                        '-fvisibility=hidden  '
+                        '-fvisibility=hidden -fprofile-use '
+                        '-fprofile-correction '
                         '-I./../../../src/cpython-3.12.1/Include/internal '
                         '-IObjects -IInclude -IPython -I. '
                         '-I./../../../src/cpython-3.12.1/Include',

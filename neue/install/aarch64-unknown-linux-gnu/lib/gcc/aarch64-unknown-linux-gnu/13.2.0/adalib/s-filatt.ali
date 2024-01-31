@@ -28,7 +28,7 @@ D i-c.ads		20230727081304 5c5a6c17 interfaces.c%s
 D system.ads		20230727081304 a4968d35 system%s
 D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
 D s-filatt.ads		20230727081304 748e249b system.file_attributes%s
-D s-oscons.ads		20240128000900 58503582 system.os_constants%s
+D s-oscons.ads		20240130052700 58503582 system.os_constants%s
 D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
 D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 D s-stoele.ads		20230727081304 ab5468e4 system.storage_elements%s
