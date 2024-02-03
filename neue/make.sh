@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle openssl patch pcre2 perl readline sed tar termcap texinfo unzip valgrind wget2 xz zip zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle ninja openssl patch pcre2 perl readline sed tar termcap texinfo unzip valgrind wget2 xz zip zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -665,6 +665,24 @@ case $REPLY in
             echo "$ROOT_DIR/src/libunistring-*/configure exists.";
           fi;
           ;;
+        llvm-project)
+          if [ ! -f llvm-project-17.0.6.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/llvm-project-17.0.6.tar.xz does not exist. Downloading...";
+            wget -q https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/llvm-project-17.0.6.src.tar.xz;
+            mv llvm-project-17.0.6.src.tar.xz llvm-project-17.0.6.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/llvm-project-17.0.6.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/llvm-project-*/README.md ];
+          then
+            echo "$ROOT_DIR/src/llvm-project-*/README.md does not exist. Extracting package...";
+            tar -xf llvm-project-*.tar.xz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/llvm-project-17.0.6.src $ROOT_DIR/src/llvm-project-17.0.6;
+          else
+            echo "$ROOT_DIR/src/llvm-project-*/README.md exists.";
+          fi;
+          ;;
         lzip)
           if [ ! -f lzip-1.24-rc2.tar.lz ];
           then
@@ -824,6 +842,23 @@ case $REPLY in
             mv $ROOT_DIR/src/openssl* $ROOT_DIR/src/openssl-3.2.0;
           else
             echo "$ROOT_DIR/src/openssl-*/Configure exists.";
+          fi;
+          ;;
+        ninja)
+          if [ ! -f ninja-1.11.0.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/ninja-1.11.0.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/ninja-build/ninja/archive/refs/tags/v1.11.0.tar.gz;
+            mv v1.11.0.tar.gz ninja-1.11.0.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/ninja-1.11.0.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/ninja-*/configure.py ];
+          then
+            echo "$ROOT_DIR/src/ninja-*/configure.py does not exist. Extracting package...";
+            tar -xf ninja-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/ninja-*/configure.py exists.";
           fi;
           ;;
         patch)
@@ -1062,7 +1097,7 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(gdb valgrind cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip wget2 zip zstd gmp isl mpfr mpc binutils cmake gcc);
+    SOFTWARE_TO_BUILD=(ninja llvm-project cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
@@ -1073,7 +1108,7 @@ do
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
         y)
-          if [ ! $j = "ncompress" ];
+          if [ ! $j = "llvm-project" ] && [ ! $j = "ncompress" ];
           then
             if [ ! -d $ROOT_DIR/build/$i/$j ];
             then
@@ -1192,6 +1227,15 @@ do
             libunistring)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-threads=posix;
               ;;
+            llvm-project)
+              cd $ROOT_DIR/packages;
+              tar -xf $j-*.tar.xz -C $ROOT_DIR/src;
+              cd $ROOT_DIR/src;
+              rm -r llvm-project-17.0.6;
+              mv llvm-project-17.0.6.src llvm-project-17.0.6;
+              cd $j-*;
+              cmake -S llvm -B build -G Ninja -DCMAKE_INSTALL_PREFIX=$ROOT_DIR/install/$i -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang;
+              ;;
             lzip)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i;
               ;;
@@ -1224,6 +1268,12 @@ do
               ;;
             nettle)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-gcov;
+              ;;
+            ninja)
+              cd $ROOT_DIR/packages;
+              tar -xf $j-*.tar.gz -C $ROOT_DIR/src;
+              cd $ROOT_DIR/src/$j-*;
+              ./configure.py --bootstrap;
               ;;
             openssl)
               ./../../../src/$j-*/Configure --openssldir=$ROOT_DIR/install/$i --prefix=$ROOT_DIR/install/$i shared;
@@ -1272,7 +1322,7 @@ do
       esac;
     fi;
 
-    if [ ! $j = "ncompress" ];
+    if [ ! $j = "ncompress" ] && [ ! $j = "ninja" ];
     then
       read -p "Do you want to build $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -1280,7 +1330,7 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc*;
-          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
+          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "llvm-project" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
           then
             cd $ROOT_DIR/build/$i/$j;
           fi;
@@ -1322,6 +1372,10 @@ do
           #  tar -xf $ROOT_DIR/packages/libsepol-*.tar.gz -C $ROOT_DIR/src;
           #  cd $ROOT_DIR/src/libsepol*;
           #  make CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "llvm-project" ];
+          then
+            cd $ROOT_DIR/src/llvm-project*;
+            ninja -C build;
           elif [ $j = "unzip" ];
           then
             rm -r $ROOT_DIR/src/unzip-*;
@@ -1366,7 +1420,7 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc;
-          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ] || [ $j = "unzip" ] || [ $j = "zip" ];
+          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ] || [ $j = "llvm-project" ] || [ $j = "ninja" ] || [ $j = "unzip" ] || [ $j = "zip" ];
           then
             cd $ROOT_DIR/src/$j-*;
           else
@@ -1402,6 +1456,12 @@ do
           #elif [ $j = "libsepol" ];
           #then
           #  make install PREFIX=$ROOT_DIR/install/$i lib=$ROOT_DIR/install/$i/lib -j 4;
+          elif [ $j = "llvm-project" ];
+          then
+            ninja install -C build;
+          elif [ $j = "ninja" ];
+          then
+            cp ninja $ROOT_DIR/install/$i/bin;
           elif [ $j = "unzip" ];
           then
             make install CC=gcc prefix=$ROOT_DIR/install/$i -j 4;
@@ -1413,6 +1473,10 @@ do
             make install CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
           else
             make install -j 4;
+          fi;
+          if [ $j = "cpython" ];
+          then
+            ln -s $ROOT_DIR/install/$i/bin/python3 $ROOT_DIR/install/$i/bin/python;
           fi;
           ;;
         stop)
