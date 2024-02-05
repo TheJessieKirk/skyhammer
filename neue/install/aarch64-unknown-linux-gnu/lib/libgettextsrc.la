@@ -17,7 +17,7 @@ old_library='libgettextsrc.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -R/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libgettextlib.la -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libacl.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libattr.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libunistring.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libtextstyle.la -lm -ltermcap -lc'
+dependency_libs=' -R/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libgettextlib.la -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libacl.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libattr.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libunistring.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libtextstyle.la -L../lib -lm /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libncurses.la /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libtinfo.la -lc'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

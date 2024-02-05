@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "PERLTOC 1"
-.TH PERLTOC 1 2024-01-29 "perl v5.38.2" "Perl Programmers Reference Guide"
+.TH PERLTOC 1 2024-02-03 "perl v5.38.2" "Perl Programmers Reference Guide"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -25487,6 +25487,127 @@ _\|_DATA_\|_ is ignored, Max. codesize limited to 32\-bit
 .IP COPYRIGHT 4
 .IX Item "COPYRIGHT"
 .PD
+.SS "GDBM_File \- Perl5 access to the gdbm library."
+.IX Subsection "GDBM_File - Perl5 access to the gdbm library."
+.IP SYNOPSIS 4
+.IX Item "SYNOPSIS"
+.PD 0
+.IP DESCRIPTION 4
+.IX Item "DESCRIPTION"
+.RS 4
+.IP Tie 4
+.IX Item "Tie"
+.PD
+\&\fBGDBM_READER\fR, \fBGDBM_WRITER\fR, \fBGDBM_WRCREAT\fR, \fBGDBM_NEWDB\fR
+.RE
+.RS 4
+.RE
+.IP "STATIC METHODS" 4
+.IX Item "STATIC METHODS"
+.RS 4
+.PD 0
+.IP GDBM_version 4
+.IX Item "GDBM_version"
+.PD
+1  \- exact guess, 2  \- approximate, 3  \- rough guess
+.RE
+.RS 4
+.RE
+.IP "ERROR HANDLING" 4
+.IX Item "ERROR HANDLING"
+.RS 4
+.PD 0
+.ie n .IP $GDBM_File::gdbm_errno 4
+.el .IP \f(CW$GDBM_File::gdbm_errno\fR 4
+.IX Item "$GDBM_File::gdbm_errno"
+.IP gdbm_check_syserr 4
+.IX Item "gdbm_check_syserr"
+.RE
+.RS 4
+.RE
+.IP "DATABASE METHODS" 4
+.IX Item "DATABASE METHODS"
+.RS 4
+.IP close 4
+.IX Item "close"
+.IP errno 4
+.IX Item "errno"
+.IP syserrno 4
+.IX Item "syserrno"
+.IP strerror 4
+.IX Item "strerror"
+.IP clear_error 4
+.IX Item "clear_error"
+.IP needs_recovery 4
+.IX Item "needs_recovery"
+.IP reorganize 4
+.IX Item "reorganize"
+.IP sync 4
+.IX Item "sync"
+.IP count 4
+.IX Item "count"
+.IP flags 4
+.IX Item "flags"
+.IP dbname 4
+.IX Item "dbname"
+.IP cache_size 4
+.IX Item "cache_size"
+.IP block_size 4
+.IX Item "block_size"
+.IP sync_mode 4
+.IX Item "sync_mode"
+.IP centfree 4
+.IX Item "centfree"
+.IP coalesce 4
+.IX Item "coalesce"
+.IP mmap 4
+.IX Item "mmap"
+.IP mmapsize 4
+.IX Item "mmapsize"
+.IP recover 4
+.IX Item "recover"
+.PD
+err => sub { ... }, backup => \e$str, max_failed_keys => \f(CW$n\fR,
+max_failed_buckets => \f(CW$n\fR, max_failures => \f(CW$n\fR, stat => \e%hash,
+recovered_keys, recovered_buckets, failed_keys, failed_buckets
+.IP convert 4
+.IX Item "convert"
+.PD 0
+.IP dump 4
+.IX Item "dump"
+.PD
+\&\fBbinary\fR => 1, \fBmode\fR => \fIMODE\fR, \fBoverwrite\fR => 1
+.IP load 4
+.IX Item "load"
+\&\fBreplace\fR => 1, \fBrestore_mode\fR => 0 | 1, \fBrestore_owner\fR => 0 | 1,
+\&\fBstrict_errors\fR => 1
+.RE
+.RS 4
+.RE
+.IP "CRASH TOLERANCE" 4
+.IX Item "CRASH TOLERANCE"
+.RS 4
+.PD 0
+.IP crash_tolerance_status 4
+.IX Item "crash_tolerance_status"
+.IP failure_atomic 4
+.IX Item "failure_atomic"
+.IP latest_snapshot 4
+.IX Item "latest_snapshot"
+.PD
+GDBM_SNAPSHOT_BAD, GDBM_SNAPSHOT_ERR, GDBM_SNAPSHOT_SAME,
+GDBM_SNAPSHOT_SUSPICIOUS
+.RE
+.RS 4
+.RE
+.IP AVAILABILITY 4
+.IX Item "AVAILABILITY"
+.PD 0
+.IP "SECURITY AND PORTABILITY" 4
+.IX Item "SECURITY AND PORTABILITY"
+.IP "SEE ALSO" 4
+.IX Item "SEE ALSO"
+.PD
 .SS "Getopt::Long \- Extended processing of command line options"
 .IX Subsection "Getopt::Long - Extended processing of command line options"
 .IP SYNOPSIS 4
@@ -29547,6 +29668,30 @@ version \fB(required)\fR, dir, files, prefix
 .IP "COPYRIGHT & LICENSE" 4
 .IX Item "COPYRIGHT & LICENSE"
 .PD
+.SS "NDBM_File \- Tied access to ndbm files"
+.IX Subsection "NDBM_File - Tied access to ndbm files"
+.IP SYNOPSIS 4
+.IX Item "SYNOPSIS"
+.PD 0
+.IP DESCRIPTION 4
+.IX Item "DESCRIPTION"
+.PD
+\&\f(CW\*(C`O_RDONLY\*(C'\fR, \f(CW\*(C`O_WRONLY\*(C'\fR, \f(CW\*(C`O_RDWR\*(C'\fR
+.IP DIAGNOSTICS 4
+.IX Item "DIAGNOSTICS"
+.RS 4
+.PD 0
+.ie n .IP """ndbm store returned \-1, errno 22, key ""..."" at ...""" 4
+.el .IP "\f(CWndbm store returned \-1, errno 22, key ""..."" at ...\fR" 4
+.IX Item "ndbm store returned -1, errno 22, key ""..."" at ..."
+.RE
+.RS 4
+.RE
+.IP "SECURITY AND PORTABILITY" 4
+.IX Item "SECURITY AND PORTABILITY"
+.IP "BUGS AND WARNINGS" 4
+.IX Item "BUGS AND WARNINGS"
+.PD
 .SS "NEXT \- Provide a pseudo-class NEXT (et al) that allows method redispatch"
 .IX Subsection "NEXT - Provide a pseudo-class NEXT (et al) that allows method redispatch"
 .IP SYNOPSIS 4
@@ -30224,6 +30369,30 @@ Default Exports, Optional Exports, Export Tags
 .IX Item "BUGS"
 .IP AUTHOR 4
 .IX Item "AUTHOR"
+.PD
+.SS "ODBM_File \- Tied access to odbm files"
+.IX Subsection "ODBM_File - Tied access to odbm files"
+.IP SYNOPSIS 4
+.IX Item "SYNOPSIS"
+.PD 0
+.IP DESCRIPTION 4
+.IX Item "DESCRIPTION"
+.PD
+\&\f(CW\*(C`O_RDONLY\*(C'\fR, \f(CW\*(C`O_WRONLY\*(C'\fR, \f(CW\*(C`O_RDWR\*(C'\fR
+.IP DIAGNOSTICS 4
+.IX Item "DIAGNOSTICS"
+.RS 4
+.PD 0
+.ie n .IP """odbm store returned \-1, errno 22, key ""..."" at ...""" 4
+.el .IP "\f(CWodbm store returned \-1, errno 22, key ""..."" at ...\fR" 4
+.IX Item "odbm store returned -1, errno 22, key ""..."" at ..."
+.RE
+.RS 4
+.RE
+.IP "SECURITY AND PORTABILITY" 4
+.IX Item "SECURITY AND PORTABILITY"
+.IP "BUGS AND WARNINGS" 4
+.IX Item "BUGS AND WARNINGS"
 .PD
 .SS "Opcode \- Disable named opcodes when compiling perl code"
 .IX Subsection "Opcode - Disable named opcodes when compiling perl code"

@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname=''
+dlname='libctf.so.0'
 
 # Names of this library.
-library_names=''
+library_names='libctf.so.0.0.0 libctf.so.0 libctf.so'
 
 # The name of the static archive.
 old_library='libctf.a'
@@ -17,7 +17,7 @@ old_library='libctf.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/gdb/libctf/../libiberty '/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib'/libbfd.la -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/gdb/zlib '/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib'/libsframe.la -liberty -lz'
+dependency_libs=' -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/binutils/libctf/../libiberty/pic '/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib'/libbfd.la -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/binutils/bfd/../libiberty/pic -L/usr/skyhammer/neue/build/aarch64-unknown-linux-gnu/binutils/zlib -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -lzstd '/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib'/libsframe.la -liberty -lz'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

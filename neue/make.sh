@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress nettle ninja openssl patch pcre2 perl readline sed tar termcap texinfo unzip valgrind wget2 xz zip zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gdbm gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress ncurses nettle ninja openssl patch pcre2 perl pkg-config readline sed sqlite tar termcap texinfo unzip valgrind wget2 xz zip zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -396,6 +396,22 @@ case $REPLY in
             tar -xf gdb-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/gdb-*/configure exists.";
+          fi;
+          ;;
+        gdbm)
+          if [ ! -f gdbm-1.23.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/gdbm-1.23.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/gdbm/gdbm-1.23.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/gdbm-1.23.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/gdbm-*/configure ];
+          then
+            echo "$ROOT_DIR/src/gdbm-*/configure does not exist. Extracting package...";
+            tar -xf gdbm-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/gdbm-*/configure exists.";
           fi;
           ;;
         gettext)
@@ -811,6 +827,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/ncompress-*/GNUmakefile exists.";
           fi;
           ;;
+        ncurses)
+          if [ ! -f ncurses-6.4.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/ncurses-6.4.tar.gz does not exist. Downloading...";
+            wget -q https://ftp.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/ncurses-6.4.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/ncurses-*/configure ];
+          then
+            echo "$ROOT_DIR/src/ncurses-*/configure does not exist. Extracting package...";
+            tar -xf ncurses-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/ncurses-*/configure exists.";
+          fi;
+          ;;
         nettle)
           if [ ! -f nettle-3.9.1.tar.gz ];
           then
@@ -909,6 +941,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/perl-*/Configure exists.";
           fi;
           ;;
+        pkg-config)
+          if [ ! -f pkg-config-0.29.2.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/pkg-config-0.29.2.tar.gz does not exist. Downloading...";
+            wget -q https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/pkg-config-0.29.2.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/pkg-config-*/configure ];
+          then
+            echo "$ROOT_DIR/src/pkg-config-*/configure does not exist. Extracting package...";
+            tar -xf pkg-config-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/pkg-config-*/configure exists.";
+          fi;
+          ;;
         readline)
           if [ ! -f readline-8.2.tar.gz ];
           then
@@ -935,6 +983,24 @@ case $REPLY in
             tar -xf sed-*.tar.xz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/sed-*/configure exists.";
+          fi;
+          ;;
+        sqlite)
+          if [ ! -f sqlite-3450100.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/sqlite-3450100.tar.gz does not exist. Downloading...";
+            wget -q https://www.sqlite.org/2024/sqlite-autoconf-3450100.tar.gz;
+            mv sqlite-autoconf-3450100.tar.gz sqlite-3450100.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/sqlite-3450100.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/sqlite-*/configure ];
+          then
+            echo "$ROOT_DIR/src/sqlite-*/configure does not exist. Extracting package...";
+            tar -xf sqlite-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/sqlite-autoconf-3450100 $ROOT_DIR/src/sqlite-3450100;
+          else
+            echo "$ROOT_DIR/src/sqlite-*/configure exists.";
           fi;
           ;;
         tar)
@@ -1097,7 +1163,7 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(ninja llvm-project cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake gcc);
+    SOFTWARE_TO_BUILD=(sqlite ncurses gdbm pkg-config cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake llvm-project ninga gcc);
   else
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
@@ -1150,7 +1216,7 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$j/include --target=$i --enable-dependency-tracking --enable-install-program=arch,coreutils,hostname --enable-systemd --enable-threads=posix --with-linux-crypto --with-openssl=yes;
               ;;
             cpython)
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-optimizations;
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-optimizations --with-openssl=$ROOT_DIR/install/$i --with-readline=readline;
               ;;
             dejagnu)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
@@ -1175,6 +1241,9 @@ do
               ;;
             gdb)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
+            gdbm)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-crash-tolerance --enable-dependency-tracking --enable-libgdbm-compat --with-aix-soname=both;
               ;;
             gcc)
               if [ $i = "x86_64-w64-mingw32" ]
@@ -1266,6 +1335,10 @@ do
               ./build CC=gcc;
               rm $ROOT_DIR/install/$i/bin/cc;
               ;;
+            ncurses)
+              #--with-gdm --with-pcre2
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-pc-files --with-cxx-shared --with-libtool --with-pkg-config --with-shared --with-termlib --with-ticlib;
+              ;;
             nettle)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-gcov;
               ;;
@@ -1288,11 +1361,17 @@ do
             perl)
               ./../../../src/$j-*/Configure -Dprefix=$ROOT_DIR/install/$i -Dcc=gcc -Dlocincpth=$ROOT_DIR/install/$i/include -Dloclibpth=$ROOT_DIR/install/$i/lib -Aldflags=-L$ROOT_DIR/install/$i/lib -Dmksymlinks -Duseshrplib -Dusethreads -O;
               ;;
+            pkg-config)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --with-aix-soname=both --with-gcov --with-internal-glib;
+              ;;
             readline)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
             sed)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
+              ;;
+            sqlite)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-fts3 --enable-readline --enable-session --with-aix-soname=both;
               ;;
             tar)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-backup-scripts --enable-dependency-tracking --with-bzip2=bzip2 --with-compress=compress --with-gzip=gzip --with-lzip=lzip --with-lzma=lzma --with-xz=xz --with-zstd=zstd;

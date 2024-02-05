@@ -21,8 +21,8 @@
 
 # === Variables set by makesetup ===
 
-MODBUILT_NAMES=      array  _asyncio  _bisect  _contextvars  _csv  _heapq  _json  _lsprof  _opcode  _pickle  _queue  _random  _struct  _xxsubinterpreters  _xxinterpchannels  _zoneinfo  audioop  math  cmath  _statistics  _datetime  _decimal  binascii  _bz2  _lzma  zlib  _md5  _sha1  _sha2  _sha3  _blake2  pyexpat  _elementtree  _codecs_cn  _codecs_hk  _codecs_iso2022  _codecs_jp  _codecs_kr  _codecs_tw  _multibytecodec  unicodedata  _crypt  fcntl  grp  mmap  ossaudiodev  _posixsubprocess  resource  select  _socket  spwd  syslog  termios  _posixshmem  _multiprocessing  _ctypes  _uuid  xxsubtype  _xxtestfuzz  _testbuffer  _testinternalcapi  _testcapi  _testclinic  _testimportmultiple  _testmultiphase  _testsinglephase  _ctypes_test  xxlimited  xxlimited_35  atexit  faulthandler  posix  _signal  _tracemalloc  _codecs  _collections  errno  _io  itertools  _sre  _thread  time  _typing  _weakref  _abc  _functools  _locale  _operator  _stat  _symtable  pwd
-MODSHARED_NAMES=    array _asyncio _bisect _contextvars _csv _heapq _json _lsprof _opcode _pickle _queue _random _struct _xxsubinterpreters _xxinterpchannels _zoneinfo audioop math cmath _statistics _datetime _decimal binascii _bz2 _lzma zlib _md5 _sha1 _sha2 _sha3 _blake2 pyexpat _elementtree _codecs_cn _codecs_hk _codecs_iso2022 _codecs_jp _codecs_kr _codecs_tw _multibytecodec unicodedata _crypt fcntl grp mmap ossaudiodev _posixsubprocess resource select _socket spwd syslog termios _posixshmem _multiprocessing _ctypes _uuid xxsubtype _xxtestfuzz _testbuffer _testinternalcapi _testcapi _testclinic _testimportmultiple _testmultiphase _testsinglephase _ctypes_test xxlimited xxlimited_35
+MODBUILT_NAMES=      array  _asyncio  _bisect  _contextvars  _csv  _heapq  _json  _lsprof  _opcode  _pickle  _queue  _random  _struct  _xxsubinterpreters  _xxinterpchannels  _zoneinfo  audioop  math  cmath  _statistics  _datetime  _decimal  binascii  _bz2  _lzma  zlib  _dbm  _gdbm  _md5  _sha1  _sha2  _sha3  _blake2  pyexpat  _elementtree  _codecs_cn  _codecs_hk  _codecs_iso2022  _codecs_jp  _codecs_kr  _codecs_tw  _multibytecodec  unicodedata  _crypt  fcntl  grp  mmap  ossaudiodev  _posixsubprocess  resource  select  _socket  spwd  syslog  termios  _posixshmem  _multiprocessing  _ctypes  _sqlite3  _ssl  _hashlib  _uuid  xxsubtype  _xxtestfuzz  _testbuffer  _testinternalcapi  _testcapi  _testclinic  _testimportmultiple  _testmultiphase  _testsinglephase  _ctypes_test  xxlimited  xxlimited_35  atexit  faulthandler  posix  _signal  _tracemalloc  _codecs  _collections  errno  _io  itertools  _sre  _thread  time  _typing  _weakref  _abc  _functools  _locale  _operator  _stat  _symtable  pwd
+MODSHARED_NAMES=    array _asyncio _bisect _contextvars _csv _heapq _json _lsprof _opcode _pickle _queue _random _struct _xxsubinterpreters _xxinterpchannels _zoneinfo audioop math cmath _statistics _datetime _decimal binascii _bz2 _lzma zlib _dbm _gdbm _md5 _sha1 _sha2 _sha3 _blake2 pyexpat _elementtree _codecs_cn _codecs_hk _codecs_iso2022 _codecs_jp _codecs_kr _codecs_tw _multibytecodec unicodedata _crypt fcntl grp mmap ossaudiodev _posixsubprocess resource select _socket spwd syslog termios _posixshmem _multiprocessing _ctypes _sqlite3 _ssl _hashlib _uuid xxsubtype _xxtestfuzz _testbuffer _testinternalcapi _testcapi _testclinic _testimportmultiple _testmultiphase _testsinglephase _ctypes_test xxlimited xxlimited_35
 MODDISABLED_NAMES= 
 MODOBJS=             Modules/atexitmodule.o  Modules/faulthandler.o  Modules/posixmodule.o  Modules/signalmodule.o  Modules/_tracemalloc.o  Modules/_codecsmodule.o  Modules/_collectionsmodule.o  Modules/errnomodule.o  Modules/_io/_iomodule.o Modules/_io/iobase.o Modules/_io/fileio.o Modules/_io/bytesio.o Modules/_io/bufferedio.o Modules/_io/textio.o Modules/_io/stringio.o  Modules/itertoolsmodule.o  Modules/_sre/sre.o  Modules/_threadmodule.o  Modules/timemodule.o  Modules/_typingmodule.o  Modules/_weakref.o  Modules/_abc.o  Modules/_functoolsmodule.o  Modules/_localemodule.o  Modules/_operator.o  Modules/_stat.o  Modules/symtablemodule.o  Modules/pwdmodule.o
 MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
@@ -299,18 +299,24 @@ MODULE__CRYPT_STATE=yes
 MODULE__CRYPT_CFLAGS=
 MODULE__CRYPT_LDFLAGS=-lcrypt
 MODULE__CTYPES_STATE=yes
-MODULE__CTYPES_CFLAGS=-fno-strict-overflow 
-MODULE__CTYPES_LDFLAGS=-lffi -ldl
+MODULE__CTYPES_CFLAGS=-fno-strict-overflow -I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include
+MODULE__CTYPES_LDFLAGS=-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/../lib64 -lffi -ldl
 MODULE__CURSES_STATE=missing
 MODULE__CURSES_PANEL_STATE=missing
 MODULE__DECIMAL_STATE=yes
 MODULE__DECIMAL_CFLAGS=-I$(srcdir)/Modules/_decimal/libmpdec -DCONFIG_64=1 -DANSI=1 -DHAVE_UINT128_T=1
 MODULE__DECIMAL_LDFLAGS=-lm $(LIBMPDEC_A)
-MODULE__DBM_STATE=missing
-MODULE__GDBM_STATE=missing
+MODULE__DBM_STATE=yes
+MODULE__DBM_CFLAGS=-DUSE_NDBM
+MODULE__DBM_LDFLAGS=-lgdbm_compat
+MODULE__GDBM_STATE=yes
+MODULE__GDBM_CFLAGS=
+MODULE__GDBM_LDFLAGS=-lgdbm
 MODULE_NIS_STATE=missing
 MODULE_READLINE_STATE=missing
-MODULE__SQLITE3_STATE=disabled
+MODULE__SQLITE3_STATE=yes
+MODULE__SQLITE3_CFLAGS=-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include -I$(srcdir)/Modules/_sqlite
+MODULE__SQLITE3_LDFLAGS=-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -lsqlite3
 MODULE__TKINTER_STATE=missing
 MODULE__UUID_STATE=yes
 MODULE__UUID_CFLAGS=
@@ -325,10 +331,14 @@ MODULE__BZ2_STATE=yes
 MODULE__BZ2_CFLAGS=
 MODULE__BZ2_LDFLAGS=-lbz2
 MODULE__LZMA_STATE=yes
-MODULE__LZMA_CFLAGS=
-MODULE__LZMA_LDFLAGS=-llzma
-MODULE__SSL_STATE=missing
-MODULE__HASHLIB_STATE=missing
+MODULE__LZMA_CFLAGS=-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include
+MODULE__LZMA_LDFLAGS=-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -llzma
+MODULE__SSL_STATE=yes
+MODULE__SSL_CFLAGS=-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include
+MODULE__SSL_LDFLAGS=-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib  -lssl -lcrypto
+MODULE__HASHLIB_STATE=yes
+MODULE__HASHLIB_CFLAGS=-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include
+MODULE__HASHLIB_LDFLAGS=-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib   -lcrypto
 MODULE__TESTCAPI_STATE=yes
 MODULE__TESTCLINIC_STATE=yes
 MODULE__TESTINTERNALCAPI_STATE=yes
@@ -353,7 +363,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' '--oldincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include' '--target=aarch64-unknown-linux-gnu' '--enable-optimizations' 'target_alias=aarch64-unknown-linux-gnu' 'PKG_CONFIG_PATH=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/pkgconfig'
+CONFIG_ARGS=	 '--prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' '--oldincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include' '--target=aarch64-unknown-linux-gnu' '--enable-optimizations' '--with-openssl=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' '--with-readline=readline' 'target_alias=aarch64-unknown-linux-gnu' 'PKG_CONFIG_PATH=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/pkgconfig'
 
 
 # Subdirectories with code
@@ -441,7 +451,7 @@ COVERAGE_REPORT_OPTIONS=--rc lcov_branch_coverage=1 --branch-coverage --title "C
 
 LOCALMODLIBS= $(MODULE_ATEXIT_LDFLAGS) $(MODULE_FAULTHANDLER_LDFLAGS) $(MODULE_POSIX_LDFLAGS) $(MODULE__SIGNAL_LDFLAGS) $(MODULE__TRACEMALLOC_LDFLAGS) $(MODULE__CODECS_LDFLAGS) $(MODULE__COLLECTIONS_LDFLAGS) $(MODULE_ERRNO_LDFLAGS) $(MODULE__IO_LDFLAGS) $(MODULE_ITERTOOLS_LDFLAGS) $(MODULE__SRE_LDFLAGS) $(MODULE__THREAD_LDFLAGS) $(MODULE_TIME_LDFLAGS) $(MODULE__TYPING_LDFLAGS) $(MODULE__WEAKREF_LDFLAGS) $(MODULE__ABC_LDFLAGS) $(MODULE__FUNCTOOLS_LDFLAGS) $(MODULE__LOCALE_LDFLAGS) $(MODULE__OPERATOR_LDFLAGS) $(MODULE__STAT_LDFLAGS) $(MODULE__SYMTABLE_LDFLAGS) $(MODULE_PWD_LDFLAGS)
 BASEMODLIBS=
-SHAREDMODS= Modules/array$(EXT_SUFFIX) Modules/_asyncio$(EXT_SUFFIX) Modules/_bisect$(EXT_SUFFIX) Modules/_contextvars$(EXT_SUFFIX) Modules/_csv$(EXT_SUFFIX) Modules/_heapq$(EXT_SUFFIX) Modules/_json$(EXT_SUFFIX) Modules/_lsprof$(EXT_SUFFIX) Modules/_opcode$(EXT_SUFFIX) Modules/_pickle$(EXT_SUFFIX) Modules/_queue$(EXT_SUFFIX) Modules/_random$(EXT_SUFFIX) Modules/_struct$(EXT_SUFFIX) Modules/_xxsubinterpreters$(EXT_SUFFIX) Modules/_xxinterpchannels$(EXT_SUFFIX) Modules/_zoneinfo$(EXT_SUFFIX) Modules/audioop$(EXT_SUFFIX) Modules/math$(EXT_SUFFIX) Modules/cmath$(EXT_SUFFIX) Modules/_statistics$(EXT_SUFFIX) Modules/_datetime$(EXT_SUFFIX) Modules/_decimal$(EXT_SUFFIX) Modules/binascii$(EXT_SUFFIX) Modules/_bz2$(EXT_SUFFIX) Modules/_lzma$(EXT_SUFFIX) Modules/zlib$(EXT_SUFFIX) Modules/_md5$(EXT_SUFFIX) Modules/_sha1$(EXT_SUFFIX) Modules/_sha2$(EXT_SUFFIX) Modules/_sha3$(EXT_SUFFIX) Modules/_blake2$(EXT_SUFFIX) Modules/pyexpat$(EXT_SUFFIX) Modules/_elementtree$(EXT_SUFFIX) Modules/_codecs_cn$(EXT_SUFFIX) Modules/_codecs_hk$(EXT_SUFFIX) Modules/_codecs_iso2022$(EXT_SUFFIX) Modules/_codecs_jp$(EXT_SUFFIX) Modules/_codecs_kr$(EXT_SUFFIX) Modules/_codecs_tw$(EXT_SUFFIX) Modules/_multibytecodec$(EXT_SUFFIX) Modules/unicodedata$(EXT_SUFFIX) Modules/_crypt$(EXT_SUFFIX) Modules/fcntl$(EXT_SUFFIX) Modules/grp$(EXT_SUFFIX) Modules/mmap$(EXT_SUFFIX) Modules/ossaudiodev$(EXT_SUFFIX) Modules/_posixsubprocess$(EXT_SUFFIX) Modules/resource$(EXT_SUFFIX) Modules/select$(EXT_SUFFIX) Modules/_socket$(EXT_SUFFIX) Modules/spwd$(EXT_SUFFIX) Modules/syslog$(EXT_SUFFIX) Modules/termios$(EXT_SUFFIX) Modules/_posixshmem$(EXT_SUFFIX) Modules/_multiprocessing$(EXT_SUFFIX) Modules/_ctypes$(EXT_SUFFIX) Modules/_uuid$(EXT_SUFFIX) Modules/xxsubtype$(EXT_SUFFIX) Modules/_xxtestfuzz$(EXT_SUFFIX) Modules/_testbuffer$(EXT_SUFFIX) Modules/_testinternalcapi$(EXT_SUFFIX) Modules/_testcapi$(EXT_SUFFIX) Modules/_testclinic$(EXT_SUFFIX) Modules/_testimportmultiple$(EXT_SUFFIX) Modules/_testmultiphase$(EXT_SUFFIX) Modules/_testsinglephase$(EXT_SUFFIX) Modules/_ctypes_test$(EXT_SUFFIX) Modules/xxlimited$(EXT_SUFFIX) Modules/xxlimited_35$(EXT_SUFFIX)
+SHAREDMODS= Modules/array$(EXT_SUFFIX) Modules/_asyncio$(EXT_SUFFIX) Modules/_bisect$(EXT_SUFFIX) Modules/_contextvars$(EXT_SUFFIX) Modules/_csv$(EXT_SUFFIX) Modules/_heapq$(EXT_SUFFIX) Modules/_json$(EXT_SUFFIX) Modules/_lsprof$(EXT_SUFFIX) Modules/_opcode$(EXT_SUFFIX) Modules/_pickle$(EXT_SUFFIX) Modules/_queue$(EXT_SUFFIX) Modules/_random$(EXT_SUFFIX) Modules/_struct$(EXT_SUFFIX) Modules/_xxsubinterpreters$(EXT_SUFFIX) Modules/_xxinterpchannels$(EXT_SUFFIX) Modules/_zoneinfo$(EXT_SUFFIX) Modules/audioop$(EXT_SUFFIX) Modules/math$(EXT_SUFFIX) Modules/cmath$(EXT_SUFFIX) Modules/_statistics$(EXT_SUFFIX) Modules/_datetime$(EXT_SUFFIX) Modules/_decimal$(EXT_SUFFIX) Modules/binascii$(EXT_SUFFIX) Modules/_bz2$(EXT_SUFFIX) Modules/_lzma$(EXT_SUFFIX) Modules/zlib$(EXT_SUFFIX) Modules/_dbm$(EXT_SUFFIX) Modules/_gdbm$(EXT_SUFFIX) Modules/_md5$(EXT_SUFFIX) Modules/_sha1$(EXT_SUFFIX) Modules/_sha2$(EXT_SUFFIX) Modules/_sha3$(EXT_SUFFIX) Modules/_blake2$(EXT_SUFFIX) Modules/pyexpat$(EXT_SUFFIX) Modules/_elementtree$(EXT_SUFFIX) Modules/_codecs_cn$(EXT_SUFFIX) Modules/_codecs_hk$(EXT_SUFFIX) Modules/_codecs_iso2022$(EXT_SUFFIX) Modules/_codecs_jp$(EXT_SUFFIX) Modules/_codecs_kr$(EXT_SUFFIX) Modules/_codecs_tw$(EXT_SUFFIX) Modules/_multibytecodec$(EXT_SUFFIX) Modules/unicodedata$(EXT_SUFFIX) Modules/_crypt$(EXT_SUFFIX) Modules/fcntl$(EXT_SUFFIX) Modules/grp$(EXT_SUFFIX) Modules/mmap$(EXT_SUFFIX) Modules/ossaudiodev$(EXT_SUFFIX) Modules/_posixsubprocess$(EXT_SUFFIX) Modules/resource$(EXT_SUFFIX) Modules/select$(EXT_SUFFIX) Modules/_socket$(EXT_SUFFIX) Modules/spwd$(EXT_SUFFIX) Modules/syslog$(EXT_SUFFIX) Modules/termios$(EXT_SUFFIX) Modules/_posixshmem$(EXT_SUFFIX) Modules/_multiprocessing$(EXT_SUFFIX) Modules/_ctypes$(EXT_SUFFIX) Modules/_sqlite3$(EXT_SUFFIX) Modules/_ssl$(EXT_SUFFIX) Modules/_hashlib$(EXT_SUFFIX) Modules/_uuid$(EXT_SUFFIX) Modules/xxsubtype$(EXT_SUFFIX) Modules/_xxtestfuzz$(EXT_SUFFIX) Modules/_testbuffer$(EXT_SUFFIX) Modules/_testinternalcapi$(EXT_SUFFIX) Modules/_testcapi$(EXT_SUFFIX) Modules/_testclinic$(EXT_SUFFIX) Modules/_testimportmultiple$(EXT_SUFFIX) Modules/_testmultiphase$(EXT_SUFFIX) Modules/_testsinglephase$(EXT_SUFFIX) Modules/_ctypes_test$(EXT_SUFFIX) Modules/xxlimited$(EXT_SUFFIX) Modules/xxlimited_35$(EXT_SUFFIX)
 PYTHONPATH=$(COREPYTHONPATH)
 COREPYTHONPATH=$(DESTPATH)$(SITEPATH)$(TESTPATH)
 TESTPATH=
@@ -3004,6 +3014,10 @@ Modules/_lzmamodule.o: $(srcdir)/Modules/_lzmamodule.c $(MODULE__LZMA_DEPS) $(MO
 Modules/_lzma$(EXT_SUFFIX):  Modules/_lzmamodule.o; $(BLDSHARED)  Modules/_lzmamodule.o $(MODULE__LZMA_LDFLAGS)  -o Modules/_lzma$(EXT_SUFFIX)
 Modules/zlibmodule.o: $(srcdir)/Modules/zlibmodule.c $(MODULE_ZLIB_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE_ZLIB_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/zlibmodule.c -o Modules/zlibmodule.o
 Modules/zlib$(EXT_SUFFIX):  Modules/zlibmodule.o; $(BLDSHARED)  Modules/zlibmodule.o $(MODULE_ZLIB_LDFLAGS)  -o Modules/zlib$(EXT_SUFFIX)
+Modules/_dbmmodule.o: $(srcdir)/Modules/_dbmmodule.c $(MODULE__DBM_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__DBM_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_dbmmodule.c -o Modules/_dbmmodule.o
+Modules/_dbm$(EXT_SUFFIX):  Modules/_dbmmodule.o; $(BLDSHARED)  Modules/_dbmmodule.o $(MODULE__DBM_LDFLAGS)  -o Modules/_dbm$(EXT_SUFFIX)
+Modules/_gdbmmodule.o: $(srcdir)/Modules/_gdbmmodule.c $(MODULE__GDBM_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__GDBM_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_gdbmmodule.c -o Modules/_gdbmmodule.o
+Modules/_gdbm$(EXT_SUFFIX):  Modules/_gdbmmodule.o; $(BLDSHARED)  Modules/_gdbmmodule.o $(MODULE__GDBM_LDFLAGS)  -o Modules/_gdbm$(EXT_SUFFIX)
 Modules/md5module.o: $(srcdir)/Modules/md5module.c $(MODULE__MD5_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC)  -I$(srcdir)/Modules/_hacl/include -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/md5module.c -o Modules/md5module.o
 Modules/_hacl/Hacl_Hash_MD5.o: $(srcdir)/Modules/_hacl/Hacl_Hash_MD5.c $(MODULE__MD5_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC)  -I$(srcdir)/Modules/_hacl/include -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_hacl/Hacl_Hash_MD5.c -o Modules/_hacl/Hacl_Hash_MD5.o
 Modules/_md5$(EXT_SUFFIX):  Modules/md5module.o Modules/_hacl/Hacl_Hash_MD5.o; $(BLDSHARED)  Modules/md5module.o Modules/_hacl/Hacl_Hash_MD5.o   -o Modules/_md5$(EXT_SUFFIX)
@@ -3074,6 +3088,20 @@ Modules/_ctypes/callproc.o: $(srcdir)/Modules/_ctypes/callproc.c $(MODULE__CTYPE
 Modules/_ctypes/stgdict.o: $(srcdir)/Modules/_ctypes/stgdict.c $(MODULE__CTYPES_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__CTYPES_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_ctypes/stgdict.c -o Modules/_ctypes/stgdict.o
 Modules/_ctypes/cfield.o: $(srcdir)/Modules/_ctypes/cfield.c $(MODULE__CTYPES_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__CTYPES_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_ctypes/cfield.c -o Modules/_ctypes/cfield.o
 Modules/_ctypes$(EXT_SUFFIX):  Modules/_ctypes/_ctypes.o Modules/_ctypes/callbacks.o Modules/_ctypes/callproc.o Modules/_ctypes/stgdict.o Modules/_ctypes/cfield.o; $(BLDSHARED)  Modules/_ctypes/_ctypes.o Modules/_ctypes/callbacks.o Modules/_ctypes/callproc.o Modules/_ctypes/stgdict.o Modules/_ctypes/cfield.o $(MODULE__CTYPES_LDFLAGS)  -o Modules/_ctypes$(EXT_SUFFIX)
+Modules/_sqlite/blob.o: $(srcdir)/Modules/_sqlite/blob.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/blob.c -o Modules/_sqlite/blob.o
+Modules/_sqlite/connection.o: $(srcdir)/Modules/_sqlite/connection.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/connection.c -o Modules/_sqlite/connection.o
+Modules/_sqlite/cursor.o: $(srcdir)/Modules/_sqlite/cursor.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/cursor.c -o Modules/_sqlite/cursor.o
+Modules/_sqlite/microprotocols.o: $(srcdir)/Modules/_sqlite/microprotocols.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/microprotocols.c -o Modules/_sqlite/microprotocols.o
+Modules/_sqlite/module.o: $(srcdir)/Modules/_sqlite/module.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/module.c -o Modules/_sqlite/module.o
+Modules/_sqlite/prepare_protocol.o: $(srcdir)/Modules/_sqlite/prepare_protocol.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/prepare_protocol.c -o Modules/_sqlite/prepare_protocol.o
+Modules/_sqlite/row.o: $(srcdir)/Modules/_sqlite/row.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/row.c -o Modules/_sqlite/row.o
+Modules/_sqlite/statement.o: $(srcdir)/Modules/_sqlite/statement.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/statement.c -o Modules/_sqlite/statement.o
+Modules/_sqlite/util.o: $(srcdir)/Modules/_sqlite/util.c $(MODULE__SQLITE3_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SQLITE3_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_sqlite/util.c -o Modules/_sqlite/util.o
+Modules/_sqlite3$(EXT_SUFFIX):  Modules/_sqlite/blob.o Modules/_sqlite/connection.o Modules/_sqlite/cursor.o Modules/_sqlite/microprotocols.o Modules/_sqlite/module.o Modules/_sqlite/prepare_protocol.o Modules/_sqlite/row.o Modules/_sqlite/statement.o Modules/_sqlite/util.o; $(BLDSHARED)  Modules/_sqlite/blob.o Modules/_sqlite/connection.o Modules/_sqlite/cursor.o Modules/_sqlite/microprotocols.o Modules/_sqlite/module.o Modules/_sqlite/prepare_protocol.o Modules/_sqlite/row.o Modules/_sqlite/statement.o Modules/_sqlite/util.o $(MODULE__SQLITE3_LDFLAGS)  -o Modules/_sqlite3$(EXT_SUFFIX)
+Modules/_ssl.o: $(srcdir)/Modules/_ssl.c $(MODULE__SSL_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__SSL_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_ssl.c -o Modules/_ssl.o
+Modules/_ssl$(EXT_SUFFIX):  Modules/_ssl.o; $(BLDSHARED)  Modules/_ssl.o $(MODULE__SSL_LDFLAGS)  -o Modules/_ssl$(EXT_SUFFIX)
+Modules/_hashopenssl.o: $(srcdir)/Modules/_hashopenssl.c $(MODULE__HASHLIB_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__HASHLIB_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_hashopenssl.c -o Modules/_hashopenssl.o
+Modules/_hashlib$(EXT_SUFFIX):  Modules/_hashopenssl.o; $(BLDSHARED)  Modules/_hashopenssl.o $(MODULE__HASHLIB_LDFLAGS)  -o Modules/_hashlib$(EXT_SUFFIX)
 Modules/_uuidmodule.o: $(srcdir)/Modules/_uuidmodule.c $(MODULE__UUID_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE__UUID_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/_uuidmodule.c -o Modules/_uuidmodule.o
 Modules/_uuid$(EXT_SUFFIX):  Modules/_uuidmodule.o; $(BLDSHARED)  Modules/_uuidmodule.o $(MODULE__UUID_LDFLAGS)  -o Modules/_uuid$(EXT_SUFFIX)
 Modules/xxsubtype.o: $(srcdir)/Modules/xxsubtype.c $(MODULE_XXSUBTYPE_DEPS) $(MODULE_DEPS_SHARED) $(PYTHON_HEADERS); $(CC) $(MODULE_XXSUBTYPE_CFLAGS) $(PY_STDMODULE_CFLAGS) $(CCSHARED) -c $(srcdir)/Modules/xxsubtype.c -o Modules/xxsubtype.o

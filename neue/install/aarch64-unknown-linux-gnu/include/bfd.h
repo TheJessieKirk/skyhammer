@@ -625,9 +625,6 @@ typedef struct bfd_section
      TMS320C54X only.  */
 #define SEC_TIC54X_BLOCK           0x10000000
 
-  /* This section has the SHF_X86_64_LARGE flag.  This is ELF x86-64 only.  */
-#define SEC_ELF_LARGE              0x10000000
-
   /* Conditionally link this section; do not link if there are no
      references found to any symbol in the section.  This is for TI
      TMS320C54X only.  */
@@ -1771,17 +1768,6 @@ enum bfd_architecture
   bfd_arch_lm32,      /* Lattice Mico32.  */
 #define bfd_mach_lm32          1
   bfd_arch_microblaze,/* Xilinx MicroBlaze.  */
-  bfd_arch_kvx,        /* Kalray VLIW core of the MPPA processor family */
-#define bfd_mach_kv3_unknown       0
-#define bfd_mach_kv3_1             1
-#define bfd_mach_kv3_1_64          2
-#define bfd_mach_kv3_1_usr         3
-#define bfd_mach_kv3_2             4
-#define bfd_mach_kv3_2_64          5
-#define bfd_mach_kv3_2_usr         6
-#define bfd_mach_kv4_1             7
-#define bfd_mach_kv4_1_64          8
-#define bfd_mach_kv4_1_usr         9
   bfd_arch_tilepro,   /* Tilera TILEPro.  */
   bfd_arch_tilegx,    /* Tilera TILE-Gx.  */
 #define bfd_mach_tilepro       1
@@ -1925,14 +1911,6 @@ enum bfd_direction
     read_direction = 1,
     write_direction = 2,
     both_direction = 3
-  };
-
-enum bfd_last_io
-  {
-    bfd_io_seek = 0,
-    bfd_io_read = 1,
-    bfd_io_write = 2,
-    bfd_io_force = 3
   };
 
 enum bfd_plugin_format
@@ -2086,20 +2064,6 @@ struct bfd
 
   /* The direction with which the BFD was opened.  */
   ENUM_BITFIELD (bfd_direction) direction : 2;
-
-  /* POSIX.1-2017 (IEEE Std 1003.1) says of fopen : "When a file is
-     opened with update mode ('+' as the second or third character in
-     the mode argument), both input and output may be performed on
-     the associated stream.  However, the application shall ensure
-     that output is not directly followed by input without an
-     intervening call to fflush() or to a file positioning function
-     (fseek(), fsetpos(), or rewind()), and input is not directly
-     followed by output without an intervening call to a file
-     positioning function, unless the input operation encounters
-     end-of-file."
-     This field tracks the last IO operation, so that bfd can insert
-     a seek when IO direction changes.  */
-  ENUM_BITFIELD (bfd_last_io) last_io : 2;
 
   /* Is the file descriptor being cached?  That is, can it be closed as
      needed, and re-opened when accessed later?  */
@@ -2733,19 +2697,17 @@ bfd_vma bfd_emul_get_commonpagesize (const char *);
 char *bfd_demangle (bfd *, const char *, int);
 
 /* Extracted from bfdio.c.  */
-bfd_size_type bfd_read (void *, bfd_size_type, bfd *)
-ATTRIBUTE_WARN_UNUSED_RESULT;
+bfd_size_type bfd_bread (void *, bfd_size_type, bfd *);
 
-bfd_size_type bfd_write (const void *, bfd_size_type, bfd *)
-ATTRIBUTE_WARN_UNUSED_RESULT;
+bfd_size_type bfd_bwrite (const void *, bfd_size_type, bfd *);
 
-file_ptr bfd_tell (bfd *) ATTRIBUTE_WARN_UNUSED_RESULT;
+file_ptr bfd_tell (bfd *);
 
 int bfd_flush (bfd *);
 
-int bfd_stat (bfd *, struct stat *) ATTRIBUTE_WARN_UNUSED_RESULT;
+int bfd_stat (bfd *, struct stat *);
 
-int bfd_seek (bfd *, file_ptr, int) ATTRIBUTE_WARN_UNUSED_RESULT;
+int bfd_seek (bfd *, file_ptr, int);
 
 long bfd_get_mtime (bfd *abfd);
 
@@ -2755,10 +2717,7 @@ ufile_ptr bfd_get_file_size (bfd *abfd);
 
 void *bfd_mmap (bfd *abfd, void *addr, bfd_size_type len,
     int prot, int flags, file_ptr offset,
-    void **map_addr, bfd_size_type *map_len)
-ATTRIBUTE_WARN_UNUSED_RESULT;
-
-time_t bfd_get_current_time (time_t now);
+    void **map_addr, bfd_size_type *map_len);
 
 /* Extracted from bfdwin.c.  */
 struct _bfd_window_internal;
@@ -6535,106 +6494,6 @@ value in two words (with an imm instruction).  The relocation is
 relative offset from start of TEXT.  */
   BFD_RELOC_MICROBLAZE_64_TEXTREL,
 
-/* KVX pseudo relocation code to mark the start of the KVX
-relocation enumerators.  N.B. the order of the enumerators is
-important as several tables in the KVX bfd backend are indexed
-by these enumerators; make sure they are all synced.";  */
-  BFD_RELOC_KVX_RELOC_START,
-
-/* KVX null relocation code.  */
-  BFD_RELOC_KVX_NONE,
-
-/* KVX Relocations.  */
-  BFD_RELOC_KVX_16,
-  BFD_RELOC_KVX_32,
-  BFD_RELOC_KVX_64,
-  BFD_RELOC_KVX_S16_PCREL,
-  BFD_RELOC_KVX_PCREL17,
-  BFD_RELOC_KVX_PCREL27,
-  BFD_RELOC_KVX_32_PCREL,
-  BFD_RELOC_KVX_S37_PCREL_LO10,
-  BFD_RELOC_KVX_S37_PCREL_UP27,
-  BFD_RELOC_KVX_S43_PCREL_LO10,
-  BFD_RELOC_KVX_S43_PCREL_UP27,
-  BFD_RELOC_KVX_S43_PCREL_EX6,
-  BFD_RELOC_KVX_S64_PCREL_LO10,
-  BFD_RELOC_KVX_S64_PCREL_UP27,
-  BFD_RELOC_KVX_S64_PCREL_EX27,
-  BFD_RELOC_KVX_64_PCREL,
-  BFD_RELOC_KVX_S16,
-  BFD_RELOC_KVX_S32_LO5,
-  BFD_RELOC_KVX_S32_UP27,
-  BFD_RELOC_KVX_S37_LO10,
-  BFD_RELOC_KVX_S37_UP27,
-  BFD_RELOC_KVX_S37_GOTOFF_LO10,
-  BFD_RELOC_KVX_S37_GOTOFF_UP27,
-  BFD_RELOC_KVX_S43_GOTOFF_LO10,
-  BFD_RELOC_KVX_S43_GOTOFF_UP27,
-  BFD_RELOC_KVX_S43_GOTOFF_EX6,
-  BFD_RELOC_KVX_32_GOTOFF,
-  BFD_RELOC_KVX_64_GOTOFF,
-  BFD_RELOC_KVX_32_GOT,
-  BFD_RELOC_KVX_S37_GOT_LO10,
-  BFD_RELOC_KVX_S37_GOT_UP27,
-  BFD_RELOC_KVX_S43_GOT_LO10,
-  BFD_RELOC_KVX_S43_GOT_UP27,
-  BFD_RELOC_KVX_S43_GOT_EX6,
-  BFD_RELOC_KVX_64_GOT,
-  BFD_RELOC_KVX_GLOB_DAT,
-  BFD_RELOC_KVX_COPY,
-  BFD_RELOC_KVX_JMP_SLOT,
-  BFD_RELOC_KVX_RELATIVE,
-  BFD_RELOC_KVX_S43_LO10,
-  BFD_RELOC_KVX_S43_UP27,
-  BFD_RELOC_KVX_S43_EX6,
-  BFD_RELOC_KVX_S64_LO10,
-  BFD_RELOC_KVX_S64_UP27,
-  BFD_RELOC_KVX_S64_EX27,
-  BFD_RELOC_KVX_S37_GOTADDR_LO10,
-  BFD_RELOC_KVX_S37_GOTADDR_UP27,
-  BFD_RELOC_KVX_S43_GOTADDR_LO10,
-  BFD_RELOC_KVX_S43_GOTADDR_UP27,
-  BFD_RELOC_KVX_S43_GOTADDR_EX6,
-  BFD_RELOC_KVX_S64_GOTADDR_LO10,
-  BFD_RELOC_KVX_S64_GOTADDR_UP27,
-  BFD_RELOC_KVX_S64_GOTADDR_EX27,
-  BFD_RELOC_KVX_64_DTPMOD,
-  BFD_RELOC_KVX_64_DTPOFF,
-  BFD_RELOC_KVX_S37_TLS_DTPOFF_LO10,
-  BFD_RELOC_KVX_S37_TLS_DTPOFF_UP27,
-  BFD_RELOC_KVX_S43_TLS_DTPOFF_LO10,
-  BFD_RELOC_KVX_S43_TLS_DTPOFF_UP27,
-  BFD_RELOC_KVX_S43_TLS_DTPOFF_EX6,
-  BFD_RELOC_KVX_S37_TLS_GD_LO10,
-  BFD_RELOC_KVX_S37_TLS_GD_UP27,
-  BFD_RELOC_KVX_S43_TLS_GD_LO10,
-  BFD_RELOC_KVX_S43_TLS_GD_UP27,
-  BFD_RELOC_KVX_S43_TLS_GD_EX6,
-  BFD_RELOC_KVX_S37_TLS_LD_LO10,
-  BFD_RELOC_KVX_S37_TLS_LD_UP27,
-  BFD_RELOC_KVX_S43_TLS_LD_LO10,
-  BFD_RELOC_KVX_S43_TLS_LD_UP27,
-  BFD_RELOC_KVX_S43_TLS_LD_EX6,
-  BFD_RELOC_KVX_64_TPOFF,
-  BFD_RELOC_KVX_S37_TLS_IE_LO10,
-  BFD_RELOC_KVX_S37_TLS_IE_UP27,
-  BFD_RELOC_KVX_S43_TLS_IE_LO10,
-  BFD_RELOC_KVX_S43_TLS_IE_UP27,
-  BFD_RELOC_KVX_S43_TLS_IE_EX6,
-  BFD_RELOC_KVX_S37_TLS_LE_LO10,
-  BFD_RELOC_KVX_S37_TLS_LE_UP27,
-  BFD_RELOC_KVX_S43_TLS_LE_LO10,
-  BFD_RELOC_KVX_S43_TLS_LE_UP27,
-  BFD_RELOC_KVX_S43_TLS_LE_EX6,
-  BFD_RELOC_KVX_8,
-
-/* KVX pseudo relocation code to mark the end of the KVX
-relocation enumerators that have direct mapping to ELF reloc codes.
-There are a few more enumerators after this one; those are mainly
-used by the KVX assembler for the internal fixup or to select
-one of the above enumerators.  */
-  BFD_RELOC_KVX_RELOC_END,
-
 /* AArch64 pseudo relocation code to mark the start of the AArch64
 relocation enumerators.  N.B. the order of the enumerators is
 important as several tables in the AArch64 bfd backend are indexed
@@ -7286,8 +7145,6 @@ assembler and not (currently) written to any object files.  */
 /* Linux eBPF relocations.  */
   BFD_RELOC_BPF_64,
   BFD_RELOC_BPF_DISP32,
-  BFD_RELOC_BPF_DISPCALL32,
-  BFD_RELOC_BPF_DISP16,
 
 /* Adapteva EPIPHANY - 8 bit signed pc-relative displacement  */
   BFD_RELOC_EPIPHANY_SIMM8,

@@ -38,7 +38,7 @@ D s-intman.ads		20230727081303 aa1eb6b4 system.interrupt_management%s
 D s-inmaop.ads		20230727081303 5e0317cf system.interrupt_management.operations%s
 D s-inmaop.adb		20230727081303 b0ce50ee system.interrupt_management.operations%b
 D s-linux.ads		20230727081303 34850a8c system.linux%s
-D s-oscons.ads		20240130052700 58503582 system.os_constants%s
+D s-oscons.ads		20240204213214 58503582 system.os_constants%s
 D s-osinte.ads		20230727081303 e4f53740 system.os_interface%s
 D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
 D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s

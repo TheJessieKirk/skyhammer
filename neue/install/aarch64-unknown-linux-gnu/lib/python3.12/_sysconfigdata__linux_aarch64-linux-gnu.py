@@ -47,6 +47,8 @@ build_time_vars = {'ABIFLAGS': '',
  'CONFIG_ARGS': "'--prefix=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' "
                 "'--oldincludedir=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include' "
                 "'--target=aarch64-unknown-linux-gnu' '--enable-optimizations' "
+                "'--with-openssl=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu' "
+                "'--with-readline=readline' "
                 "'target_alias=aarch64-unknown-linux-gnu' "
                 "'PKG_CONFIG_PATH=/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/pkgconfig'",
  'CONFINCLUDEDIR': '/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include',
@@ -247,7 +249,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_GCC_ASM_FOR_X87': 0,
  'HAVE_GCC_UINT128_T': 1,
  'HAVE_GDBM_DASH_NDBM_H': 0,
- 'HAVE_GDBM_H': 0,
+ 'HAVE_GDBM_H': 1,
  'HAVE_GDBM_NDBM_H': 0,
  'HAVE_GETADDRINFO': 1,
  'HAVE_GETC_UNLOCKED': 1,
@@ -325,7 +327,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_LIBINTL_H': 1,
  'HAVE_LIBRESOLV': 0,
  'HAVE_LIBSENDFILE': 0,
- 'HAVE_LIBSQLITE3': 0,
+ 'HAVE_LIBSQLITE3': 1,
  'HAVE_LIBUTIL_H': 0,
  'HAVE_LINK': 1,
  'HAVE_LINKAT': 1,
@@ -354,7 +356,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_LONG_DOUBLE': 1,
  'HAVE_LSTAT': 1,
  'HAVE_LUTIMES': 1,
- 'HAVE_LZMA_H': 1,
+ 'HAVE_LZMA_H': 0,
  'HAVE_MADVISE': 1,
  'HAVE_MAKEDEV': 1,
  'HAVE_MBRTOWC': 1,
@@ -372,7 +374,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_NANOSLEEP': 1,
  'HAVE_NCURSESW': 0,
  'HAVE_NCURSES_H': 0,
- 'HAVE_NDBM_H': 0,
+ 'HAVE_NDBM_H': 1,
  'HAVE_NDIR_H': 0,
  'HAVE_NETCAN_CAN_H': 0,
  'HAVE_NETDB_H': 1,
@@ -712,13 +714,14 @@ build_time_vars = {'ABIFLAGS': '',
                    '_json  _lsprof  _opcode  _pickle  _queue  _random  '
                    '_struct  _xxsubinterpreters  _xxinterpchannels  _zoneinfo  '
                    'audioop  math  cmath  _statistics  _datetime  _decimal  '
-                   'binascii  _bz2  _lzma  zlib  _md5  _sha1  _sha2  _sha3  '
-                   '_blake2  pyexpat  _elementtree  _codecs_cn  _codecs_hk  '
-                   '_codecs_iso2022  _codecs_jp  _codecs_kr  _codecs_tw  '
-                   '_multibytecodec  unicodedata  _crypt  fcntl  grp  mmap  '
-                   'ossaudiodev  _posixsubprocess  resource  select  _socket  '
-                   'spwd  syslog  termios  _posixshmem  _multiprocessing  '
-                   '_ctypes  _uuid  xxsubtype  _xxtestfuzz  _testbuffer  '
+                   'binascii  _bz2  _lzma  zlib  _dbm  _gdbm  _md5  _sha1  '
+                   '_sha2  _sha3  _blake2  pyexpat  _elementtree  _codecs_cn  '
+                   '_codecs_hk  _codecs_iso2022  _codecs_jp  _codecs_kr  '
+                   '_codecs_tw  _multibytecodec  unicodedata  _crypt  fcntl  '
+                   'grp  mmap  ossaudiodev  _posixsubprocess  resource  '
+                   'select  _socket  spwd  syslog  termios  _posixshmem  '
+                   '_multiprocessing  _ctypes  _sqlite3  _ssl  _hashlib  '
+                   '_uuid  xxsubtype  _xxtestfuzz  _testbuffer  '
                    '_testinternalcapi  _testcapi  _testclinic  '
                    '_testimportmultiple  _testmultiphase  _testsinglephase  '
                    '_ctypes_test  xxlimited  xxlimited_35  atexit  '
@@ -745,15 +748,16 @@ build_time_vars = {'ABIFLAGS': '',
                     '_lsprof _opcode _pickle _queue _random _struct '
                     '_xxsubinterpreters _xxinterpchannels _zoneinfo audioop '
                     'math cmath _statistics _datetime _decimal binascii _bz2 '
-                    '_lzma zlib _md5 _sha1 _sha2 _sha3 _blake2 pyexpat '
-                    '_elementtree _codecs_cn _codecs_hk _codecs_iso2022 '
-                    '_codecs_jp _codecs_kr _codecs_tw _multibytecodec '
-                    'unicodedata _crypt fcntl grp mmap ossaudiodev '
-                    '_posixsubprocess resource select _socket spwd syslog '
-                    'termios _posixshmem _multiprocessing _ctypes _uuid '
-                    'xxsubtype _xxtestfuzz _testbuffer _testinternalcapi '
-                    '_testcapi _testclinic _testimportmultiple _testmultiphase '
-                    '_testsinglephase _ctypes_test xxlimited xxlimited_35',
+                    '_lzma zlib _dbm _gdbm _md5 _sha1 _sha2 _sha3 _blake2 '
+                    'pyexpat _elementtree _codecs_cn _codecs_hk '
+                    '_codecs_iso2022 _codecs_jp _codecs_kr _codecs_tw '
+                    '_multibytecodec unicodedata _crypt fcntl grp mmap '
+                    'ossaudiodev _posixsubprocess resource select _socket spwd '
+                    'syslog termios _posixshmem _multiprocessing _ctypes '
+                    '_sqlite3 _ssl _hashlib _uuid xxsubtype _xxtestfuzz '
+                    '_testbuffer _testinternalcapi _testcapi _testclinic '
+                    '_testimportmultiple _testmultiphase _testsinglephase '
+                    '_ctypes_test xxlimited xxlimited_35',
  'MODULE_ARRAY_STATE': 'yes',
  'MODULE_ATEXIT_LDFLAGS': '',
  'MODULE_AUDIOOP_LDFLAGS': '-lm',
@@ -865,9 +869,11 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__CRYPT_LDFLAGS': '-lcrypt',
  'MODULE__CRYPT_STATE': 'yes',
  'MODULE__CSV_STATE': 'yes',
- 'MODULE__CTYPES_CFLAGS': '-fno-strict-overflow',
+ 'MODULE__CTYPES_CFLAGS': '-fno-strict-overflow '
+                          '-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include',
  'MODULE__CTYPES_DEPS': './../../../src/cpython-3.12.1/Modules/_ctypes/ctypes.h',
- 'MODULE__CTYPES_LDFLAGS': '-lffi -ldl',
+ 'MODULE__CTYPES_LDFLAGS': '-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/../lib64 '
+                           '-lffi -ldl',
  'MODULE__CTYPES_MALLOC_CLOSURE': '',
  'MODULE__CTYPES_STATE': 'yes',
  'MODULE__CTYPES_TEST_LDFLAGS': '-lm',
@@ -876,7 +882,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__CURSES_STATE': 'missing',
  'MODULE__DATETIME_LDFLAGS': '-lm',
  'MODULE__DATETIME_STATE': 'yes',
- 'MODULE__DBM_STATE': 'missing',
+ 'MODULE__DBM_CFLAGS': '-DUSE_NDBM',
+ 'MODULE__DBM_LDFLAGS': '-lgdbm_compat',
+ 'MODULE__DBM_STATE': 'yes',
  'MODULE__DECIMAL_CFLAGS': '-I./../../../src/cpython-3.12.1/Modules/_decimal/libmpdec '
                            '-DCONFIG_64=1 -DANSI=1 -DHAVE_UINT128_T=1',
  'MODULE__DECIMAL_DEPS': './../../../src/cpython-3.12.1/Modules/_decimal/docstrings.h '
@@ -888,9 +896,14 @@ build_time_vars = {'ABIFLAGS': '',
                              '\\ Modules/expat/libexpat.a',
  'MODULE__ELEMENTTREE_STATE': 'yes',
  'MODULE__FUNCTOOLS_LDFLAGS': '',
- 'MODULE__GDBM_STATE': 'missing',
+ 'MODULE__GDBM_CFLAGS': '',
+ 'MODULE__GDBM_LDFLAGS': '-lgdbm',
+ 'MODULE__GDBM_STATE': 'yes',
+ 'MODULE__HASHLIB_CFLAGS': '-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include',
  'MODULE__HASHLIB_DEPS': './../../../src/cpython-3.12.1/Modules/hashlib.h',
- 'MODULE__HASHLIB_STATE': 'missing',
+ 'MODULE__HASHLIB_LDFLAGS': '-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib   '
+                            '-lcrypto',
+ 'MODULE__HASHLIB_STATE': 'yes',
  'MODULE__HEAPQ_STATE': 'yes',
  'MODULE__IO_CFLAGS': '-I./../../../src/cpython-3.12.1/Modules/_io',
  'MODULE__IO_DEPS': './../../../src/cpython-3.12.1/Modules/_io/_iomodule.h',
@@ -899,8 +912,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__JSON_STATE': 'yes',
  'MODULE__LOCALE_LDFLAGS': '',
  'MODULE__LSPROF_STATE': 'yes',
- 'MODULE__LZMA_CFLAGS': '',
- 'MODULE__LZMA_LDFLAGS': '-llzma',
+ 'MODULE__LZMA_CFLAGS': '-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include',
+ 'MODULE__LZMA_LDFLAGS': '-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib '
+                         '-llzma',
  'MODULE__LZMA_STATE': 'yes',
  'MODULE__MD5_CFLAGS': '-I./../../../src/cpython-3.12.1/Modules/_hacl/include '
                        '-I./../../../src/cpython-3.12.1/Modules/_hacl/internal '
@@ -946,6 +960,8 @@ build_time_vars = {'ABIFLAGS': '',
                         './../../../src/cpython-3.12.1/Modules/getaddrinfo.c '
                         './../../../src/cpython-3.12.1/Modules/getnameinfo.c',
  'MODULE__SOCKET_STATE': 'yes',
+ 'MODULE__SQLITE3_CFLAGS': '-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include '
+                           '-I./../../../src/cpython-3.12.1/Modules/_sqlite',
  'MODULE__SQLITE3_DEPS': './../../../src/cpython-3.12.1/Modules/_sqlite/connection.h '
                          './../../../src/cpython-3.12.1/Modules/_sqlite/cursor.h '
                          './../../../src/cpython-3.12.1/Modules/_sqlite/microprotocols.h '
@@ -953,8 +969,11 @@ build_time_vars = {'ABIFLAGS': '',
                          './../../../src/cpython-3.12.1/Modules/_sqlite/prepare_protocol.h '
                          './../../../src/cpython-3.12.1/Modules/_sqlite/row.h '
                          './../../../src/cpython-3.12.1/Modules/_sqlite/util.h',
- 'MODULE__SQLITE3_STATE': 'disabled',
+ 'MODULE__SQLITE3_LDFLAGS': '-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib '
+                            '-lsqlite3',
+ 'MODULE__SQLITE3_STATE': 'yes',
  'MODULE__SRE_LDFLAGS': '',
+ 'MODULE__SSL_CFLAGS': '-I/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/include',
  'MODULE__SSL_DEPS': './../../../src/cpython-3.12.1/Modules/_ssl.h '
                      './../../../src/cpython-3.12.1/Modules/_ssl/cert.c '
                      './../../../src/cpython-3.12.1/Modules/_ssl/debughelpers.c '
@@ -963,7 +982,9 @@ build_time_vars = {'ABIFLAGS': '',
                      './../../../src/cpython-3.12.1/Modules/_ssl_data_111.h '
                      './../../../src/cpython-3.12.1/Modules/_ssl_data_300.h '
                      './../../../src/cpython-3.12.1/Modules/socketmodule.h',
- 'MODULE__SSL_STATE': 'missing',
+ 'MODULE__SSL_LDFLAGS': '-L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib  '
+                        '-lssl -lcrypto',
+ 'MODULE__SSL_STATE': 'yes',
  'MODULE__STATISTICS_LDFLAGS': '-lm',
  'MODULE__STATISTICS_STATE': 'yes',
  'MODULE__STAT_LDFLAGS': '',
@@ -1068,7 +1089,7 @@ build_time_vars = {'ABIFLAGS': '',
  'PY_LDFLAGS_NODIST': '-fno-semantic-interposition',
  'PY_LDFLAGS_NOLTO': '',
  'PY_SQLITE_ENABLE_LOAD_EXTENSION': 0,
- 'PY_SQLITE_HAVE_SERIALIZE': 0,
+ 'PY_SQLITE_HAVE_SERIALIZE': 1,
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
  'PY_STDMODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 '
@@ -1124,6 +1145,8 @@ build_time_vars = {'ABIFLAGS': '',
                'Modules/_bz2.cpython-312-aarch64-linux-gnu.so '
                'Modules/_lzma.cpython-312-aarch64-linux-gnu.so '
                'Modules/zlib.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_dbm.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_gdbm.cpython-312-aarch64-linux-gnu.so '
                'Modules/_md5.cpython-312-aarch64-linux-gnu.so '
                'Modules/_sha1.cpython-312-aarch64-linux-gnu.so '
                'Modules/_sha2.cpython-312-aarch64-linux-gnu.so '
@@ -1154,6 +1177,9 @@ build_time_vars = {'ABIFLAGS': '',
                'Modules/_posixshmem.cpython-312-aarch64-linux-gnu.so '
                'Modules/_multiprocessing.cpython-312-aarch64-linux-gnu.so '
                'Modules/_ctypes.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_sqlite3.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_ssl.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_hashlib.cpython-312-aarch64-linux-gnu.so '
                'Modules/_uuid.cpython-312-aarch64-linux-gnu.so '
                'Modules/xxsubtype.cpython-312-aarch64-linux-gnu.so '
                'Modules/_xxtestfuzz.cpython-312-aarch64-linux-gnu.so '

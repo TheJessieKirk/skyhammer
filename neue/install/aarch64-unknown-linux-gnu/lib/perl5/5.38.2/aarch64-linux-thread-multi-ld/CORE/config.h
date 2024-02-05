@@ -9,7 +9,7 @@
 
 /* Package name      : perl5
  * Source directory  : /usr/skyhammer/neue/src/perl-5.38.2
- * Configuration time: Mon Jan 29 18:39:40 UTC 2024
+ * Configuration time: Sat Feb  3 21:34:06 UTC 2024
  * Configured by     : sdk_keyholder
  * Target system     : linux raspberry-pi-4-8gb 6.5.0-1009-raspi #12-ubuntu smp preempt_dynamic wed jan 17 11:45:08 utc 2024 aarch64 gnulinux 
  */
@@ -606,7 +606,7 @@
  *	This symbol, if defined, indicates that <rpcsvc/dbm.h> exists and
  *	should be included.
  */
-/*#define I_DBM	/ **/
+#define I_DBM	/**/
 /*#define I_RPCSVC_DBM	/ **/
 
 /* I_DLFCN:
@@ -624,7 +624,7 @@
  *	This symbol, if defined, indicates that <gdbm.h> exists and should
  *	be included.
  */
-/*#define I_GDBM	/ **/
+#define I_GDBM	/**/
 
 /* I_LOCALE:
  *	This symbol, if defined, indicates to the C program that it should
@@ -2082,10 +2082,10 @@
  *	parameter information. While ANSI C prototypes are supported in C++,
  *	K&R style function declarations will yield errors.
  */
-/*#define I_NDBM	/ **/
+#define I_NDBM	/**/
 /*#define I_GDBMNDBM	/ **/
 /*#define I_GDBM_NDBM	/ **/
-/*#define NDBM_H_USES_PROTOTYPES	/ **/
+#define NDBM_H_USES_PROTOTYPES	/**/
 /*#define GDBMNDBM_H_USES_PROTOTYPES	/ **/
 /*#define GDBM_NDBM_H_USES_PROTOTYPES	/ **/
 
@@ -2401,7 +2401,7 @@
  *	to the program to supply one.  A good guess is
  *		extern int dbminit(char *);
  */
-/*#define HAS_DBMINIT_PROTO	/ **/
+#define HAS_DBMINIT_PROTO	/**/
 
 /* HAS_DIR_DD_FD:
  *	This symbol, if defined, indicates that the DIR* dirstream

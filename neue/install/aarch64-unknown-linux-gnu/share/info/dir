@@ -2214,6 +2214,8 @@ GNU Gettext Utilities
                                 ISO 3166 country codes.
 * ISO639: (gettext)Language Codes.
                                 ISO 639 language codes.
+* xgettext: (gettext)xgettext Invocation.
+                                Extract strings into a PO file.
 * autopoint: (gettext)autopoint Invocation.
                                 Copy gettext infrastructure.
 * envsubst: (gettext)envsubst Invocation.
@@ -2251,8 +2253,6 @@ GNU Gettext Utilities
                                 Unify duplicates for PO file.
 * ngettext: (gettext)ngettext Invocation.
                                 Translate a message with plural.
-* xgettext: (gettext)xgettext Invocation.
-                                Extract strings into a PO file.
 
 GNU Libraries
 * libgomp: (libgomp).           GNU Offloading and Multi Processing Runtime 
@@ -2460,6 +2460,12 @@ Network applications
 Programming
 * flex: (flex).                 Fast lexical analyzer generator (lex 
                                   replacement).
+
+Programming & development tools
+* GDBM: (gdbm).                 The GNU database manager.
+* gdbm_dump: (gdbm) gdbm_dump.  Dump the GDBM database into a flat file.
+* gdbm_load: (gdbm) gdbm_load.  Load the database from a flat file.
+* gdbmtool: (gdbm) gdbmtool.    Examine and modify a GDBM database.
 
 Programvaruutveckling
 * help2man-sv: (help2man-sv).   Automatisk generering av manualsida.

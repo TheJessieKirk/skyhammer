@@ -17,7 +17,7 @@ old_library='libtextstyle.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -lm -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -ltermcap'
+dependency_libs=' -R/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib -lm -L/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libncurses.la -L../lib /usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/lib/libtinfo.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
