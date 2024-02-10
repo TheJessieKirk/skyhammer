@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ROOT_DIR=/usr/skyhammer/neue;
-TARGETS=(aarch64-unknown-linux-gnu x86_64-w64-mingw32);
-export PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/bin:$ROOT_DIR/install/x86_64-w64-mingw32/bin;
+TARGETS=(x86_64-pc-linux-gnu x86_64-w64-mingw32);
+export PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/bin:$ROOT_DIR/install/x86_64-pc-linux-gnu/bin:$ROOT_DIR/install/x86_64-w64-mingw32/bin;
 export PKG_CONFIG_PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/lib/pkgconfig;
 
 chmod 755 -R $ROOT_DIR/*;
@@ -44,7 +44,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gdbm gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress ncurses nettle ninja openssl patch pcre2 perl pkg-config readline sed sqlite tar termcap texinfo unzip valgrind wget2 xz zip zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gdbm gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring linux llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress ncurses nettle ninja openssl patch pcre2 perl pkg-config readline rsync sed sqlite tar termcap texinfo unzip valgrind wget2 xz zip zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -681,6 +681,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/libunistring-*/configure exists.";
           fi;
           ;;
+        linux)
+          if [ ! -f linux-6.7.4.tar.xz ];
+          then
+            echo "$ROOT_DIR/var/packages/linux-6.7.4.tar.xz does not exist. Downloading...";
+            wget -q https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.7.4.tar.xz;
+          else
+            echo "$ROOT_DIR/var/packages/linux-6.7.4.tar.xz exists.";
+          fi;
+          if [ ! -f ../src/linux-*/Makefile ];
+          then
+            echo "$ROOT_DIR/src/linux-*/Makefile does not exist. Extracting package...";
+            tar -xf linux-* -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/linux-*/Makefile exists.";
+          fi;
+          ;;
         llvm-project)
           if [ ! -f llvm-project-17.0.6.tar.xz ];
           then
@@ -985,6 +1001,23 @@ case $REPLY in
             echo "$ROOT_DIR/src/sed-*/configure exists.";
           fi;
           ;;
+        rsync)
+          if [ ! -f rsync-3.2.7.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/rsync-3.2.7.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/WayneD/rsync/archive/refs/tags/v3.2.7.tar.gz;
+            mv v3.2.7.tar.gz rsync-3.2.7.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/rsync-3.2.7.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/rsync-*/configure ];
+          then
+            echo "$ROOT_DIR/src/rsync-*/configure does not exist. Extracting package...";
+            tar -xf rsync-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/flex-*/configure exists.";
+          fi
+          ;;
         sqlite)
           if [ ! -f sqlite-3450100.tar.gz ];
           then
@@ -1163,13 +1196,17 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(sqlite ncurses gdbm pkg-config cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake llvm-project ninga gcc);
-  else
+    SOFTWARE_TO_BUILD=(rsync sqlite ncurses gdbm pkg-config cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake llvm-project ninja gcc);
+  elif [ $i = "x86_64-pc-linux-gnu" ];
+  then
+    SOFTWARE_TO_BUILD=(binutils linux gcc glibc);
+  elif [ $i = "x86_64-w64-mingw32" ];
+  then
     SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
   fi;
   for j in ${SOFTWARE_TO_BUILD[@]};
   do
-    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
+    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "linux" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
     then
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -1246,10 +1283,14 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-crash-tolerance --enable-dependency-tracking --enable-libgdbm-compat --with-aix-soname=both;
               ;;
             gcc)
-              if [ $i = "x86_64-w64-mingw32" ]
+              if [ $i = "x86_64-w64-mingw32" ];
               then
                 ./../../../src/gcc-*/configure --prefix=$ROOT_DIR/install/$i --target=$i --disable-multilib --enable-languages=c,c++,d,fortran,lto,m2,objc,obj-c++ --enable-threads=posix;
-              else
+              elif [ $i = "x86_64-pc-linux-gnu" ];
+              then
+                ./../../../src/gcc-*/configure --prefix=$ROOT_DIR/install/$i --target=$i --disable-multilib --enable-languages=ada,c,c++,d,go,lto,objc,obj-c++ --disable-threads --disable-libsanitizer;
+              elif [ $i = "aarch64-unknown-linux-gnu" ];
+              then
                 ./../../../src/gcc-*/configure --prefix=$ROOT_DIR/install/$i --target=$i --disable-multilib --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++ --enable-threads=posix;
               fi;
               ;;
@@ -1258,7 +1299,13 @@ do
               ;;
             glibc)
             #--with-selinux
-              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-crypt --enable-pt_chown --enable-stack-protector=strong;
+              if [ $i = "x86_64-pc-linux-gnu" ];
+              then
+                ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i/$i --oldincludedir=$ROOT_DIR/install/$i/$i/include  --build=aarch64-unknown-linux-gnu --host=$i --target=$i --with-headers=$ROOT_DIR/install/$i/include --with-headers=$ROOT_DIR/install/$i/$i/include;
+              elif [ $i = "aarch64-unknown-linux-gnu" ];
+              then
+                ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i/$i --oldincludedir=$ROOT_DIR/install/$i/$i/include --host=$i --enable-crypt --enable-pt_chown --enable-stack-protector=strong;
+              fi;
               ;;
             gmp)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --build=$i --enable-assert --enable-cxx --enable-fat --enable-profiling=gprof --with-aix-soname=both --with-gnu-ld --with-readline;
@@ -1367,6 +1414,9 @@ do
             readline)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
+            rsync)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --disable-lz4 --disable-md2man --disable-xxhash;
+              ;;
             sed)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i;
               ;;
@@ -1409,13 +1459,20 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc*;
-          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "llvm-project" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
+          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "linux" ] && [ ! $j = "llvm-project" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
           then
             cd $ROOT_DIR/build/$i/$j;
           fi;
           if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
           then
             make all-gcc -j 4;
+          elif [ $j = "gcc" ] && [ $i = "x86_64-pc-linux-gnu" ];
+          then
+            #make all-gcc -j 4;
+            #--
+            #make all-target-libgcc -j 4;
+            #--
+            make -j 4;
           elif [ $j = "bash" ];
           then
             make;
@@ -1430,6 +1487,12 @@ do
             make -j 4;
             make threads -j 4;
             make threadscxx -j 4;
+          elif [ $j = "glibc" ] && [ $i = "x86_64-pc-linux-gnu" ];
+          then
+            #make install-bootstrap-headers=yes install-headers;
+            #make csu/subdir_lib -j4;
+            #---
+            make -j 4;
           elif [ $j = "jdk" ];
           then
             make JOBS=4;
@@ -1451,6 +1514,12 @@ do
           #  tar -xf $ROOT_DIR/packages/libsepol-*.tar.gz -C $ROOT_DIR/src;
           #  cd $ROOT_DIR/src/libsepol*;
           #  make CC=gcc PREFIX=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "linux" ];
+          then
+            rm -r $ROOT_DIR/src/linux-*;
+            tar -xf $ROOT_DIR/packages/linux-*.tar.xz -C $ROOT_DIR/src;
+            cd $ROOT_DIR/src/linux-*;
+            make headers_install ARCH=x86_64 INSTALL_HDR_PATH=$ROOT_DIR/install/$i/$i -j4;
           elif [ $j = "llvm-project" ];
           then
             cd $ROOT_DIR/src/llvm-project*;
@@ -1491,7 +1560,7 @@ do
       esac;
     fi;
 
-    if [ ! $j = "ncompress" ];
+    if [ ! $j = "linux" ] && [ ! $j = "ncompress" ];
     then
       read -p "Do you want to install $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -1505,9 +1574,13 @@ do
           else
             cd $ROOT_DIR/build/$i/$j;
           fi;
-          if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
+          if [ $j = "gcc" ] && [ $i = "x86_64-pc-linux-gnu" ];
           then
-            make install-gcc -j 4;
+            #make install-gcc -j 4;
+            #--
+            #make install-target-libgcc -j 4;
+            #--
+            make  install -j 4;
           elif [ $j = "bash" ];
           then
             make install;
@@ -1523,6 +1596,13 @@ do
             make install -j 4;
             make installth -j 4;
             make installthcxx -j 4;
+          elif [ $j = "glibc" ] && [ $i = "x86_64-pc-linux-gnu" ];
+          then
+            #install csu/crt1.o csu/crti.o csu/crtn.o $ROOT_DIR/install/$i/$i/lib;
+            #$i-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o $ROOT_DIR/install/$i/$i/lib/libc.so;
+            #touch $ROOT_DIR/install/$i/$i/include/gnu/stubs.h;
+            #---
+            make install -j 4;
           elif [ $j = "jdk" ];
           then
             make install JOBS=4;

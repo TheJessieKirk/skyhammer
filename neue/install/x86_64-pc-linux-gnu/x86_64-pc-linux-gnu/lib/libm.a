@@ -1,0 +1,4 @@
+/* GNU ld script
+*/
+OUTPUT_FORMAT(elf64-x86-64)
+GROUP ( /usr/skyhammer/neue/install/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/lib/libm-2.38.a /usr/skyhammer/neue/install/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/lib/libmvec.a )
