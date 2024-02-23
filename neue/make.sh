@@ -1,10 +1,13 @@
-#!/bin/bash
+#!/usr/skyhammer/neue/install/aarch64-unknown-linux-gnu/bin/bash
 
 ROOT_DIR=/usr/skyhammer/neue;
-TARGETS=(x86_64-pc-linux-gnu x86_64-w64-mingw32);
-export PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/bin:$ROOT_DIR/install/x86_64-pc-linux-gnu/bin:$ROOT_DIR/install/x86_64-w64-mingw32/bin;
+TARGETS=(aarch64-unknown-linux-gnu x86_64-pc-linux-gnu x86_64-w64-mingw32);
+export PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/bin:$ROOT_DIR/install/aarch64-unknown-linux-gnu/texlive/2023/bin/aarch64-linux:$ROOT_DIR/install/aarch64-unknown-linux-gnu/miniforge3/bin:$ROOT_DIR/install/x86_64-pc-linux-gnu/bin:$ROOT_DIR/install/x86_64-w64-mingw32/bin;
+export INFO_PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/info:$ROOT_DIR/install/aarch64-unknown-linux-gnu/bin/info:$ROOT_DIR/install/aarch64-unknown-linux-gnu/share/info:$ROOT_DIR/install/aarch64-unknown-linux-gnu/texlive/2023/texmf-dist/doc/info;
+export MAN_PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/man:$ROOT_DIR/install/aarch64-unknown-linux-gnu/share/man:$ROOT_DIR/install/aarch64-unknown-linux-gnu/texlive/2023/texmf-dist/doc/man:$ROOT_DIR/install/aarch64-unknown-linux-gnu/jvm/openjdk-21-internal/man;
 export PKG_CONFIG_PATH=$ROOT_DIR/install/aarch64-unknown-linux-gnu/lib/pkgconfig;
 
+eval "$(conda shell.bash hook)";
 chmod 755 -R $ROOT_DIR/*;
 
 read -p "Do you want to backup neue? [type 'backup' to proceed]: " ;
@@ -44,7 +47,7 @@ esac;
 read -p "Do you want to check all sources are present? [y to proceed]: ";
 case $REPLY in
   y)
-    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cmake coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gdbm gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring linux llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress ncurses nettle ninja openssl patch pcre2 perl pkg-config readline rsync sed sqlite tar termcap texinfo unzip valgrind wget2 xz zip zstd);
+    SRCS_TO_CHECK=(acl attr autoconf automake bash bdm-gc binutils bison bzip2 cloog cmake conda-forge coreutils cpython dejagnu diffutils dmalloc file findutils flex gawk gcc gdb gdbm gettext glibc gmp gperf grep guile gzip help2man isl jdk libatomic_ops libcap libffi libtool libunistring linux llvm-project lzip lzo lzop m4 make mingw-w64 mpc mpfr ncompress ncurses nettle ninja openssl osl patch pcre2 perl pkg-config readline rsync sed sqlite tar termcap texinfo tl unzip valgrind wget2 xz zip zstd);
     cd $ROOT_DIR/packages;
     for i in ${SRCS_TO_CHECK[@]};
     do
@@ -201,6 +204,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/bzip2-*/Makefile exists.";
           fi;
           ;;
+        cloog)
+          if [ ! -f cloog-0.21.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/cloog-0.21.1.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/periscop/cloog/releases/download/cloog-0.21.1/cloog-0.21.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/cloog-0.21.1.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/cloog-*/configure ];
+          then
+            echo "$ROOT_DIR/src/cloog-*/configure does not exist. Extracting package...";
+            tar -xf cloog-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/cloog-*/configure exists.";
+          fi;
+          ;;
         cmake)
           if [ ! -f cmake-3.28.1.tar.gz ];
           then
@@ -215,6 +234,17 @@ case $REPLY in
             tar -xf cmake-*.tar.gz -C $ROOT_DIR/src;
           else
             echo "$ROOT_DIR/src/cmake-*/configure exists.";
+          fi;
+          ;;
+        conda-forge)
+          if [ ! -f $ROOT_DIR/Miniforge3-Linux-aarch64.sh ];
+          then
+            echo "$ROOT_DIR/Miniforge3-Linux-aarch64.sh does not exist. Downloading...";
+            wget -q https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh;
+            mv Miniforge3-Linux-aarch64.sh $ROOT_DIR;
+            chmod +x $ROOT_DIR/Miniforge3-Linux-aarch64.sh;
+          else
+            echo "$ROOT_DIR/Miniforge3-Linux-aarch64.sh exists.";
           fi;
           ;;
         coreutils)
@@ -892,6 +922,23 @@ case $REPLY in
             echo "$ROOT_DIR/src/openssl-*/Configure exists.";
           fi;
           ;;
+        osl)
+          if [ ! -f osl-0.5.1.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/osl-0.5.1.tar.gz does not exist. Downloading...";
+            wget -q https://github.com/OHBA-analysis/osl/archive/refs/tags/v0.5.1.tar.gz;
+            mv v0.5.1.tar.gz osl-0.5.1.tar.gz;
+          else
+            echo "$ROOT_DIR/var/packages/cloog-0.5.1.tar.gz exists.";
+          fi;
+          if [ ! -f ../src/osl-*/configure ];
+          then
+            echo "$ROOT_DIR/src/osl-*/configure does not exist. Extracting package...";
+            tar -xf osl-*.tar.gz -C $ROOT_DIR/src;
+          else
+            echo "$ROOT_DIR/src/osl-*/configure exists.";
+          fi;
+          ;;
         ninja)
           if [ ! -f ninja-1.11.0.tar.gz ];
           then
@@ -1078,6 +1125,22 @@ case $REPLY in
             echo "$ROOT_DIR/src/texinfo-*/configure exists.";
           fi;
           ;;
+        tl)
+          if [ ! -f tl-20240210.tar.gz ];
+          then
+            echo "$ROOT_DIR/var/packages/tl-20240210.tar.gz does not exist. Downloading...";
+            wget -q https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz;
+            mv install-tl-unx.tar.gz tl-20240210.tar.gz;
+          fi;
+          if [ ! -f ../src/tl-*/install-tl ];
+          then
+            echo "$ROOT_DIR/src/tl-*/install-tl does not exist. Extracting package...";
+            tar -xf tl-*.tar.gz -C $ROOT_DIR/src;
+            mv $ROOT_DIR/src/install-tl-* $ROOT_DIR/src/tl-20240210;
+          else
+            echo "$ROOT_DIR/src/tl-*/install-tl exists.";
+          fi;
+          ;;
         unzip)
           if [ ! -f unzip-6.0.tar.gz ];
           then
@@ -1196,17 +1259,17 @@ for i in ${TARGETS[@]};
 do
   if [ $i = "aarch64-unknown-linux-gnu" ];
   then
-    SOFTWARE_TO_BUILD=(rsync sqlite ncurses gdbm pkg-config cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress nettle openssl patch pcre2 sed tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake llvm-project ninja gcc);
+    SOFTWARE_TO_BUILD=(conda-forge osl tl cloog cpython jdk perl m4 autoconf automake file make libcap libtool readline acl attr bash bdm-gc bison bzip2 coreutils dejagnu diffutils dmalloc file findutils flex gawk gdb gdbm gettext glibc gperf grep guile gzip help2man libatomic_ops libffi lzip lzo lzop ncompress ncurses nettle openssl patch pcre2 pkg-config rsync sed sqlite tar termcap texinfo unzip valgrind wget2 zip zstd gmp isl mpfr mpc binutils cmake llvm-project ninja gcc);
   elif [ $i = "x86_64-pc-linux-gnu" ];
   then
     SOFTWARE_TO_BUILD=(binutils linux gcc glibc);
   elif [ $i = "x86_64-w64-mingw32" ];
   then
-    SOFTWARE_TO_BUILD=(binutils mingw-w64-headers gcc mingw-w64 gcc-pass2);
+    SOFTWARE_TO_BUILD=(binutils mingw-w64 gcc);
   fi;
   for j in ${SOFTWARE_TO_BUILD[@]};
   do
-    if [ ! $j = "bzip2" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "linux" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
+    if [ ! $j = "bzip2" ] && [ ! $j = "conda-forge" ] && [ ! $j = "gcc-pass2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "linux" ] && [ ! $j = "osl" ] && [ ! $j = "tl" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
     then
       read -p "Do you want to configure $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -1245,6 +1308,9 @@ do
               ;;
             bison)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-dependency-tracking --enable-threads=posix;
+              ;;
+            cloog)
+              ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i --enable-dependency-tracking --with-aix-soname=both --with-gmp=system --with-isl=system;
               ;;
             cmake)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i;
@@ -1304,7 +1370,7 @@ do
                 ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i/$i --oldincludedir=$ROOT_DIR/install/$i/$i/include  --build=aarch64-unknown-linux-gnu --host=$i --target=$i --with-headers=$ROOT_DIR/install/$i/include --with-headers=$ROOT_DIR/install/$i/$i/include;
               elif [ $i = "aarch64-unknown-linux-gnu" ];
               then
-                ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i/$i --oldincludedir=$ROOT_DIR/install/$i/$i/include --host=$i --enable-crypt --enable-pt_chown --enable-stack-protector=strong;
+                ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --host=$i --enable-crypt --enable-pt_chown --enable-stack-protector=strong;
               fi;
               ;;
             gmp)
@@ -1365,11 +1431,12 @@ do
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --target=$i --enable-c++ --enable-changeword --enable-dependency-tracking --enable-threads=posix --with-dmalloc;
               ;;
             mingw-w64)
-              ./../../../src/mingw-w64-*/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i --with-libraries=winpthreads CXXFLAGS="-std=c++14";
+              ./../../../src/mingw-w64-*/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i --with-libraries=winpthreads;
+            #CXXFLAGS="-std=c++14";
               ;;
-            mingw-w64-headers)
-              ./../../../src/mingw-w64-*/$j/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i;
-              ;;
+            #mingw-w64-headers)
+            #  ./../../../src/mingw-w64-*/$j/configure --prefix=$ROOT_DIR/install/$i/$i --host=$i;
+            #  ;;
             mpc)
               ./../../../src/$j-*/configure --prefix=$ROOT_DIR/install/$i --oldincludedir=$ROOT_DIR/install/$i/include --enable-dependency-tracking --enable-valgrind-tests --with-aix-soname=both;
               ;;
@@ -1451,7 +1518,7 @@ do
       esac;
     fi;
 
-    if [ ! $j = "ncompress" ] && [ ! $j = "ninja" ];
+    if [ ! $j = "ncompress" ] && [ ! $j = "ninja" ] && [ ! $j = "tl" ];
     then
       read -p "Do you want to build $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -1459,13 +1526,14 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc*;
-          elif [ ! $j = "bzip2" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "linux" ] && [ ! $j = "llvm-project" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
+          elif [ ! $j = "bzip2" ] && [ ! $j = "conda-forge" ] && [ ! $j = "libcap" ] && [ ! $j = "libselinux" ] && [ ! $j = "libsepol" ] && [ ! $j = "linux" ] && [ ! $j = "llvm-project" ] && [ ! $j = "osl" ] && [ ! $j = "unzip" ] && [ ! $j = "zip" ] && [ ! $j = "zstd" ];
           then
             cd $ROOT_DIR/build/$i/$j;
           fi;
           if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
           then
-            make all-gcc -j 4;
+            #make all-gcc -j 4;
+            make -j 4;
           elif [ $j = "gcc" ] && [ $i = "x86_64-pc-linux-gnu" ];
           then
             #make all-gcc -j 4;
@@ -1482,6 +1550,10 @@ do
             tar -xf $ROOT_DIR/packages/bzip2-*.tar.gz -C $ROOT_DIR/src;
             cd $ROOT_DIR/src/bzip2*;
             make PREFIX=$ROOT_DIR/install/$i -j 4;
+          elif [ $j = "conda-forge" ];
+          then
+            cd $ROOT_DIR;
+            ./Miniforge3-Linux-aarch64.sh -u;
           elif [ $j = "dmalloc" ];
           then
             make -j 4;
@@ -1522,8 +1594,13 @@ do
             make headers_install ARCH=x86_64 INSTALL_HDR_PATH=$ROOT_DIR/install/$i/$i -j4;
           elif [ $j = "llvm-project" ];
           then
-            cd $ROOT_DIR/src/llvm-project*;
+            cd $ROOT_DIR/src/llvm-project-*;
             ninja -C build;
+          elif [ $j = "osl" ];
+          then
+            cd $ROOT_DIR/src/osl-*;
+            conda env create -f envs/linux.yml;
+            conda activate osl;
           elif [ $j = "unzip" ];
           then
             rm -r $ROOT_DIR/src/unzip-*;
@@ -1560,7 +1637,7 @@ do
       esac;
     fi;
 
-    if [ ! $j = "linux" ] && [ ! $j = "ncompress" ];
+    if [ ! $j = "conda-forge" ] && [ ! $j = "linux" ] && [ ! $j = "ncompress" ];
     then
       read -p "Do you want to install $j for $i? [y to proceed]: ";
       case $REPLY in
@@ -1568,13 +1645,20 @@ do
           if [ $j = "gcc-pass2" ];
           then
             cd $ROOT_DIR/build/$i/gcc;
-          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ] || [ $j = "llvm-project" ] || [ $j = "ninja" ] || [ $j = "unzip" ] || [ $j = "zip" ];
+          elif [ $j = "libcap" ] || [ $j = "libselinux" ] || [ $j = "libsepol" ] || [ $j = "llvm-project" ] || [ $j = "ninja" ] || [ $j = "osl" ] || [ $j = "tl" ] || [ $j = "unzip" ] || [ $j = "zip" ];
           then
             cd $ROOT_DIR/src/$j-*;
           else
             cd $ROOT_DIR/build/$i/$j;
           fi;
-          if [ $j = "gcc" ] && [ $i = "x86_64-pc-linux-gnu" ];
+          if [ $j = "gcc" ] && [ $i = "x86_64-w64-mingw32" ];
+          then
+            #make install-gcc -j 4;
+            #--
+            #make install-target-libgcc -j 4;
+            #--
+            make  install -j 4;
+          elif [ $j = "gcc" ] && [ $i = "x86_64-pc-linux-gnu" ];
           then
             #make install-gcc -j 4;
             #--
@@ -1621,6 +1705,12 @@ do
           elif [ $j = "ninja" ];
           then
             cp ninja $ROOT_DIR/install/$i/bin;
+          elif [ $j = "osl" ];
+          then
+            pip install -e .;
+          elif [ $j = "tl" ];
+          then
+            perl ./install-tl;
           elif [ $j = "unzip" ];
           then
             make install CC=gcc prefix=$ROOT_DIR/install/$i -j 4;
