@@ -1,0 +1,56 @@
+{
+    "arch": "aarch64",
+    "build": "hf8544c7_3",
+    "build_number": 3,
+    "channel": "conda-forge",
+    "depends": [],
+    "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libgomp-13.2.0-hf8544c7_3",
+    "files": [
+        "lib/libgomp.so",
+        "lib/libgomp.so.1.0.0",
+        "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy"
+    ],
+    "fn": "libgomp-13.2.0-hf8544c7_3.conda",
+    "license": "GPL-3.0-only WITH GCC-exception-3.1",
+    "license_family": "GPL",
+    "link": {
+        "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libgomp-13.2.0-hf8544c7_3",
+        "type": 1
+    },
+    "md5": "191eb9058c6e97ca5fea3552e348a237",
+    "name": "libgomp",
+    "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libgomp-13.2.0-hf8544c7_3.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "lib/libgomp.so",
+                "path_type": "softlink",
+                "sha256_in_prefix": "74ff64e9a1bbbd4abf73ca237f03908cf306c2298ad2d4a6cced7c6de1f3cba0",
+                "size_in_bytes": 1139744
+            },
+            {
+                "_path": "lib/libgomp.so.1.0.0",
+                "path_type": "hardlink",
+                "sha256": "74ff64e9a1bbbd4abf73ca237f03908cf306c2298ad2d4a6cced7c6de1f3cba0",
+                "sha256_in_prefix": "74ff64e9a1bbbd4abf73ca237f03908cf306c2298ad2d4a6cced7c6de1f3cba0",
+                "size_in_bytes": 1139744
+            },
+            {
+                "_path": "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy",
+                "path_type": "hardlink",
+                "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+                "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+                "size_in_bytes": 3324
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-aarch64::libgomp==13.2.0=hf8544c7_3[md5=191eb9058c6e97ca5fea3552e348a237]",
+    "sha256": "f6b0a01258507e00ff400d2a159d7237ac2d4dd412103a4feb5e61f42a1823bb",
+    "size": 423254,
+    "subdir": "linux-aarch64",
+    "timestamp": 1699753517198,
+    "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libgomp-13.2.0-hf8544c7_3.conda",
+    "version": "13.2.0"
+}

@@ -1,0 +1,65 @@
+{
+    "arch": "aarch64",
+    "build": "h2d8c526_0",
+    "build_number": 0,
+    "channel": "conda-forge",
+    "constrains": [
+        "binutils_impl_linux-aarch64 2.40"
+    ],
+    "depends": [],
+    "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ld_impl_linux-aarch64-2.40-h2d8c526_0",
+    "files": [
+        "aarch64-conda-linux-gnu/bin/ld",
+        "aarch64-conda_cos7-linux-gnu/bin/ld",
+        "bin/aarch64-conda-linux-gnu-ld",
+        "bin/aarch64-conda_cos7-linux-gnu-ld"
+    ],
+    "fn": "ld_impl_linux-aarch64-2.40-h2d8c526_0.conda",
+    "license": "GPL-3.0-only",
+    "license_family": "GPL",
+    "link": {
+        "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ld_impl_linux-aarch64-2.40-h2d8c526_0",
+        "type": 1
+    },
+    "md5": "16246d69e945d0b1969a6099e7c5d457",
+    "name": "ld_impl_linux-aarch64",
+    "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ld_impl_linux-aarch64-2.40-h2d8c526_0.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "aarch64-conda-linux-gnu/bin/ld",
+                "path_type": "softlink",
+                "sha256_in_prefix": "a0eae6ab2657236133efa7921976af1129f605c868a191de42dc2f084fa74b41",
+                "size_in_bytes": 3222608
+            },
+            {
+                "_path": "aarch64-conda_cos7-linux-gnu/bin/ld",
+                "path_type": "softlink",
+                "sha256_in_prefix": "a0eae6ab2657236133efa7921976af1129f605c868a191de42dc2f084fa74b41",
+                "size_in_bytes": 3222608
+            },
+            {
+                "_path": "bin/aarch64-conda-linux-gnu-ld",
+                "path_type": "hardlink",
+                "sha256": "a0eae6ab2657236133efa7921976af1129f605c868a191de42dc2f084fa74b41",
+                "sha256_in_prefix": "a0eae6ab2657236133efa7921976af1129f605c868a191de42dc2f084fa74b41",
+                "size_in_bytes": 3222608
+            },
+            {
+                "_path": "bin/aarch64-conda_cos7-linux-gnu-ld",
+                "path_type": "softlink",
+                "sha256_in_prefix": "a0eae6ab2657236133efa7921976af1129f605c868a191de42dc2f084fa74b41",
+                "size_in_bytes": 3222608
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-aarch64::ld_impl_linux-aarch64==2.40=h2d8c526_0[md5=16246d69e945d0b1969a6099e7c5d457]",
+    "sha256": "1ba06e8645094b340b4aee23603a6abb1b0383788180e65f3de34e655c5f577c",
+    "size": 738776,
+    "subdir": "linux-aarch64",
+    "timestamp": 1674833843183,
+    "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/ld_impl_linux-aarch64-2.40-h2d8c526_0.conda",
+    "version": "2.40"
+}

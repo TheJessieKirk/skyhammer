@@ -1,0 +1,111 @@
+{
+    "arch": "aarch64",
+    "build": "hb0e430d_1",
+    "build_number": 1,
+    "channel": "conda-forge",
+    "depends": [
+        "c-ares >=1.23.0,<2.0a0",
+        "libev >=4.33,<4.34.0a0",
+        "libev >=4.33,<5.0a0",
+        "libgcc-ng >=12",
+        "libstdcxx-ng >=12",
+        "libzlib >=1.2.13,<1.3.0a0",
+        "openssl >=3.2.0,<4.0a0"
+    ],
+    "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libnghttp2-1.58.0-hb0e430d_1",
+    "files": [
+        "bin/nghttp",
+        "bin/nghttpd",
+        "bin/nghttpx",
+        "include/nghttp2/nghttp2.h",
+        "include/nghttp2/nghttp2ver.h",
+        "lib/libnghttp2.so",
+        "lib/libnghttp2.so.14",
+        "lib/libnghttp2.so.14.25.1",
+        "lib/pkgconfig/libnghttp2.pc"
+    ],
+    "fn": "libnghttp2-1.58.0-hb0e430d_1.conda",
+    "license": "MIT",
+    "license_family": "MIT",
+    "link": {
+        "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libnghttp2-1.58.0-hb0e430d_1",
+        "type": 1
+    },
+    "md5": "8f724cdddffa79152de61f5564a3526b",
+    "name": "libnghttp2",
+    "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libnghttp2-1.58.0-hb0e430d_1.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "bin/nghttp",
+                "path_type": "hardlink",
+                "sha256": "ea92e88298c2af9334a0dda80fcb283b1a91f013b41a75bf5d3cc259d7085d5a",
+                "sha256_in_prefix": "ea92e88298c2af9334a0dda80fcb283b1a91f013b41a75bf5d3cc259d7085d5a",
+                "size_in_bytes": 393088
+            },
+            {
+                "_path": "bin/nghttpd",
+                "path_type": "hardlink",
+                "sha256": "66f81f6b98a16fb157801ac65946fa268e1851954da9a0a836cb25e03782eca6",
+                "sha256_in_prefix": "66f81f6b98a16fb157801ac65946fa268e1851954da9a0a836cb25e03782eca6",
+                "size_in_bytes": 395872
+            },
+            {
+                "_path": "bin/nghttpx",
+                "path_type": "hardlink",
+                "sha256": "5ff96993d56ef1045abcf31295a2c26a464a6633bdfee2961b68909b399c35ee",
+                "sha256_in_prefix": "0e21f06ae0339600cace8b50c3ecf6b69b5b476e9e060afe7663016cd3a7df54",
+                "size_in_bytes": 1500472
+            },
+            {
+                "_path": "include/nghttp2/nghttp2.h",
+                "path_type": "hardlink",
+                "sha256": "5ee78a22bd0ad01a46be4841faa4c3c85afc64f741b812753834adb9ae95a64a",
+                "sha256_in_prefix": "5ee78a22bd0ad01a46be4841faa4c3c85afc64f741b812753834adb9ae95a64a",
+                "size_in_bytes": 205042
+            },
+            {
+                "_path": "include/nghttp2/nghttp2ver.h",
+                "path_type": "hardlink",
+                "sha256": "f4293b780f60e732ee8d4cdf07ee919be23f921b212ba0abf21173cf7231940b",
+                "sha256_in_prefix": "f4293b780f60e732ee8d4cdf07ee919be23f921b212ba0abf21173cf7231940b",
+                "size_in_bytes": 1605
+            },
+            {
+                "_path": "lib/libnghttp2.so",
+                "path_type": "softlink",
+                "sha256_in_prefix": "1231fc6b5028d56edefd8fb7092f045558048cdb778fd71f02f74e2132e0bae1",
+                "size_in_bytes": 228720
+            },
+            {
+                "_path": "lib/libnghttp2.so.14",
+                "path_type": "softlink",
+                "sha256_in_prefix": "1231fc6b5028d56edefd8fb7092f045558048cdb778fd71f02f74e2132e0bae1",
+                "size_in_bytes": 228720
+            },
+            {
+                "_path": "lib/libnghttp2.so.14.25.1",
+                "path_type": "hardlink",
+                "sha256": "1231fc6b5028d56edefd8fb7092f045558048cdb778fd71f02f74e2132e0bae1",
+                "sha256_in_prefix": "1231fc6b5028d56edefd8fb7092f045558048cdb778fd71f02f74e2132e0bae1",
+                "size_in_bytes": 228720
+            },
+            {
+                "_path": "lib/pkgconfig/libnghttp2.pc",
+                "path_type": "hardlink",
+                "sha256": "9266496bd38d5be8772b6f74544a530e4431a30d284fc6d469bc602006292491",
+                "sha256_in_prefix": "8bf5330b33b99273c25f1d5ec38cab3b8aca718a30baaa642993be9afe991904",
+                "size_in_bytes": 1633
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-aarch64::libnghttp2==1.58.0=hb0e430d_1[md5=8f724cdddffa79152de61f5564a3526b]",
+    "sha256": "ecc11e4f92f9d5830a90d42b4db55c66c4ad531e00dcf30d55171d934a568cb5",
+    "size": 677508,
+    "subdir": "linux-aarch64",
+    "timestamp": 1702130071743,
+    "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libnghttp2-1.58.0-hb0e430d_1.conda",
+    "version": "1.58.0"
+}

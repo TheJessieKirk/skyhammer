@@ -1,0 +1,129 @@
+{
+    "arch": "aarch64",
+    "build": "h31becfc_1",
+    "build_number": 1,
+    "channel": "conda-forge",
+    "depends": [
+        "libgcc-ng >=12"
+    ],
+    "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/reproc-14.2.4.post0-h31becfc_1",
+    "files": [
+        "include/reproc/drain.h",
+        "include/reproc/export.h",
+        "include/reproc/reproc.h",
+        "include/reproc/run.h",
+        "lib/cmake/reproc/reproc-config-version.cmake",
+        "lib/cmake/reproc/reproc-config.cmake",
+        "lib/cmake/reproc/reproc-targets-release.cmake",
+        "lib/cmake/reproc/reproc-targets.cmake",
+        "lib/libreproc.so",
+        "lib/libreproc.so.14",
+        "lib/libreproc.so.14.2.4",
+        "lib/pkgconfig/reproc.pc"
+    ],
+    "fn": "reproc-14.2.4.post0-h31becfc_1.conda",
+    "license": "MIT",
+    "license_family": "MIT",
+    "link": {
+        "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/reproc-14.2.4.post0-h31becfc_1",
+        "type": 1
+    },
+    "md5": "c148bb4ba029a018527d3e4d5c7b63fa",
+    "name": "reproc",
+    "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/reproc-14.2.4.post0-h31becfc_1.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "include/reproc/drain.h",
+                "path_type": "hardlink",
+                "sha256": "85c4cf3387d3e3a05a737687d086c9e7cf241f2be9c4f55ddc566a9d1baecb99",
+                "sha256_in_prefix": "85c4cf3387d3e3a05a737687d086c9e7cf241f2be9c4f55ddc566a9d1baecb99",
+                "size_in_bytes": 2931
+            },
+            {
+                "_path": "include/reproc/export.h",
+                "path_type": "hardlink",
+                "sha256": "adaf50bb4c4964fc17295f12d60dd128c7b4a2633b9dfbd1507dce8089371051",
+                "sha256_in_prefix": "adaf50bb4c4964fc17295f12d60dd128c7b4a2633b9dfbd1507dce8089371051",
+                "size_in_bytes": 451
+            },
+            {
+                "_path": "include/reproc/reproc.h",
+                "path_type": "hardlink",
+                "sha256": "4c7bfdc442b8ad363c0c43a5bb8a22f3352fb5df23a302992d8c9933ea9046a4",
+                "sha256_in_prefix": "4c7bfdc442b8ad363c0c43a5bb8a22f3352fb5df23a302992d8c9933ea9046a4",
+                "size_in_bytes": 18656
+            },
+            {
+                "_path": "include/reproc/run.h",
+                "path_type": "hardlink",
+                "sha256": "9979e373828d243e2261039a52a0f695f27b0e5eaf0cda2e00531f46094a2b54",
+                "sha256_in_prefix": "9979e373828d243e2261039a52a0f695f27b0e5eaf0cda2e00531f46094a2b54",
+                "size_in_bytes": 882
+            },
+            {
+                "_path": "lib/cmake/reproc/reproc-config-version.cmake",
+                "path_type": "hardlink",
+                "sha256": "fab43caadfc17993d460fab21d2f7ccae918001e41e61db7eb6386c3544c625e",
+                "sha256_in_prefix": "fab43caadfc17993d460fab21d2f7ccae918001e41e61db7eb6386c3544c625e",
+                "size_in_bytes": 2765
+            },
+            {
+                "_path": "lib/cmake/reproc/reproc-config.cmake",
+                "path_type": "hardlink",
+                "sha256": "06befcb259155c51e608af2dade2b9489b0fa76c41343c193b5e073f142b203e",
+                "sha256_in_prefix": "06befcb259155c51e608af2dade2b9489b0fa76c41343c193b5e073f142b203e",
+                "size_in_bytes": 1101
+            },
+            {
+                "_path": "lib/cmake/reproc/reproc-targets-release.cmake",
+                "path_type": "hardlink",
+                "sha256": "991cd84956acec62377875bdc6a3957fda9d83b407abc7516d5abab8a28a19ee",
+                "sha256_in_prefix": "991cd84956acec62377875bdc6a3957fda9d83b407abc7516d5abab8a28a19ee",
+                "size_in_bytes": 813
+            },
+            {
+                "_path": "lib/cmake/reproc/reproc-targets.cmake",
+                "path_type": "hardlink",
+                "sha256": "3b49488ef144a152ab76bf9e887e82ae77bbcbcf3af7c4eb54930a13a1cd7f30",
+                "sha256_in_prefix": "3b49488ef144a152ab76bf9e887e82ae77bbcbcf3af7c4eb54930a13a1cd7f30",
+                "size_in_bytes": 3907
+            },
+            {
+                "_path": "lib/libreproc.so",
+                "path_type": "softlink",
+                "sha256_in_prefix": "cd9f704009a9b1ad8ae3b3a0f201091b91e7597fc77bf98145b2440aec611718",
+                "size_in_bytes": 75352
+            },
+            {
+                "_path": "lib/libreproc.so.14",
+                "path_type": "softlink",
+                "sha256_in_prefix": "cd9f704009a9b1ad8ae3b3a0f201091b91e7597fc77bf98145b2440aec611718",
+                "size_in_bytes": 75352
+            },
+            {
+                "_path": "lib/libreproc.so.14.2.4",
+                "path_type": "hardlink",
+                "sha256": "cd9f704009a9b1ad8ae3b3a0f201091b91e7597fc77bf98145b2440aec611718",
+                "sha256_in_prefix": "cd9f704009a9b1ad8ae3b3a0f201091b91e7597fc77bf98145b2440aec611718",
+                "size_in_bytes": 75352
+            },
+            {
+                "_path": "lib/pkgconfig/reproc.pc",
+                "path_type": "hardlink",
+                "sha256": "55d55ecbb154ec12d8185ed11974829fa24f0fc3d803a56d2f630de293a17a3e",
+                "sha256_in_prefix": "ab178aafd7b6b816e3ddd793e42094d3123adc21fe698c37f53a610100d941ab",
+                "size_in_bytes": 545
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-aarch64::reproc==14.2.4.post0=h31becfc_1[md5=c148bb4ba029a018527d3e4d5c7b63fa]",
+    "sha256": "4b6b5602e4b382e00c8a6311f537ee41d94a994bf44acdbbb106b9709d402c1c",
+    "size": 35284,
+    "subdir": "linux-aarch64",
+    "timestamp": 1698242244378,
+    "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/reproc-14.2.4.post0-h31becfc_1.conda",
+    "version": "14.2.4.post0"
+}

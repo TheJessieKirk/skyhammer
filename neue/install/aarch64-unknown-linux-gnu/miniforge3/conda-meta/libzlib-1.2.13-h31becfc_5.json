@@ -1,0 +1,53 @@
+{
+    "arch": "aarch64",
+    "build": "h31becfc_5",
+    "build_number": 5,
+    "channel": "conda-forge",
+    "constrains": [
+        "zlib 1.2.13 *_5"
+    ],
+    "depends": [
+        "libgcc-ng >=12"
+    ],
+    "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libzlib-1.2.13-h31becfc_5",
+    "files": [
+        "lib/libz.so.1",
+        "lib/libz.so.1.2.13"
+    ],
+    "fn": "libzlib-1.2.13-h31becfc_5.conda",
+    "license": "Zlib",
+    "license_family": "Other",
+    "link": {
+        "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libzlib-1.2.13-h31becfc_5",
+        "type": 1
+    },
+    "md5": "b213aa87eea9491ef7b129179322e955",
+    "name": "libzlib",
+    "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libzlib-1.2.13-h31becfc_5.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "lib/libz.so.1",
+                "path_type": "softlink",
+                "sha256_in_prefix": "79363360bc84fa255b1772fa52c5291fc1cb08e9155ef7b1aa567eb2290e800d",
+                "size_in_bytes": 143448
+            },
+            {
+                "_path": "lib/libz.so.1.2.13",
+                "path_type": "hardlink",
+                "sha256": "79363360bc84fa255b1772fa52c5291fc1cb08e9155ef7b1aa567eb2290e800d",
+                "sha256_in_prefix": "79363360bc84fa255b1772fa52c5291fc1cb08e9155ef7b1aa567eb2290e800d",
+                "size_in_bytes": 143448
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-aarch64::libzlib==1.2.13=h31becfc_5[md5=b213aa87eea9491ef7b129179322e955]",
+    "sha256": "aeeefbb61e5e8227e53566d5e42dbb49e120eb99109996bf0dbfde8f180747a7",
+    "size": 67036,
+    "subdir": "linux-aarch64",
+    "timestamp": 1686575148440,
+    "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libzlib-1.2.13-h31becfc_5.conda",
+    "version": "1.2.13"
+}

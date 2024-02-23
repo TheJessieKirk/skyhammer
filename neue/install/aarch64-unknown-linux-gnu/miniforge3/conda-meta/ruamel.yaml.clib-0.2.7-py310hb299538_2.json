@@ -1,0 +1,117 @@
+{
+    "arch": "aarch64",
+    "build": "py310hb299538_2",
+    "build_number": 2,
+    "channel": "conda-forge",
+    "depends": [
+        "libgcc-ng >=12",
+        "python >=3.10,<3.11.0a0",
+        "python >=3.10,<3.11.0a0 *_cpython",
+        "python_abi 3.10.* *_cp310"
+    ],
+    "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ruamel.yaml.clib-0.2.7-py310hb299538_2",
+    "files": [
+        "lib/python3.10/site-packages/_ruamel_yaml.cpython-310-aarch64-linux-gnu.so",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/INSTALLER",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/LICENSE",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/METADATA",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/RECORD",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/REQUESTED",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/WHEEL",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/direct_url.json",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/namespace_packages.txt",
+        "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/top_level.txt"
+    ],
+    "fn": "ruamel.yaml.clib-0.2.7-py310hb299538_2.conda",
+    "license": "MIT",
+    "license_family": "MIT",
+    "link": {
+        "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ruamel.yaml.clib-0.2.7-py310hb299538_2",
+        "type": 1
+    },
+    "md5": "45eee1c3a48b16bad62fd180427c556c",
+    "name": "ruamel.yaml.clib",
+    "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ruamel.yaml.clib-0.2.7-py310hb299538_2.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "lib/python3.10/site-packages/_ruamel_yaml.cpython-310-aarch64-linux-gnu.so",
+                "path_type": "hardlink",
+                "sha256": "d842f09426baf257faeb03a29bc95c5e26e2d80b753c1454becfd4576b67e373",
+                "sha256_in_prefix": "d842f09426baf257faeb03a29bc95c5e26e2d80b753c1454becfd4576b67e373",
+                "size_in_bytes": 389064
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/INSTALLER",
+                "path_type": "hardlink",
+                "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+                "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+                "size_in_bytes": 5
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/LICENSE",
+                "path_type": "hardlink",
+                "sha256": "8340f7a406c6c8e35956ecf63ae4080bab49a626481385ffb1a16de7df5cb8b5",
+                "sha256_in_prefix": "8340f7a406c6c8e35956ecf63ae4080bab49a626481385ffb1a16de7df5cb8b5",
+                "size_in_bytes": 1121
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/METADATA",
+                "path_type": "hardlink",
+                "sha256": "240f2d72a468fffe3faba4aab99cdcab7dd550467f5f21580f804dd3361982e8",
+                "sha256_in_prefix": "240f2d72a468fffe3faba4aab99cdcab7dd550467f5f21580f804dd3361982e8",
+                "size_in_bytes": 2076
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/RECORD",
+                "path_type": "hardlink",
+                "sha256": "88782625176df2fe5db222b60783386b2ad2e89804f27280a5bff395aee482e4",
+                "sha256_in_prefix": "88782625176df2fe5db222b60783386b2ad2e89804f27280a5bff395aee482e4",
+                "size_in_bytes": 952
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/REQUESTED",
+                "path_type": "hardlink",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/WHEEL",
+                "path_type": "hardlink",
+                "sha256": "d7d16e88d16a0333baf1183324392a018b972dd4c7c66b25cc18b2453b5995f0",
+                "sha256_in_prefix": "d7d16e88d16a0333baf1183324392a018b972dd4c7c66b25cc18b2453b5995f0",
+                "size_in_bytes": 106
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/direct_url.json",
+                "path_type": "hardlink",
+                "sha256": "c935027608c076ff9985e154e408ed1a0a6ca711b3da1660c4d737d10d4c447d",
+                "sha256_in_prefix": "c935027608c076ff9985e154e408ed1a0a6ca711b3da1660c4d737d10d4c447d",
+                "size_in_bytes": 112
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/namespace_packages.txt",
+                "path_type": "hardlink",
+                "sha256": "b8ccc27461cd768c3bfe29cec7aad96b11ba378e5c5561c4ad4d218e2b6f7a1b",
+                "sha256_in_prefix": "b8ccc27461cd768c3bfe29cec7aad96b11ba378e5c5561c4ad4d218e2b6f7a1b",
+                "size_in_bytes": 19
+            },
+            {
+                "_path": "lib/python3.10/site-packages/ruamel.yaml.clib-0.2.7.dist-info/top_level.txt",
+                "path_type": "hardlink",
+                "sha256": "d6c25b6b7206776b1a6f7bbfea45b234f4bcc86fc01ed3f425d99a0e80785c1d",
+                "sha256_in_prefix": "d6c25b6b7206776b1a6f7bbfea45b234f4bcc86fc01ed3f425d99a0e80785c1d",
+                "size_in_bytes": 20
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-aarch64::ruamel.yaml.clib==0.2.7=py310hb299538_2[md5=45eee1c3a48b16bad62fd180427c556c]",
+    "sha256": "7e05bebd42bfec0bd063f1dc4eb9a3cbf06fcbbcb2bcc4f0378d0e40e8834336",
+    "size": 127907,
+    "subdir": "linux-aarch64",
+    "timestamp": 1695997049187,
+    "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/ruamel.yaml.clib-0.2.7-py310hb299538_2.conda",
+    "version": "0.2.7"
+}
