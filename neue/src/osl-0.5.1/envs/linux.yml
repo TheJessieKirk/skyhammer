@@ -1,0 +1,15 @@
+name: osl
+channels:
+- conda-forge
+dependencies:
+- python
+- pip
+- vtk>=9.1.0=*osmesa*
+- pyvista
+- pip:
+  - jupyter
+  - ipympl
+  - ipywidgets
+  - ipyevents
+  - ipyvtklink
+  - jupyter_client

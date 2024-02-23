@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xz 5.4.4-pre1\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2024-01-25 14:49+0000\n"
+"POT-Creation-Date: 2023-07-18 23:34+0800\n"
 "PO-Revision-Date: 2023-07-19 20:25+0200\n"
 "Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -51,8 +51,8 @@ msgstr "Endast en fil kan anges med ”--files” eller ”--files0”."
 #. TRANSLATORS: This is a translatable
 #. string because French needs a space
 #. before the colon ("%s : %s").
-#: src/xz/args.c:533 src/xz/coder.c:692 src/xz/coder.c:708 src/xz/coder.c:968
-#: src/xz/coder.c:971 src/xz/file_io.c:605 src/xz/file_io.c:679
+#: src/xz/args.c:533 src/xz/coder.c:691 src/xz/coder.c:707 src/xz/coder.c:967
+#: src/xz/coder.c:970 src/xz/file_io.c:605 src/xz/file_io.c:679
 #: src/xz/file_io.c:769 src/xz/file_io.c:940 src/xz/list.c:369
 #: src/xz/list.c:415 src/xz/list.c:477 src/xz/list.c:581 src/xz/list.c:590
 #, c-format
@@ -78,95 +78,73 @@ msgstr "Komprimering av lzip-filer (.lz) stöds inte"
 
 #: src/xz/args.c:735
 msgid "With --format=raw, --suffix=.SUF is required unless writing to stdout"
-msgstr ""
-"Med --format=raw, --suffix=.SUF krävs om data inte skrivs till standard ut"
+msgstr "Med --format=raw, --suffix=.SUF krävs om data inte skrivs till standard ut"
 
 #: src/xz/coder.c:115
 msgid "Maximum number of filters is four"
 msgstr "Maximalt antal filter är fyra"
 
-#: src/xz/coder.c:135
+#: src/xz/coder.c:134
 msgid "Memory usage limit is too low for the given filter setup."
-msgstr ""
-"Begränsning av minnesanvändning är allt för låg för den angivna "
-"filteruppsättningen."
+msgstr "Begränsning av minnesanvändning är allt för låg för den angivna filteruppsättningen."
 
-#: src/xz/coder.c:170
+#: src/xz/coder.c:169
 msgid "Using a preset in raw mode is discouraged."
 msgstr "Det avråds från att använda en förinställning i rått läge."
 
-#: src/xz/coder.c:172
+#: src/xz/coder.c:171
 msgid "The exact options of the presets may vary between software versions."
-msgstr ""
-"De exakta flaggorna för förinställningar kan variera mellan programversioner."
+msgstr "De exakta flaggorna för förinställningar kan variera mellan programversioner."
 
-#: src/xz/coder.c:195
+#: src/xz/coder.c:194
 msgid "The .lzma format supports only the LZMA1 filter"
 msgstr "Formatet .lzma har endast stöd för LZMA1-filtret"
 
-#: src/xz/coder.c:203
+#: src/xz/coder.c:202
 msgid "LZMA1 cannot be used with the .xz format"
 msgstr "LZMA1 kan inte användas tillsammans med .xz-formatet"
 
-#: src/xz/coder.c:220
+#: src/xz/coder.c:219
 msgid "The filter chain is incompatible with --flush-timeout"
 msgstr "Filterkedjan är inkompatibel med --flush-timeout"
 
-#: src/xz/coder.c:226
+#: src/xz/coder.c:225
 msgid "Switching to single-threaded mode due to --flush-timeout"
 msgstr "Växlar till entrådsläge på grund av --flush-timeout"
 
-#: src/xz/coder.c:250
+#: src/xz/coder.c:249
 #, c-format
 msgid "Using up to %<PRIu32> threads."
 msgstr "Använder upp till %<PRIu32> trådar."
 
-#: src/xz/coder.c:266
+#: src/xz/coder.c:265
 msgid "Unsupported filter chain or filter options"
 msgstr "Filterkedja eller filterflaggor stöds inte"
 
-#: src/xz/coder.c:278
+#: src/xz/coder.c:277
 #, c-format
 msgid "Decompression will need %s MiB of memory."
 msgstr "Dekomprimering kommer att kräva %s MiB minne."
 
-#: src/xz/coder.c:310
+#: src/xz/coder.c:309
 #, c-format
-msgid ""
-"Reduced the number of threads from %s to %s to not exceed the memory usage "
-"limit of %s MiB"
-msgstr ""
-"Reducerade antalet trådar från %s till %s för att inte överstiga "
-"begränsningen av minnesanvändning på %s MiB"
+msgid "Reduced the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
+msgstr "Reducerade antalet trådar från %s till %s för att inte överstiga begränsningen av minnesanvändning på %s MiB"
 
-#: src/xz/coder.c:330
+#: src/xz/coder.c:329
 #, c-format
-msgid ""
-"Reduced the number of threads from %s to one. The automatic memory usage "
-"limit of %s MiB is still being exceeded. %s MiB of memory is required. "
-"Continuing anyway."
-msgstr ""
-"Reducerade antalet trådar från %s till en. Den automatiska "
-"minnesanvändningsgränsen på %s MiB överskrids fortfarande. %s MiB minne "
-"krävs. Fortsätter i alla fall."
+msgid "Reduced the number of threads from %s to one. The automatic memory usage limit of %s MiB is still being exceeded. %s MiB of memory is required. Continuing anyway."
+msgstr "Reducerade antalet trådar från %s till en. Den automatiska minnesanvändningsgränsen på %s MiB överskrids fortfarande. %s MiB minne krävs. Fortsätter i alla fall."
 
-#: src/xz/coder.c:357
+#: src/xz/coder.c:356
 #, c-format
-msgid ""
-"Switching to single-threaded mode to not exceed the memory usage limit of %s "
-"MiB"
-msgstr ""
-"Ändrar till enkeltrådat läge för att inte överskrida "
-"minnesanvändningsgränsen på %s MiB"
+msgid "Switching to single-threaded mode to not exceed the memory usage limit of %s MiB"
+msgstr "Ändrar till enkeltrådat läge för att inte överskrida minnesanvändningsgränsen på %s MiB"
 
-#: src/xz/coder.c:412
+#: src/xz/coder.c:411
 #, c-format
-msgid ""
-"Adjusted LZMA%c dictionary size from %s MiB to %s MiB to not exceed the "
-"memory usage limit of %s MiB"
-msgstr ""
-"Justerade storlek för LZMA%c-lexikon från %s MiB till %s MiB för att inte "
-"överstiga begränsningen av minnesanvändning på %s MiB"
+msgid "Adjusted LZMA%c dictionary size from %s MiB to %s MiB to not exceed the memory usage limit of %s MiB"
+msgstr "Justerade storlek för LZMA%c-lexikon från %s MiB till %s MiB för att inte överstiga begränsningen av minnesanvändning på %s MiB"
 
 #: src/xz/file_io.c:110 src/xz/file_io.c:118
 #, c-format
@@ -266,37 +244,37 @@ msgstr "Fel vid återställning av statusflaggorna för standard in: %s"
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Fel vid hämtning av filstatusflaggorna från standard ut: %s"
 
-#: src/xz/file_io.c:1081
+#: src/xz/file_io.c:1060
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Fel vid återställning av O_APPEND-flaggan till standard ut: %s"
 
-#: src/xz/file_io.c:1093
+#: src/xz/file_io.c:1072
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s: Stängning av filen misslyckades: %s"
 
-#: src/xz/file_io.c:1129 src/xz/file_io.c:1391
+#: src/xz/file_io.c:1108 src/xz/file_io.c:1371
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s: Sökning misslyckades vid skapande av gles fil: %s"
 
-#: src/xz/file_io.c:1229
+#: src/xz/file_io.c:1209
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s: Läsfel: %s"
 
-#: src/xz/file_io.c:1259
+#: src/xz/file_io.c:1239
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s: Fel vid sökning i fil: %s"
 
-#: src/xz/file_io.c:1283
+#: src/xz/file_io.c:1263
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Oväntat filslut"
 
-#: src/xz/file_io.c:1342
+#: src/xz/file_io.c:1322
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s: Skrivfel: %s"
@@ -565,21 +543,15 @@ msgstr "%s: Oväntat slut av indata vid läsning av filnamn"
 
 #: src/xz/main.c:120
 #, c-format
-msgid ""
-"%s: Null character found when reading filenames; maybe you meant to use `--"
-"files0' instead of `--files'?"
-msgstr ""
-"%s: Null-tecken hittat vid läsning av filnamn; kanske menade du att använda "
-"”--files0” istället för ”--files”?"
+msgid "%s: Null character found when reading filenames; maybe you meant to use `--files0' instead of `--files'?"
+msgstr "%s: Null-tecken hittat vid läsning av filnamn; kanske menade du att använda ”--files0” istället för ”--files”?"
 
 #: src/xz/main.c:188
 msgid "Compression and decompression with --robot are not supported yet."
 msgstr "Komprimering och dekomprimering med --robot stöds inte än."
 
 #: src/xz/main.c:266
-msgid ""
-"Cannot read data from standard input when reading filenames from standard "
-"input"
+msgid "Cannot read data from standard input when reading filenames from standard input"
 msgstr "Kan inte läsa data från standard in när filnamn läses från standard in"
 
 #. TRANSLATORS: This is the program name in the beginning
@@ -659,11 +631,8 @@ msgstr ""
 "\n"
 
 #: src/xz/message.c:968
-msgid ""
-"Mandatory arguments to long options are mandatory for short options too.\n"
-msgstr ""
-"Nödvändiga argument till långa flaggor är också nödvändiga för korta "
-"flaggor.\n"
+msgid "Mandatory arguments to long options are mandatory for short options too.\n"
+msgstr "Nödvändiga argument till långa flaggor är också nödvändiga för korta flaggor.\n"
 
 #: src/xz/message.c:972
 msgid " Operation mode:\n"
@@ -714,8 +683,7 @@ msgid ""
 "  -S, --suffix=.SUF   use the suffix `.SUF' on compressed files\n"
 "      --files[=FILE]  read filenames to process from FILE; if FILE is\n"
 "                      omitted, filenames are read from the standard input;\n"
-"                      filenames must be terminated with the newline "
-"character\n"
+"                      filenames must be terminated with the newline character\n"
 "      --files0[=FILE] like --files but use the null character as terminator"
 msgstr ""
 "      --no-sparse     skapa inte glesa filer vid dekomprimering\n"
@@ -743,36 +711,28 @@ msgstr ""
 "  -F, --format=FMT    filformat att koda eller avkoda; möjliga värden är\n"
 "                      ”auto” (standard), ”xz”, ”lzma”, ”lzip” och ”raw”\n"
 "  -C, --check=CHECK   typ av integritetskontroll: ”none” (använd med\n"
-"                      försiktighet), ”crc32”, ”crc64” (standard), eller "
-"”sha256”"
+"                      försiktighet), ”crc32”, ”crc64” (standard), eller ”sha256”"
 
 #: src/xz/message.c:1012
-msgid ""
-"      --ignore-check  don't verify the integrity check when decompressing"
+msgid "      --ignore-check  don't verify the integrity check when decompressing"
 msgstr "      --ignore-check  verifiera inte integritet vid dekomprimering"
 
 #: src/xz/message.c:1016
 msgid ""
-"  -0 ... -9           compression preset; default is 6; take compressor "
-"*and*\n"
-"                      decompressor memory usage into account before using "
-"7-9!"
+"  -0 ... -9           compression preset; default is 6; take compressor *and*\n"
+"                      decompressor memory usage into account before using 7-9!"
 msgstr ""
 "  -0 ... -9           kompressionsförinställning; standard är 6; ta\n"
-"                      minnesanvändning för komprimerare *och* "
-"dekomprimerare\n"
+"                      minnesanvändning för komprimerare *och* dekomprimerare\n"
 "                      i beaktande innan du använder 7-9!"
 
 #: src/xz/message.c:1020
 msgid ""
-"  -e, --extreme       try to improve compression ratio by using more CPU "
-"time;\n"
+"  -e, --extreme       try to improve compression ratio by using more CPU time;\n"
 "                      does not affect decompressor memory requirements"
 msgstr ""
-"  -e, --extreme       försök att förbättra komprimeringsförhållande genom "
-"att\n"
-"                      använda mer CPU-tid; påverkar inte minnesanvändning "
-"för\n"
+"  -e, --extreme       försök att förbättra komprimeringsförhållande genom att\n"
+"                      använda mer CPU-tid; påverkar inte minnesanvändning för\n"
 "                      dekomprimerare"
 
 #: src/xz/message.c:1024
@@ -780,16 +740,14 @@ msgid ""
 "  -T, --threads=NUM   use at most NUM threads; the default is 1; set to 0\n"
 "                      to use as many threads as there are processor cores"
 msgstr ""
-"  -T, --threads=NUM   använd som mest NUM trådar; standard är 1; sätt till "
-"0\n"
+"  -T, --threads=NUM   använd som mest NUM trådar; standard är 1; sätt till 0\n"
 "                      för att använda så många trådar som det finns\n"
 "                      processorkärnor"
 
 #: src/xz/message.c:1029
 msgid ""
 "      --block-size=SIZE\n"
-"                      start a new .xz block after every SIZE bytes of "
-"input;\n"
+"                      start a new .xz block after every SIZE bytes of input;\n"
 "                      use this to set the block size for threaded compression"
 msgstr ""
 "      --block-size=STORLEK\n"
@@ -810,19 +768,14 @@ msgstr ""
 #: src/xz/message.c:1037
 msgid ""
 "      --flush-timeout=TIMEOUT\n"
-"                      when compressing, if more than TIMEOUT milliseconds "
-"has\n"
-"                      passed since the previous flush and reading more "
-"input\n"
+"                      when compressing, if more than TIMEOUT milliseconds has\n"
+"                      passed since the previous flush and reading more input\n"
 "                      would block, all pending data is flushed out"
 msgstr ""
 "      --flush-timeout=TIDSGRÄNS\n"
-"                      vid komprimering, om mer än TIDSGRÄNS millisekunder "
-"har\n"
-"                      passerat sedan den föregående spolningen och läsning "
-"av\n"
-"                      mer indata skulle blockera, så kommer all väntande "
-"data\n"
+"                      vid komprimering, om mer än TIDSGRÄNS millisekunder har\n"
+"                      passerat sedan den föregående spolningen och läsning av\n"
+"                      mer indata skulle blockera, så kommer all väntande data\n"
 "                      att spolas ut"
 
 #: src/xz/message.c:1043
@@ -832,8 +785,7 @@ msgid ""
 "      --memlimit-decompress=LIMIT\n"
 "      --memlimit-mt-decompress=LIMIT\n"
 "  -M, --memlimit=LIMIT\n"
-"                      set memory usage limit for compression, "
-"decompression,\n"
+"                      set memory usage limit for compression, decompression,\n"
 "                      threaded decompression, or all of these; LIMIT is in\n"
 "                      bytes, % of RAM, or 0 for defaults"
 msgstr ""
@@ -841,23 +793,17 @@ msgstr ""
 "      --memlimit-decompress=BEGR\n"
 "      --memlimit-mt-decompress=BEGR\n"
 "  -M, --memlimit=BEGR\n"
-"                      sätt begränsning av minnesanvändning för "
-"komprimering,\n"
+"                      sätt begränsning av minnesanvändning för komprimering,\n"
 "                      dekomprimering, trådad dekomprimering, eller alla av\n"
-"                      dessa; BEGR är i byte, % RAM, eller 0 för "
-"standardvärden"
+"                      dessa; BEGR är i byte, % RAM, eller 0 för standardvärden"
 
 #: src/xz/message.c:1052
 msgid ""
-"      --no-adjust     if compression settings exceed the memory usage "
-"limit,\n"
-"                      give an error instead of adjusting the settings "
-"downwards"
+"      --no-adjust     if compression settings exceed the memory usage limit,\n"
+"                      give an error instead of adjusting the settings downwards"
 msgstr ""
-"      --no-adjust     om komprimeringsinställningar överstiger begränsningen "
-"av\n"
-"                      minnesanvändning, ge ett fel istället för att justera "
-"ner\n"
+"      --no-adjust     om komprimeringsinställningar överstiger begränsningen av\n"
+"                      minnesanvändning, ge ett fel istället för att justera ner\n"
 "                      inställningarna"
 
 #: src/xz/message.c:1058
@@ -872,10 +818,8 @@ msgstr ""
 #: src/xz/message.c:1067
 msgid ""
 "\n"
-"  --lzma1[=OPTS]      LZMA1 or LZMA2; OPTS is a comma-separated list of zero "
-"or\n"
-"  --lzma2[=OPTS]      more of the following options (valid values; "
-"default):\n"
+"  --lzma1[=OPTS]      LZMA1 or LZMA2; OPTS is a comma-separated list of zero or\n"
+"  --lzma2[=OPTS]      more of the following options (valid values; default):\n"
 "                        preset=PRE reset options to a preset (0-9[e])\n"
 "                        dict=NUM   dictionary size (4KiB - 1536MiB; 8MiB)\n"
 "                        lc=NUM     number of literal context bits (0-4; 3)\n"
@@ -883,28 +827,22 @@ msgid ""
 "                        pb=NUM     number of position bits (0-4; 2)\n"
 "                        mode=MODE  compression mode (fast, normal; normal)\n"
 "                        nice=NUM   nice length of a match (2-273; 64)\n"
-"                        mf=NAME    match finder (hc3, hc4, bt2, bt3, bt4; "
-"bt4)\n"
-"                        depth=NUM  maximum search depth; 0=automatic "
-"(default)"
+"                        mf=NAME    match finder (hc3, hc4, bt2, bt3, bt4; bt4)\n"
+"                        depth=NUM  maximum search depth; 0=automatic (default)"
 msgstr ""
 "\n"
-"  --lzma1[=FLAGGOR]   LZMA1 eller LZMA2; FLAGGOR är en kommaseparerad lista "
-"av\n"
+"  --lzma1[=FLAGGOR]   LZMA1 eller LZMA2; FLAGGOR är en kommaseparerad lista av\n"
 "                      noll eller\n"
 "  --lzma2[=FLAGGOR]   fler av följande flaggor (giltiga värden; standard):\n"
 "                        preset=FÖR återställ flaggor till en förinställning\n"
 "                                   (0-9[e])\n"
 "                        dict=NUM   lexikonstorlek (4KiB - 1536MiB; 8MiB)\n"
-"                        lc=NUM     antal bitar för bokstavligkontext (0-4; "
-"3)\n"
-"                        lp=NUM     antal bitar för bokstavligposition (0-4; "
-"0)\n"
+"                        lc=NUM     antal bitar för bokstavligkontext (0-4; 3)\n"
+"                        lp=NUM     antal bitar för bokstavligposition (0-4; 0)\n"
 "                        pb=NUM     antal bitar för position (0-4; 2)\n"
 "                        mode=LÄGE  komprimeringsläge (fast, normal; normal)\n"
 "                        nice=NUM   bra längd för en matchning (2-273; 64)\n"
-"                        mf=NAMN    matchningshittare (hc3, hc4, bt2, bt3, "
-"bt4;\n"
+"                        mf=NAMN    matchningshittare (hc3, hc4, bt2, bt3, bt4;\n"
 "                                   bt4)\n"
 "                        depth=NUM  maximalt sökdjup; 0=automatisk (standard)"
 
@@ -941,8 +879,7 @@ msgid ""
 "                                   from each other (1-256; 1)"
 msgstr ""
 "\n"
-"  --delta[=FLAGGOR]   Deltafilter; giltiga FLAGGOR (giltiga värden; "
-"standard):\n"
+"  --delta[=FLAGGOR]   Deltafilter; giltiga FLAGGOR (giltiga värden; standard):\n"
 "                        dist=NUM   avstånd mellan byte som subtraheras\n"
 "                                   från varandra (1-256; 1)"
 
@@ -956,8 +893,7 @@ msgstr ""
 
 #: src/xz/message.c:1106
 msgid ""
-"  -q, --quiet         suppress warnings; specify twice to suppress errors "
-"too\n"
+"  -q, --quiet         suppress warnings; specify twice to suppress errors too\n"
 "  -v, --verbose       be verbose; specify twice for even more verbose"
 msgstr ""
 "  -q, --quiet         undertryck varningar; ange två gånger för att också\n"
@@ -969,20 +905,17 @@ msgid "  -Q, --no-warn       make warnings not affect the exit status"
 msgstr "  -Q, --no-warn       låt inte varningar påverka avslutningsstatus"
 
 #: src/xz/message.c:1113
-msgid ""
-"      --robot         use machine-parsable messages (useful for scripts)"
+msgid "      --robot         use machine-parsable messages (useful for scripts)"
 msgstr ""
 "      --robot         använd maskintolkningsbara meddelanden\n"
 "                      (användbara för skript)"
 
 #: src/xz/message.c:1116
 msgid ""
-"      --info-memory   display the total amount of RAM and the currently "
-"active\n"
+"      --info-memory   display the total amount of RAM and the currently active\n"
 "                      memory usage limits, and exit"
 msgstr ""
-"      --info-memory   visa den totala mängden RAM och den för närvarande "
-"aktiva\n"
+"      --info-memory   visa den totala mängden RAM och den för närvarande aktiva\n"
 "                      begränsningen av minnesanvändning och avsluta"
 
 #: src/xz/message.c:1119
@@ -990,8 +923,7 @@ msgid ""
 "  -h, --help          display the short help (lists only the basic options)\n"
 "  -H, --long-help     display this long help and exit"
 msgstr ""
-"  -h, --help          visa den korta hjälpen (listar endast de "
-"grundläggande\n"
+"  -h, --help          visa den korta hjälpen (listar endast de grundläggande\n"
 "                      flaggorna)\n"
 "  -H, --long-help     visar denna långa hjälp av avsluta"
 
@@ -1034,8 +966,7 @@ msgstr "%s webbsida: <%s>\n"
 
 #: src/xz/message.c:1142
 msgid "THIS IS A DEVELOPMENT VERSION NOT INTENDED FOR PRODUCTION USE."
-msgstr ""
-"DETTA ÄR EN UTVECKLINGSVERSION SOM INTE ÄR AVSEDD FÖR PRODUKTIONSANVÄNDNING."
+msgstr "DETTA ÄR EN UTVECKLINGSVERSION SOM INTE ÄR AVSEDD FÖR PRODUKTIONSANVÄNDNING."
 
 #: src/xz/options.c:86
 #, c-format
@@ -1052,12 +983,12 @@ msgstr "%s: Ogiltigt flaggnamn"
 msgid "%s: Invalid option value"
 msgstr "%s: Ogiltigt flaggvärde"
 
-#: src/xz/options.c:248
+#: src/xz/options.c:247
 #, c-format
 msgid "Unsupported LZMA1/LZMA2 preset: %s"
 msgstr "LZMA1/LZMA2-förinställning stöds inte: %s"
 
-#: src/xz/options.c:356
+#: src/xz/options.c:355
 msgid "The sum of lc and lp must not exceed 4"
 msgstr "Summan av lc och lp får inte överstiga 4"
 
@@ -1076,31 +1007,30 @@ msgstr "%s: Fil har redan ”%s”-ändelse, hoppar över"
 msgid "%s: Invalid filename suffix"
 msgstr "%s: Ogiltig filnamnsändelse"
 
-#: src/xz/util.c:107
+#: src/xz/util.c:71
 #, c-format
 msgid "%s: Value is not a non-negative decimal integer"
 msgstr "%s: Värdet är inte ett icke-negativt, decimalt heltal"
 
-#: src/xz/util.c:149
+#: src/xz/util.c:113
 #, c-format
 msgid "%s: Invalid multiplier suffix"
 msgstr "%s: Ogiltig multipeländelse"
 
-#: src/xz/util.c:151
+#: src/xz/util.c:115
 msgid "Valid suffixes are `KiB' (2^10), `MiB' (2^20), and `GiB' (2^30)."
 msgstr "Giltiga ändelser är ”KiB” (2^10), ”MiB” (2^20) och ”GiB” (2^30)."
 
-#: src/xz/util.c:168
+#: src/xz/util.c:132
 #, c-format
 msgid "Value of the option `%s' must be in the range [%<PRIu64>, %<PRIu64>]"
-msgstr ""
-"Värdet för flaggan ”%s” måste vara inom intervallet [%<PRIu64>, %<PRIu64>]"
+msgstr "Värdet för flaggan ”%s” måste vara inom intervallet [%<PRIu64>, %<PRIu64>]"
 
-#: src/xz/util.c:270
+#: src/xz/util.c:269
 msgid "Compressed data cannot be read from a terminal"
 msgstr "Komprimerad data kan inte läsas från en terminal"
 
-#: src/xz/util.c:283
+#: src/xz/util.c:282
 msgid "Compressed data cannot be written to a terminal"
 msgstr "Komprimerad data kan inte skrivas till en terminal"
 
@@ -1138,23 +1068,17 @@ msgstr "Okänt fel"
 
 #~ msgid ""
 #~ "  Streams:\n"
-#~ "    Stream    Blocks      CompOffset    UncompOffset        CompSize      "
-#~ "UncompSize  Ratio  Check      Padding"
+#~ "    Stream    Blocks      CompOffset    UncompOffset        CompSize      UncompSize  Ratio  Check      Padding"
 #~ msgstr ""
 #~ "  Strömmar:\n"
-#~ "    Ström     Block       KompPos       OkompPos            KompStrl      "
-#~ "OkompStrl   Förh.  Kontroll   Fyllnad"
+#~ "    Ström     Block       KompPos       OkompPos            KompStrl      OkompStrl   Förh.  Kontroll   Fyllnad"
 
 #~ msgid ""
 #~ "  Blocks:\n"
-#~ "    Stream     Block      CompOffset    UncompOffset       TotalSize      "
-#~ "UncompSize  Ratio  Check"
+#~ "    Stream     Block      CompOffset    UncompOffset       TotalSize      UncompSize  Ratio  Check"
 #~ msgstr ""
 #~ "  Block:\n"
-#~ "    Ström      Block      KompPos       OkompPos           TotalStrl      "
-#~ "OkompStrl   Förh.  Kontroll"
+#~ "    Ström      Block      KompPos       OkompPos           TotalStrl      OkompStrl   Förh.  Kontroll"
 
-#~ msgid ""
-#~ "      CheckVal %*s Header  Flags        CompSize    MemUsage  Filters"
-#~ msgstr ""
-#~ "      KntrlVär %*s Huvud   Flaggor      KompStrl    Minne     Filter"
+#~ msgid "      CheckVal %*s Header  Flags        CompSize    MemUsage  Filters"
+#~ msgstr "      KntrlVär %*s Huvud   Flaggor      KompStrl    Minne     Filter"

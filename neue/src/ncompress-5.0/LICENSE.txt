@@ -1,3 +1,0 @@
-The ncompress code is released into the public domain.
-
-See the UNLICENSE file for more details.
