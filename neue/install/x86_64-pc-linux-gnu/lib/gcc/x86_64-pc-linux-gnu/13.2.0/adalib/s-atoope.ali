@@ -16,8 +16,8 @@ RN
 U system.atomic_operations%s  s-atoope.ads	850ed59d NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240207124712 426dafb8 system%s
-D s-atoope.ads		20240207124711 c7637a25 system.atomic_operations%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-atoope.ads		20230727081304 c7637a25 system.atomic_operations%s
 G a e
 X 1 system.ads
 37K9*System 153e11 2|36r9 39r5

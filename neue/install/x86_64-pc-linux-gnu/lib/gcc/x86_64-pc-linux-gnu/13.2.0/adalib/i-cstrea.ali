@@ -27,14 +27,14 @@ W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.crtl%s		s-crtl.ads		s-crtl.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240207124711 15f799c2 interfaces%s
-D i-cstrea.ads		20240207124712 e53d8b8e interfaces.c_streams%s
-D i-cstrea.adb		20240207124712 98747b85 interfaces.c_streams%b
-D system.ads		20240207124712 426dafb8 system%s
-D s-crtl.ads		20240207124711 8a0692f8 system.crtl%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D i-cstrea.ads		20230727081304 e53d8b8e interfaces.c_streams%s
+D i-cstrea.adb		20230727081304 98747b85 interfaces.c_streams%b
+D system.ads		20230727081304 426dafb8 system%s
+D s-crtl.ads		20230727081304 8a0692f8 system.crtl%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
 G a e
 G c Z s s [stdin interfaces__c_streams 72 13 none]
 G c Z s s [stdout interfaces__c_streams 73 13 none]

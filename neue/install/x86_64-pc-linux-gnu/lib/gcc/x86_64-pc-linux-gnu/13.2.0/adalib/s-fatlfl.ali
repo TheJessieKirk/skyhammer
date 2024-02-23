@@ -28,17 +28,17 @@ W system%s		system.ads		system.ali
 W system.fat_gen%s
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-except.ads		20240207124711 2a7d8d70 ada.exceptions%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-fatgen.ads		20240207124711 d28c6cfe system.fat_gen%s
-D s-fatgen.adb		20240207124712 6cc1fec9 system.fat_gen%b
-D s-fatlfl.ads		20240207124711 378cba9f system.fat_lflt%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
-D s-traent.ads		20240207124712 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240207124711 fa2a7f59 system.unsigned_types%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-except.ads		20230727081304 2a7d8d70 ada.exceptions%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-fatgen.ads		20230727081304 d28c6cfe system.fat_gen%s
+D s-fatgen.adb		20230727081304 6cc1fec9 system.fat_gen%b
+D s-fatlfl.ads		20230727081304 378cba9f system.fat_lflt%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
+D s-traent.ads		20230727081304 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20230727081304 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s s [adjacent system__fat_lflt__attr_long_float 53 13 45_4]
 G c Z s s [ceiling system__fat_lflt__attr_long_float 55 13 45_4]

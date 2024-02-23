@@ -27,20 +27,20 @@ W system.atomic_primitives%s  s-atopri.adb	s-atopri.ali
 U system.atomic_operations.modular_arithmetic%s  s-aomoar.ads  20d54f9f BN NE OL PU PK GE
 W system.atomic_operations%s  s-atoope.ads	s-atoope.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240207124711 15f799c2 interfaces%s
-D i-c.ads		20240207124711 5c5a6c17 interfaces.c%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-atoope.ads		20240207124711 c7637a25 system.atomic_operations%s
-D s-atopex.ads		20240207124712 997451f6 system.atomic_operations.exchange%s
-D s-atopex.adb		20240207124710 f2dd6756 system.atomic_operations.exchange%b
-D s-aomoar.ads		20240207124712 e7b635ba system.atomic_operations.modular_arithmetic%s
-D s-aomoar.adb		20240207124711 a58f22be system.atomic_operations.modular_arithmetic%b
-D s-atopri.ads		20240207124712 1b132436 system.atomic_primitives%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D i-c.ads		20230727081304 5c5a6c17 interfaces.c%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-atoope.ads		20230727081304 c7637a25 system.atomic_operations%s
+D s-atopex.ads		20230727081304 997451f6 system.atomic_operations.exchange%s
+D s-atopex.adb		20230727081304 f2dd6756 system.atomic_operations.exchange%b
+D s-aomoar.ads		20230727081304 e7b635ba system.atomic_operations.modular_arithmetic%s
+D s-aomoar.adb		20230727081304 a58f22be system.atomic_operations.modular_arithmetic%b
+D s-atopri.ads		20230727081304 1b132436 system.atomic_primitives%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [modular_arithmetic system__atomic_operations 38 34 none]
 X 3 interfac.ads

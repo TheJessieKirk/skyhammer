@@ -37,21 +37,21 @@ W gnat%s		gnat.ads		gnat.ali
 W interfaces%s		interfac.ads		interfac.ali
 W interfaces.c%s	i-c.adb			i-c.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-calend.ads		20240207124712 f55c50a3 ada.calendar%s
-D a-calfor.ads		20240207124711 0f4707d1 ada.calendar.formatting%s
-D a-catizo.ads		20240207124712 eaa56756 ada.calendar.time_zones%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240207124711 b5988c27 gnat%s
-D g-calend.ads		20240207124710 cad86fa7 gnat.calendar%s
-D g-calend.adb		20240207124712 da15bb07 gnat.calendar%b
-D interfac.ads		20240207124711 15f799c2 interfaces%s
-D i-c.ads		20240207124711 5c5a6c17 interfaces.c%s
-D i-cexten.ads		20240207124710 be1de098 interfaces.c.extensions%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-calend.ads		20230727081303 f55c50a3 ada.calendar%s
+D a-calfor.ads		20230727081303 0f4707d1 ada.calendar.formatting%s
+D a-catizo.ads		20230727081303 eaa56756 ada.calendar.time_zones%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20230727081304 b5988c27 gnat%s
+D g-calend.ads		20230727081304 cad86fa7 gnat.calendar%s
+D g-calend.adb		20230727081304 da15bb07 gnat.calendar%b
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D i-c.ads		20230727081304 5c5a6c17 interfaces.c%s
+D i-cexten.ads		20230727081304 be1de098 interfaces.c.extensions%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [hour gnat__calendar 62 13 none]
 G c Z s b [minute gnat__calendar 63 13 none]

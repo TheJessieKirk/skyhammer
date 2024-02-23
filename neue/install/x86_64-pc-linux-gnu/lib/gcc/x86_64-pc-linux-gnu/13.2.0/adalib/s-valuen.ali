@@ -27,13 +27,13 @@ W system.val_util%s	s-valuti.adb		s-valuti.ali
 U system.value_n%s	s-valuen.ads		30dae62b BN NE OL PR PK GE
 W system%s		system.ads		system.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-casuti.ads		20240207124710 cf13d755 system.case_util%s
-D s-valuti.ads		20240207124711 fcd603d8 system.val_util%s
-D s-valuen.ads		20240207124711 72b74993 system.value_n%s
-D s-valuen.adb		20240207124712 82820e8f system.value_n%b
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-casuti.ads		20230727081304 cf13d755 system.case_util%s
+D s-valuti.ads		20230727081304 fcd603d8 system.val_util%s
+D s-valuen.ads		20230727081304 72b74993 system.value_n%s
+D s-valuen.adb		20230727081304 82820e8f system.value_n%b
 G a e
 G c Z s b [value_n system 40 16 none]
 X 1 ada.ads

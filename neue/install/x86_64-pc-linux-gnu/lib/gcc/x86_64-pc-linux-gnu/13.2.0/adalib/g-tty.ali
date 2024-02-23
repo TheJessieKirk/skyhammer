@@ -26,22 +26,22 @@ W gnat%s		gnat.ads		gnat.ali
 W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
 W system%s		system.ads		system.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240207124712 c3a8ac65 ada.unchecked_deallocation%s
-D gnat.ads		20240207124711 b5988c27 gnat%s
-D g-os_lib.ads		20240207124711 0db74523 gnat.os_lib%s
-D g-tty.ads		20240207124712 e6a3d7fb gnat.tty%s
-D g-tty.adb		20240207124711 09e89ade gnat.tty%b
-D interfac.ads		20240207124711 15f799c2 interfaces%s
-D i-c.ads		20240207124711 5c5a6c17 interfaces.c%s
-D i-cstrin.ads		20240207124711 f40c8db4 interfaces.c.strings%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-os_lib.ads		20240207124711 a2467c22 system.os_lib%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
-D s-string.ads		20240207124711 582aac7d system.strings%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20230727081304 c3a8ac65 ada.unchecked_deallocation%s
+D gnat.ads		20230727081304 b5988c27 gnat%s
+D g-os_lib.ads		20230727081304 0db74523 gnat.os_lib%s
+D g-tty.ads		20230727081304 e6a3d7fb gnat.tty%s
+D g-tty.adb		20230727081304 09e89ade gnat.tty%b
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D i-c.ads		20230727081304 5c5a6c17 interfaces.c%s
+D i-cstrin.ads		20230727081304 f40c8db4 interfaces.c.strings%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-os_lib.ads		20230727081304 a2467c22 system.os_lib%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
+D s-string.ads		20230727081304 582aac7d system.strings%s
 G a e
 G c Z s b [tty_supported gnat__tty 46 13 none]
 G c Z s b [allocate_tty gnat__tty 50 14 none]

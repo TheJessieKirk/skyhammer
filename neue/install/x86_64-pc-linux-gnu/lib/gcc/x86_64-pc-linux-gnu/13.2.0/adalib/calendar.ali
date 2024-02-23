@@ -19,13 +19,13 @@ U calendar%s		calendar.ads		d9e9756e NE OL
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-calend.ads		20240207124712 f55c50a3 ada.calendar%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D calendar.ads		20240207124712 2cb525cd calendar%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-calend.ads		20230727081303 f55c50a3 ada.calendar%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D calendar.ads		20230727081304 2cb525cd calendar%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 4|16r6 18r26

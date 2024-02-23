@@ -21,15 +21,15 @@ W gnat%s		gnat.ads		gnat.ali
 W system%s		system.ads		system.ali
 W system.htable%s	s-htable.adb		s-htable.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240207124711 b5988c27 gnat%s
-D g-htable.ads		20240207124711 7e0467ec gnat.htable%s
-D g-htable.adb		20240207124711 e198aece gnat.htable%b
-D system.ads		20240207124712 426dafb8 system%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-htable.ads		20240207124711 81d958eb system.htable%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20230727081304 b5988c27 gnat%s
+D g-htable.ads		20230727081304 7e0467ec gnat.htable%s
+D g-htable.adb		20230727081304 e198aece gnat.htable%b
+D system.ads		20230727081304 426dafb8 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-htable.ads		20230727081304 81d958eb system.htable%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 G a e
 X 3 gnat.ads
 37K9*GNAT 60e9 4|44r9 58r5 5|37r14 38r5

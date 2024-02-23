@@ -25,14 +25,14 @@ W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 U system.pack_74%s	s-pack74.ads		7852617c BN NE OL PR PK
 W system%s		system.ads		system.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-pack74.ads		20240207124712 3a3fcec4 system.pack_74%s
-D s-pack74.adb		20240207124712 93505a06 system.pack_74%b
-D s-stoele.ads		20240207124712 ab5468e4 system.storage_elements%s
-D s-stoele.adb		20240207124711 8f5a9db6 system.storage_elements%b
-D s-unstyp.ads		20240207124711 fa2a7f59 system.unsigned_types%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-pack74.ads		20230727081304 3a3fcec4 system.pack_74%s
+D s-pack74.adb		20230727081304 93505a06 system.pack_74%b
+D s-stoele.ads		20230727081304 ab5468e4 system.storage_elements%s
+D s-stoele.adb		20230727081304 8f5a9db6 system.storage_elements%b
+D s-unstyp.ads		20230727081304 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s b [get_74 system__pack_74 45 13 none]
 G c Z s b [set_74 system__pack_74 52 14 none]

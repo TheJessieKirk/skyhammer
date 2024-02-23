@@ -41,20 +41,20 @@ Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-except.ads		20240207124711 2a7d8d70 ada.exceptions%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240207124711 15f799c2 interfaces%s
-D i-cobol.ads		20240207124710 91e9ba58 interfaces.cobol%s
-D i-cobol.adb		20240207124710 39532622 interfaces.cobol%b
-D system.ads		20240207124712 426dafb8 system%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
-D s-secsta.ads		20240207124711 578279f5 system.secondary_stack%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240207124712 ab5468e4 system.storage_elements%s
-D s-traent.ads		20240207124712 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240207124711 fa2a7f59 system.unsigned_types%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-except.ads		20230727081304 2a7d8d70 ada.exceptions%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D i-cobol.ads		20230727081304 91e9ba58 interfaces.cobol%s
+D i-cobol.adb		20230727081304 39532622 interfaces.cobol%b
+D system.ads		20230727081304 426dafb8 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-secsta.ads		20230727081304 578279f5 system.secondary_stack%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
+D s-stoele.ads		20230727081304 ab5468e4 system.storage_elements%s
+D s-traent.ads		20230727081304 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20230727081304 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s b [to_cobol interfaces__cobol 327 13 none]
 G c Z s b [to_ada interfaces__cobol 328 13 none]

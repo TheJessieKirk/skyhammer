@@ -28,15 +28,15 @@ W gnat%s		gnat.ads		gnat.ali
 U gnat.lists%s		g-lists.ads		4d95c121 BN EE NE OL PK
 W gnat%s		gnat.ads		gnat.ali
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240207124712 c3a8ac65 ada.unchecked_deallocation%s
-D gnat.ads		20240207124711 b5988c27 gnat%s
-D g-lists.ads		20240207124712 f80d4d06 gnat.lists%s
-D g-lists.adb		20240207124711 7b154114 gnat.lists%b
-D system.ads		20240207124712 426dafb8 system%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20230727081304 c3a8ac65 ada.unchecked_deallocation%s
+D gnat.ads		20230727081304 b5988c27 gnat%s
+D g-lists.ads		20230727081304 f80d4d06 gnat.lists%s
+D g-lists.adb		20230727081304 7b154114 gnat.lists%b
+D system.ads		20230727081304 426dafb8 system%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 6|32r6 71r13 74r29

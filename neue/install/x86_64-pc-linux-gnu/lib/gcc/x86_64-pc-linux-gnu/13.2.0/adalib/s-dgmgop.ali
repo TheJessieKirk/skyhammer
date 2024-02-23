@@ -19,12 +19,12 @@ U system.dim.generic_mks.generic_other_prefixes%s  s-dgmgop.ads  a292ac05 NE OL 
 W system.dim%s		s-dim.ads		s-dim.ali
 W system.dim.generic_mks%s
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-numeri.ads		20240207124711 84bea7a3 ada.numerics%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-dim.ads		20240207124711 ec3077cc system.dim%s
-D s-digemk.ads		20240207124712 d6ab2b3c system.dim.generic_mks%s
-D s-dgmgop.ads		20240207124712 74398739 system.dim.generic_mks.generic_other_prefixes%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-numeri.ads		20230727081304 84bea7a3 ada.numerics%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-dim.ads		20230727081304 ec3077cc system.dim%s
+D s-digemk.ads		20230727081304 d6ab2b3c system.dim.generic_mks%s
+D s-dgmgop.ads		20230727081304 74398739 system.dim.generic_mks.generic_other_prefixes%s
 G a e
 X 3 system.ads
 37K9*System 153e11 6|39r9 174r5

@@ -21,26 +21,26 @@ W system.arith_32%s	s-arit32.adb		s-arit32.ali
 Z system.exn_int%s	s-exnint.ads		s-exnint.ali
 W system.fore_f%s
 
-D ada.ads		20240207124711 76789da1 ada%s
-D a-assert.ads		20240207124711 ba465f5c ada.assertions%s
-D a-except.ads		20240207124711 2a7d8d70 ada.exceptions%s
-D a-numeri.ads		20240207124711 84bea7a3 ada.numerics%s
-D a-nubinu.ads		20240207124711 93f1f3d1 ada.numerics.big_numbers%s
-D a-nbnbig.ads		20240207124710 711e0174 ada.numerics.big_numbers.big_integers_ghost%s
-D a-unccon.ads		20240207124712 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240207124711 15f799c2 interfaces%s
-D system.ads		20240207124712 426dafb8 system%s
-D s-arit32.ads		20240207124712 e8522a76 system.arith_32%s
-D s-assert.ads		20240207124711 9c4520c7 system.assertions%s
-D s-exctab.ads		20240207124712 91bef6ef system.exception_table%s
-D s-exnint.ads		20240207124712 3d33a4e5 system.exn_int%s
-D s-exponn.ads		20240207124712 99b98823 system.exponn%s
-D s-fore_f.ads		20240207124711 5b88f089 system.fore_f%s
-D s-fore_f.adb		20240207124712 1df060cf system.fore_f%b
-D s-fofi32.ads		20240207124711 1d43923c system.fore_fixed_32%s
-D s-parame.ads		20240207124712 d494a4a6 system.parameters%s
-D s-stalib.ads		20240207124711 1c9580f6 system.standard_library%s
-D s-traent.ads		20240207124712 c81cbf8c system.traceback_entries%s
+D ada.ads		20230727081304 76789da1 ada%s
+D a-assert.ads		20230727081303 ba465f5c ada.assertions%s
+D a-except.ads		20230727081304 2a7d8d70 ada.exceptions%s
+D a-numeri.ads		20230727081304 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20230727081304 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20230727081304 711e0174 ada.numerics.big_numbers.big_integers_ghost%s
+D a-unccon.ads		20230727081304 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230727081304 15f799c2 interfaces%s
+D system.ads		20230727081304 426dafb8 system%s
+D s-arit32.ads		20230727081304 e8522a76 system.arith_32%s
+D s-assert.ads		20230727081304 9c4520c7 system.assertions%s
+D s-exctab.ads		20230727081304 91bef6ef system.exception_table%s
+D s-exnint.ads		20230727081304 3d33a4e5 system.exn_int%s
+D s-exponn.ads		20230727081304 99b98823 system.exponn%s
+D s-fore_f.ads		20230727081304 5b88f089 system.fore_f%s
+D s-fore_f.adb		20230727081304 1df060cf system.fore_f%b
+D s-fofi32.ads		20230727081304 1d43923c system.fore_fixed_32%s
+D s-parame.ads		20230727081304 d494a4a6 system.parameters%s
+D s-stalib.ads		20230727081304 1c9580f6 system.standard_library%s
+D s-traent.ads		20230727081304 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s s [fore_fixed system__fore_fixed_32__impl 47 13 44_4]
 X 8 interfac.ads
