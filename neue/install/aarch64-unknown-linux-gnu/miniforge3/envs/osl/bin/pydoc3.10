@@ -1,0 +1,5 @@
+#!/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/envs/osl/bin/python3.10
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()
