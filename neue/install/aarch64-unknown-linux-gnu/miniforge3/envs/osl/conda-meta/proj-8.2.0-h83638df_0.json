@@ -1,0 +1,603 @@
+{
+  "build": "h83638df_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [
+    "proj4 999999999999"
+  ],
+  "depends": [
+    "libcurl >=7.79.1,<9.0a0",
+    "libgcc-ng >=9.4.0",
+    "libstdcxx-ng >=9.4.0",
+    "libtiff >=4.3.0,<4.5.0a0",
+    "sqlite >=3.36.0,<4.0a0"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/proj-8.2.0-h83638df_0",
+  "features": "",
+  "files": [
+    "bin/cct",
+    "bin/cs2cs",
+    "bin/geod",
+    "bin/gie",
+    "bin/invgeod",
+    "bin/invproj",
+    "bin/proj",
+    "bin/projinfo",
+    "bin/projsync",
+    "etc/conda/activate.d/proj4-activate.csh",
+    "etc/conda/activate.d/proj4-activate.fish",
+    "etc/conda/activate.d/proj4-activate.sh",
+    "etc/conda/deactivate.d/proj4-deactivate.csh",
+    "etc/conda/deactivate.d/proj4-deactivate.fish",
+    "etc/conda/deactivate.d/proj4-deactivate.sh",
+    "include/geodesic.h",
+    "include/proj.h",
+    "include/proj/common.hpp",
+    "include/proj/coordinateoperation.hpp",
+    "include/proj/coordinatesystem.hpp",
+    "include/proj/crs.hpp",
+    "include/proj/datum.hpp",
+    "include/proj/io.hpp",
+    "include/proj/metadata.hpp",
+    "include/proj/nn.hpp",
+    "include/proj/util.hpp",
+    "include/proj_constants.h",
+    "include/proj_experimental.h",
+    "include/proj_symbol_rename.h",
+    "lib/cmake/proj/proj-config-version.cmake",
+    "lib/cmake/proj/proj-config.cmake",
+    "lib/cmake/proj/proj-targets-release.cmake",
+    "lib/cmake/proj/proj-targets.cmake",
+    "lib/cmake/proj/proj4-targets-release.cmake",
+    "lib/cmake/proj/proj4-targets.cmake",
+    "lib/cmake/proj4/proj-targets-release.cmake",
+    "lib/cmake/proj4/proj-targets.cmake",
+    "lib/cmake/proj4/proj4-config-version.cmake",
+    "lib/cmake/proj4/proj4-config.cmake",
+    "lib/cmake/proj4/proj4-targets-release.cmake",
+    "lib/cmake/proj4/proj4-targets.cmake",
+    "lib/libproj.so",
+    "lib/libproj.so.22",
+    "lib/libproj.so.22.2.0",
+    "lib/pkgconfig/proj.pc",
+    "share/doc/proj/AUTHORS",
+    "share/doc/proj/COPYING",
+    "share/doc/proj/NEWS",
+    "share/man/man1/cct.1",
+    "share/man/man1/cs2cs.1",
+    "share/man/man1/geod.1",
+    "share/man/man1/gie.1",
+    "share/man/man1/proj.1",
+    "share/man/man1/projinfo.1",
+    "share/man/man1/projsync.1",
+    "share/proj/CH",
+    "share/proj/GL27",
+    "share/proj/ITRF2000",
+    "share/proj/ITRF2008",
+    "share/proj/ITRF2014",
+    "share/proj/deformation_model.schema.json",
+    "share/proj/nad.lst",
+    "share/proj/nad27",
+    "share/proj/nad83",
+    "share/proj/other.extra",
+    "share/proj/proj.db",
+    "share/proj/proj.ini",
+    "share/proj/projjson.schema.json",
+    "share/proj/triangulation.schema.json",
+    "share/proj/world"
+  ],
+  "fn": "proj-8.2.0-h83638df_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/proj-8.2.0-h83638df_0",
+    "type": 1
+  },
+  "md5": "475542d624363016387d6ffa5779ef9e",
+  "name": "proj",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/proj-8.2.0-h83638df_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/cct",
+        "path_type": "hardlink",
+        "sha256": "9078edef5fe81ffaf1fcdea07ed6b2b0c43589da4b3e5897f2efaf22aa330b61",
+        "sha256_in_prefix": "9078edef5fe81ffaf1fcdea07ed6b2b0c43589da4b3e5897f2efaf22aa330b61",
+        "size_in_bytes": 38888
+      },
+      {
+        "_path": "bin/cs2cs",
+        "path_type": "hardlink",
+        "sha256": "c110e22eb142ccc8ccd9b7436da98dc44e725416ee5bfb0350675501473bcecb",
+        "sha256_in_prefix": "c110e22eb142ccc8ccd9b7436da98dc44e725416ee5bfb0350675501473bcecb",
+        "size_in_bytes": 51752
+      },
+      {
+        "_path": "bin/geod",
+        "path_type": "hardlink",
+        "sha256": "0c0340aefc8d25c896a048d2646ce5b9c69465116171127a715708e76443da66",
+        "sha256_in_prefix": "0c0340aefc8d25c896a048d2646ce5b9c69465116171127a715708e76443da66",
+        "size_in_bytes": 24600
+      },
+      {
+        "_path": "bin/gie",
+        "path_type": "hardlink",
+        "sha256": "ae52c791c9bc3be19117626f084e38aea3f248bdcade3d06633c65cc200678dd",
+        "sha256_in_prefix": "ae52c791c9bc3be19117626f084e38aea3f248bdcade3d06633c65cc200678dd",
+        "size_in_bytes": 46000
+      },
+      {
+        "_path": "bin/invgeod",
+        "path_type": "softlink",
+        "sha256": "0c0340aefc8d25c896a048d2646ce5b9c69465116171127a715708e76443da66",
+        "size_in_bytes": 24600
+      },
+      {
+        "_path": "bin/invproj",
+        "path_type": "softlink",
+        "sha256": "475d05f701aea6140ba48cb659c2a431e83807574d20f095f906d30da2fecf3c",
+        "size_in_bytes": 29752
+      },
+      {
+        "_path": "bin/proj",
+        "path_type": "hardlink",
+        "sha256": "475d05f701aea6140ba48cb659c2a431e83807574d20f095f906d30da2fecf3c",
+        "sha256_in_prefix": "475d05f701aea6140ba48cb659c2a431e83807574d20f095f906d30da2fecf3c",
+        "size_in_bytes": 29752
+      },
+      {
+        "_path": "bin/projinfo",
+        "path_type": "hardlink",
+        "sha256": "ef02253d1c6a32cbd0235a79163d3cb5ac77b15d7c2df4b46991484277696bcb",
+        "sha256_in_prefix": "ef02253d1c6a32cbd0235a79163d3cb5ac77b15d7c2df4b46991484277696bcb",
+        "size_in_bytes": 133096
+      },
+      {
+        "_path": "bin/projsync",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/drone/src/build_artifacts/proj_1635796660651/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "7f7c8629462344c5e8ab7f81a7c0a76e004fbc49ee151f27bf3ddffe639ace76",
+        "sha256_in_prefix": "9ebb88f7be5b81b0adefbb0908dddb7c63df29acc8cdb19b6d32ffd7ea963096",
+        "size_in_bytes": 148320
+      },
+      {
+        "_path": "etc/conda/activate.d/proj4-activate.csh",
+        "path_type": "hardlink",
+        "sha256": "49c61d07e0044f00abf07c67423f3b338763fa968196a873010e410b212cf78e",
+        "sha256_in_prefix": "49c61d07e0044f00abf07c67423f3b338763fa968196a873010e410b212cf78e",
+        "size_in_bytes": 631
+      },
+      {
+        "_path": "etc/conda/activate.d/proj4-activate.fish",
+        "path_type": "hardlink",
+        "sha256": "366d47b74be8076440e11c02abfb66432ed5608c78fa86d0e5f3ddc6d88823a3",
+        "sha256_in_prefix": "366d47b74be8076440e11c02abfb66432ed5608c78fa86d0e5f3ddc6d88823a3",
+        "size_in_bytes": 475
+      },
+      {
+        "_path": "etc/conda/activate.d/proj4-activate.sh",
+        "path_type": "hardlink",
+        "sha256": "4ba0a8593b892aeca8a4b8c0e8ab994b7fce377ffe7449045815894a6775cb7d",
+        "sha256_in_prefix": "4ba0a8593b892aeca8a4b8c0e8ab994b7fce377ffe7449045815894a6775cb7d",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "etc/conda/deactivate.d/proj4-deactivate.csh",
+        "path_type": "hardlink",
+        "sha256": "d4bca64b9b72a5ef6810ddf9fdb4268a544d00f1e91d6fd71215bd646e28a68a",
+        "sha256_in_prefix": "d4bca64b9b72a5ef6810ddf9fdb4268a544d00f1e91d6fd71215bd646e28a68a",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "etc/conda/deactivate.d/proj4-deactivate.fish",
+        "path_type": "hardlink",
+        "sha256": "2efee5f3cd4d43ff3e72029235b1c10516834e349a5f53f72075aca60bc21a63",
+        "sha256_in_prefix": "2efee5f3cd4d43ff3e72029235b1c10516834e349a5f53f72075aca60bc21a63",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "etc/conda/deactivate.d/proj4-deactivate.sh",
+        "path_type": "hardlink",
+        "sha256": "bd43c04c700acaf7ac2973ea67e64461c49f30b16d0ae4ba418f8abce2c7bf7b",
+        "sha256_in_prefix": "bd43c04c700acaf7ac2973ea67e64461c49f30b16d0ae4ba418f8abce2c7bf7b",
+        "size_in_bytes": 205
+      },
+      {
+        "_path": "include/geodesic.h",
+        "path_type": "hardlink",
+        "sha256": "48533b670d9165f550393dced7929967c710e3b5cbbee3dd3c3b99300930b155",
+        "sha256_in_prefix": "48533b670d9165f550393dced7929967c710e3b5cbbee3dd3c3b99300930b155",
+        "size_in_bytes": 45257
+      },
+      {
+        "_path": "include/proj.h",
+        "path_type": "hardlink",
+        "sha256": "b23696f44cfd63309fc4de58d16a1769f012c7d316b848eb346666750ce6a0f9",
+        "sha256_in_prefix": "b23696f44cfd63309fc4de58d16a1769f012c7d316b848eb346666750ce6a0f9",
+        "size_in_bytes": 63510
+      },
+      {
+        "_path": "include/proj/common.hpp",
+        "path_type": "hardlink",
+        "sha256": "5d853daa0e938536b77aee7ae1b7df95a1f131db445713485186d06c2c5851ac",
+        "sha256_in_prefix": "5d853daa0e938536b77aee7ae1b7df95a1f131db445713485186d06c2c5851ac",
+        "size_in_bytes": 16247
+      },
+      {
+        "_path": "include/proj/coordinateoperation.hpp",
+        "path_type": "hardlink",
+        "sha256": "1fbabd1e0d9fb2310ec911ca3ef547948a1eb3dc9e29d16d5772495f7d2064c0",
+        "sha256_in_prefix": "1fbabd1e0d9fb2310ec911ca3ef547948a1eb3dc9e29d16d5772495f7d2064c0",
+        "size_in_bytes": 78722
+      },
+      {
+        "_path": "include/proj/coordinatesystem.hpp",
+        "path_type": "hardlink",
+        "sha256": "2776ffddd821761de9bb2c4904e5646e926fc1ebe98927ed213be963585cb6b8",
+        "sha256_in_prefix": "2776ffddd821761de9bb2c4904e5646e926fc1ebe98927ed213be963585cb6b8",
+        "size_in_bytes": 25932
+      },
+      {
+        "_path": "include/proj/crs.hpp",
+        "path_type": "hardlink",
+        "sha256": "77a1a51c32b1dc1dd7f891ddb946792b39d6deac167fec850812f823cbc93df1",
+        "sha256_in_prefix": "77a1a51c32b1dc1dd7f891ddb946792b39d6deac167fec850812f823cbc93df1",
+        "size_in_bytes": 58195
+      },
+      {
+        "_path": "include/proj/datum.hpp",
+        "path_type": "hardlink",
+        "sha256": "b9535f838a15d73ab0b1271f51f2494e6e2e7f41105db103b435cbcee88e5fc6",
+        "sha256_in_prefix": "b9535f838a15d73ab0b1271f51f2494e6e2e7f41105db103b435cbcee88e5fc6",
+        "size_in_bytes": 30473
+      },
+      {
+        "_path": "include/proj/io.hpp",
+        "path_type": "hardlink",
+        "sha256": "81be2eecfff8f5d497d6a129089615b7c42cc1686aef66db300c2c25ee441edb",
+        "sha256_in_prefix": "81be2eecfff8f5d497d6a129089615b7c42cc1686aef66db300c2c25ee441edb",
+        "size_in_bytes": 48690
+      },
+      {
+        "_path": "include/proj/metadata.hpp",
+        "path_type": "hardlink",
+        "sha256": "8387d63631c63a9f60ae231e7615d603f7da738d5b1e77ae5eb05d58bf176700",
+        "sha256_in_prefix": "8387d63631c63a9f60ae231e7615d603f7da738d5b1e77ae5eb05d58bf176700",
+        "size_in_bytes": 16441
+      },
+      {
+        "_path": "include/proj/nn.hpp",
+        "path_type": "hardlink",
+        "sha256": "0edaf11f4b9b266e82517067648c8bc6e723a7375741d11e3e3bad84ab967a10",
+        "sha256_in_prefix": "0edaf11f4b9b266e82517067648c8bc6e723a7375741d11e3e3bad84ab967a10",
+        "size_in_bytes": 15185
+      },
+      {
+        "_path": "include/proj/util.hpp",
+        "path_type": "hardlink",
+        "sha256": "8b2a970a153232038c3b3677bc92b7e6b11d714c1442c1299363e76ac6877987",
+        "sha256_in_prefix": "8b2a970a153232038c3b3677bc92b7e6b11d714c1442c1299363e76ac6877987",
+        "size_in_bytes": 25590
+      },
+      {
+        "_path": "include/proj_constants.h",
+        "path_type": "hardlink",
+        "sha256": "b9a9dbbd139995707088638a417246c441ed3b45f32f5ef131d3b22d932be9f9",
+        "sha256_in_prefix": "b9a9dbbd139995707088638a417246c441ed3b45f32f5ef131d3b22d932be9f9",
+        "size_in_bytes": 28481
+      },
+      {
+        "_path": "include/proj_experimental.h",
+        "path_type": "hardlink",
+        "sha256": "e8ded7450556c560ff9a112888a8fc939d47d8fff2bb9a08e73e09ef4f44f2bf",
+        "sha256_in_prefix": "e8ded7450556c560ff9a112888a8fc939d47d8fff2bb9a08e73e09ef4f44f2bf",
+        "size_in_bytes": 37969
+      },
+      {
+        "_path": "include/proj_symbol_rename.h",
+        "path_type": "hardlink",
+        "sha256": "71fcd754ded50e023c00de3e6c920a358c4a9088b544fda54911f82ad4078197",
+        "sha256_in_prefix": "71fcd754ded50e023c00de3e6c920a358c4a9088b544fda54911f82ad4078197",
+        "size_in_bytes": 22596
+      },
+      {
+        "_path": "lib/cmake/proj/proj-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "c8f504af3a45699819e7f866183be8d7b57e9b345106a30c9304386fe7d9d268",
+        "sha256_in_prefix": "c8f504af3a45699819e7f866183be8d7b57e9b345106a30c9304386fe7d9d268",
+        "size_in_bytes": 2817
+      },
+      {
+        "_path": "lib/cmake/proj/proj-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "628f413faa31d2a9af4d206bac0fbfae22aab17820738b9d5f7f63273377b31e",
+        "sha256_in_prefix": "628f413faa31d2a9af4d206bac0fbfae22aab17820738b9d5f7f63273377b31e",
+        "size_in_bytes": 877
+      },
+      {
+        "_path": "lib/cmake/proj/proj-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "129477fd2f6bb363fb70a55ceed3eca8fe4b16c995006124334d8961839bc634",
+        "sha256_in_prefix": "129477fd2f6bb363fb70a55ceed3eca8fe4b16c995006124334d8961839bc634",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/cmake/proj/proj-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "0041a817da6e2c348a3e883927cc1ad8cb3a26210906319b073cacd92b1c6c6d",
+        "sha256_in_prefix": "0041a817da6e2c348a3e883927cc1ad8cb3a26210906319b073cacd92b1c6c6d",
+        "size_in_bytes": 3241
+      },
+      {
+        "_path": "lib/cmake/proj/proj4-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "17cb89efd0bd4e4ca910da3b765fb60bac24aa547889ef27d75240ba0976dded",
+        "sha256_in_prefix": "17cb89efd0bd4e4ca910da3b765fb60bac24aa547889ef27d75240ba0976dded",
+        "size_in_bytes": 820
+      },
+      {
+        "_path": "lib/cmake/proj/proj4-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "2535c1311fcf4a134c1d724fbc90652976b0e4f9deec272c1d529a9f06a2555f",
+        "sha256_in_prefix": "2535c1311fcf4a134c1d724fbc90652976b0e4f9deec272c1d529a9f06a2555f",
+        "size_in_bytes": 3246
+      },
+      {
+        "_path": "lib/cmake/proj4/proj-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "129477fd2f6bb363fb70a55ceed3eca8fe4b16c995006124334d8961839bc634",
+        "sha256_in_prefix": "129477fd2f6bb363fb70a55ceed3eca8fe4b16c995006124334d8961839bc634",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/cmake/proj4/proj-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "0041a817da6e2c348a3e883927cc1ad8cb3a26210906319b073cacd92b1c6c6d",
+        "sha256_in_prefix": "0041a817da6e2c348a3e883927cc1ad8cb3a26210906319b073cacd92b1c6c6d",
+        "size_in_bytes": 3241
+      },
+      {
+        "_path": "lib/cmake/proj4/proj4-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "712ff6899f9512a2153bcd40c155f594a2758bd91ccc0f5c50931f3c4f0ec1e4",
+        "sha256_in_prefix": "712ff6899f9512a2153bcd40c155f594a2758bd91ccc0f5c50931f3c4f0ec1e4",
+        "size_in_bytes": 2820
+      },
+      {
+        "_path": "lib/cmake/proj4/proj4-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "1e8fafdc4886dd94617252b0b63a8201a174db7ac2cca8d9ac0ff19ac9f85cbf",
+        "sha256_in_prefix": "1e8fafdc4886dd94617252b0b63a8201a174db7ac2cca8d9ac0ff19ac9f85cbf",
+        "size_in_bytes": 892
+      },
+      {
+        "_path": "lib/cmake/proj4/proj4-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "17cb89efd0bd4e4ca910da3b765fb60bac24aa547889ef27d75240ba0976dded",
+        "sha256_in_prefix": "17cb89efd0bd4e4ca910da3b765fb60bac24aa547889ef27d75240ba0976dded",
+        "size_in_bytes": 820
+      },
+      {
+        "_path": "lib/cmake/proj4/proj4-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "2535c1311fcf4a134c1d724fbc90652976b0e4f9deec272c1d529a9f06a2555f",
+        "sha256_in_prefix": "2535c1311fcf4a134c1d724fbc90652976b0e4f9deec272c1d529a9f06a2555f",
+        "size_in_bytes": 3246
+      },
+      {
+        "_path": "lib/libproj.so",
+        "path_type": "softlink",
+        "sha256": "e3d7371cb799464d042846fd55d713d4b77f2509fc294f074b3773375732721d",
+        "size_in_bytes": 4893568
+      },
+      {
+        "_path": "lib/libproj.so.22",
+        "path_type": "softlink",
+        "sha256": "e3d7371cb799464d042846fd55d713d4b77f2509fc294f074b3773375732721d",
+        "size_in_bytes": 4893568
+      },
+      {
+        "_path": "lib/libproj.so.22.2.0",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/drone/src/build_artifacts/proj_1635796660651/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "e3d7371cb799464d042846fd55d713d4b77f2509fc294f074b3773375732721d",
+        "sha256_in_prefix": "9e842d886eaa17fe6148c9d6461eec3274acc70f6737bfc7fc19c5f116d71ba9",
+        "size_in_bytes": 4893568
+      },
+      {
+        "_path": "lib/pkgconfig/proj.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/drone/src/build_artifacts/proj_1635796660651/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "f591250a0a8e8e708b1701bb33c6530a483766b6bd291224157159cdeb6db4ae",
+        "sha256_in_prefix": "b6fa4ff94459070c34ce8f634f623a3c1dea5fd7931805ca72df591efc457ca3",
+        "size_in_bytes": 594
+      },
+      {
+        "_path": "share/doc/proj/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "4126a6709b9701124c84b5788aaf3537182e4e5ba63130c3bd73b044f6851016",
+        "sha256_in_prefix": "4126a6709b9701124c84b5788aaf3537182e4e5ba63130c3bd73b044f6851016",
+        "size_in_bytes": 1284
+      },
+      {
+        "_path": "share/doc/proj/COPYING",
+        "path_type": "hardlink",
+        "sha256": "6a8f30793e877d32e3f88b972f0970a051a3b5a26cd057d3993cb51e21c43319",
+        "sha256_in_prefix": "6a8f30793e877d32e3f88b972f0970a051a3b5a26cd057d3993cb51e21c43319",
+        "size_in_bytes": 1784
+      },
+      {
+        "_path": "share/doc/proj/NEWS",
+        "path_type": "hardlink",
+        "sha256": "a8f4a6e8116847f09b9047f03e09178b7c62d21bac446f6906c01f49e3c39785",
+        "sha256_in_prefix": "a8f4a6e8116847f09b9047f03e09178b7c62d21bac446f6906c01f49e3c39785",
+        "size_in_bytes": 70633
+      },
+      {
+        "_path": "share/man/man1/cct.1",
+        "path_type": "hardlink",
+        "sha256": "3e74ab2cfcced0f8268b33845d3b4a83579c795d6eef3925e63ba8c979e71498",
+        "sha256_in_prefix": "3e74ab2cfcced0f8268b33845d3b4a83579c795d6eef3925e63ba8c979e71498",
+        "size_in_bytes": 9006
+      },
+      {
+        "_path": "share/man/man1/cs2cs.1",
+        "path_type": "hardlink",
+        "sha256": "27b97f988ee013a2db4231760d5c14d717a07292ddda7be3fe1cf0f4debc9191",
+        "sha256_in_prefix": "27b97f988ee013a2db4231760d5c14d717a07292ddda7be3fe1cf0f4debc9191",
+        "size_in_bytes": 12170
+      },
+      {
+        "_path": "share/man/man1/geod.1",
+        "path_type": "hardlink",
+        "sha256": "15b7c8fd127d1b3741dc2928b7c8a36024afc69ac524fc172aa9a5ae28ab61ce",
+        "sha256_in_prefix": "15b7c8fd127d1b3741dc2928b7c8a36024afc69ac524fc172aa9a5ae28ab61ce",
+        "size_in_bytes": 7687
+      },
+      {
+        "_path": "share/man/man1/gie.1",
+        "path_type": "hardlink",
+        "sha256": "7554528fba9ce730d0499d4c92dd8af53f2227d28443c59253f3ef9b7cfd665b",
+        "sha256_in_prefix": "7554528fba9ce730d0499d4c92dd8af53f2227d28443c59253f3ef9b7cfd665b",
+        "size_in_bytes": 15075
+      },
+      {
+        "_path": "share/man/man1/proj.1",
+        "path_type": "hardlink",
+        "sha256": "70c1c1f1f37f271b5028ea28764d922d0df037a366c572840599b44407eae9cb",
+        "sha256_in_prefix": "70c1c1f1f37f271b5028ea28764d922d0df037a366c572840599b44407eae9cb",
+        "size_in_bytes": 8242
+      },
+      {
+        "_path": "share/man/man1/projinfo.1",
+        "path_type": "hardlink",
+        "sha256": "ce27484e4ccbff6031b55e8175b7757561dc672171f3e73979610c2b9a8712f5",
+        "sha256_in_prefix": "ce27484e4ccbff6031b55e8175b7757561dc672171f3e73979610c2b9a8712f5",
+        "size_in_bytes": 26758
+      },
+      {
+        "_path": "share/man/man1/projsync.1",
+        "path_type": "hardlink",
+        "sha256": "42af92c90f6484e0c97a7a02d669aa4f09565595318e462e22502fa4a1896a23",
+        "sha256_in_prefix": "42af92c90f6484e0c97a7a02d669aa4f09565595318e462e22502fa4a1896a23",
+        "size_in_bytes": 6233
+      },
+      {
+        "_path": "share/proj/CH",
+        "path_type": "hardlink",
+        "sha256": "365ad1185c5ece14d2a84a16112c451152b9709788bcd3c63cab4ade529cba31",
+        "sha256_in_prefix": "365ad1185c5ece14d2a84a16112c451152b9709788bcd3c63cab4ade529cba31",
+        "size_in_bytes": 1183
+      },
+      {
+        "_path": "share/proj/GL27",
+        "path_type": "hardlink",
+        "sha256": "85375e6315d6f644e4577dadf3c5f157528ad15b715c99b287bddab23d44193d",
+        "sha256_in_prefix": "85375e6315d6f644e4577dadf3c5f157528ad15b715c99b287bddab23d44193d",
+        "size_in_bytes": 728
+      },
+      {
+        "_path": "share/proj/ITRF2000",
+        "path_type": "hardlink",
+        "sha256": "5225c3b3367a37021e639cfd5bd1521d2bd5d00cbc474cd6b3b3827615a4fe72",
+        "sha256_in_prefix": "5225c3b3367a37021e639cfd5bd1521d2bd5d00cbc474cd6b3b3827615a4fe72",
+        "size_in_bytes": 2099
+      },
+      {
+        "_path": "share/proj/ITRF2008",
+        "path_type": "hardlink",
+        "sha256": "c4dad7ef98f31e16fba3d72701c6d3a55fc9975a6ae6b5fd830b8e61ba68bf1e",
+        "sha256_in_prefix": "c4dad7ef98f31e16fba3d72701c6d3a55fc9975a6ae6b5fd830b8e61ba68bf1e",
+        "size_in_bytes": 3660
+      },
+      {
+        "_path": "share/proj/ITRF2014",
+        "path_type": "hardlink",
+        "sha256": "e6b225d14232caff90067c8cecc52147a8fae771e181fa41f04f1e55049cde4e",
+        "sha256_in_prefix": "e6b225d14232caff90067c8cecc52147a8fae771e181fa41f04f1e55049cde4e",
+        "size_in_bytes": 3468
+      },
+      {
+        "_path": "share/proj/deformation_model.schema.json",
+        "path_type": "hardlink",
+        "sha256": "ba0c5911117207a936fc738c1e31da001b45b51193773ce0c6742143f372b99d",
+        "sha256_in_prefix": "ba0c5911117207a936fc738c1e31da001b45b51193773ce0c6742143f372b99d",
+        "size_in_bytes": 17671
+      },
+      {
+        "_path": "share/proj/nad.lst",
+        "path_type": "hardlink",
+        "sha256": "1a28ed872fd1550f5bf7b5a5e5bfc5e7500b5f94c9745b84a1d156b32039928c",
+        "sha256_in_prefix": "1a28ed872fd1550f5bf7b5a5e5bfc5e7500b5f94c9745b84a1d156b32039928c",
+        "size_in_bytes": 6385
+      },
+      {
+        "_path": "share/proj/nad27",
+        "path_type": "hardlink",
+        "sha256": "0bc231922461ac758922c6a7251e96d7e53e656608b1b4f06b7848fa8fc25520",
+        "sha256_in_prefix": "0bc231922461ac758922c6a7251e96d7e53e656608b1b4f06b7848fa8fc25520",
+        "size_in_bytes": 19535
+      },
+      {
+        "_path": "share/proj/nad83",
+        "path_type": "hardlink",
+        "sha256": "9a6260c8680abe5216ca8fe985998fababc121b0032879a821d75cae3411dc96",
+        "sha256_in_prefix": "9a6260c8680abe5216ca8fe985998fababc121b0032879a821d75cae3411dc96",
+        "size_in_bytes": 16593
+      },
+      {
+        "_path": "share/proj/other.extra",
+        "path_type": "hardlink",
+        "sha256": "c1ef74c0a9b3e1f42a576c15bc43666c135b7e9361db5727a353204da279ccbb",
+        "sha256_in_prefix": "c1ef74c0a9b3e1f42a576c15bc43666c135b7e9361db5727a353204da279ccbb",
+        "size_in_bytes": 3915
+      },
+      {
+        "_path": "share/proj/proj.db",
+        "path_type": "hardlink",
+        "sha256": "2753749ddda7fd6574b6ba800fb31203cc7c6fe5fabb352e7e644eea1132a11f",
+        "sha256_in_prefix": "2753749ddda7fd6574b6ba800fb31203cc7c6fe5fabb352e7e644eea1132a11f",
+        "size_in_bytes": 7913472
+      },
+      {
+        "_path": "share/proj/proj.ini",
+        "path_type": "hardlink",
+        "sha256": "1a827e8a275c584de08f4105ca6d96691dab8dcf18aa807e0f924c87609306b0",
+        "sha256_in_prefix": "1a827e8a275c584de08f4105ca6d96691dab8dcf18aa807e0f924c87609306b0",
+        "size_in_bytes": 846
+      },
+      {
+        "_path": "share/proj/projjson.schema.json",
+        "path_type": "hardlink",
+        "sha256": "aa44f4d23fb649dad5ab7fae6736607e6a9a8e4d6c8ae2e0bbb74cb3995b0cfd",
+        "sha256_in_prefix": "aa44f4d23fb649dad5ab7fae6736607e6a9a8e4d6c8ae2e0bbb74cb3995b0cfd",
+        "size_in_bytes": 32662
+      },
+      {
+        "_path": "share/proj/triangulation.schema.json",
+        "path_type": "hardlink",
+        "sha256": "b1528266667d4f3e87072c74e370b27135101515a9012a25287fcf312cea179a",
+        "sha256_in_prefix": "b1528266667d4f3e87072c74e370b27135101515a9012a25287fcf312cea179a",
+        "size_in_bytes": 8403
+      },
+      {
+        "_path": "share/proj/world",
+        "path_type": "hardlink",
+        "sha256": "f271cd3e56c7759d2fcfbbbd39870264eb81064155713c04fc92eadd30adeb48",
+        "sha256_in_prefix": "f271cd3e56c7759d2fcfbbbd39870264eb81064155713c04fc92eadd30adeb48",
+        "size_in_bytes": 7079
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "628affefe501958fba432f4fb0132d56ef2e1f437f87a670ec58928f4692597f",
+  "size": 3017014,
+  "subdir": "linux-aarch64",
+  "timestamp": 1635797615000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/proj-8.2.0-h83638df_0.tar.bz2",
+  "version": "8.2.0"
+}

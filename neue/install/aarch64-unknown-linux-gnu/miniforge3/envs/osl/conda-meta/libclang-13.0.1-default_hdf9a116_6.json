@@ -1,0 +1,60 @@
+{
+  "build": "default_hdf9a116_6",
+  "build_number": 6,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libllvm13 >=13.0.1,<13.1.0a0",
+    "libstdcxx-ng >=12",
+    "libzlib >=1.2.13,<1.3.0a0"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libclang-13.0.1-default_hdf9a116_6",
+  "features": "",
+  "files": [
+    "lib/libclang.so",
+    "lib/libclang.so.13",
+    "lib/libclang.so.13.0.1"
+  ],
+  "fn": "libclang-13.0.1-default_hdf9a116_6.conda",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libclang-13.0.1-default_hdf9a116_6",
+    "type": 1
+  },
+  "md5": "baed42c6bea8319f1c221178be2fad2c",
+  "name": "libclang",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libclang-13.0.1-default_hdf9a116_6.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libclang.so",
+        "path_type": "softlink",
+        "sha256": "9c12cef48d777777da5404281a400c4b3f908f4b64112029f87f1b6fde1d1afe",
+        "size_in_bytes": 42661936
+      },
+      {
+        "_path": "lib/libclang.so.13",
+        "path_type": "softlink",
+        "sha256": "9c12cef48d777777da5404281a400c4b3f908f4b64112029f87f1b6fde1d1afe",
+        "size_in_bytes": 42661936
+      },
+      {
+        "_path": "lib/libclang.so.13.0.1",
+        "path_type": "hardlink",
+        "sha256": "9c12cef48d777777da5404281a400c4b3f908f4b64112029f87f1b6fde1d1afe",
+        "sha256_in_prefix": "9c12cef48d777777da5404281a400c4b3f908f4b64112029f87f1b6fde1d1afe",
+        "size_in_bytes": 42661936
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ee1966d837941a35dc1fa1968d251165452048543d7df57b92276d7c40a87103",
+  "size": 9405986,
+  "subdir": "linux-aarch64",
+  "timestamp": 1707150686000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libclang-13.0.1-default_hdf9a116_6.conda",
+  "version": "13.0.1"
+}

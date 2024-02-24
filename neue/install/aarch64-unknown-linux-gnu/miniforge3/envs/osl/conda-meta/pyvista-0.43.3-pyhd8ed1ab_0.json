@@ -1,0 +1,1992 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "matplotlib-base >=3.0.1",
+    "numpy",
+    "pillow",
+    "pooch",
+    "python >=3.8",
+    "scooby >=0.5.1",
+    "vtk"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pyvista-0.43.3-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/AUTHORS.rst",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/LICENSE",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/pyvista-0.43.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/pyvista/__init__.py",
+    "lib/python3.10/site-packages/pyvista/_plot.py",
+    "lib/python3.10/site-packages/pyvista/_version.py",
+    "lib/python3.10/site-packages/pyvista/conftest.py",
+    "lib/python3.10/site-packages/pyvista/core/__init__.py",
+    "lib/python3.10/site-packages/pyvista/core/_typing_core.py",
+    "lib/python3.10/site-packages/pyvista/core/_vtk_core.py",
+    "lib/python3.10/site-packages/pyvista/core/cell.py",
+    "lib/python3.10/site-packages/pyvista/core/celltype.py",
+    "lib/python3.10/site-packages/pyvista/core/composite.py",
+    "lib/python3.10/site-packages/pyvista/core/dataobject.py",
+    "lib/python3.10/site-packages/pyvista/core/dataset.py",
+    "lib/python3.10/site-packages/pyvista/core/datasetattributes.py",
+    "lib/python3.10/site-packages/pyvista/core/errors.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/__init__.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/composite.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/data_set.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/image_data.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/poly_data.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/rectilinear_grid.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/structured_grid.py",
+    "lib/python3.10/site-packages/pyvista/core/filters/unstructured_grid.py",
+    "lib/python3.10/site-packages/pyvista/core/grid.py",
+    "lib/python3.10/site-packages/pyvista/core/input_validation/__init__.py",
+    "lib/python3.10/site-packages/pyvista/core/input_validation/check.py",
+    "lib/python3.10/site-packages/pyvista/core/input_validation/validate.py",
+    "lib/python3.10/site-packages/pyvista/core/objects.py",
+    "lib/python3.10/site-packages/pyvista/core/pointset.py",
+    "lib/python3.10/site-packages/pyvista/core/pyvista_ndarray.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__init__.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/arrays.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/cell_type_helper.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/cells.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/docs.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/features.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/fileio.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/geometric_objects.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/geometric_sources.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/helpers.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/misc.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/observers.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/parametric_objects.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/points.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/reader.py",
+    "lib/python3.10/site-packages/pyvista/core/utilities/transformations.py",
+    "lib/python3.10/site-packages/pyvista/core/wrappers.py",
+    "lib/python3.10/site-packages/pyvista/demos/__init__.py",
+    "lib/python3.10/site-packages/pyvista/demos/demos.py",
+    "lib/python3.10/site-packages/pyvista/demos/logo.py",
+    "lib/python3.10/site-packages/pyvista/errors.py",
+    "lib/python3.10/site-packages/pyvista/examples/2k_earth_daymap.jpg",
+    "lib/python3.10/site-packages/pyvista/examples/__init__.py",
+    "lib/python3.10/site-packages/pyvista/examples/airplane.ply",
+    "lib/python3.10/site-packages/pyvista/examples/ant.ply",
+    "lib/python3.10/site-packages/pyvista/examples/cells.py",
+    "lib/python3.10/site-packages/pyvista/examples/channels.vti",
+    "lib/python3.10/site-packages/pyvista/examples/downloads.py",
+    "lib/python3.10/site-packages/pyvista/examples/examples.py",
+    "lib/python3.10/site-packages/pyvista/examples/globe.vtk",
+    "lib/python3.10/site-packages/pyvista/examples/gltf.py",
+    "lib/python3.10/site-packages/pyvista/examples/hexbeam.vtk",
+    "lib/python3.10/site-packages/pyvista/examples/nut.ply",
+    "lib/python3.10/site-packages/pyvista/examples/planets.py",
+    "lib/python3.10/site-packages/pyvista/examples/pyvista_logo.png",
+    "lib/python3.10/site-packages/pyvista/examples/rectilinear.vtk",
+    "lib/python3.10/site-packages/pyvista/examples/sphere.ply",
+    "lib/python3.10/site-packages/pyvista/examples/uniform.vtk",
+    "lib/python3.10/site-packages/pyvista/examples/vrml.py",
+    "lib/python3.10/site-packages/pyvista/ext/__init__.py",
+    "lib/python3.10/site-packages/pyvista/ext/coverage.py",
+    "lib/python3.10/site-packages/pyvista/ext/plot_directive.py",
+    "lib/python3.10/site-packages/pyvista/ext/viewer_directive.py",
+    "lib/python3.10/site-packages/pyvista/jupyter/__init__.py",
+    "lib/python3.10/site-packages/pyvista/jupyter/notebook.py",
+    "lib/python3.10/site-packages/pyvista/plotting/__init__.py",
+    "lib/python3.10/site-packages/pyvista/plotting/_plotting.py",
+    "lib/python3.10/site-packages/pyvista/plotting/_property.py",
+    "lib/python3.10/site-packages/pyvista/plotting/_typing.py",
+    "lib/python3.10/site-packages/pyvista/plotting/_vtk.py",
+    "lib/python3.10/site-packages/pyvista/plotting/_vtk_gl.py",
+    "lib/python3.10/site-packages/pyvista/plotting/actor.py",
+    "lib/python3.10/site-packages/pyvista/plotting/actor_properties.py",
+    "lib/python3.10/site-packages/pyvista/plotting/affine_widget.py",
+    "lib/python3.10/site-packages/pyvista/plotting/axes.py",
+    "lib/python3.10/site-packages/pyvista/plotting/axes_actor.py",
+    "lib/python3.10/site-packages/pyvista/plotting/background_renderer.py",
+    "lib/python3.10/site-packages/pyvista/plotting/camera.py",
+    "lib/python3.10/site-packages/pyvista/plotting/charts.py",
+    "lib/python3.10/site-packages/pyvista/plotting/colors.py",
+    "lib/python3.10/site-packages/pyvista/plotting/composite_mapper.py",
+    "lib/python3.10/site-packages/pyvista/plotting/cube_axes_actor.py",
+    "lib/python3.10/site-packages/pyvista/plotting/errors.py",
+    "lib/python3.10/site-packages/pyvista/plotting/helpers.py",
+    "lib/python3.10/site-packages/pyvista/plotting/lights.py",
+    "lib/python3.10/site-packages/pyvista/plotting/lookup_table.py",
+    "lib/python3.10/site-packages/pyvista/plotting/mapper.py",
+    "lib/python3.10/site-packages/pyvista/plotting/opts.py",
+    "lib/python3.10/site-packages/pyvista/plotting/picking.py",
+    "lib/python3.10/site-packages/pyvista/plotting/plotter.py",
+    "lib/python3.10/site-packages/pyvista/plotting/plotting/__init__.py",
+    "lib/python3.10/site-packages/pyvista/plotting/prop3d.py",
+    "lib/python3.10/site-packages/pyvista/plotting/render_passes.py",
+    "lib/python3.10/site-packages/pyvista/plotting/render_window_interactor.py",
+    "lib/python3.10/site-packages/pyvista/plotting/renderer.py",
+    "lib/python3.10/site-packages/pyvista/plotting/renderers.py",
+    "lib/python3.10/site-packages/pyvista/plotting/scalar_bars.py",
+    "lib/python3.10/site-packages/pyvista/plotting/text.py",
+    "lib/python3.10/site-packages/pyvista/plotting/texture.py",
+    "lib/python3.10/site-packages/pyvista/plotting/themes.py",
+    "lib/python3.10/site-packages/pyvista/plotting/tools.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__init__.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/algorithms.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/cubemap.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/gl_checks.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/regression.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/sphinx_gallery.py",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/xvfb.py",
+    "lib/python3.10/site-packages/pyvista/plotting/volume.py",
+    "lib/python3.10/site-packages/pyvista/plotting/volume_property.py",
+    "lib/python3.10/site-packages/pyvista/plotting/widgets.py",
+    "lib/python3.10/site-packages/pyvista/py.typed",
+    "lib/python3.10/site-packages/pyvista/report.py",
+    "lib/python3.10/site-packages/pyvista/trame/__init__.py",
+    "lib/python3.10/site-packages/pyvista/trame/jupyter.py",
+    "lib/python3.10/site-packages/pyvista/trame/ui/__init__.py",
+    "lib/python3.10/site-packages/pyvista/trame/ui/base_viewer.py",
+    "lib/python3.10/site-packages/pyvista/trame/ui/vuetify2.py",
+    "lib/python3.10/site-packages/pyvista/trame/ui/vuetify3.py",
+    "lib/python3.10/site-packages/pyvista/trame/views.py",
+    "lib/python3.10/site-packages/pyvista/utilities/__init__.py",
+    "lib/python3.10/site-packages/pyvista/utilities/algorithms.py",
+    "lib/python3.10/site-packages/pyvista/utilities/arrays.py",
+    "lib/python3.10/site-packages/pyvista/utilities/cell_type_helper.py",
+    "lib/python3.10/site-packages/pyvista/utilities/cells.py",
+    "lib/python3.10/site-packages/pyvista/utilities/common.py",
+    "lib/python3.10/site-packages/pyvista/utilities/docs.py",
+    "lib/python3.10/site-packages/pyvista/utilities/errors.py",
+    "lib/python3.10/site-packages/pyvista/utilities/features.py",
+    "lib/python3.10/site-packages/pyvista/utilities/fileio.py",
+    "lib/python3.10/site-packages/pyvista/utilities/geometric_objects.py",
+    "lib/python3.10/site-packages/pyvista/utilities/helpers.py",
+    "lib/python3.10/site-packages/pyvista/utilities/misc.py",
+    "lib/python3.10/site-packages/pyvista/utilities/parametric_objects.py",
+    "lib/python3.10/site-packages/pyvista/utilities/reader.py",
+    "lib/python3.10/site-packages/pyvista/utilities/regression.py",
+    "lib/python3.10/site-packages/pyvista/utilities/sphinx_gallery.py",
+    "lib/python3.10/site-packages/pyvista/utilities/transformations.py",
+    "lib/python3.10/site-packages/pyvista/utilities/wrappers.py",
+    "lib/python3.10/site-packages/pyvista/utilities/xvfb.py",
+    "lib/python3.10/site-packages/pyvista/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/__pycache__/_plot.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/__pycache__/conftest.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/_typing_core.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/_vtk_core.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/cell.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/celltype.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/composite.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/dataobject.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/dataset.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/datasetattributes.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/composite.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/data_set.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/image_data.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/poly_data.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/rectilinear_grid.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/structured_grid.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/unstructured_grid.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/grid.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/input_validation/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/input_validation/__pycache__/check.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/input_validation/__pycache__/validate.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/objects.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/pointset.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/pyvista_ndarray.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/arrays.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/cell_type_helper.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/cells.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/docs.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/features.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/fileio.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/geometric_objects.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/geometric_sources.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/helpers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/misc.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/observers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/parametric_objects.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/points.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/reader.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/transformations.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/core/__pycache__/wrappers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/demos/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/demos/__pycache__/demos.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/demos/__pycache__/logo.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/cells.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/downloads.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/gltf.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/planets.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/examples/__pycache__/vrml.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/ext/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/ext/__pycache__/coverage.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/ext/__pycache__/plot_directive.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/ext/__pycache__/viewer_directive.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/jupyter/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/jupyter/__pycache__/notebook.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_plotting.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_property.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_typing.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_vtk.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_vtk_gl.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/actor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/actor_properties.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/affine_widget.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/axes.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/axes_actor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/background_renderer.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/camera.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/charts.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/colors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/composite_mapper.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/cube_axes_actor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/helpers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/lights.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/lookup_table.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/mapper.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/opts.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/picking.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/plotter.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/plotting/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/prop3d.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/render_passes.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/render_window_interactor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/renderer.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/renderers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/scalar_bars.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/text.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/texture.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/themes.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/algorithms.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/cubemap.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/gl_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/regression.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/sphinx_gallery.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/xvfb.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/volume.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/volume_property.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/plotting/__pycache__/widgets.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/__pycache__/report.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/__pycache__/jupyter.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/base_viewer.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/vuetify2.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/vuetify3.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/trame/__pycache__/views.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/algorithms.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/arrays.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/cell_type_helper.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/cells.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/common.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/docs.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/features.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/fileio.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/geometric_objects.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/helpers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/misc.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/parametric_objects.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/reader.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/regression.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/sphinx_gallery.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/transformations.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/wrappers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyvista/utilities/__pycache__/xvfb.cpython-310.pyc"
+  ],
+  "fn": "pyvista-0.43.3-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pyvista-0.43.3-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "aba0f4dfb3cb2bad1e3b63084c33f6be",
+  "name": "pyvista",
+  "noarch": "python",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pyvista-0.43.3-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/AUTHORS.rst",
+        "path_type": "hardlink",
+        "sha256": "d1bdcf8202763b297b25bf62dae582d7b8e60f019e5a7ba42fcba34bd544f1d7",
+        "sha256_in_prefix": "d1bdcf8202763b297b25bf62dae582d7b8e60f019e5a7ba42fcba34bd544f1d7",
+        "size_in_bytes": 1932
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "bddee60a93ea3ba191f0cadeff8c16d7bd771535ccb64b7660afad1845623a1c",
+        "sha256_in_prefix": "bddee60a93ea3ba191f0cadeff8c16d7bd771535ccb64b7660afad1845623a1c",
+        "size_in_bytes": 1088
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b9d7b8d510cc96bf46d5f9a700ff9a2bf964e618a4e3b144e2eada14851429ad",
+        "sha256_in_prefix": "b9d7b8d510cc96bf46d5f9a700ff9a2bf964e618a4e3b144e2eada14851429ad",
+        "size_in_bytes": 14687
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "95ce875059d39a9308bd535d4fe083e8a077568c94967da6de8ec3e87502bea1",
+        "sha256_in_prefix": "95ce875059d39a9308bd535d4fe083e8a077568c94967da6de8ec3e87502bea1",
+        "size_in_bytes": 21847
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "a2241587fe4f9d033413780f762cf4f5608d9b08870cc6867abfde96a0777283",
+        "sha256_in_prefix": "a2241587fe4f9d033413780f762cf4f5608d9b08870cc6867abfde96a0777283",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "7680d9764f3b890483f65ba1bfcfaea21a4e2d018a0ee9e24e1b1f9566f56456",
+        "sha256_in_prefix": "7680d9764f3b890483f65ba1bfcfaea21a4e2d018a0ee9e24e1b1f9566f56456",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "site-packages/pyvista-0.43.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "14e53e8f1d7999711e6da6be347cebb34898cd2a25a28c6dcc347751e0875432",
+        "sha256_in_prefix": "14e53e8f1d7999711e6da6be347cebb34898cd2a25a28c6dcc347751e0875432",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/pyvista/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e0eaaa7cfb710b05fe2f2339bdc941de2395b7f3ad443807aee10e76f69437f7",
+        "sha256_in_prefix": "e0eaaa7cfb710b05fe2f2339bdc941de2395b7f3ad443807aee10e76f69437f7",
+        "size_in_bytes": 2792
+      },
+      {
+        "_path": "site-packages/pyvista/_plot.py",
+        "path_type": "hardlink",
+        "sha256": "a9b796d61d7c8aeb6cd593ee8706fd83837f235cfaf176fbad38399c05eba66d",
+        "sha256_in_prefix": "a9b796d61d7c8aeb6cd593ee8706fd83837f235cfaf176fbad38399c05eba66d",
+        "size_in_bytes": 9759
+      },
+      {
+        "_path": "site-packages/pyvista/_version.py",
+        "path_type": "hardlink",
+        "sha256": "d4b5136cd6458c138ff1167e7dadfcd676b0df52584fcdaa5b6de98266e042d6",
+        "sha256_in_prefix": "d4b5136cd6458c138ff1167e7dadfcd676b0df52584fcdaa5b6de98266e042d6",
+        "size_in_bytes": 400
+      },
+      {
+        "_path": "site-packages/pyvista/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "1a450da4170dddcb2548365eb3bb067beb7b218d689bea93e9eefa39f18b7c4e",
+        "sha256_in_prefix": "1a450da4170dddcb2548365eb3bb067beb7b218d689bea93e9eefa39f18b7c4e",
+        "size_in_bytes": 478
+      },
+      {
+        "_path": "site-packages/pyvista/core/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "da09a62f88bb6ece34cb773943d0270d9cd82c3e4190f27c5a4ea5c0378a4848",
+        "sha256_in_prefix": "da09a62f88bb6ece34cb773943d0270d9cd82c3e4190f27c5a4ea5c0378a4848",
+        "size_in_bytes": 1061
+      },
+      {
+        "_path": "site-packages/pyvista/core/_typing_core.py",
+        "path_type": "hardlink",
+        "sha256": "9f9fd037d5478c38d86104c01b5808d13b937a7805a65d40b01fed2aa7e3b153",
+        "sha256_in_prefix": "9f9fd037d5478c38d86104c01b5808d13b937a7805a65d40b01fed2aa7e3b153",
+        "size_in_bytes": 1091
+      },
+      {
+        "_path": "site-packages/pyvista/core/_vtk_core.py",
+        "path_type": "hardlink",
+        "sha256": "31ee1011964e2baebf8525f68ea445504573399b15b2791a10520158a88cf15c",
+        "sha256_in_prefix": "31ee1011964e2baebf8525f68ea445504573399b15b2791a10520158a88cf15c",
+        "size_in_bytes": 11687
+      },
+      {
+        "_path": "site-packages/pyvista/core/cell.py",
+        "path_type": "hardlink",
+        "sha256": "f44c79c462e9f97d82e3af85db0ed5ff53d90ea2ebf6afe53af173c0082ed7d1",
+        "sha256_in_prefix": "f44c79c462e9f97d82e3af85db0ed5ff53d90ea2ebf6afe53af173c0082ed7d1",
+        "size_in_bytes": 24269
+      },
+      {
+        "_path": "site-packages/pyvista/core/celltype.py",
+        "path_type": "hardlink",
+        "sha256": "c336ede4a3870f2ed829b789eee0ef8fde1bf3464b62a1b84c4f51657618cfcf",
+        "sha256_in_prefix": "c336ede4a3870f2ed829b789eee0ef8fde1bf3464b62a1b84c4f51657618cfcf",
+        "size_in_bytes": 4819
+      },
+      {
+        "_path": "site-packages/pyvista/core/composite.py",
+        "path_type": "hardlink",
+        "sha256": "433e4d0c93449867a3d51cef81a8b02bf14a37c3c812ed70372902f031e68a9f",
+        "sha256_in_prefix": "433e4d0c93449867a3d51cef81a8b02bf14a37c3c812ed70372902f031e68a9f",
+        "size_in_bytes": 42493
+      },
+      {
+        "_path": "site-packages/pyvista/core/dataobject.py",
+        "path_type": "hardlink",
+        "sha256": "70a6a4047961e29730481d9c461f980fd85525234906499fabbbe5b43faf2c15",
+        "sha256_in_prefix": "70a6a4047961e29730481d9c461f980fd85525234906499fabbbe5b43faf2c15",
+        "size_in_bytes": 22250
+      },
+      {
+        "_path": "site-packages/pyvista/core/dataset.py",
+        "path_type": "hardlink",
+        "sha256": "4cd2abb46ea9ccbb38192661715532351993fc8095c43cfe032195520b48ddb1",
+        "sha256_in_prefix": "4cd2abb46ea9ccbb38192661715532351993fc8095c43cfe032195520b48ddb1",
+        "size_in_bytes": 107537
+      },
+      {
+        "_path": "site-packages/pyvista/core/datasetattributes.py",
+        "path_type": "hardlink",
+        "sha256": "23710f6743fa71ea6b8b68b52e776ea78acafbb701171aa4af9e1ce7e83ef8c5",
+        "sha256_in_prefix": "23710f6743fa71ea6b8b68b52e776ea78acafbb701171aa4af9e1ce7e83ef8c5",
+        "size_in_bytes": 48777
+      },
+      {
+        "_path": "site-packages/pyvista/core/errors.py",
+        "path_type": "hardlink",
+        "sha256": "1e0a9d69482a51ba19b66dbd768c5b27012bd39eda363f441b1565425ef9fe71",
+        "sha256_in_prefix": "1e0a9d69482a51ba19b66dbd768c5b27012bd39eda363f441b1565425ef9fe71",
+        "size_in_bytes": 3767
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "367300485c92544176b8b7fbb95310ab0c900dc9d788736b77060441b4ecc06a",
+        "sha256_in_prefix": "367300485c92544176b8b7fbb95310ab0c900dc9d788736b77060441b4ecc06a",
+        "size_in_bytes": 2337
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/composite.py",
+        "path_type": "hardlink",
+        "sha256": "f2f57bf63aac62d254eb0841bd611fae046c5a8d919f14ec07a04e027106cb31",
+        "sha256_in_prefix": "f2f57bf63aac62d254eb0841bd611fae046c5a8d919f14ec07a04e027106cb31",
+        "size_in_bytes": 6576
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/data_set.py",
+        "path_type": "hardlink",
+        "sha256": "70ce59f655010d35676b3b0f9931484c98dd23d31552dee9e96e2a7097819226",
+        "sha256_in_prefix": "70ce59f655010d35676b3b0f9931484c98dd23d31552dee9e96e2a7097819226",
+        "size_in_bytes": 244401
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/image_data.py",
+        "path_type": "hardlink",
+        "sha256": "af21b633952c73b806bc89ac069ad153c008118e6b847b663c086fb31e7d3e2b",
+        "sha256_in_prefix": "af21b633952c73b806bc89ac069ad153c008118e6b847b663c086fb31e7d3e2b",
+        "size_in_bytes": 35703
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/poly_data.py",
+        "path_type": "hardlink",
+        "sha256": "a9b1fb6580dd8090d66e29b5bf33d20921415c011b55340cb208f8e458b9422d",
+        "sha256_in_prefix": "a9b1fb6580dd8090d66e29b5bf33d20921415c011b55340cb208f8e458b9422d",
+        "size_in_bytes": 133956
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/rectilinear_grid.py",
+        "path_type": "hardlink",
+        "sha256": "50ecb5f38e575ad6aa6dcc61cf4501d5185df0b42960594ebf33a1f0907407bf",
+        "sha256_in_prefix": "50ecb5f38e575ad6aa6dcc61cf4501d5185df0b42960594ebf33a1f0907407bf",
+        "size_in_bytes": 5785
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/structured_grid.py",
+        "path_type": "hardlink",
+        "sha256": "c29b9e5106cc83f338831df5fbe0f920a646d4c106d3d5ad0a11c7716e97b425",
+        "sha256_in_prefix": "c29b9e5106cc83f338831df5fbe0f920a646d4c106d3d5ad0a11c7716e97b425",
+        "size_in_bytes": 7394
+      },
+      {
+        "_path": "site-packages/pyvista/core/filters/unstructured_grid.py",
+        "path_type": "hardlink",
+        "sha256": "95239082aa9bff7dfd03544f55dd776090b62058d4fc7feb90fbbd07a6688df5",
+        "sha256_in_prefix": "95239082aa9bff7dfd03544f55dd776090b62058d4fc7feb90fbbd07a6688df5",
+        "size_in_bytes": 6169
+      },
+      {
+        "_path": "site-packages/pyvista/core/grid.py",
+        "path_type": "hardlink",
+        "sha256": "62b6f99407ae20b8d087e70e58a7284be2a0e9bee06630ceae396ac8d9d51a1b",
+        "sha256_in_prefix": "62b6f99407ae20b8d087e70e58a7284be2a0e9bee06630ceae396ac8d9d51a1b",
+        "size_in_bytes": 28836
+      },
+      {
+        "_path": "site-packages/pyvista/core/input_validation/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ae3f8dced417e747fe811c41d6ad286e53768fddf74e0ab680e4aa9d1662a539",
+        "sha256_in_prefix": "ae3f8dced417e747fe811c41d6ad286e53768fddf74e0ab680e4aa9d1662a539",
+        "size_in_bytes": 920
+      },
+      {
+        "_path": "site-packages/pyvista/core/input_validation/check.py",
+        "path_type": "hardlink",
+        "sha256": "763c105ec922a18ec1399f653e7bfac84ee4f20b1c01d7c49243658831d28362",
+        "sha256_in_prefix": "763c105ec922a18ec1399f653e7bfac84ee4f20b1c01d7c49243658831d28362",
+        "size_in_bytes": 34853
+      },
+      {
+        "_path": "site-packages/pyvista/core/input_validation/validate.py",
+        "path_type": "hardlink",
+        "sha256": "64606c7052e0e9369f3ebb9b1943ba78ebc6f6f3fca8a93623eb8ec786fa787a",
+        "sha256_in_prefix": "64606c7052e0e9369f3ebb9b1943ba78ebc6f6f3fca8a93623eb8ec786fa787a",
+        "size_in_bytes": 32556
+      },
+      {
+        "_path": "site-packages/pyvista/core/objects.py",
+        "path_type": "hardlink",
+        "sha256": "dbf9629070efef49b4e467d4fb8c5a1d24f43de1e799d96b5cfe3bd8af745431",
+        "sha256_in_prefix": "dbf9629070efef49b4e467d4fb8c5a1d24f43de1e799d96b5cfe3bd8af745431",
+        "size_in_bytes": 10679
+      },
+      {
+        "_path": "site-packages/pyvista/core/pointset.py",
+        "path_type": "hardlink",
+        "sha256": "9dcc013a29baff10764241ca9494302b8ea4e49f99a78310aaf230f57e0c54d2",
+        "sha256_in_prefix": "9dcc013a29baff10764241ca9494302b8ea4e49f99a78310aaf230f57e0c54d2",
+        "size_in_bytes": 108701
+      },
+      {
+        "_path": "site-packages/pyvista/core/pyvista_ndarray.py",
+        "path_type": "hardlink",
+        "sha256": "5750cbf68952a430780e6169fe9a275138dd05fdb165bad61eae5a1132b2dc23",
+        "sha256_in_prefix": "5750cbf68952a430780e6169fe9a275138dd05fdb165bad61eae5a1132b2dc23",
+        "size_in_bytes": 4207
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "45864ef28bf177974ee5f6ecd459731ffa1da3ed17d76099bcf1523033426aac",
+        "sha256_in_prefix": "45864ef28bf177974ee5f6ecd459731ffa1da3ed17d76099bcf1523033426aac",
+        "size_in_bytes": 3934
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/arrays.py",
+        "path_type": "hardlink",
+        "sha256": "8460ec757f1907285b74f79de8918eac7fa61f5c8134907dcb8639f97eb1b772",
+        "sha256_in_prefix": "8460ec757f1907285b74f79de8918eac7fa61f5c8134907dcb8639f97eb1b772",
+        "size_in_bytes": 25162
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/cell_type_helper.py",
+        "path_type": "hardlink",
+        "sha256": "dd082d388360d6e1105951e30893e80bdee033794c8596eb88518403d405bf14",
+        "sha256_in_prefix": "dd082d388360d6e1105951e30893e80bdee033794c8596eb88518403d405bf14",
+        "size_in_bytes": 2966
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/cells.py",
+        "path_type": "hardlink",
+        "sha256": "30635e04c761ff7ea14fbe4d82b0d974d9f11325d71b15581ea5d476de13d7d5",
+        "sha256_in_prefix": "30635e04c761ff7ea14fbe4d82b0d974d9f11325d71b15581ea5d476de13d7d5",
+        "size_in_bytes": 8951
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/docs.py",
+        "path_type": "hardlink",
+        "sha256": "3b59fa661dc6708f8a338a94979bf96a3e63be21f3793b1592135f8ef1b4ef22",
+        "sha256_in_prefix": "3b59fa661dc6708f8a338a94979bf96a3e63be21f3793b1592135f8ef1b4ef22",
+        "size_in_bytes": 4216
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/features.py",
+        "path_type": "hardlink",
+        "sha256": "c7b270e001c5ceaad68d757e566c9a405c97aa072acb74926a716835166c2292",
+        "sha256_in_prefix": "c7b270e001c5ceaad68d757e566c9a405c97aa072acb74926a716835166c2292",
+        "size_in_bytes": 21838
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/fileio.py",
+        "path_type": "hardlink",
+        "sha256": "fd3b9e2a811e715e2ce283727733bc235f55dbc29e4ecc0708cbd536d779d9dc",
+        "sha256_in_prefix": "fd3b9e2a811e715e2ce283727733bc235f55dbc29e4ecc0708cbd536d779d9dc",
+        "size_in_bytes": 18705
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/geometric_objects.py",
+        "path_type": "hardlink",
+        "sha256": "e2b440f9927a5cf65c0999a5d75c110fb2dd95ba358e8fc07cbb973ebc72486c",
+        "sha256_in_prefix": "e2b440f9927a5cf65c0999a5d75c110fb2dd95ba358e8fc07cbb973ebc72486c",
+        "size_in_bytes": 69968
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/geometric_sources.py",
+        "path_type": "hardlink",
+        "sha256": "5a63a8a9048079b7ded6f35f2b457bb387187a3d2ae1b11fb0af1eae1d0ba978",
+        "sha256_in_prefix": "5a63a8a9048079b7ded6f35f2b457bb387187a3d2ae1b11fb0af1eae1d0ba978",
+        "size_in_bytes": 25406
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "4928f699b86bef152945adeb8b65123ab975d92ed2d8ec15f2b5c4f6e022fdd9",
+        "sha256_in_prefix": "4928f699b86bef152945adeb8b65123ab975d92ed2d8ec15f2b5c4f6e022fdd9",
+        "size_in_bytes": 9080
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/misc.py",
+        "path_type": "hardlink",
+        "sha256": "137604876b4e2eca187f175e913d61b49c58732269b1788068922508b84c04a1",
+        "sha256_in_prefix": "137604876b4e2eca187f175e913d61b49c58732269b1788068922508b84c04a1",
+        "size_in_bytes": 8035
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/observers.py",
+        "path_type": "hardlink",
+        "sha256": "9d29dfede43b81c208b5cc1aa9e94b0bf042f117c185f8fdac7f39e47a0c9904",
+        "sha256_in_prefix": "9d29dfede43b81c208b5cc1aa9e94b0bf042f117c185f8fdac7f39e47a0c9904",
+        "size_in_bytes": 8635
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/parametric_objects.py",
+        "path_type": "hardlink",
+        "sha256": "940dea0b70a59d499a2c4555fcce5446722cfd4fefd3864c8f344023ddd989c9",
+        "sha256_in_prefix": "940dea0b70a59d499a2c4555fcce5446722cfd4fefd3864c8f344023ddd989c9",
+        "size_in_bytes": 41646
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/points.py",
+        "path_type": "hardlink",
+        "sha256": "a2945256e53aba42b6c0f91c30e728ac948a43303a77c1752f8fb9c72f4587bd",
+        "sha256_in_prefix": "a2945256e53aba42b6c0f91c30e728ac948a43303a77c1752f8fb9c72f4587bd",
+        "size_in_bytes": 13653
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/reader.py",
+        "path_type": "hardlink",
+        "sha256": "a8821241898a472a68dedd5f75e1b10d25a69e6d9309fb5aa4f847d772699dc7",
+        "sha256_in_prefix": "a8821241898a472a68dedd5f75e1b10d25a69e6d9309fb5aa4f847d772699dc7",
+        "size_in_bytes": 76127
+      },
+      {
+        "_path": "site-packages/pyvista/core/utilities/transformations.py",
+        "path_type": "hardlink",
+        "sha256": "9948e72459fe7479e4e208508f4aa14950f567b135347942ff0a1bf2a8f0f78f",
+        "sha256_in_prefix": "9948e72459fe7479e4e208508f4aa14950f567b135347942ff0a1bf2a8f0f78f",
+        "size_in_bytes": 10042
+      },
+      {
+        "_path": "site-packages/pyvista/core/wrappers.py",
+        "path_type": "hardlink",
+        "sha256": "84ece2c68b1cdfde1009406d0d33b5107a648256a6f3d37b092f20385b7cea4c",
+        "sha256_in_prefix": "84ece2c68b1cdfde1009406d0d33b5107a648256a6f3d37b092f20385b7cea4c",
+        "size_in_bytes": 1409
+      },
+      {
+        "_path": "site-packages/pyvista/demos/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8eeda997db5d29ecbd7bcd209c47318e512c8c555340d640bd2ed6c0bc681cbe",
+        "sha256_in_prefix": "8eeda997db5d29ecbd7bcd209c47318e512c8c555340d640bd2ed6c0bc681cbe",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "site-packages/pyvista/demos/demos.py",
+        "path_type": "hardlink",
+        "sha256": "85c2a1e3a11ee346dc3145d1a8085fb70bad3d6b6b29e872d3d47d5d24243907",
+        "sha256_in_prefix": "85c2a1e3a11ee346dc3145d1a8085fb70bad3d6b6b29e872d3d47d5d24243907",
+        "size_in_bytes": 15681
+      },
+      {
+        "_path": "site-packages/pyvista/demos/logo.py",
+        "path_type": "hardlink",
+        "sha256": "97ace31a86d7503761209ab8fb06ceae34e865bfe42687d9b0753e4fa4ae77b4",
+        "sha256_in_prefix": "97ace31a86d7503761209ab8fb06ceae34e865bfe42687d9b0753e4fa4ae77b4",
+        "size_in_bytes": 10050
+      },
+      {
+        "_path": "site-packages/pyvista/errors.py",
+        "path_type": "hardlink",
+        "sha256": "9f3ab197ead67cd1b9efa4a9a99b593e570f28b7bfb2a1a96870fdb80ba3c75f",
+        "sha256_in_prefix": "9f3ab197ead67cd1b9efa4a9a99b593e570f28b7bfb2a1a96870fdb80ba3c75f",
+        "size_in_bytes": 1947
+      },
+      {
+        "_path": "site-packages/pyvista/examples/2k_earth_daymap.jpg",
+        "path_type": "hardlink",
+        "sha256": "767ee1dc6eb3802699bfccf6f264880f8acd0b80de3191cd24984fe279b07b7c",
+        "sha256_in_prefix": "767ee1dc6eb3802699bfccf6f264880f8acd0b80de3191cd24984fe279b07b7c",
+        "size_in_bytes": 463087
+      },
+      {
+        "_path": "site-packages/pyvista/examples/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bf8255f2790b7f0b5564c0022da51691809eea04f3032e30454ac1e8f7336c15",
+        "sha256_in_prefix": "bf8255f2790b7f0b5564c0022da51691809eea04f3032e30454ac1e8f7336c15",
+        "size_in_bytes": 157
+      },
+      {
+        "_path": "site-packages/pyvista/examples/airplane.ply",
+        "path_type": "hardlink",
+        "sha256": "370846416b2d0d9c574e356a5b43c7aac2db748761daab270fdd1331f97305a8",
+        "sha256_in_prefix": "370846416b2d0d9c574e356a5b43c7aac2db748761daab270fdd1331f97305a8",
+        "size_in_bytes": 74547
+      },
+      {
+        "_path": "site-packages/pyvista/examples/ant.ply",
+        "path_type": "hardlink",
+        "sha256": "1e825c23c85588c9ea8d31b53e09791a6cd20fa9f835e98d4c61389e4209a73b",
+        "sha256_in_prefix": "1e825c23c85588c9ea8d31b53e09791a6cd20fa9f835e98d4c61389e4209a73b",
+        "size_in_bytes": 17941
+      },
+      {
+        "_path": "site-packages/pyvista/examples/cells.py",
+        "path_type": "hardlink",
+        "sha256": "80ebc4b524bc9c4f61894eead421b3fc3e91466bd0350e37fd4b6592940e4f9c",
+        "sha256_in_prefix": "80ebc4b524bc9c4f61894eead421b3fc3e91466bd0350e37fd4b6592940e4f9c",
+        "size_in_bytes": 22540
+      },
+      {
+        "_path": "site-packages/pyvista/examples/channels.vti",
+        "path_type": "hardlink",
+        "sha256": "21b7873cc9b555286565c59a84c65c1bbf8b3b7e6332027e82d81bf51268f41d",
+        "sha256_in_prefix": "21b7873cc9b555286565c59a84c65c1bbf8b3b7e6332027e82d81bf51268f41d",
+        "size_in_bytes": 522284
+      },
+      {
+        "_path": "site-packages/pyvista/examples/downloads.py",
+        "path_type": "hardlink",
+        "sha256": "768c459cb88d95510dc825f9a154c83ce04342553144d244202b05fdaae60afd",
+        "sha256_in_prefix": "768c459cb88d95510dc825f9a154c83ce04342553144d244202b05fdaae60afd",
+        "size_in_bytes": 152137
+      },
+      {
+        "_path": "site-packages/pyvista/examples/examples.py",
+        "path_type": "hardlink",
+        "sha256": "f1af2f0723712567de930333cd3410af3832a8537b8c68e3b5e611bee870b1f0",
+        "sha256_in_prefix": "f1af2f0723712567de930333cd3410af3832a8537b8c68e3b5e611bee870b1f0",
+        "size_in_bytes": 12308
+      },
+      {
+        "_path": "site-packages/pyvista/examples/globe.vtk",
+        "path_type": "hardlink",
+        "sha256": "fae2176430ea36fd5e7ca2770f80ff9de01c83c2e467f13362c9ad0517eeecd8",
+        "sha256_in_prefix": "fae2176430ea36fd5e7ca2770f80ff9de01c83c2e467f13362c9ad0517eeecd8",
+        "size_in_bytes": 37447
+      },
+      {
+        "_path": "site-packages/pyvista/examples/gltf.py",
+        "path_type": "hardlink",
+        "sha256": "4da6b5cd0d278d4d757cfd4fd132be0713d937e0ee6cf64fcb9b176a9d2318ce",
+        "sha256_in_prefix": "4da6b5cd0d278d4d757cfd4fd132be0713d937e0ee6cf64fcb9b176a9d2318ce",
+        "size_in_bytes": 3527
+      },
+      {
+        "_path": "site-packages/pyvista/examples/hexbeam.vtk",
+        "path_type": "hardlink",
+        "sha256": "26162bb88f873e88bcfae4a1d2e71379c1ab52a0ebd6df0d0812771b179766a9",
+        "sha256_in_prefix": "26162bb88f873e88bcfae4a1d2e71379c1ab52a0ebd6df0d0812771b179766a9",
+        "size_in_bytes": 3091
+      },
+      {
+        "_path": "site-packages/pyvista/examples/nut.ply",
+        "path_type": "hardlink",
+        "sha256": "51df5ca42ddbac9123e59678d532557278b11dee915274c98ea8897acc604c0a",
+        "sha256_in_prefix": "51df5ca42ddbac9123e59678d532557278b11dee915274c98ea8897acc604c0a",
+        "size_in_bytes": 20128
+      },
+      {
+        "_path": "site-packages/pyvista/examples/planets.py",
+        "path_type": "hardlink",
+        "sha256": "e37a21f13194428a059bcf832acfaa6015a95be382e620fd470a57676b9e6dd5",
+        "sha256_in_prefix": "e37a21f13194428a059bcf832acfaa6015a95be382e620fd470a57676b9e6dd5",
+        "size_in_bytes": 27183
+      },
+      {
+        "_path": "site-packages/pyvista/examples/pyvista_logo.png",
+        "path_type": "hardlink",
+        "sha256": "73eaae5294a60ef4d0c3f40da7d0f41fc5ac92fa21968569c3d2a7c2a290fb7d",
+        "sha256_in_prefix": "73eaae5294a60ef4d0c3f40da7d0f41fc5ac92fa21968569c3d2a7c2a290fb7d",
+        "size_in_bytes": 244663
+      },
+      {
+        "_path": "site-packages/pyvista/examples/rectilinear.vtk",
+        "path_type": "hardlink",
+        "sha256": "8e6b73500d23211444604b14b94487e3c42e1ae7b16487aa515765c416567b13",
+        "sha256_in_prefix": "8e6b73500d23211444604b14b94487e3c42e1ae7b16487aa515765c416567b13",
+        "size_in_bytes": 228473
+      },
+      {
+        "_path": "site-packages/pyvista/examples/sphere.ply",
+        "path_type": "hardlink",
+        "sha256": "c4bc7f531f22f620323cc14652b197c0f5857206024e8d38016c1e2b97f51723",
+        "sha256_in_prefix": "c4bc7f531f22f620323cc14652b197c0f5857206024e8d38016c1e2b97f51723",
+        "size_in_bytes": 16237
+      },
+      {
+        "_path": "site-packages/pyvista/examples/uniform.vtk",
+        "path_type": "hardlink",
+        "sha256": "e47ad120dfe6eb00d65c300a08ceece6e15aa608723c798d0a862506040ff00f",
+        "sha256_in_prefix": "e47ad120dfe6eb00d65c300a08ceece6e15aa608723c798d0a862506040ff00f",
+        "size_in_bytes": 14094
+      },
+      {
+        "_path": "site-packages/pyvista/examples/vrml.py",
+        "path_type": "hardlink",
+        "sha256": "61f9a3534873bd35244f4cd2dd19924cd6ed1bfe58784fefa1645f6e1f0df0b7",
+        "sha256_in_prefix": "61f9a3534873bd35244f4cd2dd19924cd6ed1bfe58784fefa1645f6e1f0df0b7",
+        "size_in_bytes": 963
+      },
+      {
+        "_path": "site-packages/pyvista/ext/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "857583aa852c34d42f68677c794194b99f726a254ace32bf80e2fcbac7e524bd",
+        "sha256_in_prefix": "857583aa852c34d42f68677c794194b99f726a254ace32bf80e2fcbac7e524bd",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "site-packages/pyvista/ext/coverage.py",
+        "path_type": "hardlink",
+        "sha256": "d74ebb98e33bd84c7ac037ca2a4464048fc2800c933b75b0de076a738e536151",
+        "sha256_in_prefix": "d74ebb98e33bd84c7ac037ca2a4464048fc2800c933b75b0de076a738e536151",
+        "size_in_bytes": 16105
+      },
+      {
+        "_path": "site-packages/pyvista/ext/plot_directive.py",
+        "path_type": "hardlink",
+        "sha256": "5ed791ae41f0cf4e788a9fc169fadc29221ada2648f5dd52e2f28bb0e3856970",
+        "sha256_in_prefix": "5ed791ae41f0cf4e788a9fc169fadc29221ada2648f5dd52e2f28bb0e3856970",
+        "size_in_bytes": 20382
+      },
+      {
+        "_path": "site-packages/pyvista/ext/viewer_directive.py",
+        "path_type": "hardlink",
+        "sha256": "179005c9d5932079cd939baf16bac44e22f96ea376909a1259a98442f9f4bfe8",
+        "sha256_in_prefix": "179005c9d5932079cd939baf16bac44e22f96ea376909a1259a98442f9f4bfe8",
+        "size_in_bytes": 4538
+      },
+      {
+        "_path": "site-packages/pyvista/jupyter/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2ab551a0fb5c4c21b9c4cef4041efb923cb4a6f42d92182d68680dca2994e36f",
+        "sha256_in_prefix": "2ab551a0fb5c4c21b9c4cef4041efb923cb4a6f42d92182d68680dca2994e36f",
+        "size_in_bytes": 3792
+      },
+      {
+        "_path": "site-packages/pyvista/jupyter/notebook.py",
+        "path_type": "hardlink",
+        "sha256": "7ae3f6edcfed0cd275bc65b6acaa1bd617744589a58f889228fc5f06dc39898d",
+        "sha256_in_prefix": "7ae3f6edcfed0cd275bc65b6acaa1bd617744589a58f889228fc5f06dc39898d",
+        "size_in_bytes": 1200
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "51e0e4128832062bd2dd4e6e8b7f2f56db5c9073bfaad3895bf9c8693cf5996f",
+        "sha256_in_prefix": "51e0e4128832062bd2dd4e6e8b7f2f56db5c9073bfaad3895bf9c8693cf5996f",
+        "size_in_bytes": 3092
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/_plotting.py",
+        "path_type": "hardlink",
+        "sha256": "06d483de9df68b143ac66e36e78f5ffd4f3de834f5d25fa1c4f4220c122ef519",
+        "sha256_in_prefix": "06d483de9df68b143ac66e36e78f5ffd4f3de834f5d25fa1c4f4220c122ef519",
+        "size_in_bytes": 9696
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/_property.py",
+        "path_type": "hardlink",
+        "sha256": "50de37de8a42169dd3186fe233db87eadafe0f247f405f99abbfca77469a4736",
+        "sha256_in_prefix": "50de37de8a42169dd3186fe233db87eadafe0f247f405f99abbfca77469a4736",
+        "size_in_bytes": 37838
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "a7630a32e10e35b165be21a83658efb9e0dccd51889249d05eceb6936990f668",
+        "sha256_in_prefix": "a7630a32e10e35b165be21a83658efb9e0dccd51889249d05eceb6936990f668",
+        "size_in_bytes": 939
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/_vtk.py",
+        "path_type": "hardlink",
+        "sha256": "fc2b3078587455dbbb656909eaf995eee974d9f1e14b851a35d6acac06b8d557",
+        "sha256_in_prefix": "fc2b3078587455dbbb656909eaf995eee974d9f1e14b851a35d6acac06b8d557",
+        "size_in_bytes": 3186
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/_vtk_gl.py",
+        "path_type": "hardlink",
+        "sha256": "ae8d6adfca6d3b4908a8f9ca8c63446b49cba5079d8f0364258b7b98e561fa85",
+        "sha256_in_prefix": "ae8d6adfca6d3b4908a8f9ca8c63446b49cba5079d8f0364258b7b98e561fa85",
+        "size_in_bytes": 1073
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/actor.py",
+        "path_type": "hardlink",
+        "sha256": "499d3d5ce0951e73e7caf6ced46a048f9135629b6879d85a0952cea905a8e18d",
+        "sha256_in_prefix": "499d3d5ce0951e73e7caf6ced46a048f9135629b6879d85a0952cea905a8e18d",
+        "size_in_bytes": 11719
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/actor_properties.py",
+        "path_type": "hardlink",
+        "sha256": "8380f26f3342a9ffe8efcf1f841fe4e299a06fd88f408422920218a2fb41e44d",
+        "sha256_in_prefix": "8380f26f3342a9ffe8efcf1f841fe4e299a06fd88f408422920218a2fb41e44d",
+        "size_in_bytes": 4736
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/affine_widget.py",
+        "path_type": "hardlink",
+        "sha256": "cc8da5316ef5bbcfa4307bb90564735d9518a62a5106aed9a090e263ed2d8f21",
+        "sha256_in_prefix": "cc8da5316ef5bbcfa4307bb90564735d9518a62a5106aed9a090e263ed2d8f21",
+        "size_in_bytes": 18464
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/axes.py",
+        "path_type": "hardlink",
+        "sha256": "6848466ff2239c4cc3992bce906b65760f202ddb0e7f51dc21b95a13342122ff",
+        "sha256_in_prefix": "6848466ff2239c4cc3992bce906b65760f202ddb0e7f51dc21b95a13342122ff",
+        "size_in_bytes": 3041
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/axes_actor.py",
+        "path_type": "hardlink",
+        "sha256": "213c08709a1cc07c4a05a71ece1be6bfcee7e34b75f4e58c08aa895ae7feb6ba",
+        "sha256_in_prefix": "213c08709a1cc07c4a05a71ece1be6bfcee7e34b75f4e58c08aa895ae7feb6ba",
+        "size_in_bytes": 15715
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/background_renderer.py",
+        "path_type": "hardlink",
+        "sha256": "e58ee44203128681a6eecb480f1781b2e4c19fc64188e2de637764004b991ed4",
+        "sha256_in_prefix": "e58ee44203128681a6eecb480f1781b2e4c19fc64188e2de637764004b991ed4",
+        "size_in_bytes": 3019
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/camera.py",
+        "path_type": "hardlink",
+        "sha256": "c2d70081ff1bd560179c655522e8342ab98418de897eeade56a3062099a6f373",
+        "sha256_in_prefix": "c2d70081ff1bd560179c655522e8342ab98418de897eeade56a3062099a6f373",
+        "size_in_bytes": 26651
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/charts.py",
+        "path_type": "hardlink",
+        "sha256": "e79c35a365626747a888f2b632134cf2146674f3e332f786078a53b1f3cfa6b6",
+        "sha256_in_prefix": "e79c35a365626747a888f2b632134cf2146674f3e332f786078a53b1f3cfa6b6",
+        "size_in_bytes": 152660
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/colors.py",
+        "path_type": "hardlink",
+        "sha256": "acf87cdf8d4692102e066f8afe05674f23cbd9e24ae71c9d09d0b3b2fd7677ae",
+        "sha256_in_prefix": "acf87cdf8d4692102e066f8afe05674f23cbd9e24ae71c9d09d0b3b2fd7677ae",
+        "size_in_bytes": 40899
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/composite_mapper.py",
+        "path_type": "hardlink",
+        "sha256": "3bb307152289421c9694187d8335ce4e6516f38e0541531d97a0ddd78a057461",
+        "sha256_in_prefix": "3bb307152289421c9694187d8335ce4e6516f38e0541531d97a0ddd78a057461",
+        "size_in_bytes": 29748
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/cube_axes_actor.py",
+        "path_type": "hardlink",
+        "sha256": "1f704db4b892cf60dbcab7affc0ad26d4e77d36ba5968fc38fd52bd43b2ce54c",
+        "sha256_in_prefix": "1f704db4b892cf60dbcab7affc0ad26d4e77d36ba5968fc38fd52bd43b2ce54c",
+        "size_in_bytes": 18586
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/errors.py",
+        "path_type": "hardlink",
+        "sha256": "9d2b5771afa3efb8ccb96cb273e864464ff427c02a0d0daa1b47d1190e2a92a1",
+        "sha256_in_prefix": "9d2b5771afa3efb8ccb96cb273e864464ff427c02a0d0daa1b47d1190e2a92a1",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "d519088bef57a34d49c9c7fb2669b6428194a13441320bd034b574c861e35af8",
+        "sha256_in_prefix": "d519088bef57a34d49c9c7fb2669b6428194a13441320bd034b574c861e35af8",
+        "size_in_bytes": 5435
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/lights.py",
+        "path_type": "hardlink",
+        "sha256": "6f717bea455295dcfd9b9df9e20221fce3a81af6494a918b5f48105b7d869bcc",
+        "sha256_in_prefix": "6f717bea455295dcfd9b9df9e20221fce3a81af6494a918b5f48105b7d869bcc",
+        "size_in_bytes": 41606
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/lookup_table.py",
+        "path_type": "hardlink",
+        "sha256": "b75b67fc8227adf07de5dde18f1947728abe13d4d564e6ccb3fd1e3956c7c971",
+        "sha256_in_prefix": "b75b67fc8227adf07de5dde18f1947728abe13d4d564e6ccb3fd1e3956c7c971",
+        "size_in_bytes": 35796
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/mapper.py",
+        "path_type": "hardlink",
+        "sha256": "50eddcfe5c81eda106eb0f60a7009f6ff24510d6cf0d385a1e3a3290d33cb5f2",
+        "sha256_in_prefix": "50eddcfe5c81eda106eb0f60a7009f6ff24510d6cf0d385a1e3a3290d33cb5f2",
+        "size_in_bytes": 36048
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/opts.py",
+        "path_type": "hardlink",
+        "sha256": "1e6ac3ef98cc2f7c7550e2a8269e5f7ece6042947b14eae44ce38b29eaab48a4",
+        "sha256_in_prefix": "1e6ac3ef98cc2f7c7550e2a8269e5f7ece6042947b14eae44ce38b29eaab48a4",
+        "size_in_bytes": 2015
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/picking.py",
+        "path_type": "hardlink",
+        "sha256": "ea8d33fd5f513b7939e4bd8916bcba56215167a93022618764b370deb4bd9545",
+        "sha256_in_prefix": "ea8d33fd5f513b7939e4bd8916bcba56215167a93022618764b370deb4bd9545",
+        "size_in_bytes": 71418
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/plotter.py",
+        "path_type": "hardlink",
+        "sha256": "1f94dfa61ebf98757be21cc01421a88e009509b394adbce6ca3705ff64543446",
+        "sha256_in_prefix": "1f94dfa61ebf98757be21cc01421a88e009509b394adbce6ca3705ff64543446",
+        "size_in_bytes": 256345
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/plotting/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "174c5c21534264808e5e2005b4dd775e5d689968c84d4631328d2890c401e2d1",
+        "sha256_in_prefix": "174c5c21534264808e5e2005b4dd775e5d689968c84d4631328d2890c401e2d1",
+        "size_in_bytes": 951
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/prop3d.py",
+        "path_type": "hardlink",
+        "sha256": "5b705199762714bb806b6aef8f58bf79eb8cbba3a207873ce11c5338615eb63b",
+        "sha256_in_prefix": "5b705199762714bb806b6aef8f58bf79eb8cbba3a207873ce11c5338615eb63b",
+        "size_in_bytes": 9293
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/render_passes.py",
+        "path_type": "hardlink",
+        "sha256": "557da0e6e85f8c831e348d705dfe6ddd098a04631a555c0d0e73ef58764a8af5",
+        "sha256_in_prefix": "557da0e6e85f8c831e348d705dfe6ddd098a04631a555c0d0e73ef58764a8af5",
+        "size_in_bytes": 10528
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/render_window_interactor.py",
+        "path_type": "hardlink",
+        "sha256": "736d53f5e732df6a3435f6994c83f3342f346c6f3a0aebf7f346328b03f58946",
+        "sha256_in_prefix": "736d53f5e732df6a3435f6994c83f3342f346c6f3a0aebf7f346328b03f58946",
+        "size_in_bytes": 47093
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/renderer.py",
+        "path_type": "hardlink",
+        "sha256": "d20bf691d28a22ebc7bb4fdf8847adaea59a491538b59f8c5e76ebb7fa094555",
+        "sha256_in_prefix": "d20bf691d28a22ebc7bb4fdf8847adaea59a491538b59f8c5e76ebb7fa094555",
+        "size_in_bytes": 125835
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/renderers.py",
+        "path_type": "hardlink",
+        "sha256": "2591930a1647694b59dd66197cbed2f10aa54ea85d3f5e976ca384cce3ac0bec",
+        "sha256_in_prefix": "2591930a1647694b59dd66197cbed2f10aa54ea85d3f5e976ca384cce3ac0bec",
+        "size_in_bytes": 24583
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/scalar_bars.py",
+        "path_type": "hardlink",
+        "sha256": "9df7e17484c920c43581156e5300ca0b6502e9c1053e0557613040d1d58c630c",
+        "sha256_in_prefix": "9df7e17484c920c43581156e5300ca0b6502e9c1053e0557613040d1d58c630c",
+        "size_in_bytes": 20205
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/text.py",
+        "path_type": "hardlink",
+        "sha256": "8c63820f8e52967b95504622dd31cb5bdced82d6f36c45366930ce5255dac4d7",
+        "sha256_in_prefix": "8c63820f8e52967b95504622dd31cb5bdced82d6f36c45366930ce5255dac4d7",
+        "size_in_bytes": 15802
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/texture.py",
+        "path_type": "hardlink",
+        "sha256": "d31537d41dccc832139f7fbb64cc39c8461ddbc81b002f2531a9ff17e25a63af",
+        "sha256_in_prefix": "d31537d41dccc832139f7fbb64cc39c8461ddbc81b002f2531a9ff17e25a63af",
+        "size_in_bytes": 20730
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/themes.py",
+        "path_type": "hardlink",
+        "sha256": "4756f5f8f10f287421256f00f442090c63e83ae8f7a6d739f9ec3d44c5328212",
+        "sha256_in_prefix": "4756f5f8f10f287421256f00f442090c63e83ae8f7a6d739f9ec3d44c5328212",
+        "size_in_bytes": 96999
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/tools.py",
+        "path_type": "hardlink",
+        "sha256": "3667266c897b7b7c9b6c9f4add284f8dae04359f580fa165c04dd70846ac2849",
+        "sha256_in_prefix": "3667266c897b7b7c9b6c9f4add284f8dae04359f580fa165c04dd70846ac2849",
+        "size_in_bytes": 22809
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fba06602cce9db222a0201d0f456d50c572ae411179cc1be5fcb3fed60feec39",
+        "sha256_in_prefix": "fba06602cce9db222a0201d0f456d50c572ae411179cc1be5fcb3fed60feec39",
+        "size_in_bytes": 756
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/algorithms.py",
+        "path_type": "hardlink",
+        "sha256": "c806550684c6694db7087ae484523f168132fff3a9f18ac34987eff6d819c98f",
+        "sha256_in_prefix": "c806550684c6694db7087ae484523f168132fff3a9f18ac34987eff6d819c98f",
+        "size_in_bytes": 17904
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/cubemap.py",
+        "path_type": "hardlink",
+        "sha256": "2f8ee9e557fffb7bae0bf3a45f71c4cb812c387fe15c8795610e1bc558c876bd",
+        "sha256_in_prefix": "2f8ee9e557fffb7bae0bf3a45f71c4cb812c387fe15c8795610e1bc558c876bd",
+        "size_in_bytes": 3409
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/gl_checks.py",
+        "path_type": "hardlink",
+        "sha256": "b0a20261bb214de14bdafc2cc103afc0a67237d8b7708947285a889a26a2613e",
+        "sha256_in_prefix": "b0a20261bb214de14bdafc2cc103afc0a67237d8b7708947285a889a26a2613e",
+        "size_in_bytes": 1825
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/regression.py",
+        "path_type": "hardlink",
+        "sha256": "2ead7ee4aa82138a604bd1a2f1c6cd3083672d211b228b95ad6e3a59a4d523e9",
+        "sha256_in_prefix": "2ead7ee4aa82138a604bd1a2f1c6cd3083672d211b228b95ad6e3a59a4d523e9",
+        "size_in_bytes": 7886
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/sphinx_gallery.py",
+        "path_type": "hardlink",
+        "sha256": "6ac4149e3407945f28ffe46959ca5b377546135e2f311d6c65ff5034a63d7798",
+        "sha256_in_prefix": "6ac4149e3407945f28ffe46959ca5b377546135e2f311d6c65ff5034a63d7798",
+        "size_in_bytes": 6822
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/utilities/xvfb.py",
+        "path_type": "hardlink",
+        "sha256": "3c55f8126068a3a5ab4aa08fd3202cfc63e05b80344e5a8cbd061fd469bf46fc",
+        "sha256_in_prefix": "3c55f8126068a3a5ab4aa08fd3202cfc63e05b80344e5a8cbd061fd469bf46fc",
+        "size_in_bytes": 1462
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/volume.py",
+        "path_type": "hardlink",
+        "sha256": "94e469e07601785847e2b2555dc4ac6e791f3643654dd4f52c95b08faf22db12",
+        "sha256_in_prefix": "94e469e07601785847e2b2555dc4ac6e791f3643654dd4f52c95b08faf22db12",
+        "size_in_bytes": 1725
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/volume_property.py",
+        "path_type": "hardlink",
+        "sha256": "4429bfb3f27c634422d1183e6ecd3e4b607087b8052cc8a6b0d3802a3f4bbaa4",
+        "sha256_in_prefix": "4429bfb3f27c634422d1183e6ecd3e4b607087b8052cc8a6b0d3802a3f4bbaa4",
+        "size_in_bytes": 12959
+      },
+      {
+        "_path": "site-packages/pyvista/plotting/widgets.py",
+        "path_type": "hardlink",
+        "sha256": "f18266c8226d8a727cdcef375f598c2a695dbfecb44c88f1b572496c7baed07b",
+        "sha256_in_prefix": "f18266c8226d8a727cdcef375f598c2a695dbfecb44c88f1b572496c7baed07b",
+        "size_in_bytes": 98543
+      },
+      {
+        "_path": "site-packages/pyvista/py.typed",
+        "path_type": "hardlink",
+        "sha256": "95aebb28195b8d737effe0df18d71d39c8d8ba6569286fd3930fbc9f9767181e",
+        "sha256_in_prefix": "95aebb28195b8d737effe0df18d71d39c8d8ba6569286fd3930fbc9f9767181e",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/pyvista/report.py",
+        "path_type": "hardlink",
+        "sha256": "5ce2dc73c82b64f8b86ba60e0eaefd9b13d6954e2013acd49e61dc6c14d34636",
+        "sha256_in_prefix": "5ce2dc73c82b64f8b86ba60e0eaefd9b13d6954e2013acd49e61dc6c14d34636",
+        "size_in_bytes": 6990
+      },
+      {
+        "_path": "site-packages/pyvista/trame/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a44644052f599d707ad62b9640eb97f4b2b050a28c37649dfffd24a883ada74c",
+        "sha256_in_prefix": "a44644052f599d707ad62b9640eb97f4b2b050a28c37649dfffd24a883ada74c",
+        "size_in_bytes": 589
+      },
+      {
+        "_path": "site-packages/pyvista/trame/jupyter.py",
+        "path_type": "hardlink",
+        "sha256": "95c7e07974e124973726717d75a294dc5ab461cd65899492c11d4bf2c8963201",
+        "sha256_in_prefix": "95c7e07974e124973726717d75a294dc5ab461cd65899492c11d4bf2c8963201",
+        "size_in_bytes": 15020
+      },
+      {
+        "_path": "site-packages/pyvista/trame/ui/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6d83f0d0f51a3572180007870809eb5cdb3c20ecc4d7b243afd2564af7e16f84",
+        "sha256_in_prefix": "6d83f0d0f51a3572180007870809eb5cdb3c20ecc4d7b243afd2564af7e16f84",
+        "size_in_bytes": 3390
+      },
+      {
+        "_path": "site-packages/pyvista/trame/ui/base_viewer.py",
+        "path_type": "hardlink",
+        "sha256": "e8ee37118dd72a305a4c6b34c15e4283ef236001e1bc6c9706c2f56c349c46e7",
+        "sha256_in_prefix": "e8ee37118dd72a305a4c6b34c15e4283ef236001e1bc6c9706c2f56c349c46e7",
+        "size_in_bytes": 7951
+      },
+      {
+        "_path": "site-packages/pyvista/trame/ui/vuetify2.py",
+        "path_type": "hardlink",
+        "sha256": "ee41153d07dbf5eaa1ec234cdb3a3cc3f593cfd654bd035a21df14506317df22",
+        "sha256_in_prefix": "ee41153d07dbf5eaa1ec234cdb3a3cc3f593cfd654bd035a21df14506317df22",
+        "size_in_bytes": 12498
+      },
+      {
+        "_path": "site-packages/pyvista/trame/ui/vuetify3.py",
+        "path_type": "hardlink",
+        "sha256": "ac0684e734f6172be4f3e7453d278f52beb80b065e9d9fb212251da86c3bfd4a",
+        "sha256_in_prefix": "ac0684e734f6172be4f3e7453d278f52beb80b065e9d9fb212251da86c3bfd4a",
+        "size_in_bytes": 12773
+      },
+      {
+        "_path": "site-packages/pyvista/trame/views.py",
+        "path_type": "hardlink",
+        "sha256": "ae08fa4477e6010d4137c2b6b769c8ea1fa34d00f924ebc9049b061ab0804d09",
+        "sha256_in_prefix": "ae08fa4477e6010d4137c2b6b769c8ea1fa34d00f924ebc9049b061ab0804d09",
+        "size_in_bytes": 9322
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3c41a23ff215e5e21c243c2324967c5b8b34cbf100827f2e8ae29e470fd4b631",
+        "sha256_in_prefix": "3c41a23ff215e5e21c243c2324967c5b8b34cbf100827f2e8ae29e470fd4b631",
+        "size_in_bytes": 2177
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/algorithms.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/arrays.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/cell_type_helper.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/cells.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/common.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/docs.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/errors.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/features.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/fileio.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/geometric_objects.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/misc.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/parametric_objects.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/reader.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/regression.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/sphinx_gallery.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/transformations.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/wrappers.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/pyvista/utilities/xvfb.py",
+        "path_type": "hardlink",
+        "sha256": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "sha256_in_prefix": "7a8e4ba223532f08709e424a83c4ff0e12c8ff150cba0f2b0ef4383bbc9169c0",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/__pycache__/_plot.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/__pycache__/_version.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/__pycache__/conftest.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/_typing_core.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/_vtk_core.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/cell.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/celltype.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/composite.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/dataobject.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/dataset.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/datasetattributes.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/errors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/composite.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/data_set.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/image_data.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/poly_data.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/rectilinear_grid.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/structured_grid.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/filters/__pycache__/unstructured_grid.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/grid.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/input_validation/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/input_validation/__pycache__/check.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/input_validation/__pycache__/validate.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/objects.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/pointset.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/pyvista_ndarray.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/arrays.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/cell_type_helper.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/cells.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/docs.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/features.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/fileio.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/geometric_objects.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/geometric_sources.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/helpers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/misc.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/observers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/parametric_objects.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/points.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/reader.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/utilities/__pycache__/transformations.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/core/__pycache__/wrappers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/demos/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/demos/__pycache__/demos.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/demos/__pycache__/logo.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/__pycache__/errors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/cells.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/downloads.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/examples.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/gltf.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/planets.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/examples/__pycache__/vrml.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/ext/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/ext/__pycache__/coverage.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/ext/__pycache__/plot_directive.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/ext/__pycache__/viewer_directive.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/jupyter/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/jupyter/__pycache__/notebook.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_plotting.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_property.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_typing.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_vtk.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/_vtk_gl.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/actor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/actor_properties.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/affine_widget.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/axes.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/axes_actor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/background_renderer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/camera.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/charts.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/colors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/composite_mapper.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/cube_axes_actor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/errors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/helpers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/lights.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/lookup_table.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/mapper.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/opts.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/picking.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/plotter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/plotting/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/prop3d.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/render_passes.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/render_window_interactor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/renderer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/renderers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/scalar_bars.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/text.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/texture.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/themes.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/tools.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/algorithms.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/cubemap.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/gl_checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/regression.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/sphinx_gallery.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/utilities/__pycache__/xvfb.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/volume.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/volume_property.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/plotting/__pycache__/widgets.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/__pycache__/report.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/__pycache__/jupyter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/base_viewer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/vuetify2.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/ui/__pycache__/vuetify3.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/trame/__pycache__/views.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/algorithms.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/arrays.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/cell_type_helper.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/cells.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/common.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/docs.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/errors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/features.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/fileio.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/geometric_objects.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/helpers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/misc.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/parametric_objects.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/reader.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/regression.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/sphinx_gallery.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/transformations.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/wrappers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyvista/utilities/__pycache__/xvfb.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyvista",
+  "sha256": "725a0ed63b2fa2d083eb262bb32f02e9083ce3948df7d2fb5c3d82c17736b8d6",
+  "size": 1687830,
+  "subdir": "noarch",
+  "timestamp": 1707239291000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pyvista-0.43.3-pyhd8ed1ab_0.conda",
+  "version": "0.43.3"
+}

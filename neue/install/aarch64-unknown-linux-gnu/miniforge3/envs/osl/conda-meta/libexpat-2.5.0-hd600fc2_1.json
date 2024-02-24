@@ -1,0 +1,52 @@
+{
+  "build": "hd600fc2_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [
+    "expat 2.5.0.*"
+  ],
+  "depends": [
+    "libgcc-ng >=12"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libexpat-2.5.0-hd600fc2_1",
+  "features": "",
+  "files": [
+    "lib/libexpat.so.1",
+    "lib/libexpat.so.1.8.10"
+  ],
+  "fn": "libexpat-2.5.0-hd600fc2_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libexpat-2.5.0-hd600fc2_1",
+    "type": 1
+  },
+  "md5": "6cd3d0a28437b3845c260f9d71d434d7",
+  "name": "libexpat",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libexpat-2.5.0-hd600fc2_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libexpat.so.1",
+        "path_type": "softlink",
+        "sha256": "1f49fb7781f98a00ffaa217a17a625b787de345bb82497bb62d2466248804c7a",
+        "size_in_bytes": 215992
+      },
+      {
+        "_path": "lib/libexpat.so.1.8.10",
+        "path_type": "hardlink",
+        "sha256": "1f49fb7781f98a00ffaa217a17a625b787de345bb82497bb62d2466248804c7a",
+        "sha256_in_prefix": "1f49fb7781f98a00ffaa217a17a625b787de345bb82497bb62d2466248804c7a",
+        "size_in_bytes": 215992
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b4651d196d5adb0637c678d874160a318078d963caec264bda7ac07ff6a1cbc7",
+  "size": 77194,
+  "subdir": "linux-aarch64",
+  "timestamp": 1680190675000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libexpat-2.5.0-hd600fc2_1.conda",
+  "version": "2.5.0"
+}

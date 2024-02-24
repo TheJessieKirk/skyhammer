@@ -1,0 +1,45 @@
+{
+  "build": "hb9de7d4_1001",
+  "build_number": 1001,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pthread-stubs-0.4-hb9de7d4_1001",
+  "features": "",
+  "files": [
+    "lib/pkgconfig/pthread-stubs.pc"
+  ],
+  "fn": "pthread-stubs-0.4-hb9de7d4_1001.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pthread-stubs-0.4-hb9de7d4_1001",
+    "type": 1
+  },
+  "md5": "d0183ec6ce0b5aaa3486df25fa5f0ded",
+  "name": "pthread-stubs",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pthread-stubs-0.4-hb9de7d4_1001.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/pthread-stubs.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/pthread-stubs_1606147402873/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "11da09d43bae21f41507a6f8b9dbc383e4a2533808348e3bdda449a627877ca7",
+        "sha256_in_prefix": "de26c5a421b955792b46ab2ce69d9d1e64fcec55e821e507a2587631a9a3b9f8",
+        "size_in_bytes": 490
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f1d7ff5e06cc515ec82010537813c796369f8e9dde46ce3f4fa1a9f70bc7db7d",
+  "size": 5657,
+  "subdir": "linux-aarch64",
+  "timestamp": 1606147738000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/pthread-stubs-0.4-hb9de7d4_1001.tar.bz2",
+  "version": "0.4"
+}

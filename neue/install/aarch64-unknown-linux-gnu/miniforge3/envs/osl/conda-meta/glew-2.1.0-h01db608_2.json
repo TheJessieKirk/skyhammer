@@ -1,0 +1,119 @@
+{
+  "build": "h01db608_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.3.0",
+    "libglu",
+    "libstdcxx-ng >=9.3.0",
+    "xorg-libx11",
+    "xorg-libxext"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/glew-2.1.0-h01db608_2",
+  "features": "",
+  "files": [
+    "bin/glewinfo",
+    "bin/visualinfo",
+    "include/GL/glew.h",
+    "include/GL/glxew.h",
+    "include/GL/wglew.h",
+    "lib/libGLEW.a",
+    "lib/libGLEW.so",
+    "lib/libGLEW.so.2.1",
+    "lib/libGLEW.so.2.1.0",
+    "lib/pkgconfig/glew.pc"
+  ],
+  "fn": "glew-2.1.0-h01db608_2.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/glew-2.1.0-h01db608_2",
+    "type": 1
+  },
+  "md5": "2a46529de1ff766f31333d3cdff2b734",
+  "name": "glew",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/glew-2.1.0-h01db608_2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/glewinfo",
+        "path_type": "hardlink",
+        "sha256": "a94facf06f24f95aa9c9c3c7625d890466f9eff687f5f460fdc9da12d8130121",
+        "sha256_in_prefix": "a94facf06f24f95aa9c9c3c7625d890466f9eff687f5f460fdc9da12d8130121",
+        "size_in_bytes": 862560
+      },
+      {
+        "_path": "bin/visualinfo",
+        "path_type": "hardlink",
+        "sha256": "d758de166f62f7558216805aef602b718a73806d8f49a4b7b2566df9ea2f36c9",
+        "sha256_in_prefix": "d758de166f62f7558216805aef602b718a73806d8f49a4b7b2566df9ea2f36c9",
+        "size_in_bytes": 27640
+      },
+      {
+        "_path": "include/GL/glew.h",
+        "path_type": "hardlink",
+        "sha256": "70dc1969d43ba3ee2d2f61173025dc69d9d7901594f662441517ce1ed0f4f929",
+        "sha256_in_prefix": "70dc1969d43ba3ee2d2f61173025dc69d9d7901594f662441517ce1ed0f4f929",
+        "size_in_bytes": 1186601
+      },
+      {
+        "_path": "include/GL/glxew.h",
+        "path_type": "hardlink",
+        "sha256": "c5aeb9aeb4d5b5cd872c2726781c05ed6ff87dc79dc1a0a0f798779309bf72b9",
+        "sha256_in_prefix": "c5aeb9aeb4d5b5cd872c2726781c05ed6ff87dc79dc1a0a0f798779309bf72b9",
+        "size_in_bytes": 73435
+      },
+      {
+        "_path": "include/GL/wglew.h",
+        "path_type": "hardlink",
+        "sha256": "57c0e65f54f0a264a3241cea51755d7358d564bfebf890dcc6fe01795a8e7e1d",
+        "sha256_in_prefix": "57c0e65f54f0a264a3241cea51755d7358d564bfebf890dcc6fe01795a8e7e1d",
+        "size_in_bytes": 63314
+      },
+      {
+        "_path": "lib/libGLEW.a",
+        "path_type": "hardlink",
+        "sha256": "980f743336535ba05927ff9757a96825345fe0450713305a00db7ab10ae7a198",
+        "sha256_in_prefix": "980f743336535ba05927ff9757a96825345fe0450713305a00db7ab10ae7a198",
+        "size_in_bytes": 1078688
+      },
+      {
+        "_path": "lib/libGLEW.so",
+        "path_type": "softlink",
+        "sha256": "de07b9483c9f2d8a6dd5badc9d2e2d49820c4cc73419d16369750e5b7289d153",
+        "size_in_bytes": 901168
+      },
+      {
+        "_path": "lib/libGLEW.so.2.1",
+        "path_type": "softlink",
+        "sha256": "de07b9483c9f2d8a6dd5badc9d2e2d49820c4cc73419d16369750e5b7289d153",
+        "size_in_bytes": 901168
+      },
+      {
+        "_path": "lib/libGLEW.so.2.1.0",
+        "path_type": "hardlink",
+        "sha256": "de07b9483c9f2d8a6dd5badc9d2e2d49820c4cc73419d16369750e5b7289d153",
+        "sha256_in_prefix": "de07b9483c9f2d8a6dd5badc9d2e2d49820c4cc73419d16369750e5b7289d153",
+        "size_in_bytes": 901168
+      },
+      {
+        "_path": "lib/pkgconfig/glew.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/drone/src/build_artifacts/glew_1607112918548/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "475ea00b3e55c8b1cf5951f362e2543562a04abe4ab187579f5afdce9a42ec13",
+        "sha256_in_prefix": "341567586acd9224fbaca837cf8dd8c3248af2cf7a384e269431daf8b1ea27a9",
+        "size_in_bytes": 723
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f872cc93507b833ec5f2f08e479cc0074e5d73defe4f91d54f667a324d0b4f61",
+  "size": 649830,
+  "subdir": "linux-aarch64",
+  "timestamp": 1607113149000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/glew-2.1.0-h01db608_2.tar.bz2",
+  "version": "2.1.0"
+}

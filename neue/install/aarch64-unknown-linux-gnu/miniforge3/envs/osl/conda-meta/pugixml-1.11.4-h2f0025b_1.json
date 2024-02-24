@@ -1,0 +1,116 @@
+{
+  "build": "h2f0025b_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pugixml-1.11.4-h2f0025b_1",
+  "features": "",
+  "files": [
+    "include/pugiconfig.hpp",
+    "include/pugixml.hpp",
+    "lib/cmake/pugixml/pugixml-config-version.cmake",
+    "lib/cmake/pugixml/pugixml-config.cmake",
+    "lib/cmake/pugixml/pugixml-targets-release.cmake",
+    "lib/cmake/pugixml/pugixml-targets.cmake",
+    "lib/libpugixml.so",
+    "lib/libpugixml.so.1",
+    "lib/libpugixml.so.1.11",
+    "lib/pkgconfig/pugixml.pc"
+  ],
+  "fn": "pugixml-1.11.4-h2f0025b_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pugixml-1.11.4-h2f0025b_1",
+    "type": 1
+  },
+  "md5": "51ccb8905289830f0a48c70fab2d9ca2",
+  "name": "pugixml",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/pugixml-1.11.4-h2f0025b_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/pugiconfig.hpp",
+        "path_type": "hardlink",
+        "sha256": "d1c77792a5ad21e93c35f888ef9411110153c8df24d162ad18b7ce308392a211",
+        "sha256_in_prefix": "d1c77792a5ad21e93c35f888ef9411110153c8df24d162ad18b7ce308392a211",
+        "size_in_bytes": 2896
+      },
+      {
+        "_path": "include/pugixml.hpp",
+        "path_type": "hardlink",
+        "sha256": "5c4d7d5435196055b6ab5e3d9e4fff0df87b0568bb6461e3a7cc7dbc0c95ac09",
+        "sha256_in_prefix": "5c4d7d5435196055b6ab5e3d9e4fff0df87b0568bb6461e3a7cc7dbc0c95ac09",
+        "size_in_bytes": 53437
+      },
+      {
+        "_path": "lib/cmake/pugixml/pugixml-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "a9adbf4bc1de2d918eb480cc9eeb7d4263cade6e31b23baa6af7611a5dfdd0a2",
+        "sha256_in_prefix": "a9adbf4bc1de2d918eb480cc9eeb7d4263cade6e31b23baa6af7611a5dfdd0a2",
+        "size_in_bytes": 2759
+      },
+      {
+        "_path": "lib/cmake/pugixml/pugixml-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "d0e85b8ec84b27b1d87b1b8db7ee724ee22184e92824dbdc4b9fa3ce4ed82b5f",
+        "sha256_in_prefix": "d0e85b8ec84b27b1d87b1b8db7ee724ee22184e92824dbdc4b9fa3ce4ed82b5f",
+        "size_in_bytes": 983
+      },
+      {
+        "_path": "lib/cmake/pugixml/pugixml-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "7639a685c7f1dc2eaee5f2aa361ee660d7cf6c2a26b4910427b36cb4df99fe6a",
+        "sha256_in_prefix": "7639a685c7f1dc2eaee5f2aa361ee660d7cf6c2a26b4910427b36cb4df99fe6a",
+        "size_in_bytes": 856
+      },
+      {
+        "_path": "lib/cmake/pugixml/pugixml-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "404b8eab0c027c9e5b7ddcb261b1abed9c438f2b477ff9fa0c159f2e60bf4bc0",
+        "sha256_in_prefix": "404b8eab0c027c9e5b7ddcb261b1abed9c438f2b477ff9fa0c159f2e60bf4bc0",
+        "size_in_bytes": 4302
+      },
+      {
+        "_path": "lib/libpugixml.so",
+        "path_type": "softlink",
+        "sha256": "a5776c95ed5981dd4f2773d26fb08da3032f44b23cab8011d0be65e3d11b090f",
+        "size_in_bytes": 305096
+      },
+      {
+        "_path": "lib/libpugixml.so.1",
+        "path_type": "softlink",
+        "sha256": "a5776c95ed5981dd4f2773d26fb08da3032f44b23cab8011d0be65e3d11b090f",
+        "size_in_bytes": 305096
+      },
+      {
+        "_path": "lib/libpugixml.so.1.11",
+        "path_type": "hardlink",
+        "sha256": "a5776c95ed5981dd4f2773d26fb08da3032f44b23cab8011d0be65e3d11b090f",
+        "sha256_in_prefix": "a5776c95ed5981dd4f2773d26fb08da3032f44b23cab8011d0be65e3d11b090f",
+        "size_in_bytes": 305096
+      },
+      {
+        "_path": "lib/pkgconfig/pugixml.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/pugixml_1686045542229/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "af80eb9a1d43c4d432fed3069d8aaf9846b52f4cee54f02b8da7bb8c081b638e",
+        "sha256_in_prefix": "8b47dc3f295b36d9dc3f8b7e3ae8788a6940e5453805bb75abb7f2aaba78e2b0",
+        "size_in_bytes": 1016
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "671b83403db32d232e59154d07352013ff22db2986c6378e5dfeb7b88f97c327",
+  "size": 109940,
+  "subdir": "linux-aarch64",
+  "timestamp": 1686045629000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/pugixml-1.11.4-h2f0025b_1.conda",
+  "version": "1.11.4"
+}

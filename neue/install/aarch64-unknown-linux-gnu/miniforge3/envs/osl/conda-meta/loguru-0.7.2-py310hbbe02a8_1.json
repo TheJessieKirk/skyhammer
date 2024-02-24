@@ -1,0 +1,420 @@
+{
+  "build": "py310hbbe02a8_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/loguru-0.7.2-py310hbbe02a8_1",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/LICENSE",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/METADATA",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/RECORD",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/WHEEL",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/loguru-0.7.2.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/loguru/__init__.py",
+    "lib/python3.10/site-packages/loguru/__init__.pyi",
+    "lib/python3.10/site-packages/loguru/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_asyncio_loop.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_better_exceptions.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_colorama.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_colorizer.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_contextvars.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_ctime_functions.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_datetime.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_defaults.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_error_interceptor.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_file_sink.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_filters.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_get_frame.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_handler.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_locks_machinery.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_logger.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_recattrs.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_simple_sinks.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/__pycache__/_string_parsers.cpython-310.pyc",
+    "lib/python3.10/site-packages/loguru/_asyncio_loop.py",
+    "lib/python3.10/site-packages/loguru/_better_exceptions.py",
+    "lib/python3.10/site-packages/loguru/_colorama.py",
+    "lib/python3.10/site-packages/loguru/_colorizer.py",
+    "lib/python3.10/site-packages/loguru/_contextvars.py",
+    "lib/python3.10/site-packages/loguru/_ctime_functions.py",
+    "lib/python3.10/site-packages/loguru/_datetime.py",
+    "lib/python3.10/site-packages/loguru/_defaults.py",
+    "lib/python3.10/site-packages/loguru/_error_interceptor.py",
+    "lib/python3.10/site-packages/loguru/_file_sink.py",
+    "lib/python3.10/site-packages/loguru/_filters.py",
+    "lib/python3.10/site-packages/loguru/_get_frame.py",
+    "lib/python3.10/site-packages/loguru/_handler.py",
+    "lib/python3.10/site-packages/loguru/_locks_machinery.py",
+    "lib/python3.10/site-packages/loguru/_logger.py",
+    "lib/python3.10/site-packages/loguru/_recattrs.py",
+    "lib/python3.10/site-packages/loguru/_simple_sinks.py",
+    "lib/python3.10/site-packages/loguru/_string_parsers.py",
+    "lib/python3.10/site-packages/loguru/py.typed"
+  ],
+  "fn": "loguru-0.7.2-py310hbbe02a8_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/loguru-0.7.2-py310hbbe02a8_1",
+    "type": 1
+  },
+  "md5": "fac1321ce2fa50503667fb37257b0d92",
+  "name": "loguru",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/loguru-0.7.2-py310hbbe02a8_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b35d026cc7aca9d5859a02eb87ddf7a386a24c986838651bd1f283f94e003327",
+        "sha256_in_prefix": "b35d026cc7aca9d5859a02eb87ddf7a386a24c986838651bd1f283f94e003327",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "45d2c1a5c9889b1f8a31e84884289809ad75e8c80bb39e3507633ac8b1e31ca9",
+        "sha256_in_prefix": "45d2c1a5c9889b1f8a31e84884289809ad75e8c80bb39e3507633ac8b1e31ca9",
+        "size_in_bytes": 23151
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "9c1a4874932a7337b2981402b5c465afc1b1f9504af7089d3d4f9af9466e0f83",
+        "sha256_in_prefix": "9c1a4874932a7337b2981402b5c465afc1b1f9504af7089d3d4f9af9466e0f83",
+        "size_in_bytes": 3272
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "c903798389a0e00c9b4639208bef72cb889010589b1909a5cfbf0f8a4e4eafe0",
+        "sha256_in_prefix": "c903798389a0e00c9b4639208bef72cb889010589b1909a5cfbf0f8a4e4eafe0",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "7f7602b4ad7fcaf439297fb1f73b053025f91d0885550a71b4299a7c2adb79d8",
+        "sha256_in_prefix": "7f7602b4ad7fcaf439297fb1f73b053025f91d0885550a71b4299a7c2adb79d8",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru-0.7.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "54af90fc858b97c24176510db4f0e30fe64822d71c5aff4e14bc0418989971f2",
+        "sha256_in_prefix": "54af90fc858b97c24176510db4f0e30fe64822d71c5aff4e14bc0418989971f2",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7050f56a8a88b4c7639590932b0a96ab4c7093685bed6b95237bfeb89943cb68",
+        "sha256_in_prefix": "7050f56a8a88b4c7639590932b0a96ab4c7093685bed6b95237bfeb89943cb68",
+        "size_in_bytes": 626
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__init__.pyi",
+        "path_type": "hardlink",
+        "sha256": "fc0741e0086a7faa2cae23b96460998f176a2a1a49c7ca654b62419ea93c5251",
+        "sha256_in_prefix": "fc0741e0086a7faa2cae23b96460998f176a2a1a49c7ca654b62419ea93c5251",
+        "size_in_bytes": 14436
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "457e27a73a7453b1f18f3cbd03887e6152dfdfacb491d30d555d75e27532f10f",
+        "sha256_in_prefix": "457e27a73a7453b1f18f3cbd03887e6152dfdfacb491d30d555d75e27532f10f",
+        "size_in_bytes": 741
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_asyncio_loop.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "039758fee1e22af8c728c783a8a6174640a6923186acef7a83405f0a7d99e72f",
+        "sha256_in_prefix": "039758fee1e22af8c728c783a8a6174640a6923186acef7a83405f0a7d99e72f",
+        "size_in_bytes": 903
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_better_exceptions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7eddc90557b92cd5167e09db1aac22b9a93f30eb14fb49fa79d3c773db779e00",
+        "sha256_in_prefix": "7eddc90557b92cd5167e09db1aac22b9a93f30eb14fb49fa79d3c773db779e00",
+        "size_in_bytes": 12710
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_colorama.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "081a5a390f0852ca6879b2d6d711e4842b1ddaf1d8961d5c6216bae9d9d82fc6",
+        "sha256_in_prefix": "081a5a390f0852ca6879b2d6d711e4842b1ddaf1d8961d5c6216bae9d9d82fc6",
+        "size_in_bytes": 1699
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_colorizer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "95789b5afe08e39bf1ac271331e061e5643a0d8610aa045ad8eb1ee4cd15d8db",
+        "sha256_in_prefix": "95789b5afe08e39bf1ac271331e061e5643a0d8610aa045ad8eb1ee4cd15d8db",
+        "size_in_bytes": 11513
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_contextvars.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9cfebfb5237d46817b92c59e0d7f31466d05eef55e3cb31fe56ce13da3e7307d",
+        "sha256_in_prefix": "9cfebfb5237d46817b92c59e0d7f31466d05eef55e3cb31fe56ce13da3e7307d",
+        "size_in_bytes": 464
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_ctime_functions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "91e8fc361c5b89370139f71b42df7f6a6a20ebe7bef6b6c5d5a37033fb85c4d9",
+        "sha256_in_prefix": "91e8fc361c5b89370139f71b42df7f6a6a20ebe7bef6b6c5d5a37033fb85c4d9",
+        "size_in_bytes": 2098
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_datetime.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8613ee8591e00b008ff09a7bae1d6597ff14606429c81af71f9f0c9c10c48dc9",
+        "sha256_in_prefix": "8613ee8591e00b008ff09a7bae1d6597ff14606429c81af71f9f0c9c10c48dc9",
+        "size_in_bytes": 3325
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_defaults.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3296e69a3e27100cebc07861f6459ca4c121c364272c4b5259ecacd362deee4b",
+        "sha256_in_prefix": "3296e69a3e27100cebc07861f6459ca4c121c364272c4b5259ecacd362deee4b",
+        "size_in_bytes": 2300
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_error_interceptor.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "16fb1eccc901f95963ea1a0da21abd8cdb5fd263cc695c1f20d0d6c0c2f3c17d",
+        "sha256_in_prefix": "16fb1eccc901f95963ea1a0da21abd8cdb5fd263cc695c1f20d0d6c0c2f3c17d",
+        "size_in_bytes": 1349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_file_sink.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "327fb5c2e920641eb7c2602c31fe85956a975007424f67d3645ba738942c22c4",
+        "sha256_in_prefix": "327fb5c2e920641eb7c2602c31fe85956a975007424f67d3645ba738942c22c4",
+        "size_in_bytes": 12059
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_filters.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "584e69a64512923a5a122c59b889c83fa10fae7c14e282b4fc211e33f017d454",
+        "sha256_in_prefix": "584e69a64512923a5a122c59b889c83fa10fae7c14e282b4fc211e33f017d454",
+        "size_in_bytes": 747
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_get_frame.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ed2d3f6cfffcc9b5750e4891a875d7ca23d68f3e01cb3bcfb879f4fbbceac09",
+        "sha256_in_prefix": "2ed2d3f6cfffcc9b5750e4891a875d7ca23d68f3e01cb3bcfb879f4fbbceac09",
+        "size_in_bytes": 629
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_handler.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1d312129e5e7130287ba9ea556f7a2d681907c0f7699c3c0b3fa6015bf86c319",
+        "sha256_in_prefix": "1d312129e5e7130287ba9ea556f7a2d681907c0f7699c3c0b3fa6015bf86c319",
+        "size_in_bytes": 7985
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_locks_machinery.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd94f3c26fdc84760a04a135ba56c4be22b83e349aec8862f0ac9df5c2918cf2",
+        "sha256_in_prefix": "dd94f3c26fdc84760a04a135ba56c4be22b83e349aec8862f0ac9df5c2918cf2",
+        "size_in_bytes": 1135
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_logger.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3938d98d8e864b4658346c6dd02fbb026f80dc40bf58e77b98753620f624ad9d",
+        "sha256_in_prefix": "3938d98d8e864b4658346c6dd02fbb026f80dc40bf58e77b98753620f624ad9d",
+        "size_in_bytes": 86788
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_recattrs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8ebf549818d6cd0c8e3bdad581675f3d6c9a9f041c108d290309d825c9219e46",
+        "sha256_in_prefix": "8ebf549818d6cd0c8e3bdad581675f3d6c9a9f041c108d290309d825c9219e46",
+        "size_in_bytes": 3087
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_simple_sinks.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f49b0968dd88272fc882f5ae475fcc89d4d06002e78f825589174bfcdbec46f",
+        "sha256_in_prefix": "5f49b0968dd88272fc882f5ae475fcc89d4d06002e78f825589174bfcdbec46f",
+        "size_in_bytes": 4707
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/__pycache__/_string_parsers.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8694bc276f977842fdb67cb1c15ec780c5ac304fbb9c016b627cb48b8eb791f7",
+        "sha256_in_prefix": "8694bc276f977842fdb67cb1c15ec780c5ac304fbb9c016b627cb48b8eb791f7",
+        "size_in_bytes": 4778
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_asyncio_loop.py",
+        "path_type": "hardlink",
+        "sha256": "2daf17ccb8ef458a4d8b295990e1702ca81df9644c5f34d9640a04ce52faf306",
+        "sha256_in_prefix": "2daf17ccb8ef458a4d8b295990e1702ca81df9644c5f34d9640a04ce52faf306",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_better_exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "20eed7a59c4d2e80b6fe61db111b3df13a3e4a7c1a35c32d4027f5ee90a97301",
+        "sha256_in_prefix": "20eed7a59c4d2e80b6fe61db111b3df13a3e4a7c1a35c32d4027f5ee90a97301",
+        "size_in_bytes": 19996
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_colorama.py",
+        "path_type": "hardlink",
+        "sha256": "39c8e4020ef5ab0532364977146f83946b069bda315c95fca40f3b3cd98bc60e",
+        "sha256_in_prefix": "39c8e4020ef5ab0532364977146f83946b069bda315c95fca40f3b3cd98bc60e",
+        "size_in_bytes": 1673
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_colorizer.py",
+        "path_type": "hardlink",
+        "sha256": "6386a9ff0146445553a98d7c517ba958ffb64da8790ff797cc003744e88f8dc5",
+        "sha256_in_prefix": "6386a9ff0146445553a98d7c517ba958ffb64da8790ff797cc003744e88f8dc5",
+        "size_in_bytes": 14601
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_contextvars.py",
+        "path_type": "hardlink",
+        "sha256": "2e7b3817163f065daa9cb7772e657b087fedd69d34e728e40ffcec740776bf96",
+        "sha256_in_prefix": "2e7b3817163f065daa9cb7772e657b087fedd69d34e728e40ffcec740776bf96",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_ctime_functions.py",
+        "path_type": "hardlink",
+        "sha256": "db45b0cdfa9a2bd80277c895252e8e83e66745b1a051bd46b0b3a9e926b56ae5",
+        "sha256_in_prefix": "db45b0cdfa9a2bd80277c895252e8e83e66745b1a051bd46b0b3a9e926b56ae5",
+        "size_in_bytes": 1531
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_datetime.py",
+        "path_type": "hardlink",
+        "sha256": "5e4700088c16a67a28ae6cabd46dc7a4d6dd296cf098ec9298e6c5c920a6db91",
+        "sha256_in_prefix": "5e4700088c16a67a28ae6cabd46dc7a4d6dd296cf098ec9298e6c5c920a6db91",
+        "size_in_bytes": 3757
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_defaults.py",
+        "path_type": "hardlink",
+        "sha256": "7b8da4868c87dc4ffe6fa714c1d3447e3dc836e6e6182517256b9d5a05698e56",
+        "sha256_in_prefix": "7b8da4868c87dc4ffe6fa714c1d3447e3dc836e6e6182517256b9d5a05698e56",
+        "size_in_bytes": 2929
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_error_interceptor.py",
+        "path_type": "hardlink",
+        "sha256": "1d19bd1317d956b149fae26bd6e18abdbb1469ba4a0a3d2bb2d39f826ec2e418",
+        "sha256_in_prefix": "1d19bd1317d956b149fae26bd6e18abdbb1469ba4a0a3d2bb2d39f826ec2e418",
+        "size_in_bytes": 1107
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_file_sink.py",
+        "path_type": "hardlink",
+        "sha256": "617dea4ed11508faf45c030bc4cefd03ab7d3eda454e99173ba67bae4aa87e19",
+        "sha256_in_prefix": "617dea4ed11508faf45c030bc4cefd03ab7d3eda454e99173ba67bae4aa87e19",
+        "size_in_bytes": 14526
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_filters.py",
+        "path_type": "hardlink",
+        "sha256": "cffff6abc93f5c03b5a8b7f739ea9b377518378b195af7a5dbfe6c8db9179fb8",
+        "sha256_in_prefix": "cffff6abc93f5c03b5a8b7f739ea9b377518378b195af7a5dbfe6c8db9179fb8",
+        "size_in_bytes": 618
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_get_frame.py",
+        "path_type": "hardlink",
+        "sha256": "51c4cc5e379297722187559eb0be1e965e1330364df4f5be48f772895610b658",
+        "sha256_in_prefix": "51c4cc5e379297722187559eb0be1e965e1330364df4f5be48f772895610b658",
+        "size_in_bytes": 458
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_handler.py",
+        "path_type": "hardlink",
+        "sha256": "0529f45bd00a3524891e2415bb7005c57f0684ad2844a92084762d1619e97607",
+        "sha256_in_prefix": "0529f45bd00a3524891e2415bb7005c57f0684ad2844a92084762d1619e97607",
+        "size_in_bytes": 12634
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_locks_machinery.py",
+        "path_type": "hardlink",
+        "sha256": "00f105834631ee98e708b8a0e58327052652c39c9ff31c9b9b6a5de2e1b8e2bc",
+        "sha256_in_prefix": "00f105834631ee98e708b8a0e58327052652c39c9ff31c9b9b6a5de2e1b8e2bc",
+        "size_in_bytes": 1307
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_logger.py",
+        "path_type": "hardlink",
+        "sha256": "ad5c9c86946424346bb647159194a0300afc013768e796579f9eb9c0354456e0",
+        "sha256_in_prefix": "ad5c9c86946424346bb647159194a0300afc013768e796579f9eb9c0354456e0",
+        "size_in_bytes": 95972
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_recattrs.py",
+        "path_type": "hardlink",
+        "sha256": "8f1484935daa38c275496bbfc6b77200f5131d6c3a52fdf402d77ab2d6fa90e2",
+        "sha256_in_prefix": "8f1484935daa38c275496bbfc6b77200f5131d6c3a52fdf402d77ab2d6fa90e2",
+        "size_in_bytes": 2862
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_simple_sinks.py",
+        "path_type": "hardlink",
+        "sha256": "59709c2ca4117712196e1391c78488c91e4313b77f2e83e089e64bc2693aa8a3",
+        "sha256_in_prefix": "59709c2ca4117712196e1391c78488c91e4313b77f2e83e089e64bc2693aa8a3",
+        "size_in_bytes": 3734
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/_string_parsers.py",
+        "path_type": "hardlink",
+        "sha256": "7a32fe3be799ade5023b4357259032f35d878539fb75980c9a03cd75e4f9dd99",
+        "sha256_in_prefix": "7a32fe3be799ade5023b4357259032f35d878539fb75980c9a03cd75e4f9dd99",
+        "size_in_bytes": 4707
+      },
+      {
+        "_path": "lib/python3.10/site-packages/loguru/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "79c540c7012a9c2afb83d727317aa05ade8c80d94365e63a756048ddf1dc816f",
+  "size": 98385,
+  "subdir": "linux-aarch64",
+  "timestamp": 1695549056000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/loguru-0.7.2-py310hbbe02a8_1.conda",
+  "version": "0.7.2"
+}

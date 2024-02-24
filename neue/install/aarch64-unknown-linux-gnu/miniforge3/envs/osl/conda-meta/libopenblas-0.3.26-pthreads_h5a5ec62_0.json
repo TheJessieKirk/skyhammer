@@ -1,0 +1,54 @@
+{
+  "build": "pthreads_h5a5ec62_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [
+    "openblas >=0.3.26,<0.3.27.0a0"
+  ],
+  "depends": [
+    "libgcc-ng >=12",
+    "libgfortran-ng",
+    "libgfortran5 >=12.3.0"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libopenblas-0.3.26-pthreads_h5a5ec62_0",
+  "features": "",
+  "files": [
+    "lib/libopenblas.so.0",
+    "lib/libopenblasp-r0.3.26.so"
+  ],
+  "fn": "libopenblas-0.3.26-pthreads_h5a5ec62_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libopenblas-0.3.26-pthreads_h5a5ec62_0",
+    "type": 1
+  },
+  "md5": "2ea496754b596063335b3aeaa2b982ac",
+  "name": "libopenblas",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libopenblas-0.3.26-pthreads_h5a5ec62_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libopenblas.so.0",
+        "path_type": "softlink",
+        "sha256": "14a2d1cdbdf7ad2a50b3a1f14f0180cd0b3c2abbd2f595472b574ce77336a42f",
+        "size_in_bytes": 22476136
+      },
+      {
+        "_path": "lib/libopenblasp-r0.3.26.so",
+        "path_type": "hardlink",
+        "sha256": "14a2d1cdbdf7ad2a50b3a1f14f0180cd0b3c2abbd2f595472b574ce77336a42f",
+        "sha256_in_prefix": "14a2d1cdbdf7ad2a50b3a1f14f0180cd0b3c2abbd2f595472b574ce77336a42f",
+        "size_in_bytes": 22476136
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b72719014a86f69162398fc32af0f23e6e1746ec795f7c5d38ad5998a78eb6f8",
+  "size": 4306237,
+  "subdir": "linux-aarch64",
+  "timestamp": 1704951018000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libopenblas-0.3.26-pthreads_h5a5ec62_0.conda",
+  "version": "0.3.26"
+}

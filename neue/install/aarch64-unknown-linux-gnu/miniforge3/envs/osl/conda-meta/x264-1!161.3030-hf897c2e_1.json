@@ -1,0 +1,92 @@
+{
+  "build": "hf897c2e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.3.0"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/x264-1!161.3030-hf897c2e_1",
+  "features": "",
+  "files": [
+    "bin/x264",
+    "include/x264.h",
+    "include/x264_config.h",
+    "lib/libx264.a",
+    "lib/libx264.so",
+    "lib/libx264.so.161",
+    "lib/pkgconfig/x264.pc"
+  ],
+  "fn": "x264-1!161.3030-hf897c2e_1.tar.bz2",
+  "license": "GPL-2.0",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/x264-1!161.3030-hf897c2e_1",
+    "type": 1
+  },
+  "md5": "1ff0177732e003f17f57ddabeac3ae44",
+  "name": "x264",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/x264-1!161.3030-hf897c2e_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/x264",
+        "path_type": "hardlink",
+        "sha256": "5404124e7cb0f452a9831d4bc0cbf28cf5679255d16bf3c212a4d4eeeb1c15bd",
+        "sha256_in_prefix": "5404124e7cb0f452a9831d4bc0cbf28cf5679255d16bf3c212a4d4eeeb1c15bd",
+        "size_in_bytes": 1905312
+      },
+      {
+        "_path": "include/x264.h",
+        "path_type": "hardlink",
+        "sha256": "d889fcbb332e6daa35bb6952163a1599df53f5fe71e8d88c9faa23cc4eb285c9",
+        "sha256_in_prefix": "d889fcbb332e6daa35bb6952163a1599df53f5fe71e8d88c9faa23cc4eb285c9",
+        "size_in_bytes": 47960
+      },
+      {
+        "_path": "include/x264_config.h",
+        "path_type": "hardlink",
+        "sha256": "4b426d124cd2f8aa88fb1e04bb3af8d45fb13c4fafcc7d5c15be6b6391476882",
+        "sha256_in_prefix": "4b426d124cd2f8aa88fb1e04bb3af8d45fb13c4fafcc7d5c15be6b6391476882",
+        "size_in_bytes": 245
+      },
+      {
+        "_path": "lib/libx264.a",
+        "path_type": "hardlink",
+        "sha256": "04d05836c7ce85d4c2a95b035efaffbafce28ebdcfe90a0ca8af932838669dec",
+        "sha256_in_prefix": "04d05836c7ce85d4c2a95b035efaffbafce28ebdcfe90a0ca8af932838669dec",
+        "size_in_bytes": 2364954
+      },
+      {
+        "_path": "lib/libx264.so",
+        "path_type": "softlink",
+        "sha256": "a60b3b07805860bebba772a4b3c0c1c6fb5f6fae13d15981a4c466d46be7dec7",
+        "size_in_bytes": 1823968
+      },
+      {
+        "_path": "lib/libx264.so.161",
+        "path_type": "hardlink",
+        "sha256": "a60b3b07805860bebba772a4b3c0c1c6fb5f6fae13d15981a4c466d46be7dec7",
+        "sha256_in_prefix": "a60b3b07805860bebba772a4b3c0c1c6fb5f6fae13d15981a4c466d46be7dec7",
+        "size_in_bytes": 1823968
+      },
+      {
+        "_path": "lib/pkgconfig/x264.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/x264_1623827516051/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "1b94ca5a978584b2319f3ad16f3b088527eed7ec18137d218b1f76b43cfd4c7e",
+        "sha256_in_prefix": "736d56610571d0efdef3c3470459182b8d14f3ecf324e4de605cbde5fda31e49",
+        "size_in_bytes": 535
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5eddb9535c28cb8827c90507bc3ef8029a839b44547b46297e9f5d25cf0a05fe",
+  "size": 2786460,
+  "subdir": "linux-aarch64",
+  "timestamp": 1623828559000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/x264-1!161.3030-hf897c2e_1.tar.bz2",
+  "version": "1!161.3030"
+}

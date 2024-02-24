@@ -1,0 +1,64 @@
+{
+  "build": "hd62202e_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.3.0",
+    "libstdcxx-ng >=9.3.0"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/tbb-2020.2-hd62202e_4",
+  "features": "",
+  "files": [
+    "lib/libtbb.so.2",
+    "lib/libtbbmalloc.so.2",
+    "lib/libtbbmalloc_proxy.so.2"
+  ],
+  "fn": "tbb-2020.2-hd62202e_4.tar.bz2",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/tbb-2020.2-hd62202e_4",
+    "type": 1
+  },
+  "md5": "440d561def896c13f6522f245e2145d3",
+  "name": "tbb",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/tbb-2020.2-hd62202e_4.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libtbb.so.2",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/drone/src/build_artifacts/tbb_1614806310270/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "85080d0fad4d13deb01416da3a4b06e2ac1b67edbb3badeb5757045bebd4763a",
+        "sha256_in_prefix": "85080d0fad4d13deb01416da3a4b06e2ac1b67edbb3badeb5757045bebd4763a",
+        "size_in_bytes": 2715800
+      },
+      {
+        "_path": "lib/libtbbmalloc.so.2",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/drone/src/build_artifacts/tbb_1614806310270/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "58a3f79e912b7763010b6acd2026ed291ece5d88bd442a0545d5d3a8b9574775",
+        "sha256_in_prefix": "58a3f79e912b7763010b6acd2026ed291ece5d88bd442a0545d5d3a8b9574775",
+        "size_in_bytes": 1053104
+      },
+      {
+        "_path": "lib/libtbbmalloc_proxy.so.2",
+        "path_type": "hardlink",
+        "sha256": "c88d86a87fdf7a8313e6c0757a040be693166f8b434fd5325f6b6da7aa971274",
+        "sha256_in_prefix": "c88d86a87fdf7a8313e6c0757a040be693166f8b434fd5325f6b6da7aa971274",
+        "size_in_bytes": 132280
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "523ee35506276c86e57d472db961459de256315552301329921dd663b158d5e4",
+  "size": 1375308,
+  "subdir": "linux-aarch64",
+  "timestamp": 1614806617000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/tbb-2020.2-hd62202e_4.tar.bz2",
+  "version": "2020.2"
+}

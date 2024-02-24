@@ -1,0 +1,63 @@
+{
+  "build": "h9a76618_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libstdcxx-ng-13.2.0-h9a76618_5",
+  "features": "",
+  "files": [
+    "lib/libstdc++.so",
+    "lib/libstdc++.so.6",
+    "lib/libstdc++.so.6.0.32",
+    "share/licenses/libstdc++/RUNTIME.LIBRARY.EXCEPTION"
+  ],
+  "fn": "libstdcxx-ng-13.2.0-h9a76618_5.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libstdcxx-ng-13.2.0-h9a76618_5",
+    "type": 1
+  },
+  "md5": "1b79d37dce0fad96bdf3de03925f43b4",
+  "name": "libstdcxx-ng",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libstdcxx-ng-13.2.0-h9a76618_5.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libstdc++.so",
+        "path_type": "softlink",
+        "sha256": "ab256d275fc349414b18a04f6428d9a7db9fd6766c8e7ea6217aa678e86cff28",
+        "size_in_bytes": 13989512
+      },
+      {
+        "_path": "lib/libstdc++.so.6",
+        "path_type": "softlink",
+        "sha256": "ab256d275fc349414b18a04f6428d9a7db9fd6766c8e7ea6217aa678e86cff28",
+        "size_in_bytes": 13989512
+      },
+      {
+        "_path": "lib/libstdc++.so.6.0.32",
+        "path_type": "hardlink",
+        "sha256": "ab256d275fc349414b18a04f6428d9a7db9fd6766c8e7ea6217aa678e86cff28",
+        "sha256_in_prefix": "ab256d275fc349414b18a04f6428d9a7db9fd6766c8e7ea6217aa678e86cff28",
+        "size_in_bytes": 13989512
+      },
+      {
+        "_path": "share/licenses/libstdc++/RUNTIME.LIBRARY.EXCEPTION",
+        "path_type": "hardlink",
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "size_in_bytes": 3324
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "c209f23a8a497fc87107a68b6bbc8d2089cf15fd4015b558dfdce63544379b05",
+  "size": 3752658,
+  "subdir": "linux-aarch64",
+  "timestamp": 1706820778000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libstdcxx-ng-13.2.0-h9a76618_5.conda",
+  "version": "13.2.0"
+}

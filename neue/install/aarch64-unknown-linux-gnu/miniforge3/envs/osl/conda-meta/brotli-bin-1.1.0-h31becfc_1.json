@@ -1,0 +1,45 @@
+{
+  "build": "h31becfc_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libbrotlidec 1.1.0 h31becfc_1",
+    "libbrotlienc 1.1.0 h31becfc_1",
+    "libgcc-ng >=12"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/brotli-bin-1.1.0-h31becfc_1",
+  "features": "",
+  "files": [
+    "bin/brotli"
+  ],
+  "fn": "brotli-bin-1.1.0-h31becfc_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/brotli-bin-1.1.0-h31becfc_1",
+    "type": 1
+  },
+  "md5": "9e4a13596ab651ea8d77aae023d0ce3f",
+  "name": "brotli-bin",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/brotli-bin-1.1.0-h31becfc_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/brotli",
+        "path_type": "hardlink",
+        "sha256": "9e4cb1ef434839f1524ccb9fd53850aa19a248842b9ba71b7fe988350230a465",
+        "sha256_in_prefix": "9e4cb1ef434839f1524ccb9fd53850aa19a248842b9ba71b7fe988350230a465",
+        "size_in_bytes": 72960
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fd1e57615b995565939fdb9910534933c4c27ec0c37a911a2c923241dbf8ad3b",
+  "size": 18915,
+  "subdir": "linux-aarch64",
+  "timestamp": 1695990154000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/brotli-bin-1.1.0-h31becfc_1.conda",
+  "version": "1.1.0"
+}

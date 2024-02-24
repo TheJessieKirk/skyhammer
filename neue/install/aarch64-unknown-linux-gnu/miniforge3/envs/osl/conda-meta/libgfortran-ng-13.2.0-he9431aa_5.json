@@ -1,0 +1,33 @@
+{
+  "build": "he9431aa_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [
+    "libgfortran5 13.2.0 h582850c_5"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libgfortran-ng-13.2.0-he9431aa_5",
+  "features": "",
+  "files": [],
+  "fn": "libgfortran-ng-13.2.0-he9431aa_5.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libgfortran-ng-13.2.0-he9431aa_5",
+    "type": 1
+  },
+  "md5": "fab7c6a8c84492e18cbe578820e97a56",
+  "name": "libgfortran-ng",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libgfortran-ng-13.2.0-he9431aa_5.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a7e5d1ac34118a4fad8286050af0146226d2fb2bd63e7a1066dc4dae7ba42daa",
+  "size": 23994,
+  "subdir": "linux-aarch64",
+  "timestamp": 1706820985000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libgfortran-ng-13.2.0-he9431aa_5.conda",
+  "version": "13.2.0"
+}

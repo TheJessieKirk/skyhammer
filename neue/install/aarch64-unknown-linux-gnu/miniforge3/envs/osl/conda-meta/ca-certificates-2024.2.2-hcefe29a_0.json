@@ -1,0 +1,48 @@
+{
+  "build": "hcefe29a_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ca-certificates-2024.2.2-hcefe29a_0",
+  "features": "",
+  "files": [
+    "ssl/cacert.pem",
+    "ssl/cert.pem"
+  ],
+  "fn": "ca-certificates-2024.2.2-hcefe29a_0.conda",
+  "license": "ISC",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ca-certificates-2024.2.2-hcefe29a_0",
+    "type": 1
+  },
+  "md5": "57c226edb90c4e973b9b7503537dd339",
+  "name": "ca-certificates",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/ca-certificates-2024.2.2-hcefe29a_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "ssl/cacert.pem",
+        "path_type": "hardlink",
+        "sha256": "7a347ca8fef6e29f82b6e4785355a6635c17fa755e0940f65f15aa8fc7bd7f92",
+        "sha256_in_prefix": "7a347ca8fef6e29f82b6e4785355a6635c17fa755e0940f65f15aa8fc7bd7f92",
+        "size_in_bytes": 292541
+      },
+      {
+        "_path": "ssl/cert.pem",
+        "path_type": "softlink",
+        "sha256": "7a347ca8fef6e29f82b6e4785355a6635c17fa755e0940f65f15aa8fc7bd7f92",
+        "size_in_bytes": 292541
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "0f6b34d835e26e5fa97cca4985dc46f0aba551a3a23f07c6f13cca2542b8c642",
+  "size": 155738,
+  "subdir": "linux-aarch64",
+  "timestamp": 1706845723000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/ca-certificates-2024.2.2-hcefe29a_0.conda",
+  "version": "2024.2.2"
+}

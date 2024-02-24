@@ -1,0 +1,53 @@
+{
+  "build": "21_linuxaarch64_openblas",
+  "build_number": 21,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-aarch64",
+  "constrains": [
+    "liblapacke 3.9.0 21_linuxaarch64_openblas",
+    "liblapack 3.9.0 21_linuxaarch64_openblas",
+    "blas * openblas"
+  ],
+  "depends": [
+    "libblas 3.9.0 21_linuxaarch64_openblas"
+  ],
+  "extracted_package_dir": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libcblas-3.9.0-21_linuxaarch64_openblas",
+  "features": "",
+  "files": [
+    "lib/libcblas.so",
+    "lib/libcblas.so.3"
+  ],
+  "fn": "libcblas-3.9.0-21_linuxaarch64_openblas.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libcblas-3.9.0-21_linuxaarch64_openblas",
+    "type": 1
+  },
+  "md5": "7eb9aa7a90f067f8dbfede586cdc55cd",
+  "name": "libcblas",
+  "package_tarball_full_path": "/media/ssd/skyhammer/neue/install/aarch64-unknown-linux-gnu/miniforge3/pkgs/libcblas-3.9.0-21_linuxaarch64_openblas.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libcblas.so",
+        "path_type": "softlink",
+        "sha256": "14a2d1cdbdf7ad2a50b3a1f14f0180cd0b3c2abbd2f595472b574ce77336a42f",
+        "size_in_bytes": 22476136
+      },
+      {
+        "_path": "lib/libcblas.so.3",
+        "path_type": "softlink",
+        "sha256": "14a2d1cdbdf7ad2a50b3a1f14f0180cd0b3c2abbd2f595472b574ce77336a42f",
+        "size_in_bytes": 22476136
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "86224669232944141f46b41d0ba18192c7f5af9cc3133fa89694f42701fe89fd",
+  "size": 14575,
+  "subdir": "linux-aarch64",
+  "timestamp": 1705979392000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-aarch64/libcblas-3.9.0-21_linuxaarch64_openblas.conda",
+  "version": "3.9.0"
+}
