@@ -26,5 +26,5 @@ fi;
 echo "Compiling main.cxx...";
 export PATH=/opt/skyhammer/x86_64-w64-mingw32/bin:$OLD_PATH;
 cd compiled_that;
-x86_64-w64-mingw32-g++ -m64 ../compile_this/main.cxx -o bin/main.exe;
+x86_64-w64-mingw32-g++ @../microsoft_windows_options.txt ../compile_this/main.cxx -o bin/main.exe;
 x86_64-w64-mingw32-strip bin/main.exe;
