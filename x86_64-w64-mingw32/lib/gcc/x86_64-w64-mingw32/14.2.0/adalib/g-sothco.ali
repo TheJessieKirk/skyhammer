@@ -74,7 +74,7 @@ D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
 D s-finmas.ads		20240801081713 28987ac5 system.finalization_masters%s
 D s-finroo.ads		20240801081713 4ff27390 system.finalization_root%s
 D s-memory.ads		20240801081713 18949c1a system.memory%s
-D s-oscons.ads		20240907233351 faf4acf5 system.os_constants%s
+D s-oscons.ads		20240908131818 faf4acf5 system.os_constants%s
 D s-parame.ads		20240801081713 3597fc11 system.parameters%s
 D s-pooglo.ads		20240801081713 91708d21 system.pool_global%s
 D s-putima.ads		20240801081713 17291fe4 system.put_images%s

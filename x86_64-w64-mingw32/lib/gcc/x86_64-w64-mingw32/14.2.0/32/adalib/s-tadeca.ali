@@ -48,7 +48,7 @@ D system.ads		20240801081714 e4f8b086 system%s
 D s-atacco.ads		20240801081713 5868e3ba system.address_to_access_conversions%s
 D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
 D s-multip.ads		20240801081713 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240907234742 f43dd08d system.os_constants%s
+D s-oscons.ads		20240908133241 f43dd08d system.os_constants%s
 D s-osinte.ads		20240801081713 97504df8 system.os_interface%s
 D s-osprim.ads		20240801081713 07fd65f6 system.os_primitives%s
 D s-parame.ads		20240801081713 3597fc11 system.parameters%s

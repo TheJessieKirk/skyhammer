@@ -23,6 +23,12 @@ GNU Ada Tools
 GNU Libraries
 * libquadmath: (libquadmath).   GCC Quad-Precision Math Library
 
+GNU libraries
+* gmp: (gmp).                   GNU Multiple Precision Arithmetic Library.
+
+GNU Packages
+* mpc: (mpc)Multiple Precision Complex Library.
+
 Individual utilities
 * addr2line: (binutils)addr2line.               Convert addresses to file and 
                                                   line.
@@ -79,3 +85,7 @@ Software development
 * gprof: (gprof).               Profiling your program’s execution
 * lto-dump: (gcc) lto-dump.     ‘lto-dump’--Tool for dumping LTO object 
                                   files.
+
+Software libraries
+* mpfr: (mpfr).                 Multiple Precision Floating-Point Reliable 
+                                  Library.

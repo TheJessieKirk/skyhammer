@@ -76,7 +76,7 @@ D s-crtl.ads		20240801081713 beb39b9e system.crtl%s
 D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
 D s-imagei.ads		20240801081713 5e131ce0 system.image_i%s
 D s-imgint.ads		20240801081713 67e4edfb system.img_int%s
-D s-oscons.ads		20240907234742 f43dd08d system.os_constants%s
+D s-oscons.ads		20240908133241 f43dd08d system.os_constants%s
 D s-os_lib.ads		20240801081713 a2467c22 system.os_lib%s
 D s-parame.ads		20240801081713 3597fc11 system.parameters%s
 D s-putima.ads		20240801081713 17291fe4 system.put_images%s
