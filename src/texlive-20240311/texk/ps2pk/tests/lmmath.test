@@ -1,0 +1,28 @@
+#! /bin/sh -vx
+# $Id: lmmath.test 68084 2023-08-27 14:18:22Z takuji $
+# Copyright 2017 Karl Berry <tex-live@tug.org>
+# Copyright 2014 Peter Breitenlohner <tex-live@tug.org>
+# You may freely use, modify and/or distribute this file.
+
+BinDir=${BinDir:-.}
+ExeExt=${ExeExt:-}
+_ps2pk=$BinDir/ps2pk$ExeExt
+
+test -d tests || mkdir -p tests
+
+TEXMFCNF=$srcdir/../kpathsea
+
+encpath=`$KPSEWHICH lm-mathit.enc` || exit 77
+ENCFONTS="`dirname $encpath`"
+
+t1path=`$KPSEWHICH lmmi12.pfb` || exit 77
+T1FONTS="`dirname $t1path`"
+
+afmpath=`$KPSEWHICH lmmi12.afm` || exit 77
+AFMFONTS="`dirname $afmpath`"
+
+export TEXMFCNF ENCFONTS T1FONTS AFMFONTS
+
+$_ps2pk -elm-mathit.enc -X600 -Y600 -R600 -S0 -E1 -P12.0 lmmi12.pfb lmmi12.600pk || exit 1
+diff $srcdir/tests/lmmi12.600pk lmmi12.600pk || exit 1
+

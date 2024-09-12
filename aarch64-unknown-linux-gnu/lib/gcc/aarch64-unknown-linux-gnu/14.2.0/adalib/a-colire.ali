@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -26,14 +27,14 @@ Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 U ada.command_line.remove%s  a-colire.ads	449a8076 NE OL PR PK
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-comlin.ads		20240801081713 4aa66568 ada.command_line%s
-D a-colire.ads		20240801081713 0e3ce51e ada.command_line.remove%s
-D a-colire.adb		20240801081713 104d709c ada.command_line.remove%b
-D system.ads		20240801081714 d0bef732 system%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-secsta.ads		20240801081713 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-comlin.ads		20240908170924 4aa66568 ada.command_line%s
+D a-colire.ads		20240908170924 0e3ce51e ada.command_line.remove%s
+D a-colire.adb		20240908170924 104d709c ada.command_line.remove%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [remove_argument ada__command_line__remove 44 14 none]
 G c Z s b [remove_arguments ada__command_line__remove 63 14 none]

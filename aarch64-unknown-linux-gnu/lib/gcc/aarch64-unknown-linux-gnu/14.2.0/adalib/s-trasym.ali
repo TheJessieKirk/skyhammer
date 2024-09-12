@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -60,39 +61,39 @@ W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system.traceback%s	s-traceb.adb		s-traceb.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-contai.ads		20240801081713 61e5e089 ada.containers%s
-D a-cgarso.ads		20240801081713 9129bfa8 ada.containers.generic_array_sort%s
-D a-cgarso.adb		20240801081713 59f5315a ada.containers.generic_array_sort%b
-D a-cgcaso.ads		20240801081713 9f1e835c ada.containers.generic_constrained_array_sort%s
-D a-cgcaso.adb		20240801081713 21f0752d ada.containers.generic_constrained_array_sort%b
-D a-except.ads		20240801081713 e7970cd9 ada.exceptions%s
-D a-exctra.ads		20240801081713 0966bad0 ada.exceptions.traceback%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240801081713 c3a8ac65 ada.unchecked_deallocation%s
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D i-c.ads		20240801081713 aac316ce interfaces.c%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-atacco.ads		20240801081713 5868e3ba system.address_to_access_conversions%s
-D s-boustr.ads		20240801081713 77fd2119 system.bounded_strings%s
-D s-crtl.ads		20240801081713 beb39b9e system.crtl%s
-D s-dwalin.ads		20240801081713 6672e2da system.dwarf_lines%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-exctra.ads		20240801081713 2484d6ea system.exception_traces%s
-D s-mmap.ads		20240801081713 3c5bc490 system.mmap%s
-D s-objrea.ads		20240801081713 3e354959 system.object_reader%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-secsta.ads		20240801081713 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240801081713 df77073e system.soft_links%s
-D s-stache.ads		20240801081713 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
-D s-string.ads		20240801081713 582aac7d system.strings%s
-D s-traceb.ads		20240801081713 4e864b31 system.traceback%s
-D s-trasym.ads		20240801081713 bd1dac90 system.traceback.symbolic%s
-D s-trasym.adb		20240801081713 c94a11a4 system.traceback.symbolic%b
-D s-tsmona.adb		20240801081713 1dc86774 system.traceback.symbolic.module_name
-D s-traent.ads		20240801081713 c81cbf8c system.traceback_entries%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-contai.ads		20240908170924 61e5e089 ada.containers%s
+D a-cgarso.ads		20240908170924 9129bfa8 ada.containers.generic_array_sort%s
+D a-cgarso.adb		20240908170924 59f5315a ada.containers.generic_array_sort%b
+D a-cgcaso.ads		20240908170924 9f1e835c ada.containers.generic_constrained_array_sort%s
+D a-cgcaso.adb		20240908170924 21f0752d ada.containers.generic_constrained_array_sort%b
+D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
+D a-exctra.ads		20240908170924 0966bad0 ada.exceptions.traceback%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D i-c.ads		20240908170924 aac316ce interfaces.c%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-atacco.ads		20240908170924 5868e3ba system.address_to_access_conversions%s
+D s-boustr.ads		20240908170924 77fd2119 system.bounded_strings%s
+D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
+D s-dwalin.ads		20240908170924 6672e2da system.dwarf_lines%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-exctra.ads		20240908170924 2484d6ea system.exception_traces%s
+D s-mmap.ads		20240908170924 3c5bc490 system.mmap%s
+D s-objrea.ads		20240908170924 3e354959 system.object_reader%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240908170924 df77073e system.soft_links%s
+D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D s-string.ads		20240908170924 582aac7d system.strings%s
+D s-traceb.ads		20240908170924 4e864b31 system.traceback%s
+D s-trasym.ads		20240908170924 bd1dac90 system.traceback.symbolic%s
+D s-trasym.adb		20240908170924 c94a11a4 system.traceback.symbolic%b
+D s-tsmona.adb		20240908170924 1dc86774 system.traceback.symbolic.module_name
+D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s b [symbolic_traceback system__traceback__symbolic 80 13 none]
 G c Z s b [symbolic_traceback_no_hex system__traceback__symbolic 82 13 none]

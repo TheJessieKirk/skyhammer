@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -20,15 +21,15 @@ W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.long_long_elementary_functions%s  a-nllefu.ads  a-nllefu.ali
 W system%s		system.ads		system.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
-D a-ngelfu.ads		20240801081713 5506716e ada.numerics.generic_elementary_functions%s
-D a-nllefu.ads		20240801081713 a34f74c3 ada.numerics.long_long_elementary_functions%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-llflex.ads		20240801081713 bec36d2e system.long_long_float_expon%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
+D a-ngelfu.ads		20240908170924 5506716e ada.numerics.generic_elementary_functions%s
+D a-nllefu.ads		20240908170924 a34f74c3 ada.numerics.long_long_elementary_functions%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-llflex.ads		20240908170924 bec36d2e system.long_long_float_expon%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 8|35r6 40r14

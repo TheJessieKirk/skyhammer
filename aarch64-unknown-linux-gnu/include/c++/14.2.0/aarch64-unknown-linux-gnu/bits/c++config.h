@@ -1099,7 +1099,7 @@ namespace __gnu_cxx
 #define _GLIBCXX_HAVE_LDEXPL 1
 
 /* Define to 1 if you have the <libintl.h> header file. */
-/* #undef _GLIBCXX_HAVE_LIBINTL_H */
+#define _GLIBCXX_HAVE_LIBINTL_H 1
 
 /* Only used in build directory testsuite_hooks.h. */
 #define _GLIBCXX_HAVE_LIMIT_AS 1
@@ -1729,7 +1729,7 @@ namespace __gnu_cxx
 #define _GLIBCXX_USE_NANOSLEEP 1
 
 /* Define if NLS translations are to be used. */
-/* #undef _GLIBCXX_USE_NLS */
+#define _GLIBCXX_USE_NLS 1
 
 /* Define if nl_langinfo_l should be used for std::text_encoding. */
 #define _GLIBCXX_USE_NL_LANGINFO_L 1

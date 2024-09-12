@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -37,34 +38,34 @@ Z system.exn_lflt%s	s-exnlfl.ads		s-exnlfl.ali
 Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
 Z system.fat_lflt%s	s-fatlfl.ads		s-fatlfl.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-except.ads		20240801081713 e7970cd9 ada.exceptions%s
-D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
-D a-nuaufl.ads		20240801081713 020cac40 ada.numerics.aux_float%s
-D a-nagefl.ads		20240801081713 53f456a7 ada.numerics.aux_generic_float%s
-D a-naliop.ads		20240801081713 6b421e5f ada.numerics.aux_linker_options%s
-D a-nalofl.ads		20240801081713 6d8e51a4 ada.numerics.aux_long_float%s
-D a-nallfl.ads		20240801081713 3b439099 ada.numerics.aux_long_long_float%s
-D a-nashfl.ads		20240801081713 b54ed4fb ada.numerics.aux_short_float%s
-D a-ngcoty.ads		20240801081713 e7845fd0 ada.numerics.generic_complex_types%s
-D a-ngcoty.adb		20240801081713 67896b31 ada.numerics.generic_complex_types%b
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D i-fortra.ads		20240801081713 0e793007 interfaces.fortran%s
-D i-fortra.adb		20240801081713 77339d9b interfaces.fortran%b
-D system.ads		20240801081714 d0bef732 system%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-exnflt.ads		20240801081713 84371ff2 system.exn_flt%s
-D s-exnlfl.ads		20240801081713 3a76fe2b system.exn_lflt%s
-D s-exponr.ads		20240801081713 2127300b system.exponr%s
-D s-fatflt.ads		20240801081713 11beb392 system.fat_flt%s
-D s-fatgen.ads		20240801081713 d28c6cfe system.fat_gen%s
-D s-fatlfl.ads		20240801081713 378cba9f system.fat_lflt%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-secsta.ads		20240801081713 578279f5 system.secondary_stack%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
-D s-traent.ads		20240801081713 c81cbf8c system.traceback_entries%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
+D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
+D a-nuaufl.ads		20240908170924 020cac40 ada.numerics.aux_float%s
+D a-nagefl.ads		20240908170924 53f456a7 ada.numerics.aux_generic_float%s
+D a-naliop.ads		20240908170924 6b421e5f ada.numerics.aux_linker_options%s
+D a-nalofl.ads		20240908170924 6d8e51a4 ada.numerics.aux_long_float%s
+D a-nallfl.ads		20240908170924 3b439099 ada.numerics.aux_long_long_float%s
+D a-nashfl.ads		20240908170924 b54ed4fb ada.numerics.aux_short_float%s
+D a-ngcoty.ads		20240908170924 e7845fd0 ada.numerics.generic_complex_types%s
+D a-ngcoty.adb		20240908170924 67896b31 ada.numerics.generic_complex_types%b
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D i-fortra.ads		20240908170924 0e793007 interfaces.fortran%s
+D i-fortra.adb		20240908170924 77339d9b interfaces.fortran%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-exnflt.ads		20240908170924 84371ff2 system.exn_flt%s
+D s-exnlfl.ads		20240908170924 3a76fe2b system.exn_lflt%s
+D s-exponr.ads		20240908170924 2127300b system.exponr%s
+D s-fatflt.ads		20240908170924 11beb392 system.fat_flt%s
+D s-fatgen.ads		20240908170924 d28c6cfe system.fat_gen%s
+D s-fatlfl.ads		20240908170924 378cba9f system.fat_lflt%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s s [re interfaces__fortran__single_precision_complex_types 54 13 35_4]
 G c Z s s [im interfaces__fortran__single_precision_complex_types 55 13 35_4]

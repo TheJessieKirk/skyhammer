@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -21,10 +22,10 @@ U system.version_control%s  s-vercon.ads	998663e6 NE OL PU PK
 W system%s		system.ads		system.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D system.ads		20240801081714 d0bef732 system%s
-D s-unstyp.ads		20240801081713 fa2a7f59 system.unsigned_types%s
-D s-vercon.ads		20240801081714 b312eb8d system.version_control%s
-D s-vercon.adb		20240801081714 c1fefe4c system.version_control%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D s-vercon.ads		20240908170924 b312eb8d system.version_control%s
+D s-vercon.adb		20240908170924 c1fefe4c system.version_control%b
 G a e
 G c Z s b [get_version_string system__version_control 44 13 none]
 X 1 system.ads

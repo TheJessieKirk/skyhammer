@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -21,10 +22,10 @@ U system.stack_checking%s  s-stache.ads		17e1e224 EB NE OL PR PK
 W system%s		system.ads		system.ali
 W system.storage_elements%s  s-stoele.ads	s-stoele.ali
 
-D system.ads		20240801081714 d0bef732 system%s
-D s-stache.ads		20240801081713 0b81c1fe system.stack_checking%s
-D s-stache.adb		20240801081713 8e187385 system.stack_checking%b
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
+D s-stache.adb		20240908170924 8e187385 system.stack_checking%b
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
 G a e
 G c Z s s [stack_infoIP system__stack_checking 48 9 none]
 X 1 system.ads

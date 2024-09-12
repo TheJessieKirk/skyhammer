@@ -1,0 +1,310 @@
+diff -ur xpdf-4.04/goo/gfile.cc xpdf-src/goo/gfile.cc
+--- xpdf-4.04/goo/gfile.cc	Tue Apr 19 06:11:23 2022
++++ xpdf-src/goo/gfile.cc	Sun Apr 24 10:45:35 2022
+@@ -7,6 +7,9 @@
+ // Copyright 1996-2003 Glyph & Cog, LLC
+ //
+ //========================================================================
++//  Modified for TeX Live by Peter Breitenlohner <tex-live@tug.org>
++//  See top-level ChangeLog for a list of all modifications
++//========================================================================
+ 
+ #include <aconf.h>
+ 
+@@ -429,6 +432,7 @@
+ #endif
+ }
+ 
++#ifndef PDF_PARSER_ONLY
+ GBool openTempFile(GString **name, FILE **f,
+ 		   const char *mode, const char *ext) {
+ #if defined(_WIN32)
+@@ -543,6 +547,7 @@
+   return gTrue;
+ #endif
+ }
++#endif /* !PDF_PARSER_ONLY */
+ 
+ GBool createDir(char *path, int mode) {
+ #ifdef _WIN32
+@@ -626,6 +631,8 @@
+ 
+ FILE *openFile(const char *path, const char *mode) {
+ #if defined(_WIN32)
++  return fopen(path, mode);
++#if 0
+   wchar_t wPath[winMaxLongPath + 1];
+   wchar_t wMode[8];
+   int i;
+@@ -637,6 +644,7 @@
+   wMode[i] = (wchar_t)0;
+   readWindowsShortcut(wPath, winMaxLongPath + 1);
+   return _wfopen(wPath, wMode);
++#endif /* 0 */
+ #elif defined(VMS)
+   return fopen(path, mode, "ctx=stm");
+ #else
+@@ -644,6 +652,7 @@
+ #endif
+ }
+ 
++#if 0
+ #ifdef _WIN32
+ void readWindowsShortcut(wchar_t *wPath, size_t wPathSize) {
+   size_t n = wcslen(wPath);
+@@ -689,11 +698,15 @@
+   wcscpy(wPath, target);
+ }
+ #endif
++#endif /* 0 */
+ 
+ int makeDir(const char *path, int mode) {
+ #ifdef _WIN32
++  /*
+   wchar_t wPath[winMaxLongPath + 1];
+   return _wmkdir(fileNameToUCS2(path, wPath, winMaxLongPath + 1));
++  */
++  return _mkdir(path);
+ #else
+   return mkdir(path, (mode_t)mode);
+ #endif
+@@ -752,6 +765,7 @@
+ #endif
+ }
+ 
++#ifndef PDF_PARSER_ONLY
+ void fixCommandLine(int *argc, char **argv[]) {
+ #ifdef _WIN32
+   int argcw;
+@@ -777,3 +791,4 @@
+   LocalFree(argvw);
+ #endif
+ }
++#endif /* !PDF_PARSER_ONLY */
+diff -ur xpdf-4.04/goo/gfile.h xpdf-src/goo/gfile.h
+--- xpdf-4.04/goo/gfile.h	Tue Apr 19 06:11:23 2022
++++ xpdf-src/goo/gfile.h	Sun Apr 24 10:48:58 2022
+@@ -100,11 +100,13 @@
+ // UCS-2 and calls _wfopen().  On other OSes, this simply calls fopen().
+ extern FILE *openFile(const char *path, const char *mode);
+ 
++#if 0
+ #ifdef _WIN32
+ // If [wPath] is a Windows shortcut (.lnk file), read the target path
+ // and store it back into [wPath].
+ extern void readWindowsShortcut(wchar_t *wPath, size_t wPathSize);
+ #endif
++#endif /* 0 */
+ 
+ // Create a directory.  On Windows, this converts the path from UTF-8
+ // to UCS-2 and calls _wmkdir(), ignoring the mode argument.  On other
+@@ -139,6 +141,8 @@
+ 
+ // On Windows, this gets the Unicode command line and converts it to
+ // UTF-8.  On other systems, this is a nop.
++#ifndef PDF_PARSER_ONLY
+ extern void fixCommandLine(int *argc, char **argv[]);
++#endif /* !PDF_PARSER_ONLY */
+ 
+ #endif
+diff -ur xpdf-4.04/xpdf/Error.cc xpdf-src/xpdf/Error.cc
+--- xpdf-4.04/xpdf/Error.cc	Tue Apr 19 06:11:23 2022
++++ xpdf-src/xpdf/Error.cc	Sun Apr 24 11:27:58 2022
+@@ -77,11 +77,14 @@
+     (*errorCbk)(errorCbkData, category, (int)pos, sanitized->getCString());
+   } else {
+     fflush(stdout);
++    /* Label the error messages for pdftex's use as libxpdf.
++       It would be cleaner to use the callback feature, but seems
++       like too much trouble at this late date. */
+     if (pos >= 0) {
+-      fprintf(stderr, "%s (%d): %s\n",
++      fprintf(stderr, "\nlibxpdf: %s (%d): %s\n",
+ 	      errorCategoryNames[category], (int)pos, sanitized->getCString());
+     } else {
+-      fprintf(stderr, "%s: %s\n",
++      fprintf(stderr, "\nlibxpdf: %s: %s\n",
+ 	      errorCategoryNames[category], sanitized->getCString());
+     }
+     fflush(stderr);
+diff -ur xpdf-4.04/xpdf/GlobalParams.cc xpdf-src/xpdf/GlobalParams.cc
+--- xpdf-4.04/xpdf/GlobalParams.cc	Tue Apr 19 06:11:23 2022
++++ xpdf-src/xpdf/GlobalParams.cc	Sun Apr 24 11:07:30 2022
+@@ -44,8 +44,12 @@
+ #include "GlobalParams.h"
+ 
+ #ifdef _WIN32
+-#  define strcasecmp stricmp
+-#  define strncasecmp strnicmp
++#  undef strcasecmp
++#  undef strncasecmp
++#  define strcasecmp _stricmp
++#  define strncasecmp _strnicmp
++#else
++#  include <strings.h>
+ #endif
+ 
+ #if MULTITHREADED
+@@ -794,6 +798,7 @@
+   f = NULL;
+   fileName = NULL;
+   if (cfgFileName && cfgFileName[0]) {
++#ifndef PDF_PARSER_ONLY
+     fileName = new GString(cfgFileName);
+     if (!(f = fopen(fileName->getCString(), "r"))) {
+       delete fileName;
+@@ -826,6 +831,7 @@
+     parseFile(fileName, f);
+     delete fileName;
+     fclose(f);
++#endif /* !PDF_PARSER_ONLY */
+   }
+ }
+ 
+@@ -2378,8 +2384,11 @@
+ 				   base14->fontNum,
+ 				   displayFontTab[i].obliqueFactor));
+       } else {
++// Do not display unnecessary looking message on W32
++#ifndef _WIN32
+ 	error(errConfig, -1, "No display font for '{0:s}'",
+ 	      displayFontTab[i].name);
++#endif
+       }
+     }
+   }
+diff -ur xpdf-4.04/xpdf/GlobalParams.h xpdf-src/xpdf/GlobalParams.h
+--- xpdf-4.04/xpdf/GlobalParams.h	Tue Apr 19 06:11:23 2022
++++ xpdf-src/xpdf/GlobalParams.h	Sun Apr 24 11:08:50 2022
+@@ -5,6 +5,9 @@
+ // Copyright 2001-2003 Glyph & Cog, LLC
+ //
+ //========================================================================
++//  Modified for TeX Live by Peter Breitenlohner <tex-live@tug.org>
++//  See top-level ChangeLog for a list of all modifications
++//========================================================================
+ 
+ #ifndef GLOBALPARAMS_H
+ #define GLOBALPARAMS_H
+@@ -237,7 +240,7 @@
+ 
+   // Initialize the global parameters by attempting to read a config
+   // file.
+-  GlobalParams(const char *cfgFileName);
++  GlobalParams(const char *cfgFileName = NULL);
+ 
+   ~GlobalParams();
+ 
+diff -ur xpdf-4.04/xpdf/PDFDoc.cc xpdf-src/xpdf/PDFDoc.cc
+--- xpdf-4.04/xpdf/PDFDoc.cc	Tue Apr 19 06:11:23 2022
++++ xpdf-src/xpdf/PDFDoc.cc	Sun Apr 24 11:19:50 2022
+@@ -114,6 +114,7 @@
+   ok = setup(ownerPassword, userPassword);
+ }
+ 
++#if 0
+ #ifdef _WIN32
+ PDFDoc::PDFDoc(wchar_t *fileNameA, int fileNameLen, GString *ownerPassword,
+ 	       GString *userPassword, PDFCore *coreA) {
+@@ -161,23 +162,28 @@
+   ok = setup(ownerPassword, userPassword);
+ }
+ #endif
++#endif /* 0 */
+ 
+ PDFDoc::PDFDoc(char *fileNameA, GString *ownerPassword,
+ 	       GString *userPassword, PDFCore *coreA) {
++#if 0
+ #ifdef _WIN32
+   OSVERSIONINFO version;
+ #endif
++#endif /* 0 */
+   Object obj;
++#if 0
+ #ifdef _WIN32
+   Unicode u;
+   int i, j;
+ #endif
+-
++#endif /* 0 */
+   init(coreA);
+ 
+   fileName = new GString(fileNameA);
+ 
+ #if defined(_WIN32)
++#if 0
+   wchar_t wPath[winMaxLongPath + 1];
+   i = 0;
+   j = 0;
+@@ -197,8 +203,11 @@
+   if (version.dwPlatformId == VER_PLATFORM_WIN32_NT) {
+     file = _wfopen(fileNameU, wfopenReadMode);
+   } else {
++#endif /* 0 */
+     file = fopen(fileName->getCString(), fopenReadMode);
++#if 0
+   }
++#endif /* 0 */
+ #elif defined(VMS)
+   file = fopen(fileName->getCString(), fopenReadMode, "ctx=stm");
+ #else
+@@ -608,6 +617,7 @@
+   GBool ret;
+ 
+   // NB: _wfopen is only available in NT
++#if 0
+   version.dwOSVersionInfoSize = sizeof(version);
+   GetVersionEx(&version);
+   if (version.dwPlatformId == VER_PLATFORM_WIN32_NT) {
+@@ -617,12 +627,15 @@
+     path2w[i] = 0;
+     f = _wfopen(path2w, L"wb");
+   } else {
++#endif /* 0 */
+     for (i = 0; i < pathLen && i < MAX_PATH; ++i) {
+       path2c[i] = (char)path[i];
+     }
+     path2c[i] = 0;
+     f = fopen(path2c, "wb");
++#if 0
+   }
++#endif /* 0 */
+   if (!f) {
+     return gFalse;
+   }
+diff -ur xpdf-4.04/xpdf/Page.cc xpdf-src/xpdf/Page.cc
+--- xpdf-4.04/xpdf/Page.cc	Tue Apr 19 06:11:23 2022
++++ xpdf-src/xpdf/Page.cc	Sun Apr 24 11:22:49 2022
+@@ -531,9 +531,9 @@
+   delete links;
+ }
+ 
+-#ifndef PDF_PARSER_ONLY
+ void Page::getDefaultCTM(double *ctm, double hDPI, double vDPI,
+ 			 int rotate, GBool useMediaBox, GBool upsideDown) {
++#ifndef PDF_PARSER_ONLY
+   GfxState *state;
+   int i;
+ 
+@@ -550,5 +550,5 @@
+     ctm[i] = state->getCTM()[i];
+   }
+   delete state;
+-}
+ #endif
++}
+diff -ur xpdf-4.04/xpdf/config.h xpdf-src/xpdf/config.h
+--- xpdf-4.04/xpdf/config.h	Tue Apr 19 06:11:23 2022
++++ xpdf-src/xpdf/config.h	Sun Apr 24 11:24:23 2022
+@@ -80,11 +80,6 @@
+ // popen
+ //------------------------------------------------------------------------
+ 
+-#if defined(_MSC_VER) || defined(__BORLANDC__)
+-#define popen _popen
+-#define pclose _pclose
+-#endif
+-
+ #if defined(VMS) || defined(VMCMS) || defined(DOS) || defined(OS2) || defined(__EMX__) || defined(_WIN32) || defined(__DJGPP__)
+ #define POPEN_READ_MODE "rb"
+ #else

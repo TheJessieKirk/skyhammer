@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -27,14 +28,14 @@ W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.crtl%s		s-crtl.ads		s-crtl.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D i-cstrea.ads		20240801081713 ffd01b9d interfaces.c_streams%s
-D i-cstrea.adb		20240801081713 ede7ccf4 interfaces.c_streams%b
-D system.ads		20240801081714 d0bef732 system%s
-D s-crtl.ads		20240801081713 beb39b9e system.crtl%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D i-cstrea.ads		20240908170924 ffd01b9d interfaces.c_streams%s
+D i-cstrea.adb		20240908170924 ede7ccf4 interfaces.c_streams%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
 G a e
 G c Z s s [stdin interfaces__c_streams 72 13 none]
 G c Z s s [stdout interfaces__c_streams 73 13 none]

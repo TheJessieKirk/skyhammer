@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -32,32 +33,32 @@ Z system.val_util%s	s-valuti.adb		s-valuti.ali
 W system.value_d%s
 Z system.value_r%s
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-assert.ads		20240801081713 ba465f5c ada.assertions%s
-D a-except.ads		20240801081713 e7970cd9 ada.exceptions%s
-D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
-D a-nubinu.ads		20240801081713 93f1f3d1 ada.numerics.big_numbers%s
-D a-nbnbig.ads		20240801081713 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-arit32.ads		20240801081713 e8522a76 system.arith_32%s
-D s-assert.ads		20240801081713 9c4520c7 system.assertions%s
-D s-casuti.ads		20240801081713 cf13d755 system.case_util%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-exnint.ads		20240801081713 3d33a4e5 system.exn_int%s
-D s-exponn.ads		20240801081713 99b98823 system.exponn%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
-D s-traent.ads		20240801081713 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240801081713 fa2a7f59 system.unsigned_types%s
-D s-vade32.ads		20240801081714 28f7eebf system.val_decimal_32%s
-D s-valspe.ads		20240801081714 b0fcd073 system.val_spec%s
-D s-valuti.ads		20240801081714 d396a33d system.val_util%s
-D s-valued.ads		20240801081714 a94e9aba system.value_d%s
-D s-valued.adb		20240801081714 8839c063 system.value_d%b
-D s-valuer.ads		20240801081714 77113993 system.value_r%s
-D s-valuer.adb		20240801081714 7ea6d35a system.value_r%b
+D ada.ads		20240908170924 76789da1 ada%s
+D a-assert.ads		20240908170924 ba465f5c ada.assertions%s
+D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
+D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20240908170924 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20240908170924 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-arit32.ads		20240908170924 e8522a76 system.arith_32%s
+D s-assert.ads		20240908170924 9c4520c7 system.assertions%s
+D s-casuti.ads		20240908170924 cf13d755 system.case_util%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-exnint.ads		20240908170924 3d33a4e5 system.exn_int%s
+D s-exponn.ads		20240908170924 99b98823 system.exponn%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D s-vade32.ads		20240908170924 28f7eebf system.val_decimal_32%s
+D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
+D s-valuti.ads		20240908170924 d396a33d system.val_util%s
+D s-valued.ads		20240908170924 a94e9aba system.value_d%s
+D s-valued.adb		20240908170924 8839c063 system.value_d%b
+D s-valuer.ads		20240908170924 77113993 system.value_r%s
+D s-valuer.adb		20240908170924 7ea6d35a system.value_r%b
 G a e
 G c Z s s [scan_decimal system__val_decimal_32__impl 50 13 46_4]
 G c Z s s [value_decimal system__val_decimal_32__impl 82 13 46_4]

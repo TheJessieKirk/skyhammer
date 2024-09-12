@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -16,10 +17,10 @@ RN
 U ada.characters.latin_1%s  a-chlat1.ads	cde9ea2d NE OL PU PK
 W ada.characters%s	a-charac.ads		a-charac.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-charac.ads		20240801081713 2d3ec45b ada.characters%s
-D a-chlat1.ads		20240801081713 e0d72e76 ada.characters.latin_1%s
-D system.ads		20240801081714 d0bef732 system%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-charac.ads		20240908170924 2d3ec45b ada.characters%s
+D a-chlat1.ads		20240908170924 e0d72e76 ada.characters.latin_1%s
+D system.ads		20240908170924 d0bef732 system%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 3|16r9 294r5

@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -28,12 +29,12 @@ U system.scalar_values%s  s-scaval.ads		88d54348 NE OL PK
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-scaval.ads		20240801081713 c97a4dbb system.scalar_values%s
-D s-scaval.adb		20240801081713 259d9da0 system.scalar_values%b
+D ada.ads		20240908170924 76789da1 ada%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-scaval.ads		20240908170924 c97a4dbb system.scalar_values%s
+D s-scaval.adb		20240908170924 259d9da0 system.scalar_values%b
 G a e
 G c Z s b [initialize system__scalar_values 91 14 none]
 X 1 ada.ads

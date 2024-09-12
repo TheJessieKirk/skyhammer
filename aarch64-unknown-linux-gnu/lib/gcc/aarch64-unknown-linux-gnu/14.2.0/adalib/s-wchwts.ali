@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -26,17 +27,17 @@ U system.wch_wts%s	s-wchwts.ads		bad4fbe3 NE OL PU PK
 W system%s		system.ads		system.ali
 W system.wch_con%s	s-wchcon.adb		s-wchcon.ali
 
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-secsta.ads		20240801081713 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
-D s-wchcnv.ads		20240801081714 06c0ca70 system.wch_cnv%s
-D s-wchcnv.adb		20240801081714 5870a60e system.wch_cnv%b
-D s-wchcon.ads		20240801081714 d9032363 system.wch_con%s
-D s-wchjis.ads		20240801081714 6a748b39 system.wch_jis%s
-D s-wchwts.ads		20240801081714 b3692fb2 system.wch_wts%s
-D s-wchwts.adb		20240801081714 b2306b37 system.wch_wts%b
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D s-wchcnv.ads		20240908170924 06c0ca70 system.wch_cnv%s
+D s-wchcnv.adb		20240908170924 5870a60e system.wch_cnv%b
+D s-wchcon.ads		20240908170924 d9032363 system.wch_con%s
+D s-wchjis.ads		20240908170924 6a748b39 system.wch_jis%s
+D s-wchwts.ads		20240908170924 b3692fb2 system.wch_wts%s
+D s-wchwts.adb		20240908170924 b2306b37 system.wch_wts%b
 G a e
 G c Z s b [wide_string_to_string system__wch_wts 42 13 none]
 G c Z s b [wide_wide_string_to_string system__wch_wts 58 13 none]

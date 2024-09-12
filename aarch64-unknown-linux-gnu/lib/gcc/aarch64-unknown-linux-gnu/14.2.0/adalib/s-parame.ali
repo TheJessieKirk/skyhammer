@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -20,9 +21,9 @@ W system%s		system.ads		system.ali
 U system.parameters%s	s-parame.ads		e5290b23 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240801081714 d0bef732 system%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-parame.adb		20240801081713 91a902b3 system.parameters%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-parame.adb		20240908170924 91a902b3 system.parameters%b
 G a e
 G c Z s b [default_stack_size system__parameters 66 13 none]
 G c Z s b [minimum_stack_size system__parameters 69 13 none]

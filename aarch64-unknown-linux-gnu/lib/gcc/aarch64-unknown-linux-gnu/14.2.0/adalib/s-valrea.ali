@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -32,19 +33,19 @@ W system.value_r%s
 U system.val_real%s	s-valrea.ads		20e77b32 BN NE OL PR PK GE
 W system%s		system.ads		system.ali
 
-D system.ads		20240801081714 d0bef732 system%s
-D s-casuti.ads		20240801081713 cf13d755 system.case_util%s
-D s-dourea.ads		20240801081713 8a0ecf55 system.double_real%s
-D s-dourea.adb		20240801081713 be38c14a system.double_real%b
-D s-dorepr.adb		20240801081713 3a065969 system.double_real.product
-D s-flocon.ads		20240801081713 e0fc433c system.float_control%s
-D s-unstyp.ads		20240801081713 fa2a7f59 system.unsigned_types%s
-D s-valrea.ads		20240801081714 f0598c00 system.val_real%s
-D s-valrea.adb		20240801081714 32ef9f80 system.val_real%b
-D s-valspe.ads		20240801081714 b0fcd073 system.val_spec%s
-D s-valuti.ads		20240801081714 d396a33d system.val_util%s
-D s-valuer.ads		20240801081714 77113993 system.value_r%s
-D s-valuer.adb		20240801081714 7ea6d35a system.value_r%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-casuti.ads		20240908170924 cf13d755 system.case_util%s
+D s-dourea.ads		20240908170924 8a0ecf55 system.double_real%s
+D s-dourea.adb		20240908170924 be38c14a system.double_real%b
+D s-dorepr.adb		20240908170924 3a065969 system.double_real.product
+D s-flocon.ads		20240908170924 e0fc433c system.float_control%s
+D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D s-valrea.ads		20240908170924 f0598c00 system.val_real%s
+D s-valrea.adb		20240908170924 32ef9f80 system.val_real%b
+D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
+D s-valuti.ads		20240908170924 d396a33d system.val_util%s
+D s-valuer.ads		20240908170924 77113993 system.value_r%s
+D s-valuer.adb		20240908170924 7ea6d35a system.value_r%b
 G a e
 G c Z s b [val_real system 51 16 none]
 X 1 system.ads

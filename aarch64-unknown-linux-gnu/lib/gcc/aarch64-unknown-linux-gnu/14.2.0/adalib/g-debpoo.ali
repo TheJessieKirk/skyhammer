@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -76,65 +77,65 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.storage_elements%s  s-stoele.ads	s-stoele.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-assert.ads		20240801081713 ba465f5c ada.assertions%s
-D a-except.ads		20240801081713 e7970cd9 ada.exceptions%s
-D a-exctra.ads		20240801081713 0966bad0 ada.exceptions.traceback%s
-D a-finali.ads		20240801081713 bf4f806b ada.finalization%s
-D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
-D a-nubinu.ads		20240801081713 93f1f3d1 ada.numerics.big_numbers%s
-D a-nbnbig.ads		20240801081713 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
-D a-stream.ads		20240801081713 119b8fb3 ada.streams%s
-D a-string.ads		20240801081713 90ac6797 ada.strings%s
-D a-sttebu.ads		20240801081713 f1ad67a2 ada.strings.text_buffers%s
-D a-stuten.ads		20240801081713 c6ced0ae ada.strings.utf_encoding%s
-D a-tags.ads		20240801081713 9eaa38c6 ada.tags%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240801081713 c3a8ac65 ada.unchecked_deallocation%s
-D gnat.ads		20240801081713 b5988c27 gnat%s
-D g-debpoo.ads		20240801081713 d22ac3ca gnat.debug_pools%s
-D g-debpoo.adb		20240801081713 a74e9616 gnat.debug_pools%b
-D g-debuti.ads		20240801081713 407be69f gnat.debug_utilities%s
-D g-htable.ads		20240801081713 7e0467ec gnat.htable%s
-D g-io.ads		20240801081713 9f0d3ab2 gnat.io%s
-D g-traceb.ads		20240801081713 6cba3063 gnat.traceback%s
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-arit32.ads		20240801081713 e8522a76 system.arith_32%s
-D s-assert.ads		20240801081713 9c4520c7 system.assertions%s
-D s-chepoo.ads		20240801081713 7b01371d system.checked_pools%s
-D s-crtl.ads		20240801081713 beb39b9e system.crtl%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-finroo.ads		20240801081713 4ff27390 system.finalization_root%s
-D s-htable.ads		20240801081713 81d958eb system.htable%s
-D s-htable.adb		20240801081713 51a5f568 system.htable%b
-D s-imagef.ads		20240801081713 2a557a85 system.image_f%s
-D s-imagei.ads		20240801081713 5e131ce0 system.image_i%s
-D s-imageu.ads		20240801081713 b0b50650 system.image_u%s
-D s-imfi32.ads		20240801081713 666e1d56 system.img_fixed_32%s
-D s-imgint.ads		20240801081713 67e4edfb system.img_int%s
-D s-imglli.ads		20240801081713 d88f4f3b system.img_lli%s
-D s-imgllu.ads		20240801081713 55ba53d8 system.img_llu%s
-D s-memory.ads		20240801081713 18949c1a system.memory%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-putima.ads		20240801081713 17291fe4 system.put_images%s
-D s-secsta.ads		20240801081713 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240801081713 df77073e system.soft_links%s
-D s-stache.ads		20240801081713 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
-D s-stalib.adb		20240801081713 eb464a47 system.standard_library%b
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
-D s-stopoo.ads		20240801081713 e9fa2dd8 system.storage_pools%s
-D s-strhas.ads		20240801081713 269cd894 system.string_hash%s
-D s-traent.ads		20240801081713 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240801081713 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240801081714 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240801081714 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240801081714 89269ba5 system.value_u_spec%s
-D s-vs_int.ads		20240801081714 06b6b724 system.vs_int%s
-D s-vs_lli.ads		20240801081714 b945cf7d system.vs_lli%s
-D s-vs_llu.ads		20240801081714 8f3536c5 system.vs_llu%s
-D s-vs_uns.ads		20240801081714 e7f47a27 system.vs_uns%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-assert.ads		20240908170924 ba465f5c ada.assertions%s
+D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
+D a-exctra.ads		20240908170924 0966bad0 ada.exceptions.traceback%s
+D a-finali.ads		20240908170924 bf4f806b ada.finalization%s
+D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20240908170924 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20240908170924 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
+D a-stream.ads		20240908170924 119b8fb3 ada.streams%s
+D a-string.ads		20240908170924 90ac6797 ada.strings%s
+D a-sttebu.ads		20240908170924 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20240908170924 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20240908170924 9eaa38c6 ada.tags%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
+D gnat.ads		20240908170924 b5988c27 gnat%s
+D g-debpoo.ads		20240908170924 d22ac3ca gnat.debug_pools%s
+D g-debpoo.adb		20240908170924 a74e9616 gnat.debug_pools%b
+D g-debuti.ads		20240908170924 407be69f gnat.debug_utilities%s
+D g-htable.ads		20240908170924 7e0467ec gnat.htable%s
+D g-io.ads		20240908170924 9f0d3ab2 gnat.io%s
+D g-traceb.ads		20240908170924 6cba3063 gnat.traceback%s
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-arit32.ads		20240908170924 e8522a76 system.arith_32%s
+D s-assert.ads		20240908170924 9c4520c7 system.assertions%s
+D s-chepoo.ads		20240908170924 7b01371d system.checked_pools%s
+D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-finroo.ads		20240908170924 4ff27390 system.finalization_root%s
+D s-htable.ads		20240908170924 81d958eb system.htable%s
+D s-htable.adb		20240908170924 51a5f568 system.htable%b
+D s-imagef.ads		20240908170924 2a557a85 system.image_f%s
+D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
+D s-imageu.ads		20240908170924 b0b50650 system.image_u%s
+D s-imfi32.ads		20240908170924 666e1d56 system.img_fixed_32%s
+D s-imgint.ads		20240908170924 67e4edfb system.img_int%s
+D s-imglli.ads		20240908170924 d88f4f3b system.img_lli%s
+D s-imgllu.ads		20240908170924 55ba53d8 system.img_llu%s
+D s-memory.ads		20240908170924 18949c1a system.memory%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-putima.ads		20240908170924 17291fe4 system.put_images%s
+D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240908170924 df77073e system.soft_links%s
+D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D s-stalib.adb		20240908170924 eb464a47 system.standard_library%b
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D s-stopoo.ads		20240908170924 e9fa2dd8 system.storage_pools%s
+D s-strhas.ads		20240908170924 269cd894 system.string_hash%s
+D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
+D s-vs_int.ads		20240908170924 06b6b724 system.vs_int%s
+D s-vs_lli.ads		20240908170924 b945cf7d system.vs_lli%s
+D s-vs_llu.ads		20240908170924 8f3536c5 system.vs_llu%s
+D s-vs_uns.ads		20240908170924 e7f47a27 system.vs_uns%s
 G a e
 G c Z s b [configure gnat__debug_pools 110 14 none]
 G c Z s b [print_info_stdout gnat__debug_pools 226 14 none]

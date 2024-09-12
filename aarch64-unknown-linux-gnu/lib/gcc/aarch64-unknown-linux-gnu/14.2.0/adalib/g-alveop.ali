@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -25,19 +26,19 @@ W gnat.altivec%s	g-altive.ads		g-altive.ali
 W gnat.altivec.low_level_vectors%s  g-alleve.adb  g-alleve.ali
 W gnat.altivec.vector_types%s  g-alvety.ads	g-alvety.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240801081713 b5988c27 gnat%s
-D g-altive.ads		20240801081713 de0831fa gnat.altivec%s
-D g-allein.ads		20240801081713 65bc9cd7 gnat.altivec.low_level_interface%s
-D g-alleve.ads		20240801081713 8c7696fa gnat.altivec.low_level_vectors%s
-D g-alveop.ads		20240801081713 bcf7f69f gnat.altivec.vector_operations%s
-D g-alveop.adb		20240801081713 45f8b1bb gnat.altivec.vector_operations%b
-D g-alvety.ads		20240801081713 0832b7c8 gnat.altivec.vector_types%s
-D g-alvevi.ads		20240801081713 35930503 gnat.altivec.vector_views%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240908170924 b5988c27 gnat%s
+D g-altive.ads		20240908170924 de0831fa gnat.altivec%s
+D g-allein.ads		20240908170924 65bc9cd7 gnat.altivec.low_level_interface%s
+D g-alleve.ads		20240908170924 8c7696fa gnat.altivec.low_level_vectors%s
+D g-alveop.ads		20240908170924 bcf7f69f gnat.altivec.vector_operations%s
+D g-alveop.adb		20240908170924 45f8b1bb gnat.altivec.vector_operations%b
+D g-alvety.ads		20240908170924 0832b7c8 gnat.altivec.vector_types%s
+D g-alvevi.ads		20240908170924 35930503 gnat.altivec.vector_views%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [vec_abs gnat__altivec__vector_operations 116 13 none]
 G c Z s b [vec_abs gnat__altivec__vector_operations 119 13 none]

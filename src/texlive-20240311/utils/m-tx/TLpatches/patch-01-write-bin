@@ -1,0 +1,27 @@
+diff -ur mtx-0.63d.orig/files.c mtx-0.63d/files.c
+--- mtx-0.63d.orig/files.c	2022-07-26 05:35:12.000000000 +0900
++++ mtx-0.63d/files.c	2022-09-14 22:07:11.000000000 +0900
+@@ -289,9 +289,9 @@
+   pushFile(infilename);
+   strcpy(outfile_NAME, outfilename);
+   if (outfile != NULL)
+-    outfile = freopen(outfile_NAME, "w", outfile);
++    outfile = freopen(outfile_NAME, "wb", outfile);
+   else
+-    outfile = fopen(outfile_NAME, "w");
++    outfile = fopen(outfile_NAME, "wb");
+   _SETIO(outfile != NULL, FileNotFound);
+   strcpy(stylefile_NAME, stylefilename);
+   if (stylefile != NULL)
+diff -ur mtx-0.63d.orig/globals.c mtx-0.63d/globals.c
+--- mtx-0.63d.orig/globals.c	2022-07-26 05:35:12.000000000 +0900
++++ mtx-0.63d/globals.c	2022-09-14 22:07:11.000000000 +0900
+@@ -230,7 +230,7 @@
+     if (outfile != NULL)
+       fclose(outfile);
+     outfile = NULL;
+-    outfile = fopen(outfile_NAME, "w");
++    outfile = fopen(outfile_NAME, "wb");
+     if (outfile == NULL)
+       _EscIO2(FileNotFound, outfile_NAME);
+     fclose(outfile);

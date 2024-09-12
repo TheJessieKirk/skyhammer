@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -19,12 +20,12 @@ U system.dim.generic_mks.generic_other_prefixes%s  s-dgmgop.ads  a292ac05 NE OL 
 W system.dim%s		s-dim.ads		s-dim.ali
 W system.dim.generic_mks%s
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-dim.ads		20240801081713 ec3077cc system.dim%s
-D s-digemk.ads		20240801081713 d6ab2b3c system.dim.generic_mks%s
-D s-dgmgop.ads		20240801081713 74398739 system.dim.generic_mks.generic_other_prefixes%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-dim.ads		20240908170924 ec3077cc system.dim%s
+D s-digemk.ads		20240908170924 d6ab2b3c system.dim.generic_mks%s
+D s-dgmgop.ads		20240908170924 74398739 system.dim.generic_mks.generic_other_prefixes%s
 G a e
 X 3 system.ads
 37K9*System 156e11 6|39r9 174r5

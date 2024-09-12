@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -26,22 +27,22 @@ W gnat%s		gnat.ads		gnat.ali
 W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
 W system%s		system.ads		system.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240801081713 c3a8ac65 ada.unchecked_deallocation%s
-D gnat.ads		20240801081713 b5988c27 gnat%s
-D g-os_lib.ads		20240801081713 0db74523 gnat.os_lib%s
-D g-tty.ads		20240801081713 e6a3d7fb gnat.tty%s
-D g-tty.adb		20240801081713 09e89ade gnat.tty%b
-D interfac.ads		20240801081713 9111f9c1 interfaces%s
-D i-c.ads		20240801081713 aac316ce interfaces.c%s
-D i-cstrin.ads		20240801081713 5409c1a4 interfaces.c.strings%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-os_lib.ads		20240801081713 a2467c22 system.os_lib%s
-D s-parame.ads		20240801081713 3597fc11 system.parameters%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
-D s-string.ads		20240801081713 582aac7d system.strings%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
+D gnat.ads		20240908170924 b5988c27 gnat%s
+D g-os_lib.ads		20240908170924 0db74523 gnat.os_lib%s
+D g-tty.ads		20240908170924 e6a3d7fb gnat.tty%s
+D g-tty.adb		20240908170924 09e89ade gnat.tty%b
+D interfac.ads		20240908170924 9111f9c1 interfaces%s
+D i-c.ads		20240908170924 aac316ce interfaces.c%s
+D i-cstrin.ads		20240908170924 5409c1a4 interfaces.c.strings%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-os_lib.ads		20240908170924 a2467c22 system.os_lib%s
+D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D s-string.ads		20240908170924 582aac7d system.strings%s
 G a e
 G c Z s b [tty_supported gnat__tty 46 13 none]
 G c Z s b [allocate_tty gnat__tty 50 14 none]

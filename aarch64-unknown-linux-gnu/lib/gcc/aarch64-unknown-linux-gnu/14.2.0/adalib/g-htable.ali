@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -21,15 +22,15 @@ W gnat%s		gnat.ads		gnat.ali
 W system%s		system.ads		system.ali
 W system.htable%s	s-htable.adb		s-htable.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240801081713 b5988c27 gnat%s
-D g-htable.ads		20240801081713 7e0467ec gnat.htable%s
-D g-htable.adb		20240801081713 e198aece gnat.htable%b
-D system.ads		20240801081714 d0bef732 system%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-htable.ads		20240801081713 81d958eb system.htable%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240908170924 b5988c27 gnat%s
+D g-htable.ads		20240908170924 7e0467ec gnat.htable%s
+D g-htable.adb		20240908170924 e198aece gnat.htable%b
+D system.ads		20240908170924 d0bef732 system%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-htable.ads		20240908170924 81d958eb system.htable%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
 G a e
 X 3 gnat.ads
 37K9*GNAT 60e9 4|44r9 58r5 5|37r14 38r5

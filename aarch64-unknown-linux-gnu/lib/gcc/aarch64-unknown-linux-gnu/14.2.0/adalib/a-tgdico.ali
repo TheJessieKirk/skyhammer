@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -18,12 +19,12 @@ RV NO_IMPLEMENTATION_PRAGMAS
 U ada.tags.generic_dispatching_constructor%s  a-tgdico.ads  c5011198 NE OL PR GE
 W ada.tags%s		a-tags.adb		a-tags.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-tags.ads		20240801081713 9eaa38c6 ada.tags%s
-D a-tgdico.ads		20240801081713 5bab295e ada.tags.generic_dispatching_constructor%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-stoele.ads		20240801081713 ccded4e8 system.storage_elements%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-tags.ads		20240908170924 9eaa38c6 ada.tags%s
+D a-tgdico.ads		20240908170924 5bab295e ada.tags.generic_dispatching_constructor%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 3|25r10

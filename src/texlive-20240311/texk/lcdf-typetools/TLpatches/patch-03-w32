@@ -1,0 +1,10 @@
+diff -ur lcdf-typetools-2.110/liblcdf/filename.cc lcdf-typetools-src/liblcdf/filename.cc
+--- lcdf-typetools-2.110/liblcdf/filename.cc	Fri Apr 08 02:43:00 2022
++++ lcdf-typetools-src/liblcdf/filename.cc	Fri Sep 01 07:11:55 2023
+@@ -126,5 +126,5 @@
+     if (_actual || !_path)
+ 	return _actual;
+     else
+-	return fopen(_path.c_str(), binary ? "wb" : "w");
++	return fopen(_path.c_str(), "wb");
+ }

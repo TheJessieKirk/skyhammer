@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -27,17 +28,17 @@ W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.generic_complex_types%s
 W ada.numerics.generic_real_arrays%s
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
-D a-ngcoar.ads		20240801081713 2168fecb ada.numerics.generic_complex_arrays%s
-D a-ngcoar.adb		20240801081713 8b9495a7 ada.numerics.generic_complex_arrays%b
-D a-ngcoty.ads		20240801081713 e7845fd0 ada.numerics.generic_complex_types%s
-D a-ngrear.ads		20240801081713 86992c51 ada.numerics.generic_real_arrays%s
-D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240801081714 d0bef732 system%s
-D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
-D s-gearop.ads		20240801081713 f52852c9 system.generic_array_operations%s
-D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
+D a-ngcoar.ads		20240908170924 2168fecb ada.numerics.generic_complex_arrays%s
+D a-ngcoar.adb		20240908170924 8b9495a7 ada.numerics.generic_complex_arrays%b
+D a-ngcoty.ads		20240908170924 e7845fd0 ada.numerics.generic_complex_types%s
+D a-ngrear.ads		20240908170924 86992c51 ada.numerics.generic_real_arrays%s
+D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
+D s-gearop.ads		20240908170924 f52852c9 system.generic_array_operations%s
+D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [generic_complex_arrays ada__numerics 23 22 none]
 X 1 ada.ads

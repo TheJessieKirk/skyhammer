@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -16,8 +17,8 @@ RN
 U system.pure_exceptions%s  s-purexc.ads	51dbb761 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240801081714 d0bef732 system%s
-D s-purexc.ads		20240801081713 81654053 system.pure_exceptions%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-purexc.ads		20240908170924 81654053 system.pure_exceptions%s
 G a e
 G c Z s s [raise_exception system__pure_exceptions 63 14 none]
 G c Z s s [exception_typeIP system__pure_exceptions 39 9 none]

@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -23,13 +24,13 @@ W system.val_util%s	s-valuti.adb		s-valuti.ali
 U system.val_char%s	s-valcha.ads		61690fc3 NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240801081714 d0bef732 system%s
-D s-casuti.ads		20240801081713 cf13d755 system.case_util%s
-D s-imgcha.ads		20240801081713 9c3458e7 system.img_char%s
-D s-valcha.ads		20240801081714 b1d7f8f1 system.val_char%s
-D s-valcha.adb		20240801081714 e7d0b9ad system.val_char%b
-D s-valspe.ads		20240801081714 b0fcd073 system.val_spec%s
-D s-valuti.ads		20240801081714 d396a33d system.val_util%s
+D system.ads		20240908170924 d0bef732 system%s
+D s-casuti.ads		20240908170924 cf13d755 system.case_util%s
+D s-imgcha.ads		20240908170924 9c3458e7 system.img_char%s
+D s-valcha.ads		20240908170924 b1d7f8f1 system.val_char%s
+D s-valcha.adb		20240908170924 e7d0b9ad system.val_char%b
+D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
+D s-valuti.ads		20240908170924 d396a33d system.val_util%s
 G a e
 G c Z s b [value_character system__val_char 35 13 none]
 X 1 system.ads

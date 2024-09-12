@@ -1,0 +1,49 @@
+diff -ur libpaper-1.1.29/man/paperconf.1.in libpaper-src/man/paperconf.1.in
+--- libpaper-1.1.29/man/paperconf.1.in	2024-01-07 11:40:25.000000000 +0900
++++ libpaper-src/man/paperconf.1.in	2024-01-07 11:40:56.000000000 +0900
+@@ -3,39 +3,12 @@
+ .B paperconf
+ \- print paper configuration information
+ .SH SYNOPSIS
+-.B paperconf
+-[
+-[
+-.B \-p
+-]
+-.I paper
+-|
+-.B \-d
+-|
+-.B \-a
+-]
+-[
+-.B \-z
+-]
+-[
+-.B \-n
+-|
+-.B \-N
+-]
+-[
+-.B \-s
+-|
+-.B \-w
+-|
+-.B \-h
+-]
+-[
+-.B \-c
+-|
+-.B \-m
+-|
+-.B \-i
+-]
++\fBpaperconf\fR
++[\fB\-z\fR]
++[\fB\-n\fR|\fB\-N\fR]
++[\fB\-s\fR|\fB\-w\fR|\fB\-h\fR]
++[\fB\-c\fR|\fB\-m\fR|\fB\-i\fR]
++[[\fB\-p\fR] \fIpaper\fR|\fB\-d\fR|\fB\-a\fR]
+ .SH DESCRIPTION
+ .B paperconf
+ prints information about a given paper.

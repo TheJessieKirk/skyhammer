@@ -4,6 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -20,10 +21,10 @@ W ada%s			ada.ads			ada.ali
 U ada.decimal%s		a-decima.ads		f31caead BN NE OL PU PK
 W ada%s			ada.ads			ada.ali
 
-D ada.ads		20240801081713 76789da1 ada%s
-D a-decima.ads		20240801081713 8564330c ada.decimal%s
-D a-decima.adb		20240801081713 9ed0caf0 ada.decimal%b
-D system.ads		20240801081714 d0bef732 system%s
+D ada.ads		20240908170924 76789da1 ada%s
+D a-decima.ads		20240908170924 8564330c ada.decimal%s
+D a-decima.adb		20240908170924 9ed0caf0 ada.decimal%b
+D system.ads		20240908170924 d0bef732 system%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 2|38r9 69r5 3|32r14 60r5
