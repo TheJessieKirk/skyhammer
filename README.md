@@ -21,7 +21,7 @@ It successfully creates software that runs natively on Microsoft Windows 10.
 **Microsoft Windows for PC (x86_64-w64-mingw32):** Ada, C, C++, D, Fortran, M2, Objective-C, Objective-C++, Rust
 
 ## Bundled Tools and Libraries
-*Note: Please forgive the pleonastic acronyms*
+*Note: Please forgive the [pleonastic acronym redundancies](https://en.wikipedia.org/wiki/RAS_syndrome)*
 * [Dmalloc](https://dmalloc.com/) 5.6.5
 * [GNU](https://www.gnu.org/) [autoconf](https://www.gnu.org/software/autoconf/) 2.72
 * [GNU](https://www.gnu.org/) [automake](https://www.gnu.org/software/automake/) 1.17
