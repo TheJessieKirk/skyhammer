@@ -7,6 +7,7 @@ Skyhammer is a set of compilers and related development tools that enable Raspbe
 
 ## Project Goals
 * Skyhammer must provide a set of cross-platform compilers and tools so developers can easily use their Raspberry Pis to make software for PCs running Linux or Microsoft Windows, and for Apple Macs.
+* It must be fully up-to-date and as independent, able to [eat it's own dog food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food).
 * It must be as full-featured as possible ("everything turned on").
 * It may support Raspberry Pi brambles in the future.
 * Skyhammer may provide support for similar devices to Raspberry Pis.
