@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -24,18 +24,18 @@ W gnat%s		gnat.ads		gnat.ali
 W system%s		system.ads		system.ali
 W system.wch_cnv%s	s-wchcnv.adb		s-wchcnv.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-spchge.ads		20240908170924 091f88cd gnat.spelling_checker_generic%s
-D g-spchge.adb		20240908170924 fb9c05db gnat.spelling_checker_generic%b
-D g-u3spch.ads		20240908170924 7b7d9c39 gnat.utf_32_spelling_checker%s
-D g-u3spch.adb		20240908170924 1f42f349 gnat.utf_32_spelling_checker%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-wchcnv.ads		20240908170924 06c0ca70 system.wch_cnv%s
-D s-wchcon.ads		20240908170924 d9032363 system.wch_con%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-spchge.ads		20240925092334 091f88cd gnat.spelling_checker_generic%s
+D g-spchge.adb		20240925092334 fb9c05db gnat.spelling_checker_generic%b
+D g-u3spch.ads		20240925092334 7b7d9c39 gnat.utf_32_spelling_checker%s
+D g-u3spch.adb		20240925092334 1f42f349 gnat.utf_32_spelling_checker%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-wchcnv.ads		20240925092335 06c0ca70 system.wch_cnv%s
+D s-wchcon.ads		20240925092335 d9032363 system.wch_con%s
 G a e
 G c Z s b [is_bad_spelling_of gnat__utf_32_spelling_checker 42 13 none]
 G c Z b b [ibsR gnat__utf_32_spelling_checker__ibsGP2466 36 13 none]

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -43,33 +43,33 @@ W ada.numerics.generic_complex_elementary_functions%s
 Z ada.numerics.generic_complex_types%s
 W ada.numerics.long_long_complex_types%s  a-nllcty.ads  a-nllcty.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
-D a-nuaufl.ads		20240908170924 020cac40 ada.numerics.aux_float%s
-D a-nagefl.ads		20240908170924 53f456a7 ada.numerics.aux_generic_float%s
-D a-naliop.ads		20240908170924 6b421e5f ada.numerics.aux_linker_options%s
-D a-nalofl.ads		20240908170924 6d8e51a4 ada.numerics.aux_long_float%s
-D a-nallfl.ads		20240908170924 3b439099 ada.numerics.aux_long_long_float%s
-D a-nashfl.ads		20240908170924 b54ed4fb ada.numerics.aux_short_float%s
-D a-ngcefu.ads		20240908170924 228ead62 ada.numerics.generic_complex_elementary_functions%s
-D a-ngcefu.adb		20240908170924 3d2a1513 ada.numerics.generic_complex_elementary_functions%b
-D a-ngcoty.ads		20240908170924 e7845fd0 ada.numerics.generic_complex_types%s
-D a-ngelfu.ads		20240908170924 5506716e ada.numerics.generic_elementary_functions%s
-D a-ngelfu.adb		20240908170924 2940142d ada.numerics.generic_elementary_functions%b
-D a-nllcef.ads		20240908170924 cbe143bd ada.numerics.long_long_complex_elementary_functions%s
-D a-nllcef.ads		20240908170924 cbe143bd ada.numerics.long_long_complex_elementary_functions%b
-D a-nllcty.ads		20240908170924 dc2913b4 ada.numerics.long_long_complex_types%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-exnllf.ads		20240908170924 17d83e5b system.exn_llf%s
-D s-exponr.ads		20240908170924 2127300b system.exponr%s
-D s-fatgen.ads		20240908170924 d28c6cfe system.fat_gen%s
-D s-fatllf.ads		20240908170924 4d5c1475 system.fat_llf%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
+D a-nuaufl.ads		20240925092334 020cac40 ada.numerics.aux_float%s
+D a-nagefl.ads		20240925092334 53f456a7 ada.numerics.aux_generic_float%s
+D a-naliop.ads		20240925092334 6b421e5f ada.numerics.aux_linker_options%s
+D a-nalofl.ads		20240925092334 6d8e51a4 ada.numerics.aux_long_float%s
+D a-nallfl.ads		20240925092334 3b439099 ada.numerics.aux_long_long_float%s
+D a-nashfl.ads		20240925092334 b54ed4fb ada.numerics.aux_short_float%s
+D a-ngcefu.ads		20240925092334 228ead62 ada.numerics.generic_complex_elementary_functions%s
+D a-ngcefu.adb		20240925092334 3d2a1513 ada.numerics.generic_complex_elementary_functions%b
+D a-ngcoty.ads		20240925092334 e7845fd0 ada.numerics.generic_complex_types%s
+D a-ngelfu.ads		20240925092334 5506716e ada.numerics.generic_elementary_functions%s
+D a-ngelfu.adb		20240925092334 2940142d ada.numerics.generic_elementary_functions%b
+D a-nllcef.ads		20240925092334 cbe143bd ada.numerics.long_long_complex_elementary_functions%s
+D a-nllcef.ads		20240925092334 cbe143bd ada.numerics.long_long_complex_elementary_functions%b
+D a-nllcty.ads		20240925092334 dc2913b4 ada.numerics.long_long_complex_types%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-exnllf.ads		20240925092334 17d83e5b system.exn_llf%s
+D s-exponr.ads		20240925092334 2127300b system.exponr%s
+D s-fatgen.ads		20240925092334 d28c6cfe system.fat_gen%s
+D s-fatllf.ads		20240925092334 4d5c1475 system.fat_llf%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s s [sqrt ada__numerics__long_long_complex_elementary_functions 24 13 19_1]
 G c Z s s [log ada__numerics__long_long_complex_elementary_functions 26 13 19_1]

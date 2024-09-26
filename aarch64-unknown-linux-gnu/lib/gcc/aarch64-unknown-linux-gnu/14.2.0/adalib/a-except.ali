@@ -5,7 +5,7 @@ A -O1
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -64,41 +64,41 @@ W system.parameters%s	s-parame.adb		s-parame.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.traceback_entries%s  s-traent.adb	s-traent.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-except.adb		20240908170924 f3ac4fae ada.exceptions%b
-D a-excach.adb		20240908170924 8d177d55 ada.exceptions.call_chain
-D a-exexda.adb		20240908170924 53e3aa5e ada.exceptions.exception_data
-D a-exexpr.adb		20240908170924 064253d0 ada.exceptions.exception_propagation
-D a-exextr.adb		20240908170924 de7b2b4f ada.exceptions.exception_traces
-D a-elchha.ads		20240908170924 47bffbf4 ada.exceptions.last_chance_handler%s
-D a-exstat.adb		20240908170924 0850dfd2 ada.exceptions.stream_attributes
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-except.ads		20240908170924 32a5bf32 system.exceptions%s
-D s-excmac.ads		20240908170924 9d9ccece system.exceptions.machine%s
-D s-excdeb.ads		20240908170924 2c9bd8a5 system.exceptions_debug%s
-D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
-D s-imgint.ads		20240908170924 67e4edfb system.img_int%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240908170924 df77073e system.soft_links%s
-D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-traceb.ads		20240908170924 4e864b31 system.traceback%s
-D s-trasym.ads		20240908170924 bd1dac90 system.traceback.symbolic%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_int.ads		20240908170924 06b6b724 system.vs_int%s
-D s-vs_uns.ads		20240908170924 e7f47a27 system.vs_uns%s
-D s-wchcon.ads		20240908170924 d9032363 system.wch_con%s
-D s-wchstw.ads		20240908170924 2d112c01 system.wch_stw%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-except.adb		20240925092334 f3ac4fae ada.exceptions%b
+D a-excach.adb		20240925092334 8d177d55 ada.exceptions.call_chain
+D a-exexda.adb		20240925092334 53e3aa5e ada.exceptions.exception_data
+D a-exexpr.adb		20240925092334 064253d0 ada.exceptions.exception_propagation
+D a-exextr.adb		20240925092334 de7b2b4f ada.exceptions.exception_traces
+D a-elchha.ads		20240925092334 47bffbf4 ada.exceptions.last_chance_handler%s
+D a-exstat.adb		20240925092334 0850dfd2 ada.exceptions.stream_attributes
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240925092334 c3a8ac65 ada.unchecked_deallocation%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-except.ads		20240925092334 32a5bf32 system.exceptions%s
+D s-excmac.ads		20240925092334 9d9ccece system.exceptions.machine%s
+D s-excdeb.ads		20240925092334 2c9bd8a5 system.exceptions_debug%s
+D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
+D s-imgint.ads		20240925092334 67e4edfb system.img_int%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240925092334 df77073e system.soft_links%s
+D s-stache.ads		20240925092334 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-traceb.ads		20240925092334 4e864b31 system.traceback%s
+D s-trasym.ads		20240925092334 bd1dac90 system.traceback.symbolic%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_int.ads		20240925092335 06b6b724 system.vs_int%s
+D s-vs_uns.ads		20240925092335 e7f47a27 system.vs_uns%s
+D s-wchcon.ads		20240925092335 d9032363 system.wch_con%s
+D s-wchstw.ads		20240925092335 2d112c01 system.wch_stw%s
 G a e
 G c Z s b [exception_name ada__exceptions 60 13 none]
 G c Z s b [exception_name ada__exceptions 62 13 none]

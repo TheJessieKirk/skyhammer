@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -33,20 +33,20 @@ W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W gnat%s		gnat.ads		gnat.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-cppexc.ads		20240908170924 42fe33e2 gnat.cpp_exceptions%s
-D g-cppexc.adb		20240908170924 19647cc6 gnat.cpp_exceptions%b
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-cppexc.ads		20240925092334 42fe33e2 gnat.cpp_exceptions%s
+D g-cppexc.adb		20240925092334 19647cc6 gnat.cpp_exceptions%b
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z b b [to_exception_data_ptr gnat__cpp_exceptions 46 13 none]
 G c Z b b [get_exception_machine_occurrence gnat__cpp_exceptions 52 13 none]

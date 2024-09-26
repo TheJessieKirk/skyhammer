@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -29,15 +29,15 @@ U system.random_seed%s	s-ransee.ads		400a75c0 EE NE OL PK
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-calend.ads		20240908170924 158a5463 ada.calendar%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-ransee.ads		20240908170924 01a57b33 system.random_seed%s
-D s-ransee.adb		20240908170924 5d1ae37e system.random_seed%b
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-calend.ads		20240925092334 158a5463 ada.calendar%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-ransee.ads		20240925092334 01a57b33 system.random_seed%s
+D s-ransee.adb		20240925092334 5d1ae37e system.random_seed%b
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [get_seed system__random_seed 46 13 none]
 G c Z b b [to_u64 system__random_seed 43 13 none]

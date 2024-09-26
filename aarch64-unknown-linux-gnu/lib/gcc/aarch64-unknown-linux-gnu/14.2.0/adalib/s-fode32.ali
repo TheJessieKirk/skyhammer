@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -20,11 +20,11 @@ W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.fore_d%s
 
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-fore_d.ads		20240908170924 0dadc239 system.fore_d%s
-D s-fore_d.adb		20240908170924 3c30d9e3 system.fore_d%b
-D s-fode32.ads		20240908170924 72263b4c system.fore_decimal_32%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-fore_d.ads		20240925092334 0dadc239 system.fore_d%s
+D s-fore_d.adb		20240925092334 3c30d9e3 system.fore_d%b
+D s-fode32.ads		20240925092334 72263b4c system.fore_decimal_32%s
 G a e
 G c Z s s [fore_decimal system__fore_decimal_32__impl 42 13 43_4]
 X 1 interfac.ads

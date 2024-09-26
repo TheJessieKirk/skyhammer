@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -21,14 +21,14 @@ W gnat%s		gnat.ads		gnat.ali
 U gnat.binary_search%s	g-binsea.ads		86d54afc BN EE NE OL PK
 W gnat%s		gnat.ads		gnat.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-binsea.ads		20240908170924 334dc6db gnat.binary_search%s
-D g-binsea.adb		20240908170924 7bb2df70 gnat.binary_search%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-binsea.ads		20240925092334 334dc6db gnat.binary_search%s
+D g-binsea.adb		20240925092334 7bb2df70 gnat.binary_search%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 X 3 gnat.ads
 37K9*GNAT 60e9 4|31r9 93r5 5|28r14 123r5

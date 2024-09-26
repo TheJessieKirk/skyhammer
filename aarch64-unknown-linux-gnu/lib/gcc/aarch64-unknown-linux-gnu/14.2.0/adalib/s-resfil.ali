@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -44,21 +44,21 @@ Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.strings%s	s-string.adb		s-string.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-os_lib.ads		20240908170924 a2467c22 system.os_lib%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-resfil.ads		20240908170924 e6adb144 system.response_file%s
-D s-resfil.adb		20240908170924 c5c1ac52 system.response_file%b
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-string.ads		20240908170924 582aac7d system.strings%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240925092334 c3a8ac65 ada.unchecked_deallocation%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-os_lib.ads		20240925092334 a2467c22 system.os_lib%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-resfil.ads		20240925092334 e6adb144 system.response_file%s
+D s-resfil.adb		20240925092334 c5c1ac52 system.response_file%b
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-string.ads		20240925092334 582aac7d system.strings%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s b [arguments_from system__response_file 72 13 none]
 G c Z b b [file_recIP system__response_file 40 9 none]

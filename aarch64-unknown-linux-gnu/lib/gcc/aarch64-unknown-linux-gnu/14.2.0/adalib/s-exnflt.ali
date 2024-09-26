@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,13 +23,13 @@ W system%s		system.ads		system.ali
 Z system.double_real%s
 W system.exponr%s
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-dourea.ads		20240908170924 8a0ecf55 system.double_real%s
-D s-dourea.adb		20240908170924 be38c14a system.double_real%b
-D s-dorepr.adb		20240908170924 3a065969 system.double_real.product
-D s-exnflt.ads		20240908170924 84371ff2 system.exn_flt%s
-D s-exponr.ads		20240908170924 2127300b system.exponr%s
-D s-exponr.adb		20240908170924 7c6b8c30 system.exponr%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-dourea.ads		20240925092334 8a0ecf55 system.double_real%s
+D s-dourea.adb		20240925092334 be38c14a system.double_real%b
+D s-dorepr.adb		20240925092334 3a065969 system.double_real.product
+D s-exnflt.ads		20240925092334 84371ff2 system.exn_flt%s
+D s-exponr.ads		20240925092334 2127300b system.exponr%s
+D s-exponr.adb		20240925092334 7c6b8c30 system.exponr%b
 G a e
 G c Z s s [exn_floatR system__exn_flt__exn_floatGP2470 38 13 none]
 G c Z s s [exn_float system__exn_flt 38 13 none]

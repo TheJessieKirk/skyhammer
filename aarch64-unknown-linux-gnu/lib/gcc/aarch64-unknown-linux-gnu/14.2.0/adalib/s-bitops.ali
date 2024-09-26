@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -30,16 +30,16 @@ N A141:7 gnatcheck exempt_off "Improper_Returns"
 U system.bit_ops%s	s-bitops.ads		1d4d5b0e NE OL PK
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-bitops.ads		20240908170924 cdf3ac3c system.bit_ops%s
-D s-bitops.adb		20240908170924 6a845c4b system.bit_ops%b
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-bitops.ads		20240925092334 cdf3ac3c system.bit_ops%s
+D s-bitops.adb		20240925092334 6a845c4b system.bit_ops%b
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s b [bit_and system__bit_ops 42 14 none]
 G c Z s b [bit_eq system__bit_ops 53 13 none]

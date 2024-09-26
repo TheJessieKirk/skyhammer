@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -40,45 +40,45 @@ Z system%s		system.ads		system.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-charac.ads		20240908170924 2d3ec45b ada.characters%s
-D a-chlat1.ads		20240908170924 e0d72e76 ada.characters.latin_1%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-finali.ads		20240908170924 bf4f806b ada.finalization%s
-D a-ioexce.ads		20240908170924 40018c65 ada.io_exceptions%s
-D a-stream.ads		20240908170924 119b8fb3 ada.streams%s
-D a-string.ads		20240908170924 90ac6797 ada.strings%s
-D a-strfix.ads		20240908170924 100e0a05 ada.strings.fixed%s
-D a-strmap.ads		20240908170924 1f91ebb6 ada.strings.maps%s
-D a-strsea.ads		20240908170924 2b7aab86 ada.strings.search%s
-D a-sttebu.ads		20240908170924 f1ad67a2 ada.strings.text_buffers%s
-D a-stuten.ads		20240908170924 c6ced0ae ada.strings.utf_encoding%s
-D a-stzfix.ads		20240908170924 cd5f8a42 ada.strings.wide_wide_fixed%s
-D a-stzmap.ads		20240908170924 f60a1f4d ada.strings.wide_wide_maps%s
-D a-tags.ads		20240908170924 9eaa38c6 ada.tags%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D a-ztexio.ads		20240908170924 ce8ac589 ada.wide_wide_text_io%s
-D a-ztedit.ads		20240908170924 0c859acd ada.wide_wide_text_io.editing%s
-D a-ztedit.adb		20240908170924 8a53ce0f ada.wide_wide_text_io.editing%b
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-cstrea.ads		20240908170924 ffd01b9d interfaces.c_streams%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-ficobl.ads		20240908170924 dc5161d4 system.file_control_block%s
-D s-finroo.ads		20240908170924 4ff27390 system.finalization_root%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-putima.ads		20240908170924 17291fe4 system.put_images%s
-D s-retsta.ads		20240908170924 0f6b06cb system.return_stack%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240908170924 df77073e system.soft_links%s
-D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-stratt.ads		20240908170924 a1861007 system.stream_attributes%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-wchcon.ads		20240908170924 d9032363 system.wch_con%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-charac.ads		20240925092334 2d3ec45b ada.characters%s
+D a-chlat1.ads		20240925092334 e0d72e76 ada.characters.latin_1%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-finali.ads		20240925092334 bf4f806b ada.finalization%s
+D a-ioexce.ads		20240925092334 40018c65 ada.io_exceptions%s
+D a-stream.ads		20240925092334 119b8fb3 ada.streams%s
+D a-string.ads		20240925092334 90ac6797 ada.strings%s
+D a-strfix.ads		20240925092334 100e0a05 ada.strings.fixed%s
+D a-strmap.ads		20240925092334 1f91ebb6 ada.strings.maps%s
+D a-strsea.ads		20240925092334 2b7aab86 ada.strings.search%s
+D a-sttebu.ads		20240925092334 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20240925092334 c6ced0ae ada.strings.utf_encoding%s
+D a-stzfix.ads		20240925092334 cd5f8a42 ada.strings.wide_wide_fixed%s
+D a-stzmap.ads		20240925092334 f60a1f4d ada.strings.wide_wide_maps%s
+D a-tags.ads		20240925092334 9eaa38c6 ada.tags%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D a-ztexio.ads		20240925092334 ce8ac589 ada.wide_wide_text_io%s
+D a-ztedit.ads		20240925092334 0c859acd ada.wide_wide_text_io.editing%s
+D a-ztedit.adb		20240925092334 8a53ce0f ada.wide_wide_text_io.editing%b
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-cstrea.ads		20240925092334 ffd01b9d interfaces.c_streams%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-crtl.ads		20240925092334 beb39b9e system.crtl%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-ficobl.ads		20240925092334 dc5161d4 system.file_control_block%s
+D s-finroo.ads		20240925092334 4ff27390 system.finalization_root%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-putima.ads		20240925092334 17291fe4 system.put_images%s
+D s-retsta.ads		20240925092334 0f6b06cb system.return_stack%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240925092334 df77073e system.soft_links%s
+D s-stache.ads		20240925092334 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-stratt.ads		20240925092334 a1861007 system.stream_attributes%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-wchcon.ads		20240925092335 d9032363 system.wch_con%s
 G a e
 G c Z s b [valid ada__wide_wide_text_io__editing 40 13 none]
 G c Z s b [to_picture ada__wide_wide_text_io__editing 44 13 none]

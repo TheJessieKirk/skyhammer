@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -25,10 +25,10 @@ N A208:7 codepeer intentional "test always false" "code deals with infinity"
 U system.double_real%s	s-dourea.ads		5ab03867 BN NE OL PU PK GE
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-dourea.ads		20240908170924 8a0ecf55 system.double_real%s
-D s-dourea.adb		20240908170924 be38c14a system.double_real%b
-D s-dorepr.adb		20240908170924 3a065969 system.double_real.product
+D system.ads		20240925092335 d0bef732 system%s
+D s-dourea.ads		20240925092334 8a0ecf55 system.double_real%s
+D s-dourea.adb		20240925092334 be38c14a system.double_real%b
+D s-dorepr.adb		20240925092334 3a065969 system.double_real.product
 G a e
 G c Z s b [double_real system 42 16 none]
 X 1 system.ads

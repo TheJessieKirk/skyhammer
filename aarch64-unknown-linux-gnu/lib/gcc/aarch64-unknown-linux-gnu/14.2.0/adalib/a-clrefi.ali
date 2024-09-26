@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -19,16 +19,16 @@ W ada.command_line%s	a-comlin.adb		a-comlin.ali
 W system%s		system.ads		system.ali
 W system.response_file%s  s-resfil.adb		s-resfil.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-comlin.ads		20240908170924 4aa66568 ada.command_line%s
-D a-clrefi.ads		20240908170924 845769fd ada.command_line.response_file%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-resfil.ads		20240908170924 e6adb144 system.response_file%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-string.ads		20240908170924 582aac7d system.strings%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-comlin.ads		20240925092334 4aa66568 ada.command_line%s
+D a-clrefi.ads		20240925092334 845769fd ada.command_line.response_file%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240925092334 c3a8ac65 ada.unchecked_deallocation%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-resfil.ads		20240925092334 e6adb144 system.response_file%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-string.ads		20240925092334 582aac7d system.strings%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 3|35r9

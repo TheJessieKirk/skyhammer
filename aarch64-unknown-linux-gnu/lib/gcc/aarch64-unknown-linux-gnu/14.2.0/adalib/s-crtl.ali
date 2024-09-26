@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -19,9 +19,9 @@ U system.crtl%s		s-crtl.ads		5b9a90bd NE OL PR PK
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-crtl.ads		20240925092334 beb39b9e system.crtl%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 G a e
 G c Z s s [strlen system__crtl 82 13 none]
 G c Z s s [strncpy system__crtl 85 14 none]

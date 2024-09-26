@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -40,29 +40,29 @@ U system.bignums%s	s-bignum.ads		96777b48 BN NE OL PR PK
 W system%s		system.ads		system.ali
 W system.shared_bignums%s  s-shabig.ads		s-shabig.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-bignum.ads		20240908170924 12de6c0f system.bignums%s
-D s-bignum.adb		20240908170924 cf26ebca system.bignums%b
-D s-genbig.ads		20240908170924 78505182 system.generic_bignums%s
-D s-genbig.adb		20240908170924 6786d924 system.generic_bignums%b
-D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
-D s-imgint.ads		20240908170924 67e4edfb system.img_int%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-shabig.ads		20240908170924 5417e075 system.shared_bignums%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_int.ads		20240908170924 06b6b724 system.vs_int%s
-D s-vs_uns.ads		20240908170924 e7f47a27 system.vs_uns%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-bignum.ads		20240925092334 12de6c0f system.bignums%s
+D s-bignum.adb		20240925092334 cf26ebca system.bignums%b
+D s-genbig.ads		20240925092334 78505182 system.generic_bignums%s
+D s-genbig.adb		20240925092334 6786d924 system.generic_bignums%b
+D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
+D s-imgint.ads		20240925092334 67e4edfb system.img_int%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-shabig.ads		20240925092334 5417e075 system.shared_bignums%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_int.ads		20240925092335 06b6b724 system.vs_int%s
+D s-vs_uns.ads		20240925092335 e7f47a27 system.vs_uns%s
 G a e
 G c Z s b [big_add system__bignums 46 13 none]
 G c Z s b [big_sub system__bignums 47 13 none]

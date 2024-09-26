@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -19,13 +19,13 @@ U io_exceptions%s	ioexcept.ads		b112f451 NE OL PU
 W ada%s			ada.ads			ada.ali
 W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-ioexce.ads		20240908170924 40018c65 ada.io_exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D ioexcept.ads		20240908170924 f1137834 io_exceptions%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-ioexce.ads		20240925092334 40018c65 ada.io_exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D ioexcept.ads		20240925092334 f1137834 io_exceptions%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 4|22r6 24r31

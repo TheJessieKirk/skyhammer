@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -26,19 +26,19 @@ W system.standard_library%s  s-stalib.adb	s-stalib.ali
 U ada.exceptions.last_chance_handler%s  a-elchha.ads  a028f72d NE OL SU
 W ada.exceptions%s	a-except.adb		a-except.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-elchha.ads		20240908170924 47bffbf4 ada.exceptions.last_chance_handler%s
-D a-elchha.adb		20240908170924 831da31f ada.exceptions.last_chance_handler%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240908170924 df77073e system.soft_links%s
-D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-elchha.ads		20240925092334 47bffbf4 ada.exceptions.last_chance_handler%s
+D a-elchha.adb		20240925092334 831da31f ada.exceptions.last_chance_handler%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240925092334 df77073e system.soft_links%s
+D s-stache.ads		20240925092334 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s b [last_chance_handler ada__exceptions 34 26 none]
 X 1 ada.ads

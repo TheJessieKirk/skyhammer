@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -24,17 +24,17 @@ W interfaces.c%s	i-c.adb			i-c.ali
 U gnat.time_stamp%s	g-timsta.ads		c938f869 EE NE OL PK
 W gnat%s		gnat.ads		gnat.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-timsta.ads		20240908170924 7ca0744e gnat.time_stamp%s
-D g-timsta.adb		20240908170924 600a8af5 gnat.time_stamp%b
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-timsta.ads		20240925092334 7ca0744e gnat.time_stamp%s
+D g-timsta.adb		20240925092334 600a8af5 gnat.time_stamp%b
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [current_time gnat__time_stamp 36 13 none]
 G c Z b b [gnat_current_time_string gnat__time_stamp 42 14 none]

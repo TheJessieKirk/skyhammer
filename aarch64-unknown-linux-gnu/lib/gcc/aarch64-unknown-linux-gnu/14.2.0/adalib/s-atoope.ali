@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -17,8 +17,8 @@ RN
 U system.atomic_operations%s  s-atoope.ads	17dd8d17 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-atoope.ads		20240908170924 c7637a25 system.atomic_operations%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-atoope.ads		20240925092334 c7637a25 system.atomic_operations%s
 G a e
 X 1 system.ads
 37K9*System 156e11 2|36r9 39r5

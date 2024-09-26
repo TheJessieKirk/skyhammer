@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -18,10 +18,10 @@ U system.memory_copy%s	s-memcop.ads		115d5798 NE OL PR PK
 W system%s		system.ads		system.ali
 W system.crtl%s		s-crtl.ads		s-crtl.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
-D s-memcop.ads		20240908170924 7f503b34 system.memory_copy%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-crtl.ads		20240925092334 beb39b9e system.crtl%s
+D s-memcop.ads		20240925092334 7f503b34 system.memory_copy%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 G a e
 X 1 system.ads
 37K9*System 156e11 3|43r6 46r9 49r54 50r14 55r55 56r15 72r5

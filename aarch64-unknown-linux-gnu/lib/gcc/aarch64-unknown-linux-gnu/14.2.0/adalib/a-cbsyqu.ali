@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -32,17 +32,17 @@ W ada.containers.synchronized_queue_interfaces%s
 W system%s		system.ads		system.ali
 N A47:4 codepeer skip_analysis
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-contai.ads		20240908170924 61e5e089 ada.containers%s
-D a-cbsyqu.ads		20240908170924 e22888ff ada.containers.bounded_synchronized_queues%s
-D a-cbsyqu.adb		20240908170924 df2ca80e ada.containers.bounded_synchronized_queues%b
-D a-csquin.ads		20240908170924 8c71856d ada.containers.synchronized_queue_interfaces%s
-D a-tags.ads		20240908170924 9eaa38c6 ada.tags%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-contai.ads		20240925092334 61e5e089 ada.containers%s
+D a-cbsyqu.ads		20240925092334 e22888ff ada.containers.bounded_synchronized_queues%s
+D a-cbsyqu.adb		20240925092334 df2ca80e ada.containers.bounded_synchronized_queues%b
+D a-csquin.ads		20240925092334 8c71856d ada.containers.synchronized_queue_interfaces%s
+D a-tags.ads		20240925092334 9eaa38c6 ada.tags%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [bounded_synchronized_queues ada__containers 44 24 none]
 X 1 ada.ads

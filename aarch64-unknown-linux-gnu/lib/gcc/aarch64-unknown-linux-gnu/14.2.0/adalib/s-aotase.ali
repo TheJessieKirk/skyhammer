@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,18 +23,18 @@ W system.atomic_primitives%s  s-atopri.adb	s-atopri.ali
 U system.atomic_operations.test_and_set%s  s-aotase.ads  57acee8e BN NE OL PU PK
 W system.atomic_operations%s  s-atoope.ads	s-atoope.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-atoope.ads		20240908170924 c7637a25 system.atomic_operations%s
-D s-aotase.ads		20240908170924 90cf94ab system.atomic_operations.test_and_set%s
-D s-aotase.adb		20240908170924 e581b407 system.atomic_operations.test_and_set%b
-D s-atopri.ads		20240908170924 e19c1d89 system.atomic_primitives%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-atoope.ads		20240925092334 c7637a25 system.atomic_operations%s
+D s-aotase.ads		20240925092334 90cf94ab system.atomic_operations.test_and_set%s
+D s-aotase.adb		20240925092334 e581b407 system.atomic_operations.test_and_set%b
+D s-atopri.ads		20240925092334 e19c1d89 system.atomic_primitives%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [atomic_test_and_set system__atomic_operations__test_and_set 42 13 none]
 G c Z s b [atomic_clear system__atomic_operations__test_and_set 46 14 none]

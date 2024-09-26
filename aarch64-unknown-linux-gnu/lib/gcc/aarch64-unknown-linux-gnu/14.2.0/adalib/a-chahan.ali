@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -37,22 +37,22 @@ W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-charac.ads		20240908170924 2d3ec45b ada.characters%s
-D a-chahan.ads		20240908170924 bf752ff6 ada.characters.handling%s
-D a-chahan.adb		20240908170924 96cadc18 ada.characters.handling%b
-D a-chlat1.ads		20240908170924 e0d72e76 ada.characters.latin_1%s
-D a-string.ads		20240908170924 90ac6797 ada.strings%s
-D a-strmap.ads		20240908170924 1f91ebb6 ada.strings.maps%s
-D a-stmaco.ads		20240908170924 4b1f2a0b ada.strings.maps.constants%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-charac.ads		20240925092334 2d3ec45b ada.characters%s
+D a-chahan.ads		20240925092334 bf752ff6 ada.characters.handling%s
+D a-chahan.adb		20240925092334 96cadc18 ada.characters.handling%b
+D a-chlat1.ads		20240925092334 e0d72e76 ada.characters.latin_1%s
+D a-string.ads		20240925092334 90ac6797 ada.strings%s
+D a-strmap.ads		20240925092334 1f91ebb6 ada.strings.maps%s
+D a-stmaco.ads		20240925092334 4b1f2a0b ada.strings.maps.constants%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s b [is_control ada__characters__handling 62 13 none]
 G c Z s b [is_graphic ada__characters__handling 69 13 none]

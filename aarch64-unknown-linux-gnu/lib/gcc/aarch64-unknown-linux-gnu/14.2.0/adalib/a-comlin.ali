@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -30,13 +30,13 @@ N A118:7 gnatcheck exempt_off "Improper_Returns"
 U ada.command_line%s	a-comlin.ads		3cdef8c9 NE OL PR PK
 W ada%s			ada.ads			ada.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-comlin.ads		20240908170924 4aa66568 ada.command_line%s
-D a-comlin.adb		20240908170924 a0f4014a ada.command_line%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-comlin.ads		20240925092334 4aa66568 ada.command_line%s
+D a-comlin.adb		20240925092334 a0f4014a ada.command_line%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [argument_count ada__command_line 39 13 none]
 G c Z s b [argument ada__command_line 52 13 none]

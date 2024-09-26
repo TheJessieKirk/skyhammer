@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -22,11 +22,11 @@ W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W system.dim%s		s-dim.ads		s-dim.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-dim.ads		20240908170924 ec3077cc system.dim%s
-D s-digemk.ads		20240908170924 d6ab2b3c system.dim.generic_mks%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-dim.ads		20240925092334 ec3077cc system.dim%s
+D s-digemk.ads		20240925092334 d6ab2b3c system.dim.generic_mks%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 5|40r6 47r21 48r21

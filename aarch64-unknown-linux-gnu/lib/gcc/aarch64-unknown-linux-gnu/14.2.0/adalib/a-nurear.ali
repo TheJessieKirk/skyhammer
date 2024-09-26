@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -44,32 +44,32 @@ W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.generic_real_arrays%s
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-contai.ads		20240908170924 61e5e089 ada.containers%s
-D a-cgaaso.ads		20240908170924 0179e0e0 ada.containers.generic_anonymous_array_sort%s
-D a-cgaaso.adb		20240908170924 a55922a1 ada.containers.generic_anonymous_array_sort%b
-D a-cogeso.ads		20240908170924 fb85939d ada.containers.generic_sort%s
-D a-cogeso.adb		20240908170924 b9243803 ada.containers.generic_sort%b
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
-D a-ngrear.ads		20240908170924 86992c51 ada.numerics.generic_real_arrays%s
-D a-ngrear.adb		20240908170924 1bbaeb9e ada.numerics.generic_real_arrays%b
-D a-nurear.ads		20240908170924 3158da1f ada.numerics.real_arrays%s
-D a-nurear.ads		20240908170924 3158da1f ada.numerics.real_arrays%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-exnflt.ads		20240908170924 84371ff2 system.exn_flt%s
-D s-exponr.ads		20240908170924 2127300b system.exponr%s
-D s-fatflt.ads		20240908170924 11beb392 system.fat_flt%s
-D s-fatgen.ads		20240908170924 d28c6cfe system.fat_gen%s
-D s-gearop.ads		20240908170924 f52852c9 system.generic_array_operations%s
-D s-gearop.adb		20240908170924 27a5f8c9 system.generic_array_operations%b
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-contai.ads		20240925092334 61e5e089 ada.containers%s
+D a-cgaaso.ads		20240925092334 0179e0e0 ada.containers.generic_anonymous_array_sort%s
+D a-cgaaso.adb		20240925092334 a55922a1 ada.containers.generic_anonymous_array_sort%b
+D a-cogeso.ads		20240925092334 fb85939d ada.containers.generic_sort%s
+D a-cogeso.adb		20240925092334 b9243803 ada.containers.generic_sort%b
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
+D a-ngrear.ads		20240925092334 86992c51 ada.numerics.generic_real_arrays%s
+D a-ngrear.adb		20240925092334 1bbaeb9e ada.numerics.generic_real_arrays%b
+D a-nurear.ads		20240925092334 3158da1f ada.numerics.real_arrays%s
+D a-nurear.ads		20240925092334 3158da1f ada.numerics.real_arrays%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-exnflt.ads		20240925092334 84371ff2 system.exn_flt%s
+D s-exponr.ads		20240925092334 2127300b system.exponr%s
+D s-fatflt.ads		20240925092334 11beb392 system.fat_flt%s
+D s-fatgen.ads		20240925092334 d28c6cfe system.fat_gen%s
+D s-gearop.ads		20240925092334 f52852c9 system.generic_array_operations%s
+D s-gearop.adb		20240925092334 27a5f8c9 system.generic_array_operations%b
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s s [Oadd ada__numerics__real_arrays 50 13 18_1]
 G c Z s s [Osubtract ada__numerics__real_arrays 51 13 18_1]

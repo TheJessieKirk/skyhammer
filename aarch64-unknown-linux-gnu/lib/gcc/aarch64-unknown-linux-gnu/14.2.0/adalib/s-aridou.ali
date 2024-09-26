@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -44,24 +44,24 @@ W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.big_numbers%s  a-nubinu.ads	a-nubinu.ali
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-assert.ads		20240908170924 ba465f5c ada.assertions%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
-D a-nubinu.ads		20240908170924 93f1f3d1 ada.numerics.big_numbers%s
-D a-nbnbig.ads		20240908170924 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
-D a-nbnbig.adb		20240908170924 e7f9abf0 ada.numerics.big_numbers.big_integers_ghost%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-aridou.ads		20240908170924 34a989ac system.arith_double%s
-D s-aridou.adb		20240908170924 908ef5d2 system.arith_double%b
-D s-assert.ads		20240908170924 9c4520c7 system.assertions%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-spark.ads		20240908170924 53f1c39d system.spark%s
-D s-spcuop.ads		20240908170924 316dcc2a system.spark.cut_operations%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-assert.ads		20240925092334 ba465f5c ada.assertions%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20240925092334 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20240925092334 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
+D a-nbnbig.adb		20240925092334 e7f9abf0 ada.numerics.big_numbers.big_integers_ghost%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-aridou.ads		20240925092334 34a989ac system.arith_double%s
+D s-aridou.adb		20240925092334 908ef5d2 system.arith_double%b
+D s-assert.ads		20240925092334 9c4520c7 system.assertions%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-spark.ads		20240925092334 53f1c39d system.spark%s
+D s-spcuop.ads		20240925092334 316dcc2a system.spark.cut_operations%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s b [arith_double system 55 16 none]
 X 1 ada.ads

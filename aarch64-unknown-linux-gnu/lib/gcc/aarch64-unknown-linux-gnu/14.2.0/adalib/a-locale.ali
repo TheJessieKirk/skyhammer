@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -22,10 +22,10 @@ W system%s		system.ads		system.ali
 U ada.locales%s		a-locale.ads		ff4d3823 NE OL PR RT PK
 W ada%s			ada.ads			ada.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-locale.ads		20240908170924 8935a582 ada.locales%s
-D a-locale.adb		20240908170924 89c5c1f9 ada.locales%b
-D system.ads		20240908170924 d0bef732 system%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-locale.ads		20240925092334 8935a582 ada.locales%s
+D a-locale.adb		20240925092334 89c5c1f9 ada.locales%b
+D system.ads		20240925092335 d0bef732 system%s
 G a e
 G c Z s b [language ada__locales 42 13 none]
 G c Z s b [country ada__locales 47 13 none]

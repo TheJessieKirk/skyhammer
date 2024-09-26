@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,14 +23,14 @@ Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 U ada.characters.conversions%s  a-chacon.ads	761d31b0 NE OL PU PK
 W ada.characters%s	a-charac.ads		a-charac.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-charac.ads		20240908170924 2d3ec45b ada.characters%s
-D a-chacon.ads		20240908170924 5b23f5eb ada.characters.conversions%s
-D a-chacon.adb		20240908170924 bc70178e ada.characters.conversions%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-charac.ads		20240925092334 2d3ec45b ada.characters%s
+D a-chacon.ads		20240925092334 5b23f5eb ada.characters.conversions%s
+D a-chacon.adb		20240925092334 bc70178e ada.characters.conversions%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [is_character ada__characters__conversions 39 13 none]
 G c Z s b [is_string ada__characters__conversions 40 13 none]

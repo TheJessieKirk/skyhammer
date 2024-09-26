@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -32,12 +32,12 @@ W system.string_hash%s	s-strhas.adb		s-strhas.ali
 U system.htable%s	s-htable.ads		5167afd9 BN NE OL PR PK
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-htable.ads		20240908170924 81d958eb system.htable%s
-D s-htable.adb		20240908170924 51a5f568 system.htable%b
-D s-strhas.ads		20240908170924 269cd894 system.string_hash%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-uncdea.ads		20240925092334 c3a8ac65 ada.unchecked_deallocation%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-htable.ads		20240925092334 81d958eb system.htable%s
+D s-htable.adb		20240925092334 51a5f568 system.htable%b
+D s-strhas.ads		20240925092334 269cd894 system.string_hash%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 5|32r6 237r9

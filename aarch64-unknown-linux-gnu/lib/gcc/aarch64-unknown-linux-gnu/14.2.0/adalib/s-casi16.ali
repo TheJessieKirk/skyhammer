@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -30,14 +30,14 @@ N A137:4 gnatcheck exempt_off "Improper_Returns"
 U system.compare_array_signed_16%s  s-casi16.ads  4ddb9638 NE OL PK
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-addope.ads		20240908170924 7e342ca0 system.address_operations%s
-D s-addope.adb		20240908170924 044c5324 system.address_operations%b
-D s-casi16.ads		20240908170924 9d65610a system.compare_array_signed_16%s
-D s-casi16.adb		20240908170924 29bb3474 system.compare_array_signed_16%b
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-addope.ads		20240925092334 7e342ca0 system.address_operations%s
+D s-addope.adb		20240925092334 044c5324 system.address_operations%b
+D s-casi16.ads		20240925092334 9d65610a system.compare_array_signed_16%s
+D s-casi16.adb		20240925092334 29bb3474 system.compare_array_signed_16%b
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [compare_array_s16 system__compare_array_signed_16 41 13 none]
 G c Z b b [w system__compare_array_signed_16 54 13 none]

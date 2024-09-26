@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -24,11 +24,11 @@ W system%s		system.ads		system.ali
 U system.address_operations%s  s-addope.ads	ae8adb92 BN NE OL PU PK
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-addope.ads		20240908170924 7e342ca0 system.address_operations%s
-D s-addope.adb		20240908170924 044c5324 system.address_operations%b
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-addope.ads		20240925092334 7e342ca0 system.address_operations%s
+D s-addope.adb		20240925092334 044c5324 system.address_operations%b
 G a e
 G c Z s b [adda system__address_operations 63 13 none]
 G c Z s b [suba system__address_operations 64 13 none]

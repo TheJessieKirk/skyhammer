@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -31,42 +31,42 @@ W system.tasking.debug%s  s-tasdeb.adb		s-tasdeb.ali
 U system.stack_usage.tasking%s  s-stusta.ads	2f640fd3 NE OL PK
 W system.stack_usage%s	s-stausa.adb		s-stausa.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-atacco.ads		20240908170924 5868e3ba system.address_to_access_conversions%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
-D s-imgint.ads		20240908170924 67e4edfb system.img_int%s
-D s-io.ads		20240908170924 9e42f74f system.io%s
-D s-linux.ads		20240908170924 34850a8c system.linux%s
-D s-multip.ads		20240908170924 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240911234004 b7943734 system.os_constants%s
-D s-osinte.ads		20240908170924 e4f53740 system.os_interface%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240908170924 df77073e system.soft_links%s
-D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
-D s-stausa.ads		20240908170924 5be75682 system.stack_usage%s
-D s-stusta.ads		20240908170924 74835951 system.stack_usage.tasking%s
-D s-stusta.adb		20240908170924 316593ce system.stack_usage.tasking%b
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-tasinf.ads		20240908170924 528dde74 system.task_info%s
-D s-taspri.ads		20240908170924 4ec891e7 system.task_primitives%s
-D s-taprop.ads		20240908170924 6eefbe12 system.task_primitives.operations%s
-D s-taskin.ads		20240908170924 ebc4edbe system.tasking%s
-D s-tasdeb.ads		20240908170924 a18505b7 system.tasking.debug%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_int.ads		20240908170924 06b6b724 system.vs_int%s
-D s-vs_uns.ads		20240908170924 e7f47a27 system.vs_uns%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-atacco.ads		20240925092334 5868e3ba system.address_to_access_conversions%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
+D s-imgint.ads		20240925092334 67e4edfb system.img_int%s
+D s-io.ads		20240925092334 9e42f74f system.io%s
+D s-linux.ads		20240925092334 34850a8c system.linux%s
+D s-multip.ads		20240925092334 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20240926090546 b7943734 system.os_constants%s
+D s-osinte.ads		20240925092334 e4f53740 system.os_interface%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240925092334 df77073e system.soft_links%s
+D s-stache.ads		20240925092334 0b81c1fe system.stack_checking%s
+D s-stausa.ads		20240925092334 5be75682 system.stack_usage%s
+D s-stusta.ads		20240925092334 74835951 system.stack_usage.tasking%s
+D s-stusta.adb		20240925092334 316593ce system.stack_usage.tasking%b
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-tasinf.ads		20240925092334 528dde74 system.task_info%s
+D s-taspri.ads		20240925092334 4ec891e7 system.task_primitives%s
+D s-taprop.ads		20240925092334 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20240925092334 ebc4edbe system.tasking%s
+D s-tasdeb.ads		20240925092334 a18505b7 system.tasking.debug%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_int.ads		20240925092335 06b6b724 system.vs_int%s
+D s-vs_uns.ads		20240925092335 e7f47a27 system.vs_uns%s
 G a e
 G c Z s b [report_all_tasks system__stack_usage__tasking 42 14 none]
 G c Z s b [report_current_task system__stack_usage__tasking 51 14 none]

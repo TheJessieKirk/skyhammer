@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -22,16 +22,16 @@ W ada.containers.generic_sort%s
 U ada.containers.generic_anonymous_array_sort%s  a-cgaaso.ads  609c0069 BN NE OL PU GE
 W ada.containers%s	a-contai.ads		a-contai.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-contai.ads		20240908170924 61e5e089 ada.containers%s
-D a-cgaaso.ads		20240908170924 0179e0e0 ada.containers.generic_anonymous_array_sort%s
-D a-cgaaso.adb		20240908170924 a55922a1 ada.containers.generic_anonymous_array_sort%b
-D a-cogeso.ads		20240908170924 fb85939d ada.containers.generic_sort%s
-D a-cogeso.adb		20240908170924 b9243803 ada.containers.generic_sort%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-contai.ads		20240925092334 61e5e089 ada.containers%s
+D a-cgaaso.ads		20240925092334 0179e0e0 ada.containers.generic_anonymous_array_sort%s
+D a-cgaaso.adb		20240925092334 a55922a1 ada.containers.generic_anonymous_array_sort%b
+D a-cogeso.ads		20240925092334 fb85939d ada.containers.generic_sort%s
+D a-cogeso.adb		20240925092334 b9243803 ada.containers.generic_sort%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [generic_anonymous_array_sort ada__containers 39 26 none]
 X 1 ada.ads

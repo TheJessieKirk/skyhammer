@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,13 +23,13 @@ W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.image_n%s
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-imagen.ads		20240908170924 875093bf system.image_n%s
-D s-imagen.adb		20240908170924 ea5fc2b9 system.image_n%b
-D s-imenu8.ads		20240908170924 856b4744 system.img_enum_8%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-imagen.ads		20240925092334 875093bf system.image_n%s
+D s-imagen.adb		20240925092334 ea5fc2b9 system.image_n%b
+D s-imenu8.ads		20240925092334 856b4744 system.img_enum_8%s
 G a e
 G c Z s s [image_enumeration system__img_enum_8__impl 44 14 41_4]
 X 3 interfac.ads

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -17,13 +17,13 @@ RN
 U gnat.exceptions%s	g-except.ads		ff5ec1e9 NE OL PU PK
 W gnat%s		gnat.ads		gnat.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-except.ads		20240908170924 4ac64dce gnat.exceptions%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-except.ads		20240925092334 4ac64dce gnat.exceptions%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s s [raise_exception gnat__exceptions 70 14 none]
 G c Z s s [exception_typeIP gnat__exceptions 46 9 none]

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -24,14 +24,14 @@ U ada.containers.stable_sorting%s  a-costso.ads	f29ff792 BN NE OL PU RT PK
 W ada.containers%s	a-contai.ads		a-contai.ali
 N A40:4 codepeer skip_analysis
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-contai.ads		20240908170924 61e5e089 ada.containers%s
-D a-costso.ads		20240908170924 937a171b ada.containers.stable_sorting%s
-D a-costso.adb		20240908170924 d34bf6bb ada.containers.stable_sorting%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-contai.ads		20240925092334 61e5e089 ada.containers%s
+D a-costso.ads		20240925092334 937a171b ada.containers.stable_sorting%s
+D a-costso.adb		20240925092334 d34bf6bb ada.containers.stable_sorting%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 3|39r17 71r5 4|32r14 191r5

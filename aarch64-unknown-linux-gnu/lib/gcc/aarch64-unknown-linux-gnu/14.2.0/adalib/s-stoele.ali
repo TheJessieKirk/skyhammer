@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -20,8 +20,8 @@ RR NO_ELABORATION_CODE
 U system.storage_elements%s  s-stoele.ads	1c6023da NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s s [Oadd system__storage_elements 67 13 none]
 G c Z s s [Oadd system__storage_elements 68 13 none]

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -25,11 +25,11 @@ W system.parameters%s	s-parame.adb		s-parame.ali
 U system.os_primitives%s  s-osprim.ads		d74392c4 BN NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-osprim.ads		20240908170924 07fd65f6 system.os_primitives%s
-D s-osprim.adb		20240908170924 70a7f01c system.os_primitives%b
-D s-optide.adb		20240908170924 93bfb1f2 system.os_primitives.timed_delay
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-osprim.ads		20240925092334 07fd65f6 system.os_primitives%s
+D s-osprim.adb		20240925092334 70a7f01c system.os_primitives%b
+D s-optide.adb		20240925092334 93bfb1f2 system.os_primitives.timed_delay
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 G a e
 G c Z s b [initialize system__os_primitives 59 14 none]
 G c Z s b [clock system__os_primitives 64 13 none]

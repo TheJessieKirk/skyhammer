@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -19,8 +19,8 @@ RR NO_ELABORATION_CODE
 U system.machine_code%s	s-maccod.ads		1d74ff2c NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-maccod.ads		20240908170924 cdca081e system.machine_code%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-maccod.ads		20240925092334 cdca081e system.machine_code%s
 G a e
 G c Z s s [asm system__machine_code 64 14 none]
 G c Z s s [asm system__machine_code 71 14 none]

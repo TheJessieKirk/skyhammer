@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -18,9 +18,9 @@ U system.byte_swapping%s  s-bytswa.ads		5cfb781b NE OL PU PK
 W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-bytswa.ads		20240908170924 1d5476e8 system.byte_swapping%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-bytswa.ads		20240925092334 1d5476e8 system.byte_swapping%s
 G a e
 G c Z s s [bswap_16 system__byte_swapping 47 13 none]
 G c Z s s [bswap_32 system__byte_swapping 50 13 none]

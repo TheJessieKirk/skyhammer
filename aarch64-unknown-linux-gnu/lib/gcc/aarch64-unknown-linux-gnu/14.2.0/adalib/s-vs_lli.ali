@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,14 +23,14 @@ U system.vs_lli%s	s-vs_lli.ads		9e6424dd EE OL PR
 W system%s		system.ads		system.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vaispe.adb		20240908170924 dbcabb05 system.value_i_spec%b
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_lli.ads		20240908170924 b945cf7d system.vs_lli%s
-D s-vs_llu.ads		20240908170924 8f3536c5 system.vs_llu%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vaispe.adb		20240925092335 dbcabb05 system.value_i_spec%b
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_lli.ads		20240925092335 b945cf7d system.vs_lli%s
+D s-vs_llu.ads		20240925092335 8f3536c5 system.vs_llu%s
 G a e
 G c Z s s [uns_is_valid_int system__vs_lli__spec 68 13 57_4]
 G c Z s s [is_int_of_uns system__vs_lli__spec 75 13 57_4]

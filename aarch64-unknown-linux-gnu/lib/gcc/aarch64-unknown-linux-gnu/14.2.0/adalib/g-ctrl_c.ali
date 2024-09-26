@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,14 +23,14 @@ W gnat%s		gnat.ads		gnat.ali
 U gnat.ctrl_c%s		g-ctrl_c.ads		ca91985c EE NE OL PK
 W gnat%s		gnat.ads		gnat.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-ctrl_c.ads		20240908170924 7f09147b gnat.ctrl_c%s
-D g-ctrl_c.adb		20240908170924 15d1c7d5 gnat.ctrl_c%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-ctrl_c.ads		20240925092334 7f09147b gnat.ctrl_c%s
+D g-ctrl_c.adb		20240925092334 15d1c7d5 gnat.ctrl_c%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [install_handler gnat__ctrl_c 49 14 none]
 G c Z s s [uninstall_handler gnat__ctrl_c 53 14 none]

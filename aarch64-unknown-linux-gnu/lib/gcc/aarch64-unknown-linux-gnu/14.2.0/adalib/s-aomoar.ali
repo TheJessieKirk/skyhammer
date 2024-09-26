@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -28,20 +28,20 @@ W system.atomic_primitives%s  s-atopri.adb	s-atopri.ali
 U system.atomic_operations.modular_arithmetic%s  s-aomoar.ads  20d54f9f BN NE OL PU PK GE
 W system.atomic_operations%s  s-atoope.ads	s-atoope.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-atoope.ads		20240908170924 c7637a25 system.atomic_operations%s
-D s-atopex.ads		20240908170924 997451f6 system.atomic_operations.exchange%s
-D s-atopex.adb		20240908170924 f2dd6756 system.atomic_operations.exchange%b
-D s-aomoar.ads		20240908170924 e7b635ba system.atomic_operations.modular_arithmetic%s
-D s-aomoar.adb		20240908170924 a58f22be system.atomic_operations.modular_arithmetic%b
-D s-atopri.ads		20240908170924 e19c1d89 system.atomic_primitives%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-atoope.ads		20240925092334 c7637a25 system.atomic_operations%s
+D s-atopex.ads		20240925092334 997451f6 system.atomic_operations.exchange%s
+D s-atopex.adb		20240925092334 f2dd6756 system.atomic_operations.exchange%b
+D s-aomoar.ads		20240925092334 e7b635ba system.atomic_operations.modular_arithmetic%s
+D s-aomoar.adb		20240925092334 a58f22be system.atomic_operations.modular_arithmetic%b
+D s-atopri.ads		20240925092334 e19c1d89 system.atomic_primitives%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [modular_arithmetic system__atomic_operations 38 34 none]
 X 3 interfac.ads

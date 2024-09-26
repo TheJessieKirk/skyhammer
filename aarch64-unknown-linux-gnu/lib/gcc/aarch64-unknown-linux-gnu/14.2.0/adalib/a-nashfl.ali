@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -20,15 +20,15 @@ W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.aux_float%s  a-nuaufl.ads	a-nuaufl.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
-D a-nuaufl.ads		20240908170924 020cac40 ada.numerics.aux_float%s
-D a-naliop.ads		20240908170924 6b421e5f ada.numerics.aux_linker_options%s
-D a-nashfl.ads		20240908170924 b54ed4fb ada.numerics.aux_short_float%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
+D a-nuaufl.ads		20240925092334 020cac40 ada.numerics.aux_float%s
+D a-naliop.ads		20240925092334 6b421e5f ada.numerics.aux_linker_options%s
+D a-nashfl.ads		20240925092334 b54ed4fb ada.numerics.aux_short_float%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s s [sin ada__numerics__aux_short_float 48 13 none]
 G c Z s s [cos ada__numerics__aux_short_float 51 13 none]

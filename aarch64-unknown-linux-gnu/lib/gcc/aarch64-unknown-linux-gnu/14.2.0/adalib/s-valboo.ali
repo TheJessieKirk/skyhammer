@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -22,12 +22,12 @@ W system.val_util%s	s-valuti.adb		s-valuti.ali
 U system.val_bool%s	s-valboo.ads		d8e8c714 NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-casuti.ads		20240908170924 cf13d755 system.case_util%s
-D s-valboo.ads		20240908170924 b8aae055 system.val_bool%s
-D s-valboo.adb		20240908170924 91981400 system.val_bool%b
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-valuti.ads		20240908170924 d396a33d system.val_util%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-casuti.ads		20240925092334 cf13d755 system.case_util%s
+D s-valboo.ads		20240925092335 b8aae055 system.val_bool%s
+D s-valboo.adb		20240925092335 91981400 system.val_bool%b
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-valuti.ads		20240925092335 d396a33d system.val_util%s
 G a e
 G c Z s b [value_boolean system__val_bool 50 13 none]
 X 1 system.ads

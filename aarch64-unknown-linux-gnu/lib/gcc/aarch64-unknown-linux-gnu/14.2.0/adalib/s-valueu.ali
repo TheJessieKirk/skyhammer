@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -32,15 +32,15 @@ N A558:10 gnatprove intentional "call to nonreturning subprogram might be execut
 U system.value_u%s	s-valueu.ads		4ae98e42 BN NE OL PR PK GE
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-casuti.ads		20240908170924 cf13d755 system.case_util%s
-D s-spark.ads		20240908170924 53f1c39d system.spark%s
-D s-spcuop.ads		20240908170924 316dcc2a system.spark.cut_operations%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-valuti.ads		20240908170924 d396a33d system.val_util%s
-D s-valueu.ads		20240908170924 a38d32a6 system.value_u%s
-D s-valueu.adb		20240908170924 20fec113 system.value_u%b
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-casuti.ads		20240925092334 cf13d755 system.case_util%s
+D s-spark.ads		20240925092334 53f1c39d system.spark%s
+D s-spcuop.ads		20240925092334 316dcc2a system.spark.cut_operations%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-valuti.ads		20240925092335 d396a33d system.val_util%s
+D s-valueu.ads		20240925092335 a38d32a6 system.value_u%s
+D s-valueu.adb		20240925092335 20fec113 system.value_u%b
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
 G a e
 G c Z s b [value_u system 58 16 none]
 X 1 system.ads

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -33,17 +33,17 @@ U system.val_util%s	s-valuti.ads		7cc75329 NE OL PU PK
 W system%s		system.ads		system.ali
 W system.case_util%s	s-casuti.adb		s-casuti.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-casuti.ads		20240908170924 cf13d755 system.case_util%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-valuti.ads		20240908170924 d396a33d system.val_util%s
-D s-valuti.adb		20240908170924 07292549 system.val_util%b
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-casuti.ads		20240925092334 cf13d755 system.case_util%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-valuti.ads		20240925092335 d396a33d system.val_util%s
+D s-valuti.adb		20240925092335 07292549 system.val_util%b
 G a e
 G c Z s b [bad_value system__val_util 55 14 none]
 G c Z s b [normalize_string system__val_util 62 14 none]

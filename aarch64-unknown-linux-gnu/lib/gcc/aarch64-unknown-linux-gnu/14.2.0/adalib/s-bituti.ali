@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,10 +23,10 @@ W system.storage_elements%s  s-stoele.ads	s-stoele.ali
 U system.bitfield_utils%s  s-bituti.ads		a9c24bfc BN EB NE OL PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-bituti.ads		20240908170924 797cbcce system.bitfield_utils%s
-D s-bituti.adb		20240908170924 3bdb0ca6 system.bitfield_utils%b
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-bituti.ads		20240925092334 797cbcce system.bitfield_utils%s
+D s-bituti.adb		20240925092334 3bdb0ca6 system.bitfield_utils%b
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 X 1 system.ads
 37K9*System 156e11 2|32r9 146r5 3|32r6 32r35 34r14 442r5

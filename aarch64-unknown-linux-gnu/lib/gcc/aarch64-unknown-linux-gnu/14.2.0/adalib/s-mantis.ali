@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -21,9 +21,9 @@ W system%s		system.ads		system.ali
 U system.mantissa%s	s-mantis.ads		fa509467 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-mantis.ads		20240908170924 2aee6355 system.mantissa%s
-D s-mantis.adb		20240908170924 210b0200 system.mantissa%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-mantis.ads		20240925092334 2aee6355 system.mantissa%s
+D s-mantis.adb		20240925092334 210b0200 system.mantissa%b
 G a e
 G c Z s b [mantissa_value system__mantissa 38 13 none]
 X 1 system.ads

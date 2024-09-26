@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -18,8 +18,8 @@ RV NO_FLOATING_POINT
 U system.powten_lflt%s	s-powlfl.ads		7cb6a5fa NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-powlfl.ads		20240908170924 ac0852c8 system.powten_lflt%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-powlfl.ads		20240925092334 ac0852c8 system.powten_lflt%s
 G a e
 X 1 system.ads
 37K9*System 156e11 2|34r9 148r5

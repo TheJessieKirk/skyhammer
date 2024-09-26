@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,20 +23,20 @@ W system.image_d%s
 Z system.img_lli%s	s-imglli.ads		s-imglli.ali
 Z system.img_util%s	s-imguti.adb		s-imguti.ali
 
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-imaged.ads		20240908170924 13371993 system.image_d%s
-D s-imaged.adb		20240908170924 613cc81d system.image_d%b
-D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
-D s-imde64.ads		20240908170924 893fdd50 system.img_decimal_64%s
-D s-imglli.ads		20240908170924 d88f4f3b system.img_lli%s
-D s-imguti.ads		20240908170924 7719a4b9 system.img_util%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_lli.ads		20240908170924 b945cf7d system.vs_lli%s
-D s-vs_llu.ads		20240908170924 8f3536c5 system.vs_llu%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-imaged.ads		20240925092334 13371993 system.image_d%s
+D s-imaged.adb		20240925092334 613cc81d system.image_d%b
+D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
+D s-imde64.ads		20240925092334 893fdd50 system.img_decimal_64%s
+D s-imglli.ads		20240925092334 d88f4f3b system.img_lli%s
+D s-imguti.ads		20240925092334 7719a4b9 system.img_util%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_lli.ads		20240925092335 b945cf7d system.vs_lli%s
+D s-vs_llu.ads		20240925092335 8f3536c5 system.vs_llu%s
 G a e
 G c Z s s [image_decimal system__img_decimal_64__impl 42 14 43_4]
 G c Z s s [set_image_decimal system__img_decimal_64__impl 54 14 43_4]

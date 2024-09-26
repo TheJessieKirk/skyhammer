@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -25,16 +25,16 @@ Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 U ada.wide_characters.handling%s  a-wichha.ads	a54102b7 BN NE OL PU PK
 W ada.wide_characters%s	a-widcha.ads		a-widcha.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-widcha.ads		20240908170924 a2b85d3d ada.wide_characters%s
-D a-wichha.ads		20240908170924 07f95f8a ada.wide_characters.handling%s
-D a-wichha.adb		20240908170924 c5e42659 ada.wide_characters.handling%b
-D a-wichun.ads		20240908170924 de294b78 ada.wide_characters.unicode%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-utf_32.ads		20240908170924 8461d1bf system.utf_32%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-widcha.ads		20240925092334 a2b85d3d ada.wide_characters%s
+D a-wichha.ads		20240925092334 07f95f8a ada.wide_characters.handling%s
+D a-wichha.adb		20240925092334 c5e42659 ada.wide_characters.handling%b
+D a-wichun.ads		20240925092334 de294b78 ada.wide_characters.unicode%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-utf_32.ads		20240925092335 8461d1bf system.utf_32%s
 G a e
 G c Z s b [character_set_version ada__wide_characters__handling 19 13 none]
 G c Z s b [is_control ada__wide_characters__handling 25 13 none]

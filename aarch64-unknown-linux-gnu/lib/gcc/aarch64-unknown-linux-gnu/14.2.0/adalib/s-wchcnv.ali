@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -26,12 +26,12 @@ U system.wch_cnv%s	s-wchcnv.ads		0f7d1e21 BN NE OL PU PK
 W system%s		system.ads		system.ali
 W system.wch_con%s	s-wchcon.adb		s-wchcon.ali
 
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-wchcnv.ads		20240908170924 06c0ca70 system.wch_cnv%s
-D s-wchcnv.adb		20240908170924 5870a60e system.wch_cnv%b
-D s-wchcon.ads		20240908170924 d9032363 system.wch_con%s
-D s-wchjis.ads		20240908170924 6a748b39 system.wch_jis%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-wchcnv.ads		20240925092335 06c0ca70 system.wch_cnv%s
+D s-wchcnv.adb		20240925092335 5870a60e system.wch_cnv%b
+D s-wchcon.ads		20240925092335 d9032363 system.wch_con%s
+D s-wchjis.ads		20240925092335 6a748b39 system.wch_jis%s
 G a e
 G c Z s s [utf_32_stringIP system__wch_cnv 55 9 none]
 X 1 interfac.ads

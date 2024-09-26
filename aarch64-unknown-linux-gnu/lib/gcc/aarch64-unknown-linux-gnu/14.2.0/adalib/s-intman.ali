@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -27,21 +27,21 @@ W interfaces.c%s	i-c.adb			i-c.ali
 W system%s		system.ads		system.ali
 W system.os_interface%s	s-osinte.adb		s-osinte.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-intman.ads		20240908170924 aa1eb6b4 system.interrupt_management%s
-D s-intman.adb		20240908170924 7a68935d system.interrupt_management%b
-D s-linux.ads		20240908170924 34850a8c system.linux%s
-D s-oscons.ads		20240911234004 b7943734 system.os_constants%s
-D s-osinte.ads		20240908170924 e4f53740 system.os_interface%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-taspri.ads		20240908170924 4ec891e7 system.task_primitives%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-intman.ads		20240925092334 aa1eb6b4 system.interrupt_management%s
+D s-intman.adb		20240925092334 7a68935d system.interrupt_management%b
+D s-linux.ads		20240925092334 34850a8c system.linux%s
+D s-oscons.ads		20240926090546 b7943734 system.os_constants%s
+D s-osinte.ads		20240925092334 e4f53740 system.os_interface%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-taspri.ads		20240925092334 4ec891e7 system.task_primitives%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s s [Tinterrupt_setBIP system__interrupt_management 58 4 none]
 G c Z s b [initialize system__interrupt_management 92 14 none]

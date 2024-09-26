@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -53,44 +53,44 @@ Z system.put_images%s	s-putima.adb		s-putima.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-stream.ads		20240908170924 119b8fb3 ada.streams%s
-D a-string.ads		20240908170924 90ac6797 ada.strings%s
-D a-sttebu.ads		20240908170924 f1ad67a2 ada.strings.text_buffers%s
-D a-stuten.ads		20240908170924 c6ced0ae ada.strings.utf_encoding%s
-D a-tags.ads		20240908170924 9eaa38c6 ada.tags%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-os_lib.ads		20240908170924 0db74523 gnat.os_lib%s
-D g-sercom.ads		20240908170924 55997d9d gnat.serial_communications%s
-D g-sercom.adb		20240908170924 18d86d7e gnat.serial_communications%b
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-commun.ads		20240908170924 06400110 system.communication%s
-D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
-D s-imgint.ads		20240908170924 67e4edfb system.img_int%s
-D s-oscons.ads		20240911234004 b7943734 system.os_constants%s
-D s-os_lib.ads		20240908170924 a2467c22 system.os_lib%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-putima.ads		20240908170924 17291fe4 system.put_images%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240908170924 df77073e system.soft_links%s
-D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-string.ads		20240908170924 582aac7d system.strings%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_int.ads		20240908170924 06b6b724 system.vs_int%s
-D s-vs_uns.ads		20240908170924 e7f47a27 system.vs_uns%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-stream.ads		20240925092334 119b8fb3 ada.streams%s
+D a-string.ads		20240925092334 90ac6797 ada.strings%s
+D a-sttebu.ads		20240925092334 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20240925092334 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20240925092334 9eaa38c6 ada.tags%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240925092334 c3a8ac65 ada.unchecked_deallocation%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-os_lib.ads		20240925092334 0db74523 gnat.os_lib%s
+D g-sercom.ads		20240925092334 55997d9d gnat.serial_communications%s
+D g-sercom.adb		20240925092334 18d86d7e gnat.serial_communications%b
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-commun.ads		20240925092334 06400110 system.communication%s
+D s-crtl.ads		20240925092334 beb39b9e system.crtl%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
+D s-imgint.ads		20240925092334 67e4edfb system.img_int%s
+D s-oscons.ads		20240926090546 b7943734 system.os_constants%s
+D s-os_lib.ads		20240925092334 a2467c22 system.os_lib%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-putima.ads		20240925092334 17291fe4 system.put_images%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240925092334 df77073e system.soft_links%s
+D s-stache.ads		20240925092334 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-string.ads		20240925092334 582aac7d system.strings%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_int.ads		20240925092335 06b6b724 system.vs_int%s
+D s-vs_uns.ads		20240925092335 e7f47a27 system.vs_uns%s
 G a e
 G c Z s b [name gnat__serial_communications 96 13 none]
 G c Z s b [open gnat__serial_communications 132 14 none]

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -23,17 +23,17 @@ W system.atomic_primitives%s  s-atopri.adb	s-atopri.ali
 U system.atomic_counters%s  s-atocou.ads	0ca618f1 BN NE OL PR PU PK
 W system%s		system.ads		system.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D i-c.ads		20240908170924 aac316ce interfaces.c%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-atocou.ads		20240908170924 dc18efc3 system.atomic_counters%s
-D s-atocou.adb		20240908170924 6fe685de system.atomic_counters%b
-D s-atopri.ads		20240908170924 e19c1d89 system.atomic_primitives%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D i-c.ads		20240925092334 aac316ce interfaces.c%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-atocou.ads		20240925092334 dc18efc3 system.atomic_counters%s
+D s-atocou.adb		20240925092334 6fe685de system.atomic_counters%b
+D s-atopri.ads		20240925092334 e19c1d89 system.atomic_primitives%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [increment system__atomic_counters 59 14 none]
 G c Z s b [decrement system__atomic_counters 63 13 none]

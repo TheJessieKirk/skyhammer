@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -22,10 +22,10 @@ W system.img_util%s	s-imguti.adb		s-imguti.ali
 U system.image_d%s	s-imaged.ads		c389eea1 BN NE OL PK GE
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-imaged.ads		20240908170924 13371993 system.image_d%s
-D s-imaged.adb		20240908170924 613cc81d system.image_d%b
-D s-imguti.ads		20240908170924 7719a4b9 system.img_util%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-imaged.ads		20240925092334 13371993 system.image_d%s
+D s-imaged.adb		20240925092334 613cc81d system.image_d%b
+D s-imguti.ads		20240925092334 7719a4b9 system.img_util%s
 G a e
 G c Z s b [image_d system 40 16 none]
 X 1 system.ads

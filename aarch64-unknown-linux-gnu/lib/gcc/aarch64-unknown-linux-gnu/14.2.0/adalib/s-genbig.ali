@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -28,13 +28,13 @@ W interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 W system.shared_bignums%s  s-shabig.ads		s-shabig.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-genbig.ads		20240908170924 78505182 system.generic_bignums%s
-D s-genbig.adb		20240908170924 6786d924 system.generic_bignums%b
-D s-shabig.ads		20240908170924 5417e075 system.shared_bignums%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-genbig.ads		20240925092334 78505182 system.generic_bignums%s
+D s-genbig.adb		20240925092334 6786d924 system.generic_bignums%b
+D s-shabig.ads		20240925092334 5417e075 system.shared_bignums%s
 G a e
 G c Z s b [generic_bignums system 53 16 none]
 X 3 interfac.ads

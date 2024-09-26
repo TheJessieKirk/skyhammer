@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -29,22 +29,22 @@ N A106:4 codepeer modified <expr>
 U ada.calendar.delays%s	a-caldel.ads		8aaaec5e EE NE OL PK
 W ada.calendar%s	a-calend.adb		a-calend.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-calend.ads		20240908170924 158a5463 ada.calendar%s
-D a-caldel.ads		20240908170924 9f20b83d ada.calendar.delays%s
-D a-caldel.adb		20240908170924 c046c9cd ada.calendar.delays%b
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-osprim.ads		20240908170924 07fd65f6 system.os_primitives%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-soflin.ads		20240908170924 df77073e system.soft_links%s
-D s-stache.ads		20240908170924 0b81c1fe system.stack_checking%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-calend.ads		20240925092334 158a5463 ada.calendar%s
+D a-caldel.ads		20240925092334 9f20b83d ada.calendar.delays%s
+D a-caldel.adb		20240925092334 c046c9cd ada.calendar.delays%b
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-osprim.ads		20240925092334 07fd65f6 system.os_primitives%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240925092334 df77073e system.soft_links%s
+D s-stache.ads		20240925092334 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s b [delay_for ada__calendar__delays 39 14 none]
 G c Z s b [delay_until ada__calendar__delays 45 14 none]

@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -26,24 +26,24 @@ W system%s		system.ads		system.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 W system.width_u%s
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-assert.ads		20240908170924 ba465f5c ada.assertions%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-numeri.ads		20240908170924 84bea7a3 ada.numerics%s
-D a-nubinu.ads		20240908170924 93f1f3d1 ada.numerics.big_numbers%s
-D a-nbnbig.ads		20240908170924 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
-D a-nbnbig.adb		20240908170924 e7f9abf0 ada.numerics.big_numbers.big_integers_ghost%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-assert.ads		20240908170924 9c4520c7 system.assertions%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-widllu.ads		20240908170924 a6620b19 system.wid_llu%s
-D s-widthu.ads		20240908170924 b32f15e2 system.width_u%s
-D s-widthu.adb		20240908170924 6d87d7d1 system.width_u%b
+D ada.ads		20240925092334 76789da1 ada%s
+D a-assert.ads		20240925092334 ba465f5c ada.assertions%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20240925092334 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20240925092334 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
+D a-nbnbig.adb		20240925092334 e7f9abf0 ada.numerics.big_numbers.big_integers_ghost%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-assert.ads		20240925092334 9c4520c7 system.assertions%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-widllu.ads		20240925092335 a6620b19 system.wid_llu%s
+D s-widthu.ads		20240925092335 b32f15e2 system.width_u%s
+D s-widthu.adb		20240925092335 6d87d7d1 system.width_u%b
 G a e
 G c Z s s [to_big_integer system__wid_llu__width_uns__unsigned_conversion 123 16 62_4_53_4]
 G c Z s s [from_big_integer system__wid_llu__width_uns__unsigned_conversion 127 16 62_4_53_4]

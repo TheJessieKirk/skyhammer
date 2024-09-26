@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -37,23 +37,23 @@ W system%s		system.ads		system.ali
 W system.address_to_access_conversions%s
 W system.storage_elements%s  s-stoele.ads	s-stoele.ali
 
-D interfac.ads		20240908170924 9111f9c1 interfaces%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-atacco.ads		20240908170924 5868e3ba system.address_to_access_conversions%s
-D s-crtl.ads		20240908170924 beb39b9e system.crtl%s
-D s-imagei.ads		20240908170924 5e131ce0 system.image_i%s
-D s-imgint.ads		20240908170924 67e4edfb system.img_int%s
-D s-io.ads		20240908170924 9e42f74f system.io%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stausa.ads		20240908170924 5be75682 system.stack_usage%s
-D s-stausa.adb		20240908170924 7ee70cf2 system.stack_usage%b
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
-D s-valspe.ads		20240908170924 b0fcd073 system.val_spec%s
-D s-vaispe.ads		20240908170924 8280550e system.value_i_spec%s
-D s-vauspe.ads		20240908170924 89269ba5 system.value_u_spec%s
-D s-vs_int.ads		20240908170924 06b6b724 system.vs_int%s
-D s-vs_uns.ads		20240908170924 e7f47a27 system.vs_uns%s
+D interfac.ads		20240925092334 9111f9c1 interfaces%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-atacco.ads		20240925092334 5868e3ba system.address_to_access_conversions%s
+D s-crtl.ads		20240925092334 beb39b9e system.crtl%s
+D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
+D s-imgint.ads		20240925092334 67e4edfb system.img_int%s
+D s-io.ads		20240925092334 9e42f74f system.io%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stausa.ads		20240925092334 5be75682 system.stack_usage%s
+D s-stausa.adb		20240925092334 7ee70cf2 system.stack_usage%b
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20240925092335 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20240925092335 8280550e system.value_i_spec%s
+D s-vauspe.ads		20240925092335 89269ba5 system.value_u_spec%s
+D s-vs_int.ads		20240925092335 06b6b724 system.vs_int%s
+D s-vs_uns.ads		20240925092335 e7f47a27 system.vs_uns%s
 G a e
 G c Z s b [initialize system__stack_usage 207 14 none]
 G c Z s b [fill_stack system__stack_usage 213 14 none]

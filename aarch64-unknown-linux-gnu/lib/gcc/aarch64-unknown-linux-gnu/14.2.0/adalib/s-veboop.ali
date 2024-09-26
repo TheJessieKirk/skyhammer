@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -25,10 +25,10 @@ W system.vectors%s	s-vector.ads		s-vector.ali
 U system.vectors.boolean_operations%s  s-veboop.ads  8cf7e456 BN NE OL PU PK
 W system.vectors%s	s-vector.ads		s-vector.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-vector.ads		20240908170924 7dc5afb0 system.vectors%s
-D s-veboop.ads		20240908170924 f1324be6 system.vectors.boolean_operations%s
-D s-veboop.adb		20240908170924 dbfc7314 system.vectors.boolean_operations%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-vector.ads		20240925092335 7dc5afb0 system.vectors%s
+D s-veboop.ads		20240925092335 f1324be6 system.vectors.boolean_operations%s
+D s-veboop.adb		20240925092335 dbfc7314 system.vectors.boolean_operations%b
 G a e
 G c Z s s [shift_right system__vectors__boolean_operations 67 13 none]
 G c Z s s [element system__vectors__boolean_operations 70 13 none]

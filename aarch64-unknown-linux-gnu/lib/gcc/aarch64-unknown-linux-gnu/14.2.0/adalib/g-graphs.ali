@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -34,21 +34,21 @@ W gnat.dynamic_htables%s  g-dynhta.adb		g-dynhta.ali
 W gnat.lists%s		g-lists.adb		g-lists.ali
 W gnat.sets%s		g-sets.adb		g-sets.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D a-uncdea.ads		20240908170924 c3a8ac65 ada.unchecked_deallocation%s
-D gnat.ads		20240908170924 b5988c27 gnat%s
-D g-dynhta.ads		20240908170924 968f1a08 gnat.dynamic_htables%s
-D g-dynhta.adb		20240908170924 7317e45d gnat.dynamic_htables%b
-D g-graphs.ads		20240908170924 c15a3f84 gnat.graphs%s
-D g-graphs.adb		20240908170924 1af1a4c4 gnat.graphs%b
-D g-lists.ads		20240908170924 f80d4d06 gnat.lists%s
-D g-lists.adb		20240908170924 7b154114 gnat.lists%b
-D g-sets.ads		20240908170924 d1147461 gnat.sets%s
-D g-sets.adb		20240908170924 bee99687 gnat.sets%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20240925092334 c3a8ac65 ada.unchecked_deallocation%s
+D gnat.ads		20240925092334 b5988c27 gnat%s
+D g-dynhta.ads		20240925092334 968f1a08 gnat.dynamic_htables%s
+D g-dynhta.adb		20240925092334 7317e45d gnat.dynamic_htables%b
+D g-graphs.ads		20240925092334 c15a3f84 gnat.graphs%s
+D g-graphs.adb		20240925092334 1af1a4c4 gnat.graphs%b
+D g-lists.ads		20240925092334 f80d4d06 gnat.lists%s
+D g-lists.adb		20240925092334 7b154114 gnat.lists%b
+D g-sets.ads		20240925092334 d1147461 gnat.sets%s
+D g-sets.adb		20240925092334 bee99687 gnat.sets%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [hash_component gnat__graphs 51 13 none]
 G c Z s b [present gnat__graphs 54 13 none]

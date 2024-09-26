@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -27,11 +27,11 @@ W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 U system.pack_123%s	s-pack123.ads		672e6cd5 BN NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-pack123.ads		20240908170924 b7909be7 system.pack_123%s
-D s-pack123.adb		20240908170924 932e4ccb system.pack_123%b
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-pack123.ads		20240925092334 b7909be7 system.pack_123%s
+D s-pack123.adb		20240925092334 932e4ccb system.pack_123%b
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s b [get_123 system__pack_123 45 13 none]
 G c Z s b [set_123 system__pack_123 52 14 none]

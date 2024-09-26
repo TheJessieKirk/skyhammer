@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -25,14 +25,14 @@ Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 U ada.command_line.environment%s  a-colien.ads	c518a452 NE OL PK
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-comlin.ads		20240908170924 4aa66568 ada.command_line%s
-D a-colien.ads		20240908170924 8fbec13a ada.command_line.environment%s
-D a-colien.adb		20240908170924 6a077b8b ada.command_line.environment%b
-D system.ads		20240908170924 d0bef732 system%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-comlin.ads		20240925092334 4aa66568 ada.command_line%s
+D a-colien.ads		20240925092334 8fbec13a ada.command_line.environment%s
+D a-colien.adb		20240925092334 6a077b8b ada.command_line.environment%b
+D system.ads		20240925092335 d0bef732 system%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [environment_count ada__command_line__environment 40 13 none]
 G c Z s b [environment_value ada__command_line__environment 46 13 none]

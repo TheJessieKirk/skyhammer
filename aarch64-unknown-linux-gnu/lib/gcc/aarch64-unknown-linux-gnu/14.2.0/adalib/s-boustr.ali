@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -24,12 +24,12 @@ W system.storage_elements%s  s-stoele.ads	s-stoele.ali
 U system.bounded_strings%s  s-boustr.ads	a743d62b NE OL PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240908170924 d0bef732 system%s
-D s-boustr.ads		20240908170924 77fd2119 system.bounded_strings%s
-D s-boustr.adb		20240908170924 b25b8d9c system.bounded_strings%b
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-secsta.ads		20240908170924 578279f5 system.secondary_stack%s
-D s-stoele.ads		20240908170924 ccded4e8 system.storage_elements%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-boustr.ads		20240925092334 77fd2119 system.bounded_strings%s
+D s-boustr.adb		20240925092334 b25b8d9c system.bounded_strings%b
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s
+D s-stoele.ads		20240925092334 ccded4e8 system.storage_elements%s
 G a e
 G c Z s b [append system__bounded_strings 39 14 none]
 G c Z s b [append system__bounded_strings 40 14 none]

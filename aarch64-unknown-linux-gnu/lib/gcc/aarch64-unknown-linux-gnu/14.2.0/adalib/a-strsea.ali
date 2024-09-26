@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -39,21 +39,21 @@ W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.maps%s	a-strmap.adb		a-strmap.ali
 N A79:4 gnatprove false_positive "call via access-to-subprogram" "function Mapping must always terminate"
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-charac.ads		20240908170924 2d3ec45b ada.characters%s
-D a-chlat1.ads		20240908170924 e0d72e76 ada.characters.latin_1%s
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-string.ads		20240908170924 90ac6797 ada.strings%s
-D a-strmap.ads		20240908170924 1f91ebb6 ada.strings.maps%s
-D a-strsea.ads		20240908170924 2b7aab86 ada.strings.search%s
-D a-strsea.adb		20240908170924 db9bb969 ada.strings.search%b
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
-D s-unstyp.ads		20240908170924 fa2a7f59 system.unsigned_types%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-charac.ads		20240925092334 2d3ec45b ada.characters%s
+D a-chlat1.ads		20240925092334 e0d72e76 ada.characters.latin_1%s
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-string.ads		20240925092334 90ac6797 ada.strings%s
+D a-strmap.ads		20240925092334 1f91ebb6 ada.strings.maps%s
+D a-strsea.ads		20240925092334 2b7aab86 ada.strings.search%s
+D a-strsea.adb		20240925092334 db9bb969 ada.strings.search%b
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240925092334 fa2a7f59 system.unsigned_types%s
 G a e
 G c Z s s [match ada__strings__search 64 13 none]
 G c Z s s [match ada__strings__search 83 13 none]

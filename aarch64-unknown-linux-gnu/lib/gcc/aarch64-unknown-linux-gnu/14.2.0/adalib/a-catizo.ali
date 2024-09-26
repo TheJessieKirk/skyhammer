@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
+A -fchecking=1
 A -g
 A -gnatp
 A -gnatg
@@ -27,17 +27,17 @@ Z system%s		system.ads		system.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20240908170924 76789da1 ada%s
-D a-calend.ads		20240908170924 158a5463 ada.calendar%s
-D a-catizo.ads		20240908170924 eaa56756 ada.calendar.time_zones%s
-D a-catizo.adb		20240908170924 7de8e3c8 ada.calendar.time_zones%b
-D a-except.ads		20240908170924 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240908170924 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240908170924 d0bef732 system%s
-D s-exctab.ads		20240908170924 91bef6ef system.exception_table%s
-D s-parame.ads		20240908170924 3597fc11 system.parameters%s
-D s-stalib.ads		20240908170924 1c9580f6 system.standard_library%s
-D s-traent.ads		20240908170924 c81cbf8c system.traceback_entries%s
+D ada.ads		20240925092334 76789da1 ada%s
+D a-calend.ads		20240925092334 158a5463 ada.calendar%s
+D a-catizo.ads		20240925092334 eaa56756 ada.calendar.time_zones%s
+D a-catizo.adb		20240925092334 7de8e3c8 ada.calendar.time_zones%b
+D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240925092335 d0bef732 system%s
+D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
+D s-parame.ads		20240925092334 3597fc11 system.parameters%s
+D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
 G a e
 G c Z s b [local_time_offset ada__calendar__time_zones 28 13 none]
 X 1 ada.ads
