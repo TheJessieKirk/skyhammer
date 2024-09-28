@@ -5,7 +5,7 @@ SYS_ROOT=/opt/skyhammer;
 
 export PATH=$SYS_ROOT/$ARCH/bin:$PATH;
 
-STUFF_TO_BUILD=(binutils gcc);
+STUFF_TO_BUILD=(perl make automake autoconf m4 flex bison bash gmp isl mpfr mpc dmalloc binutils gcc);
 
 echo "Skyhammer";
 echo "Eating my own dogfood...";
@@ -24,13 +24,37 @@ fi;
 for i in ${STUFF_TO_BUILD[@]}; do
     while true; do
         cd $SYS_ROOT/tmp/builds;
+        configureOptions="";
+        configureCFlags="";
         read -p "Do you want to configure $i? [y/n]: " answer;
         case $i in
+            autoconf | automake | bison | dmalloc | m4 | make )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
+                ;;
+            bash )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
+                configureCFlags="-Wno-implicit-function-declaration";
+                ;;
             binutils )
-                configureOptions="--enable-shared --enable-static";
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                ;;
+            flex | gmp )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
                 ;;
             gcc )
-                configureOptions="--enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust --enable-shared --enable-static";
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                ;;
+            isl )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
+                ;;
+            mpc )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                ;;
+            mpfr )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
+                ;;
+            perl )
+                configureOptions="-des -Dprefix=$SYS_ROOT/$ARCH -Dcc=gcc -Dmksymlinks";
                 ;;
         esac;
         case $answer in
@@ -43,7 +67,14 @@ for i in ${STUFF_TO_BUILD[@]}; do
                     yes | rm -r $i/*;
                 fi;
                 cd $i;
-                ../../../src/$i*/configure --build=$ARCH --prefix=$SYS_ROOT/$ARCH $configureOptions;
+                case $i in
+                    perl )
+                        ../../../src/$i*/Configure $configureOptions CFLAGS=$configureCFlags;
+                        ;;
+                    * )
+                        ../../../src/$i*/configure $configureOptions CFLAGS=$configureCFlags;
+                        ;;
+                esac;
                 break;
                 ;;
             n )
@@ -60,11 +91,21 @@ for i in ${STUFF_TO_BUILD[@]}; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
+        makeCFlags="";
         read -p "Do you want to make $i? [y/n]: " answer;
+        case $i in
+            bash )
+                makeCFlags="-Wimplicit-function-declaration";
+                ;;
+        esac;
         case $answer in
             y )
                 echo "Skyhammer is making $i...";
-                make -j4;
+                if [ $i = bash ]; then
+                    make CLAGS=$makeCFlags;
+                else
+                    make -j4 CFLAGS=$makeCFlags;
+                fi;
                 break;
                 ;;
             n )
@@ -81,11 +122,15 @@ for i in ${STUFF_TO_BUILD[@]}; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
-        read -p "Do you want to install $i? [y/n]: " answer;
+        read -p "Do you want to test $i? [y/n]: " answer;
         case $answer in
             y )
-                echo "Skyhammer is install $i...";
-                make install -j4;
+                echo "Skyhammer is testing $i...";
+                if [ $i == perl ]; then
+                    make test -j4;
+                else
+                    make check -j4;
+                fi;
                 break;
                 ;;
             n )
@@ -101,6 +146,36 @@ for i in ${STUFF_TO_BUILD[@]}; do
         esac;
     done;
     while true; do
+	cd $SYS_ROOT/tmp/builds/$i;
+        installCFlags="";
+        read -p "Do you want to install $i? [y/n]: " answer;
+        case $i in
+            bash )
+                installCFlags="-Wimplicit-function-declaration";
+                ;;
+        esac;
+        case $answer in
+            y )
+                echo "Skyhammer is install $i...";
+                make install -j4 CFLAGS=$installCFlags;
+                break;
+                ;;
+            n )
+                break;
+                ;;
+            stop )
+                echo "Skyhammer is stopping...";
+                exit;
+                ;;
+            * )
+                echo "Please answer 'y' or 'n'.";
+                ;;
+        esac;
+    done;
+    while true; do
+        if [ $i == autoconf ] || [ $i == automake ] || [ $i == gmp ] || [ $i == isl ] || [ $i == mpc ] || [ $i == mpfr ]; then
+            break;
+        fi;
 	cd $SYS_ROOT/$ARCH
         read -p "Do you want to clean $i? [y/n]: " answer;
         case $answer in
@@ -110,19 +185,13 @@ for i in ${STUFF_TO_BUILD[@]}; do
                 stuffToCleanInBin="";
                 stuffToCleanInLibExec="";
                 case $i in
-                    autoconf )
-                        stuffToCleanInBin=(aclocal aclocal-1.17 autoconf autoheader autom4te autoreconf autoheader autopoint);
-                        ;;
-                    automake )
-                        stuffToCleanInBin=(automake automake-1.17);
-                        ;;
                     binutils )
                         stuffToCleanInBin=(addr2line ar as c++filt elfedit gcov gcov-dump gcov-tool gp-archive gp-collect-app gp-display-src gp-display-text gprof gprofng ld ld.bfd lto-dump nm objcopy objdump ranlib readelf size strings);
                         stuffToCleanInArch=(ar as ld ld.bfd objcopy objdump ranlib readelf strip);
                         $ARCH/bin/strip bin/strip;
                         ;;
                     bison )
-                        stuffToCleanInBin=(bison yacc);
+                        stuffToCleanInBin=(bison);
                         ;;
                     flex )
                         stuffToCleanInBin=(flex);
@@ -136,6 +205,12 @@ for i in ${STUFF_TO_BUILD[@]}; do
                         ;;
                     m4 )
                         stuffToCleanInBin=(m4);
+                        ;;
+                    make )
+                        stuffToCleanInBin=(make);
+                        ;;
+                    perl )
+                        stuffToCleanInBin=(perl perl5.40.0);
                         ;;
                 esac;
                 for j in ${stuffToCleanInArch[@]}; do

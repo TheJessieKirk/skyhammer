@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fchecking=1
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -41,7 +41,7 @@ D s-atacco.ads		20240925092334 5868e3ba system.address_to_access_conversions%s
 D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
 D s-linux.ads		20240925092334 34850a8c system.linux%s
 D s-multip.ads		20240925092334 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240926090546 b7943734 system.os_constants%s
+D s-oscons.ads		20240928070757 b7943734 system.os_constants%s
 D s-osinte.ads		20240925092334 e4f53740 system.os_interface%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-secsta.ads		20240925092334 578279f5 system.secondary_stack%s

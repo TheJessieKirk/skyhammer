@@ -1,8 +1,8 @@
-#! /usr/bin/perl
+#! /opt/skyhammer/aarch64-unknown-linux-gnu/bin/perl
 # -*- Perl -*-
 # Generated from bin/autoconf.in; do not edit by hand.
 
-eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /opt/skyhammer/aarch64-unknown-linux-gnu/bin/perl -S "$0";; *) exec /opt/skyhammer/aarch64-unknown-linux-gnu/bin/perl -S "$0" "$@";; esac'
     if 0;
 
 # autoconf -- create 'configure' using m4 macros.

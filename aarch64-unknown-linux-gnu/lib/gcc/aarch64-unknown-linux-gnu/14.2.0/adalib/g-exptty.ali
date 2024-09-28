@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fchecking=1
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -80,7 +80,7 @@ D system.ads		20240925092335 d0bef732 system%s
 D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
 D s-finmas.ads		20240925092334 28987ac5 system.finalization_masters%s
 D s-finroo.ads		20240925092334 4ff27390 system.finalization_root%s
-D s-oscons.ads		20240926090546 b7943734 system.os_constants%s
+D s-oscons.ads		20240928070757 b7943734 system.os_constants%s
 D s-os_lib.ads		20240925092334 a2467c22 system.os_lib%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-pooglo.ads		20240925092334 91708d21 system.pool_global%s

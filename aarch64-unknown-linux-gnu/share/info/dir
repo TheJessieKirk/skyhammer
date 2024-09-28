@@ -14,6 +14,9 @@ File: dir,	Node: Top	This is the top of the INFO tree
 
 * Menu:
 
+Basics
+* Bash: (bash).                 The GNU Bourne-Again SHell.
+
 C++ libraries
 * autosprintf: (autosprintf).   Support for printf format strings in C++.
 
@@ -156,6 +159,7 @@ Software development
 * Gccgo: (gccgo).               A GCC-based compiler for the Go language
 * Ld: (ld).                     The GNU linker.
 * Ld-Internals: (ldint).        The GNU linker internals.
+* Make: (make).                 Remake files automatically.
 * SFrame: (sframe-spec).        The Simple Frame format.
 * bison: (bison).               GNU parser generator (Yacc replacement).
 * g++: (gcc).                   The GNU C++ compiler.
@@ -170,7 +174,7 @@ Software development
 * gdc: (gdc).                   A GCC-based compiler for the D language
 * gfortran: (gfortran).         The GNU Fortran Compiler.
 * gm2: (gm2).                   A GCC-based compiler for the Modula-2 language
-* gprof: (gprof).               Profiling your program’s execution
+* gprof: (gprof).               Profiling your program's execution
 * gprofng: (gprofng).           The next generation profiling tool for Linux
 * lto-dump: (gcc) lto-dump.     ‘lto-dump’--Tool for dumping LTO object 
                                   files.

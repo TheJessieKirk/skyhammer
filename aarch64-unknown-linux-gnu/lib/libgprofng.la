@@ -17,7 +17,7 @@ old_library='libgprofng.a'
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' '/opt/skyhammer/aarch64-unknown-linux-gnu/lib'/libopcodes.la -L/home/master_keyholder/skyhammer/tmp/builds/binutils/bfd/../libiberty/pic -L/home/master_keyholder/skyhammer/tmp/builds/binutils/zlib -L/home/master_keyholder/skyhammer/tmp/builds/binutils/opcodes/../libiberty/pic '/opt/skyhammer/aarch64-unknown-linux-gnu/lib'/libbfd.la -lz '/opt/skyhammer/aarch64-unknown-linux-gnu/lib'/libsframe.la -L/home/master_keyholder/skyhammer/tmp/builds/binutils/libiberty/pic -liberty -lpthread -ldl '/opt/skyhammer/aarch64-unknown-linux-gnu/lib/../lib64'/libstdc++.la'
+dependency_libs=' '/opt/skyhammer/aarch64-unknown-linux-gnu/lib'/libopcodes.la -L/opt/skyhammer/tmp/builds/binutils/bfd/../libiberty/pic -L/opt/skyhammer/tmp/builds/binutils/zlib -L/opt/skyhammer/tmp/builds/binutils/opcodes/../libiberty/pic '/opt/skyhammer/aarch64-unknown-linux-gnu/lib'/libbfd.la -lz '/opt/skyhammer/aarch64-unknown-linux-gnu/lib'/libsframe.la -L/opt/skyhammer/tmp/builds/binutils/libiberty/pic -liberty -lpthread -ldl '/opt/skyhammer/aarch64-unknown-linux-gnu/lib/../lib64'/libstdc++.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

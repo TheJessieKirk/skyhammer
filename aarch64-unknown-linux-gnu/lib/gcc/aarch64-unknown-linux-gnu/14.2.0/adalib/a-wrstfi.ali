@@ -5,7 +5,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fchecking=1
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg

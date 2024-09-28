@@ -4,7 +4,7 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fchecking=1
+A -fno-checking
 A -g
 A -gnatp
 A -gnatg
@@ -39,7 +39,7 @@ D s-intman.ads		20240925092334 aa1eb6b4 system.interrupt_management%s
 D s-inmaop.ads		20240925092334 5e0317cf system.interrupt_management.operations%s
 D s-inmaop.adb		20240925092334 c070270f system.interrupt_management.operations%b
 D s-linux.ads		20240925092334 34850a8c system.linux%s
-D s-oscons.ads		20240926090546 b7943734 system.os_constants%s
+D s-oscons.ads		20240928070757 b7943734 system.os_constants%s
 D s-osinte.ads		20240925092334 e4f53740 system.os_interface%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
