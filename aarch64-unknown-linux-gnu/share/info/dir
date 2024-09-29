@@ -20,6 +20,9 @@ Basics
 C++ libraries
 * autosprintf: (autosprintf).   Support for printf format strings in C++.
 
+Development
+* libffi: (libffi).             Portable foreign function interface library.
+
 GNU Ada Tools
 * gnat-style: (gnat-style.info).
                                 gnat-style
@@ -119,6 +122,10 @@ Individual utilities
 * elfedit: (binutils)elfedit.                   Update ELF header and property 
                                                   of ELF files.
 * ifnames: (autoconf)ifnames Invocation.        Listing conditionals in source.
+* libtool-invocation: (libtool)Invoking libtool.
+                                                Running the ‘libtool’ 
+                                                  script.
+* libtoolize: (libtool)Invoking libtoolize.     Adding libtool support.
 * nm: (binutils)nm.                             List symbols from object files.
 * objcopy: (binutils)objcopy.                   Copy and translate object 
                                                   files.
@@ -153,12 +160,14 @@ Software development
 * CTF: (ctf-spec).              The CTF file format.
 * Cpp: (cpp).                   The GNU C preprocessor.
 * Cpplib: (cppinternals).       Cpplib internals.
+* DejaGnu: (dejagnu).           The GNU testing framework.
 * GNU libtextstyle: (libtextstyle).
                                 Output of styled text.
 * Gas: (as).                    The GNU assembler.
 * Gccgo: (gccgo).               A GCC-based compiler for the Go language
 * Ld: (ld).                     The GNU linker.
 * Ld-Internals: (ldint).        The GNU linker internals.
+* Libtool: (libtool).           Generic shared library support script.
 * Make: (make).                 Remake files automatically.
 * SFrame: (sframe-spec).        The Simple Frame format.
 * bison: (bison).               GNU parser generator (Yacc replacement).

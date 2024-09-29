@@ -5,7 +5,6 @@ A -O0
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
 A -g
 A -gnatp
 A -gnatg

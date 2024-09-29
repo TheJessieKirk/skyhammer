@@ -4,7 +4,6 @@ A -O2
 A -Wextra
 A -Wall
 A -gnatwa
-A -fno-checking
 A -g
 A -gnatp
 A -gnatg

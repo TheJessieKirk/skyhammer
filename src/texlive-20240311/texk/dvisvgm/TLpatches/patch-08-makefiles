@@ -1,9 +1,0 @@
---- dvisvgm-3.2.2/./Makefile.am	2024-03-07 03:04:19.000000000 -0800
-+++ dvisvgm-src/./Makefile.am	2024-03-07 14:43:29.913090622 -0800
-@@ -4,5 +4,5 @@
- ## Process this file with automake.
- 
--include $(top_srcdir)/aminclude_static.am
-+include $(top_srcdir)/dvisvgm-src/aminclude_static.am
- 
- AUTOMAKE_OPTIONS = foreign

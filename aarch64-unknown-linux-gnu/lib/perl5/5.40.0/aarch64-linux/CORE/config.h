@@ -9,7 +9,7 @@
 
 /* Package name      : perl5
  * Source directory  : /opt/skyhammer/src/perl-5.40.0
- * Configuration time: Fri Sep 27 13:04:52 UTC 2024
+ * Configuration time: Sat Sep 28 14:21:58 UTC 2024
  * Configured by     : master_keyholder
  * Target system     : linux raspberry-pi-4-8g 6.8.0-1010-raspi #11-ubuntu smp preempt_dynamic thu aug 8 23:22:41 utc 2024 aarch64 aarch64 aarch64 gnulinux 
  */

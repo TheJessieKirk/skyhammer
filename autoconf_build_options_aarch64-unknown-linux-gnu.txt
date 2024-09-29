@@ -1,1 +1,0 @@
-../../../src/autoconf*/configure --build=aarch64-unknown-linux-gnu --prefix=/opt/skyhammer/aarch64-unknown-linux-gnu PATH=/opt/skyhammer/aarch64-unknown-linux-gnu/bin:$PATH

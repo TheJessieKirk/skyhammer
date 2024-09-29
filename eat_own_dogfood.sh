@@ -5,7 +5,7 @@ SYS_ROOT=/opt/skyhammer;
 
 export PATH=$SYS_ROOT/$ARCH/bin:$PATH;
 
-STUFF_TO_BUILD=(perl make automake autoconf m4 flex bison bash gmp isl mpfr mpc dmalloc binutils gcc);
+STUFF_TO_BUILD=(perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc);
 
 echo "Skyhammer";
 echo "Eating my own dogfood...";
@@ -28,7 +28,7 @@ for i in ${STUFF_TO_BUILD[@]}; do
         configureCFlags="";
         read -p "Do you want to configure $i? [y/n]: " answer;
         case $i in
-            autoconf | automake | bison | dmalloc | m4 | make )
+            autoconf | automake | bison | dejagnu | dmalloc | libffi | libtool | m4 | make )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
                 ;;
             bash )
@@ -38,7 +38,7 @@ for i in ${STUFF_TO_BUILD[@]}; do
             binutils )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
                 ;;
-            flex | gmp )
+            flex | gmp | ncurses )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
                 ;;
             gcc )
@@ -56,6 +56,12 @@ for i in ${STUFF_TO_BUILD[@]}; do
             perl )
                 configureOptions="-des -Dprefix=$SYS_ROOT/$ARCH -Dcc=gcc -Dmksymlinks";
                 ;;
+            python )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-optimizations --enable-shared";
+                ;;
+            zlib )
+                configureOptions="--prefix=$SYS_ROOT/$ARCH";
+                ;;
         esac;
         case $answer in
             y )
@@ -69,10 +75,13 @@ for i in ${STUFF_TO_BUILD[@]}; do
                 cd $i;
                 case $i in
                     perl )
-                        ../../../src/$i*/Configure $configureOptions CFLAGS=$configureCFlags;
+                        ../../../src/$i*/Configure $configureOptions CFLAGS="$configureCFlags";
+                        ;;
+                    zlib )
+                        ../../../src/$i*/configure $configureOptions;
                         ;;
                     * )
-                        ../../../src/$i*/configure $configureOptions CFLAGS=$configureCFlags;
+                        ../../../src/$i*/configure $configureOptions CFLAGS="$configureCFlags";
                         ;;
                 esac;
                 break;
@@ -93,18 +102,13 @@ for i in ${STUFF_TO_BUILD[@]}; do
 	cd $SYS_ROOT/tmp/builds/$i;
         makeCFlags="";
         read -p "Do you want to make $i? [y/n]: " answer;
-        case $i in
-            bash )
-                makeCFlags="-Wimplicit-function-declaration";
-                ;;
-        esac;
         case $answer in
             y )
                 echo "Skyhammer is making $i...";
                 if [ $i = bash ]; then
-                    make CLAGS=$makeCFlags;
+                    make CLAGS="$makeCFlags";
                 else
-                    make -j4 CFLAGS=$makeCFlags;
+                    make -j4 CFLAGS="$makeCFlags";
                 fi;
                 break;
                 ;;
@@ -122,6 +126,9 @@ for i in ${STUFF_TO_BUILD[@]}; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
+        if [ $i == python ]; then
+            break;
+        fi;
         read -p "Do you want to test $i? [y/n]: " answer;
         case $answer in
             y )
@@ -149,15 +156,10 @@ for i in ${STUFF_TO_BUILD[@]}; do
 	cd $SYS_ROOT/tmp/builds/$i;
         installCFlags="";
         read -p "Do you want to install $i? [y/n]: " answer;
-        case $i in
-            bash )
-                installCFlags="-Wimplicit-function-declaration";
-                ;;
-        esac;
         case $answer in
             y )
                 echo "Skyhammer is install $i...";
-                make install -j4 CFLAGS=$installCFlags;
+                make install -j4 CFLAGS="$installCFlags";
                 break;
                 ;;
             n )
@@ -173,7 +175,7 @@ for i in ${STUFF_TO_BUILD[@]}; do
         esac;
     done;
     while true; do
-        if [ $i == autoconf ] || [ $i == automake ] || [ $i == gmp ] || [ $i == isl ] || [ $i == mpc ] || [ $i == mpfr ]; then
+        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
             break;
         fi;
 	cd $SYS_ROOT/$ARCH
@@ -209,8 +211,14 @@ for i in ${STUFF_TO_BUILD[@]}; do
                     make )
                         stuffToCleanInBin=(make);
                         ;;
+                    ncurses )
+                        stuffToCleanInBin=(infocmp tic toe tput tset);
+                        ;;
                     perl )
                         stuffToCleanInBin=(perl perl5.40.0);
+                        ;;
+                    python )
+                        stuffToCleanInBin=(python3.12);
                         ;;
                 esac;
                 for j in ${stuffToCleanInArch[@]}; do

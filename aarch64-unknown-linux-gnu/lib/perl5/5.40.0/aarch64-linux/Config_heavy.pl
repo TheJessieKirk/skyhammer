@@ -75,7 +75,7 @@ sub header_files {
 #
 ## Package name      : perl5
 ## Source directory  : /opt/skyhammer/src/perl-5.40.0
-## Configuration time: Fri Sep 27 13:04:52 UTC 2024
+## Configuration time: Sat Sep 28 14:21:58 UTC 2024
 ## Configured by     : master_keyholder
 ## Target system     : linux raspberry-pi-4-8g 6.8.0-1010-raspi #11-ubuntu smp preempt_dynamic thu aug 8 23:22:41 utc 2024 aarch64 aarch64 aarch64 gnulinux 
 #
@@ -233,7 +233,7 @@ ccsymbols=''
 ccversion=''
 cf_by='master_keyholder'
 cf_email='master_keyholder@raspberry-pi-4-8g.(none)'
-cf_time='Fri Sep 27 13:04:52 UTC 2024'
+cf_time='Sat Sep 28 14:21:58 UTC 2024'
 charbits='8'
 charsize='1'
 chgrp=''
@@ -248,8 +248,9 @@ config_arg1='-des'
 config_arg2='-Dprefix=/opt/skyhammer/aarch64-unknown-linux-gnu'
 config_arg3='-Dcc=gcc'
 config_arg4='-Dmksymlinks'
-config_argc='4'
-config_args='-des -Dprefix=/opt/skyhammer/aarch64-unknown-linux-gnu -Dcc=gcc -Dmksymlinks'
+config_arg5='CFLAGS='
+config_argc='5'
+config_args='-des -Dprefix=/opt/skyhammer/aarch64-unknown-linux-gnu -Dcc=gcc -Dmksymlinks CFLAGS='
 contains='grep'
 cp='cp'
 cpio=''
@@ -1177,7 +1178,7 @@ perlpath='/opt/skyhammer/aarch64-unknown-linux-gnu/bin/perl'
 pg='pg'
 phostname='hostname'
 pidtype='pid_t'
-plibpth='/lib/aarch64-unknown-linux-gnu/14.2.0 /lib/aarch64-linux-gnu /lib/../lib64 /usr/lib/aarch64-unknown-linux-gnu/14.2.0 /usr/lib/aarch64-linux-gnu /usr/lib/../lib64 /lib /usr/lib'
+plibpth='/lib/aarch64-linux-gnu/13 /lib/aarch64-linux-gnu /lib/../lib /usr/lib/aarch64-linux-gnu/13 /usr/lib/aarch64-linux-gnu /usr/lib/../lib /lib /usr/lib'
 pmake=''
 pr=''
 prefix='/opt/skyhammer/aarch64-unknown-linux-gnu'
