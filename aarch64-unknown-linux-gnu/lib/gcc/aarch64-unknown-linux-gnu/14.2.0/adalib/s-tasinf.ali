@@ -34,7 +34,7 @@ D i-c.ads		20240925092334 aac316ce interfaces.c%s
 D system.ads		20240925092335 d0bef732 system%s
 D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
 D s-linux.ads		20240925092334 34850a8c system.linux%s
-D s-oscons.ads		20240929100442 b7943734 system.os_constants%s
+D s-oscons.ads		20241001051933 b7943734 system.os_constants%s
 D s-osinte.ads		20240925092334 e4f53740 system.os_interface%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s

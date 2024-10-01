@@ -75,7 +75,7 @@ sub header_files {
 #
 ## Package name      : perl5
 ## Source directory  : /opt/skyhammer/src/perl-5.40.0
-## Configuration time: Sat Sep 28 14:21:58 UTC 2024
+## Configuration time: Mon Sep 30 14:54:17 UTC 2024
 ## Configured by     : master_keyholder
 ## Target system     : linux raspberry-pi-4-8g 6.8.0-1010-raspi #11-ubuntu smp preempt_dynamic thu aug 8 23:22:41 utc 2024 aarch64 aarch64 aarch64 gnulinux 
 #
@@ -233,7 +233,7 @@ ccsymbols=''
 ccversion=''
 cf_by='master_keyholder'
 cf_email='master_keyholder@raspberry-pi-4-8g.(none)'
-cf_time='Sat Sep 28 14:21:58 UTC 2024'
+cf_time='Mon Sep 30 14:54:17 UTC 2024'
 charbits='8'
 charsize='1'
 chgrp=''

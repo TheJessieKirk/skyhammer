@@ -5,7 +5,7 @@ SYS_ROOT=/opt/skyhammer;
 
 export PATH=$SYS_ROOT/$ARCH/bin:$PATH;
 
-STUFF_TO_BUILD=(perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc);
+STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake);
 
 echo "Skyhammer";
 echo "Eating my own dogfood...";
@@ -32,13 +32,16 @@ for i in ${STUFF_TO_BUILD[@]}; do
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
                 ;;
             bash )
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --with-curses";
                 configureCFlags="-Wno-implicit-function-declaration";
                 ;;
             binutils )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
                 ;;
-            flex | gmp | ncurses )
+            cmake )
+                configureOptions="--prefix=$SYS_ROOT/$ARCH";
+                ;;
+            flex | gmp )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
                 ;;
             gcc )
@@ -47,11 +50,17 @@ for i in ${STUFF_TO_BUILD[@]}; do
             isl )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
                 ;;
+            jdk )
+                configureOptions="--build=$ARCH --enable-headless-only --enable-openjdk-only";
+                ;;
             mpc )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
                 ;;
             mpfr )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
+                ;;
+            ncurses )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --includedir=$SYS_ROOT/$ARCH/include --oldincludedir=$SYS_ROOT/$ARCH/include --with-cxx-shared --with-pkg-config --with-profile --with-shared";
                 ;;
             perl )
                 configureOptions="-des -Dprefix=$SYS_ROOT/$ARCH -Dcc=gcc -Dmksymlinks";
@@ -77,7 +86,7 @@ for i in ${STUFF_TO_BUILD[@]}; do
                     perl )
                         ../../../src/$i*/Configure $configureOptions CFLAGS="$configureCFlags";
                         ;;
-                    zlib )
+                    jdk | zlib )
                         ../../../src/$i*/configure $configureOptions;
                         ;;
                     * )
@@ -105,11 +114,17 @@ for i in ${STUFF_TO_BUILD[@]}; do
         case $answer in
             y )
                 echo "Skyhammer is making $i...";
-                if [ $i = bash ]; then
-                    make CLAGS="$makeCFlags";
-                else
-                    make -j4 CFLAGS="$makeCFlags";
-                fi;
+                case $i in
+                    bash )
+                        make CLAGS="$makeCFlags";
+                        ;;
+                    jdk )
+                        make JOBS=4;
+                        ;;
+                    *)
+                        make -j4 CFLAGS="$makeCFlags";
+                        ;;
+                esac;
                 break;
                 ;;
             n )
@@ -126,7 +141,7 @@ for i in ${STUFF_TO_BUILD[@]}; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
-        if [ $i == python ]; then
+        if [ $i == cmake ] || [ $i == jdk ] || [ $i == ncurses ] || [ $i == python ]; then
             break;
         fi;
         read -p "Do you want to test $i? [y/n]: " answer;
@@ -159,7 +174,18 @@ for i in ${STUFF_TO_BUILD[@]}; do
         case $answer in
             y )
                 echo "Skyhammer is install $i...";
-                make install -j4 CFLAGS="$installCFlags";
+                case $i in
+                    bash )
+                        make install CFLAGS="$installCFlags";
+                        ;;
+                    jdk )
+                        make images JOBS=4;
+                        cp -f -r images/jdk/* $SYS_ROOT/$ARCH;
+                        ;;
+                    * )
+                        make install -j4 CFLAGS="$installCFlags";
+                        ;;
+                esac;
                 break;
                 ;;
             n )
@@ -189,11 +215,13 @@ for i in ${STUFF_TO_BUILD[@]}; do
                 case $i in
                     binutils )
                         stuffToCleanInBin=(addr2line ar as c++filt elfedit gcov gcov-dump gcov-tool gp-archive gp-collect-app gp-display-src gp-display-text gprof gprofng ld ld.bfd lto-dump nm objcopy objdump ranlib readelf size strings);
-                        stuffToCleanInArch=(ar as ld ld.bfd objcopy objdump ranlib readelf strip);
-                        $ARCH/bin/strip bin/strip;
+                        stuffToCleanInArch=(ar as ld ld.bfd objcopy objdump ranlib readelf);
                         ;;
                     bison )
                         stuffToCleanInBin=(bison);
+                        ;;
+                    cmake )
+                        stuffToCleanInBin=(cmake ctest);
                         ;;
                     flex )
                         stuffToCleanInBin=(flex);
@@ -204,6 +232,9 @@ for i in ${STUFF_TO_BUILD[@]}; do
                         ;;
                     gettext )
                         stuffToCleanInBin=(envsubst gettext gettextize msgattrib msgcmt msgcomm msgconv msgen msgexec msgdilter msgfmt msggrep msginit msgmerge msgunfmt msguniq ngettext recode-sr-latin xgettext);
+                        ;;
+                    jdk )
+                        stuffToCleanInBin=(jar jarsigner java javac javadoc javap jcmd jconsole jdb jdeprscan jdeps jfr jhsdb jimage jinfo jlink jmap jmod jpackage jps jrunscript jshell jstack jstat jstatd jwebserver keytool rmiregistry serialver);
                         ;;
                     m4 )
                         stuffToCleanInBin=(m4);

@@ -77,7 +77,7 @@ D s-crtl.ads		20240925092334 beb39b9e system.crtl%s
 D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
 D s-finmas.ads		20240925092334 28987ac5 system.finalization_masters%s
 D s-finroo.ads		20240925092334 4ff27390 system.finalization_root%s
-D s-oscons.ads		20240929100442 b7943734 system.os_constants%s
+D s-oscons.ads		20241001051933 b7943734 system.os_constants%s
 D s-os_lib.ads		20240925092334 a2467c22 system.os_lib%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-pooglo.ads		20240925092334 91708d21 system.pool_global%s

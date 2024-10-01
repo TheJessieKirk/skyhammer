@@ -37,10 +37,10 @@ datarootdir = ${prefix}/share
 loadablesdir = ${libdir}/bash
 headersdir = $(includedir)/$(PACKAGE_NAME)
 
-topdir = ../../../../../src/bash-5.2.32
+topdir = ../../../../../src/bash-5.2.37
 BUILD_DIR = /opt/skyhammer/tmp/builds/bash
-srcdir = ../../../../../src/bash-5.2.32/examples/loadables
-VPATH = ../../../../../src/bash-5.2.32/examples/loadables
+srcdir = ../../../../../src/bash-5.2.37/examples/loadables
+VPATH = ../../../../../src/bash-5.2.37/examples/loadables
 
 # Support an alternate destination root directory for package building
 DESTDIR =
@@ -90,7 +90,7 @@ CCFLAGS = $(DEFS) $(LOCAL_DEFS) $(LOCAL_CFLAGS) $(CFLAGS)
 SHOBJ_CC = gcc
 SHOBJ_CFLAGS = -fPIC
 SHOBJ_LD = ${CC}
-SHOBJ_LDFLAGS = -shared -Wl,-soname,$@  -L./lib/termcap
+SHOBJ_LDFLAGS = -shared -Wl,-soname,$@ 
 SHOBJ_XLDFLAGS = 
 SHOBJ_LIBS = 
 SHOBJ_STATUS = supported

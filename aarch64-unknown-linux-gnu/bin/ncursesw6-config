@@ -40,7 +40,7 @@ prefix="/opt/skyhammer/aarch64-unknown-linux-gnu"
 exec_prefix="${prefix}"
 
 bindir="${exec_prefix}/bin"
-includedir="${prefix}/include"
+includedir="/opt/skyhammer/aarch64-unknown-linux-gnu/include"
 libdir="${exec_prefix}/lib"
 datarootdir="${prefix}/share"
 datadir="${datarootdir}"
@@ -50,7 +50,7 @@ THIS="ncursesw"
 TINFO_LIB="ncursesw"
 RPATH_LIST="${libdir}"
 
-includesubdir="${prefix}/include/${THIS}"
+includesubdir="/opt/skyhammer/aarch64-unknown-linux-gnu/include/${THIS}"
 
 # Ensure that RPATH_LIST contains only absolute pathnames, if it is nonempty.
 # We cannot filter it out within the build-process since the variable is used

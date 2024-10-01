@@ -148,7 +148,7 @@ D s-finroo.ads		20240925092334 4ff27390 system.finalization_root%s
 D s-imagei.ads		20240925092334 5e131ce0 system.image_i%s
 D s-imgint.ads		20240925092334 67e4edfb system.img_int%s
 D s-memory.ads		20240925092334 18949c1a system.memory%s
-D s-oscons.ads		20240929100442 b7943734 system.os_constants%s
+D s-oscons.ads		20241001051933 b7943734 system.os_constants%s
 D s-os_lib.ads		20240925092334 a2467c22 system.os_lib%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-pooglo.ads		20240925092334 91708d21 system.pool_global%s

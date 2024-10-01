@@ -31,7 +31,7 @@ OS="linux-gnu"
 CC="gcc"
 CFLAGS="-Wno-implicit-function-declaration"
 RELEASE="5.2"
-PATCHLEVEL="32"
+PATCHLEVEL="37"
 RELSTATUS="release"
 MACHTYPE="aarch64-unknown-linux-gnu"
 

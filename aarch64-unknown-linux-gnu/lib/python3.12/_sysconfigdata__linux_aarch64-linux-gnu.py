@@ -140,7 +140,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_BROKEN_SEM_GETVALUE': 0,
  'HAVE_BROKEN_UNSETENV': 0,
  'HAVE_BUILTIN_ATOMIC': 1,
- 'HAVE_BZLIB_H': 0,
+ 'HAVE_BZLIB_H': 1,
  'HAVE_CHFLAGS': 0,
  'HAVE_CHMOD': 1,
  'HAVE_CHOWN': 1,
@@ -585,8 +585,8 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_UTMP_H': 1,
  'HAVE_UUID_CREATE': 0,
  'HAVE_UUID_ENC_BE': 0,
- 'HAVE_UUID_GENERATE_TIME_SAFE': 0,
- 'HAVE_UUID_H': 0,
+ 'HAVE_UUID_GENERATE_TIME_SAFE': 1,
+ 'HAVE_UUID_H': 1,
  'HAVE_UUID_UUID_H': 0,
  'HAVE_VFORK': 1,
  'HAVE_WAIT': 1,
@@ -602,7 +602,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_WORKING_TZSET': 1,
  'HAVE_WRITEV': 1,
  'HAVE_ZLIB_COPY': 1,
- 'HAVE_ZLIB_H': 1,
+ 'HAVE_ZLIB_H': 0,
  'HAVE__GETPTY': 0,
  'HOSTRUNNER': '',
  'HOST_GNU_TYPE': 'aarch64-unknown-linux-gnu',
@@ -704,13 +704,13 @@ build_time_vars = {'ABIFLAGS': '',
                    '_json  _lsprof  _opcode  _pickle  _queue  _random  '
                    '_struct  _xxsubinterpreters  _xxinterpchannels  _zoneinfo  '
                    'audioop  math  cmath  _statistics  _datetime  _decimal  '
-                   'binascii  zlib  _md5  _sha1  _sha2  _sha3  _blake2  '
-                   'pyexpat  _elementtree  _codecs_cn  _codecs_hk  '
+                   'binascii  _bz2  _lzma  zlib  _md5  _sha1  _sha2  _sha3  '
+                   '_blake2  pyexpat  _elementtree  _codecs_cn  _codecs_hk  '
                    '_codecs_iso2022  _codecs_jp  _codecs_kr  _codecs_tw  '
                    '_multibytecodec  unicodedata  _crypt  fcntl  grp  mmap  '
                    'ossaudiodev  _posixsubprocess  resource  select  _socket  '
                    'spwd  syslog  termios  _posixshmem  _multiprocessing  '
-                   '_ctypes  _ssl  _hashlib  xxsubtype  _xxtestfuzz  '
+                   '_ctypes  _ssl  _hashlib  _uuid  xxsubtype  _xxtestfuzz  '
                    '_testbuffer  _testinternalcapi  _testcapi  _testclinic  '
                    '_testimportmultiple  _testmultiphase  _testsinglephase  '
                    '_ctypes_test  xxlimited  xxlimited_35  atexit  '
@@ -736,16 +736,17 @@ build_time_vars = {'ABIFLAGS': '',
  'MODSHARED_NAMES': 'array _asyncio _bisect _contextvars _csv _heapq _json '
                     '_lsprof _opcode _pickle _queue _random _struct '
                     '_xxsubinterpreters _xxinterpchannels _zoneinfo audioop '
-                    'math cmath _statistics _datetime _decimal binascii zlib '
-                    '_md5 _sha1 _sha2 _sha3 _blake2 pyexpat _elementtree '
-                    '_codecs_cn _codecs_hk _codecs_iso2022 _codecs_jp '
-                    '_codecs_kr _codecs_tw _multibytecodec unicodedata _crypt '
-                    'fcntl grp mmap ossaudiodev _posixsubprocess resource '
-                    'select _socket spwd syslog termios _posixshmem '
-                    '_multiprocessing _ctypes _ssl _hashlib xxsubtype '
-                    '_xxtestfuzz _testbuffer _testinternalcapi _testcapi '
-                    '_testclinic _testimportmultiple _testmultiphase '
-                    '_testsinglephase _ctypes_test xxlimited xxlimited_35',
+                    'math cmath _statistics _datetime _decimal binascii _bz2 '
+                    '_lzma zlib _md5 _sha1 _sha2 _sha3 _blake2 pyexpat '
+                    '_elementtree _codecs_cn _codecs_hk _codecs_iso2022 '
+                    '_codecs_jp _codecs_kr _codecs_tw _multibytecodec '
+                    'unicodedata _crypt fcntl grp mmap ossaudiodev '
+                    '_posixsubprocess resource select _socket spwd syslog '
+                    'termios _posixshmem _multiprocessing _ctypes _ssl '
+                    '_hashlib _uuid xxsubtype _xxtestfuzz _testbuffer '
+                    '_testinternalcapi _testcapi _testclinic '
+                    '_testimportmultiple _testmultiphase _testsinglephase '
+                    '_ctypes_test xxlimited xxlimited_35',
  'MODULE_ARRAY_STATE': 'yes',
  'MODULE_ATEXIT_LDFLAGS': '',
  'MODULE_AUDIOOP_LDFLAGS': '-lm',
@@ -818,7 +819,9 @@ build_time_vars = {'ABIFLAGS': '',
                         '../../../src/python-3.12.6/Modules/hashlib.h',
  'MODULE__BLAKE2_LDFLAGS': '',
  'MODULE__BLAKE2_STATE': 'yes',
- 'MODULE__BZ2_STATE': 'missing',
+ 'MODULE__BZ2_CFLAGS': '',
+ 'MODULE__BZ2_LDFLAGS': '-lbz2',
+ 'MODULE__BZ2_STATE': 'yes',
  'MODULE__CODECS_CN_DEPS': '../../../src/python-3.12.6/Modules/cjkcodecs/mappings_cn.h '
                            '../../../src/python-3.12.6/Modules/cjkcodecs/multibytecodec.h '
                            '../../../src/python-3.12.6/Modules/cjkcodecs/cjkcodecs.h',
@@ -891,7 +894,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__JSON_STATE': 'yes',
  'MODULE__LOCALE_LDFLAGS': '',
  'MODULE__LSPROF_STATE': 'yes',
- 'MODULE__LZMA_STATE': 'missing',
+ 'MODULE__LZMA_CFLAGS': '',
+ 'MODULE__LZMA_LDFLAGS': '-llzma',
+ 'MODULE__LZMA_STATE': 'yes',
  'MODULE__MD5_CFLAGS': '-I../../../src/python-3.12.6/Modules/_hacl/include '
                        '-I../../../src/python-3.12.6/Modules/_hacl/internal '
                        '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
@@ -975,7 +980,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__TRACEMALLOC_LDFLAGS': '',
  'MODULE__TYPING_LDFLAGS': '',
  'MODULE__TYPING_STATE': 'yes',
- 'MODULE__UUID_STATE': 'missing',
+ 'MODULE__UUID_CFLAGS': '-I/usr/include/uuid',
+ 'MODULE__UUID_LDFLAGS': '-luuid',
+ 'MODULE__UUID_STATE': 'yes',
  'MODULE__WEAKREF_LDFLAGS': '',
  'MODULE__XXINTERPCHANNELS_STATE': 'yes',
  'MODULE__XXSUBINTERPRETERS_STATE': 'yes',
@@ -1111,6 +1118,8 @@ build_time_vars = {'ABIFLAGS': '',
                'Modules/_datetime.cpython-312-aarch64-linux-gnu.so '
                'Modules/_decimal.cpython-312-aarch64-linux-gnu.so '
                'Modules/binascii.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_bz2.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_lzma.cpython-312-aarch64-linux-gnu.so '
                'Modules/zlib.cpython-312-aarch64-linux-gnu.so '
                'Modules/_md5.cpython-312-aarch64-linux-gnu.so '
                'Modules/_sha1.cpython-312-aarch64-linux-gnu.so '
@@ -1144,6 +1153,7 @@ build_time_vars = {'ABIFLAGS': '',
                'Modules/_ctypes.cpython-312-aarch64-linux-gnu.so '
                'Modules/_ssl.cpython-312-aarch64-linux-gnu.so '
                'Modules/_hashlib.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_uuid.cpython-312-aarch64-linux-gnu.so '
                'Modules/xxsubtype.cpython-312-aarch64-linux-gnu.so '
                'Modules/_xxtestfuzz.cpython-312-aarch64-linux-gnu.so '
                'Modules/_testbuffer.cpython-312-aarch64-linux-gnu.so '

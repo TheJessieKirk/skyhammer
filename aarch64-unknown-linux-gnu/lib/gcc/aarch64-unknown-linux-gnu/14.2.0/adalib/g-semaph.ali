@@ -56,7 +56,7 @@ D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
 D s-finroo.ads		20240925092334 4ff27390 system.finalization_root%s
 D s-linux.ads		20240925092334 34850a8c system.linux%s
 D s-multip.ads		20240925092334 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20240929100442 b7943734 system.os_constants%s
+D s-oscons.ads		20241001051933 b7943734 system.os_constants%s
 D s-osinte.ads		20240925092334 e4f53740 system.os_interface%s
 D s-parame.ads		20240925092334 3597fc11 system.parameters%s
 D s-putima.ads		20240925092334 17291fe4 system.put_images%s
