@@ -1,4 +1,0 @@
-EarlyLocalClass.java:12:32: compiler.err.no.encl.instance.of.type.in.scope: EarlyLocalClass
-- compiler.note.preview.filename: EarlyLocalClass.java, DEFAULT
-- compiler.note.preview.recompile
-1 error

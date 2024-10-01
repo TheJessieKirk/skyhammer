@@ -12,6 +12,10 @@ echo "Eating my own dogfood...";
 echo "You can enter 'stop' at any of Skyhammer's prompts to stop this script.";
 
 echo "Checking directories...";
+if [ ! -d "src" ]; then
+  echo "src does not exist. Skyhammer will create it.";
+  mkdir src;
+fi;
 if [ ! -d "tmp" ]; then
   echo "tmp does not exist. Skyhammer will create it.";
   mkdir tmp;
@@ -22,6 +26,27 @@ if [ ! -d "tmp/builds" ]; then
 fi;
 
 for i in ${STUFF_TO_BUILD[@]}; do
+while true; do
+	cd $SYS_ROOT/src;
+        read -p "Do you want to (re)extract $i source files? [y/n]: " answer;
+        case $answer in
+            y )
+                echo "Skyhammer is (re)extracting $i source files...";
+                tar -xf ../etc/packages/$i*;
+                break;
+                ;;
+            n )
+                break;
+                ;;
+            stop )
+                echo "Skyhammer is stopping...";
+                exit;
+                ;;
+            * )
+                echo "Please answer 'y' or 'n'.";
+                ;;
+        esac;
+    done;
     while true; do
         cd $SYS_ROOT/tmp/builds;
         configureOptions="";
