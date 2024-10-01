@@ -17,7 +17,7 @@ Skyhammer correctly makes software, including itself, on a [Raspberry Pi 4 Model
 It successfully creates software that runs natively on Microsoft Windows 10.
 
 ## Supported Architectures, Systems and Languages
-**Linux for Raspberry Pi (aarch64-unknown-linux-gnu):** Ada, C, C++, D, Fortran, Go, M2, Objective-C, Objective-C++, Perl, Python, Rust<br>
+**Linux for Raspberry Pi (aarch64-unknown-linux-gnu):** Ada, C, C++, D, Fortran, Go, Java, M2, Objective-C, Objective-C++, Perl, Python, Rust<br>
 **Microsoft Windows for PC (x86_64-w64-mingw32):** Ada, C, C++, D, Fortran, M2, Objective-C, Objective-C++, Rust
 
 ## Bundled Tools and Libraries
@@ -41,6 +41,8 @@ It successfully creates software that runs natively on Microsoft Windows 10.
 * [GNU](https://www.gnu.org/) [MPFR](https://www.mpfr.org/) 4.2.1
 * [GNU](https://www.gnu.org/) [ncurses](https://invisible-island.net/ncurses) 6.5
 * [isl](https://libisl.sourceforge.io/) 0.27
+* [Kitware](https://www.kitware.com/) [CMake](https://cmake.org/) 3.30.4
 * [libffi](https://sourceware.org/libffi/) 3.4.5
 * [MinGW-w64](https://www.mingw-w64.org/) 11.0.0
+* [OpenJDK](https://openjdk.org/) 23+37
 * [Python](https://www.python.org/) 3.12.6
