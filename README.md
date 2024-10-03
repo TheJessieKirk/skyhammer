@@ -22,6 +22,7 @@ It successfully creates software that runs natively on Microsoft Windows 10.
 
 ## Bundled Tools and Libraries
 *Note: Please forgive the [pleonastic acronym redundancies](https://en.wikipedia.org/wiki/RAS_syndrome)*
+* Boehm garbage collector (https://www.hboehm.info/gc/) 8.2.4
 * [CPAN](https://www.cpan.org/) [Perl](https://www.cpan.org/src/) 5.40.0
 * [Dmalloc](https://dmalloc.com/) 5.6.5
 * [flex](https://github.com/westes/flex) 2.6.4
@@ -42,6 +43,7 @@ It successfully creates software that runs natively on Microsoft Windows 10.
 * [GNU](https://www.gnu.org/) [ncurses](https://invisible-island.net/ncurses) 6.5
 * [isl](https://libisl.sourceforge.io/) 0.27
 * [Kitware](https://www.kitware.com/) [CMake](https://cmake.org/) 3.30.4
+* [libatomic_ops] (https://github.com/ivmai/libatomic_ops/) 7.8.0
 * [libffi](https://sourceware.org/libffi/) 3.4.5
 * [MinGW-w64](https://www.mingw-w64.org/) 11.0.0
 * [OpenJDK](https://openjdk.org/) 23+37
