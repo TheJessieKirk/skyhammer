@@ -22,17 +22,17 @@ W system.dim.float_mks%s  s-diflmk.ads		s-diflmk.ali
 W system.dim.generic_mks%s
 W system.dim.generic_mks.generic_other_prefixes%s
 
-D ada.ads		20240925092334 76789da1 ada%s
-D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
-D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-dim.ads		20240925092334 ec3077cc system.dim%s
-D s-diflmk.ads		20240925092334 af5a4b94 system.dim.float_mks%s
-D s-dfmopr.ads		20240925092334 1c952aa8 system.dim.float_mks.other_prefixes%s
-D s-digemk.ads		20240925092334 d6ab2b3c system.dim.generic_mks%s
-D s-dgmgop.ads		20240925092334 74398739 system.dim.generic_mks.generic_other_prefixes%s
-D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
-D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D ada.ads		20240801081713 76789da1 ada%s
+D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
+D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-dim.ads		20240801081713 ec3077cc system.dim%s
+D s-diflmk.ads		20240801081713 af5a4b94 system.dim.float_mks%s
+D s-dfmopr.ads		20240801081713 1c952aa8 system.dim.float_mks.other_prefixes%s
+D s-digemk.ads		20240801081713 d6ab2b3c system.dim.generic_mks%s
+D s-dgmgop.ads		20240801081713 74398739 system.dim.generic_mks.generic_other_prefixes%s
+D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
+D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
 G a e
 X 4 system.ads
 37K9*System 156e11 7|32r6 34r9 35r8

@@ -22,11 +22,11 @@ W system.img_char%s	s-imgcha.adb		s-imgcha.ali
 U system.img_wchar%s	s-imgwch.ads		22ed959f NE OL PU PK
 W system%s		system.ads		system.ali
 
-D interfac.ads		20240925092334 9111f9c1 interfaces%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-imgcha.ads		20240925092334 9c3458e7 system.img_char%s
-D s-imgwch.ads		20240925092334 f25362ad system.img_wchar%s
-D s-imgwch.adb		20240925092334 895deafe system.img_wchar%b
+D interfac.ads		20240801081713 9111f9c1 interfaces%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-imgcha.ads		20240801081713 9c3458e7 system.img_char%s
+D s-imgwch.ads		20240801081713 f25362ad system.img_wchar%s
+D s-imgwch.adb		20240801081713 895deafe system.img_wchar%b
 G a e
 G c Z s b [image_wide_character system__img_wchar 37 14 none]
 G c Z s b [image_wide_wide_character system__img_wchar 48 14 none]

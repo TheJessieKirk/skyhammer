@@ -22,11 +22,11 @@ W system.wwd_char%s	s-wwdcha.adb		s-wwdcha.ali
 U system.wwd_wchar%s	s-wwdwch.ads		c1b16ef9 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D interfac.ads		20240925092334 9111f9c1 interfaces%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-wwdcha.ads		20240925092335 86257ce5 system.wwd_char%s
-D s-wwdwch.ads		20240925092335 110f99cb system.wwd_wchar%s
-D s-wwdwch.adb		20240925092335 69ccf362 system.wwd_wchar%b
+D interfac.ads		20240801081713 9111f9c1 interfaces%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-wwdcha.ads		20240801081714 86257ce5 system.wwd_char%s
+D s-wwdwch.ads		20240801081714 110f99cb system.wwd_wchar%s
+D s-wwdwch.adb		20240801081714 69ccf362 system.wwd_wchar%b
 G a e
 G c Z s b [wide_width_wide_character system__wwd_wchar 37 13 none]
 G c Z s b [wide_width_wide_wide_character system__wwd_wchar 43 13 none]

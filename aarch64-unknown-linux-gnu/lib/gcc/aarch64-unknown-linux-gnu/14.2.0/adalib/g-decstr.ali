@@ -28,17 +28,17 @@ W gnat%s		gnat.ads		gnat.ali
 W system%s		system.ads		system.ali
 W system.wch_con%s	s-wchcon.adb		s-wchcon.ali
 
-D ada.ads		20240925092334 76789da1 ada%s
-D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
-D gnat.ads		20240925092334 b5988c27 gnat%s
-D g-decstr.ads		20240925092334 cb0aa373 gnat.decode_string%s
-D g-decstr.adb		20240925092334 cb980720 gnat.decode_string%b
-D interfac.ads		20240925092334 9111f9c1 interfaces%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
-D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
-D s-wchcnv.ads		20240925092335 06c0ca70 system.wch_cnv%s
-D s-wchcon.ads		20240925092335 d9032363 system.wch_con%s
+D ada.ads		20240801081713 76789da1 ada%s
+D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20240801081713 b5988c27 gnat%s
+D g-decstr.ads		20240801081713 cb0aa373 gnat.decode_string%s
+D g-decstr.adb		20240801081713 cb980720 gnat.decode_string%b
+D interfac.ads		20240801081713 9111f9c1 interfaces%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
+D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
+D s-wchcnv.ads		20240801081714 06c0ca70 system.wch_cnv%s
+D s-wchcon.ads		20240801081714 d9032363 system.wch_con%s
 G a e
 G c Z s b [decode_string gnat 77 14 none]
 X 3 gnat.ads

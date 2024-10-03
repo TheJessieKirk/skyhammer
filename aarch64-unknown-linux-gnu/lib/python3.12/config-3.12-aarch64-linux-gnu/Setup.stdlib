@@ -138,9 +138,9 @@ _multiprocessing _multiprocessing/multiprocessing.c _multiprocessing/semaphore.c
 _ctypes _ctypes/_ctypes.c _ctypes/callbacks.c _ctypes/callproc.c _ctypes/stgdict.c _ctypes/cfield.c 
 
 # needs -lncurses[w], sometimes -ltermcap/tinfo
-#_curses _cursesmodule.c
+_curses _cursesmodule.c
 # needs -lncurses[w] and -lpanel[w]
-#_curses_panel _curses_panel.c
+_curses_panel _curses_panel.c
 
 #_sqlite3 _sqlite/blob.c _sqlite/connection.c _sqlite/cursor.c _sqlite/microprotocols.c _sqlite/module.c _sqlite/prepare_protocol.c _sqlite/row.c _sqlite/statement.c _sqlite/util.c
 

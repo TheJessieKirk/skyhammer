@@ -21,10 +21,10 @@ W ada%s			ada.ads			ada.ali
 U ada.task_initialization%s  a-tasini.ads	d7b0c315 NE OL PR PK
 W ada%s			ada.ads			ada.ali
 
-D ada.ads		20240925092334 76789da1 ada%s
-D a-tasini.ads		20240925092334 a1c85eb4 ada.task_initialization%s
-D a-tasini.adb		20240925092334 8ceb36a6 ada.task_initialization%b
-D system.ads		20240925092335 d0bef732 system%s
+D ada.ads		20240801081713 76789da1 ada%s
+D a-tasini.ads		20240801081713 a1c85eb4 ada.task_initialization%s
+D a-tasini.adb		20240801081713 8ceb36a6 ada.task_initialization%b
+D system.ads		20240801081714 d0bef732 system%s
 G a e
 G c Z s b [set_initialization_handler ada__task_initialization 38 14 none]
 X 1 ada.ads

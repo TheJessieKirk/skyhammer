@@ -9,9 +9,9 @@
 
 /* Package name      : perl5
  * Source directory  : /opt/skyhammer/src/perl-5.40.0
- * Configuration time: Mon Sep 30 14:54:17 UTC 2024
+ * Configuration time: Wed Oct  2 14:12:56 UTC 2024
  * Configured by     : master_keyholder
- * Target system     : linux raspberry-pi-4-8g 6.8.0-1010-raspi #11-ubuntu smp preempt_dynamic thu aug 8 23:22:41 utc 2024 aarch64 aarch64 aarch64 gnulinux 
+ * Target system     : linux raspberry-pi-4-8g 6.8.0-1012-raspi #13-ubuntu smp preempt_dynamic mon sep 2 11:13:41 utc 2024 aarch64 aarch64 aarch64 gnulinux 
  */
 
 #ifndef _config_h_
@@ -1369,7 +1369,7 @@
  *	feature tests from Configure are generally more reliable.
  */
 #define OSNAME "linux"		/**/
-#define OSVERS "6.8.0-1010-raspi"		/**/
+#define OSVERS "6.8.0-1012-raspi"		/**/
 
 /* CAT2:
  *	This macro concatenates 2 tokens together.

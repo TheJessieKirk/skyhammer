@@ -27,20 +27,20 @@ U system.wch_stw%s	s-wchstw.ads		24acf850 NE OL PU PK
 W system%s		system.ads		system.ali
 W system.wch_con%s	s-wchcon.adb		s-wchcon.ali
 
-D ada.ads		20240925092334 76789da1 ada%s
-D a-except.ads		20240925092334 e7970cd9 ada.exceptions%s
-D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
-D interfac.ads		20240925092334 9111f9c1 interfaces%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-parame.ads		20240925092334 3597fc11 system.parameters%s
-D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
-D s-traent.ads		20240925092334 c81cbf8c system.traceback_entries%s
-D s-wchcnv.ads		20240925092335 06c0ca70 system.wch_cnv%s
-D s-wchcnv.adb		20240925092335 5870a60e system.wch_cnv%b
-D s-wchcon.ads		20240925092335 d9032363 system.wch_con%s
-D s-wchjis.ads		20240925092335 6a748b39 system.wch_jis%s
-D s-wchstw.ads		20240925092335 2d112c01 system.wch_stw%s
-D s-wchstw.adb		20240925092335 aefa5c60 system.wch_stw%b
+D ada.ads		20240801081713 76789da1 ada%s
+D a-except.ads		20240801081713 e7970cd9 ada.exceptions%s
+D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20240801081713 9111f9c1 interfaces%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-parame.ads		20240801081713 3597fc11 system.parameters%s
+D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
+D s-traent.ads		20240801081713 c81cbf8c system.traceback_entries%s
+D s-wchcnv.ads		20240801081714 06c0ca70 system.wch_cnv%s
+D s-wchcnv.adb		20240801081714 5870a60e system.wch_cnv%b
+D s-wchcon.ads		20240801081714 d9032363 system.wch_con%s
+D s-wchjis.ads		20240801081714 6a748b39 system.wch_jis%s
+D s-wchstw.ads		20240801081714 2d112c01 system.wch_stw%s
+D s-wchstw.adb		20240801081714 aefa5c60 system.wch_stw%b
 G a e
 G c Z s b [string_to_wide_string system__wch_stw 40 14 none]
 G c Z s b [string_to_wide_wide_string system__wch_stw 62 14 none]

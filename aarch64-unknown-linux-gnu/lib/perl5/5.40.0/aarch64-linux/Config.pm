@@ -98,7 +98,7 @@ tie %Config, 'Config', {
     ldlibpthname => 'LD_LIBRARY_PATH',
     libpth => '/usr/local/lib /home/master_keyholder/skyhammer/aarch64-unknown-linux-gnu/lib /usr/lib/aarch64-linux-gnu /usr/lib',
     osname => 'linux',
-    osvers => '6.8.0-1010-raspi',
+    osvers => '6.8.0-1012-raspi',
     path_sep => ':',
     privlibexp => '/opt/skyhammer/aarch64-unknown-linux-gnu/lib/perl5/5.40.0',
     scriptdir => '/opt/skyhammer/aarch64-unknown-linux-gnu/bin',

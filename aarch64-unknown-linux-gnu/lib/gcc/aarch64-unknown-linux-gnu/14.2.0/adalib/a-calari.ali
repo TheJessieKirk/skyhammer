@@ -21,14 +21,14 @@ W ada.calendar%s	a-calend.adb		a-calend.ali
 U ada.calendar.arithmetic%s  a-calari.ads	659da0d2 NE OL PK
 W ada.calendar%s	a-calend.adb		a-calend.ali
 
-D ada.ads		20240925092334 76789da1 ada%s
-D a-calend.ads		20240925092334 158a5463 ada.calendar%s
-D a-calari.ads		20240925092334 7017f4b1 ada.calendar.arithmetic%s
-D a-calari.adb		20240925092334 87f7ba7b ada.calendar.arithmetic%b
-D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
-D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D ada.ads		20240801081713 76789da1 ada%s
+D a-calend.ads		20240801081713 158a5463 ada.calendar%s
+D a-calari.ads		20240801081713 7017f4b1 ada.calendar.arithmetic%s
+D a-calari.adb		20240801081713 87f7ba7b ada.calendar.arithmetic%b
+D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
+D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
 G a e
 G c Z s b [difference ada__calendar__arithmetic 38 14 none]
 G c Z s b [Oadd ada__calendar__arithmetic 52 13 none]

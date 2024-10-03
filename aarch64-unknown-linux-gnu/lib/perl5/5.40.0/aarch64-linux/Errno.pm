@@ -10,8 +10,8 @@ use strict;
 
 use Config;
 "$Config{'archname'}-$Config{'osvers'}" eq
-"aarch64\-linux-6\.8\.0\-1010\-raspi" or
-	die "Errno architecture (aarch64\-linux-6\.8\.0\-1010\-raspi) does not match executable architecture ($Config{'archname'}-$Config{'osvers'})";
+"aarch64\-linux-6\.8\.0\-1012\-raspi" or
+	die "Errno architecture (aarch64\-linux-6\.8\.0\-1012\-raspi) does not match executable architecture ($Config{'archname'}-$Config{'osvers'})";
 
 our $VERSION = "1.38";
 $VERSION = eval $VERSION;

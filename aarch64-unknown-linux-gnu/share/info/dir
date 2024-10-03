@@ -183,7 +183,7 @@ Software development
 * gdc: (gdc).                   A GCC-based compiler for the D language
 * gfortran: (gfortran).         The GNU Fortran Compiler.
 * gm2: (gm2).                   A GCC-based compiler for the Modula-2 language
-* gprof: (gprof).               Profiling your program's execution
+* gprof: (gprof).               Profiling your program’s execution
 * gprofng: (gprofng).           The next generation profiling tool for Linux
 * lto-dump: (gcc) lto-dump.     ‘lto-dump’--Tool for dumping LTO object 
                                   files.

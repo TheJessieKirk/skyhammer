@@ -1,5 +1,5 @@
 IMPLEMENTOR="N/A"
-JAVA_RUNTIME_VERSION="23-internal-adhoc.masterkeyholder.jdk-2337"
+JAVA_RUNTIME_VERSION="23-internal-adhoc.masterkeyholder.jdk-2337-skyhammer1"
 JAVA_VERSION="23"
 JAVA_VERSION_DATE="2024-09-17"
 LIBC="gnu"

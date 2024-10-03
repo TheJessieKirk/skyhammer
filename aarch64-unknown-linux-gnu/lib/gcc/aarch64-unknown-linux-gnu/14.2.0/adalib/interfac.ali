@@ -20,8 +20,8 @@ RR NO_ELABORATION_CODE
 
 U interfaces%s		interfac.ads		9111f9c1 NE OL PU PK
 
-D interfac.ads		20240925092334 9111f9c1 interfaces%s
-D system.ads		20240925092335 d0bef732 system%s
+D interfac.ads		20240801081713 9111f9c1 interfaces%s
+D system.ads		20240801081714 d0bef732 system%s
 G a e
 G c Z s s [shift_left interfaces 91 13 none]
 G c Z s s [shift_right interfaces 96 13 none]

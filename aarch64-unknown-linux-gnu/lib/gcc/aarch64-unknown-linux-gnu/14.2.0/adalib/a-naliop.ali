@@ -17,13 +17,13 @@ U ada.numerics.aux_linker_options%s  a-naliop.ads  effcb9fc NE OL PU PK
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 L "-lm"
 
-D ada.ads		20240925092334 76789da1 ada%s
-D a-numeri.ads		20240925092334 84bea7a3 ada.numerics%s
-D a-naliop.ads		20240925092334 6b421e5f ada.numerics.aux_linker_options%s
-D a-unccon.ads		20240925092334 0e9b276f ada.unchecked_conversion%s
-D system.ads		20240925092335 d0bef732 system%s
-D s-exctab.ads		20240925092334 91bef6ef system.exception_table%s
-D s-stalib.ads		20240925092334 1c9580f6 system.standard_library%s
+D ada.ads		20240801081713 76789da1 ada%s
+D a-numeri.ads		20240801081713 84bea7a3 ada.numerics%s
+D a-naliop.ads		20240801081713 6b421e5f ada.numerics.aux_linker_options%s
+D a-unccon.ads		20240801081713 0e9b276f ada.unchecked_conversion%s
+D system.ads		20240801081714 d0bef732 system%s
+D s-exctab.ads		20240801081713 91bef6ef system.exception_table%s
+D s-stalib.ads		20240801081713 1c9580f6 system.standard_library%s
 G a e
 X 1 ada.ads
 16K9*Ada 20e8 3|42r9 45r5

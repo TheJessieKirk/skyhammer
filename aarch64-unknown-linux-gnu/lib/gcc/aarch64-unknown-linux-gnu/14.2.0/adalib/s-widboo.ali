@@ -19,9 +19,9 @@ W system%s		system.ads		system.ali
 U system.wid_bool%s	s-widboo.ads		1936cab2 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20240925092335 d0bef732 system%s
-D s-widboo.ads		20240925092335 c9883d80 system.wid_bool%s
-D s-widboo.adb		20240925092335 f1aec766 system.wid_bool%b
+D system.ads		20240801081714 d0bef732 system%s
+D s-widboo.ads		20240801081714 c9883d80 system.wid_bool%s
+D s-widboo.adb		20240801081714 f1aec766 system.wid_bool%b
 G a e
 G c Z s b [width_boolean system__wid_bool 37 13 none]
 X 1 system.ads

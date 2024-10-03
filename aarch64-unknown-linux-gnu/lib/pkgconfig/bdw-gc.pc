@@ -1,0 +1,10 @@
+prefix=/opt/skyhammer/aarch64-unknown-linux-gnu
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Boehm-Demers-Weiser Conservative Garbage Collector
+Description: A garbage collector for C and C++
+Version: 8.2.4
+Libs: -L${libdir} -latomic_ops -lgc -lpthread -ldl
+Cflags: -I${includedir}

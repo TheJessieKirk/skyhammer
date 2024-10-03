@@ -160,18 +160,18 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_CRYPT_R': 1,
  'HAVE_CTERMID': 1,
  'HAVE_CTERMID_R': 0,
- 'HAVE_CURSES_FILTER': 0,
- 'HAVE_CURSES_H': 0,
- 'HAVE_CURSES_HAS_KEY': 0,
- 'HAVE_CURSES_IMMEDOK': 0,
- 'HAVE_CURSES_IS_PAD': 0,
- 'HAVE_CURSES_IS_TERM_RESIZED': 0,
- 'HAVE_CURSES_RESIZETERM': 0,
- 'HAVE_CURSES_RESIZE_TERM': 0,
- 'HAVE_CURSES_SYNCOK': 0,
- 'HAVE_CURSES_TYPEAHEAD': 0,
- 'HAVE_CURSES_USE_ENV': 0,
- 'HAVE_CURSES_WCHGAT': 0,
+ 'HAVE_CURSES_FILTER': 1,
+ 'HAVE_CURSES_H': 1,
+ 'HAVE_CURSES_HAS_KEY': 1,
+ 'HAVE_CURSES_IMMEDOK': 1,
+ 'HAVE_CURSES_IS_PAD': 1,
+ 'HAVE_CURSES_IS_TERM_RESIZED': 1,
+ 'HAVE_CURSES_RESIZETERM': 1,
+ 'HAVE_CURSES_RESIZE_TERM': 1,
+ 'HAVE_CURSES_SYNCOK': 1,
+ 'HAVE_CURSES_TYPEAHEAD': 1,
+ 'HAVE_CURSES_USE_ENV': 1,
+ 'HAVE_CURSES_WCHGAT': 1,
  'HAVE_DB_H': 0,
  'HAVE_DECL_RTLD_DEEPBIND': 1,
  'HAVE_DECL_RTLD_GLOBAL': 1,
@@ -368,8 +368,8 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_MMAP': 1,
  'HAVE_MREMAP': 1,
  'HAVE_NANOSLEEP': 1,
- 'HAVE_NCURSESW': 0,
- 'HAVE_NCURSES_H': 0,
+ 'HAVE_NCURSESW': 1,
+ 'HAVE_NCURSES_H': 1,
  'HAVE_NDBM_H': 0,
  'HAVE_NDIR_H': 0,
  'HAVE_NETCAN_CAN_H': 0,
@@ -383,7 +383,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_OPENAT': 1,
  'HAVE_OPENDIR': 1,
  'HAVE_OPENPTY': 1,
- 'HAVE_PANEL_H': 0,
+ 'HAVE_PANEL_H': 1,
  'HAVE_PATHCONF': 1,
  'HAVE_PAUSE': 1,
  'HAVE_PIPE': 1,
@@ -562,7 +562,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_TCSETPGRP': 1,
  'HAVE_TEMPNAM': 1,
  'HAVE_TERMIOS_H': 1,
- 'HAVE_TERM_H': 0,
+ 'HAVE_TERM_H': 1,
  'HAVE_TIMEGM': 1,
  'HAVE_TIMES': 1,
  'HAVE_TMPFILE': 1,
@@ -710,14 +710,14 @@ build_time_vars = {'ABIFLAGS': '',
                    '_multibytecodec  unicodedata  _crypt  fcntl  grp  mmap  '
                    'ossaudiodev  _posixsubprocess  resource  select  _socket  '
                    'spwd  syslog  termios  _posixshmem  _multiprocessing  '
-                   '_ctypes  _ssl  _hashlib  _uuid  xxsubtype  _xxtestfuzz  '
-                   '_testbuffer  _testinternalcapi  _testcapi  _testclinic  '
-                   '_testimportmultiple  _testmultiphase  _testsinglephase  '
-                   '_ctypes_test  xxlimited  xxlimited_35  atexit  '
-                   'faulthandler  posix  _signal  _tracemalloc  _codecs  '
-                   '_collections  errno  _io  itertools  _sre  _thread  time  '
-                   '_typing  _weakref  _abc  _functools  _locale  _operator  '
-                   '_stat  _symtable  pwd',
+                   '_ctypes  _curses  _curses_panel  _ssl  _hashlib  _uuid  '
+                   'xxsubtype  _xxtestfuzz  _testbuffer  _testinternalcapi  '
+                   '_testcapi  _testclinic  _testimportmultiple  '
+                   '_testmultiphase  _testsinglephase  _ctypes_test  '
+                   'xxlimited  xxlimited_35  atexit  faulthandler  posix  '
+                   '_signal  _tracemalloc  _codecs  _collections  errno  _io  '
+                   'itertools  _sre  _thread  time  _typing  _weakref  _abc  '
+                   '_functools  _locale  _operator  _stat  _symtable  pwd',
  'MODDISABLED_NAMES': '',
  'MODLIBS': '',
  'MODOBJS': 'Modules/atexitmodule.o  Modules/faulthandler.o  '
@@ -742,9 +742,9 @@ build_time_vars = {'ABIFLAGS': '',
                     '_codecs_jp _codecs_kr _codecs_tw _multibytecodec '
                     'unicodedata _crypt fcntl grp mmap ossaudiodev '
                     '_posixsubprocess resource select _socket spwd syslog '
-                    'termios _posixshmem _multiprocessing _ctypes _ssl '
-                    '_hashlib _uuid xxsubtype _xxtestfuzz _testbuffer '
-                    '_testinternalcapi _testcapi _testclinic '
+                    'termios _posixshmem _multiprocessing _ctypes _curses '
+                    '_curses_panel _ssl _hashlib _uuid xxsubtype _xxtestfuzz '
+                    '_testbuffer _testinternalcapi _testcapi _testclinic '
                     '_testimportmultiple _testmultiphase _testsinglephase '
                     '_ctypes_test xxlimited xxlimited_35',
  'MODULE_ARRAY_STATE': 'yes',
@@ -865,8 +865,12 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__CTYPES_STATE': 'yes',
  'MODULE__CTYPES_TEST_LDFLAGS': '-lm',
  'MODULE__CTYPES_TEST_STATE': 'yes',
- 'MODULE__CURSES_PANEL_STATE': 'missing',
- 'MODULE__CURSES_STATE': 'missing',
+ 'MODULE__CURSES_CFLAGS': '',
+ 'MODULE__CURSES_LDFLAGS': '-lncursesw',
+ 'MODULE__CURSES_PANEL_CFLAGS': '',
+ 'MODULE__CURSES_PANEL_LDFLAGS': '-lpanelw -lncursesw',
+ 'MODULE__CURSES_PANEL_STATE': 'yes',
+ 'MODULE__CURSES_STATE': 'yes',
  'MODULE__DATETIME_LDFLAGS': '-lm',
  'MODULE__DATETIME_STATE': 'yes',
  'MODULE__DBM_STATE': 'missing',
@@ -990,7 +994,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__ZONEINFO_STATE': 'yes',
  'MULTIARCH': 'aarch64-linux-gnu',
  'MULTIARCH_CPPFLAGS': '-DMULTIARCH=\\"aarch64-linux-gnu\\"',
- 'MVWDELCH_IS_EXPRESSION': 0,
+ 'MVWDELCH_IS_EXPRESSION': 1,
  'NO_AS_NEEDED': '-Wl,--no-as-needed',
  'OBJECT_OBJS': '\\',
  'OPT': '-DNDEBUG -g -O3 -Wall',
@@ -1151,6 +1155,8 @@ build_time_vars = {'ABIFLAGS': '',
                'Modules/_posixshmem.cpython-312-aarch64-linux-gnu.so '
                'Modules/_multiprocessing.cpython-312-aarch64-linux-gnu.so '
                'Modules/_ctypes.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_curses.cpython-312-aarch64-linux-gnu.so '
+               'Modules/_curses_panel.cpython-312-aarch64-linux-gnu.so '
                'Modules/_ssl.cpython-312-aarch64-linux-gnu.so '
                'Modules/_hashlib.cpython-312-aarch64-linux-gnu.so '
                'Modules/_uuid.cpython-312-aarch64-linux-gnu.so '

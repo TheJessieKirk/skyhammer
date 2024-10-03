@@ -1,11 +1,16 @@
+
 #!/bin/bash
 
 ARCH=aarch64-unknown-linux-gnu;
+BUG_URL="https://github.com/TheJessieKirk/skyhammer/issues";
+PKG_VERSION="Skyhammer-0.1.0";
 SYS_ROOT=/opt/skyhammer;
 
 export PATH=$SYS_ROOT/$ARCH/bin:$PATH;
 
-STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake);
+#newlib is removed due to breaking libc builds
+#jansson is removed due to failing it's tests
+STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libatomic_ops gc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake);
 
 echo "Skyhammer";
 echo "Eating my own dogfood...";
@@ -13,16 +18,16 @@ echo "You can enter 'stop' at any of Skyhammer's prompts to stop this script.";
 
 echo "Checking directories...";
 if [ ! -d "src" ]; then
-  echo "src does not exist. Skyhammer will create it.";
-  mkdir src;
+    echo "src does not exist. Skyhammer will create it.";
+    mkdir src;
 fi;
 if [ ! -d "tmp" ]; then
-  echo "tmp does not exist. Skyhammer will create it.";
-  mkdir tmp;
+    echo "tmp does not exist. Skyhammer will create it.";
+    mkdir tmp;
 fi;
 if [ ! -d "tmp/builds" ]; then
-  echo "tmp/builds does not exist. Skyhammer will create it.";
-  mkdir tmp/builds;
+    echo "tmp/builds does not exist. Skyhammer will create it.";
+    mkdir tmp/builds;
 fi;
 
 for i in ${STUFF_TO_BUILD[@]}; do
@@ -32,7 +37,10 @@ while true; do
         case $answer in
             y )
                 echo "Skyhammer is (re)extracting $i source files...";
-                tar -xf ../etc/packages/$i*;
+                if [ -d "$i-*" ]; then
+                    yes | rm -r "$i-*";
+                fi;
+                tar -xf ../etc/packages/$i-*;
                 break;
                 ;;
             n )
@@ -61,7 +69,9 @@ while true; do
                 configureCFlags="-Wno-implicit-function-declaration";
                 ;;
             binutils )
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                #supports jansson with options
+                #configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-isl-version-check --enable-checking --enable-gold --enable-install-libbfd --enable-install-libiberty --enable-plugins --enable-shared --enable-static --enable-gprofng --enable-ld --enable-host-shared --enable-libada --enable-libgm2 --enable-libssp --enable-lto --enable-objc-gc --enable-vtable-verify --enable-year2038 --with-bugurl=$BUG_URL --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-jdk=$SYS_ROOT/$ARCH --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH --with-pkgversion=GNU-Binutils-$PKG_VERSION --with-system-zlib --with-target-bdw-gc=$SYS_ROOT/$ARCH";
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-isl-version-check --enable-checking --enable-install-libbfd --enable-install-libiberty --enable-plugins --enable-shared --enable-static --enable-gprofng --enable-ld --enable-host-shared --enable-libada --enable-libgm2 --enable-libssp --enable-lto --enable-objc-gc --enable-vtable-verify --enable-year2038 --with-bugurl=$BUG_URL --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-jdk=$SYS_ROOT/$ARCH --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH --with-pkgversion=GNU-Binutils-$PKG_VERSION --with-system-zlib --with-target-bdw-gc=$SYS_ROOT/$ARCH";
                 ;;
             cmake )
                 configureOptions="--prefix=$SYS_ROOT/$ARCH";
@@ -69,14 +79,24 @@ while true; do
             flex | gmp )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
                 ;;
+            gc )
+                #supports Emscrypten with options
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-gcj-support --enable-cplusplus --enable-dependency-tracking --enable-gc-assertions --enable-gcov --enable-static --enable-threads=pthreads --with-aix-soname=both --with-gnu-ld --with-libatomic-ops=yes --with-sysroot=$SYS_ROOT/$ARCH";
+                ;;
             gcc )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
                 ;;
             isl )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
                 ;;
+            jansson )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --with-aix-soname=both --with-gnu-ld --with-sysroot=$SYS_ROOT/$ARCH";
+                ;;
             jdk )
                 configureOptions="--build=$ARCH --enable-headless-only --enable-openjdk-only";
+                ;;
+            libatomic_ops )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-assertions --enable-dependency-tracking --enable-gcov --enable-shared --with-aix-soname=both --with-gnu-ld --with-sysroot=$SYS_ROOT/$ARCH";
                 ;;
             mpc )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
@@ -86,6 +106,10 @@ while true; do
                 ;;
             ncurses )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --includedir=$SYS_ROOT/$ARCH/include --oldincludedir=$SYS_ROOT/$ARCH/include --with-cxx-shared --with-pkg-config --with-profile --with-shared";
+                ;;
+            newlib )
+                #configureOptions="--build=$ARCH --host=$ARCH --target=$ARCH --prefix=$SYS_ROOT/$ARCH --srcdir=$SYS_ROOT/src/newlib-4.4.0 --disable-isl-version-check --enable-dependency-tracking --enable-gold=yes --enable-host-shared --enable-ld=yes --enable-libada --enable-libssp --enable-lto --enable-newlib-iconv --enable-newlib-multithread --enable-objc-gc --enable-static-libjava=yes --enable-vtable-verify --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH --with-sysroot=$SYS_ROOT/$ARCH --with-system-zlib";
+                configureOptions="--build=$ARCH --host=$ARCH --target=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-newlib-iconv --enable-newlib-multithread";
                 ;;
             perl )
                 configureOptions="-des -Dprefix=$SYS_ROOT/$ARCH -Dcc=gcc -Dmksymlinks";
@@ -108,14 +132,17 @@ while true; do
                 fi;
                 cd $i;
                 case $i in
+                    newlib )
+                        ../../../src/$i-*/newlib/configure $configureOptions CFLAGS="$configureCFlags";
+                        ;;
                     perl )
-                        ../../../src/$i*/Configure $configureOptions CFLAGS="$configureCFlags";
+                        ../../../src/$i-*/Configure $configureOptions CFLAGS="$configureCFlags";
                         ;;
                     jdk | zlib )
-                        ../../../src/$i*/configure $configureOptions;
+                        ../../../src/$i-*/configure $configureOptions;
                         ;;
                     * )
-                        ../../../src/$i*/configure $configureOptions CFLAGS="$configureCFlags";
+                        ../../../src/$i-*/configure $configureOptions CFLAGS="$configureCFlags";
                         ;;
                 esac;
                 break;
@@ -226,7 +253,7 @@ while true; do
         esac;
     done;
     while true; do
-        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
+        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
             break;
         fi;
 	cd $SYS_ROOT/$ARCH
