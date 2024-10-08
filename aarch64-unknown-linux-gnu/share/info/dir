@@ -14,11 +14,18 @@ File: dir,	Node: Top	This is the top of the INFO tree
 
 * Menu:
 
+Archiving
+* Tar: (tar).                   Making tape (or disk) archives.
+
 Basics
 * Bash: (bash).                 The GNU Bourne-Again SHell.
 
 C++ libraries
 * autosprintf: (autosprintf).   Support for printf format strings in C++.
+
+Compression
+* Gzip: (gzip).                 General (de)compression of files (lzw).
+* Lzip: (lzip).                 LZMA lossless data compressor
 
 Development
 * libffi: (libffi).             Portable foreign function interface library.
@@ -121,6 +128,8 @@ Individual utilities
                                                   and use DLLs.
 * elfedit: (binutils)elfedit.                   Update ELF header and property 
                                                   of ELF files.
+* gunzip: (gzip)Overview.                       Decompression.
+* gzexe: (gzip)Overview.                        Compress executables.
 * ifnames: (autoconf)ifnames Invocation.        Listing conditionals in source.
 * libtool-invocation: (libtool)Invoking libtool.
                                                 Running the ‘libtool’ 
@@ -140,10 +149,16 @@ Individual utilities
 * strings: (binutils)strings.                   List printable strings from 
                                                   files.
 * strip: (binutils)strip.                       Discard symbols.
+* tar: (tar)tar invocation.                     Invoking GNU ‘tar’.
 * testsuite: (autoconf)testsuite Invocation.    Running an Autotest test suite.
 * windmc: (binutils)windmc.                     Generator for Windows message 
                                                   resources.
 * windres: (binutils)windres.                   Manipulate Windows resources.
+* zcat: (gzip)Overview.                         Decompression to stdout.
+* zdiff: (gzip)Overview.                        Compare compressed files.
+* zforce: (gzip)Overview.                       Force .gz extension on files.
+* zgrep: (gzip)Overview.                        Search compressed files.
+* zmore: (gzip)Overview.                        Decompression output by pages.
 
 Programming
 * flex: (flex).                 Fast lexical analyzer generator (lex 

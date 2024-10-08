@@ -1,16 +1,17 @@
-
 #!/bin/bash
 
 ARCH=aarch64-unknown-linux-gnu;
 BUG_URL="https://github.com/TheJessieKirk/skyhammer/issues";
-PKG_VERSION="Skyhammer-0.1.0";
+PACKAGER="Skyhammer";
+PACKAGE_VERSION="0.1.0";
+PKG_VERSION="$PACKAGER-$PACKAGE_VERSION";
 SYS_ROOT=/opt/skyhammer;
 
 export PATH=$SYS_ROOT/$ARCH/bin:$PATH;
 
 #newlib is removed due to breaking libc builds
 #jansson is removed due to failing it's tests
-STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libatomic_ops gc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake);
+STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libatomic_ops gc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake ncompress gzip bzip2 lzip lzo lzop lzma xz lz4 zstd tar);
 
 echo "Skyhammer";
 echo "Eating my own dogfood...";
@@ -59,7 +60,17 @@ while true; do
         cd $SYS_ROOT/tmp/builds;
         configureOptions="";
         configureCFlags="";
-        read -p "Do you want to configure $i? [y/n]: " answer;
+        case $i in
+            bzip2 | lz4 | zstd )
+                read -p "Do you want to copy $i source files ready for building? [y/n]: " answer;
+                ;;
+            ncompress )
+                read -p "Do you want to setup $i? [y/n]: " answer;
+                ;;
+            * )
+                read -p "Do you want to configure $i? [y/n]: " answer;
+                ;;
+        esac;
         case $i in
             autoconf | automake | bison | dejagnu | dmalloc | libffi | libtool | m4 | make )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
@@ -86,6 +97,9 @@ while true; do
             gcc )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
                 ;;
+            gzip )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --oldincludedir=$SYS_ROOT/$ARCH";
+                ;;
             isl )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
                 ;;
@@ -97,6 +111,18 @@ while true; do
                 ;;
             libatomic_ops )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-assertions --enable-dependency-tracking --enable-gcov --enable-shared --with-aix-soname=both --with-gnu-ld --with-sysroot=$SYS_ROOT/$ARCH";
+                ;;
+            lzip )
+                configureOptions="--prefix=$SYS_ROOT/$ARCH";
+                ;;
+            lzma )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --with-gnu-ld";
+                ;;
+            lzo )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --enable-shared --with-gnu-ld --with-sysroot=$SYS_ROOT/$ARCH";
+                ;;
+            lzop )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking";
                 ;;
             mpc )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
@@ -117,6 +143,14 @@ while true; do
             python )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-optimizations --enable-shared";
                 ;;
+            tar )
+                #--with-rmt=FILE --without-selinux
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-backup-scripts --enable-dependency-tracking --oldincludedir=$SYS_ROOT/$ARCH --with-bzip2=$SYS_ROOT/$ARCH/bin/bzip2 --with-compress=$SYS_ROOT/$ARCH/bin/compress --with-gnu-ld --with-gzip=$SYS_ROOT/$ARCH/bin/gzip --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-lzip=$SYS_ROOT/$ARCH/bin/lzip --with-lzma=$SYS_ROOT/$ARCH/bin/lzma --with-lzop=$SYS_ROOT/$ARCH/bin/lzop --with-packager=$PACKAGER --with-packager-bug-reports=$BUG_URL --with-packager-version=GNU-Tar-$PACKAGE_VERSION --with-xz=$SYS_ROOT/$ARCH/bin/xz --with-zstd=$SYS_ROOT/$ARCH/bin/zstd";
+                ;;
+            xz )
+                #supports doxygen with --enable-doxygen
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-lzma-links --enable-aix-soname=both --enable-dependency-tracking --enable-year2038 --with-gnu-ld --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-sysroot=$SYS_ROOT/$ARCH";
+                ;;
             zlib )
                 configureOptions="--prefix=$SYS_ROOT/$ARCH";
                 ;;
@@ -127,13 +161,26 @@ while true; do
                 if [ ! -d "$i" ]; then
                     mkdir $i;
                 fi;
+                if [ $i == ncompress ] && [ -f $i/compress.def ] ; then
+                    cp $i/compress.def ../compress.def.bak;
+                fi;
                 if [ ! -z "$(find $i -mindepth 1 -maxdepth 1)" ]; then
                     yes | rm -r $i/*;
                 fi;
+                if [ $i == ncompress ] ; then
+                    cp ../compress.def.bak $i/compress.def;
+                fi;
                 cd $i;
                 case $i in
+                    bzip2 | lz4 | zstd )
+                        cp -r ../../../src/$i*/* .;
+                        ;;
                     newlib )
                         ../../../src/$i-*/newlib/configure $configureOptions CFLAGS="$configureCFlags";
+                        ;;
+                    ncompress )
+                        cp -r ../../../src/$i*/* .;
+                        ./build;
                         ;;
                     perl )
                         ../../../src/$i-*/Configure $configureOptions CFLAGS="$configureCFlags";
@@ -161,6 +208,9 @@ while true; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
+        if [ $i == ncompress ]; then
+            break;
+        fi;
         makeCFlags="";
         read -p "Do you want to make $i? [y/n]: " answer;
         case $answer in
@@ -168,10 +218,16 @@ while true; do
                 echo "Skyhammer is making $i...";
                 case $i in
                     bash )
-                        make CLAGS="$makeCFlags";
+                        make CFLAGS="$makeCFlags";
                         ;;
                     jdk )
                         make JOBS=4;
+                        ;;
+                    lz4 )
+                        make -j4;
+                        ;;
+                    zstd )
+                        make -j4 CFLAGS="-fPIC";
                         ;;
                     *)
                         make -j4 CFLAGS="$makeCFlags";
@@ -193,18 +249,25 @@ while true; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
-        if [ $i == cmake ] || [ $i == jdk ] || [ $i == ncurses ] || [ $i == python ]; then
+        if [ $i == bzip2 ] || [ $i == cmake ] || [ $i == jdk ] || [ $i == lzop ] || [ $i == ncompress ] || [ $i == ncurses ] || [ $i == python ]; then
             break;
         fi;
         read -p "Do you want to test $i? [y/n]: " answer;
         case $answer in
             y )
                 echo "Skyhammer is testing $i...";
-                if [ $i == perl ]; then
-                    make test -j4;
-                else
-                    make check -j4;
-                fi;
+                case $i in
+                    lzo )
+                        make check -j4;
+                        make test -j4;
+                        ;;
+                    perl )
+                        make test -j4;
+                        ;;
+                    * )
+                        make check -j4;
+                        ;;
+                esac;
                 break;
                 ;;
             n )
@@ -221,6 +284,9 @@ while true; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
+        if [ $i == ncompress ]; then
+            break;
+        fi;
         installCFlags="";
         read -p "Do you want to install $i? [y/n]: " answer;
         case $answer in
@@ -230,9 +296,15 @@ while true; do
                     bash )
                         make install CFLAGS="$installCFlags";
                         ;;
+                    bzip2 )
+                        make install -j4 PREFIX=$SYS_ROOT/$ARCH;
+                        ;;
                     jdk )
                         make images JOBS=4;
                         cp -f -r images/jdk/* $SYS_ROOT/$ARCH;
+                        ;;
+                    lz4 | zstd )
+                        make install -j4 CFLAGS="-fPIC" PREFIX=$SYS_ROOT/$ARCH;
                         ;;
                     * )
                         make install -j4 CFLAGS="$installCFlags";
@@ -253,7 +325,7 @@ while true; do
         esac;
     done;
     while true; do
-        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
+        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == lzo ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
             break;
         fi;
 	cd $SYS_ROOT/$ARCH
@@ -272,6 +344,9 @@ while true; do
                     bison )
                         stuffToCleanInBin=(bison);
                         ;;
+                    bzip2 )
+                        stuffToCleanInBin=(bunzip2 bzcat bzip2);
+                        ;;
                     cmake )
                         stuffToCleanInBin=(cmake ctest);
                         ;;
@@ -285,14 +360,29 @@ while true; do
                     gettext )
                         stuffToCleanInBin=(envsubst gettext gettextize msgattrib msgcmt msgcomm msgconv msgen msgexec msgdilter msgfmt msggrep msginit msgmerge msgunfmt msguniq ngettext recode-sr-latin xgettext);
                         ;;
+                    gzip )
+                        stuffToCleanInBin=(gzip);
+                        ;;
                     jdk )
                         stuffToCleanInBin=(jar jarsigner java javac javadoc javap jcmd jconsole jdb jdeprscan jdeps jfr jhsdb jimage jinfo jlink jmap jmod jpackage jps jrunscript jshell jstack jstat jstatd jwebserver keytool rmiregistry serialver);
+                        ;;
+                    lz4 )
+                        stuffToCleanInBin=(lz4);
+                        ;;
+                    lzip )
+                        stuffToCleanInBin=(lzip);
+                        ;;
+                    lzma )
+                        stuffToCleanInBin=(lzma lzmadec lzmainfo);
                         ;;
                     m4 )
                         stuffToCleanInBin=(m4);
                         ;;
                     make )
                         stuffToCleanInBin=(make);
+                        ;;
+                    ncompress )
+                        stuffToCleanInBin=(compress compress.old uncompress  zcat);
                         ;;
                     ncurses )
                         stuffToCleanInBin=(infocmp tic toe tput tset);
@@ -302,6 +392,15 @@ while true; do
                         ;;
                     python )
                         stuffToCleanInBin=(python3.12);
+                        ;;
+                    tar )
+                        stuffToCleanInBin=(tar);
+                        ;;
+                    xz )
+                        stuffToCleanInBin=(xz xzdec);
+                        ;;
+                    zstd )
+                        stuffToCleanInBin=(zstd);
                         ;;
                 esac;
                 for j in ${stuffToCleanInArch[@]}; do

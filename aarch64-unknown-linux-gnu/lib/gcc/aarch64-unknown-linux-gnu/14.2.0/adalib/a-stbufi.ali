@@ -80,7 +80,7 @@ D s-finroo.ads		20240801081713 4ff27390 system.finalization_root%s
 D s-linux.ads		20240801081713 34850a8c system.linux%s
 D s-memory.ads		20240801081713 18949c1a system.memory%s
 D s-multip.ads		20240801081713 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20241003115714 b7943734 system.os_constants%s
+D s-oscons.ads		20241008015703 b7943734 system.os_constants%s
 D s-osinte.ads		20240801081713 e4f53740 system.os_interface%s
 D s-os_lib.ads		20240801081713 a2467c22 system.os_lib%s
 D s-parame.ads		20240801081713 3597fc11 system.parameters%s
