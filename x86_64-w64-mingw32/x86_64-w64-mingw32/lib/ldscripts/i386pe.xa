@@ -4,7 +4,7 @@
    are permitted in any medium without royalty provided the copyright
    notice and this notice are preserved.  */
 OUTPUT_FORMAT(pei-i386)
-SEARCH_DIR("=/opt/skyhammer/x86_64-w64-mingw32/x86_64-w64-mingw32/lib");
+SEARCH_DIR("/opt/skyhammer/x86_64-w64-mingw32/x86_64-w64-mingw32/lib");
 SECTIONS
 {
   /* Make the virtual address and file offset synced if the alignment is

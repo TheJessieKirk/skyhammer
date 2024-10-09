@@ -17,7 +17,7 @@ old_library='libmpfr.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/master_keyholder/skyhammer/x86_64-w64-mingw32/lib =/opt/skyhammer/x86_64-w64-mingw32/lib/libgmp.la'
+dependency_libs=' -L/home/master_keyholder/skyhammer/x86_64-w64-mingw32/lib /opt/skyhammer/x86_64-w64-mingw32/lib/libgmp.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

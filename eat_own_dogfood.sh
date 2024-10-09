@@ -6,12 +6,15 @@ PACKAGER="Skyhammer";
 PACKAGE_VERSION="0.1.0";
 PKG_VERSION="$PACKAGER-$PACKAGE_VERSION";
 SYS_ROOT=/opt/skyhammer;
+TARGET=$ARCH;
 
-export PATH=$SYS_ROOT/$ARCH/bin:$PATH;
+OLD_PATH=$PATH;
+export PATH=$SYS_ROOT/$ARCH/bin:$OLD_PATH;
 
 #newlib is removed due to breaking libc builds
 #jansson is removed due to failing it's tests
 STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libatomic_ops gc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake ncompress gzip bzip2 lzip lzo lzop lzma xz lz4 zstd tar);
+STUFF_TO_BUILD_FOR_WINDOWS=(gmp isl mpfr mpc mingw-w64 binutils gcc);
 
 echo "Skyhammer";
 echo "Eating my own dogfood...";
@@ -30,6 +33,31 @@ if [ ! -d "tmp/builds" ]; then
     echo "tmp/builds does not exist. Skyhammer will create it.";
     mkdir tmp/builds;
 fi;
+
+while true; do
+    read -p "Do you want to build for a Microsoft Windows target? [y/n]: " answer;
+    case $answer in
+        y )
+            echo "Target set to x86_64-mingw32-w64.";
+            TARGET=x86_64-w64-mingw32;
+            STUFF_TO_BUILD="";
+            STUFF_TO_BUILD=${STUFF_TO_BUILD_FOR_WINDOWS[@]};
+            export PATH=$SYS_ROOT/$ARCH/bin:$SYS_ROOT/$TARGET/bin:$OLD_PATH;
+            break;
+            ;;
+        n)
+            echo "No target set.";
+            break;
+            ;;
+        stop )
+            echo "Skyhammer is stopping...";
+            exit;
+            ;;
+        * )
+            echo "Please answer 'y' or 'n'.";
+            ;;
+    esac;
+done;
 
 for i in ${STUFF_TO_BUILD[@]}; do
 while true; do
@@ -72,7 +100,7 @@ while true; do
                 ;;
         esac;
         case $i in
-            autoconf | automake | bison | dejagnu | dmalloc | libffi | libtool | m4 | make )
+            autoconf | automake | bison | dejagnu | dmalloc | libffi | libtool | make )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
                 ;;
             bash )
@@ -80,14 +108,17 @@ while true; do
                 configureCFlags="-Wno-implicit-function-declaration";
                 ;;
             binutils )
-                #supports jansson with options
-                #configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-isl-version-check --enable-checking --enable-gold --enable-install-libbfd --enable-install-libiberty --enable-plugins --enable-shared --enable-static --enable-gprofng --enable-ld --enable-host-shared --enable-libada --enable-libgm2 --enable-libssp --enable-lto --enable-objc-gc --enable-vtable-verify --enable-year2038 --with-bugurl=$BUG_URL --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-jdk=$SYS_ROOT/$ARCH --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH --with-pkgversion=GNU-Binutils-$PKG_VERSION --with-system-zlib --with-target-bdw-gc=$SYS_ROOT/$ARCH";
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-isl-version-check --enable-checking --enable-install-libbfd --enable-install-libiberty --enable-plugins --enable-shared --enable-static --enable-gprofng --enable-ld --enable-host-shared --enable-libada --enable-libgm2 --enable-libssp --enable-lto --enable-objc-gc --enable-vtable-verify --enable-year2038 --with-bugurl=$BUG_URL --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-jdk=$SYS_ROOT/$ARCH --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH --with-pkgversion=GNU-Binutils-$PKG_VERSION --with-system-zlib --with-target-bdw-gc=$SYS_ROOT/$ARCH";
+                if [ $TARGET == x86_64-w64-mingw32 ]; then
+                    configureOptions="--build=$ARCH --target=$TARGET --prefix=$SYS_ROOT/$TARGET --disable-isl-version-check --enable-checking --enable-install-libbfd --enable-install-libiberty --enable-plugins --enable-shared --enable-static --enable-gprofng --enable-ld --enable-host-shared --enable-libada --enable-libgm2 --enable-libssp --enable-lto --enable-objc-gc --enable-vtable-verify --enable-year2038 --with-bugurl=$BUG_URL --with-gmp=$SYS_ROOT/$TARGET --with-isl=$SYS_ROOT/$TARGET --with-jdk=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$TARGET --with-mpfr=$SYS_ROOT/$TARGET --with-pkgversion=GNU-Binutils-$PKG_VERSION";
+                else
+                    #supports jansson with options
+                    configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-isl-version-check --enable-checking --enable-install-libbfd --enable-install-libiberty --enable-plugins --enable-shared --enable-static --enable-gprofng --enable-ld --enable-host-shared --enable-libada --enable-libgm2 --enable-libssp --enable-lto --enable-objc-gc --enable-vtable-verify --enable-year2038 --with-bugurl=$BUG_URL --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-jdk=$SYS_ROOT/$ARCH --with-libiconv-prefix=$SYS_ROOT/$ARCH --with-libintl-prefix=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH --with-pkgversion=GNU-Binutils-$PKG_VERSION --with-system-zlib --with-target-bdw-gc=$SYS_ROOT/$ARCH";
+                fi;
                 ;;
             cmake )
                 configureOptions="--prefix=$SYS_ROOT/$ARCH";
                 ;;
-            flex | gmp )
+            flex )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
                 ;;
             gc )
@@ -95,13 +126,28 @@ while true; do
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --disable-gcj-support --enable-cplusplus --enable-dependency-tracking --enable-gc-assertions --enable-gcov --enable-static --enable-threads=pthreads --with-aix-soname=both --with-gnu-ld --with-libatomic-ops=yes --with-sysroot=$SYS_ROOT/$ARCH";
                 ;;
             gcc )
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                if [ $TARGET == x86_64-w64-mingw32 ]; then
+                    configureOptions="--build=$ARCH --target=$TARGET --prefix=$SYS_ROOT/$TARGET --enable-languages=ada,c,c++,d,fortran,lto,m2,objc,obj-c++,rust --enable-shared --enable-static --with-sysroot=$SYS_ROOT/$TARGET";
+                else
+                    configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-isl=$SYS_ROOT/$ARCH --with-mpc=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                fi;
+                ;;
+            gmp )
+                if [ $TARGET == x86_64-w64-mingw32 ]; then
+                    configureOptions="--build=$ARCH --host=$TARGET --prefix=$SYS_ROOT/$TARGET --enable-static --with-sysroot=$SYS_ROOT/$TARGET";
+                else
+                    configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
+                fi;
                 ;;
             gzip )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --oldincludedir=$SYS_ROOT/$ARCH";
                 ;;
             isl )
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
+                if [ $TARGET == x86_64-w64-mingw32 ]; then
+                    configureOptions="--build=$ARCH --host=$TARGET --prefix=$SYS_ROOT/$TARGET --disable-shared --enable-static --with-gmp-prefix=$SYS_ROOT/$TARGET";
+                else
+                    configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static";
+                fi;
                 ;;
             jansson )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --with-aix-soname=both --with-gnu-ld --with-sysroot=$SYS_ROOT/$ARCH";
@@ -124,11 +170,26 @@ while true; do
             lzop )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking";
                 ;;
+            m4 )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
+                ;;
+            mingw-w64 )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$TARGET --host=$TARGET";
+                configureCFlags="-Wno-expansion-to-defined";
+                ;;
             mpc )
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                if [ $TARGET == x86_64-w64-mingw32 ]; then
+                    configureOptions="--build=$ARCH --host=$TARGET --prefix=$SYS_ROOT/$TARGET --disable-shared --enable-static --with-gmp=$SYS_ROOT/$TARGET --with-mpfr=$SYS_ROOT/$TARGET";
+                else
+                    configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH --with-mpfr=$SYS_ROOT/$ARCH";
+                fi;
                 ;;
             mpfr )
-                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
+                if [ $TARGET == x86_64-w64-mingw32 ]; then
+                    configureOptions="--build=$ARCH --host=$TARGET --prefix=$SYS_ROOT/$TARGET --disable-shared --enable-static --with-gmp=$SYS_ROOT/$TARGET";
+                else
+                    configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-shared --enable-static --with-gmp=$SYS_ROOT/$ARCH";
+                fi;
                 ;;
             ncurses )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --includedir=$SYS_ROOT/$ARCH/include --oldincludedir=$SYS_ROOT/$ARCH/include --with-cxx-shared --with-pkg-config --with-profile --with-shared";
@@ -249,6 +310,9 @@ while true; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
+        if [ $TARGET=x86_64-w64-mingw32 ]; then
+            break;
+        fi;
         if [ $i == bzip2 ] || [ $i == cmake ] || [ $i == jdk ] || [ $i == lzop ] || [ $i == ncompress ] || [ $i == ncurses ] || [ $i == python ]; then
             break;
         fi;
@@ -325,10 +389,14 @@ while true; do
         esac;
     done;
     while true; do
-        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == lzo ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
+        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == lzo ] || [ $i == mingw-w64 ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
             break;
         fi;
-	cd $SYS_ROOT/$ARCH
+        if [ $TARGET == x86_64-w64-mingw32 ]; then
+            cd $SYS_ROOT/$TARGET
+        else
+ 	    cd $SYS_ROOT/$ARCH
+        fi;
         read -p "Do you want to clean $i? [y/n]: " answer;
         case $answer in
             y )
@@ -338,8 +406,13 @@ while true; do
                 stuffToCleanInLibExec="";
                 case $i in
                     binutils )
-                        stuffToCleanInBin=(addr2line ar as c++filt elfedit gcov gcov-dump gcov-tool gp-archive gp-collect-app gp-display-src gp-display-text gprof gprofng ld ld.bfd lto-dump nm objcopy objdump ranlib readelf size strings);
-                        stuffToCleanInArch=(ar as ld ld.bfd objcopy objdump ranlib readelf);
+                        if [ $TARGET == x86_64-w64-mingw32 ]; then
+                            stuffToCleanInBin=($TARGET-addr2line $TARGET-ar $TARGET-as $TARGET-c++filt $TARGET-dlltool $TARGET-dllwrap $TARGET-elfedit $TARGET-gcov $TARGET-gcov-dump $TARGET-gcov-tool $TARGET-gprof $TARGET-ld $TARGET-ld.bfd $TARGET-lto-dump $TARGET-nm $TARGET-objcopy $TARGET-objdump $TARGET-ranlib $TARGET-readelf $TARGET-size $TARGET-strings $TARGET-windmc $TARGET-windres);
+                            stuffToCleanInArch=(ar as dlltool ld ld.bfd nm objcopy objdump ranlib readelf);
+                        else
+                            stuffToCleanInBin=(addr2line ar as c++filt elfedit gcov gcov-dump gcov-tool gp-archive gp-collect-app gp-display-src gp-display-text gprof gprofng ld ld.bfd lto-dump nm objcopy objdump ranlib readelf size strings);
+                            stuffToCleanInArch=(ar as ld ld.bfd objcopy objdump ranlib readelf);
+                        fi;
                         ;;
                     bison )
                         stuffToCleanInBin=(bison);
@@ -354,8 +427,13 @@ while true; do
                         stuffToCleanInBin=(flex);
                         ;;
                     gcc )
-                        stuffToCleanInBin=($ARCH-c++ $ARCH-g++ $ARCH-gcc $ARCH-gcc-14.2.0 $ARCH-gcc-ar $ARCH-gcc-nm $ARCH-gcc-ranlib $ARCH-gccgo $ARCH-gdc $ARCH-gfortran $ARCH-gm2 c++ g++ gcc gcc-ar gcc-nm gcc-ranlib gccgo gccrs gdc gfortran gm2 gnat gnatbind gnatchop gnatclean gnatkr gnatlink gnatls gnatmake gnatprep go gofmt);
-                        stuffToCleanInLibExec=(buildid cc1 cc1gm2 cc1obj cc1objplus cc1plus cgo collect2 crab1 d21 f951 g++-mapper-server gnat1 go1 lto-wrapper lto1 test2json vet);
+                        if [ $TARGET == x86_64-w64-mingw32 ]; then
+                            stuffToCleanInBin=($TARGET-c++ $TARGET-g++ $TARGET-gcc $TARGET-gcc-14.2.0 $TARGET-gcc-ar $TARGET-gcc-nm $TARGET-gcc-ranlib $TARGET-gdc $TARGET-gfortran $TARGET-gm2);
+                            stuffToCleanInLibExec=(cc1 cc1gm2 cc1obj cc1objplus cc1plus collect2 crab1 d21 f951 g++-mapper-server gnat1 lto-wrapper lto1);
+                        else
+                            stuffToCleanInBin=($ARCH-c++ $ARCH-g++ $ARCH-gcc $ARCH-gcc-14.2.0 $ARCH-gcc-ar $ARCH-gcc-nm $ARCH-gcc-ranlib $ARCH-gccgo $ARCH-gdc $ARCH-gfortran $ARCH-gm2 c++ g++ gcc gcc-ar gcc-nm gcc-ranlib gccgo gccrs gdc gfortran gm2 gnat gnatbind gnatchop gnatclean gnatkr gnatlink gnatls gnatmake gnatprep go gofmt);
+                            stuffToCleanInLibExec=(buildid cc1 cc1gm2 cc1obj cc1objplus cc1plus cgo collect2 crab1 d21 f951 g++-mapper-server gnat1 go1 lto-wrapper lto1 test2json vet);
+                        fi;
                         ;;
                     gettext )
                         stuffToCleanInBin=(envsubst gettext gettextize msgattrib msgcmt msgcomm msgconv msgen msgexec msgdilter msgfmt msggrep msginit msgmerge msgunfmt msguniq ngettext recode-sr-latin xgettext);
@@ -404,13 +482,21 @@ while true; do
                         ;;
                 esac;
                 for j in ${stuffToCleanInArch[@]}; do
-                    strip $ARCH/bin/$j;
+                    if [ $TARGET = x86_64-w64-mingw32 ]; then
+                        strip $TARGET/bin/$j;
+                    else
+                        strip $ARCH/bin/$j;
+                    fi;
                 done
                 for j in ${stuffToCleanInBin[@]}; do
                     strip bin/$j;
                 done
                 for j in ${stuffToCleanInLibExec[@]}; do
-                    strip libexec/gcc/$ARCH/14.2.0/$j;
+                    if [ $TARGET = x86_64-w64-mingw32 ]; then
+                        strip libexec/gcc/$TARGET/14.2.0/$j;
+                    else
+                        strip libexec/gcc/$ARCH/14.2.0/$j;
+                    fi;
                 done
                 break;
                 ;;

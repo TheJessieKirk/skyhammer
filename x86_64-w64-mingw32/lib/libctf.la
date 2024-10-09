@@ -17,7 +17,7 @@ old_library='libctf.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/master_keyholder/skyhammer/tmp/builds/binutils/libctf/../libiberty/pic '/opt/skyhammer/x86_64-w64-mingw32/aarch64-unknown-linux-gnu/x86_64-w64-mingw32/lib'/libbfd.la -L/home/master_keyholder/skyhammer/tmp/builds/binutils/bfd/../libiberty/pic -L/home/master_keyholder/skyhammer/tmp/builds/binutils/zlib '/opt/skyhammer/x86_64-w64-mingw32/lib'/libsframe.la -liberty -lz'
+dependency_libs=' -L/opt/skyhammer/tmp/builds/binutils/libctf/../libiberty/pic '/opt/skyhammer/x86_64-w64-mingw32/aarch64-unknown-linux-gnu/x86_64-w64-mingw32/lib'/libbfd.la -L/opt/skyhammer/tmp/builds/binutils/bfd/../libiberty/pic -L/opt/skyhammer/tmp/builds/binutils/zlib -lzstd '/opt/skyhammer/x86_64-w64-mingw32/lib'/libsframe.la -liberty -lz'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

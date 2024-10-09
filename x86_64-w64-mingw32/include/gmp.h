@@ -2332,7 +2332,7 @@ enum
 
 /* Define CC and CFLAGS which were used to build this version of GMP */
 #define __GMP_CC "x86_64-w64-mingw32-gcc"
-#define __GMP_CFLAGS "-O2 -pedantic -fomit-frame-pointer -m64 -mtune=k8 -march=k8"
+#define __GMP_CFLAGS ""
 
 /* Major version number is the value of __GNU_MP__ too, above. */
 #define __GNU_MP_VERSION            6
