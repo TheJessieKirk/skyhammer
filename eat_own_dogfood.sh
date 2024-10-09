@@ -310,7 +310,7 @@ while true; do
     done;
     while true; do
 	cd $SYS_ROOT/tmp/builds/$i;
-        if [ $TARGET=x86_64-w64-mingw32 ]; then
+        if [ $TARGET == x86_64-w64-mingw32 ]; then
             break;
         fi;
         if [ $i == bzip2 ] || [ $i == cmake ] || [ $i == jdk ] || [ $i == lzop ] || [ $i == ncompress ] || [ $i == ncurses ] || [ $i == python ]; then
@@ -469,7 +469,7 @@ while true; do
                         stuffToCleanInBin=(perl perl5.40.0);
                         ;;
                     python )
-                        stuffToCleanInBin=(python3.12);
+                        stuffToCleanInBin=(python3.13);
                         ;;
                     tar )
                         stuffToCleanInBin=(tar);

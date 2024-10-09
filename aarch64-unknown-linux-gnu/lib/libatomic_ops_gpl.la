@@ -8,7 +8,7 @@
 dlname='libatomic_ops_gpl.so.1'
 
 # Names of this library.
-library_names='libatomic_ops_gpl.so.1.2.0 libatomic_ops_gpl.so.1 libatomic_ops_gpl.so'
+library_names='libatomic_ops_gpl.so.1.2.1 libatomic_ops_gpl.so.1 libatomic_ops_gpl.so'
 
 # The name of the static archive.
 old_library='libatomic_ops_gpl.a'
@@ -25,7 +25,7 @@ weak_library_names=''
 # Version information for libatomic_ops_gpl.
 current=3
 age=2
-revision=0
+revision=1
 
 # Is this an already installed library?
 installed=yes
