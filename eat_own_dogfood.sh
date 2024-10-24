@@ -8,12 +8,12 @@ PKG_VERSION="$PACKAGER-$PACKAGE_VERSION";
 SYS_ROOT=/opt/skyhammer;
 TARGET=$ARCH;
 
-OLD_PATH=$PATH;
-export PATH=$SYS_ROOT/$ARCH/bin:$OLD_PATH;
+export PATH=$SYS_ROOT/$ARCH/bin;
 
-#newlib is removed due to breaking libc builds
+#grep is removed as it needs eperf to build
+#newlib, gettext and indent are removed due to breaking libc builds
 #jansson is removed due to failing it's tests
-STUFF_TO_BUILD=(jdk perl python make automake autoconf m4 flex bison bash gmp isl mpfr mpc libatomic_ops gc libffi zlib dejagnu dmalloc libtool ncurses binutils gcc cmake ncompress gzip bzip2 lzip lzo lzop lzma xz lz4 zstd tar);
+STUFF_TO_BUILD=(tar jdk perl help2man python make automake autoconf m4 flex bison bash gperf pkg-config sed gmp isl mpfr mpc cryptlib libatomic_ops gc libffi zlib dejagnu dmalloc gawk grep libtool ncurses binutils coreutils diffutils findutils gawk gcc cmake ncompress gzip bzip2 lzip lzo lzop lzma xz lz4 zstd tar);
 STUFF_TO_BUILD_FOR_WINDOWS=(gmp isl mpfr mpc mingw-w64 binutils gcc);
 
 echo "Skyhammer";
@@ -89,7 +89,7 @@ while true; do
         configureOptions="";
         configureCFlags="";
         case $i in
-            bzip2 | lz4 | zstd )
+            bzip2 | cryptlib | lz4 | zstd )
                 read -p "Do you want to copy $i source files ready for building? [y/n]: " answer;
                 ;;
             ncompress )
@@ -100,7 +100,7 @@ while true; do
                 ;;
         esac;
         case $i in
-            autoconf | automake | bison | dejagnu | dmalloc | libffi | libtool | make )
+            autoconf | automake | bison | coreutils | dejagnu | diffutils | dmalloc | findutils | gawk | grep | gperf | guile | indent | libffi | libtool | make | sed )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH";
                 ;;
             bash )
@@ -141,6 +141,9 @@ while true; do
                 ;;
             gzip )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-dependency-tracking --oldincludedir=$SYS_ROOT/$ARCH";
+                ;;
+            help2man )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-nls";
                 ;;
             isl )
                 if [ $TARGET == x86_64-w64-mingw32 ]; then
@@ -199,7 +202,10 @@ while true; do
                 configureOptions="--build=$ARCH --host=$ARCH --target=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-newlib-iconv --enable-newlib-multithread";
                 ;;
             perl )
-                configureOptions="-des -Dprefix=$SYS_ROOT/$ARCH -Dcc=gcc -Dmksymlinks";
+                configureOptions="-Dprefix=$SYS_ROOT/$ARCH -Dcc=gcc -Dmksymlinks";
+                ;;
+            pkg-config )
+                configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --with-internal-glib";
                 ;;
             python )
                 configureOptions="--build=$ARCH --prefix=$SYS_ROOT/$ARCH --enable-optimizations --enable-shared";
@@ -233,7 +239,7 @@ while true; do
                 fi;
                 cd $i;
                 case $i in
-                    bzip2 | lz4 | zstd )
+                    bzip2 | cryptlib | lz4 | zstd )
                         cp -r ../../../src/$i*/* .;
                         ;;
                     newlib )
@@ -281,6 +287,10 @@ while true; do
                     bash )
                         make CFLAGS="$makeCFlags";
                         ;;
+                    cryptlib )
+                        make;
+                        make shared;
+                        ;;
                     jdk )
                         make JOBS=4;
                         ;;
@@ -321,6 +331,10 @@ while true; do
             y )
                 echo "Skyhammer is testing $i...";
                 case $i in
+                    cryptlib )
+                        make testlib;
+                        make stestlib;
+                        ;;
                     lzo )
                         make check -j4;
                         make test -j4;
@@ -363,6 +377,9 @@ while true; do
                     bzip2 )
                         make install -j4 PREFIX=$SYS_ROOT/$ARCH;
                         ;;
+                    cryptlib )
+                        cp -f libcl.a $SYS_ROOT/$ARCH/lib;
+                        ;;
                     jdk )
                         make images JOBS=4;
                         cp -f -r images/jdk/* $SYS_ROOT/$ARCH;
@@ -389,7 +406,7 @@ while true; do
         esac;
     done;
     while true; do
-        if [ $i == autoconf ] || [ $i == automake ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == lzo ] || [ $i == mingw-w64 ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
+        if [ $i == autoconf ] || [ $i == automake ] || [ $i == cryptlib ] || [ $i == dejagnu ] || [ $i == gc ] || [ $i == gmp ] || [ $i == isl ] || [ $i == libatomic_ops ] || [ $i == libffi ] || [ $i == libtool ] || [ $i == lzo ] || [ $i == mingw-w64 ] || [ $i == mpc ] || [ $i == mpfr ] || [ $i == zlib ]; then
             break;
         fi;
         if [ $TARGET == x86_64-w64-mingw32 ]; then
@@ -423,8 +440,20 @@ while true; do
                     cmake )
                         stuffToCleanInBin=(cmake ctest);
                         ;;
+                    coreutils )
+                        stuffToCleanInBin=(b2sum base32 base64 basename basenc cat chcon chgrp chmod chown chroot cksum comm cp csplit cut date dd df dir dircolors dirname du echo env expand expr factor false fmt fold groups head hostid id install join kill link ln logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc numfmt od paste pathchk pinky pr printenv printf ptx pwd readlink realpath rm rmdir runcon sha1sum sha224sum sha256sum sha384sum sha512sum shred shuf sleep sort split stat stdbuf stty sum sync tac tail tee test timeout touch tr true truncate tsort tty uname unexpand uniq unlink uptime users vdir wc who whoami yes);
+                        ;;
+                    diffutils )
+                        stuffToCleanInBin=(cmp diff diff3 sdiff);
+                        ;;
+                    findutils )
+                        stuffToCleanInBin=(find xargs);
+                        ;;
                     flex )
                         stuffToCleanInBin=(flex);
+                        ;;
+                    gawk )
+                        stuffToCleanInBin=(gawk gawk-5.3.1);
                         ;;
                     gcc )
                         if [ $TARGET == x86_64-w64-mingw32 ]; then
@@ -437,6 +466,12 @@ while true; do
                         ;;
                     gettext )
                         stuffToCleanInBin=(envsubst gettext gettextize msgattrib msgcmt msgcomm msgconv msgen msgexec msgdilter msgfmt msggrep msginit msgmerge msgunfmt msguniq ngettext recode-sr-latin xgettext);
+                        ;;
+                    gperf )
+                        stuffToCleanInBin=(gperf);
+                        ;;
+                    grep )
+                        stuffToCleanInBin=(grep);
                         ;;
                     gzip )
                         stuffToCleanInBin=(gzip);
@@ -468,8 +503,14 @@ while true; do
                     perl )
                         stuffToCleanInBin=(perl perl5.40.0);
                         ;;
+                    pkg-config )
+                        stuffToCleanInBin=(pkg-config);
+                        ;;
                     python )
                         stuffToCleanInBin=(python3.13);
+                        ;;
+                    sed )
+                        stuffToCleanInBin=(sed);
                         ;;
                     tar )
                         stuffToCleanInBin=(tar);

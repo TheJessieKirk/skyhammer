@@ -129,7 +129,7 @@
 #define HAVE_BUILTIN_ATOMIC 1
 
 /* Define to 1 if you have the <bzlib.h> header file. */
-#define HAVE_BZLIB_H 1
+/* #undef HAVE_BZLIB_H */
 
 /* Define to 1 if you have the 'chflags' function. */
 /* #undef HAVE_CHFLAGS */

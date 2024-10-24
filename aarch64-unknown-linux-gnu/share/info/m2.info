@@ -2767,13 +2767,8 @@ File: m2.info,  Node: The PIM system module,  Next: The ISO system module,  Prev
      DEFINITION MODULE SYSTEM ;
 
      EXPORT QUALIFIED BITSPERBYTE, BYTESPERWORD,
-                      LOC, WORD, BYTE, ADDRESS, INTEGER8,
-                      INTEGER16, INTEGER32, INTEGER64, CARDINAL8,
-                      CARDINAL16, CARDINAL32, CARDINAL64, WORD16,
-                      WORD32, WORD64, BITSET8, BITSET16,
-                      BITSET32, REAL32, REAL64, REAL128,
-                      COMPLEX32, COMPLEX64, COMPLEX128, CSIZE_T,
-                      CSSIZE_T,
+                      ADDRESS, WORD, BYTE, CSIZE_T, CSSIZE_T, (*
+                      Target specific data types.  *)
                       ADR, TSIZE, ROTATE, SHIFT, THROW, TBITSIZE ;
                       (* SIZE is also exported if -fpim2 is used.  *)
 
@@ -2798,32 +2793,7 @@ File: m2.info,  Node: The PIM system module,  Next: The ISO system module,  Prev
 
      (* The following types are supported on this target:
      TYPE
-        LOC ;
-        WORD ;
-        BYTE ;
-        ADDRESS ;
-        INTEGER8 ;
-        INTEGER16 ;
-        INTEGER32 ;
-        INTEGER64 ;
-        CARDINAL8 ;
-        CARDINAL16 ;
-        CARDINAL32 ;
-        CARDINAL64 ;
-        WORD16 ;
-        WORD32 ;
-        WORD64 ;
-        BITSET8 ;
-        BITSET16 ;
-        BITSET32 ;
-        REAL32 ;
-        REAL64 ;
-        REAL128 ;
-        COMPLEX32 ;
-        COMPLEX64 ;
-        COMPLEX128 ;
-        CSIZE_T ;
-        CSSIZE_T ;
+        (* Target specific data types.  *)
      *)
 
 
@@ -3001,13 +2971,8 @@ File: m2.info,  Node: The ISO system module,  Next: Release map,  Prev: The PIM 
        (* The constants and types define underlying properties of storage *)
 
      EXPORT QUALIFIED BITSPERLOC, LOCSPERWORD,
-                      LOC, ADDRESS, BYTE, WORD, INTEGER8,
-                      INTEGER16, INTEGER32, INTEGER64, CARDINAL8,
-                      CARDINAL16, CARDINAL32, CARDINAL64, WORD16,
-                      WORD32, WORD64, BITSET8, BITSET16,
-                      BITSET32, REAL32, REAL64, REAL128,
-                      COMPLEX32, COMPLEX64, COMPLEX128, CSIZE_T,
-                      CSSIZE_T,
+                      LOC, BYTE, WORD, ADDRESS, CSIZE_T, CSSIZE_T, (*
+                      Target specific data types.  *)
                       ADDADR, SUBADR, DIFADR, MAKEADR, ADR, ROTATE,
                       SHIFT, CAST, TSIZE,
 
@@ -3043,32 +3008,7 @@ File: m2.info,  Node: The ISO system module,  Next: Release map,  Prev: The PIM 
         ===============================================================
 
      TYPE
-        LOC ;
-        ADDRESS ;
-        BYTE ;
-        WORD ;
-        INTEGER8 ;
-        INTEGER16 ;
-        INTEGER32 ;
-        INTEGER64 ;
-        CARDINAL8 ;
-        CARDINAL16 ;
-        CARDINAL32 ;
-        CARDINAL64 ;
-        WORD16 ;
-        WORD32 ;
-        WORD64 ;
-        BITSET8 ;
-        BITSET16 ;
-        BITSET32 ;
-        REAL32 ;
-        REAL64 ;
-        REAL128 ;
-        COMPLEX32 ;
-        COMPLEX64 ;
-        COMPLEX128 ;
-        CSIZE_T ;
-        CSSIZE_T ;
+        (* Target specific data types.  *)
 
      TYPE
        LOC; (* A system basic type. Values are the uninterpreted
@@ -7420,13 +7360,8 @@ File: m2.info,  Node: gm2-libs/SYSTEM,  Next: gm2-libs/Scan,  Prev: gm2-libs/SMa
      DEFINITION MODULE SYSTEM ;
 
      EXPORT QUALIFIED BITSPERBYTE, BYTESPERWORD,
-                      LOC, WORD, BYTE, ADDRESS, INTEGER8,
-                      INTEGER16, INTEGER32, INTEGER64, CARDINAL8,
-                      CARDINAL16, CARDINAL32, CARDINAL64, WORD16,
-                      WORD32, WORD64, BITSET8, BITSET16,
-                      BITSET32, REAL32, REAL64, REAL128,
-                      COMPLEX32, COMPLEX64, COMPLEX128, CSIZE_T,
-                      CSSIZE_T,
+                      ADDRESS, WORD, BYTE, CSIZE_T, CSSIZE_T, (*
+                      Target specific data types.  *)
                       ADR, TSIZE, ROTATE, SHIFT, THROW, TBITSIZE ;
                       (* SIZE is also exported if -fpim2 is used.  *)
 
@@ -7451,32 +7386,7 @@ File: m2.info,  Node: gm2-libs/SYSTEM,  Next: gm2-libs/Scan,  Prev: gm2-libs/SMa
 
      (* The following types are supported on this target:
      TYPE
-        LOC ;
-        WORD ;
-        BYTE ;
-        ADDRESS ;
-        INTEGER8 ;
-        INTEGER16 ;
-        INTEGER32 ;
-        INTEGER64 ;
-        CARDINAL8 ;
-        CARDINAL16 ;
-        CARDINAL32 ;
-        CARDINAL64 ;
-        WORD16 ;
-        WORD32 ;
-        WORD64 ;
-        BITSET8 ;
-        BITSET16 ;
-        BITSET32 ;
-        REAL32 ;
-        REAL64 ;
-        REAL128 ;
-        COMPLEX32 ;
-        COMPLEX64 ;
-        COMPLEX128 ;
-        CSIZE_T ;
-        CSSIZE_T ;
+        (* Target specific data types.  *)
      *)
 
 
@@ -12143,13 +12053,8 @@ File: m2.info,  Node: gm2-libs-coroutines/SYSTEM,  Next: gm2-libs-coroutines/Tim
      FROM COROUTINES IMPORT PROTECTION ;
 
      EXPORT QUALIFIED (* the following are built into the compiler: *)
-                      LOC, WORD, BYTE, ADDRESS, INTEGER8,
-                      INTEGER16, INTEGER32, INTEGER64, CARDINAL8,
-                      CARDINAL16, CARDINAL32, CARDINAL64, WORD16,
-                      WORD32, WORD64, BITSET8, BITSET16,
-                      BITSET32, REAL32, REAL64, REAL128,
-                      COMPLEX32, COMPLEX64, COMPLEX128, CSIZE_T,
-                      CSSIZE_T,
+                      ADDRESS, WORD, BYTE, CSIZE_T, CSSIZE_T, (*
+                      Target specific data types. *)
                       ADR, TSIZE, ROTATE, SHIFT, THROW, TBITSIZE,
                       (* SIZE is exported depending upon -fpim2 and
                          -fpedantic.  *)
@@ -12182,32 +12087,7 @@ File: m2.info,  Node: gm2-libs-coroutines/SYSTEM,  Next: gm2-libs-coroutines/Tim
         move into another module in the future.  *)
 
      (* The following types are supported on this target:
-        LOC ;
-        WORD ;
-        BYTE ;
-        ADDRESS ;
-        INTEGER8 ;
-        INTEGER16 ;
-        INTEGER32 ;
-        INTEGER64 ;
-        CARDINAL8 ;
-        CARDINAL16 ;
-        CARDINAL32 ;
-        CARDINAL64 ;
-        WORD16 ;
-        WORD32 ;
-        WORD64 ;
-        BITSET8 ;
-        BITSET16 ;
-        BITSET32 ;
-        REAL32 ;
-        REAL64 ;
-        REAL128 ;
-        COMPLEX32 ;
-        COMPLEX64 ;
-        COMPLEX128 ;
-        CSIZE_T ;
-        CSSIZE_T ;
+        (* Target specific data types.  *)
      *)
 
 
@@ -16283,13 +16163,8 @@ File: m2.info,  Node: gm2-libs-iso/SYSTEM,  Next: gm2-libs-iso/Semaphores,  Prev
        (* The constants and types define underlying properties of storage *)
 
      EXPORT QUALIFIED BITSPERLOC, LOCSPERWORD,
-                      LOC, ADDRESS, BYTE, WORD, INTEGER8,
-                      INTEGER16, INTEGER32, INTEGER64, CARDINAL8,
-                      CARDINAL16, CARDINAL32, CARDINAL64, WORD16,
-                      WORD32, WORD64, BITSET8, BITSET16,
-                      BITSET32, REAL32, REAL64, REAL128,
-                      COMPLEX32, COMPLEX64, COMPLEX128, CSIZE_T,
-                      CSSIZE_T,
+                      LOC, BYTE, WORD, ADDRESS, CSIZE_T, CSSIZE_T, (*
+                      Target specific data types.  *)
                       ADDADR, SUBADR, DIFADR, MAKEADR, ADR, ROTATE,
                       SHIFT, CAST, TSIZE,
 
@@ -16325,32 +16200,7 @@ File: m2.info,  Node: gm2-libs-iso/SYSTEM,  Next: gm2-libs-iso/Semaphores,  Prev
         ===============================================================
 
      TYPE
-        LOC ;
-        ADDRESS ;
-        BYTE ;
-        WORD ;
-        INTEGER8 ;
-        INTEGER16 ;
-        INTEGER32 ;
-        INTEGER64 ;
-        CARDINAL8 ;
-        CARDINAL16 ;
-        CARDINAL32 ;
-        CARDINAL64 ;
-        WORD16 ;
-        WORD32 ;
-        WORD64 ;
-        BITSET8 ;
-        BITSET16 ;
-        BITSET32 ;
-        REAL32 ;
-        REAL64 ;
-        REAL128 ;
-        COMPLEX32 ;
-        COMPLEX64 ;
-        COMPLEX128 ;
-        CSIZE_T ;
-        CSSIZE_T ;
+        (* Target specific data types.  *)
 
      TYPE
        LOC; (* A system basic type. Values are the uninterpreted
@@ -18294,27 +18144,21 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * Add:                                   gm2-libs/DynamicStrings.
                                                               (line 123)
 * ADDADR:                                The ISO system module.
-                                                              (line  94)
-* ADDADR <1>:                            gm2-libs-iso/SYSTEM. (line  94)
+                                                              (line  64)
+* ADDADR <1>:                            gm2-libs-iso/SYSTEM. (line  64)
 * AddLongOption:                         gm2-libs/GetOpt.     (line  68)
 * AddOperator (ebnf):                    EBNF.                (line  72)
-* ADDRESS (type):                        The PIM system module.
-                                                              (line  43)
-* ADDRESS (type) <1>:                    The ISO system module.
-                                                              (line  57)
-* ADDRESS (type) <2>:                    The ISO system module.
-                                                              (line  86)
-* ADDRESS (type) <3>:                    gm2-libs/SYSTEM.     (line  43)
-* ADDRESS (type) <4>:                    gm2-libs-iso/SYSTEM. (line  57)
-* ADDRESS (type) <5>:                    gm2-libs-iso/SYSTEM. (line  86)
+* ADDRESS (type):                        The ISO system module.
+                                                              (line  56)
+* ADDRESS (type) <1>:                    gm2-libs-iso/SYSTEM. (line  56)
 * ADR:                                   The PIM system module.
-                                                              (line  73)
+                                                              (line  43)
 * ADR <1>:                               The ISO system module.
-                                                              (line 129)
-* ADR <2>:                               gm2-libs/SYSTEM.     (line  73)
+                                                              (line  99)
+* ADR <2>:                               gm2-libs/SYSTEM.     (line  43)
 * ADR <3>:                               gm2-libs-coroutines/SYSTEM.
-                                                              (line 156)
-* ADR <4>:                               gm2-libs-iso/SYSTEM. (line 129)
+                                                              (line 126)
+* ADR <4>:                               gm2-libs-iso/SYSTEM. (line  99)
 * Again:                                 gm2-libs-log/FileSystem.
                                                               (line 168)
 * Alignment (ebnf):                      EBNF.                (line 124)
@@ -18439,30 +18283,12 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line 123)
 * bel (const):                           gm2-libs/ASCII.      (line  22)
 * BinToStr:                              gm2-libs/NumberIO.   (line  51)
-* BITSET16 (type):                       The PIM system module.
-                                                              (line  56)
-* BITSET16 (type) <1>:                   The ISO system module.
-                                                              (line  72)
-* BITSET16 (type) <2>:                   gm2-libs/SYSTEM.     (line  56)
-* BITSET16 (type) <3>:                   gm2-libs-iso/SYSTEM. (line  72)
-* BITSET32 (type):                       The PIM system module.
-                                                              (line  57)
-* BITSET32 (type) <1>:                   The ISO system module.
-                                                              (line  73)
-* BITSET32 (type) <2>:                   gm2-libs/SYSTEM.     (line  57)
-* BITSET32 (type) <3>:                   gm2-libs-iso/SYSTEM. (line  73)
-* BITSET8 (type):                        The PIM system module.
-                                                              (line  55)
-* BITSET8 (type) <1>:                    The ISO system module.
-                                                              (line  71)
-* BITSET8 (type) <2>:                    gm2-libs/SYSTEM.     (line  55)
-* BITSET8 (type) <3>:                    gm2-libs-iso/SYSTEM. (line  71)
 * BITSPERBYTE (const):                   The PIM system module.
-                                                              (line  20)
-* BITSPERBYTE (const) <1>:               gm2-libs/SYSTEM.     (line  20)
+                                                              (line  15)
+* BITSPERBYTE (const) <1>:               gm2-libs/SYSTEM.     (line  15)
 * BITSPERLOC (const):                    The ISO system module.
-                                                              (line  31)
-* BITSPERLOC (const) <1>:                gm2-libs-iso/SYSTEM. (line  31)
+                                                              (line  26)
+* BITSPERLOC (const) <1>:                gm2-libs-iso/SYSTEM. (line  26)
 * Block (ebnf):                          EBNF.                (line 364)
 * BlockAnd:                              gm2-libs-log/BitBlockOps.
                                                               (line  18)
@@ -18502,15 +18328,9 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line 201)
 * BufferedMode:                          gm2-libs/IO.         (line  36)
 * Builtin (ebnf):                        EBNF.                (line 350)
-* BYTE (type):                           The PIM system module.
-                                                              (line  42)
-* BYTE (type) <1>:                       The ISO system module.
-                                                              (line  58)
-* BYTE (type) <2>:                       The ISO system module.
-                                                              (line  92)
-* BYTE (type) <3>:                       gm2-libs/SYSTEM.     (line  42)
-* BYTE (type) <4>:                       gm2-libs-iso/SYSTEM. (line  58)
-* BYTE (type) <5>:                       gm2-libs-iso/SYSTEM. (line  92)
+* BYTE (type):                           The ISO system module.
+                                                              (line  62)
+* BYTE (type) <1>:                       gm2-libs-iso/SYSTEM. (line  62)
 * ByteAlignment (ebnf):                  EBNF.                (line 121)
 * ByteAnd:                               gm2-libs-log/BitByteOps.
                                                               (line  33)
@@ -18529,8 +18349,8 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * ByteShr:                               gm2-libs-log/BitByteOps.
                                                               (line  62)
 * BYTESPERWORD (const):                  The PIM system module.
-                                                              (line  21)
-* BYTESPERWORD (const) <1>:              gm2-libs/SYSTEM.     (line  21)
+                                                              (line  16)
+* BYTESPERWORD (const) <1>:              gm2-libs/SYSTEM.     (line  16)
 * ByteXor:                               gm2-libs-log/BitByteOps.
                                                               (line  47)
 * cabs:                                  Built-ins.           (line 181)
@@ -18588,30 +18408,6 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * carctanf <1>:                          gm2-libs/Builtins.   (line 177)
 * carctanl:                              Built-ins.           (line 232)
 * carctanl <1>:                          gm2-libs/Builtins.   (line 179)
-* CARDINAL16 (type):                     The PIM system module.
-                                                              (line  49)
-* CARDINAL16 (type) <1>:                 The ISO system module.
-                                                              (line  65)
-* CARDINAL16 (type) <2>:                 gm2-libs/SYSTEM.     (line  49)
-* CARDINAL16 (type) <3>:                 gm2-libs-iso/SYSTEM. (line  65)
-* CARDINAL32 (type):                     The PIM system module.
-                                                              (line  50)
-* CARDINAL32 (type) <1>:                 The ISO system module.
-                                                              (line  66)
-* CARDINAL32 (type) <2>:                 gm2-libs/SYSTEM.     (line  50)
-* CARDINAL32 (type) <3>:                 gm2-libs-iso/SYSTEM. (line  66)
-* CARDINAL64 (type):                     The PIM system module.
-                                                              (line  51)
-* CARDINAL64 (type) <1>:                 The ISO system module.
-                                                              (line  67)
-* CARDINAL64 (type) <2>:                 gm2-libs/SYSTEM.     (line  51)
-* CARDINAL64 (type) <3>:                 gm2-libs-iso/SYSTEM. (line  67)
-* CARDINAL8 (type):                      The PIM system module.
-                                                              (line  48)
-* CARDINAL8 (type) <1>:                  The ISO system module.
-                                                              (line  64)
-* CARDINAL8 (type) <2>:                  gm2-libs/SYSTEM.     (line  48)
-* CARDINAL8 (type) <3>:                  gm2-libs-iso/SYSTEM. (line  64)
 * CardinalToString:                      gm2-libs/StringConvert.
                                                               (line  48)
 * CardToStr:                             gm2-libs/NumberIO.   (line  27)
@@ -18637,8 +18433,8 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * casinf:                                gm2-libs/cbuiltin.   (line 156)
 * casinl:                                gm2-libs/cbuiltin.   (line 158)
 * CAST:                                  The ISO system module.
-                                                              (line 148)
-* CAST <1>:                              gm2-libs-iso/SYSTEM. (line 148)
+                                                              (line 118)
+* CAST <1>:                              gm2-libs-iso/SYSTEM. (line 118)
 * catan:                                 gm2-libs/cbuiltin.   (line 165)
 * catanf:                                gm2-libs/cbuiltin.   (line 164)
 * catanl:                                gm2-libs/cbuiltin.   (line 166)
@@ -18742,24 +18538,6 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line  68)
 * CompareTime:                           gm2-libs-log/TimeDate.
                                                               (line  56)
-* COMPLEX128 (type):                     The PIM system module.
-                                                              (line  63)
-* COMPLEX128 (type) <1>:                 The ISO system module.
-                                                              (line  79)
-* COMPLEX128 (type) <2>:                 gm2-libs/SYSTEM.     (line  63)
-* COMPLEX128 (type) <3>:                 gm2-libs-iso/SYSTEM. (line  79)
-* COMPLEX32 (type):                      The PIM system module.
-                                                              (line  61)
-* COMPLEX32 (type) <1>:                  The ISO system module.
-                                                              (line  77)
-* COMPLEX32 (type) <2>:                  gm2-libs/SYSTEM.     (line  61)
-* COMPLEX32 (type) <3>:                  gm2-libs-iso/SYSTEM. (line  77)
-* COMPLEX64 (type):                      The PIM system module.
-                                                              (line  62)
-* COMPLEX64 (type) <1>:                  The ISO system module.
-                                                              (line  78)
-* COMPLEX64 (type) <2>:                  gm2-libs/SYSTEM.     (line  62)
-* COMPLEX64 (type) <3>:                  gm2-libs-iso/SYSTEM. (line  78)
 * ComponentElement (ebnf):               EBNF.                (line  92)
 * ComponentValue (ebnf):                 EBNF.                (line  95)
 * ConCat:                                gm2-libs/DynamicStrings.
@@ -18893,12 +18671,6 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * csinl:                                 Built-ins.           (line 212)
 * csinl <1>:                             gm2-libs/Builtins.   (line 159)
 * csinl <2>:                             gm2-libs/cbuiltin.   (line 146)
-* CSIZE_T (type):                        The PIM system module.
-                                                              (line  64)
-* CSIZE_T (type) <1>:                    The ISO system module.
-                                                              (line  80)
-* CSIZE_T (type) <2>:                    gm2-libs/SYSTEM.     (line  64)
-* CSIZE_T (type) <3>:                    gm2-libs-iso/SYSTEM. (line  80)
 * csqrt:                                 Built-ins.           (line 199)
 * csqrt <1>:                             gm2-libs/Builtins.   (line 146)
 * csqrt <2>:                             gm2-libs/cbuiltin.   (line 133)
@@ -18908,12 +18680,6 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * csqrtl:                                Built-ins.           (line 200)
 * csqrtl <1>:                            gm2-libs/Builtins.   (line 147)
 * csqrtl <2>:                            gm2-libs/cbuiltin.   (line 134)
-* CSSIZE_T (type):                       The PIM system module.
-                                                              (line  65)
-* CSSIZE_T (type) <1>:                   The ISO system module.
-                                                              (line  81)
-* CSSIZE_T (type) <2>:                   gm2-libs/SYSTEM.     (line  65)
-* CSSIZE_T (type) <3>:                   gm2-libs-iso/SYSTEM. (line  81)
 * ctan:                                  Built-ins.           (line 219)
 * ctan <1>:                              gm2-libs/Builtins.   (line 166)
 * ctan <2>:                              gm2-libs/cbuiltin.   (line 153)
@@ -19009,8 +18775,8 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * DeviceTablePtrValue:                   gm2-libs-iso/IOLink. (line  93)
 * DeviceType (type):                     gm2-libs-iso/RTgen.  (line  22)
 * DIFADR:                                The ISO system module.
-                                                              (line 104)
-* DIFADR <1>:                            gm2-libs-iso/SYSTEM. (line 104)
+                                                              (line  74)
+* DIFADR <1>:                            gm2-libs-iso/SYSTEM. (line  74)
 * DisableBreak:                          gm2-libs-log/Break.  (line  24)
 * DispatchVector (type):                 gm2-libs/RTint.      (line  15)
 * displayProcesses:                      gm2-libs-iso/Processes.
@@ -19075,7 +18841,7 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * END (type) <2>:                        gm2-libs-log/FileSystem.
                                                               (line  35)
 * END (type) <3>:                        gm2-libs-coroutines/SYSTEM.
-                                                              (line  38)
+                                                              (line  33)
 * EndPos:                                gm2-libs-iso/RndFile.
                                                               (line  83)
 * enq (const):                           gm2-libs/ASCII.      (line  22)
@@ -19646,30 +19412,6 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * Int:                                   gm2-libs-log/FloatingUtilities.
                                                               (line  23)
 * Integer (ebnf):                        EBNF.                (line  20)
-* INTEGER16 (type):                      The PIM system module.
-                                                              (line  45)
-* INTEGER16 (type) <1>:                  The ISO system module.
-                                                              (line  61)
-* INTEGER16 (type) <2>:                  gm2-libs/SYSTEM.     (line  45)
-* INTEGER16 (type) <3>:                  gm2-libs-iso/SYSTEM. (line  61)
-* INTEGER32 (type):                      The PIM system module.
-                                                              (line  46)
-* INTEGER32 (type) <1>:                  The ISO system module.
-                                                              (line  62)
-* INTEGER32 (type) <2>:                  gm2-libs/SYSTEM.     (line  46)
-* INTEGER32 (type) <3>:                  gm2-libs-iso/SYSTEM. (line  62)
-* INTEGER64 (type):                      The PIM system module.
-                                                              (line  47)
-* INTEGER64 (type) <1>:                  The ISO system module.
-                                                              (line  63)
-* INTEGER64 (type) <2>:                  gm2-libs/SYSTEM.     (line  47)
-* INTEGER64 (type) <3>:                  gm2-libs-iso/SYSTEM. (line  63)
-* INTEGER8 (type):                       The PIM system module.
-                                                              (line  44)
-* INTEGER8 (type) <1>:                   The ISO system module.
-                                                              (line  60)
-* INTEGER8 (type) <2>:                   gm2-libs/SYSTEM.     (line  44)
-* INTEGER8 (type) <3>:                   gm2-libs-iso/SYSTEM. (line  60)
 * IntegerToString:                       gm2-libs/StringConvert.
                                                               (line  33)
 * interactive (const):                   gm2-libs-iso/ChanConsts.
@@ -19691,7 +19433,7 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * InvalidChan:                           gm2-libs-iso/IOChan. (line  22)
 * IOException:                           gm2-libs-iso/IOLink. (line 130)
 * IOTRANSFER:                            gm2-libs-coroutines/SYSTEM.
-                                                              (line 115)
+                                                              (line  85)
 * IOTRANSFER <1>:                        gm2-libs-iso/COROUTINES.
                                                               (line  42)
 * IsActive:                              gm2-libs/FIO.        (line  54)
@@ -19977,11 +19719,11 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line  18)
 * Listen:                                gm2-libs/RTint.      (line  94)
 * LISTEN:                                gm2-libs-coroutines/SYSTEM.
-                                                              (line 122)
+                                                              (line  92)
 * LISTEN <1>:                            gm2-libs-iso/COROUTINES.
                                                               (line  73)
 * ListenLoop:                            gm2-libs-coroutines/SYSTEM.
-                                                              (line 141)
+                                                              (line 111)
 * ListenLoop <1>:                        gm2-libs-iso/COROUTINES.
                                                               (line 103)
 * ln:                                    gm2-libs/LMathLib0.  (line  15)
@@ -19999,21 +19741,15 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line  33)
 * ln <8>:                                gm2-libs-iso/ShortMath.
                                                               (line  20)
-* LOC (type):                            The PIM system module.
-                                                              (line  40)
-* LOC (type) <1>:                        The ISO system module.
-                                                              (line  56)
-* LOC (type) <2>:                        gm2-libs/SYSTEM.     (line  40)
-* LOC (type) <3>:                        gm2-libs-iso/SYSTEM. (line  56)
 * localtime:                             gm2-libs/libc.       (line 387)
 * localtime_r:                           gm2-libs-iso/wraptime.
                                                               (line 101)
 * LOCSPERBYTE (const):                   The ISO system module.
-                                                              (line  35)
-* LOCSPERBYTE (const) <1>:               gm2-libs-iso/SYSTEM. (line  35)
+                                                              (line  30)
+* LOCSPERBYTE (const) <1>:               gm2-libs-iso/SYSTEM. (line  30)
 * LOCSPERWORD (const):                   The ISO system module.
-                                                              (line  33)
-* LOCSPERWORD (const) <1>:               gm2-libs-iso/SYSTEM. (line  33)
+                                                              (line  28)
+* LOCSPERWORD (const) <1>:               gm2-libs-iso/SYSTEM. (line  28)
 * log:                                   Built-ins.           (line  94)
 * log <1>:                               gm2-libs/Builtins.   (line  41)
 * log <2>:                               gm2-libs/cbuiltin.   (line  73)
@@ -20071,8 +19807,8 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * M2Exceptions (type) <1>:               gm2-libs-iso/M2EXCEPTION.
                                                               (line  11)
 * MAKEADR:                               The ISO system module.
-                                                              (line 110)
-* MAKEADR <1>:                           gm2-libs-iso/SYSTEM. (line 110)
+                                                              (line  80)
+* MAKEADR <1>:                           gm2-libs-iso/SYSTEM. (line  80)
 * MakeChan:                              gm2-libs-iso/IOLink. (line  22)
 * MakeModuleId:                          gm2-libs-iso/RTdata. (line  25)
 * malloc:                                gm2-libs/libc.       (line 106)
@@ -20146,7 +19882,7 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * NewPos:                                gm2-libs-iso/RndFile.
                                                               (line  89)
 * NEWPROCESS:                            gm2-libs-coroutines/SYSTEM.
-                                                              (line 100)
+                                                              (line  70)
 * nextafter:                             Built-ins.           (line 126)
 * nextafter <1>:                         gm2-libs/Builtins.   (line  73)
 * nextafter <2>:                         gm2-libs/cbuiltin.   (line  96)
@@ -20332,7 +20068,7 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * ProcedureParameters (ebnf):            EBNF.                (line 223)
 * ProcedureType (ebnf):                  EBNF.                (line 209)
 * PROCESS (type):                        gm2-libs-coroutines/SYSTEM.
-                                                              (line  36)
+                                                              (line  31)
 * ProcessesException:                    gm2-libs-iso/Processes.
                                                               (line 125)
 * ProcessesExceptions (type):            gm2-libs-iso/Processes.
@@ -20579,24 +20315,6 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * ReadWord:                              gm2-libs-log/FileSystem.
                                                               (line 105)
 * Real (ebnf):                           EBNF.                (line  23)
-* REAL128 (type):                        The PIM system module.
-                                                              (line  60)
-* REAL128 (type) <1>:                    The ISO system module.
-                                                              (line  76)
-* REAL128 (type) <2>:                    gm2-libs/SYSTEM.     (line  60)
-* REAL128 (type) <3>:                    gm2-libs-iso/SYSTEM. (line  76)
-* REAL32 (type):                         The PIM system module.
-                                                              (line  58)
-* REAL32 (type) <1>:                     The ISO system module.
-                                                              (line  74)
-* REAL32 (type) <2>:                     gm2-libs/SYSTEM.     (line  58)
-* REAL32 (type) <3>:                     gm2-libs-iso/SYSTEM. (line  74)
-* REAL64 (type):                         The PIM system module.
-                                                              (line  59)
-* REAL64 (type) <1>:                     The ISO system module.
-                                                              (line  75)
-* REAL64 (type) <2>:                     gm2-libs/SYSTEM.     (line  59)
-* REAL64 (type) <3>:                     gm2-libs-iso/SYSTEM. (line  75)
 * realloc:                               gm2-libs/libc.       (line 135)
 * REALLOCATE:                            gm2-libs/Storage.    (line  38)
 * REALLOCATE <1>:                        gm2-libs/SysStorage. (line  40)
@@ -20714,41 +20432,41 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line 188)
 * rindex <2>:                            gm2-libs/cbuiltin.   (line 169)
 * ROTATE:                                The PIM system module.
-                                                              (line  86)
+                                                              (line  56)
 * ROTATE <1>:                            The ISO system module.
-                                                              (line 132)
-* ROTATE <2>:                            gm2-libs/SYSTEM.     (line  86)
+                                                              (line 102)
+* ROTATE <2>:                            gm2-libs/SYSTEM.     (line  56)
 * ROTATE <3>:                            gm2-libs-coroutines/SYSTEM.
-                                                              (line 169)
-* ROTATE <4>:                            gm2-libs-iso/SYSTEM. (line 132)
+                                                              (line 139)
+* ROTATE <4>:                            gm2-libs-iso/SYSTEM. (line 102)
 * RotateException:                       gm2-libs/M2RTS.      (line 159)
 * RotateException <1>:                   gm2-libs-iso/M2RTS.  (line 167)
 * RotateLeft:                            The PIM system module.
-                                                              (line 190)
+                                                              (line 160)
 * RotateLeft <1>:                        The ISO system module.
-                                                              (line 243)
-* RotateLeft <2>:                        gm2-libs/SYSTEM.     (line 190)
+                                                              (line 213)
+* RotateLeft <2>:                        gm2-libs/SYSTEM.     (line 160)
 * RotateLeft <3>:                        gm2-libs-coroutines/SYSTEM.
-                                                              (line 271)
-* RotateLeft <4>:                        gm2-libs-iso/SYSTEM. (line 243)
+                                                              (line 241)
+* RotateLeft <4>:                        gm2-libs-iso/SYSTEM. (line 213)
 * RotateRight:                           The PIM system module.
-                                                              (line 202)
+                                                              (line 172)
 * RotateRight <1>:                       The ISO system module.
-                                                              (line 255)
-* RotateRight <2>:                       gm2-libs/SYSTEM.     (line 202)
+                                                              (line 225)
+* RotateRight <2>:                       gm2-libs/SYSTEM.     (line 172)
 * RotateRight <3>:                       gm2-libs-coroutines/SYSTEM.
-                                                              (line 283)
-* RotateRight <4>:                       gm2-libs-iso/SYSTEM. (line 255)
+                                                              (line 253)
+* RotateRight <4>:                       gm2-libs-iso/SYSTEM. (line 225)
 * RotateRunQueue:                        gm2-libs-coroutines/Executive.
                                                               (line 112)
 * RotateVal:                             The PIM system module.
-                                                              (line 178)
+                                                              (line 148)
 * RotateVal <1>:                         The ISO system module.
-                                                              (line 231)
-* RotateVal <2>:                         gm2-libs/SYSTEM.     (line 178)
+                                                              (line 201)
+* RotateVal <2>:                         gm2-libs/SYSTEM.     (line 148)
 * RotateVal <3>:                         gm2-libs-coroutines/SYSTEM.
-                                                              (line 259)
-* RotateVal <4>:                         gm2-libs-iso/SYSTEM. (line 231)
+                                                              (line 229)
+* RotateVal <4>:                         gm2-libs-iso/SYSTEM. (line 201)
 * Round:                                 gm2-libs-log/FloatingUtilities.
                                                               (line  30)
 * round:                                 gm2-libs-iso/LongMath.
@@ -20904,39 +20622,39 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line 184)
 * SFLOAT:                                Standard procedures. (line 212)
 * SHIFT:                                 The PIM system module.
-                                                              (line  94)
+                                                              (line  64)
 * SHIFT <1>:                             The ISO system module.
-                                                              (line 140)
-* SHIFT <2>:                             gm2-libs/SYSTEM.     (line  94)
+                                                              (line 110)
+* SHIFT <2>:                             gm2-libs/SYSTEM.     (line  64)
 * SHIFT <3>:                             gm2-libs-coroutines/SYSTEM.
-                                                              (line 176)
-* SHIFT <4>:                             gm2-libs-iso/SYSTEM. (line 140)
+                                                              (line 146)
+* SHIFT <4>:                             gm2-libs-iso/SYSTEM. (line 110)
 * ShiftException:                        gm2-libs/M2RTS.      (line 158)
 * ShiftException <1>:                    gm2-libs-iso/M2RTS.  (line 166)
 * ShiftLeft:                             The PIM system module.
-                                                              (line 154)
+                                                              (line 124)
 * ShiftLeft <1>:                         The ISO system module.
-                                                              (line 207)
-* ShiftLeft <2>:                         gm2-libs/SYSTEM.     (line 154)
+                                                              (line 177)
+* ShiftLeft <2>:                         gm2-libs/SYSTEM.     (line 124)
 * ShiftLeft <3>:                         gm2-libs-coroutines/SYSTEM.
-                                                              (line 235)
-* ShiftLeft <4>:                         gm2-libs-iso/SYSTEM. (line 207)
+                                                              (line 205)
+* ShiftLeft <4>:                         gm2-libs-iso/SYSTEM. (line 177)
 * ShiftRight:                            The PIM system module.
-                                                              (line 165)
+                                                              (line 135)
 * ShiftRight <1>:                        The ISO system module.
-                                                              (line 218)
-* ShiftRight <2>:                        gm2-libs/SYSTEM.     (line 165)
+                                                              (line 188)
+* ShiftRight <2>:                        gm2-libs/SYSTEM.     (line 135)
 * ShiftRight <3>:                        gm2-libs-coroutines/SYSTEM.
-                                                              (line 246)
-* ShiftRight <4>:                        gm2-libs-iso/SYSTEM. (line 218)
+                                                              (line 216)
+* ShiftRight <4>:                        gm2-libs-iso/SYSTEM. (line 188)
 * ShiftVal:                              The PIM system module.
-                                                              (line 142)
+                                                              (line 112)
 * ShiftVal <1>:                          The ISO system module.
-                                                              (line 195)
-* ShiftVal <2>:                          gm2-libs/SYSTEM.     (line 142)
+                                                              (line 165)
+* ShiftVal <2>:                          gm2-libs/SYSTEM.     (line 112)
 * ShiftVal <3>:                          gm2-libs-coroutines/SYSTEM.
-                                                              (line 223)
-* ShiftVal <4>:                          gm2-libs-iso/SYSTEM. (line 195)
+                                                              (line 193)
+* ShiftVal <4>:                          gm2-libs-iso/SYSTEM. (line 165)
 * ShortCardinalToString:                 gm2-libs/StringConvert.
                                                               (line 139)
 * shutdown:                              gm2-libs/libc.       (line 404)
@@ -20995,10 +20713,10 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * sinl <2>:                              gm2-libs/cbuiltin.   (line  59)
 * sinl <3>:                              gm2-libs/libm.       (line  29)
 * SIZE:                                  The PIM system module.
-                                                              (line  76)
-* SIZE <1>:                              gm2-libs/SYSTEM.     (line  76)
+                                                              (line  46)
+* SIZE <1>:                              gm2-libs/SYSTEM.     (line  46)
 * SIZE <2>:                              gm2-libs-coroutines/SYSTEM.
-                                                              (line 159)
+                                                              (line 129)
 * Skip:                                  gm2-libs-iso/IOChan. (line  44)
 * SkipLine:                              gm2-libs-iso/STextIO.
                                                               (line  41)
@@ -21201,8 +20919,8 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * stx (const):                           gm2-libs/ASCII.      (line  21)
 * sub (const):                           gm2-libs/ASCII.      (line  27)
 * SUBADR:                                The ISO system module.
-                                                              (line  99)
-* SUBADR <1>:                            gm2-libs-iso/SYSTEM. (line  99)
+                                                              (line  69)
+* SUBADR <1>:                            gm2-libs-iso/SYSTEM. (line  69)
 * SubDesignator (ebnf):                  EBNF.                (line 243)
 * SubrangeType (ebnf):                   EBNF.                (line 145)
 * succ:                                  gm2-libs-iso/LowLong.
@@ -21262,13 +20980,13 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * tanf:                                  gm2-libs/libm.       (line  36)
 * tanl:                                  gm2-libs/libm.       (line  35)
 * TBITSIZE:                              The PIM system module.
-                                                              (line 115)
+                                                              (line  85)
 * TBITSIZE <1>:                          The ISO system module.
-                                                              (line 174)
-* TBITSIZE <2>:                          gm2-libs/SYSTEM.     (line 115)
+                                                              (line 144)
+* TBITSIZE <2>:                          gm2-libs/SYSTEM.     (line  85)
 * TBITSIZE <3>:                          gm2-libs-coroutines/SYSTEM.
-                                                              (line 196)
-* TBITSIZE <4>:                          gm2-libs-iso/SYSTEM. (line 174)
+                                                              (line 166)
+* TBITSIZE <4>:                          gm2-libs-iso/SYSTEM. (line 144)
 * tcdrain:                               gm2-libs/termios.    (line 128)
 * tcflowoffi:                            gm2-libs/termios.    (line 163)
 * tcflowoffo:                            gm2-libs/termios.    (line 177)
@@ -21319,13 +21037,13 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * TextWrite:                             gm2-libs-iso/IOChan. (line  73)
 * TextWriteProc (type):                  gm2-libs-iso/IOLink. (line  46)
 * THROW:                                 The PIM system module.
-                                                              (line 102)
+                                                              (line  72)
 * THROW <1>:                             The ISO system module.
-                                                              (line 161)
-* THROW <2>:                             gm2-libs/SYSTEM.     (line 102)
+                                                              (line 131)
+* THROW <2>:                             gm2-libs/SYSTEM.     (line  72)
 * THROW <3>:                             gm2-libs-coroutines/SYSTEM.
-                                                              (line 184)
-* THROW <4>:                             gm2-libs-iso/SYSTEM. (line 161)
+                                                              (line 154)
+* THROW <4>:                             gm2-libs-iso/SYSTEM. (line 131)
 * TicksPerSecond (const):                gm2-libs-coroutines/TimerHandler.
                                                               (line  16)
 * time:                                  gm2-libs/libc.       (line 379)
@@ -21356,7 +21074,7 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * ToUpper:                               gm2-libs/DynamicStrings.
                                                               (line 238)
 * TRANSFER:                              gm2-libs-coroutines/SYSTEM.
-                                                              (line  89)
+                                                              (line  59)
 * TRANSFER <1>:                          gm2-libs-iso/COROUTINES.
                                                               (line  37)
 * transfer:                              gm2-libs-iso/RTco.   (line  25)
@@ -21375,16 +21093,16 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
                                                               (line  81)
 * TRUNCS:                                Standard procedures. (line 239)
 * TSIZE:                                 The PIM system module.
-                                                              (line  81)
+                                                              (line  51)
 * TSIZE <1>:                             The ISO system module.
-                                                              (line 155)
-* TSIZE <2>:                             gm2-libs/SYSTEM.     (line  81)
+                                                              (line 125)
+* TSIZE <2>:                             gm2-libs/SYSTEM.     (line  51)
 * TSIZE <3>:                             gm2-libs-coroutines/SYSTEM.
-                                                              (line 164)
-* TSIZE <4>:                             gm2-libs-iso/SYSTEM. (line 155)
+                                                              (line 134)
+* TSIZE <4>:                             gm2-libs-iso/SYSTEM. (line 125)
 * ttyname:                               gm2-libs/libc.       (line 446)
 * TurnInterrupts:                        gm2-libs-coroutines/SYSTEM.
-                                                              (line 149)
+                                                              (line 119)
 * TurnInterrupts <1>:                    gm2-libs-iso/COROUTINES.
                                                               (line  86)
 * turnInterrupts:                        gm2-libs-iso/RTco.   (line  42)
@@ -21469,33 +21187,9 @@ File: m2.info,  Node: Indices,  Prev: Libraries,  Up: Top
 * WholeZeroRemException:                 gm2-libs/M2RTS.      (line 171)
 * WholeZeroRemException <1>:             gm2-libs-iso/M2RTS.  (line 179)
 * WithStatement (ebnf):                  EBNF.                (line 327)
-* WORD (type):                           The PIM system module.
-                                                              (line  41)
-* WORD (type) <1>:                       The ISO system module.
-                                                              (line  59)
-* WORD (type) <2>:                       The ISO system module.
-                                                              (line  87)
-* WORD (type) <3>:                       gm2-libs/SYSTEM.     (line  41)
-* WORD (type) <4>:                       gm2-libs-iso/SYSTEM. (line  59)
-* WORD (type) <5>:                       gm2-libs-iso/SYSTEM. (line  87)
-* WORD16 (type):                         The PIM system module.
-                                                              (line  52)
-* WORD16 (type) <1>:                     The ISO system module.
-                                                              (line  68)
-* WORD16 (type) <2>:                     gm2-libs/SYSTEM.     (line  52)
-* WORD16 (type) <3>:                     gm2-libs-iso/SYSTEM. (line  68)
-* WORD32 (type):                         The PIM system module.
-                                                              (line  53)
-* WORD32 (type) <1>:                     The ISO system module.
-                                                              (line  69)
-* WORD32 (type) <2>:                     gm2-libs/SYSTEM.     (line  53)
-* WORD32 (type) <3>:                     gm2-libs-iso/SYSTEM. (line  69)
-* WORD64 (type):                         The PIM system module.
-                                                              (line  54)
-* WORD64 (type) <1>:                     The ISO system module.
-                                                              (line  70)
-* WORD64 (type) <2>:                     gm2-libs/SYSTEM.     (line  54)
-* WORD64 (type) <3>:                     gm2-libs-iso/SYSTEM. (line  70)
+* WORD (type):                           The ISO system module.
+                                                              (line  57)
+* WORD (type) <1>:                       gm2-libs-iso/SYSTEM. (line  57)
 * WordAnd:                               gm2-libs-log/BitWordOps.
                                                               (line  33)
 * WordNot:                               gm2-libs-log/BitWordOps.
@@ -21727,192 +21421,192 @@ Node: Alignment84451
 Node: Packed86986
 Node: Built-ins89707
 Node: The PIM system module104220
-Node: The ISO system module112718
-Node: Release map123168
-Node: Documentation123715
-Node: Regression tests123975
-Node: Limitations124798
-Node: Objectives125117
-Node: FAQ125601
-Node: Community126042
-Node: Other languages126390
-Node: License126633
-Node: Copying127547
-Node: Contributing165084
-Node: EBNF165788
-Node: Libraries180403
-Node: Base libraries180831
-Node: gm2-libs/ASCII183559
-Node: gm2-libs/Args184652
-Node: gm2-libs/Assertion185248
-Node: gm2-libs/Break185659
-Node: gm2-libs/Builtins185865
-Node: gm2-libs/COROUTINES197302
-Node: gm2-libs/CmdArgs197679
-Node: gm2-libs/Debug198380
-Node: gm2-libs/DynamicStrings199236
-Node: gm2-libs/Environment209984
-Node: gm2-libs/FIO210994
-Node: gm2-libs/FormatStrings220239
-Node: gm2-libs/FpuIO221905
-Node: gm2-libs/GetOpt223323
-Node: gm2-libs/IO226781
-Node: gm2-libs/Indexing228512
-Node: gm2-libs/LMathLib0231273
-Node: gm2-libs/LegacyReal232044
-Node: gm2-libs/M2Dependent232319
-Node: gm2-libs/M2EXCEPTION234851
-Node: gm2-libs/M2RTS236101
-Node: gm2-libs/MathLib0243809
-Node: gm2-libs/MemUtils244510
-Node: gm2-libs/NumberIO245111
-Node: gm2-libs/OptLib246998
-Node: gm2-libs/PushBackInput248896
-Node: gm2-libs/RTExceptions251510
-Node: gm2-libs/RTint256157
-Node: gm2-libs/SArgs259088
-Node: gm2-libs/SCmdArgs259848
-Node: gm2-libs/SEnvironment260579
-Node: gm2-libs/SFIO261569
-Node: gm2-libs/SMathLib0263834
-Node: gm2-libs/SYSTEM264612
-Node: gm2-libs/Scan272131
-Node: gm2-libs/Selective274017
-Node: gm2-libs/StdIO275912
-Node: gm2-libs/Storage277746
-Node: gm2-libs/StrCase278998
-Node: gm2-libs/StrIO280228
-Node: gm2-libs/StrLib281003
-Node: gm2-libs/StringConvert282624
-Node: gm2-libs/SysExceptions293921
-Node: gm2-libs/SysStorage294905
-Node: gm2-libs/TimeString296603
-Node: gm2-libs/UnixArgs297022
-Node: gm2-libs/cbuiltin297448
-Node: gm2-libs/cgetopt305657
-Node: gm2-libs/cxxabi308439
-Node: gm2-libs/dtoa308992
-Node: gm2-libs/errno310074
-Node: gm2-libs/gdbif310492
-Node: gm2-libs/ldtoa311485
-Node: gm2-libs/libc312632
-Node: gm2-libs/libm324508
-Node: gm2-libs/sckt327492
-Node: gm2-libs/termios331290
-Node: gm2-libs/wrapc336305
-Node: PIM and Logitech 3.0 Compatible339640
-Node: gm2-libs-log/BitBlockOps342398
-Node: gm2-libs-log/BitByteOps346300
-Node: gm2-libs-log/BitWordOps349190
-Node: gm2-libs-log/BlockOps352036
-Node: gm2-libs-log/Break354209
-Node: gm2-libs-log/CardinalIO355220
-Node: gm2-libs-log/Conversions359038
-Node: gm2-libs-log/DebugPMD360421
-Node: gm2-libs-log/DebugTrace360683
-Node: gm2-libs-log/Delay360947
-Node: gm2-libs-log/Display361366
-Node: gm2-libs-log/ErrorCode361895
-Node: gm2-libs-log/FileSystem362771
-Node: gm2-libs-log/FloatingUtilities369421
-Node: gm2-libs-log/InOut371172
-Node: gm2-libs-log/Keyboard375518
-Node: gm2-libs-log/LongIO376177
-Node: gm2-libs-log/NumberConversion376629
-Node: gm2-libs-log/Random376960
-Node: gm2-libs-log/RealConversions378336
-Node: gm2-libs-log/RealInOut383217
-Node: gm2-libs-log/Strings385972
-Node: gm2-libs-log/Termbase387771
-Node: gm2-libs-log/Terminal390317
-Node: gm2-libs-log/TimeDate391833
-Node: PIM coroutine support393793
-Node: gm2-libs-coroutines/Executive394293
-Node: gm2-libs-coroutines/KeyBoardLEDs397944
-Node: gm2-libs-coroutines/SYSTEM398909
-Node: gm2-libs-coroutines/TimerHandler409404
-Node: M2 ISO Libraries411827
-Node: gm2-libs-iso/COROUTINES419089
-Node: gm2-libs-iso/ChanConsts422938
-Node: gm2-libs-iso/CharClass426289
-Node: gm2-libs-iso/ClientSocket427360
-Node: gm2-libs-iso/ComplexMath428465
-Node: gm2-libs-iso/ConvStringLong430790
-Node: gm2-libs-iso/ConvStringReal432110
-Node: gm2-libs-iso/ConvStringShort433422
-Node: gm2-libs-iso/ConvTypes434748
-Node: gm2-libs-iso/EXCEPTIONS436128
-Node: gm2-libs-iso/ErrnoCategory438289
-Node: gm2-libs-iso/GeneralUserExceptions439759
-Node: gm2-libs-iso/IOChan440956
-Node: gm2-libs-iso/IOConsts448444
-Node: gm2-libs-iso/IOLink449221
-Node: gm2-libs-iso/IOResult455044
-Node: gm2-libs-iso/LongComplexMath456076
-Node: gm2-libs-iso/LongConv458389
-Node: gm2-libs-iso/LongIO460566
-Node: gm2-libs-iso/LongMath463038
-Node: gm2-libs-iso/LongStr464897
-Node: gm2-libs-iso/LongWholeIO467483
-Node: gm2-libs-iso/LowLong469338
-Node: gm2-libs-iso/LowReal472912
-Node: gm2-libs-iso/LowShort476309
-Node: gm2-libs-iso/M2EXCEPTION479930
-Node: gm2-libs-iso/M2RTS481148
-Node: gm2-libs-iso/MemStream488948
-Node: gm2-libs-iso/Preemptive492220
-Node: gm2-libs-iso/Processes492721
-Node: gm2-libs-iso/ProgramArgs498536
-Node: gm2-libs-iso/RTco499605
-Node: gm2-libs-iso/RTdata501279
-Node: gm2-libs-iso/RTentity502566
-Node: gm2-libs-iso/RTfio503679
-Node: gm2-libs-iso/RTgen506305
-Node: gm2-libs-iso/RTgenif509270
-Node: gm2-libs-iso/RTio513250
-Node: gm2-libs-iso/RandomNumber514898
-Node: gm2-libs-iso/RawIO517317
-Node: gm2-libs-iso/RealConv518214
-Node: gm2-libs-iso/RealIO520327
-Node: gm2-libs-iso/RealMath522773
-Node: gm2-libs-iso/RealStr524547
-Node: gm2-libs-iso/RndFile527100
-Node: gm2-libs-iso/SIOResult531858
-Node: gm2-libs-iso/SLongIO532886
-Node: gm2-libs-iso/SLongWholeIO535310
-Node: gm2-libs-iso/SRawIO537120
-Node: gm2-libs-iso/SRealIO538004
-Node: gm2-libs-iso/SShortIO540316
-Node: gm2-libs-iso/SShortWholeIO542750
-Node: gm2-libs-iso/STextIO544571
-Node: gm2-libs-iso/SWholeIO546971
-Node: gm2-libs-iso/SYSTEM548761
-Node: gm2-libs-iso/Semaphores558677
-Node: gm2-libs-iso/SeqFile560292
-Node: gm2-libs-iso/ShortComplexMath564844
-Node: gm2-libs-iso/ShortConv567195
-Node: gm2-libs-iso/ShortIO569331
-Node: gm2-libs-iso/ShortMath571815
-Node: gm2-libs-iso/ShortStr573701
-Node: gm2-libs-iso/ShortWholeIO576299
-Node: gm2-libs-iso/SimpleCipher578169
-Node: gm2-libs-iso/StdChans579159
-Node: gm2-libs-iso/Storage581156
-Node: gm2-libs-iso/StreamFile583242
-Node: gm2-libs-iso/StringChan585302
-Node: gm2-libs-iso/Strings586517
-Node: gm2-libs-iso/SysClock593997
-Node: gm2-libs-iso/TERMINATION595800
-Node: gm2-libs-iso/TermFile596413
-Node: gm2-libs-iso/TextIO598708
-Node: gm2-libs-iso/TextUtil601336
-Node: gm2-libs-iso/WholeConv601977
-Node: gm2-libs-iso/WholeIO604507
-Node: gm2-libs-iso/WholeStr606345
-Node: gm2-libs-iso/wrapclock608136
-Node: gm2-libs-iso/wrapsock611753
-Node: gm2-libs-iso/wraptime614347
-Node: Indices618720
+Node: The ISO system module111998
+Node: Release map121733
+Node: Documentation122280
+Node: Regression tests122540
+Node: Limitations123363
+Node: Objectives123682
+Node: FAQ124166
+Node: Community124607
+Node: Other languages124955
+Node: License125198
+Node: Copying126112
+Node: Contributing163649
+Node: EBNF164353
+Node: Libraries178968
+Node: Base libraries179396
+Node: gm2-libs/ASCII182124
+Node: gm2-libs/Args183217
+Node: gm2-libs/Assertion183813
+Node: gm2-libs/Break184224
+Node: gm2-libs/Builtins184430
+Node: gm2-libs/COROUTINES195867
+Node: gm2-libs/CmdArgs196244
+Node: gm2-libs/Debug196945
+Node: gm2-libs/DynamicStrings197801
+Node: gm2-libs/Environment208549
+Node: gm2-libs/FIO209559
+Node: gm2-libs/FormatStrings218804
+Node: gm2-libs/FpuIO220470
+Node: gm2-libs/GetOpt221888
+Node: gm2-libs/IO225346
+Node: gm2-libs/Indexing227077
+Node: gm2-libs/LMathLib0229838
+Node: gm2-libs/LegacyReal230609
+Node: gm2-libs/M2Dependent230884
+Node: gm2-libs/M2EXCEPTION233416
+Node: gm2-libs/M2RTS234666
+Node: gm2-libs/MathLib0242374
+Node: gm2-libs/MemUtils243075
+Node: gm2-libs/NumberIO243676
+Node: gm2-libs/OptLib245563
+Node: gm2-libs/PushBackInput247461
+Node: gm2-libs/RTExceptions250075
+Node: gm2-libs/RTint254722
+Node: gm2-libs/SArgs257653
+Node: gm2-libs/SCmdArgs258413
+Node: gm2-libs/SEnvironment259144
+Node: gm2-libs/SFIO260134
+Node: gm2-libs/SMathLib0262399
+Node: gm2-libs/SYSTEM263177
+Node: gm2-libs/Scan269976
+Node: gm2-libs/Selective271862
+Node: gm2-libs/StdIO273757
+Node: gm2-libs/Storage275591
+Node: gm2-libs/StrCase276843
+Node: gm2-libs/StrIO278073
+Node: gm2-libs/StrLib278848
+Node: gm2-libs/StringConvert280469
+Node: gm2-libs/SysExceptions291766
+Node: gm2-libs/SysStorage292750
+Node: gm2-libs/TimeString294448
+Node: gm2-libs/UnixArgs294867
+Node: gm2-libs/cbuiltin295293
+Node: gm2-libs/cgetopt303502
+Node: gm2-libs/cxxabi306284
+Node: gm2-libs/dtoa306837
+Node: gm2-libs/errno307919
+Node: gm2-libs/gdbif308337
+Node: gm2-libs/ldtoa309330
+Node: gm2-libs/libc310477
+Node: gm2-libs/libm322353
+Node: gm2-libs/sckt325337
+Node: gm2-libs/termios329135
+Node: gm2-libs/wrapc334150
+Node: PIM and Logitech 3.0 Compatible337485
+Node: gm2-libs-log/BitBlockOps340243
+Node: gm2-libs-log/BitByteOps344145
+Node: gm2-libs-log/BitWordOps347035
+Node: gm2-libs-log/BlockOps349881
+Node: gm2-libs-log/Break352054
+Node: gm2-libs-log/CardinalIO353065
+Node: gm2-libs-log/Conversions356883
+Node: gm2-libs-log/DebugPMD358266
+Node: gm2-libs-log/DebugTrace358528
+Node: gm2-libs-log/Delay358792
+Node: gm2-libs-log/Display359211
+Node: gm2-libs-log/ErrorCode359740
+Node: gm2-libs-log/FileSystem360616
+Node: gm2-libs-log/FloatingUtilities367266
+Node: gm2-libs-log/InOut369017
+Node: gm2-libs-log/Keyboard373363
+Node: gm2-libs-log/LongIO374022
+Node: gm2-libs-log/NumberConversion374474
+Node: gm2-libs-log/Random374805
+Node: gm2-libs-log/RealConversions376181
+Node: gm2-libs-log/RealInOut381062
+Node: gm2-libs-log/Strings383817
+Node: gm2-libs-log/Termbase385616
+Node: gm2-libs-log/Terminal388162
+Node: gm2-libs-log/TimeDate389678
+Node: PIM coroutine support391638
+Node: gm2-libs-coroutines/Executive392138
+Node: gm2-libs-coroutines/KeyBoardLEDs395789
+Node: gm2-libs-coroutines/SYSTEM396754
+Node: gm2-libs-coroutines/TimerHandler406528
+Node: M2 ISO Libraries408951
+Node: gm2-libs-iso/COROUTINES416213
+Node: gm2-libs-iso/ChanConsts420062
+Node: gm2-libs-iso/CharClass423413
+Node: gm2-libs-iso/ClientSocket424484
+Node: gm2-libs-iso/ComplexMath425589
+Node: gm2-libs-iso/ConvStringLong427914
+Node: gm2-libs-iso/ConvStringReal429234
+Node: gm2-libs-iso/ConvStringShort430546
+Node: gm2-libs-iso/ConvTypes431872
+Node: gm2-libs-iso/EXCEPTIONS433252
+Node: gm2-libs-iso/ErrnoCategory435413
+Node: gm2-libs-iso/GeneralUserExceptions436883
+Node: gm2-libs-iso/IOChan438080
+Node: gm2-libs-iso/IOConsts445568
+Node: gm2-libs-iso/IOLink446345
+Node: gm2-libs-iso/IOResult452168
+Node: gm2-libs-iso/LongComplexMath453200
+Node: gm2-libs-iso/LongConv455513
+Node: gm2-libs-iso/LongIO457690
+Node: gm2-libs-iso/LongMath460162
+Node: gm2-libs-iso/LongStr462021
+Node: gm2-libs-iso/LongWholeIO464607
+Node: gm2-libs-iso/LowLong466462
+Node: gm2-libs-iso/LowReal470036
+Node: gm2-libs-iso/LowShort473433
+Node: gm2-libs-iso/M2EXCEPTION477054
+Node: gm2-libs-iso/M2RTS478272
+Node: gm2-libs-iso/MemStream486072
+Node: gm2-libs-iso/Preemptive489344
+Node: gm2-libs-iso/Processes489845
+Node: gm2-libs-iso/ProgramArgs495660
+Node: gm2-libs-iso/RTco496729
+Node: gm2-libs-iso/RTdata498403
+Node: gm2-libs-iso/RTentity499690
+Node: gm2-libs-iso/RTfio500803
+Node: gm2-libs-iso/RTgen503429
+Node: gm2-libs-iso/RTgenif506394
+Node: gm2-libs-iso/RTio510374
+Node: gm2-libs-iso/RandomNumber512022
+Node: gm2-libs-iso/RawIO514441
+Node: gm2-libs-iso/RealConv515338
+Node: gm2-libs-iso/RealIO517451
+Node: gm2-libs-iso/RealMath519897
+Node: gm2-libs-iso/RealStr521671
+Node: gm2-libs-iso/RndFile524224
+Node: gm2-libs-iso/SIOResult528982
+Node: gm2-libs-iso/SLongIO530010
+Node: gm2-libs-iso/SLongWholeIO532434
+Node: gm2-libs-iso/SRawIO534244
+Node: gm2-libs-iso/SRealIO535128
+Node: gm2-libs-iso/SShortIO537440
+Node: gm2-libs-iso/SShortWholeIO539874
+Node: gm2-libs-iso/STextIO541695
+Node: gm2-libs-iso/SWholeIO544095
+Node: gm2-libs-iso/SYSTEM545885
+Node: gm2-libs-iso/Semaphores555086
+Node: gm2-libs-iso/SeqFile556701
+Node: gm2-libs-iso/ShortComplexMath561253
+Node: gm2-libs-iso/ShortConv563604
+Node: gm2-libs-iso/ShortIO565740
+Node: gm2-libs-iso/ShortMath568224
+Node: gm2-libs-iso/ShortStr570110
+Node: gm2-libs-iso/ShortWholeIO572708
+Node: gm2-libs-iso/SimpleCipher574578
+Node: gm2-libs-iso/StdChans575568
+Node: gm2-libs-iso/Storage577565
+Node: gm2-libs-iso/StreamFile579651
+Node: gm2-libs-iso/StringChan581711
+Node: gm2-libs-iso/Strings582926
+Node: gm2-libs-iso/SysClock590406
+Node: gm2-libs-iso/TERMINATION592209
+Node: gm2-libs-iso/TermFile592822
+Node: gm2-libs-iso/TextIO595117
+Node: gm2-libs-iso/TextUtil597745
+Node: gm2-libs-iso/WholeConv598386
+Node: gm2-libs-iso/WholeIO600916
+Node: gm2-libs-iso/WholeStr602754
+Node: gm2-libs-iso/wrapclock604545
+Node: gm2-libs-iso/wrapsock608162
+Node: gm2-libs-iso/wraptime610756
+Node: Indices615129
 
 End Tag Table
 

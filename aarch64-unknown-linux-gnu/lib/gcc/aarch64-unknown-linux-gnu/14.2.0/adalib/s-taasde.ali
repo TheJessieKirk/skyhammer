@@ -63,7 +63,7 @@ D s-intman.ads		20240801081713 aa1eb6b4 system.interrupt_management%s
 D s-inmaop.ads		20240801081713 5e0317cf system.interrupt_management.operations%s
 D s-linux.ads		20240801081713 34850a8c system.linux%s
 D s-multip.ads		20240801081713 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20241008015703 b7943734 system.os_constants%s
+D s-oscons.ads		20241024074125 b7943734 system.os_constants%s
 D s-osinte.ads		20240801081713 e4f53740 system.os_interface%s
 D s-osprim.ads		20240801081713 07fd65f6 system.os_primitives%s
 D s-parame.ads		20240801081713 3597fc11 system.parameters%s

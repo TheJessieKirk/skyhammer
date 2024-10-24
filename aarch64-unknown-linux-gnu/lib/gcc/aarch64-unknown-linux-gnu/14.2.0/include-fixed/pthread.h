@@ -232,7 +232,7 @@ extern int pthread_join (pthread_t __th, void **__thread_return);
    the thread in *THREAD_RETURN, if THREAD_RETURN is not NULL.  */
 extern int pthread_tryjoin_np (pthread_t __th, void **__thread_return) __THROW;
 
-# ifndef __USE_TIME_BITS64
+# ifndef __USE_TIME64_REDIRECTS
 /* Make calling thread wait for termination of the thread TH, but only
    until TIMEOUT.  The exit status of the thread is stored in
    *THREAD_RETURN, if THREAD_RETURN is not NULL.
@@ -805,7 +805,7 @@ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
 
 #ifdef __USE_XOPEN2K
 /* Wait until lock becomes available, or specified time passes. */
-# ifndef __USE_TIME_BITS64
+# ifndef __USE_TIME64_REDIRECTS
 extern int pthread_mutex_timedlock (pthread_mutex_t *__restrict __mutex,
 				    const struct timespec *__restrict
 				    __abstime) __THROWNL __nonnull ((1, 2));
@@ -822,7 +822,7 @@ extern int __REDIRECT_NTHNL (pthread_mutex_timedlock,
 #endif
 
 #ifdef __USE_GNU
-# ifndef __USE_TIME_BITS64
+# ifndef __USE_TIME64_REDIRECTS
 extern int pthread_mutex_clocklock (pthread_mutex_t *__restrict __mutex,
 				    clockid_t __clockid,
 				    const struct timespec *__restrict
@@ -991,7 +991,7 @@ extern int pthread_rwlock_tryrdlock (pthread_rwlock_t *__rwlock)
 
 # ifdef __USE_XOPEN2K
 /* Try to acquire read lock for RWLOCK or return after specified time.  */
-#  ifndef __USE_TIME_BITS64
+#  ifndef __USE_TIME64_REDIRECTS
 extern int pthread_rwlock_timedrdlock (pthread_rwlock_t *__restrict __rwlock,
 				       const struct timespec *__restrict
 				       __abstime) __THROWNL __nonnull ((1, 2));
@@ -1009,7 +1009,7 @@ extern int __REDIRECT_NTHNL (pthread_rwlock_timedrdlock,
 # endif
 
 # ifdef __USE_GNU
-#  ifndef __USE_TIME_BITS64
+#  ifndef __USE_TIME64_REDIRECTS
 extern int pthread_rwlock_clockrdlock (pthread_rwlock_t *__restrict __rwlock,
 				       clockid_t __clockid,
 				       const struct timespec *__restrict
@@ -1038,7 +1038,7 @@ extern int pthread_rwlock_trywrlock (pthread_rwlock_t *__rwlock)
 
 # ifdef __USE_XOPEN2K
 /* Try to acquire write lock for RWLOCK or return after specified time.  */
-#  ifndef __USE_TIME_BITS64
+#  ifndef __USE_TIME64_REDIRECTS
 extern int pthread_rwlock_timedwrlock (pthread_rwlock_t *__restrict __rwlock,
 				       const struct timespec *__restrict
 				       __abstime) __THROWNL __nonnull ((1, 2));
@@ -1056,7 +1056,7 @@ extern int __REDIRECT_NTHNL (pthread_rwlock_timedwrlock,
 # endif
 
 # ifdef __USE_GNU
-#  ifndef __USE_TIME_BITS64
+#  ifndef __USE_TIME64_REDIRECTS
 extern int pthread_rwlock_clockwrlock (pthread_rwlock_t *__restrict __rwlock,
 				       clockid_t __clockid,
 				       const struct timespec *__restrict
@@ -1150,7 +1150,7 @@ extern int pthread_cond_wait (pthread_cond_t *__restrict __cond,
 
    This function is a cancellation point and therefore not marked with
    __THROW.  */
-# ifndef __USE_TIME_BITS64
+# ifndef __USE_TIME64_REDIRECTS
 extern int pthread_cond_timedwait (pthread_cond_t *__restrict __cond,
 				   pthread_mutex_t *__restrict __mutex,
 				   const struct timespec *__restrict __abstime)
@@ -1176,7 +1176,7 @@ extern int __REDIRECT (pthread_cond_timedwait,
 
    This function is a cancellation point and therefore not marked with
    __THROW. */
-#  ifndef __USE_TIME_BITS64
+#  ifndef __USE_TIME64_REDIRECTS
 extern int pthread_cond_clockwait (pthread_cond_t *__restrict __cond,
 				   pthread_mutex_t *__restrict __mutex,
 				   __clockid_t __clock_id,

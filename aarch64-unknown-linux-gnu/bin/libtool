@@ -90,13 +90,13 @@ SED="/usr/bin/sed"
 Xsed="$SED -e 1s/^X//"
 
 # A grep program that handles long lines.
-GREP="/usr/bin/grep"
+GREP="/opt/skyhammer/aarch64-unknown-linux-gnu/bin/grep"
 
 # An ERE matcher.
-EGREP="/usr/bin/grep -E"
+EGREP="/opt/skyhammer/aarch64-unknown-linux-gnu/bin/grep -E"
 
 # A literal string matcher.
-FGREP="/usr/bin/grep -F"
+FGREP="/opt/skyhammer/aarch64-unknown-linux-gnu/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
 NM="/opt/skyhammer/aarch64-unknown-linux-gnu/bin/nm -B"
@@ -200,7 +200,7 @@ nm_file_list_spec="@"
 lt_sysroot=
 
 # Command to truncate a binary pipe.
-lt_truncate_bin="/usr/bin/dd bs=4096 count=1"
+lt_truncate_bin="/opt/skyhammer/aarch64-unknown-linux-gnu/bin/dd bs=4096 count=1"
 
 # The name of the directory that contains temporary libtool files.
 objdir=.libs

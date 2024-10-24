@@ -22,7 +22,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-grep='${GREP-'\''/usr/bin/grep'\''}'
+grep='${GREP-'\''/opt/skyhammer/aarch64-unknown-linux-gnu/bin/grep'\''}'
 args=
 
 version='zgrep (gzip) 1.13

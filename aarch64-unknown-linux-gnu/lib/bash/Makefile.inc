@@ -45,7 +45,7 @@ VPATH = ../../../../../src/bash-5.2.37/examples/loadables
 # Support an alternate destination root directory for package building
 DESTDIR =
 
-INSTALL = /usr/bin/install -c
+INSTALL = /opt/skyhammer/aarch64-unknown-linux-gnu/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_DATA = ${INSTALL} -m 644
